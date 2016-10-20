@@ -31,7 +31,7 @@ public class GettingStartedTest {
         // A loader may return multiple PCM containers depending on the input format
         // A PCM container encapsulates a PCM and its associated metadata
         List<PCMContainer> pcmContainers = loader.load(pcmFile);
-
+        
         for (PCMContainer pcmContainer : pcmContainers) {
 
             // Get the PCM
@@ -53,7 +53,7 @@ public class GettingStartedTest {
                     System.out.println("(" + product.getKeyContent() + ", " + feature.getName() + ") = " + content);
                 }
             }
-
+/*
             // Export the PCM container to CSV
             CSVExporter csvExporter = new CSVExporter();
             String csv = csvExporter.export(pcmContainer);
@@ -61,7 +61,7 @@ public class GettingStartedTest {
             // Write CSV content to file
             Path outputFile = Files.createTempFile("oc-", ".csv");
             Files.write(outputFile, csv.getBytes());
-            System.out.println("PCM exported to " + outputFile);
+            System.out.println("PCM exported to " + outputFile);*/
         }
 
     }
