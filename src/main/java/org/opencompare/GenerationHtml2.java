@@ -32,7 +32,7 @@ public class GenerationHtml2 {
 				head().with(
 						title("Formulaire Version 0.01"),
 						meta().withCharset("utf-8")),
-				body().with(getInputsAndButton(list)).with(script().with(text("alert(\"PROTOTYPE DE MEER\")")))).render();
+				body().with(getInputsAndButton(list)).with(script().with(text("alert('PROTOTYPE DE MEER')")))).render();
 		File f = new File(output);
 		FileWriter writ = new FileWriter(f);
 		writ.write(code);
