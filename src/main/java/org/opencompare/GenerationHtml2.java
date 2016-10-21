@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.opencompare.api.java.Feature;
 
+import j2html.TagCreator;
 import j2html.tags.Tag;
 
 import static j2html.TagCreator.*;
@@ -31,8 +32,7 @@ public class GenerationHtml2 {
 				head().with(
 						title("Formulaire Version 0.01"),
 						meta().withCharset("utf-8")),
-				body().with(getInputsAndButton(list))).render();
-		
+				body().with(getInputsAndButton(list)).with(script().with(text("alert(\"PROTOTYPE DE MEER\")")))).render();
 		File f = new File(output);
 		FileWriter writ = new FileWriter(f);
 		writ.write(code);
