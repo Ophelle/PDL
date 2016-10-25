@@ -18,12 +18,12 @@ public class TraitementPcm {
 	public void loadPcm() throws IOException {
 		File pcmFile = new File("pcms/example.pcm");
         PCMLoader loader = new KMFJSONLoader();
-        PCM pcm = loader.load(pcmFile).get(0).getPcm();
+        this.pcm = loader.load(pcmFile).get(0).getPcm();
         this.listFeatures = pcm.getConcreteFeatures();
 	}
 
 	public PCM getPcm() {
-		return pcm;
+		return this.pcm;
 	}
 	
 	public void setPcm(PCM pcm) {

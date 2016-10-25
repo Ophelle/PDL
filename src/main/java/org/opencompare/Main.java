@@ -18,7 +18,7 @@ public class Main {
 		gen2.generateHtml2(trait.getFeatures(), "pcms/exampleV2.html");
 		//generation avec un template html : freemarker
 		GenerationHtml3 gen3 = new GenerationHtml3();
-		gen3.generateHtml3(trait.getFeatures(), "pcms/exampleV3.html");
+		gen3.generateHtml3(trait.getFeatures(), "pcms/exampleV3.html", trait.getPcm());
 	}
 
 }
