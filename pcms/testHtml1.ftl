@@ -8,6 +8,7 @@ input:color:red;
 	<meta charset="utf-8">
 </head>
 <body>
+	<h1>${titre}</h1>
 	<p>Coucou ${name}</p>
 	<#list bestType as key, value>
 		<#if value == "radio">
