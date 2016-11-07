@@ -22,7 +22,7 @@ public class Main {
 		trait.loadPcm();
 		//generation avec un template html : freemarker
 		GenerationHtml3 gen3 = new GenerationHtml3();
-		gen3.generateHtml3(trait.getFeatures(), "pcms/exampleV3.html", trait);
+		gen3.generateHtml3(trait.getFeatures(),gen3.getRealTypes(gen3.getTypes(trait)), "pcms/exampleV3.html", trait);
 		
 		//Set<String> set1 = gen3.getRealTypes(gen3.getTypes(trait)).keySet();
 		Collection<String> set1 = gen3.getRealTypes(gen3.getTypes(trait)).values();

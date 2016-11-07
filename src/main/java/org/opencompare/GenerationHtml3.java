@@ -27,7 +27,7 @@ import freemarker.template.TemplateNotFoundException;
 
 public class GenerationHtml3 {
 
-	public void generateHtml3(List<Feature> features, String output, TraitementPcm tp) throws TemplateNotFoundException, MalformedTemplateNameException, ParseException, IOException, TemplateException {
+	public void generateHtml3(List<Feature> features,Map<String, String> best, String output, TraitementPcm tp) throws TemplateNotFoundException, MalformedTemplateNameException, ParseException, IOException, TemplateException {
 		Configuration config = new Configuration(Configuration.VERSION_2_3_20);
 		config.setDefaultEncoding("UTF-8");
 		Template temp = config.getTemplate("pcms/exampleV3.ftl");
@@ -68,6 +68,7 @@ public class GenerationHtml3 {
 		
 		
 		map.put("features", lsFeat);
+		map.put("best", best);
 		// crée html
 		File f = new File(output);
 		FileWriter writ = new FileWriter(f);
@@ -153,7 +154,18 @@ public class GenerationHtml3 {
 				 
 				 if(max < currentNb) {
 					 max = currentNb;
-					 bestType = key2;
+					 bestType = key2.split("V")[0].toLowerCase();
+					 switch (bestType) {
+					case "string": bestType= "text";break;
+					case "integer": bestType= "number";break;
+					case "real": bestType= "number"; break;
+					case "boolean": bestType= "radio";break;
+					case "multiple": bestType= "checkbox";break;
+						
+
+					default:
+						bestType= "text";
+					}
 				 }
 			 }
 			 
