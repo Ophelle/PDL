@@ -17,6 +17,7 @@ import org.opencompare.api.java.io.PCMLoader;
 public class TraitementPcm {
 	
 	private PCM pcm;
+	private String namePcm;
 	private File file;
 	private List<Feature> listFeatures;
 	private Map<String, List<String>> allTypesValue;
@@ -24,8 +25,9 @@ public class TraitementPcm {
 	
 	public TraitementPcm(File file) throws IOException {
 		this.file = file;
-		loadPcm(this.file);
-		this.listFeatures = pcm.getConcreteFeatures();
+		this.loadPcm(this.file);
+		this.namePcm = this.pcm.getName();
+		this.listFeatures = this.pcm.getConcreteFeatures();
 		this.allTypesValue = getAllTypesValue(this.listFeatures);
 		this.bestTypesValue = getBestTypes(this.allTypesValue);
 	}
@@ -36,6 +38,14 @@ public class TraitementPcm {
 	
 	public void setPcm(PCM pcm) {
 		this.pcm = pcm;
+	}
+	
+	public String getNamePcm() {
+		return this.namePcm.replaceAll("_", " ");
+	}
+
+	public void setNamePcm(String name) {
+		this.namePcm = name;
 	}
 	
 	public List<Feature> getFeatures() {
@@ -59,8 +69,13 @@ public class TraitementPcm {
 	}
 	
 	public void loadPcm(File file) throws IOException {
+		this.file = file;
         PCMLoader loader = new KMFJSONLoader();
         this.pcm = loader.load(file).get(0).getPcm();
+        this.namePcm = this.pcm.getName();
+		this.listFeatures = this.pcm.getConcreteFeatures();
+		this.allTypesValue = getAllTypesValue(this.listFeatures);
+		this.bestTypesValue = getBestTypes(this.allTypesValue);
 	}
 	
 	private Map<String, List<String>> getAllTypesValue(List<Feature> listFeatures) {
