@@ -125,41 +125,6 @@ public class GenerationHtml3 {
 	}
 	
 	public Map<String, String> getRealTypes(HashMap<String, List<String>> map) {
-		/*Iterator<Entry<String, List<String>>> param = map.entrySet().iterator();
-		Map<String, Integer> nb = new HashMap<String, Integer>();
-		Map<String, String> best = new HashMap<String, String>();
-		//best.put("dsdsdsdsds", "dsssssssssssssssss");
-		//List<String> itNB = param.next().getValue();
-		// creation map  == clé : feature --> valeur : type dominant
-		List<String> itNB = param.next().getValue();
-		while(param.hasNext()) {
-			// creation map  == clé : tous types d'un feature --> valeur : le nombre d'occurence de chaque type 
-			
-			for(String str : itNB) {
-				if(!nb.containsKey(str)) {
-					nb.put(str, 1);
-				} else {
-					Integer cpt = nb.get(str);
-					nb.put(str, cpt++);
-				}
-			}
-			Iterator<Entry<String, Integer>> bestTyp = nb.entrySet().iterator();
-			Integer max = bestTyp.next().getValue();
-			//System.out.println(bestTyp.next().getKey());
-			// cherche la valeur la plus grande pour chaque Type dans la map nb
-			String bestType = "123";
-			while(bestTyp.hasNext()) {
-				//Integer currentNb = bestTyp.next().getValue();
-				if(bestTyp.next().getValue() > max) {
-					max = bestTyp.next().getValue();
-					bestType = bestTyp.next().getKey();
-				}
-			}
-			best.put(param.next().getKey(), bestType);
-			//System.out.println(bestType);
-		}
-		*/
-		
 		
 		Map<String, Integer> nb = new HashMap<String, Integer>();
 		Map<String, String> best = new HashMap<String, String>();
@@ -194,27 +159,7 @@ public class GenerationHtml3 {
 			 
 			 best.put(key1, bestType);
 			 nb = new HashMap<String, Integer>();
-			 /*
-			 Iterator<Entry<String, Integer>> bestTyp = nb.entrySet().iterator();
-				Integer max = bestTyp.next().getValue();
-				//System.out.println(bestTyp.next().getKey());
-				// cherche la valeur la plus grande pour chaque Type dans la map nb
-				String bestType = "123";
-				while(bestTyp.hasNext()) {
-					//Integer currentNb = bestTyp.next().getValue();
-					if(bestTyp.next().getValue() > max) {
-						max = bestTyp.next().getValue();
-						bestType = bestTyp.next().getKey();
-					}
-				}
-				best.put(param.next().getKey(), bestType);
-			 
-			 */
-			 
-			 
 		 }
-		
-		
 		return best;
 	}
 	
