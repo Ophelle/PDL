@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>${name} Version 0.00000001</title>
-	<meta charset="utf8">
+	<meta charset="utf-8">
 	   <style>
          fieldset{
             border: 1px solid #ccc;
