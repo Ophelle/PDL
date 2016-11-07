@@ -40,10 +40,9 @@ public class GettingStartedTest {
             // Browse the cells of the PCM
             for (Product product : pcm.getProducts()) {
                 for (Feature feature : pcm.getConcreteFeatures()) {
-
                     // Find the cell corresponding to the current feature and product
                     Cell cell = product.findCell(feature);
-
+                    
                     // Get information contained in the cell
                     String content = cell.getContent();
                     String rawContent = cell.getRawContent();
@@ -53,7 +52,7 @@ public class GettingStartedTest {
                     System.out.println("(" + product.getKeyContent() + ", " + feature.getName() + ") = " + content);
                 }
             }
-/*
+
             // Export the PCM container to CSV
             CSVExporter csvExporter = new CSVExporter();
             String csv = csvExporter.export(pcmContainer);
@@ -61,7 +60,7 @@ public class GettingStartedTest {
             // Write CSV content to file
             Path outputFile = Files.createTempFile("oc-", ".csv");
             Files.write(outputFile, csv.getBytes());
-            System.out.println("PCM exported to " + outputFile);*/
+            System.out.println("PCM exported to " + outputFile);
         }
 
     }
