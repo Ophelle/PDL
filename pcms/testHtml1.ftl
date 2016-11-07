@@ -2,9 +2,9 @@
 <html>
 <head>
 	<title>${name} Version 0.00000001</title>
-	<meta charset="utf-8">
+	<meta charset="utf8">
 	   <style>
-        fieldset{
+         fieldset{
             border: 1px solid #ccc;
             padding: 10px;
             margin-bottom: 20px;
@@ -38,7 +38,8 @@
 					</#if>
 				</#list>
 		</table>
-	</fieldset>
 		<button type="submit">Ajouter un produit</button>
+	</fieldset>
+		
 </body>
 </html>
