@@ -1,21 +1,44 @@
 <!DOCTYPE html>
 <html>
-Style{
-input:color:red;
-}
 <head>
 	<title>${name} Version 0.00000001</title>
 	<meta charset="utf-8">
+	   <style>
+        fieldset{
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        legend{
+            font-size: 14px;
+            margin-bottom: 0px;
+            width: auto;
+            border-width: 0px;
+            color: #ff6600;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        label{ font-weight : bold;}
+       {text-align: right;top:20px;}
+    </style>
 </head>
 <body>
-	<p>Coucou ${name}</p>
-	<#list bestType as key, value>
-		<#if value == "radio">
- 			${key_index + 1}. <label>${key} : <input type="${value}" name="Feature" value="oui"> oui <input type="${value}" name="Feature" value = "non"> non</br></br></label>
-		<#else>
-			${key_index + 1}. <label>${key} : <input type="${value}" name="Feature"></br></br></label>
-		</#if>
-	</#list>
-	<button type="submit">Ajouter le produit</button>
+	<fieldset>
+		<table>
+   			<legend style="color:red" >Formulaire</legend>
+				<#list bestType as key, value>
+					<#if value == "radio">
+						<tr>
+ 		 					<td> <label>${key} :</td><td> <input type="${value}" name="Feature" value="oui"> oui <input type="${value}" name="Feature" value = "non"> non</br></br></label></td>
+						</tr>
+					<#else>
+						<tr>
+							<td> <label>${key} :</td><td> <input type="${value}" name="Feature"></br></br></label></td>
+						</tr>
+					</#if>
+				</#list>
+		</table>
+	</fieldset>
+		<button type="submit">Ajouter un produit</button>
 </body>
 </html>
