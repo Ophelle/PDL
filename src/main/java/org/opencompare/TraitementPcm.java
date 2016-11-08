@@ -22,6 +22,7 @@ public class TraitementPcm {
 	private List<Feature> listFeatures;
 	private Map<String, List<String>> allTypesValue;
 	private Map<String, List<String>> allContentsCell;
+	private Map<String, List<String>> contentsTypeMultiple;
 	private Map<String, String> bestTypesValue;
 	
 	public TraitementPcm(File file) throws IOException {
@@ -31,8 +32,8 @@ public class TraitementPcm {
 		this.listFeatures = this.pcm.getConcreteFeatures();
 		this.allTypesValue = getAllTypesValue(this.listFeatures);
 		this.allContentsCell = getAllContentsCell(this.listFeatures);
+		this.contentsTypeMultiple =  contentsTypeMultiple(this.listFeatures);
 		this.bestTypesValue = getBestTypes(this.allTypesValue);
-		
 	}
 	
 	public PCM getPcm() {
@@ -69,6 +70,14 @@ public class TraitementPcm {
 
 	public void setAllContentsCell(Map<String, List<String>> allContentsCell) {
 		this.allContentsCell = allContentsCell;
+	}
+	
+	public Map<String, List<String>> getContentsTypeMultiple() {
+		return this.contentsTypeMultiple;
+	}
+
+	public void setContentsTypeMultiple(Map<String, List<String>> contentsTypeMultiple) {
+		this.contentsTypeMultiple = contentsTypeMultiple;
 	}
 	
 	public Map<String, String> getBestTypes() {
@@ -145,9 +154,13 @@ public class TraitementPcm {
 		return feat_type;
 	}
 	
-	public Boolean caseTypeMultiple(String str) {
-		// a completer et a utiliser dans la methode suivante getAllContentsCell (peut etre ^^)
-		return true;
+	public Map<String, List<String>> contentsTypeMultiple(List<Feature> listFeatures) {
+		// a completer et utiliser un split pour avoir tous les resultats possibles
+		// Traite le cas du type multiple avec pas de doublon de content pour chaque feature
+		//String currentContent = "";
+		// Map qui contient tous les choix possible pour chaque feature du type multiple
+		Map<String, List<String>> feat_contentMultiple = new HashMap<String, List<String>>();
+		return feat_contentMultiple;
 	}
 	
 	private Map<String, List<String>> getAllContentsCell(List<Feature> listFeatures) {
