@@ -21,6 +21,7 @@ public class TraitementPcm {
 	private File file;
 	private List<Feature> listFeatures;
 	private Map<String, List<String>> allTypesValue;
+	private Map<String, List<String>> allContentsCell;
 	private Map<String, String> bestTypesValue;
 	
 	public TraitementPcm(File file) throws IOException {
@@ -29,7 +30,9 @@ public class TraitementPcm {
 		this.namePcm = this.pcm.getName();
 		this.listFeatures = this.pcm.getConcreteFeatures();
 		this.allTypesValue = getAllTypesValue(this.listFeatures);
+		this.allContentsCell = getAllContentsCell(this.listFeatures);
 		this.bestTypesValue = getBestTypes(this.allTypesValue);
+		
 	}
 	
 	public PCM getPcm() {
@@ -60,6 +63,14 @@ public class TraitementPcm {
 		this.allTypesValue = allTypesValue;
 	}
 	
+	public Map<String, List<String>> getAllContentsCell() {
+		return this.allContentsCell;
+	}
+
+	public void setAllContentsCell(Map<String, List<String>> allContentsCell) {
+		this.allContentsCell = allContentsCell;
+	}
+	
 	public Map<String, String> getBestTypes() {
 		return this.bestTypesValue;
 	}
@@ -78,6 +89,22 @@ public class TraitementPcm {
 		this.bestTypesValue = getBestTypes(this.allTypesValue);
 	}
 	
+	public String splitInterpretationValue(String str) {
+		str = str.split("@")[0];
+		str = str.split("\\.")[6];
+		str = str.substring(0, str.length() - 4);
+		str = str.split("V")[0].toLowerCase();
+		return str;
+	}
+	
+	public String setDefaultType(String str) {
+		// a completer des qu'on a la signifiacation de toute les valueInterpreation
+		if(str.equals("notavailable") || str.equals("notapplicable")) {
+			str = "string";
+		}
+		return str;
+	}
+	
 	private Map<String, List<String>> getAllTypesValue(List<Feature> listFeatures) {
 
 		String currentType = "";
@@ -86,23 +113,17 @@ public class TraitementPcm {
 
 		for(Feature feat : listFeatures) {
 			List<String> listTypes = new ArrayList<String>();
-			// Si le produit existe ou n'est pas vide
-
+			
+			// Si le feature existe ou n'est pas vide
 			if(feat.getName() != null && !feat.getName().equals("")) {
 				for(Cell cell : feat.getCells()) {
 					// Obtenir le type de la case
 					currentType = cell.getInterpretation().toString();
 					// Split sur le currentType en supprimant les parties inutiles
-					currentType = currentType.split("@")[0];
-					currentType = currentType.split("\\.")[6];
-					currentType = currentType.substring(0, currentType.length() - 4);
-					currentType = currentType.split("V")[0].toLowerCase();
-
-					// Si le type est inconnu, alors par défaut c'est un string
-					if(currentType.equals("NotAvailable")) {
-						currentType = "string";
-					}
-
+					splitInterpretationValue(currentType);
+					// Si le type est inconnu ou autre, alors par défaut c'est un string
+					setDefaultType(currentType);
+					
 					// Check with regExp if some string value can be number
 					// Pattern p = Pattern.compile("\\d.*"); //if string start
 					// wtih numbers, we considers feature type like number (ex:
@@ -122,6 +143,73 @@ public class TraitementPcm {
 			}
 		}
 		return feat_type;
+	}
+	
+	public Boolean caseTypeMultiple(String str) {
+		// a completer et a utiliser dans la methode suivante getAllContentsCell (peut etre ^^)
+		return true;
+	}
+	
+	private Map<String, List<String>> getAllContentsCell(List<Feature> listFeatures) {
+		// Cette méthode servira pour l'auto-completion en javascript
+		String currentContent = "";
+		// Map qui contient tous les contenus de la case pour chaque feature de la matrice
+		Map<String, List<String>> feat_content = new HashMap<String, List<String>>();
+
+		for(Feature feat : listFeatures) {
+			List<String> listContents = new ArrayList<String>();
+			
+			// Si le feature existe ou n'est pas vide
+			if(feat.getName() != null && !feat.getName().equals("")) {
+				for(Cell cell : feat.getCells()) {
+					// Obtenir le contenu de la case
+					currentContent = cell.getContent();
+					// Ajout dans la liste le contenu de la case courante
+					listContents.add(currentContent);
+				}
+				// Ajout dans la map le feature et sa liste de contenus disponible
+				feat_content.put(feat.getName(), listContents);
+			}
+		}
+		return feat_content;
+	}
+	
+	public String setTypeHtml(String str) {
+		switch (str) {
+		case "conditional":
+			str = "text";
+			break;
+		case "date":
+			str = "date";
+			break;
+		case "dimension":
+			str = "text";
+			break;
+		case "unit":
+			str = "text";
+			break;
+		case "version":
+			str = "text";
+			break;
+		case "string":
+			str = "text";
+			break;
+		case "integer":
+			str = "number";
+			break;
+		case "real":
+			str = "number";
+			break;
+		case "boolean":
+			str = "radio";
+			break;
+		case "multiple":
+			str = "checkbox";
+			break;
+		default:
+			str = "text";
+		}
+		return str;
 	}
 	
 	private Map<String, String> getBestTypes(Map<String, List<String>> allTypes) {
@@ -160,26 +248,7 @@ public class TraitementPcm {
 					max = currentNb;
 					bestType = currentFeat;
 					// attribut le type Html en fonction du type dominant trouvé
-					switch (bestType) {
-					case "string" :
-						bestType = "text";
-						break;
-					case "integer" :
-						bestType = "number";
-						break;
-					case "real" :
-						bestType = "number";
-						break;
-					case "boolean" :
-						bestType = "radio";
-						break;
-					case "multiple" :
-						bestType = "checkbox";
-						break;
-
-					default :
-						bestType = "text";
-					}
+					setTypeHtml(bestType);
 				}
 			}
 
