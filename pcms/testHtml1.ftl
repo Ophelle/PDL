@@ -23,7 +23,7 @@
     </style>
 </head>
 <body>
-	<h1>Formulaire : ${titre}</h1>
+	<h1>${titre}</h1>
 	<fieldset>
 		<table>
    			<legend style="color:red" >Formulaire</legend>
