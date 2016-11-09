@@ -34,7 +34,7 @@ public class GenerationHtml {
 		// Attribution des variables au code html source
 		Map<String, Object> ajoutVar = new HashMap<String, Object>();
 		ajoutVar.put("titre", this.traitPcm.getNamePcm());
-		ajoutVar.put("name", "Prototype formulaire de merde");
+		ajoutVar.put("name", "Prototype de formulaire");
 		ajoutVar.put("bestType", this.traitPcm.getBestTypes());
 		
 		// Création html

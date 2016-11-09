@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>${name} Version 0.00000001</title>
+	<title>${name} Version 0.5</title>
 	<meta charset="utf-8">
 	   <style>
          fieldset{
