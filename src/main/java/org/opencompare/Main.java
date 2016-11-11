@@ -3,21 +3,30 @@ package org.opencompare;
 import java.io.File;
 import java.io.IOException;
 
-import freemarker.template.TemplateException;
-
 public class Main {
 
-	public static void main(String[] args) throws IOException, TemplateException {
+	public static void main(String[] args) {
 		
 		// Chargement fichier + pcm + traitement des types
-		File file = new File("pcms/example0.pcm");
-		TraitementPcm trait = new TraitementPcm(file);
+		File file = new File("testPrototype/example0.pcm");
+		TraitementPcm trait = null;
+		try {
+			trait = new TraitementPcm(file);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 		// Generation avec un template html : freemarker
-		GenerationHtml generator = new GenerationHtml(trait, "pcms/testHtml1.ftl" , "pcms/testHtml1.html");
+		GenerationHtml generator = new GenerationHtml(trait, "testPrototype/testHtml1.ftl" , "testPrototype/testHtml1.html");
 		// test charger nouveau pcm
-		generator.getTraitPcm().loadPcm(new File("pcms/example1.pcm"));
-		generator.generateHtml();
+//		try {
+//			generator.getTraitPcm().loadPcm(new File("testPrototype/example1.pcm"));
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//		generator.generateHtml();
+		generator.generatAllHtml();
+		
 		
 		// test sur feature/type dominant
 		/*Set<String> set1 = generator.getTraitPcm().getBestTypes().keySet();
