@@ -6,12 +6,9 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import freemarker.core.ParseException;
 import freemarker.template.Configuration;
-import freemarker.template.MalformedTemplateNameException;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
-import freemarker.template.TemplateNotFoundException;
 
 public class GenerationHtml {
 	
@@ -25,12 +22,17 @@ public class GenerationHtml {
 		this.output = output;
 	}
 
-	public void generateHtml() throws TemplateNotFoundException, MalformedTemplateNameException, ParseException, IOException, TemplateException {
+	public void generateHtml() {
 		// Configuration du template
 		Configuration config = new Configuration(Configuration.VERSION_2_3_20);
 		config.setDefaultEncoding("UTF-8");
 		// Affectation du code html source au template
-		Template temp = config.getTemplate(this.input);
+		Template temp = null;
+		try {
+			temp = config.getTemplate(this.input);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		// Attribution des variables au code html source
 		Map<String, Object> ajoutVar = new HashMap<String, Object>();
 		ajoutVar.put("titre", this.traitPcm.getNamePcm());
@@ -39,10 +41,72 @@ public class GenerationHtml {
 		
 		// Création html
 		File file = new File(this.output);
-		FileWriter writer = new FileWriter(file);
-		temp.process(ajoutVar, writer);
+		FileWriter writer = null;
+		try {
+			writer = new FileWriter(file);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		try {
+			temp.process(ajoutVar, writer);
+		} catch (TemplateException | IOException e) {
+			e.printStackTrace();
+		}
 		System.out.println("HTML CREE au dossier : " + this.output);
-		writer.close();
+		try {
+			writer.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void generatAllHtml() {
+		// Configuration du template
+		Configuration config = new Configuration(Configuration.VERSION_2_3_20);
+		config.setDefaultEncoding("UTF-8");
+		// Affectation du code html source au template
+		Template temp = null;
+		try {
+			temp = config.getTemplate(this.input);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		// Attribution des variables au code html source
+		Map<String, Object> ajoutVar = new HashMap<String, Object>();
+		ajoutVar.put("titre", this.traitPcm.getNamePcm());
+		ajoutVar.put("name", "Prototype de formulaire");
+		ajoutVar.put("bestType", this.traitPcm.getBestTypes());
+		
+		// Création html
+		File repertoryPcm = new File("pcms");
+		File[] filesPcm = repertoryPcm.listFiles();
+		
+		for(int i = 0; i < filesPcm.length; i++) {
+			try {
+				getTraitPcm().loadPcm(filesPcm[i]);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			setOutput("html/" + filesPcm[i].getName() + ".html");
+			File file = new File(this.output);
+			FileWriter writer = null;
+			try {
+				writer = new FileWriter(file);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			try {
+				temp.process(ajoutVar, writer);
+			} catch (TemplateException | IOException e) {
+				e.printStackTrace();
+			}
+			System.out.println("HTML CREE au dossier : " + this.output);
+			try {
+				writer.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 
 	public TraitementPcm getTraitPcm() {
