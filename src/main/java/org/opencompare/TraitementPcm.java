@@ -11,8 +11,18 @@ import java.util.Map.Entry;
 import org.opencompare.api.java.Cell;
 import org.opencompare.api.java.Feature;
 import org.opencompare.api.java.PCM;
+import org.opencompare.api.java.Value;
 import org.opencompare.api.java.impl.io.KMFJSONLoader;
 import org.opencompare.api.java.io.PCMLoader;
+import org.opencompare.api.java.value.BooleanValue;
+import org.opencompare.api.java.value.Conditional;
+import org.opencompare.api.java.value.IntegerValue;
+import org.opencompare.api.java.value.Multiple;
+import org.opencompare.api.java.value.NotApplicable;
+import org.opencompare.api.java.value.NotAvailable;
+import org.opencompare.api.java.value.Partial;
+import org.opencompare.api.java.value.RealValue;
+import org.opencompare.api.java.value.StringValue;
 
 public class TraitementPcm {
 	
@@ -98,20 +108,30 @@ public class TraitementPcm {
 		this.bestTypesValue = getBestTypes(this.allTypesValue);
 	}
 	
-	public String splitInterpretationValue(String str) {
-		str = str.split("@")[0];
-		str = str.split("\\.")[6];
-		str = str.substring(0, str.length() - 4);
-		str = str.split("V")[0].toLowerCase();
-		return str;
-	}
-	
-	public String setDefaultType(String str) {
-		// a completer des qu'on a la signifiacation de toute les valueInterpreation
-		if(str.equals("notavailable") || str.equals("notapplicable")) {
-			str = "string";
-		}
-		return str;
+	public String valueToType(Value kValue) {
+		if (kValue == null) {
+            return "string";
+        } else if (kValue instanceof BooleanValue) {
+            return "boolean";
+        } else if (kValue instanceof IntegerValue) {
+            return "integer";
+        } else if (kValue instanceof StringValue) {
+            return "string";
+        } else if (kValue instanceof RealValue) {
+            return "real";
+        } else if (kValue instanceof Multiple) {
+            return "multiple";
+        } else if (kValue instanceof NotApplicable) {
+            return "string";
+        } else if (kValue instanceof NotAvailable) {
+            return "string";
+        } else if (kValue instanceof Conditional) {
+            return "conditional";
+        } else if (kValue instanceof Partial) {
+            return "partial";
+        } else {
+        	return "string";
+        }
 	}
 	
 	private Map<String, List<String>> getAllTypesValue(List<Feature> listFeatures) {
@@ -126,13 +146,8 @@ public class TraitementPcm {
 			// Si le feature existe ou n'est pas vide
 			if(feat.getName() != null && !feat.getName().equals("")) {
 				for(Cell cell : feat.getCells()) {
-					// Obtenir le type de la case
-					currentType = cell.getInterpretation().toString();
-					// Split sur le currentType en supprimant les parties inutiles
-					splitInterpretationValue(currentType);
-					// Si le type est inconnu ou autre, alors par défaut c'est un string
-					setDefaultType(currentType);
-					
+					// Obtenir le type de la case courante
+					currentType = valueToType(cell.getInterpretation());
 					// Check with regExp if some string value can be number
 					// Pattern p = Pattern.compile("\\d.*"); //if string start
 					// wtih numbers, we considers feature type like number (ex:
@@ -143,7 +158,6 @@ public class TraitementPcm {
 					 * if (m.matches()) { currentType = "RealValue"; //we change
 					 * type of filter }
 					 */
-
 					// Ajout dans la liste le type de la case courante
 					listTypes.add(currentType);
 				}
@@ -261,7 +275,7 @@ public class TraitementPcm {
 					max = currentNb;
 					bestType = currentFeat;
 					// attribut le type Html en fonction du type dominant trouvé
-					setTypeHtml(bestType);
+					bestType = setTypeHtml(bestType);
 				}
 			}
 
