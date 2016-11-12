@@ -71,19 +71,19 @@ public class GenerationHtml {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		// Attribution des variables au code html source
-		Map<String, Object> ajoutVar = new HashMap<String, Object>();
-		ajoutVar.put("titre", this.traitPcm.getNamePcm());
-		ajoutVar.put("name", "Prototype de formulaire");
-		ajoutVar.put("bestType", this.traitPcm.getBestTypes());
 		
 		// Création html
 		File repertoryPcm = new File("pcms");
 		File[] filesPcm = repertoryPcm.listFiles();
+		Map<String, Object> ajoutVar = new HashMap<String, Object>();
 		
 		for(int i = 0; i < filesPcm.length; i++) {
 			try {
 				getTraitPcm().loadPcm(filesPcm[i]);
+				// Attribution des variables au code html source
+				ajoutVar.put("titre", this.traitPcm.getNamePcm());
+				ajoutVar.put("name", "Prototype de formulaire");
+				ajoutVar.put("bestType", this.traitPcm.getBestTypes());
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -106,6 +106,7 @@ public class GenerationHtml {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
+			ajoutVar = new HashMap<String, Object>();
 		}
 	}
 
