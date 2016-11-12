@@ -3,7 +3,6 @@ package org.opencompare;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -123,7 +122,7 @@ public class TraitementPcm {
 		this.listFeatures = this.pcm.getConcreteFeatures();
 		this.allTypesValue = getAllTypesValue(this.listFeatures);
 		this.bestTypesValue = getBestTypes(this.allTypesValue);
-		this.trueType = getTrueType(this.bestTypesValue);
+		//this.trueType = getTrueType(this.bestTypesValue);
 	}
 	
 	public String valueToType(Value kValue) {
@@ -166,8 +165,8 @@ public class TraitementPcm {
 				for(Cell cell : feat.getCells()) {
 					// si le nom du abstractFeature n'est pas null, alors on le recupere
 					if(cell.getFeature().getParentGroup() != null) {
-						// ajout d'un separateur @@!! pour reperer plus facilement le abstractFeature et concretFeature
-						abstractFeature = cell.getFeature().getParentGroup().getName() + "§!";
+						// ajout d'un separateur "-" pour reperer plus facilement le abstractFeature et concretFeature
+						abstractFeature = cell.getFeature().getParentGroup().getName() + " - ";
 					}
 					// Obtenir le type de la case courante
 					currentType = valueToType(cell.getInterpretation());
@@ -310,47 +309,43 @@ public class TraitementPcm {
 		return bestTypes;
 	}
 	
-	private Map<Map<String, List<String>>, String> getTrueType(Map<String, String> bestTypes) {
-		// cette methode gere les sous champs en faisant apparaitre les abstractFeatures si disponible + concretFeatures
-		
-		// cle : map qui contient abstractFeatures/list concretFeatures 
-		// valeur : type dominant du feature ou sous feature
-		Map<Map<String, List<String>>, String> trueType = new HashMap<Map<String, List<String>>, String>();
-		Map<String, List<String>> abstractConcret = new HashMap<String, List<String>>();
-		List<String> listConcret = new ArrayList<String>();
-		for(Entry<String, String> entry1 : bestTypes.entrySet()) {
-			// si il y a abstractFeature et
-			if(entry1.getKey().contains("§")) {
-				// on separe les 2 morceux
-				String split = entry1.getKey();
-				String[] parts = split.split("§!");
-				// part 1 : abstractFeature
-				String part1 = parts[0];
-				// part 2 : concretFeature
-				String part2 = parts[1];
-				if(!abstractConcret.containsKey(part1)) {
-					listConcret = new ArrayList<String>();
-					listConcret.add(part2);
-					abstractConcret.put(part1, listConcret);
-					trueType.put(abstractConcret, entry1.getValue());
-				} else {
-					listConcret = abstractConcret.get(part1);
-					listConcret.add(part2);
-					abstractConcret.put(part1, listConcret);
-					trueType.put(abstractConcret, entry1.getValue());
-				}
-			} else {
-				// le concretFeature devient abstractFeature pour faciliter la recuperation du nom dans le template
-				abstractConcret.put(entry1.getKey(), new ArrayList<String>());
-				trueType.put(abstractConcret, entry1.getValue());
-			}
-		}
-		
-		Collection<String> set = trueType.values();
-		
-		for(String str : set) {
-			System.out.println(str);
-		}
-		return trueType;
-	}
+	// ne pas supprimer la methode ci-dessous, peut etre a reutiliser plus tard
+	
+//	private Map<Map<String, List<String>>, String> getTrueType(Map<String, String> bestTypes) {
+//		// cette methode gere les sous champs en faisant apparaitre les abstractFeatures si disponible + concretFeatures
+//		
+//		// cle : map qui contient abstractFeatures/list concretFeatures 
+//		// valeur : type dominant du feature ou sous feature
+//		Map<Map<String, List<String>>, String> trueType = new HashMap<Map<String, List<String>>, String>();
+//		Map<String, List<String>> abstractConcret = new HashMap<String, List<String>>();
+//		List<String> listConcret = new ArrayList<String>();
+//		for(Entry<String, String> entry1 : bestTypes.entrySet()) {
+//			// si il y a abstractFeature et
+//			if(entry1.getKey().contains("§")) {
+//				// on separe les 2 morceux
+//				String split = entry1.getKey();
+//				String[] parts = split.split("§!");
+//				// part 1 : abstractFeature
+//				String part1 = parts[0];
+//				// part 2 : concretFeature
+//				String part2 = parts[1];
+//				if(!abstractConcret.containsKey(part1)) {
+//					listConcret = new ArrayList<String>();
+//					listConcret.add(part2);
+//					abstractConcret.put(part1, listConcret);
+//					trueType.put(abstractConcret, entry1.getValue());
+//				} else {
+//					listConcret = abstractConcret.get(part1);
+//					listConcret.add(part2);
+//					abstractConcret.put(part1, listConcret);
+//					trueType.put(abstractConcret, entry1.getValue());
+//				}
+//			} else {
+//				// le concretFeature devient abstractFeature pour faciliter la recuperation du nom dans le template
+//				abstractConcret.put(entry1.getKey(), new ArrayList<String>());
+//				trueType.put(abstractConcret, entry1.getValue());
+//			}
+//		}
+//		return trueType;
+//	}
 }

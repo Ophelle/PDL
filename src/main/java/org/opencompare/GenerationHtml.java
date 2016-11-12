@@ -3,8 +3,11 @@ package org.opencompare;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -37,9 +40,8 @@ public class GenerationHtml {
 		Map<String, Object> ajoutVar = new HashMap<String, Object>();
 		ajoutVar.put("titre", this.traitPcm.getNamePcm());
 		ajoutVar.put("name", "Prototype de formulaire");
-		//ajoutVar.put("bestType", this.traitPcm.getBestTypes());
-		ajoutVar.put("trueType", this.traitPcm.getTrueType());
-		
+		ajoutVar.put("bestType", this.traitPcm.getBestTypes());
+		//ajoutVar.put("type", this.traitPcm.getTrueType());
 		// Création html
 		File file = new File(this.output);
 		FileWriter writer = null;
