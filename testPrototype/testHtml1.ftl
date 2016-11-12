@@ -30,13 +30,19 @@
 				<#list bestType as key, value>
 					<#if value == "radio">
 						<tr>
- 		 					<td> <label>${key} :</td><td> <input type="${value}" name="Feature" value="oui"> oui <input type="${value}" name="Feature" value = "non"> non</br></br></label></td>
+ 		 					<td> <label>${key} :</td><td> <input type="${value}" name="Feature" value="oui"> Yes <input type="${value}" name="Feature" value = "non">No</br></br></label></td>
+						</tr>
+					<#elseif value == "conditional">
+						<tr>
+ 		 					<td> <label>${key} :</td><td> <input type="${value}" name="Feature">  Condition : <input type="text" name="Feature"></br></br></label></td>
 						</tr>
 					<#else>
 						<tr>
 							<td> <label>${key} :</td><td> <input type="${value}" name="Feature"></br></br></label></td>
 						</tr>
 					</#if>
+					
+					
 				</#list>
 		</table>
 		<button type="submit">Ajouter un produit</button>
