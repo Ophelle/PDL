@@ -37,7 +37,8 @@ public class GenerationHtml {
 		Map<String, Object> ajoutVar = new HashMap<String, Object>();
 		ajoutVar.put("titre", this.traitPcm.getNamePcm());
 		ajoutVar.put("name", "Prototype de formulaire");
-		ajoutVar.put("bestType", this.traitPcm.getBestTypes());
+		//ajoutVar.put("bestType", this.traitPcm.getBestTypes());
+		ajoutVar.put("trueType", this.traitPcm.getTrueType());
 		
 		// Création html
 		File file = new File(this.output);

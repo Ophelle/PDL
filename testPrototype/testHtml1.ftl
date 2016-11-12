@@ -27,16 +27,26 @@
 	<fieldset>
 		<table>
    			<legend style="color:red" >Formulaire</legend>
-				<#list bestType as key, value>
-					<#if value == "radio">
-						<tr>
- 		 					<td> <label>${key} :</td><td> <input type="${value}" name="Feature" value="oui"> oui <input type="${value}" name="Feature" value = "non"> non</br></br></label></td>
-						</tr>
-					<#else>
-						<tr>
-							<td> <label>${key} :</td><td> <input type="${value}" name="Feature"></br></br></label></td>
-						</tr>
-					</#if>
+				<#list trueType as key, value>
+					<#list key as abstract, concret>
+						<#if concret?has_content>
+							<#list concret as lsConcret>
+								<#if value == "radio">
+									<tr>
+			 		 					<td>${abstract} <label>${lsConcret} :</td><td> <input type="${value}" name="Feature" value="yes"> Yes <input type="${value}" name="Feature" value = "no"> No</br></br></label></td>
+									</tr>
+								<#else>
+									<tr>
+										<td> ${abstract}<label>${lsConcret} :</td><td> <input type="${value}" name="Feature"></br></br></label></td>
+									</tr>
+								</#if>
+							</#list>
+						<#else>
+							<tr>
+								<td> <label>${abstract} :</td><td> <input type="${value}" name="Feature"></br></br></label></td>
+							</tr>
+						</#if>
+					</#list>
 				</#list>
 		</table>
 		<button type="submit">Ajouter un produit</button>

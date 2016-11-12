@@ -3,6 +3,7 @@ package org.opencompare;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -34,16 +35,12 @@ public class TraitementPcm {
 	private Map<String, List<String>> allContentsCell;
 	private Map<String, List<String>> contentsTypeMultiple;
 	private Map<String, String> bestTypesValue;
+	private Map<Map<String, List<String>>, String> trueType;
 	
 	public TraitementPcm(File file) {
-		this.file = file;
-		this.loadPcm(this.file);
-		this.namePcm = this.pcm.getName();
-		this.listFeatures = this.pcm.getConcreteFeatures();
-		this.allTypesValue = getAllTypesValue(this.listFeatures);
+		this.loadPcm(file);
 		this.allContentsCell = getAllContentsCell(this.listFeatures);
-		this.contentsTypeMultiple =  contentsTypeMultiple(this.listFeatures);
-		this.bestTypesValue = getBestTypes(this.allTypesValue);
+		this.contentsTypeMultiple = contentsTypeMultiple(this.listFeatures);
 	}
 	
 	public PCM getPcm() {
@@ -52,6 +49,14 @@ public class TraitementPcm {
 	
 	public void setPcm(PCM pcm) {
 		this.pcm = pcm;
+	}
+	
+	public File getFile() {
+		return file;
+	}
+
+	public void setFile(File file) {
+		this.file = file;
 	}
 	
 	public String getNamePcm() {
@@ -98,6 +103,14 @@ public class TraitementPcm {
 		this.bestTypesValue = bestTypes;
 	}
 	
+	public Map<Map<String, List<String>>, String> getTrueType() {
+		return this.trueType;
+	}
+
+	public void setTrueType(Map<Map<String, List<String>>, String> trueType) {
+		this.trueType = trueType;
+	}
+	
 	public void loadPcm(File file) {
 		this.file = file;
         PCMLoader loader = new KMFJSONLoader();
@@ -110,6 +123,7 @@ public class TraitementPcm {
 		this.listFeatures = this.pcm.getConcreteFeatures();
 		this.allTypesValue = getAllTypesValue(this.listFeatures);
 		this.bestTypesValue = getBestTypes(this.allTypesValue);
+		this.trueType = getTrueType(this.bestTypesValue);
 	}
 	
 	public String valueToType(Value kValue) {
@@ -152,7 +166,8 @@ public class TraitementPcm {
 				for(Cell cell : feat.getCells()) {
 					// si le nom du abstractFeature n'est pas null, alors on le recupere
 					if(cell.getFeature().getParentGroup() != null) {
-						abstractFeature = cell.getFeature().getParentGroup().getName() + " - ";
+						// ajout d'un separateur @@!! pour reperer plus facilement le abstractFeature et concretFeature
+						abstractFeature = cell.getFeature().getParentGroup().getName() + "§!";
 					}
 					// Obtenir le type de la case courante
 					currentType = valueToType(cell.getInterpretation());
@@ -174,7 +189,6 @@ public class TraitementPcm {
 				feat_type.put(abstractFeature + feat.getName(), listTypes);
 			}
 		}
-		System.out.println("-------------------------------------------------------");
 		return feat_type;
 	}
 	
@@ -294,5 +308,49 @@ public class TraitementPcm {
 			nbOccurrence = new HashMap<String, Integer>();
 		}
 		return bestTypes;
+	}
+	
+	private Map<Map<String, List<String>>, String> getTrueType(Map<String, String> bestTypes) {
+		// cette methode gere les sous champs en faisant apparaitre les abstractFeatures si disponible + concretFeatures
+		
+		// cle : map qui contient abstractFeatures/list concretFeatures 
+		// valeur : type dominant du feature ou sous feature
+		Map<Map<String, List<String>>, String> trueType = new HashMap<Map<String, List<String>>, String>();
+		Map<String, List<String>> abstractConcret = new HashMap<String, List<String>>();
+		List<String> listConcret = new ArrayList<String>();
+		for(Entry<String, String> entry1 : bestTypes.entrySet()) {
+			// si il y a abstractFeature et
+			if(entry1.getKey().contains("§")) {
+				// on separe les 2 morceux
+				String split = entry1.getKey();
+				String[] parts = split.split("§!");
+				// part 1 : abstractFeature
+				String part1 = parts[0];
+				// part 2 : concretFeature
+				String part2 = parts[1];
+				if(!abstractConcret.containsKey(part1)) {
+					listConcret = new ArrayList<String>();
+					listConcret.add(part2);
+					abstractConcret.put(part1, listConcret);
+					trueType.put(abstractConcret, entry1.getValue());
+				} else {
+					listConcret = abstractConcret.get(part1);
+					listConcret.add(part2);
+					abstractConcret.put(part1, listConcret);
+					trueType.put(abstractConcret, entry1.getValue());
+				}
+			} else {
+				// le concretFeature devient abstractFeature pour faciliter la recuperation du nom dans le template
+				abstractConcret.put(entry1.getKey(), new ArrayList<String>());
+				trueType.put(abstractConcret, entry1.getValue());
+			}
+		}
+		
+		Collection<String> set = trueType.values();
+		
+		for(String str : set) {
+			System.out.println(str);
+		}
+		return trueType;
 	}
 }

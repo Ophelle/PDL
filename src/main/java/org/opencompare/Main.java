@@ -12,7 +12,7 @@ public class Main {
 
 		// Generation avec un template html : freemarker
 		GenerationHtml generator = new GenerationHtml(trait, "testPrototype/testHtml1.ftl" , "testPrototype/testHtml1.html");
-		//generator.getTraitPcm().loadPcm(new File("testPrototype/pcm_problem1.pcm"));
+		//generator.getTraitPcm().loadPcm(new File("testPrototype/example0.pcm"));
 		generator.generateHtml();
 		//generator.generatAllHtml();
 		
