@@ -78,15 +78,11 @@ public class GenerationHtml {
 		Map<String, Object> ajoutVar = new HashMap<String, Object>();
 		
 		for(int i = 0; i < filesPcm.length; i++) {
-			try {
-				getTraitPcm().loadPcm(filesPcm[i]);
-				// Attribution des variables au code html source
-				ajoutVar.put("titre", this.traitPcm.getNamePcm());
-				ajoutVar.put("name", "Prototype de formulaire");
-				ajoutVar.put("bestType", this.traitPcm.getBestTypes());
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			getTraitPcm().loadPcm(filesPcm[i]);
+			// Attribution des variables au code html source
+			ajoutVar.put("titre", this.traitPcm.getNamePcm());
+			ajoutVar.put("name", "Prototype de formulaire");
+			ajoutVar.put("bestType", this.traitPcm.getBestTypes());
 			setOutput("html/" + filesPcm[i].getName() + ".html");
 			File file = new File(this.output);
 			FileWriter writer = null;

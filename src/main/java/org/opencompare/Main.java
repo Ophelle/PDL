@@ -1,7 +1,6 @@
 package org.opencompare;
 
 import java.io.File;
-import java.io.IOException;
 
 public class Main {
 
@@ -10,22 +9,13 @@ public class Main {
 		// Chargement fichier + pcm + traitement des types
 		File file = new File("testPrototype/example0.pcm");
 		TraitementPcm trait = null;
-		try {
-			trait = new TraitementPcm(file);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		trait = new TraitementPcm(file);
 
 		// Generation avec un template html : freemarker
 		GenerationHtml generator = new GenerationHtml(trait, "testPrototype/testHtml1.ftl" , "testPrototype/testHtml1.html");
-		// test charger nouveau pcm
-//		try {
-//			generator.getTraitPcm().loadPcm(new File("testPrototype/example1.pcm"));
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//		generator.generateHtml();
-		generator.generatAllHtml();
+		generator.getTraitPcm().loadPcm(new File("testPrototype/pcm_problem1.pcm"));
+		generator.generateHtml();
+		//generator.generatAllHtml();
 		
 		
 		// test sur feature/type dominant

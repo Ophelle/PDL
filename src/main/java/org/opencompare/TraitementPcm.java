@@ -35,7 +35,7 @@ public class TraitementPcm {
 	private Map<String, List<String>> contentsTypeMultiple;
 	private Map<String, String> bestTypesValue;
 	
-	public TraitementPcm(File file) throws IOException {
+	public TraitementPcm(File file) {
 		this.file = file;
 		this.loadPcm(this.file);
 		this.namePcm = this.pcm.getName();
@@ -98,10 +98,14 @@ public class TraitementPcm {
 		this.bestTypesValue = bestTypes;
 	}
 	
-	public void loadPcm(File file) throws IOException {
+	public void loadPcm(File file) {
 		this.file = file;
         PCMLoader loader = new KMFJSONLoader();
-        this.pcm = loader.load(file).get(0).getPcm();
+        try {
+			this.pcm = loader.load(file).get(0).getPcm();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
         this.namePcm = this.pcm.getName();
 		this.listFeatures = this.pcm.getConcreteFeatures();
 		this.allTypesValue = getAllTypesValue(this.listFeatures);
