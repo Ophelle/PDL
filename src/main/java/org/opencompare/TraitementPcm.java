@@ -143,15 +143,20 @@ public class TraitementPcm {
 		String currentType = "";
 		// Map qui contient tous les types pour chaque feature de la matrice
 		Map<String, List<String>> feat_type = new HashMap<String, List<String>>();
-
+		
 		for(Feature feat : listFeatures) {
 			List<String> listTypes = new ArrayList<String>();
-			
+			String abstractFeature = "";
 			// Si le feature existe ou n'est pas vide
 			if(feat.getName() != null && !feat.getName().equals("")) {
 				for(Cell cell : feat.getCells()) {
+					// si le nom du abstractFeature n'est pas null, alors on le recupere
+					if(cell.getFeature().getParentGroup() != null) {
+						abstractFeature = cell.getFeature().getParentGroup().getName() + " - ";
+					}
 					// Obtenir le type de la case courante
 					currentType = valueToType(cell.getInterpretation());
+					
 					// Check with regExp if some string value can be number
 					// Pattern p = Pattern.compile("\\d.*"); //if string start
 					// wtih numbers, we considers feature type like number (ex:
@@ -166,9 +171,10 @@ public class TraitementPcm {
 					listTypes.add(currentType);
 				}
 				// Ajout dans la map le feature et sa liste de type disponible
-				feat_type.put(feat.getName(), listTypes);
+				feat_type.put(abstractFeature + feat.getName(), listTypes);
 			}
 		}
+		System.out.println("-------------------------------------------------------");
 		return feat_type;
 	}
 	
