@@ -7,13 +7,12 @@ public class Main {
 	public static void main(String[] args) {
 		
 		// Chargement fichier + pcm + traitement des types
-		File file = new File("testPrototype/example0.pcm");
-		TraitementPcm trait = null;
-		trait = new TraitementPcm(file);
+		File file = new File("testPrototype/pcm_problem1.pcm");
+		TraitementPcm trait = new TraitementPcm(file);
 
 		// Generation avec un template html : freemarker
 		GenerationHtml generator = new GenerationHtml(trait, "testPrototype/testHtml1.ftl" , "testPrototype/testHtml1.html");
-		generator.getTraitPcm().loadPcm(new File("testPrototype/pcm_problem1.pcm"));
+		//generator.getTraitPcm().loadPcm(new File("testPrototype/pcm_problem1.pcm"));
 		generator.generateHtml();
 		//generator.generatAllHtml();
 		
