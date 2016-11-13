@@ -79,7 +79,21 @@ public class TraitementPcmTest {
         		"dimension"
         );
     }
+    
 
+    @Test(expected = UnsupportedOperationException.class)
+    public void testUnknownValueType() {
+    	TraitementPcm.valueToType(new Value() {
+			@Override
+			public PCMElement clone(PCMFactory factory) {
+				return null;
+			}
+			
+			@Override
+			public void accept(PCMVisitor visitor) {				
+			}
+		});
+    }
     
     private void assertValueToType(Value value, String expectedResult) {
         final String result =
