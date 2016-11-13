@@ -134,4 +134,19 @@ public class TraitementPcmTest {
     	expected.put("feature1", "text");
     	Assert.assertEquals(expected, result);
     }
+    
+    @Test
+    public void testGetBestTypesWithOneFeatureMultipleTypes() {
+    	Map<String, List<String>> map = new HashMap<>(); 
+    	List<String> list = new ArrayList<>();
+    	list.add("conditional");
+    	list.add("boolean");
+    	list.add("conditional");
+    	map.put("feature1", list);
+    	final  Map<String, String> result = TraitementPcm.getBestTypes(map);
+    	
+    	Map<String, String> expected = new HashMap<>(); 
+    	expected.put("feature1", "text");
+    	Assert.assertEquals(expected, result);
+    }
 }
