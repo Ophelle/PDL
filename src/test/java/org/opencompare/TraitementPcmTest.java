@@ -27,4 +27,16 @@ public class TraitementPcmTest {
         Assert.assertNotNull(traitementPcm.getPcm());
         Assert.assertEquals("Comparison_between_Argentine_provinces_and_countries_by_GDP_(PPP)_per_capita", traitementPcm.getPcm().getName());
     }
+    
+    @Test
+    public void testWhenFileExistsGetPcmNameIsNotNull() throws IOException {
+        // si le fichier pcm exist
+        final File file = new File("pcms/Comparison_between_Argentine_provinces_and_countries_by_GDP_(PPP)_per_capita_0.pcm");
+        // et que je crée le TraitementPcm
+        final TraitementPcm traitementPcm = new TraitementPcm(file);
+        // alors getPcm ne doit pas être null
+        Assert.assertNotNull(traitementPcm.getNamePcm());
+        // et verifie que le nom du pcm est correct
+        Assert.assertEquals("Comparison between Argentine provinces and countries by GDP (PPP) per capita", traitementPcm.getNamePcm());
+    }
 }
