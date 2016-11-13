@@ -149,4 +149,28 @@ public class TraitementPcmTest {
     	expected.put("feature1", "text");
     	Assert.assertEquals(expected, result);
     }
+    
+    @Test
+    public void testGetBestTypesWithMultipleFeaturesMultipleTypes() {
+    	Map<String, List<String>> map = new HashMap<>(); 
+    	List<String> typesOfFeature1 = new ArrayList<>();
+    	typesOfFeature1.add("conditional");
+    	typesOfFeature1.add("boolean");
+    	typesOfFeature1.add("conditional");
+    	map.put("feature1", typesOfFeature1);
+
+    	List<String> typesOfFeature2 = new ArrayList<>();
+    	typesOfFeature2.add("real");
+    	typesOfFeature2.add("boolean");
+    	typesOfFeature2.add("conditional");
+    	typesOfFeature2.add("string");
+    	typesOfFeature2.add("real");
+    	map.put("feature2", typesOfFeature2);
+    	final  Map<String, String> result = TraitementPcm.getBestTypes(map);
+    	
+    	Map<String, String> expected = new HashMap<>(); 
+    	expected.put("feature1", "text");
+    	expected.put("feature2", "number");
+    	Assert.assertEquals(expected, result);
+    }
 }
