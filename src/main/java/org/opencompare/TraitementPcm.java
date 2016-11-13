@@ -16,6 +16,8 @@ import org.opencompare.api.java.impl.io.KMFJSONLoader;
 import org.opencompare.api.java.io.PCMLoader;
 import org.opencompare.api.java.value.BooleanValue;
 import org.opencompare.api.java.value.Conditional;
+import org.opencompare.api.java.value.DateValue;
+import org.opencompare.api.java.value.Dimension;
 import org.opencompare.api.java.value.IntegerValue;
 import org.opencompare.api.java.value.Multiple;
 import org.opencompare.api.java.value.NotApplicable;
@@ -23,6 +25,8 @@ import org.opencompare.api.java.value.NotAvailable;
 import org.opencompare.api.java.value.Partial;
 import org.opencompare.api.java.value.RealValue;
 import org.opencompare.api.java.value.StringValue;
+import org.opencompare.api.java.value.Unit;
+import org.opencompare.api.java.value.Version;
 
 public class TraitementPcm {
 	
@@ -144,8 +148,16 @@ public class TraitementPcm {
             return "string";
         } else if (kValue instanceof Conditional) {
             return "conditional";
+        } else if (kValue instanceof DateValue) {
+            return "date";
+        } else if (kValue instanceof Dimension) {
+            return "dimension";
         } else if (kValue instanceof Partial) {
             return "partial";
+        } else if (kValue instanceof Unit) {
+            return "unit";
+        } else if (kValue instanceof Version) {
+            return "version";
         } else {
         	return "string";
         }
