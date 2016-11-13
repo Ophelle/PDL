@@ -101,11 +101,14 @@ public class TraitementPcmTest {
         Assert.assertEquals(expectedResult, result);
     }
     
-
-    
     @Test
     public void setConditionalTypeHtml() {
     	final String result = TraitementPcm.setTypeHtml("conditional");
     	Assert.assertEquals("text", result);
+    }
+    
+    @Test (expected = NullPointerException.class)
+    public void setTypeHtmlnull(){
+ 	  TraitementPcm.setTypeHtml(null);
     }
 }
