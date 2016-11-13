@@ -129,7 +129,7 @@ public class TraitementPcm {
 		//this.trueType = getTrueType(this.bestTypesValue);
 	}
 	
-	public String valueToType(Value kValue) {
+	public static String valueToType(Value kValue) {
 		if (kValue == null) {
             return "string";
         } else if (kValue instanceof BooleanValue) {
@@ -158,8 +158,10 @@ public class TraitementPcm {
             return "unit";
         } else if (kValue instanceof Version) {
             return "version";
+        } else if (kValue instanceof Dimension) {
+            return "dimension";
         } else {
-        	return "string";
+        	throw new UnsupportedOperationException("The value type is not supported !");
         }
 	}
 	
@@ -236,7 +238,13 @@ public class TraitementPcm {
 		return feat_content;
 	}
 	
-	public String setTypeHtml(String str) {
+	/**
+	 * Returns the HTML type from the Value type.
+	 * @param str
+	 * @return
+	 * @throws NullPointerException when the passed parameter is null.
+	 */
+	public static String setTypeHtml(String str) throws NullPointerException{
 		switch (str) {
 		case "conditional":
 			str = "text";
@@ -274,7 +282,7 @@ public class TraitementPcm {
 		return str;
 	}
 	
-	private Map<String, String> getBestTypes(Map<String, List<String>> allTypes) {
+	public static Map<String, String> getBestTypes(Map<String, List<String>> allTypes) {
 
 		Map<String, Integer> nbOccurrence = new HashMap<String, Integer>();
 		Map<String, String> bestTypes = new HashMap<String, String>();

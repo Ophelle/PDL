@@ -39,4 +39,52 @@ public class TraitementPcmTest {
         // et verifie que le nom du pcm est correct
         Assert.assertEquals("Comparison between Argentine provinces and countries by GDP (PPP) per capita", traitementPcm.getNamePcm());
     }
+    
+
+    @Test
+    public void testAllValueToTypes() {
+        this.assertValueToType(
+        		new org.opencompare.api.java.impl.value.BooleanValueImpl(null), 
+        		"boolean"
+        );
+
+        this.assertValueToType(
+        		new org.opencompare.api.java.impl.value.IntegerValueImpl(null), 
+        		"integer"
+        );
+
+        this.assertValueToType(
+        		new org.opencompare.api.java.impl.value.NotApplicableImpl(null), 
+        		"string"
+        );
+
+        this.assertValueToType(
+        		new org.opencompare.api.java.impl.value.NotAvailableImpl(null), 
+        		"string"
+        );
+
+        this.assertValueToType(
+        		new org.opencompare.api.java.impl.value.RealValueImpl(null), 
+        		"real"
+        );
+        
+        this.assertValueToType(
+        		 null, 
+        		"string"
+        );
+        
+        // Be careful, maybe dimension should return "dimension" !
+        this.assertValueToType(
+        		new org.opencompare.api.java.impl.value.DimensionImpl(null), 
+        		"dimension"
+        );
+    }
+
+    
+    private void assertValueToType(Value value, String expectedResult) {
+        final String result =
+                TraitementPcm.valueToType(value);
+        Assert.assertEquals(expectedResult, result);
+    }
+    
 }
