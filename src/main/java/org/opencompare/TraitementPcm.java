@@ -38,7 +38,7 @@ public class TraitementPcm {
 	private Map<String, List<String>> allContentsCell;
 	private Map<String, List<String>> contentsTypeMultiple;
 	private Map<String, String> bestTypesValue;
-	private Map<Map<String, List<String>>, String> trueType;
+	//private Map<Map<String, List<String>>, String> trueType;
 	
 	public TraitementPcm(File file) {
 		this.loadPcm(file);
@@ -106,13 +106,13 @@ public class TraitementPcm {
 		this.bestTypesValue = bestTypes;
 	}
 	
-	public Map<Map<String, List<String>>, String> getTrueType() {
-		return this.trueType;
-	}
-
-	public void setTrueType(Map<Map<String, List<String>>, String> trueType) {
-		this.trueType = trueType;
-	}
+//	public Map<Map<String, List<String>>, String> getTrueType() {
+//		return this.trueType;
+//	}
+//
+//	public void setTrueType(Map<Map<String, List<String>>, String> trueType) {
+//		this.trueType = trueType;
+//	}
 	
 	public void loadPcm(File file) {
 		this.file = file;
@@ -158,8 +158,6 @@ public class TraitementPcm {
             return "unit";
         } else if (kValue instanceof Version) {
             return "version";
-        } else if (kValue instanceof Dimension) {
-            return "dimension";
         } else {
         	throw new UnsupportedOperationException("The value type is not supported !");
         }
@@ -238,13 +236,7 @@ public class TraitementPcm {
 		return feat_content;
 	}
 	
-	/**
-	 * Returns the HTML type from the Value type.
-	 * @param str
-	 * @return
-	 * @throws NullPointerException when the passed parameter is null.
-	 */
-	public static String setTypeHtml(String str) throws NullPointerException{
+	public String setTypeHtml(String str) {
 		switch (str) {
 		case "conditional":
 			str = "text";
@@ -282,7 +274,7 @@ public class TraitementPcm {
 		return str;
 	}
 	
-	public static Map<String, String> getBestTypes(Map<String, List<String>> allTypes) {
+	public Map<String, String> getBestTypes(Map<String, List<String>> allTypes) {
 
 		Map<String, Integer> nbOccurrence = new HashMap<String, Integer>();
 		Map<String, String> bestTypes = new HashMap<String, String>();
