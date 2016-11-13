@@ -11,7 +11,9 @@ import org.opencompare.model.impl.BooleanValueImpl;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -118,5 +120,18 @@ public class TraitementPcmTest {
     public void testGetBestTypes() {
     	final  Map<String, String> result = TraitementPcm.getBestTypes(new HashMap<>());
     	Assert.assertEquals(new HashMap<>(), result);
+    }
+    
+    @Test
+    public void testGetBestTypesWithOneFeatureOneType() {
+    	Map<String, List<String>> map = new HashMap<>(); 
+    	List<String> list = new ArrayList<>();
+    	list.add("conditional");
+    	map.put("feature1", list);
+    	final  Map<String, String> result = TraitementPcm.getBestTypes(map);
+    	
+    	Map<String, String> expected = new HashMap<>(); 
+    	expected.put("feature1", "text");
+    	Assert.assertEquals(expected, result);
     }
 }
