@@ -11,6 +11,8 @@ import org.opencompare.model.impl.BooleanValueImpl;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author Moussa Lydia
@@ -110,5 +112,11 @@ public class TraitementPcmTest {
     @Test (expected = NullPointerException.class)
     public void setTypeHtmlnull(){
  	  TraitementPcm.setTypeHtml(null);
+    }
+    
+    @Test
+    public void testGetBestTypes() {
+    	final  Map<String, String> result = TraitementPcm.getBestTypes(new HashMap<>());
+    	Assert.assertEquals(new HashMap<>(), result);
     }
 }
