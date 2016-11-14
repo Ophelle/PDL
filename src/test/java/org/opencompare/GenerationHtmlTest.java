@@ -15,27 +15,36 @@ public class GenerationHtmlTest{
 	TraitementPcm trait;
 	GenerationHtml generator;
 	
-	public void test() throws IOException, TemplateException {
-		this.file = new File("pcms/example0.pcm");
+	public void test() throws IOException{
+		this.file = new File("pcms/Comparison_(grammar)_0.pcm");
 		this.trait = new TraitementPcm(file);
 		this.generator = new GenerationHtml(trait, "pcms/testHtml1.ftl" , "pcms/testHtml1.html");
 	}
 	
 	@Test
-	public void testOutput() {
-		
+	public void GetAndSetOutput() throws IOException{
+		test();
+		assertEquals("pcms/testHtml1.html", generator.getOutput());
+		generator.setOutput("testPrototype/testHtml1.html");
+		assertEquals("testPrototype/testHtml1.html", generator.getOutput());
 	}
 	
 	@Test
-	public void testInput() {
-		generator.getInput();
-		//generator.setInput();
-		
+	public void GetAndSetInput() throws IOException{
+		test();
+		assertEquals("pcms/testHtml1.ftl", generator.getInput());
+		generator.setInput("testPrototype/testHtml1.ftl");
+		assertEquals("testPrototype/testHtml1.ftl", generator.getInput());
 	}
 	
 	@Test
-	public void testTraitPcm() {
-		
+	public void GetAndSetTraitPcm() throws IOException{
+		test();
+		assertEquals(trait, generator.getTraitPcm());
+		File fileTest = new File("pcms/Comparison_of_ad_servers_0.pcm");
+		TraitementPcm test1 = new TraitementPcm(fileTest);
+		generator.setTraitPcm(test1);
+		assertEquals(test1, generator.getTraitPcm());
 	}
 
 }
