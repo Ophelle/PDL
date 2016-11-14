@@ -129,7 +129,7 @@ public class TraitementPcm {
 		//this.trueType = getTrueType(this.bestTypesValue);
 	}
 	
-	public static String valueToType(Value kValue) {
+	public String valueToType(Value kValue) {
 		if (kValue == null) {
             return "string";
         } else if (kValue instanceof BooleanValue) {

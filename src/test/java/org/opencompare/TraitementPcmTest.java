@@ -1,13 +1,17 @@
 package org.opencompare;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.opencompare.api.java.Cell;
 import org.opencompare.api.java.Feature;
 import org.opencompare.api.java.PCM;
+import org.opencompare.api.java.PCMElement;
+import org.opencompare.api.java.PCMFactory;
 import org.opencompare.api.java.Value;
 import org.opencompare.api.java.impl.io.KMFJSONLoader;
 import org.opencompare.api.java.io.PCMLoader;
+import org.opencompare.api.java.util.PCMVisitor;
 import org.opencompare.api.java.value.BooleanValue;
 import org.opencompare.api.java.value.Conditional;
 import org.opencompare.api.java.value.DateValue;
@@ -35,19 +39,19 @@ import java.util.Map;
  * @author Moussa Lydia
  */
 public class TraitementPcmTest {
-	TraitementPcm traitementpcm;
-	File file;
+	private TraitementPcm traitementpcm;
+	private File file;
 	
-	public void test() throws IOException{
+	@Before
+	public void before() throws IOException{
 		this.file = new File("pcms/Comparison_between_Argentine_provinces_and_countries_by_GDP_(PPP)_per_capita_0.pcm");
 		this.traitementpcm = new TraitementPcm(file);
 	}
 
 	@Test
     public void GetAndSetAllTypesValue() throws IOException {
-		test();
-		List<String> list1 = new ArrayList();
-		List<String> list2 = new ArrayList();
+		List<String> list1 = new ArrayList<>();
+		List<String> list2 = new ArrayList<>();
 		Map<String, List<String>> map = new HashMap<String, List<String>>();
 		list1.add("integer");
 		list1.add("integer");
@@ -75,12 +79,10 @@ public class TraitementPcmTest {
 		map.put("Puissance", list1);
 		traitementpcm.setAllTypesValue(map);
 		assertEquals(map, traitementpcm.getAllTypesValue());
-		
 	}
 
 	@Test
     public void GetAndSetAllContentsCell() throws IOException {
-		test();
 		List<String> list1 = new ArrayList();
 		List<String> list2 = new ArrayList();
 		Map<String, List<String>> map = new HashMap<String, List<String>>();
@@ -114,7 +116,6 @@ public class TraitementPcmTest {
 	
 	@Test
     public void GetAndSetContentsTypeMultiple() throws IOException {
-		test();
 		List<String> list1 = new ArrayList();
 		List<String> list2 = new ArrayList();
 		Map<String, List<String>> map = new HashMap<String, List<String>>();
@@ -148,35 +149,23 @@ public class TraitementPcmTest {
 	
 	@Test
     public void contentsTypeMultiple() throws IOException {
-		
+		// TODO
 	}
 
   @Test
     public void testWhenFileExistsGetPcmIsNotNull() throws IOException {
-        test();
         Assert.assertNotNull(traitementpcm.getPcm());
         Assert.assertEquals("Comparison_between_Argentine_provinces_and_countries_by_GDP_(PPP)_per_capita", traitementpcm.getPcm().getName());
     }
     
     @Test
     public void testWhenFileExistsGetPcmNameIsNotNull() throws IOException {
-    	test();
         Assert.assertNotNull(traitementpcm.getNamePcm());
         // et verifie que le nom du pcm est correct
         Assert.assertEquals("Comparison between Argentine provinces and countries by GDP (PPP) per capita", traitementpcm.getNamePcm());
    }
-    
-    
-    public class ValueToType {
-    }
-    
-    	ValueToType valuetotype ;
-  	
-  public void ValueToType(ValueToType valuetotype) {
-			this.valuetotype = valuetotype;
-		}
 
-   /*@Test 
+   @Test 
   public void assertValueToType() {
        this.assertValueToType(
        		new org.opencompare.api.java.impl.value.BooleanValueImpl(null), 
@@ -208,54 +197,41 @@ public class TraitementPcmTest {
        		"string"
        );
        
-       // Be careful, maybe dimension should return "dimension" !
        this.assertValueToType(
        		new org.opencompare.api.java.impl.value.DimensionImpl(null), 
        		"dimension"
        );
-   }*/
-   
- // public class ValueToType {
-	 //  ValueToType valuetotype1 ;   
-  //}
- 	 
- 	 
-   /*@Test
-   (expected = UnsupportedOperationException.class)
-   public void testUnknownValueType() {
-	   
-   	traitementpcm.valueToType(new Value() {
-			@Override
-			public PCMElement clone(PCMFactory factory) {
-				return null;
-			}
-			
-			@Override
-			public void accept(PCMVisitor visitor) {				
-			}
-   	}
-   }*/
-   
-  
-   
-  
-   /*public void assertValueToType(Value value, String expectedResult) {
    }
-   assertValueToType assertvalueTotype;
-
-   	this.Value=value;
-   	this.String = expectedResult ;
-   	
+   
+ 	 
+ 	 
+   @Test(expected = UnsupportedOperationException.class)
+   public void testUnknownValueType() {
+	 
+   	traitementpcm.valueToType(new Value() {
+		
+		@Override
+		public PCMElement clone(PCMFactory factory) {
+			return null;
+		}
+		
+		@Override
+		public void accept(PCMVisitor visitor) {
+			
+		}
+	});
+   }
+   
+  
+   
+  
+   public void assertValueToType(Value value, String expectedResult) {
+   
          final String result =
                  traitementpcm.valueToType(value);
           Assert.assertEquals(expectedResult, result);
       }
      
-
-   
-      public class setConditionalTypeHtml {
-    
-       }
        @Test
        public void setConditionalTypeHtml() {
        	
@@ -267,7 +243,7 @@ public class TraitementPcmTest {
        @Test (expected = NullPointerException.class)
        public void setTypeHtmlnull(){
     	  traitementpcm.setTypeHtml(null);
-       }*/
+       }
      }
 
 
