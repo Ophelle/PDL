@@ -1,36 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href="css/moncss.css" rel="stylesheet"type="text/css">
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+<script type="text/javascript" src="js/typeahead.min.js"></script>
+<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>${name} Version 0.5</title>
 	<meta charset="utf-8">
-	   <style>
-         fieldset{
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-bottom: 20px;
-        }
-        legend{
-            font-size: 14px;
-            margin-bottom: 0px;
-            width: auto;
-            border-width: 0px;
-            color: #ff6600;
-            font-weight: bold;
-            margin-left: 20px;
-        }
-        label{ font-weight : bold;}
-       {text-align: right;top:20px;}
-    </style>
 </head>
 <body>
 	<h1>${titre}</h1>
 	<fieldset>
 		<table>
    			<legend style="color:red" >Formulaire</legend>
+   			<#assign i=0>
 				<#list bestType as key, value>
+					<#assign i++>
 					<#if value == "radio">
 						<tr>
- 		 					<td> <label>${key} :</td><td> <input type="${value}" name="Feature" value="oui"> Yes <input type="${value}" name="Feature" value = "non">No</br></br></label></td>
+ 		 					<td> <label>${key} :</td><td> <input type="${value}" name="Feature${key}" value="oui"> oui <input type="${value}" name="Feature${key}" value = "non"> non</br></br></label></td>
+						    <td> <label>${key} :</td><td> <input type="${value}" name="Feature" value="oui"> Yes <input type="${value}" name="Feature" value = "non">No</br></br></label></td>
 						</tr>
 					<#elseif value == "conditional">
 						<tr>
@@ -38,7 +27,7 @@
 						</tr>
 					<#else>
 						<tr>
-							<td> <label>${key} :</td><td> <input type="${value}" name="Feature"></br></br></label></td>
+							<td> <label>${key} :</td><td> <input id="${i}" type="${value}" name="Feature"></br></br></label></td>
 						</tr>
 					</#if>
 					
@@ -47,6 +36,15 @@
 		</table>
 		<button type="submit">Ajouter un produit</button>
 	</fieldset>
+	<script>
+		<#assign j=0>
+		<#list allContentsCell as key, value>
+          $("#<#assign j++>${j}").typeahead({
+            name:"list${j}",
+            local : [<#list value as  values>'${values}',</#list>'']
+          });
+        </#list>
+        </script>
 		
 </body>
 </html>

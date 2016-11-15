@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		// Chargement fichier + pcm + traitement des types
-		File file = new File("testPrototype/pcm_problem1.pcm");
+		File file = new File("testPrototype/example0.pcm");
 		TraitementPcm trait = new TraitementPcm(file);
 
 		// Generation avec un template html : freemarker
