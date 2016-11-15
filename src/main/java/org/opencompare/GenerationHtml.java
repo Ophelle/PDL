@@ -84,6 +84,7 @@ public class GenerationHtml {
 			ajoutVar.put("titre", this.traitPcm.getNamePcm());
 			ajoutVar.put("name", "Prototype de formulaire");
 			ajoutVar.put("bestType", this.traitPcm.getBestTypes());
+			ajoutVar.put("allContentsCell", this.traitPcm.getAllContentsCell());
 			setOutput("html/" + filesPcm[i].getName() + ".html");
 			File file = new File(this.output);
 			FileWriter writer = null;

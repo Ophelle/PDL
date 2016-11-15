@@ -1,26 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href="css/moncss.css" rel="stylesheet"type="text/css">
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+<script type="text/javascript" src="js/typeahead.min.js"></script>
+<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
-	   <style>
-         fieldset{
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-bottom: 20px;
-        }
-        legend{
-            font-size: 14px;
-            margin-bottom: 0px;
-            width: auto;
-            border-width: 0px;
-            color: #ff6600;
-            font-weight: bold;
-            margin-left: 20px;
-        }
-        label{ font-weight : bold;}
-       {text-align: right;top:20px;}
-    </style>
 </head>
 <body>
 	<h1>Comparison of instant messaging clients - Features</h1>
@@ -28,108 +14,206 @@
 		<table>
    			<legend style="color:red" >Formulaire</legend>
 						<tr>
-							<td> <label>Unicode (UTF-8) :</td><td> <input type="text" name="Feature"></br></br></label></td>
+							<td> <label>Unicode (UTF-8) :</td><td> <input id="1" type="text" name="Feature"></br></br></label></td>
 						</tr>
 					
 					
 						<tr>
-							<td> <label>Built-in games :</td><td> <input type="text" name="Feature"></br></br></label></td>
+							<td> <label>Built-in games :</td><td> <input id="2" type="text" name="Feature"></br></br></label></td>
 						</tr>
 					
 					
 						<tr>
-							<td> <label>Remote desktop assistance :</td><td> <input type="text" name="Feature"></br></br></label></td>
+							<td> <label>Remote desktop assistance :</td><td> <input id="3" type="text" name="Feature"></br></br></label></td>
 						</tr>
 					
 					
 						<tr>
-							<td> <label>File transfer :</td><td> <input type="text" name="Feature"></br></br></label></td>
+							<td> <label>File transfer :</td><td> <input id="4" type="text" name="Feature"></br></br></label></td>
 						</tr>
 					
 					
 						<tr>
-							<td> <label>Toolkits or SDKs :</td><td> <input type="checkbox" name="Feature"></br></br></label></td>
+							<td> <label>Toolkits or SDKs :</td><td> <input id="5" type="checkbox" name="Feature"></br></br></label></td>
 						</tr>
 					
 					
 						<tr>
-							<td> <label>Third party add-ons :</td><td> <input type="text" name="Feature"></br></br></label></td>
+							<td> <label>Third party add-ons :</td><td> <input id="6" type="text" name="Feature"></br></br></label></td>
 						</tr>
 					
 					
 						<tr>
-							<td> <label>Graphical emoticon :</td><td> <input type="text" name="Feature"></br></br></label></td>
+							<td> <label>Graphical emoticon :</td><td> <input id="7" type="text" name="Feature"></br></br></label></td>
 						</tr>
 					
 					
 						<tr>
-							<td> <label>Proxy server :</td><td> <input type="checkbox" name="Feature"></br></br></label></td>
+							<td> <label>Proxy server :</td><td> <input id="8" type="checkbox" name="Feature"></br></br></label></td>
 						</tr>
 					
 					
 						<tr>
-							<td> <label>Offline messaging :</td><td> <input type="text" name="Feature"></br></br></label></td>
+							<td> <label>Offline messaging :</td><td> <input id="9" type="text" name="Feature"></br></br></label></td>
 						</tr>
 					
 					
 						<tr>
-							<td> <label>Voice mail :</td><td> <input type="text" name="Feature"></br></br></label></td>
+							<td> <label>Voice mail :</td><td> <input id="10" type="text" name="Feature"></br></br></label></td>
 						</tr>
 					
 					
 						<tr>
-							<td> <label>Message logging :</td><td> <input type="text" name="Feature"></br></br></label></td>
+							<td> <label>Message logging :</td><td> <input id="11" type="text" name="Feature"></br></br></label></td>
 						</tr>
 					
 					
 						<tr>
-							<td> <label>Scripting :</td><td> <input type="text" name="Feature"></br></br></label></td>
+							<td> <label>Scripting :</td><td> <input id="12" type="text" name="Feature"></br></br></label></td>
 						</tr>
 					
 					
 						<tr>
-							<td> <label>Plugin system :</td><td> <input type="text" name="Feature"></br></br></label></td>
+							<td> <label>Plugin system :</td><td> <input id="13" type="text" name="Feature"></br></br></label></td>
 						</tr>
 					
 					
 						<tr>
-							<td> <label>RTL texting :</td><td> <input type="text" name="Feature"></br></br></label></td>
+							<td> <label>RTL texting :</td><td> <input id="14" type="text" name="Feature"></br></br></label></td>
 						</tr>
 					
 					
 						<tr>
-							<td> <label>Voice messaging :</td><td> <input type="text" name="Feature"></br></br></label></td>
+							<td> <label>Voice messaging :</td><td> <input id="15" type="text" name="Feature"></br></br></label></td>
 						</tr>
 					
 					
 						<tr>
-							<td> <label>Number of features included :</td><td> <input type="number" name="Feature"></br></br></label></td>
+							<td> <label>Number of features included :</td><td> <input id="16" type="number" name="Feature"></br></br></label></td>
 						</tr>
 					
 					
 						<tr>
-							<td> <label>Webcam support :</td><td> <input type="text" name="Feature"></br></br></label></td>
+							<td> <label>Webcam support :</td><td> <input id="17" type="text" name="Feature"></br></br></label></td>
 						</tr>
 					
 					
 						<tr>
-							<td> <label>Themes, skins :</td><td> <input type="text" name="Feature"></br></br></label></td>
+							<td> <label>Themes, skins :</td><td> <input id="18" type="text" name="Feature"></br></br></label></td>
 						</tr>
 					
 					
 						<tr>
-							<td> <label>Client :</td><td> <input type="text" name="Feature"></br></br></label></td>
+							<td> <label>Client :</td><td> <input id="19" type="text" name="Feature"></br></br></label></td>
 						</tr>
 					
 					
 						<tr>
-							<td> <label>Whiteboard :</td><td> <input type="text" name="Feature"></br></br></label></td>
+							<td> <label>Whiteboard :</td><td> <input id="20" type="text" name="Feature"></br></br></label></td>
 						</tr>
 					
 					
 		</table>
 		<button type="submit">Ajouter un produit</button>
 	</fieldset>
+	<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['100%','95%','95%','95%','100%','100%','95%','95%','100%','95%','95%','95%','95%','95%','95%','96%','100%','95%','100%','100%','100%','95%','100%','95%','100%','100%','100%','95%','100%','96%','96%','95%','95%','100%','96%','95%','100%','95%','100%','100%','100%','100%','100%','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['CMOS','CMOS','CMOS','CMOS','CMOS','CMOS','CCD','CMOS','CMOS','CCD','JFET-LBCAST','CCD','CMOS','CMOS','CMOS','CMOS','CCD','CMOS','CMOS','CCD','CMOS','CMOS','CMOS','CMOS','CCD','JFET-LBCAST','CMOS','CCD','CMOS','CCD','CMOS','CMOS','CCD','CMOS','CCD','CMOS','CMOS','CMOS','CMOS','CCD','CCD','CMOS','CCD','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['3.0" 921k dots','2.5" 230k dots','2.0" 114k dots','3.0" 230k dots','3.0" 921k dots','3.2" 921k dots','3.2" 921k dots','2.5" 230k dots','3.0" 921k dots','3.0" 921k dots','3.0" 921k dots','3.0" 921k dots','3.2" 921k dots','3.2" 921k dots','3.2" 1037k dots','2.7" 230k dots','3.0" 921k dots','3.2" 921k dots','2.5" 230k dots','1.8" 118k dots','3.2" 1229k dots','3.2" 1229k dots','2.5" 230k dots','2.5" 230k dots','3.0" 921k dots','2.5" 230k dots','3.0" 921k dots','2.0" 130k dots','3.0" 921k dots','2.0" 130k dots','3.2" 1229k dots','3.0" 230k dots','3.2" 1229k dots','2.0" 130k dots','3" 921k dots','3.2" 921k dots','1.8" 130k dots','3.2" 1037k dots','2.5" 211k dots','2.0" 130k dots','3.0" 921k dots','2.5" 235k dots','2.5" 232k dots','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['1005','1005','420','420','420','1005','2016','420','91000','91000','1005','420','1005','91000','2016','1005','91000','420','1005','420','2016','1005','2016','1005','2016','1005','2016','2016','1005','420','1005','420','2016','1005','420','1005','1005','420','2016','420','1005','91000','1005','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['4.5','2.5','6','9','5.5','5','5','4','3','9','3','6.5','8','5','5','5.5','5','3','3','4.5','4','5','6','4','5','5','2.5','10','7','5','3','5','3','6','10','9','6','9','3','4','6','5','3','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['-','-','-','-','-','-','Yes (Built-in)','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','']
+          });
+          $("#7").typeahead({
+            name:"list7",
+            local : ['51','51','5','3','51','11','11','11','5','51','51','39','51','39','11','39','11','11','3','11','51','51','11','5','51','39','39','3','51','51','11','51','5','39','51','39','5','11','5','11','11','11','5','']
+          });
+          $("#8").typeahead({
+            name:"list8",
+            local : ['APS-C','APS-C','Full-frame','APS-C','APS-C','APS-C','APS-C','APS-C','APS-C','APS-C','APS-C','APS-C','Full-frame','Full-frame','Full-frame','APS-C','APS-C','Full-frame','APS-C','APS-C','APS-C','APS-C','APS-C','APS-C','APS-C','APS-C','Full-frame','Full-frame','Full-frame','Full-frame','APS-C','APS-C','Full-frame','APS-C','APS-C','APS-C','APS-C','Full-frame','APS-C','Full-frame','APS-C','APS-C','APS-C','']
+          });
+          $("#9").typeahead({
+            name:"list9",
+            local : ['1600','12800','3200','25600','6400','12800','1600','1600','1600','6400','12800','1600','6400','1600','3200','6400','12800','1600','6400','1600','3200','1600','800','1600','1600','25600','6400','800','3200','12800','12800','6400','12800','1600','1600','1600','3200','12800','6400','6400','1600','800','6400','']
+          });
+          $("#10").typeahead({
+            name:"list10",
+            local : ['2.66','12.3','14.2','12.3','10.2','16.2','12.4','24.2','24.3','24.1','16.2','6.1','16.2','24.1','10.2','10.2','6.1','16.2','12.3','36.3','6.1','6.1','4.1','12.1','36.3','24.1','24.2','24.5','12.1','4.1','24.2','24.1','10.2','6.1','16.2','24.9','10.2','12.1','2.7','5.3','12.3','12.4','24.3','']
+          });
+          $("#11").typeahead({
+            name:"list11",
+            local : ['-','-','-','Yes (Built-in)','-','-','-','-','Yes (Built-in)','-','-','-','Yes (Built-in)','-','-','-','-','-','Yes (Built-in)','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','']
+          });
+          $("#12").typeahead({
+            name:"list12",
+            local : ['710','550','1220','760','585','430','455','1100','540','830','485','825','700','1240','995','1070','1180','690','510','560','840','620','475','1240','1180','1070','420','455','1070','880','495','600','1100','750','480','495','1100','760','675','595','1070','900','675','']
+          });
+          $("#13").typeahead({
+            name:"list13",
+            local : ['CF, MicroDrive','SD, SDHC, SDXC','SD SDHC SDXC','CF, MicroDrive','SD/SDHC/SDXC (×2)','CF, MicroDrive','SD, SDHC','CF (x2)','CF, SDHC, SDXC','CF, XQD','CF, MicroDrive','SD','SD/SDHC/SDXC (×2)','SD/SDHC/SDXC','SD, SDHC','CF, MicroDrive','SD, SDHC','SD, SDHC, SDXC','CF, MicroDrive','CF, MicroDrive','CF, MicroDrive (x2)','CF, SD, SDHC','CF, MicroDrive','CF','SD, SDHC, SDXC','SD, SDHC, SDXC','CF, MicroDrive','SD, SDHC, SDXC','SD, SDHC, SDXC','SD, SDHC','CF, MicroDrive','SD, SDHC','CF, MicroDrive','CF','CF, MicroDrive (x2)','CF, SDHC, SDXC','SD, SDHC, SDXC','SD/SDHC/SDXC (×2)','SD, SDHC','SD, SDHC','CF, XQD','SD/SDHC/SDXC (×2)','SD/SDHC/SDXC (×2)','']
+          });
+          $("#14").typeahead({
+            name:"list14",
+            local : ['Sony','Sony','Nikon','Sony','Sony','Sony','Toshiba','Sony','Sony','Sony','Sony','Sony','Sony','Sony','Nikon','Sony','Sony','Nikon','Sony','Nikon','Sony','Sony','Sony','Sony','Nikon','Nikon','Nikon','Sony','Sony','Sony','Sony','Sony','Sony','Nikon','Sony','Sony','Sony','Nikon','Toshiba','Nikon','Nikon','Sony','Nikon','']
+          });
+          $("#15").typeahead({
+            name:"list15",
+            local : ['200','100','200','100','100','200','125','100','100','200','200','100','100','100','200','200','100','100','200','200','200','100','200','100','100','100','200','100','64','100','100','200','100','100','100','100','100','100','200','200','100','100','200','']
+          });
+          $("#16").typeahead({
+            name:"list16",
+            local : ['Yes','Yes','No','No','Yes','No','Yes','Yes','No','No','No','Yes','No','Yes','Yes','Yes','Yes','Yes','No','Yes','Yes','No','Yes','No','No','Yes','No','Yes','Yes','No','No','Yes','No','Yes','No','Yes','Yes','Yes','Yes','Yes','Yes','No','Yes','']
+          });
+          $("#17").typeahead({
+            name:"list17",
+            local : ['50','100','100','200','200','100','50','100','100','100','200','100','32','100','100','100','200','200','100','200','100','200','200','100','50','50','50','100','100','100','125','100','100','100','50','50','100','100','100','50','200','100','100','']
+          });
+          $("#18").typeahead({
+            name:"list18",
+            local : ['-','-','EXPEED 4','EXPEED','-','-','-','-','-','EXPEED 3','EXPEED','EXPEED','EXPEED 3','-','EXPEED 4','EXPEED 3','EXPEED','-','EXPEED 4','EXPEED 3','EXPEED 3','-','EXPEED','-','EXPEED 2','EXPEED','EXPEED','EXPEED','EXPEED 3','EXPEED 4','EXPEED 2','-','EXPEED','EXPEED 4','-','EXPEED 3','EXPEED 3','EXPEED 4','EXPEED','EXPEED 2','EXPEED 4','-','-','']
+          });
+          $("#19").typeahead({
+            name:"list19",
+            local : ['147 × 114 × 74','146 x 123 x 81.5','132 × 103 × 77','133 × 102 × 76','157 × 153 × 86','158 × 150 × 86','140 × 112 × 79','127 × 104 × 80','147 × 123 × 77','135.5 x 106.5 x 76','140 × 111 × 78','126 × 94 × 64','158 × 150 × 86','160 × 157 × 88','150.5 × 113 × 78','132 × 103 × 77','127 × 97 × 79','144 × 110 × 67','158 × 150 × 86','124 × 97 × 70','145 × 122 × 81','147 × 113 × 74','129 × 98 × 78','126 × 94 × 64','126 × 94 × 64','160 × 157 × 88','132 × 103 × 77','160 × 157 × 88','125 × 98 × 76','135.5 x 106.5 x 76','115 × 117 × 81','147 × 114 × 74','124 x 98 x 76','125 × 97 × 74','157 × 153 × 86','160 × 157 × 91','126 × 94 × 64','160 × 157 × 91','157 × 153 × 85','141 × 113 × 82','158 × 150 × 86','141 × 113 × 82','125 x 96 x 77','']
+          });
+          $("#20").typeahead({
+            name:"list20",
+            local : ['3200','25600','12800','25600','6400','3200','25600','409600','204800','1600','6400','12800','1600','25600','800','204800','3200','1600','800','102400','25600','6400','6400','1600','25600','6400','1600','1600','102400','51200','51200','1600','1600','25600','3200','25600','25600','6400','3200','25600','1600','25600','25600','']
+          });
+          $("#21").typeahead({
+            name:"list21",
+            local : ['0.94x','0.8x','0.94x','0.78x','0.8x','0.8x','0.7x','0.7x','0.86x','0.78x','0.8x','0.82x','0.94x','0.94x','0.86x','0.94x','0.8x','0.8x','0.94x','0.7x','0.78x','0.7x','0.86x','0.8x','0.94x','0.8x','0.85x','0.7x','0.7x','0.7x','0.7x','0.75x','0.94x','0.7x','0.8x','0.82x','0.7x','0.7x','0.75x','0.75x','0.8x','0.86x','0.7x','']
+          });
+          $("#22").typeahead({
+            name:"list22",
+            local : ['D100','D40','D1','D5200','D3300','D5300','D80','D2Xs','D800','D3','D7100','D7000','D1H','D4S','D1X','D610','D200','D5000','D70','D50','D2H','D3200','D5500','D300S','D60','D3X','Df','D600','D70s','D810','D5100','D3S','D7200','D40X','D700','D3000','D90','D2X','D4','D300','D750','D2Hs','D3100','']
+          });
+          $("#23").typeahead({
+            name:"list23",
+            local : ['Yes','No','Yes','Yes','Yes','No','Yes','No','No','No','No','No','Yes','No','Yes','No','No','Yes','No','No','Yes','No','Yes','No','Yes','No','No','No','No','Yes','Yes','No','Yes','Yes','No','Yes','Yes','Yes','No','Yes','Yes','Yes','No','']
+          });
+          $("#24").typeahead({
+            name:"list24",
+            local : ['1999 2Q','2015 2Q','2005 4Q','2006 4Q','2003 3Q','2007 3Q','2010 3Q','2009 2Q','2014 2Q','2006 3Q','2014 1Q','2013 1Q','2004 1Q','2014 3Q','2012 3Q','2015 1Q','2006 2Q','2010 3Q','2008 4Q','2012 1Q','2008 3Q','2007 3Q','2011 2Q','2009 4Q','2013 4Q','2014 1Q','2001 1Q','2008 1Q','2009 3Q','2013 3Q','2008 3Q','2005 2Q','2009 3Q','2005 2Q','2001 1Q','2012 1Q','2013 4Q','2005 1Q','2002 1Q','2004 3Q','2012 4Q','2007 2Q','2012 2Q','']
+          });
+        </script>
 		
 </body>
 </html>
