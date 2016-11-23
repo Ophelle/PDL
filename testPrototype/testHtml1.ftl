@@ -19,6 +19,16 @@
 					<#if value == "radio">
 						<tr>
  		 					<td> <label>${key} :</td><td> <input type="${value}" name="Feature${key}" value="oui"> oui <input type="${value}" name="Feature${key}" value = "non"> non</br></br></label></td>
+						
+								<#list getAllTypesValue as keys, valueAll>
+									
+						    			<#list valueAll as valueAll>
+ 		 									<#if valueAll=="string" >
+ 		 								 		<td>autre<input type="text"/></td><#break>
+ 		 									</#if>		
+					       				</#list>
+					       				<#break>
+								</#list>
 						</tr>
 					<#elseif value == "conditional">
 						<tr>
@@ -26,13 +36,22 @@
 						</tr>
 					<#elseif value == "checkbox">
 						<tr>
-						<td> <label>${key} :</td>
- 		 					  <td><#list ListMultiple as keys, valueMultiple>
- 		 							<#list valueMultiple as valuemiltipe>
- 		 								<input type="${value}" name="Feature" >${valuemiltipe}		
-					       			</#list>
-						   		</#list>
-						   	</td>
+							<td> <label>${key} :</td>
+ 		 					  <td>	<#list ListMultiple as keys, valueMultiple>
+ 		 								<#list valueMultiple as valuemiltipe>
+ 		 									<input type="${value}" name="Feature" >${valuemiltipe}		
+					       				</#list>
+						   			</#list>
+						   	  </td>
+						   	
+								<#list getAllTypesValue as keys, valueAll>
+						    			<#list valueAll as valueAll>
+ 		 									<#if valueAll=="string" >
+ 		 										<td>autre<input type="text"/> </td><#break>
+ 		 									</#if>		
+					       	            </#list>
+					       	           <#break>
+								</#list>
 						</tr>
 					<#else>
 						<tr>
