@@ -4,8 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -44,6 +42,8 @@ public class TraitementPcm {
 	
 	public TraitementPcm(File file) {
 		this.loadPcm(file);
+		this.allContentsCell = getAllContentsCell(this.listFeatures);
+		this.contentsTypeMultiple = contentsTypeMultiple(this.listFeatures);
 	}
 	
 	public PCM getPcm() {
@@ -126,8 +126,7 @@ public class TraitementPcm {
 		this.listFeatures = this.pcm.getConcreteFeatures();
 		this.allTypesValue = getAllTypesValue(this.listFeatures);
 		this.bestTypesValue = getBestTypes(this.allTypesValue);
-		this.allContentsCell = getAllContentsCell(this.listFeatures);
-		this.contentsTypeMultiple = contentsTypeMultiple(this.listFeatures);
+		this.contentsTypeMultiple= contentsTypeMultiple(this.listFeatures);
 		//this.trueType = getTrueType(this.bestTypesValue);
 	}
 	
@@ -206,11 +205,38 @@ public class TraitementPcm {
 	}
 	
 	public Map<String, List<String>> contentsTypeMultiple(List<Feature> listFeatures) {
-		// a completer et utiliser un split pour avoir tous les resultats possibles
-		// Traite le cas du type multiple avec pas de doublon de content pour chaque feature
-		//String currentContent = "";
-		// Map qui contient tous les choix possible pour chaque feature du type multiple
+		String currentType = "";
+		// Traite le cas du type multiple avec pas de doublon de content pour
+		// chaque feature
+		// Map qui contient tous les choix possible pour chaque feature du type
+		// multiple
 		Map<String, List<String>> feat_contentMultiple = new HashMap<String, List<String>>();
+		for (Feature feat : listFeatures) {
+			List<String> listMultiple = new ArrayList<String>();
+			// Si le feature existe ou n'est pas vide
+			if (feat.getName() != null && !feat.getName().equals("")) {
+				String[] currentContent = null;
+				
+				for (Cell cell : feat.getCells()) {
+					currentType = valueToType(cell.getInterpretation());
+					if (currentType == "multiple") {
+						currentContent = cell.getContent().split("[,/]");
+						//currentContent = cell.getContent().split(",");
+					
+						//currentContent = cell.getContent().split(" ");
+					
+						
+						for (String contenu : currentContent) {
+			//System.out.println("feature:" + feat+ "type:"+currentType+ "contenu:" +contenu);
+							listMultiple.add(contenu);
+						}
+
+					}
+				}
+				feat_contentMultiple.put(feat.getName(), listMultiple);
+			}
+		}
+
 		return feat_contentMultiple;
 	}
 	
@@ -218,29 +244,21 @@ public class TraitementPcm {
 		// Cette méthode servira pour l'auto-completion en javascript
 		String currentContent = "";
 		// Map qui contient tous les contenus de la case pour chaque feature de la matrice
-		Map<String, List<String>> feat_content = new LinkedHashMap<String, List<String>>();
-		
-		for(String type : this.bestTypesValue.keySet()) {
-			if(bestTypesValue.get(type) == "text") {
-				for(Feature feat : listFeatures) {
-					if(type.contains(feat.getName())) {
-						List<String> listContents = new ArrayList<String>();
-						
-						// Si le feature existe ou n'est pas vide
-						if(feat.getName() != null && !feat.getName().equals("") && bestTypesValue.get(feat.getName()) =="text") {
-							for(Cell cell : feat.getCells()) {
-								// Obtenir le contenu de la case
-								currentContent = cell.getContent();
-								if(!listContents.contains(currentContent)) {
-									// Ajout dans la liste le contenu de la case courante
-									listContents.add(currentContent);
-								}
-							}
-							// Ajout dans la map le feature et sa liste de contenus disponible
-							feat_content.put(feat.getName(), listContents);
-						}
-					}
+		Map<String, List<String>> feat_content = new HashMap<String, List<String>>();
+
+		for(Feature feat : listFeatures) {
+			List<String> listContents = new ArrayList<String>();
+			
+			// Si le feature existe ou n'est pas vide
+			if(feat.getName() != null && !feat.getName().equals("")) {
+				for(Cell cell : feat.getCells()) {
+					// Obtenir le contenu de la case
+					currentContent = cell.getContent();
+					// Ajout dans la liste le contenu de la case courante
+					listContents.add(currentContent);
 				}
+				// Ajout dans la map le feature et sa liste de contenus disponible
+				feat_content.put(feat.getName(), listContents);
 			}
 		}
 		return feat_content;

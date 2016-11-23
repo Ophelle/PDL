@@ -4,7 +4,10 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+
+import org.opencompare.api.java.Feature;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -39,6 +42,7 @@ public class GenerationHtml {
 		ajoutVar.put("name", "Prototype de formulaire");
 		ajoutVar.put("bestType", this.traitPcm.getBestTypes());
 		ajoutVar.put("allContentsCell", this.traitPcm.getAllContentsCell());
+		ajoutVar.put("ListMultiple",this.traitPcm.getContentsTypeMultiple());
 		//ajoutVar.put("type", this.traitPcm.getTrueType());
 		// Création html
 		File file = new File(this.output);
