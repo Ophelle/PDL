@@ -15,7 +15,7 @@
    			<legend style="color:red" >Formulaire</legend>
    			<#assign i=0>
 				<#list bestType as key, value>
-					<#assign i++>
+				
 					<#if value == "radio">
 						<tr>
  		 					<td> <label>${key} :</td><td> <input type="${value}" name="Feature${key}" value="oui"> oui <input type="${value}" name="Feature${key}" value = "non"> non</br></br></label></td>
@@ -25,9 +25,14 @@
 						<tr>
  		 					<td> <label>${key} :</td><td> <input type="${value}" name="Feature">  Condition : <input type="text" name="Feature"></br></br></label></td>
 						</tr>
-					<#else>
+					<#elseif value == "text">
+						<#assign i++>
 						<tr>
 							<td> <label>${key} :</td><td> <input id="${i}" type="${value}" name="Feature"></br></br></label></td>
+						</tr>
+					<#else>
+						<tr>
+							<td> <label>${key} :</td><td> <input type="${value}" name="Feature"></br></br></label></td>
 						</tr>
 					</#if>
 					
@@ -39,10 +44,10 @@
 	<script>
 		<#assign j=0>
 		<#list allContentsCell as key, value>
-          $("#<#assign j++>${j}").typeahead({
-            name:"list${j}",
-            local : [<#list value as  values>'${values}',</#list>'']
-          });
+	          $("#<#assign j++>${j}").typeahead({
+	            name:"list${j}",
+	            local : [<#list value as  values>'${values}',</#list>'']
+	          });
         </#list>
         </script>
 		
