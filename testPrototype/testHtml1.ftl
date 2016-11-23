@@ -18,7 +18,6 @@
 				
 					<#if value == "radio">
 						<tr>
- 		 					<td> <label>${key} :</td><td> <input type="${value}" name="Feature${key}" value="oui"> oui <input type="${value}" name="Feature${key}" value = "non"> non</br></br></label></td>
 						    <td> <label>${key} :</td><td> <input type="${value}" name="Feature" value="oui"> Yes <input type="${value}" name="Feature" value = "non">No</br></br></label></td>
 						</tr>
 					<#elseif value == "conditional">
