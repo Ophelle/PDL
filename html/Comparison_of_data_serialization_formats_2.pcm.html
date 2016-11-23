@@ -14,39 +14,1019 @@
 		<table>
    			<legend style="color:red" >Formulaire</legend>
 						<tr>
-							<td> <label>Transenc :</td><td> <input id="1" type="checkbox" name="Feature"></br></br></label></td>
-						</tr>
+							<td> <label>Transenc :</td>
+ 		 					  <td>	
+ 		 									<input type="checkbox" name="Feature" >Single byte integers in the range [-32;127]
+
+Fixed length integers for 8-bits		
+ 		 									<input type="checkbox" name="Feature" > 16-bits		
+ 		 									<input type="checkbox" name="Feature" > 32-bits		
+ 		 									<input type="checkbox" name="Feature" > and 64-bits integers.
+
+Encoded as two's complement little-endian values.		
+ 		 									<input type="checkbox" name="Feature" >Little-endian IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double precision numbers.		
+
+ 		 									<input type="checkbox" name="Feature" >BOOLEAN; BER: as 1 byte in binary form; PER: as 1 bit; OER: as 1 byte		
+ 		 									<input type="checkbox" name="Feature" >REAL; base-10 real values are represented as character strings in ISO 6093 format; binary real values are represented in a binary format that includes the mantissa		
+ 		 									<input type="checkbox" name="Feature" > the base (2		
+ 		 									<input type="checkbox" name="Feature" > 8		
+ 		 									<input type="checkbox" name="Feature" > or 16)		
+ 		 									<input type="checkbox" name="Feature" > and the exponent; the special values NaN		
+ 		 									<input type="checkbox" name="Feature" > -INF		
+ 		 									<input type="checkbox" name="Feature" > +INF		
+ 		 									<input type="checkbox" name="Feature" > and negative zero are also supported		
+ 		 									<input type="checkbox" name="Feature" >INTEGER; BER: variable-length big-endian binary representation (up to 2^(2^1024) bits); PER Unaligned: a fixed number of bits if the integer type has a finite range; a variable number of bits otherwise; PER Aligned: a fixed number of bits if the integer type has a finite range and the size of the range is less than 65536; a variable number of octets otherwise; OER: one		
+ 		 									<input type="checkbox" name="Feature" > two		
+ 		 									<input type="checkbox" name="Feature" > or four octets (either signed or unsigned) if the integer type has a finite range that fits in that number of octets; a variable number of octets otherwise		
+
+ 		 									<input type="checkbox" name="Feature" >Arbitrary-length key		
+ 		 									<input type="checkbox" name="Feature" >value pairs with end-marker		
+ 		 									<input type="checkbox" name="Feature" >Single byte "small" (values -16..15 encoded using \xc0 - \xdf)		
+ 		 									<input type="checkbox" name="Feature" >
+zigzag-encoded varints (1 - 11 databytes)		
+ 		 									<input type="checkbox" name="Feature" > or BigInteger		
+ 		 									<input type="checkbox" name="Feature" >Length-prefixed "short" Strings (up to 64 bytes)		
+ 		 									<input type="checkbox" name="Feature" > marker-terminated "long" Strings and (optional) back-references		
+ 		 									<input type="checkbox" name="Feature" >IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" > BigDecimal		
+
+ 		 									<input type="checkbox" name="Feature" >list of elements with identical ID and size		
+ 		 									<input type="checkbox" name="Feature" > preceded by array header with int16 length		
+ 		 									<input type="checkbox" name="Feature" >either UTF-8 or ISO 8859-1 encoded		
+ 		 									<input type="checkbox" name="Feature" >big-endian signed 24bit or 32bit integer		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode with count (like integer coding) and items		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE half		
+ 		 									<input type="checkbox" name="Feature" >single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >Typecode with pairs count (like integer coding) and pairs		
+ 		 									<input type="checkbox" name="Feature" >Small positive number \x00-\x17		
+ 		 									<input type="checkbox" name="Feature" > small negative number \x20-\x37 (abs(N) <= 23) 
+
+8bit: positive \x18\xhh		
+ 		 									<input type="checkbox" name="Feature" > negative \x38\xhh
+
+16bit: positive \x19		
+ 		 									<input type="checkbox" name="Feature" > negative \x39
+
+32bit: positive \x1A		
+ 		 									<input type="checkbox" name="Feature" > negative \x3A
+
+64bit: positive \x1B		
+ 		 									<input type="checkbox" name="Feature" > negative \x3B
+
+Negative number x encoded as ~x (binary inversion) or as (-x-1)
+
+Byte order - Big-endian		
+ 		 									<input type="checkbox" name="Feature" >Typecode with length (like integer coding) and content.
+
+Bytestring and UTF-8 have different typecode		
+
+ 		 									<input type="checkbox" name="Feature" >int32: 32-bit little-endian 2's complement or int64: 64-bit little-endian 2's complement		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by int32 encoded string length in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Associative array		
+ 		 									<input type="checkbox" name="Feature" >Object		
+
+
+ 		 									<input type="checkbox" name="Feature" >True: 1:1		
+ 		 									<input type="checkbox" name="Feature" >
+False: 1:0		
+
+ 		 									<input type="checkbox" name="Feature" >As "SHORT_BINARY" (single-byte prefix + up to 31 raw bytes) 
+or
+typecode (one byte		
+ 		 									<input type="checkbox" name="Feature" > including boolean UTF8-encoding flag) + "varint" encoded length + raw bytes		
+ 		 									<input type="checkbox" name="Feature" >As "ARRAYREF" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + "varint" encoded length + array items		
+ 		 									<input type="checkbox" name="Feature" >As "HASHREF" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + "varint" encoded length + key-value pairs.
+Distinguishes hashmaps from objects 		
+ 		 									<input type="checkbox" name="Feature" > class instances.		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >quad		
+ 		 									<input type="checkbox" name="Feature" >Single byte POS		
+ 		 									<input type="checkbox" name="Feature" >NEG (values -16..15) 
+or
+typecode (one byte) + "varint" encoded variable length integer
+or
+typecode (one byte) + "zigzag" encoded variable length integer		
+
+ 		 									<input type="checkbox" name="Feature" >big-endian 2's complement signed and unsigned 8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64 bits		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + 1-4 bytes size + 1-4 bytes items count + key		
+ 		 									<input type="checkbox" name="Feature" >value pairs		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > null terminated		
+ 		 									<input type="checkbox" name="Feature" > preceded by int8 or int32 string length in bytes		
+
+
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by varint-encoded integer length of string in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >As "fixmap" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + 2-4 bytes length + key-value pairs		
+ 		 									<input type="checkbox" name="Feature" >Single byte "fixnum" (values -32..127) 
+or
+typecode (one byte) + big-endian (u)int8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64		
+ 		 									<input type="checkbox" name="Feature" >Typecode + up to 15 bytes
+or
+typecode + length as uint8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32 + bytes;
+encoding is unspecified		
+ 		 									<input type="checkbox" name="Feature" >As "fixarray" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + 2-4 bytes length + array items		
+
+						   	  </td>
+						   	
+ 		 										<td>autre<input type="text"/> </td>						</tr>
 					
 					
 						<tr>
 							<td> <label>ASN.1
-(BER, PER or OER encoding) :</td><td> <input id="2" type="checkbox" name="Feature"></br></br></label></td>
-						</tr>
+(BER, PER or OER encoding) :</td>
+ 		 					  <td>	
+ 		 									<input type="checkbox" name="Feature" >Single byte integers in the range [-32;127]
+
+Fixed length integers for 8-bits		
+ 		 									<input type="checkbox" name="Feature" > 16-bits		
+ 		 									<input type="checkbox" name="Feature" > 32-bits		
+ 		 									<input type="checkbox" name="Feature" > and 64-bits integers.
+
+Encoded as two's complement little-endian values.		
+ 		 									<input type="checkbox" name="Feature" >Little-endian IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double precision numbers.		
+
+ 		 									<input type="checkbox" name="Feature" >BOOLEAN; BER: as 1 byte in binary form; PER: as 1 bit; OER: as 1 byte		
+ 		 									<input type="checkbox" name="Feature" >REAL; base-10 real values are represented as character strings in ISO 6093 format; binary real values are represented in a binary format that includes the mantissa		
+ 		 									<input type="checkbox" name="Feature" > the base (2		
+ 		 									<input type="checkbox" name="Feature" > 8		
+ 		 									<input type="checkbox" name="Feature" > or 16)		
+ 		 									<input type="checkbox" name="Feature" > and the exponent; the special values NaN		
+ 		 									<input type="checkbox" name="Feature" > -INF		
+ 		 									<input type="checkbox" name="Feature" > +INF		
+ 		 									<input type="checkbox" name="Feature" > and negative zero are also supported		
+ 		 									<input type="checkbox" name="Feature" >INTEGER; BER: variable-length big-endian binary representation (up to 2^(2^1024) bits); PER Unaligned: a fixed number of bits if the integer type has a finite range; a variable number of bits otherwise; PER Aligned: a fixed number of bits if the integer type has a finite range and the size of the range is less than 65536; a variable number of octets otherwise; OER: one		
+ 		 									<input type="checkbox" name="Feature" > two		
+ 		 									<input type="checkbox" name="Feature" > or four octets (either signed or unsigned) if the integer type has a finite range that fits in that number of octets; a variable number of octets otherwise		
+
+ 		 									<input type="checkbox" name="Feature" >Arbitrary-length key		
+ 		 									<input type="checkbox" name="Feature" >value pairs with end-marker		
+ 		 									<input type="checkbox" name="Feature" >Single byte "small" (values -16..15 encoded using \xc0 - \xdf)		
+ 		 									<input type="checkbox" name="Feature" >
+zigzag-encoded varints (1 - 11 databytes)		
+ 		 									<input type="checkbox" name="Feature" > or BigInteger		
+ 		 									<input type="checkbox" name="Feature" >Length-prefixed "short" Strings (up to 64 bytes)		
+ 		 									<input type="checkbox" name="Feature" > marker-terminated "long" Strings and (optional) back-references		
+ 		 									<input type="checkbox" name="Feature" >IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" > BigDecimal		
+
+ 		 									<input type="checkbox" name="Feature" >list of elements with identical ID and size		
+ 		 									<input type="checkbox" name="Feature" > preceded by array header with int16 length		
+ 		 									<input type="checkbox" name="Feature" >either UTF-8 or ISO 8859-1 encoded		
+ 		 									<input type="checkbox" name="Feature" >big-endian signed 24bit or 32bit integer		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode with count (like integer coding) and items		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE half		
+ 		 									<input type="checkbox" name="Feature" >single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >Typecode with pairs count (like integer coding) and pairs		
+ 		 									<input type="checkbox" name="Feature" >Small positive number \x00-\x17		
+ 		 									<input type="checkbox" name="Feature" > small negative number \x20-\x37 (abs(N) <= 23) 
+
+8bit: positive \x18\xhh		
+ 		 									<input type="checkbox" name="Feature" > negative \x38\xhh
+
+16bit: positive \x19		
+ 		 									<input type="checkbox" name="Feature" > negative \x39
+
+32bit: positive \x1A		
+ 		 									<input type="checkbox" name="Feature" > negative \x3A
+
+64bit: positive \x1B		
+ 		 									<input type="checkbox" name="Feature" > negative \x3B
+
+Negative number x encoded as ~x (binary inversion) or as (-x-1)
+
+Byte order - Big-endian		
+ 		 									<input type="checkbox" name="Feature" >Typecode with length (like integer coding) and content.
+
+Bytestring and UTF-8 have different typecode		
+
+ 		 									<input type="checkbox" name="Feature" >int32: 32-bit little-endian 2's complement or int64: 64-bit little-endian 2's complement		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by int32 encoded string length in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Associative array		
+ 		 									<input type="checkbox" name="Feature" >Object		
+
+
+ 		 									<input type="checkbox" name="Feature" >True: 1:1		
+ 		 									<input type="checkbox" name="Feature" >
+False: 1:0		
+
+ 		 									<input type="checkbox" name="Feature" >As "SHORT_BINARY" (single-byte prefix + up to 31 raw bytes) 
+or
+typecode (one byte		
+ 		 									<input type="checkbox" name="Feature" > including boolean UTF8-encoding flag) + "varint" encoded length + raw bytes		
+ 		 									<input type="checkbox" name="Feature" >As "ARRAYREF" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + "varint" encoded length + array items		
+ 		 									<input type="checkbox" name="Feature" >As "HASHREF" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + "varint" encoded length + key-value pairs.
+Distinguishes hashmaps from objects 		
+ 		 									<input type="checkbox" name="Feature" > class instances.		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >quad		
+ 		 									<input type="checkbox" name="Feature" >Single byte POS		
+ 		 									<input type="checkbox" name="Feature" >NEG (values -16..15) 
+or
+typecode (one byte) + "varint" encoded variable length integer
+or
+typecode (one byte) + "zigzag" encoded variable length integer		
+
+ 		 									<input type="checkbox" name="Feature" >big-endian 2's complement signed and unsigned 8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64 bits		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + 1-4 bytes size + 1-4 bytes items count + key		
+ 		 									<input type="checkbox" name="Feature" >value pairs		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > null terminated		
+ 		 									<input type="checkbox" name="Feature" > preceded by int8 or int32 string length in bytes		
+
+
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by varint-encoded integer length of string in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >As "fixmap" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + 2-4 bytes length + key-value pairs		
+ 		 									<input type="checkbox" name="Feature" >Single byte "fixnum" (values -32..127) 
+or
+typecode (one byte) + big-endian (u)int8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64		
+ 		 									<input type="checkbox" name="Feature" >Typecode + up to 15 bytes
+or
+typecode + length as uint8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32 + bytes;
+encoding is unspecified		
+ 		 									<input type="checkbox" name="Feature" >As "fixarray" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + 2-4 bytes length + array items		
+
+						   	  </td>
+						   	
+ 		 										<td>autre<input type="text"/> </td>						</tr>
 					
 					
 						<tr>
-							<td> <label>Smile :</td><td> <input id="3" type="checkbox" name="Feature"></br></br></label></td>
-						</tr>
+							<td> <label>Smile :</td>
+ 		 					  <td>	
+ 		 									<input type="checkbox" name="Feature" >Single byte integers in the range [-32;127]
+
+Fixed length integers for 8-bits		
+ 		 									<input type="checkbox" name="Feature" > 16-bits		
+ 		 									<input type="checkbox" name="Feature" > 32-bits		
+ 		 									<input type="checkbox" name="Feature" > and 64-bits integers.
+
+Encoded as two's complement little-endian values.		
+ 		 									<input type="checkbox" name="Feature" >Little-endian IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double precision numbers.		
+
+ 		 									<input type="checkbox" name="Feature" >BOOLEAN; BER: as 1 byte in binary form; PER: as 1 bit; OER: as 1 byte		
+ 		 									<input type="checkbox" name="Feature" >REAL; base-10 real values are represented as character strings in ISO 6093 format; binary real values are represented in a binary format that includes the mantissa		
+ 		 									<input type="checkbox" name="Feature" > the base (2		
+ 		 									<input type="checkbox" name="Feature" > 8		
+ 		 									<input type="checkbox" name="Feature" > or 16)		
+ 		 									<input type="checkbox" name="Feature" > and the exponent; the special values NaN		
+ 		 									<input type="checkbox" name="Feature" > -INF		
+ 		 									<input type="checkbox" name="Feature" > +INF		
+ 		 									<input type="checkbox" name="Feature" > and negative zero are also supported		
+ 		 									<input type="checkbox" name="Feature" >INTEGER; BER: variable-length big-endian binary representation (up to 2^(2^1024) bits); PER Unaligned: a fixed number of bits if the integer type has a finite range; a variable number of bits otherwise; PER Aligned: a fixed number of bits if the integer type has a finite range and the size of the range is less than 65536; a variable number of octets otherwise; OER: one		
+ 		 									<input type="checkbox" name="Feature" > two		
+ 		 									<input type="checkbox" name="Feature" > or four octets (either signed or unsigned) if the integer type has a finite range that fits in that number of octets; a variable number of octets otherwise		
+
+ 		 									<input type="checkbox" name="Feature" >Arbitrary-length key		
+ 		 									<input type="checkbox" name="Feature" >value pairs with end-marker		
+ 		 									<input type="checkbox" name="Feature" >Single byte "small" (values -16..15 encoded using \xc0 - \xdf)		
+ 		 									<input type="checkbox" name="Feature" >
+zigzag-encoded varints (1 - 11 databytes)		
+ 		 									<input type="checkbox" name="Feature" > or BigInteger		
+ 		 									<input type="checkbox" name="Feature" >Length-prefixed "short" Strings (up to 64 bytes)		
+ 		 									<input type="checkbox" name="Feature" > marker-terminated "long" Strings and (optional) back-references		
+ 		 									<input type="checkbox" name="Feature" >IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" > BigDecimal		
+
+ 		 									<input type="checkbox" name="Feature" >list of elements with identical ID and size		
+ 		 									<input type="checkbox" name="Feature" > preceded by array header with int16 length		
+ 		 									<input type="checkbox" name="Feature" >either UTF-8 or ISO 8859-1 encoded		
+ 		 									<input type="checkbox" name="Feature" >big-endian signed 24bit or 32bit integer		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode with count (like integer coding) and items		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE half		
+ 		 									<input type="checkbox" name="Feature" >single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >Typecode with pairs count (like integer coding) and pairs		
+ 		 									<input type="checkbox" name="Feature" >Small positive number \x00-\x17		
+ 		 									<input type="checkbox" name="Feature" > small negative number \x20-\x37 (abs(N) <= 23) 
+
+8bit: positive \x18\xhh		
+ 		 									<input type="checkbox" name="Feature" > negative \x38\xhh
+
+16bit: positive \x19		
+ 		 									<input type="checkbox" name="Feature" > negative \x39
+
+32bit: positive \x1A		
+ 		 									<input type="checkbox" name="Feature" > negative \x3A
+
+64bit: positive \x1B		
+ 		 									<input type="checkbox" name="Feature" > negative \x3B
+
+Negative number x encoded as ~x (binary inversion) or as (-x-1)
+
+Byte order - Big-endian		
+ 		 									<input type="checkbox" name="Feature" >Typecode with length (like integer coding) and content.
+
+Bytestring and UTF-8 have different typecode		
+
+ 		 									<input type="checkbox" name="Feature" >int32: 32-bit little-endian 2's complement or int64: 64-bit little-endian 2's complement		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by int32 encoded string length in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Associative array		
+ 		 									<input type="checkbox" name="Feature" >Object		
+
+
+ 		 									<input type="checkbox" name="Feature" >True: 1:1		
+ 		 									<input type="checkbox" name="Feature" >
+False: 1:0		
+
+ 		 									<input type="checkbox" name="Feature" >As "SHORT_BINARY" (single-byte prefix + up to 31 raw bytes) 
+or
+typecode (one byte		
+ 		 									<input type="checkbox" name="Feature" > including boolean UTF8-encoding flag) + "varint" encoded length + raw bytes		
+ 		 									<input type="checkbox" name="Feature" >As "ARRAYREF" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + "varint" encoded length + array items		
+ 		 									<input type="checkbox" name="Feature" >As "HASHREF" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + "varint" encoded length + key-value pairs.
+Distinguishes hashmaps from objects 		
+ 		 									<input type="checkbox" name="Feature" > class instances.		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >quad		
+ 		 									<input type="checkbox" name="Feature" >Single byte POS		
+ 		 									<input type="checkbox" name="Feature" >NEG (values -16..15) 
+or
+typecode (one byte) + "varint" encoded variable length integer
+or
+typecode (one byte) + "zigzag" encoded variable length integer		
+
+ 		 									<input type="checkbox" name="Feature" >big-endian 2's complement signed and unsigned 8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64 bits		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + 1-4 bytes size + 1-4 bytes items count + key		
+ 		 									<input type="checkbox" name="Feature" >value pairs		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > null terminated		
+ 		 									<input type="checkbox" name="Feature" > preceded by int8 or int32 string length in bytes		
+
+
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by varint-encoded integer length of string in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >As "fixmap" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + 2-4 bytes length + key-value pairs		
+ 		 									<input type="checkbox" name="Feature" >Single byte "fixnum" (values -32..127) 
+or
+typecode (one byte) + big-endian (u)int8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64		
+ 		 									<input type="checkbox" name="Feature" >Typecode + up to 15 bytes
+or
+typecode + length as uint8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32 + bytes;
+encoding is unspecified		
+ 		 									<input type="checkbox" name="Feature" >As "fixarray" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + 2-4 bytes length + array items		
+
+						   	  </td>
+						   	
+ 		 										<td>autre<input type="text"/> </td>						</tr>
 					
 					
 						<tr>
-							<td> <label>Structured Data eXchange Formats (SDXF) :</td><td> <input id="4" type="checkbox" name="Feature"></br></br></label></td>
-						</tr>
+							<td> <label>Structured Data eXchange Formats (SDXF) :</td>
+ 		 					  <td>	
+ 		 									<input type="checkbox" name="Feature" >Single byte integers in the range [-32;127]
+
+Fixed length integers for 8-bits		
+ 		 									<input type="checkbox" name="Feature" > 16-bits		
+ 		 									<input type="checkbox" name="Feature" > 32-bits		
+ 		 									<input type="checkbox" name="Feature" > and 64-bits integers.
+
+Encoded as two's complement little-endian values.		
+ 		 									<input type="checkbox" name="Feature" >Little-endian IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double precision numbers.		
+
+ 		 									<input type="checkbox" name="Feature" >BOOLEAN; BER: as 1 byte in binary form; PER: as 1 bit; OER: as 1 byte		
+ 		 									<input type="checkbox" name="Feature" >REAL; base-10 real values are represented as character strings in ISO 6093 format; binary real values are represented in a binary format that includes the mantissa		
+ 		 									<input type="checkbox" name="Feature" > the base (2		
+ 		 									<input type="checkbox" name="Feature" > 8		
+ 		 									<input type="checkbox" name="Feature" > or 16)		
+ 		 									<input type="checkbox" name="Feature" > and the exponent; the special values NaN		
+ 		 									<input type="checkbox" name="Feature" > -INF		
+ 		 									<input type="checkbox" name="Feature" > +INF		
+ 		 									<input type="checkbox" name="Feature" > and negative zero are also supported		
+ 		 									<input type="checkbox" name="Feature" >INTEGER; BER: variable-length big-endian binary representation (up to 2^(2^1024) bits); PER Unaligned: a fixed number of bits if the integer type has a finite range; a variable number of bits otherwise; PER Aligned: a fixed number of bits if the integer type has a finite range and the size of the range is less than 65536; a variable number of octets otherwise; OER: one		
+ 		 									<input type="checkbox" name="Feature" > two		
+ 		 									<input type="checkbox" name="Feature" > or four octets (either signed or unsigned) if the integer type has a finite range that fits in that number of octets; a variable number of octets otherwise		
+
+ 		 									<input type="checkbox" name="Feature" >Arbitrary-length key		
+ 		 									<input type="checkbox" name="Feature" >value pairs with end-marker		
+ 		 									<input type="checkbox" name="Feature" >Single byte "small" (values -16..15 encoded using \xc0 - \xdf)		
+ 		 									<input type="checkbox" name="Feature" >
+zigzag-encoded varints (1 - 11 databytes)		
+ 		 									<input type="checkbox" name="Feature" > or BigInteger		
+ 		 									<input type="checkbox" name="Feature" >Length-prefixed "short" Strings (up to 64 bytes)		
+ 		 									<input type="checkbox" name="Feature" > marker-terminated "long" Strings and (optional) back-references		
+ 		 									<input type="checkbox" name="Feature" >IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" > BigDecimal		
+
+ 		 									<input type="checkbox" name="Feature" >list of elements with identical ID and size		
+ 		 									<input type="checkbox" name="Feature" > preceded by array header with int16 length		
+ 		 									<input type="checkbox" name="Feature" >either UTF-8 or ISO 8859-1 encoded		
+ 		 									<input type="checkbox" name="Feature" >big-endian signed 24bit or 32bit integer		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode with count (like integer coding) and items		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE half		
+ 		 									<input type="checkbox" name="Feature" >single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >Typecode with pairs count (like integer coding) and pairs		
+ 		 									<input type="checkbox" name="Feature" >Small positive number \x00-\x17		
+ 		 									<input type="checkbox" name="Feature" > small negative number \x20-\x37 (abs(N) <= 23) 
+
+8bit: positive \x18\xhh		
+ 		 									<input type="checkbox" name="Feature" > negative \x38\xhh
+
+16bit: positive \x19		
+ 		 									<input type="checkbox" name="Feature" > negative \x39
+
+32bit: positive \x1A		
+ 		 									<input type="checkbox" name="Feature" > negative \x3A
+
+64bit: positive \x1B		
+ 		 									<input type="checkbox" name="Feature" > negative \x3B
+
+Negative number x encoded as ~x (binary inversion) or as (-x-1)
+
+Byte order - Big-endian		
+ 		 									<input type="checkbox" name="Feature" >Typecode with length (like integer coding) and content.
+
+Bytestring and UTF-8 have different typecode		
+
+ 		 									<input type="checkbox" name="Feature" >int32: 32-bit little-endian 2's complement or int64: 64-bit little-endian 2's complement		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by int32 encoded string length in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Associative array		
+ 		 									<input type="checkbox" name="Feature" >Object		
+
+
+ 		 									<input type="checkbox" name="Feature" >True: 1:1		
+ 		 									<input type="checkbox" name="Feature" >
+False: 1:0		
+
+ 		 									<input type="checkbox" name="Feature" >As "SHORT_BINARY" (single-byte prefix + up to 31 raw bytes) 
+or
+typecode (one byte		
+ 		 									<input type="checkbox" name="Feature" > including boolean UTF8-encoding flag) + "varint" encoded length + raw bytes		
+ 		 									<input type="checkbox" name="Feature" >As "ARRAYREF" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + "varint" encoded length + array items		
+ 		 									<input type="checkbox" name="Feature" >As "HASHREF" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + "varint" encoded length + key-value pairs.
+Distinguishes hashmaps from objects 		
+ 		 									<input type="checkbox" name="Feature" > class instances.		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >quad		
+ 		 									<input type="checkbox" name="Feature" >Single byte POS		
+ 		 									<input type="checkbox" name="Feature" >NEG (values -16..15) 
+or
+typecode (one byte) + "varint" encoded variable length integer
+or
+typecode (one byte) + "zigzag" encoded variable length integer		
+
+ 		 									<input type="checkbox" name="Feature" >big-endian 2's complement signed and unsigned 8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64 bits		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + 1-4 bytes size + 1-4 bytes items count + key		
+ 		 									<input type="checkbox" name="Feature" >value pairs		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > null terminated		
+ 		 									<input type="checkbox" name="Feature" > preceded by int8 or int32 string length in bytes		
+
+
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by varint-encoded integer length of string in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >As "fixmap" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + 2-4 bytes length + key-value pairs		
+ 		 									<input type="checkbox" name="Feature" >Single byte "fixnum" (values -32..127) 
+or
+typecode (one byte) + big-endian (u)int8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64		
+ 		 									<input type="checkbox" name="Feature" >Typecode + up to 15 bytes
+or
+typecode + length as uint8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32 + bytes;
+encoding is unspecified		
+ 		 									<input type="checkbox" name="Feature" >As "fixarray" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + 2-4 bytes length + array items		
+
+						   	  </td>
+						   	
+ 		 										<td>autre<input type="text"/> </td>						</tr>
 					
 					
 						<tr>
-							<td> <label>Concise Binary Object Representation (CBOR) :</td><td> <input id="5" type="checkbox" name="Feature"></br></br></label></td>
-						</tr>
+							<td> <label>Concise Binary Object Representation (CBOR) :</td>
+ 		 					  <td>	
+ 		 									<input type="checkbox" name="Feature" >Single byte integers in the range [-32;127]
+
+Fixed length integers for 8-bits		
+ 		 									<input type="checkbox" name="Feature" > 16-bits		
+ 		 									<input type="checkbox" name="Feature" > 32-bits		
+ 		 									<input type="checkbox" name="Feature" > and 64-bits integers.
+
+Encoded as two's complement little-endian values.		
+ 		 									<input type="checkbox" name="Feature" >Little-endian IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double precision numbers.		
+
+ 		 									<input type="checkbox" name="Feature" >BOOLEAN; BER: as 1 byte in binary form; PER: as 1 bit; OER: as 1 byte		
+ 		 									<input type="checkbox" name="Feature" >REAL; base-10 real values are represented as character strings in ISO 6093 format; binary real values are represented in a binary format that includes the mantissa		
+ 		 									<input type="checkbox" name="Feature" > the base (2		
+ 		 									<input type="checkbox" name="Feature" > 8		
+ 		 									<input type="checkbox" name="Feature" > or 16)		
+ 		 									<input type="checkbox" name="Feature" > and the exponent; the special values NaN		
+ 		 									<input type="checkbox" name="Feature" > -INF		
+ 		 									<input type="checkbox" name="Feature" > +INF		
+ 		 									<input type="checkbox" name="Feature" > and negative zero are also supported		
+ 		 									<input type="checkbox" name="Feature" >INTEGER; BER: variable-length big-endian binary representation (up to 2^(2^1024) bits); PER Unaligned: a fixed number of bits if the integer type has a finite range; a variable number of bits otherwise; PER Aligned: a fixed number of bits if the integer type has a finite range and the size of the range is less than 65536; a variable number of octets otherwise; OER: one		
+ 		 									<input type="checkbox" name="Feature" > two		
+ 		 									<input type="checkbox" name="Feature" > or four octets (either signed or unsigned) if the integer type has a finite range that fits in that number of octets; a variable number of octets otherwise		
+
+ 		 									<input type="checkbox" name="Feature" >Arbitrary-length key		
+ 		 									<input type="checkbox" name="Feature" >value pairs with end-marker		
+ 		 									<input type="checkbox" name="Feature" >Single byte "small" (values -16..15 encoded using \xc0 - \xdf)		
+ 		 									<input type="checkbox" name="Feature" >
+zigzag-encoded varints (1 - 11 databytes)		
+ 		 									<input type="checkbox" name="Feature" > or BigInteger		
+ 		 									<input type="checkbox" name="Feature" >Length-prefixed "short" Strings (up to 64 bytes)		
+ 		 									<input type="checkbox" name="Feature" > marker-terminated "long" Strings and (optional) back-references		
+ 		 									<input type="checkbox" name="Feature" >IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" > BigDecimal		
+
+ 		 									<input type="checkbox" name="Feature" >list of elements with identical ID and size		
+ 		 									<input type="checkbox" name="Feature" > preceded by array header with int16 length		
+ 		 									<input type="checkbox" name="Feature" >either UTF-8 or ISO 8859-1 encoded		
+ 		 									<input type="checkbox" name="Feature" >big-endian signed 24bit or 32bit integer		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode with count (like integer coding) and items		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE half		
+ 		 									<input type="checkbox" name="Feature" >single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >Typecode with pairs count (like integer coding) and pairs		
+ 		 									<input type="checkbox" name="Feature" >Small positive number \x00-\x17		
+ 		 									<input type="checkbox" name="Feature" > small negative number \x20-\x37 (abs(N) <= 23) 
+
+8bit: positive \x18\xhh		
+ 		 									<input type="checkbox" name="Feature" > negative \x38\xhh
+
+16bit: positive \x19		
+ 		 									<input type="checkbox" name="Feature" > negative \x39
+
+32bit: positive \x1A		
+ 		 									<input type="checkbox" name="Feature" > negative \x3A
+
+64bit: positive \x1B		
+ 		 									<input type="checkbox" name="Feature" > negative \x3B
+
+Negative number x encoded as ~x (binary inversion) or as (-x-1)
+
+Byte order - Big-endian		
+ 		 									<input type="checkbox" name="Feature" >Typecode with length (like integer coding) and content.
+
+Bytestring and UTF-8 have different typecode		
+
+ 		 									<input type="checkbox" name="Feature" >int32: 32-bit little-endian 2's complement or int64: 64-bit little-endian 2's complement		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by int32 encoded string length in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Associative array		
+ 		 									<input type="checkbox" name="Feature" >Object		
+
+
+ 		 									<input type="checkbox" name="Feature" >True: 1:1		
+ 		 									<input type="checkbox" name="Feature" >
+False: 1:0		
+
+ 		 									<input type="checkbox" name="Feature" >As "SHORT_BINARY" (single-byte prefix + up to 31 raw bytes) 
+or
+typecode (one byte		
+ 		 									<input type="checkbox" name="Feature" > including boolean UTF8-encoding flag) + "varint" encoded length + raw bytes		
+ 		 									<input type="checkbox" name="Feature" >As "ARRAYREF" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + "varint" encoded length + array items		
+ 		 									<input type="checkbox" name="Feature" >As "HASHREF" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + "varint" encoded length + key-value pairs.
+Distinguishes hashmaps from objects 		
+ 		 									<input type="checkbox" name="Feature" > class instances.		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >quad		
+ 		 									<input type="checkbox" name="Feature" >Single byte POS		
+ 		 									<input type="checkbox" name="Feature" >NEG (values -16..15) 
+or
+typecode (one byte) + "varint" encoded variable length integer
+or
+typecode (one byte) + "zigzag" encoded variable length integer		
+
+ 		 									<input type="checkbox" name="Feature" >big-endian 2's complement signed and unsigned 8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64 bits		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + 1-4 bytes size + 1-4 bytes items count + key		
+ 		 									<input type="checkbox" name="Feature" >value pairs		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > null terminated		
+ 		 									<input type="checkbox" name="Feature" > preceded by int8 or int32 string length in bytes		
+
+
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by varint-encoded integer length of string in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >As "fixmap" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + 2-4 bytes length + key-value pairs		
+ 		 									<input type="checkbox" name="Feature" >Single byte "fixnum" (values -32..127) 
+or
+typecode (one byte) + big-endian (u)int8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64		
+ 		 									<input type="checkbox" name="Feature" >Typecode + up to 15 bytes
+or
+typecode + length as uint8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32 + bytes;
+encoding is unspecified		
+ 		 									<input type="checkbox" name="Feature" >As "fixarray" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + 2-4 bytes length + array items		
+
+						   	  </td>
+						   	
+ 		 										<td>autre<input type="text"/> </td>						</tr>
 					
 					
 						<tr>
-							<td> <label>BSON :</td><td> <input id="6" type="checkbox" name="Feature"></br></br></label></td>
-						</tr>
+							<td> <label>BSON :</td>
+ 		 					  <td>	
+ 		 									<input type="checkbox" name="Feature" >Single byte integers in the range [-32;127]
+
+Fixed length integers for 8-bits		
+ 		 									<input type="checkbox" name="Feature" > 16-bits		
+ 		 									<input type="checkbox" name="Feature" > 32-bits		
+ 		 									<input type="checkbox" name="Feature" > and 64-bits integers.
+
+Encoded as two's complement little-endian values.		
+ 		 									<input type="checkbox" name="Feature" >Little-endian IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double precision numbers.		
+
+ 		 									<input type="checkbox" name="Feature" >BOOLEAN; BER: as 1 byte in binary form; PER: as 1 bit; OER: as 1 byte		
+ 		 									<input type="checkbox" name="Feature" >REAL; base-10 real values are represented as character strings in ISO 6093 format; binary real values are represented in a binary format that includes the mantissa		
+ 		 									<input type="checkbox" name="Feature" > the base (2		
+ 		 									<input type="checkbox" name="Feature" > 8		
+ 		 									<input type="checkbox" name="Feature" > or 16)		
+ 		 									<input type="checkbox" name="Feature" > and the exponent; the special values NaN		
+ 		 									<input type="checkbox" name="Feature" > -INF		
+ 		 									<input type="checkbox" name="Feature" > +INF		
+ 		 									<input type="checkbox" name="Feature" > and negative zero are also supported		
+ 		 									<input type="checkbox" name="Feature" >INTEGER; BER: variable-length big-endian binary representation (up to 2^(2^1024) bits); PER Unaligned: a fixed number of bits if the integer type has a finite range; a variable number of bits otherwise; PER Aligned: a fixed number of bits if the integer type has a finite range and the size of the range is less than 65536; a variable number of octets otherwise; OER: one		
+ 		 									<input type="checkbox" name="Feature" > two		
+ 		 									<input type="checkbox" name="Feature" > or four octets (either signed or unsigned) if the integer type has a finite range that fits in that number of octets; a variable number of octets otherwise		
+
+ 		 									<input type="checkbox" name="Feature" >Arbitrary-length key		
+ 		 									<input type="checkbox" name="Feature" >value pairs with end-marker		
+ 		 									<input type="checkbox" name="Feature" >Single byte "small" (values -16..15 encoded using \xc0 - \xdf)		
+ 		 									<input type="checkbox" name="Feature" >
+zigzag-encoded varints (1 - 11 databytes)		
+ 		 									<input type="checkbox" name="Feature" > or BigInteger		
+ 		 									<input type="checkbox" name="Feature" >Length-prefixed "short" Strings (up to 64 bytes)		
+ 		 									<input type="checkbox" name="Feature" > marker-terminated "long" Strings and (optional) back-references		
+ 		 									<input type="checkbox" name="Feature" >IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" > BigDecimal		
+
+ 		 									<input type="checkbox" name="Feature" >list of elements with identical ID and size		
+ 		 									<input type="checkbox" name="Feature" > preceded by array header with int16 length		
+ 		 									<input type="checkbox" name="Feature" >either UTF-8 or ISO 8859-1 encoded		
+ 		 									<input type="checkbox" name="Feature" >big-endian signed 24bit or 32bit integer		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode with count (like integer coding) and items		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE half		
+ 		 									<input type="checkbox" name="Feature" >single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >Typecode with pairs count (like integer coding) and pairs		
+ 		 									<input type="checkbox" name="Feature" >Small positive number \x00-\x17		
+ 		 									<input type="checkbox" name="Feature" > small negative number \x20-\x37 (abs(N) <= 23) 
+
+8bit: positive \x18\xhh		
+ 		 									<input type="checkbox" name="Feature" > negative \x38\xhh
+
+16bit: positive \x19		
+ 		 									<input type="checkbox" name="Feature" > negative \x39
+
+32bit: positive \x1A		
+ 		 									<input type="checkbox" name="Feature" > negative \x3A
+
+64bit: positive \x1B		
+ 		 									<input type="checkbox" name="Feature" > negative \x3B
+
+Negative number x encoded as ~x (binary inversion) or as (-x-1)
+
+Byte order - Big-endian		
+ 		 									<input type="checkbox" name="Feature" >Typecode with length (like integer coding) and content.
+
+Bytestring and UTF-8 have different typecode		
+
+ 		 									<input type="checkbox" name="Feature" >int32: 32-bit little-endian 2's complement or int64: 64-bit little-endian 2's complement		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by int32 encoded string length in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Associative array		
+ 		 									<input type="checkbox" name="Feature" >Object		
+
+
+ 		 									<input type="checkbox" name="Feature" >True: 1:1		
+ 		 									<input type="checkbox" name="Feature" >
+False: 1:0		
+
+ 		 									<input type="checkbox" name="Feature" >As "SHORT_BINARY" (single-byte prefix + up to 31 raw bytes) 
+or
+typecode (one byte		
+ 		 									<input type="checkbox" name="Feature" > including boolean UTF8-encoding flag) + "varint" encoded length + raw bytes		
+ 		 									<input type="checkbox" name="Feature" >As "ARRAYREF" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + "varint" encoded length + array items		
+ 		 									<input type="checkbox" name="Feature" >As "HASHREF" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + "varint" encoded length + key-value pairs.
+Distinguishes hashmaps from objects 		
+ 		 									<input type="checkbox" name="Feature" > class instances.		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >quad		
+ 		 									<input type="checkbox" name="Feature" >Single byte POS		
+ 		 									<input type="checkbox" name="Feature" >NEG (values -16..15) 
+or
+typecode (one byte) + "varint" encoded variable length integer
+or
+typecode (one byte) + "zigzag" encoded variable length integer		
+
+ 		 									<input type="checkbox" name="Feature" >big-endian 2's complement signed and unsigned 8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64 bits		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + 1-4 bytes size + 1-4 bytes items count + key		
+ 		 									<input type="checkbox" name="Feature" >value pairs		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > null terminated		
+ 		 									<input type="checkbox" name="Feature" > preceded by int8 or int32 string length in bytes		
+
+
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by varint-encoded integer length of string in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >As "fixmap" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + 2-4 bytes length + key-value pairs		
+ 		 									<input type="checkbox" name="Feature" >Single byte "fixnum" (values -32..127) 
+or
+typecode (one byte) + big-endian (u)int8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64		
+ 		 									<input type="checkbox" name="Feature" >Typecode + up to 15 bytes
+or
+typecode + length as uint8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32 + bytes;
+encoding is unspecified		
+ 		 									<input type="checkbox" name="Feature" >As "fixarray" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + 2-4 bytes length + array items		
+
+						   	  </td>
+						   	
+ 		 										<td>autre<input type="text"/> </td>						</tr>
 					
 					
 						<tr>
-							<td> <label>Format :</td><td> <input id="7" type="checkbox" name="Feature"></br></br></label></td>
-						</tr>
+							<td> <label>Format :</td>
+ 		 					  <td>	
+ 		 									<input type="checkbox" name="Feature" >Single byte integers in the range [-32;127]
+
+Fixed length integers for 8-bits		
+ 		 									<input type="checkbox" name="Feature" > 16-bits		
+ 		 									<input type="checkbox" name="Feature" > 32-bits		
+ 		 									<input type="checkbox" name="Feature" > and 64-bits integers.
+
+Encoded as two's complement little-endian values.		
+ 		 									<input type="checkbox" name="Feature" >Little-endian IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double precision numbers.		
+
+ 		 									<input type="checkbox" name="Feature" >BOOLEAN; BER: as 1 byte in binary form; PER: as 1 bit; OER: as 1 byte		
+ 		 									<input type="checkbox" name="Feature" >REAL; base-10 real values are represented as character strings in ISO 6093 format; binary real values are represented in a binary format that includes the mantissa		
+ 		 									<input type="checkbox" name="Feature" > the base (2		
+ 		 									<input type="checkbox" name="Feature" > 8		
+ 		 									<input type="checkbox" name="Feature" > or 16)		
+ 		 									<input type="checkbox" name="Feature" > and the exponent; the special values NaN		
+ 		 									<input type="checkbox" name="Feature" > -INF		
+ 		 									<input type="checkbox" name="Feature" > +INF		
+ 		 									<input type="checkbox" name="Feature" > and negative zero are also supported		
+ 		 									<input type="checkbox" name="Feature" >INTEGER; BER: variable-length big-endian binary representation (up to 2^(2^1024) bits); PER Unaligned: a fixed number of bits if the integer type has a finite range; a variable number of bits otherwise; PER Aligned: a fixed number of bits if the integer type has a finite range and the size of the range is less than 65536; a variable number of octets otherwise; OER: one		
+ 		 									<input type="checkbox" name="Feature" > two		
+ 		 									<input type="checkbox" name="Feature" > or four octets (either signed or unsigned) if the integer type has a finite range that fits in that number of octets; a variable number of octets otherwise		
+
+ 		 									<input type="checkbox" name="Feature" >Arbitrary-length key		
+ 		 									<input type="checkbox" name="Feature" >value pairs with end-marker		
+ 		 									<input type="checkbox" name="Feature" >Single byte "small" (values -16..15 encoded using \xc0 - \xdf)		
+ 		 									<input type="checkbox" name="Feature" >
+zigzag-encoded varints (1 - 11 databytes)		
+ 		 									<input type="checkbox" name="Feature" > or BigInteger		
+ 		 									<input type="checkbox" name="Feature" >Length-prefixed "short" Strings (up to 64 bytes)		
+ 		 									<input type="checkbox" name="Feature" > marker-terminated "long" Strings and (optional) back-references		
+ 		 									<input type="checkbox" name="Feature" >IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" > BigDecimal		
+
+ 		 									<input type="checkbox" name="Feature" >list of elements with identical ID and size		
+ 		 									<input type="checkbox" name="Feature" > preceded by array header with int16 length		
+ 		 									<input type="checkbox" name="Feature" >either UTF-8 or ISO 8859-1 encoded		
+ 		 									<input type="checkbox" name="Feature" >big-endian signed 24bit or 32bit integer		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode with count (like integer coding) and items		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE half		
+ 		 									<input type="checkbox" name="Feature" >single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >Typecode with pairs count (like integer coding) and pairs		
+ 		 									<input type="checkbox" name="Feature" >Small positive number \x00-\x17		
+ 		 									<input type="checkbox" name="Feature" > small negative number \x20-\x37 (abs(N) <= 23) 
+
+8bit: positive \x18\xhh		
+ 		 									<input type="checkbox" name="Feature" > negative \x38\xhh
+
+16bit: positive \x19		
+ 		 									<input type="checkbox" name="Feature" > negative \x39
+
+32bit: positive \x1A		
+ 		 									<input type="checkbox" name="Feature" > negative \x3A
+
+64bit: positive \x1B		
+ 		 									<input type="checkbox" name="Feature" > negative \x3B
+
+Negative number x encoded as ~x (binary inversion) or as (-x-1)
+
+Byte order - Big-endian		
+ 		 									<input type="checkbox" name="Feature" >Typecode with length (like integer coding) and content.
+
+Bytestring and UTF-8 have different typecode		
+
+ 		 									<input type="checkbox" name="Feature" >int32: 32-bit little-endian 2's complement or int64: 64-bit little-endian 2's complement		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by int32 encoded string length in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Associative array		
+ 		 									<input type="checkbox" name="Feature" >Object		
+
+
+ 		 									<input type="checkbox" name="Feature" >True: 1:1		
+ 		 									<input type="checkbox" name="Feature" >
+False: 1:0		
+
+ 		 									<input type="checkbox" name="Feature" >As "SHORT_BINARY" (single-byte prefix + up to 31 raw bytes) 
+or
+typecode (one byte		
+ 		 									<input type="checkbox" name="Feature" > including boolean UTF8-encoding flag) + "varint" encoded length + raw bytes		
+ 		 									<input type="checkbox" name="Feature" >As "ARRAYREF" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + "varint" encoded length + array items		
+ 		 									<input type="checkbox" name="Feature" >As "HASHREF" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + "varint" encoded length + key-value pairs.
+Distinguishes hashmaps from objects 		
+ 		 									<input type="checkbox" name="Feature" > class instances.		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >quad		
+ 		 									<input type="checkbox" name="Feature" >Single byte POS		
+ 		 									<input type="checkbox" name="Feature" >NEG (values -16..15) 
+or
+typecode (one byte) + "varint" encoded variable length integer
+or
+typecode (one byte) + "zigzag" encoded variable length integer		
+
+ 		 									<input type="checkbox" name="Feature" >big-endian 2's complement signed and unsigned 8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64 bits		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + 1-4 bytes size + 1-4 bytes items count + key		
+ 		 									<input type="checkbox" name="Feature" >value pairs		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > null terminated		
+ 		 									<input type="checkbox" name="Feature" > preceded by int8 or int32 string length in bytes		
+
+
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by varint-encoded integer length of string in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >As "fixmap" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + 2-4 bytes length + key-value pairs		
+ 		 									<input type="checkbox" name="Feature" >Single byte "fixnum" (values -32..127) 
+or
+typecode (one byte) + big-endian (u)int8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64		
+ 		 									<input type="checkbox" name="Feature" >Typecode + up to 15 bytes
+or
+typecode + length as uint8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32 + bytes;
+encoding is unspecified		
+ 		 									<input type="checkbox" name="Feature" >As "fixarray" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + 2-4 bytes length + array items		
+
+						   	  </td>
+						   	
+ 		 										<td>autre<input type="text"/> </td>						</tr>
 					
 					
 						<tr>
@@ -56,18 +1036,438 @@
 					
 					
 						<tr>
-							<td> <label>Netstring :</td><td> <input id="9" type="checkbox" name="Feature"></br></br></label></td>
-						</tr>
+							<td> <label>Netstring :</td>
+ 		 					  <td>	
+ 		 									<input type="checkbox" name="Feature" >Single byte integers in the range [-32;127]
+
+Fixed length integers for 8-bits		
+ 		 									<input type="checkbox" name="Feature" > 16-bits		
+ 		 									<input type="checkbox" name="Feature" > 32-bits		
+ 		 									<input type="checkbox" name="Feature" > and 64-bits integers.
+
+Encoded as two's complement little-endian values.		
+ 		 									<input type="checkbox" name="Feature" >Little-endian IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double precision numbers.		
+
+ 		 									<input type="checkbox" name="Feature" >BOOLEAN; BER: as 1 byte in binary form; PER: as 1 bit; OER: as 1 byte		
+ 		 									<input type="checkbox" name="Feature" >REAL; base-10 real values are represented as character strings in ISO 6093 format; binary real values are represented in a binary format that includes the mantissa		
+ 		 									<input type="checkbox" name="Feature" > the base (2		
+ 		 									<input type="checkbox" name="Feature" > 8		
+ 		 									<input type="checkbox" name="Feature" > or 16)		
+ 		 									<input type="checkbox" name="Feature" > and the exponent; the special values NaN		
+ 		 									<input type="checkbox" name="Feature" > -INF		
+ 		 									<input type="checkbox" name="Feature" > +INF		
+ 		 									<input type="checkbox" name="Feature" > and negative zero are also supported		
+ 		 									<input type="checkbox" name="Feature" >INTEGER; BER: variable-length big-endian binary representation (up to 2^(2^1024) bits); PER Unaligned: a fixed number of bits if the integer type has a finite range; a variable number of bits otherwise; PER Aligned: a fixed number of bits if the integer type has a finite range and the size of the range is less than 65536; a variable number of octets otherwise; OER: one		
+ 		 									<input type="checkbox" name="Feature" > two		
+ 		 									<input type="checkbox" name="Feature" > or four octets (either signed or unsigned) if the integer type has a finite range that fits in that number of octets; a variable number of octets otherwise		
+
+ 		 									<input type="checkbox" name="Feature" >Arbitrary-length key		
+ 		 									<input type="checkbox" name="Feature" >value pairs with end-marker		
+ 		 									<input type="checkbox" name="Feature" >Single byte "small" (values -16..15 encoded using \xc0 - \xdf)		
+ 		 									<input type="checkbox" name="Feature" >
+zigzag-encoded varints (1 - 11 databytes)		
+ 		 									<input type="checkbox" name="Feature" > or BigInteger		
+ 		 									<input type="checkbox" name="Feature" >Length-prefixed "short" Strings (up to 64 bytes)		
+ 		 									<input type="checkbox" name="Feature" > marker-terminated "long" Strings and (optional) back-references		
+ 		 									<input type="checkbox" name="Feature" >IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" > BigDecimal		
+
+ 		 									<input type="checkbox" name="Feature" >list of elements with identical ID and size		
+ 		 									<input type="checkbox" name="Feature" > preceded by array header with int16 length		
+ 		 									<input type="checkbox" name="Feature" >either UTF-8 or ISO 8859-1 encoded		
+ 		 									<input type="checkbox" name="Feature" >big-endian signed 24bit or 32bit integer		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode with count (like integer coding) and items		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE half		
+ 		 									<input type="checkbox" name="Feature" >single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >Typecode with pairs count (like integer coding) and pairs		
+ 		 									<input type="checkbox" name="Feature" >Small positive number \x00-\x17		
+ 		 									<input type="checkbox" name="Feature" > small negative number \x20-\x37 (abs(N) <= 23) 
+
+8bit: positive \x18\xhh		
+ 		 									<input type="checkbox" name="Feature" > negative \x38\xhh
+
+16bit: positive \x19		
+ 		 									<input type="checkbox" name="Feature" > negative \x39
+
+32bit: positive \x1A		
+ 		 									<input type="checkbox" name="Feature" > negative \x3A
+
+64bit: positive \x1B		
+ 		 									<input type="checkbox" name="Feature" > negative \x3B
+
+Negative number x encoded as ~x (binary inversion) or as (-x-1)
+
+Byte order - Big-endian		
+ 		 									<input type="checkbox" name="Feature" >Typecode with length (like integer coding) and content.
+
+Bytestring and UTF-8 have different typecode		
+
+ 		 									<input type="checkbox" name="Feature" >int32: 32-bit little-endian 2's complement or int64: 64-bit little-endian 2's complement		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by int32 encoded string length in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Associative array		
+ 		 									<input type="checkbox" name="Feature" >Object		
+
+
+ 		 									<input type="checkbox" name="Feature" >True: 1:1		
+ 		 									<input type="checkbox" name="Feature" >
+False: 1:0		
+
+ 		 									<input type="checkbox" name="Feature" >As "SHORT_BINARY" (single-byte prefix + up to 31 raw bytes) 
+or
+typecode (one byte		
+ 		 									<input type="checkbox" name="Feature" > including boolean UTF8-encoding flag) + "varint" encoded length + raw bytes		
+ 		 									<input type="checkbox" name="Feature" >As "ARRAYREF" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + "varint" encoded length + array items		
+ 		 									<input type="checkbox" name="Feature" >As "HASHREF" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + "varint" encoded length + key-value pairs.
+Distinguishes hashmaps from objects 		
+ 		 									<input type="checkbox" name="Feature" > class instances.		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >quad		
+ 		 									<input type="checkbox" name="Feature" >Single byte POS		
+ 		 									<input type="checkbox" name="Feature" >NEG (values -16..15) 
+or
+typecode (one byte) + "varint" encoded variable length integer
+or
+typecode (one byte) + "zigzag" encoded variable length integer		
+
+ 		 									<input type="checkbox" name="Feature" >big-endian 2's complement signed and unsigned 8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64 bits		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + 1-4 bytes size + 1-4 bytes items count + key		
+ 		 									<input type="checkbox" name="Feature" >value pairs		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > null terminated		
+ 		 									<input type="checkbox" name="Feature" > preceded by int8 or int32 string length in bytes		
+
+
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by varint-encoded integer length of string in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >As "fixmap" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + 2-4 bytes length + key-value pairs		
+ 		 									<input type="checkbox" name="Feature" >Single byte "fixnum" (values -32..127) 
+or
+typecode (one byte) + big-endian (u)int8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64		
+ 		 									<input type="checkbox" name="Feature" >Typecode + up to 15 bytes
+or
+typecode + length as uint8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32 + bytes;
+encoding is unspecified		
+ 		 									<input type="checkbox" name="Feature" >As "fixarray" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + 2-4 bytes length + array items		
+
+						   	  </td>
+						   	
+ 		 										<td>autre<input type="text"/> </td>						</tr>
 					
 					
 						<tr>
-							<td> <label>Sereal :</td><td> <input id="10" type="checkbox" name="Feature"></br></br></label></td>
-						</tr>
+							<td> <label>Sereal :</td>
+ 		 					  <td>	
+ 		 									<input type="checkbox" name="Feature" >Single byte integers in the range [-32;127]
+
+Fixed length integers for 8-bits		
+ 		 									<input type="checkbox" name="Feature" > 16-bits		
+ 		 									<input type="checkbox" name="Feature" > 32-bits		
+ 		 									<input type="checkbox" name="Feature" > and 64-bits integers.
+
+Encoded as two's complement little-endian values.		
+ 		 									<input type="checkbox" name="Feature" >Little-endian IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double precision numbers.		
+
+ 		 									<input type="checkbox" name="Feature" >BOOLEAN; BER: as 1 byte in binary form; PER: as 1 bit; OER: as 1 byte		
+ 		 									<input type="checkbox" name="Feature" >REAL; base-10 real values are represented as character strings in ISO 6093 format; binary real values are represented in a binary format that includes the mantissa		
+ 		 									<input type="checkbox" name="Feature" > the base (2		
+ 		 									<input type="checkbox" name="Feature" > 8		
+ 		 									<input type="checkbox" name="Feature" > or 16)		
+ 		 									<input type="checkbox" name="Feature" > and the exponent; the special values NaN		
+ 		 									<input type="checkbox" name="Feature" > -INF		
+ 		 									<input type="checkbox" name="Feature" > +INF		
+ 		 									<input type="checkbox" name="Feature" > and negative zero are also supported		
+ 		 									<input type="checkbox" name="Feature" >INTEGER; BER: variable-length big-endian binary representation (up to 2^(2^1024) bits); PER Unaligned: a fixed number of bits if the integer type has a finite range; a variable number of bits otherwise; PER Aligned: a fixed number of bits if the integer type has a finite range and the size of the range is less than 65536; a variable number of octets otherwise; OER: one		
+ 		 									<input type="checkbox" name="Feature" > two		
+ 		 									<input type="checkbox" name="Feature" > or four octets (either signed or unsigned) if the integer type has a finite range that fits in that number of octets; a variable number of octets otherwise		
+
+ 		 									<input type="checkbox" name="Feature" >Arbitrary-length key		
+ 		 									<input type="checkbox" name="Feature" >value pairs with end-marker		
+ 		 									<input type="checkbox" name="Feature" >Single byte "small" (values -16..15 encoded using \xc0 - \xdf)		
+ 		 									<input type="checkbox" name="Feature" >
+zigzag-encoded varints (1 - 11 databytes)		
+ 		 									<input type="checkbox" name="Feature" > or BigInteger		
+ 		 									<input type="checkbox" name="Feature" >Length-prefixed "short" Strings (up to 64 bytes)		
+ 		 									<input type="checkbox" name="Feature" > marker-terminated "long" Strings and (optional) back-references		
+ 		 									<input type="checkbox" name="Feature" >IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" > BigDecimal		
+
+ 		 									<input type="checkbox" name="Feature" >list of elements with identical ID and size		
+ 		 									<input type="checkbox" name="Feature" > preceded by array header with int16 length		
+ 		 									<input type="checkbox" name="Feature" >either UTF-8 or ISO 8859-1 encoded		
+ 		 									<input type="checkbox" name="Feature" >big-endian signed 24bit or 32bit integer		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode with count (like integer coding) and items		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE half		
+ 		 									<input type="checkbox" name="Feature" >single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >Typecode with pairs count (like integer coding) and pairs		
+ 		 									<input type="checkbox" name="Feature" >Small positive number \x00-\x17		
+ 		 									<input type="checkbox" name="Feature" > small negative number \x20-\x37 (abs(N) <= 23) 
+
+8bit: positive \x18\xhh		
+ 		 									<input type="checkbox" name="Feature" > negative \x38\xhh
+
+16bit: positive \x19		
+ 		 									<input type="checkbox" name="Feature" > negative \x39
+
+32bit: positive \x1A		
+ 		 									<input type="checkbox" name="Feature" > negative \x3A
+
+64bit: positive \x1B		
+ 		 									<input type="checkbox" name="Feature" > negative \x3B
+
+Negative number x encoded as ~x (binary inversion) or as (-x-1)
+
+Byte order - Big-endian		
+ 		 									<input type="checkbox" name="Feature" >Typecode with length (like integer coding) and content.
+
+Bytestring and UTF-8 have different typecode		
+
+ 		 									<input type="checkbox" name="Feature" >int32: 32-bit little-endian 2's complement or int64: 64-bit little-endian 2's complement		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by int32 encoded string length in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Associative array		
+ 		 									<input type="checkbox" name="Feature" >Object		
+
+
+ 		 									<input type="checkbox" name="Feature" >True: 1:1		
+ 		 									<input type="checkbox" name="Feature" >
+False: 1:0		
+
+ 		 									<input type="checkbox" name="Feature" >As "SHORT_BINARY" (single-byte prefix + up to 31 raw bytes) 
+or
+typecode (one byte		
+ 		 									<input type="checkbox" name="Feature" > including boolean UTF8-encoding flag) + "varint" encoded length + raw bytes		
+ 		 									<input type="checkbox" name="Feature" >As "ARRAYREF" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + "varint" encoded length + array items		
+ 		 									<input type="checkbox" name="Feature" >As "HASHREF" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + "varint" encoded length + key-value pairs.
+Distinguishes hashmaps from objects 		
+ 		 									<input type="checkbox" name="Feature" > class instances.		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >quad		
+ 		 									<input type="checkbox" name="Feature" >Single byte POS		
+ 		 									<input type="checkbox" name="Feature" >NEG (values -16..15) 
+or
+typecode (one byte) + "varint" encoded variable length integer
+or
+typecode (one byte) + "zigzag" encoded variable length integer		
+
+ 		 									<input type="checkbox" name="Feature" >big-endian 2's complement signed and unsigned 8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64 bits		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + 1-4 bytes size + 1-4 bytes items count + key		
+ 		 									<input type="checkbox" name="Feature" >value pairs		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > null terminated		
+ 		 									<input type="checkbox" name="Feature" > preceded by int8 or int32 string length in bytes		
+
+
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by varint-encoded integer length of string in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >As "fixmap" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + 2-4 bytes length + key-value pairs		
+ 		 									<input type="checkbox" name="Feature" >Single byte "fixnum" (values -32..127) 
+or
+typecode (one byte) + big-endian (u)int8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64		
+ 		 									<input type="checkbox" name="Feature" >Typecode + up to 15 bytes
+or
+typecode + length as uint8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32 + bytes;
+encoding is unspecified		
+ 		 									<input type="checkbox" name="Feature" >As "fixarray" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + 2-4 bytes length + array items		
+
+						   	  </td>
+						   	
+ 		 										<td>autre<input type="text"/> </td>						</tr>
 					
 					
 						<tr>
-							<td> <label>Binn :</td><td> <input id="11" type="checkbox" name="Feature"></br></br></label></td>
-						</tr>
+							<td> <label>Binn :</td>
+ 		 					  <td>	
+ 		 									<input type="checkbox" name="Feature" >Single byte integers in the range [-32;127]
+
+Fixed length integers for 8-bits		
+ 		 									<input type="checkbox" name="Feature" > 16-bits		
+ 		 									<input type="checkbox" name="Feature" > 32-bits		
+ 		 									<input type="checkbox" name="Feature" > and 64-bits integers.
+
+Encoded as two's complement little-endian values.		
+ 		 									<input type="checkbox" name="Feature" >Little-endian IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double precision numbers.		
+
+ 		 									<input type="checkbox" name="Feature" >BOOLEAN; BER: as 1 byte in binary form; PER: as 1 bit; OER: as 1 byte		
+ 		 									<input type="checkbox" name="Feature" >REAL; base-10 real values are represented as character strings in ISO 6093 format; binary real values are represented in a binary format that includes the mantissa		
+ 		 									<input type="checkbox" name="Feature" > the base (2		
+ 		 									<input type="checkbox" name="Feature" > 8		
+ 		 									<input type="checkbox" name="Feature" > or 16)		
+ 		 									<input type="checkbox" name="Feature" > and the exponent; the special values NaN		
+ 		 									<input type="checkbox" name="Feature" > -INF		
+ 		 									<input type="checkbox" name="Feature" > +INF		
+ 		 									<input type="checkbox" name="Feature" > and negative zero are also supported		
+ 		 									<input type="checkbox" name="Feature" >INTEGER; BER: variable-length big-endian binary representation (up to 2^(2^1024) bits); PER Unaligned: a fixed number of bits if the integer type has a finite range; a variable number of bits otherwise; PER Aligned: a fixed number of bits if the integer type has a finite range and the size of the range is less than 65536; a variable number of octets otherwise; OER: one		
+ 		 									<input type="checkbox" name="Feature" > two		
+ 		 									<input type="checkbox" name="Feature" > or four octets (either signed or unsigned) if the integer type has a finite range that fits in that number of octets; a variable number of octets otherwise		
+
+ 		 									<input type="checkbox" name="Feature" >Arbitrary-length key		
+ 		 									<input type="checkbox" name="Feature" >value pairs with end-marker		
+ 		 									<input type="checkbox" name="Feature" >Single byte "small" (values -16..15 encoded using \xc0 - \xdf)		
+ 		 									<input type="checkbox" name="Feature" >
+zigzag-encoded varints (1 - 11 databytes)		
+ 		 									<input type="checkbox" name="Feature" > or BigInteger		
+ 		 									<input type="checkbox" name="Feature" >Length-prefixed "short" Strings (up to 64 bytes)		
+ 		 									<input type="checkbox" name="Feature" > marker-terminated "long" Strings and (optional) back-references		
+ 		 									<input type="checkbox" name="Feature" >IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" > BigDecimal		
+
+ 		 									<input type="checkbox" name="Feature" >list of elements with identical ID and size		
+ 		 									<input type="checkbox" name="Feature" > preceded by array header with int16 length		
+ 		 									<input type="checkbox" name="Feature" >either UTF-8 or ISO 8859-1 encoded		
+ 		 									<input type="checkbox" name="Feature" >big-endian signed 24bit or 32bit integer		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode with count (like integer coding) and items		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE half		
+ 		 									<input type="checkbox" name="Feature" >single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >Typecode with pairs count (like integer coding) and pairs		
+ 		 									<input type="checkbox" name="Feature" >Small positive number \x00-\x17		
+ 		 									<input type="checkbox" name="Feature" > small negative number \x20-\x37 (abs(N) <= 23) 
+
+8bit: positive \x18\xhh		
+ 		 									<input type="checkbox" name="Feature" > negative \x38\xhh
+
+16bit: positive \x19		
+ 		 									<input type="checkbox" name="Feature" > negative \x39
+
+32bit: positive \x1A		
+ 		 									<input type="checkbox" name="Feature" > negative \x3A
+
+64bit: positive \x1B		
+ 		 									<input type="checkbox" name="Feature" > negative \x3B
+
+Negative number x encoded as ~x (binary inversion) or as (-x-1)
+
+Byte order - Big-endian		
+ 		 									<input type="checkbox" name="Feature" >Typecode with length (like integer coding) and content.
+
+Bytestring and UTF-8 have different typecode		
+
+ 		 									<input type="checkbox" name="Feature" >int32: 32-bit little-endian 2's complement or int64: 64-bit little-endian 2's complement		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by int32 encoded string length in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Associative array		
+ 		 									<input type="checkbox" name="Feature" >Object		
+
+
+ 		 									<input type="checkbox" name="Feature" >True: 1:1		
+ 		 									<input type="checkbox" name="Feature" >
+False: 1:0		
+
+ 		 									<input type="checkbox" name="Feature" >As "SHORT_BINARY" (single-byte prefix + up to 31 raw bytes) 
+or
+typecode (one byte		
+ 		 									<input type="checkbox" name="Feature" > including boolean UTF8-encoding flag) + "varint" encoded length + raw bytes		
+ 		 									<input type="checkbox" name="Feature" >As "ARRAYREF" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + "varint" encoded length + array items		
+ 		 									<input type="checkbox" name="Feature" >As "HASHREF" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + "varint" encoded length + key-value pairs.
+Distinguishes hashmaps from objects 		
+ 		 									<input type="checkbox" name="Feature" > class instances.		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >quad		
+ 		 									<input type="checkbox" name="Feature" >Single byte POS		
+ 		 									<input type="checkbox" name="Feature" >NEG (values -16..15) 
+or
+typecode (one byte) + "varint" encoded variable length integer
+or
+typecode (one byte) + "zigzag" encoded variable length integer		
+
+ 		 									<input type="checkbox" name="Feature" >big-endian 2's complement signed and unsigned 8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64 bits		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + 1-4 bytes size + 1-4 bytes items count + key		
+ 		 									<input type="checkbox" name="Feature" >value pairs		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > null terminated		
+ 		 									<input type="checkbox" name="Feature" > preceded by int8 or int32 string length in bytes		
+
+
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by varint-encoded integer length of string in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >As "fixmap" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + 2-4 bytes length + key-value pairs		
+ 		 									<input type="checkbox" name="Feature" >Single byte "fixnum" (values -32..127) 
+or
+typecode (one byte) + big-endian (u)int8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64		
+ 		 									<input type="checkbox" name="Feature" >Typecode + up to 15 bytes
+or
+typecode + length as uint8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32 + bytes;
+encoding is unspecified		
+ 		 									<input type="checkbox" name="Feature" >As "fixarray" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + 2-4 bytes length + array items		
+
+						   	  </td>
+						   	
+ 		 										<td>autre<input type="text"/> </td>						</tr>
 					
 					
 						<tr>
@@ -76,13 +1476,293 @@
 					
 					
 						<tr>
-							<td> <label>Protocol Buffers :</td><td> <input id="13" type="checkbox" name="Feature"></br></br></label></td>
-						</tr>
+							<td> <label>Protocol Buffers :</td>
+ 		 					  <td>	
+ 		 									<input type="checkbox" name="Feature" >Single byte integers in the range [-32;127]
+
+Fixed length integers for 8-bits		
+ 		 									<input type="checkbox" name="Feature" > 16-bits		
+ 		 									<input type="checkbox" name="Feature" > 32-bits		
+ 		 									<input type="checkbox" name="Feature" > and 64-bits integers.
+
+Encoded as two's complement little-endian values.		
+ 		 									<input type="checkbox" name="Feature" >Little-endian IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double precision numbers.		
+
+ 		 									<input type="checkbox" name="Feature" >BOOLEAN; BER: as 1 byte in binary form; PER: as 1 bit; OER: as 1 byte		
+ 		 									<input type="checkbox" name="Feature" >REAL; base-10 real values are represented as character strings in ISO 6093 format; binary real values are represented in a binary format that includes the mantissa		
+ 		 									<input type="checkbox" name="Feature" > the base (2		
+ 		 									<input type="checkbox" name="Feature" > 8		
+ 		 									<input type="checkbox" name="Feature" > or 16)		
+ 		 									<input type="checkbox" name="Feature" > and the exponent; the special values NaN		
+ 		 									<input type="checkbox" name="Feature" > -INF		
+ 		 									<input type="checkbox" name="Feature" > +INF		
+ 		 									<input type="checkbox" name="Feature" > and negative zero are also supported		
+ 		 									<input type="checkbox" name="Feature" >INTEGER; BER: variable-length big-endian binary representation (up to 2^(2^1024) bits); PER Unaligned: a fixed number of bits if the integer type has a finite range; a variable number of bits otherwise; PER Aligned: a fixed number of bits if the integer type has a finite range and the size of the range is less than 65536; a variable number of octets otherwise; OER: one		
+ 		 									<input type="checkbox" name="Feature" > two		
+ 		 									<input type="checkbox" name="Feature" > or four octets (either signed or unsigned) if the integer type has a finite range that fits in that number of octets; a variable number of octets otherwise		
+
+ 		 									<input type="checkbox" name="Feature" >Arbitrary-length key		
+ 		 									<input type="checkbox" name="Feature" >value pairs with end-marker		
+ 		 									<input type="checkbox" name="Feature" >Single byte "small" (values -16..15 encoded using \xc0 - \xdf)		
+ 		 									<input type="checkbox" name="Feature" >
+zigzag-encoded varints (1 - 11 databytes)		
+ 		 									<input type="checkbox" name="Feature" > or BigInteger		
+ 		 									<input type="checkbox" name="Feature" >Length-prefixed "short" Strings (up to 64 bytes)		
+ 		 									<input type="checkbox" name="Feature" > marker-terminated "long" Strings and (optional) back-references		
+ 		 									<input type="checkbox" name="Feature" >IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" > BigDecimal		
+
+ 		 									<input type="checkbox" name="Feature" >list of elements with identical ID and size		
+ 		 									<input type="checkbox" name="Feature" > preceded by array header with int16 length		
+ 		 									<input type="checkbox" name="Feature" >either UTF-8 or ISO 8859-1 encoded		
+ 		 									<input type="checkbox" name="Feature" >big-endian signed 24bit or 32bit integer		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode with count (like integer coding) and items		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE half		
+ 		 									<input type="checkbox" name="Feature" >single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >Typecode with pairs count (like integer coding) and pairs		
+ 		 									<input type="checkbox" name="Feature" >Small positive number \x00-\x17		
+ 		 									<input type="checkbox" name="Feature" > small negative number \x20-\x37 (abs(N) <= 23) 
+
+8bit: positive \x18\xhh		
+ 		 									<input type="checkbox" name="Feature" > negative \x38\xhh
+
+16bit: positive \x19		
+ 		 									<input type="checkbox" name="Feature" > negative \x39
+
+32bit: positive \x1A		
+ 		 									<input type="checkbox" name="Feature" > negative \x3A
+
+64bit: positive \x1B		
+ 		 									<input type="checkbox" name="Feature" > negative \x3B
+
+Negative number x encoded as ~x (binary inversion) or as (-x-1)
+
+Byte order - Big-endian		
+ 		 									<input type="checkbox" name="Feature" >Typecode with length (like integer coding) and content.
+
+Bytestring and UTF-8 have different typecode		
+
+ 		 									<input type="checkbox" name="Feature" >int32: 32-bit little-endian 2's complement or int64: 64-bit little-endian 2's complement		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by int32 encoded string length in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Associative array		
+ 		 									<input type="checkbox" name="Feature" >Object		
+
+
+ 		 									<input type="checkbox" name="Feature" >True: 1:1		
+ 		 									<input type="checkbox" name="Feature" >
+False: 1:0		
+
+ 		 									<input type="checkbox" name="Feature" >As "SHORT_BINARY" (single-byte prefix + up to 31 raw bytes) 
+or
+typecode (one byte		
+ 		 									<input type="checkbox" name="Feature" > including boolean UTF8-encoding flag) + "varint" encoded length + raw bytes		
+ 		 									<input type="checkbox" name="Feature" >As "ARRAYREF" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + "varint" encoded length + array items		
+ 		 									<input type="checkbox" name="Feature" >As "HASHREF" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + "varint" encoded length + key-value pairs.
+Distinguishes hashmaps from objects 		
+ 		 									<input type="checkbox" name="Feature" > class instances.		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >quad		
+ 		 									<input type="checkbox" name="Feature" >Single byte POS		
+ 		 									<input type="checkbox" name="Feature" >NEG (values -16..15) 
+or
+typecode (one byte) + "varint" encoded variable length integer
+or
+typecode (one byte) + "zigzag" encoded variable length integer		
+
+ 		 									<input type="checkbox" name="Feature" >big-endian 2's complement signed and unsigned 8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64 bits		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + 1-4 bytes size + 1-4 bytes items count + key		
+ 		 									<input type="checkbox" name="Feature" >value pairs		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > null terminated		
+ 		 									<input type="checkbox" name="Feature" > preceded by int8 or int32 string length in bytes		
+
+
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by varint-encoded integer length of string in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >As "fixmap" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + 2-4 bytes length + key-value pairs		
+ 		 									<input type="checkbox" name="Feature" >Single byte "fixnum" (values -32..127) 
+or
+typecode (one byte) + big-endian (u)int8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64		
+ 		 									<input type="checkbox" name="Feature" >Typecode + up to 15 bytes
+or
+typecode + length as uint8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32 + bytes;
+encoding is unspecified		
+ 		 									<input type="checkbox" name="Feature" >As "fixarray" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + 2-4 bytes length + array items		
+
+						   	  </td>
+						   	
+ 		 										<td>autre<input type="text"/> </td>						</tr>
 					
 					
 						<tr>
-							<td> <label>MessagePack :</td><td> <input id="14" type="checkbox" name="Feature"></br></br></label></td>
-						</tr>
+							<td> <label>MessagePack :</td>
+ 		 					  <td>	
+ 		 									<input type="checkbox" name="Feature" >Single byte integers in the range [-32;127]
+
+Fixed length integers for 8-bits		
+ 		 									<input type="checkbox" name="Feature" > 16-bits		
+ 		 									<input type="checkbox" name="Feature" > 32-bits		
+ 		 									<input type="checkbox" name="Feature" > and 64-bits integers.
+
+Encoded as two's complement little-endian values.		
+ 		 									<input type="checkbox" name="Feature" >Little-endian IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double precision numbers.		
+
+ 		 									<input type="checkbox" name="Feature" >BOOLEAN; BER: as 1 byte in binary form; PER: as 1 bit; OER: as 1 byte		
+ 		 									<input type="checkbox" name="Feature" >REAL; base-10 real values are represented as character strings in ISO 6093 format; binary real values are represented in a binary format that includes the mantissa		
+ 		 									<input type="checkbox" name="Feature" > the base (2		
+ 		 									<input type="checkbox" name="Feature" > 8		
+ 		 									<input type="checkbox" name="Feature" > or 16)		
+ 		 									<input type="checkbox" name="Feature" > and the exponent; the special values NaN		
+ 		 									<input type="checkbox" name="Feature" > -INF		
+ 		 									<input type="checkbox" name="Feature" > +INF		
+ 		 									<input type="checkbox" name="Feature" > and negative zero are also supported		
+ 		 									<input type="checkbox" name="Feature" >INTEGER; BER: variable-length big-endian binary representation (up to 2^(2^1024) bits); PER Unaligned: a fixed number of bits if the integer type has a finite range; a variable number of bits otherwise; PER Aligned: a fixed number of bits if the integer type has a finite range and the size of the range is less than 65536; a variable number of octets otherwise; OER: one		
+ 		 									<input type="checkbox" name="Feature" > two		
+ 		 									<input type="checkbox" name="Feature" > or four octets (either signed or unsigned) if the integer type has a finite range that fits in that number of octets; a variable number of octets otherwise		
+
+ 		 									<input type="checkbox" name="Feature" >Arbitrary-length key		
+ 		 									<input type="checkbox" name="Feature" >value pairs with end-marker		
+ 		 									<input type="checkbox" name="Feature" >Single byte "small" (values -16..15 encoded using \xc0 - \xdf)		
+ 		 									<input type="checkbox" name="Feature" >
+zigzag-encoded varints (1 - 11 databytes)		
+ 		 									<input type="checkbox" name="Feature" > or BigInteger		
+ 		 									<input type="checkbox" name="Feature" >Length-prefixed "short" Strings (up to 64 bytes)		
+ 		 									<input type="checkbox" name="Feature" > marker-terminated "long" Strings and (optional) back-references		
+ 		 									<input type="checkbox" name="Feature" >IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" > BigDecimal		
+
+ 		 									<input type="checkbox" name="Feature" >list of elements with identical ID and size		
+ 		 									<input type="checkbox" name="Feature" > preceded by array header with int16 length		
+ 		 									<input type="checkbox" name="Feature" >either UTF-8 or ISO 8859-1 encoded		
+ 		 									<input type="checkbox" name="Feature" >big-endian signed 24bit or 32bit integer		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode with count (like integer coding) and items		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE half		
+ 		 									<input type="checkbox" name="Feature" >single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >Typecode with pairs count (like integer coding) and pairs		
+ 		 									<input type="checkbox" name="Feature" >Small positive number \x00-\x17		
+ 		 									<input type="checkbox" name="Feature" > small negative number \x20-\x37 (abs(N) <= 23) 
+
+8bit: positive \x18\xhh		
+ 		 									<input type="checkbox" name="Feature" > negative \x38\xhh
+
+16bit: positive \x19		
+ 		 									<input type="checkbox" name="Feature" > negative \x39
+
+32bit: positive \x1A		
+ 		 									<input type="checkbox" name="Feature" > negative \x3A
+
+64bit: positive \x1B		
+ 		 									<input type="checkbox" name="Feature" > negative \x3B
+
+Negative number x encoded as ~x (binary inversion) or as (-x-1)
+
+Byte order - Big-endian		
+ 		 									<input type="checkbox" name="Feature" >Typecode with length (like integer coding) and content.
+
+Bytestring and UTF-8 have different typecode		
+
+ 		 									<input type="checkbox" name="Feature" >int32: 32-bit little-endian 2's complement or int64: 64-bit little-endian 2's complement		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by int32 encoded string length in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Associative array		
+ 		 									<input type="checkbox" name="Feature" >Object		
+
+
+ 		 									<input type="checkbox" name="Feature" >True: 1:1		
+ 		 									<input type="checkbox" name="Feature" >
+False: 1:0		
+
+ 		 									<input type="checkbox" name="Feature" >As "SHORT_BINARY" (single-byte prefix + up to 31 raw bytes) 
+or
+typecode (one byte		
+ 		 									<input type="checkbox" name="Feature" > including boolean UTF8-encoding flag) + "varint" encoded length + raw bytes		
+ 		 									<input type="checkbox" name="Feature" >As "ARRAYREF" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + "varint" encoded length + array items		
+ 		 									<input type="checkbox" name="Feature" >As "HASHREF" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + "varint" encoded length + key-value pairs.
+Distinguishes hashmaps from objects 		
+ 		 									<input type="checkbox" name="Feature" > class instances.		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >quad		
+ 		 									<input type="checkbox" name="Feature" >Single byte POS		
+ 		 									<input type="checkbox" name="Feature" >NEG (values -16..15) 
+or
+typecode (one byte) + "varint" encoded variable length integer
+or
+typecode (one byte) + "zigzag" encoded variable length integer		
+
+ 		 									<input type="checkbox" name="Feature" >big-endian 2's complement signed and unsigned 8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64 bits		
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + 1-4 bytes size + 1-4 bytes items count + key		
+ 		 									<input type="checkbox" name="Feature" >value pairs		
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > null terminated		
+ 		 									<input type="checkbox" name="Feature" > preceded by int8 or int32 string length in bytes		
+
+
+ 		 									<input type="checkbox" name="Feature" >UTF-8 encoded		
+ 		 									<input type="checkbox" name="Feature" > preceded by varint-encoded integer length of string in bytes		
+
+ 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single		
+ 		 									<input type="checkbox" name="Feature" >double		
+ 		 									<input type="checkbox" name="Feature" >As "fixmap" (single-byte prefix + up to 15 key-value pairs) 
+or
+typecode (one byte) + 2-4 bytes length + key-value pairs		
+ 		 									<input type="checkbox" name="Feature" >Single byte "fixnum" (values -32..127) 
+or
+typecode (one byte) + big-endian (u)int8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32		
+ 		 									<input type="checkbox" name="Feature" >64		
+ 		 									<input type="checkbox" name="Feature" >Typecode + up to 15 bytes
+or
+typecode + length as uint8		
+ 		 									<input type="checkbox" name="Feature" >16		
+ 		 									<input type="checkbox" name="Feature" >32 + bytes;
+encoding is unspecified		
+ 		 									<input type="checkbox" name="Feature" >As "fixarray" (single-byte prefix + up to 15 array items) 
+or
+typecode (one byte) + 2-4 bytes length + array items		
+
+						   	  </td>
+						   	
+ 		 										<td>autre<input type="text"/> </td>						</tr>
 					
 					
 						<tr>

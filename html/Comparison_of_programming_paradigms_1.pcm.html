@@ -37,7 +37,62 @@
  .
  .... storage .............
  result variable
- constant "3.142" :</td><td> <input id="1" type="checkbox" name="Feature"></br></br></label></td>
+ constant "3.142" :</td>
+ 		 					  <td>	
+ 		 									<input type="checkbox" name="Feature" >circle.area method(r2):
+    push stack                                 7
+    load r2;                                   8
+    r3 = r2 * r2;                              9
+    res = r3 * "3.142";                       10
+    pop stack                                 11
+    return(res);                           12		
+ 		 									<input type="checkbox" name="Feature" >13
+ ...............................................
+ main proc:
+    load r;                                    1
+    result = circle.area(r); 
+       +allocate heap storage;                 2                  
+       +copy r to message;                     3
+       +load p = address of message;           4
+       +load v = addr. of method 'circle.area' 5
+       +goto v with return;                    6
+ .
+ .
+ .... storage .............
+ result variable (assumed pre-allocated)
+ immutable variable "3.142" (final)
+ (heap) message variable for circle method call
+ vtable(==>area)
+ stack storage		
+ 		 									<input type="checkbox" name="Feature" >area proc(r2		
+ 		 									<input type="checkbox" name="Feature" >res):
+    push stack                                 5
+    load r2;                                   6
+    r3 = r2 * r2;                              7
+    res = r3 * "3.142";                        8
+    pop stack                                  9
+    return;                                   10
+ ...............................................
+ main proc:
+    load r;                                    1
+    call area(r		
+ 		 									<input type="checkbox" name="Feature" >result);
+     +load p = address of parameter list;      2
+     +load v = address of subroutine 'area';   3
+     +goto v with return;                      4
+ .
+ .
+ .
+ .
+ .... storage .............
+ result variable
+ constant "3.142" 
+ parameter list variable
+ function pointer (==>area)
+ stack storage		
+
+						   	  </td>
+						   	
 						</tr>
 					
 					

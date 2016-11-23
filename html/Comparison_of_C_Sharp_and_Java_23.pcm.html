@@ -24,8 +24,19 @@
  Files.write method writes a byte array into an output file, indicated by a Path object.
  Files.write method also takes care of buffering and closing the output stream.
  An explicit option should be specified for the Files.write method whether it should overwrite or append to the output file.
- StandardOpenOption.CREATE indicates that the output file should be created or overwritten if exists. :</td><td> <input id="2" type="checkbox" name="Feature"></br></br></label></td>
-						</tr>
+ StandardOpenOption.CREATE indicates that the output file should be created or overwritten if exists. :</td>
+ 		 					  <td>	
+
+ 		 									<input type="checkbox" name="Feature" >Notes on the C# implementation:
+ The  method returns an enumerable object which upon enumeration will read the file one line at a time.
+ The  method takes an enumerable and retrieves a line at a time and writes it until the enumeration ends.
+ The underlying reader will automatically allocate a buffer		
+ 		 									<input type="checkbox" name="Feature" > thus there is no need to explicitly introduce a buffered stream.
+  automatically closes the output stream		
+ 		 									<input type="checkbox" name="Feature" > also in the case of an abnormal termination.		
+						   	  </td>
+						   	
+ 		 										<td>autre<input type="text"/> </td>						</tr>
 					
 					
 		</table>
