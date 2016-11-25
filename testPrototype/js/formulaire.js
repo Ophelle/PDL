@@ -6,8 +6,6 @@ $(document).ready(function(){
     $(':input[type="number"]').attr("required", "True" );
     // On verifie la validité des champs date du formulaire
     $(':input[type="date"]').attr("required", "True","date", "true");
-
-
     
 });
        

@@ -1,70 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
 <link href="css/moncss.css" rel="stylesheet"type="text/css">
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
 <script type="text/javascript" src="js/typeahead.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/formulaire.js"></script>
 	<title>${name} Version 0.5</title>
 	<meta charset="utf-8">
 </head>
 <body>
-	<h1>${titre}</h1>
+		<div class="container">
+  	<div class="row">
+      		<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>${titre}</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+	</div>
+	<div class="row">
 	<fieldset>
-		<table>
+		<div class="col-md-2">&nbsp;</div>
+		<div class="col-md-8">
+		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
    			<#assign i=0>
 				<#list bestType as key, value>
 					<#assign i++>
 					<#if value == "radio">
-						<tr>
- 		 					<td> <label>${key} :</td><td> <input type="${value}" name="Feature${key}" value="oui"> oui <input type="${value}" name="Feature${key}" value = "non"> non</br></br></label></td>
-						
+ 		 					<label>${key} :</label><br/>
+ 		 					 <input type="${value}" name="Feature${key}" value="oui"> <input type="${value}" name="Feature${key}" value = "non"> </br></br>
 								<#list getAllTypesValue as keys, valueAll>
 									
 						    			<#list valueAll as valueAll>
  		 									<#if valueAll=="string" >
- 		 								 		<td>autre<input type="text"/></td><#break>
+ 		 								 		<label>Autres</label><input type="text"/><#break>
  		 									</#if>		
 					       				</#list>
 					       				<#break>
 								</#list>
-						</tr>
 					<#elseif value == "conditional">
-						<tr>
- 		 					<td> <label>${key} :</td><td> <input type="${value}" name="Feature">  Condition : <input type="text" name="Feature"></br></br></label></td>
-						</tr>
+ 		 					<label>${key} :</label> <input type="${value}" name="Feature">  Condition : <input type="text" name="Feature"></br></br>
 					<#elseif value == "checkbox">
-						<tr>
-							<td> <label>${key} :</td>
- 		 					  <td>	<#list ListMultiple as keys, valueMultiple>
+							<label>${key} :</label>
+ 		 					 <#list ListMultiple as keys, valueMultiple>
  		 								<#list valueMultiple as valuemiltipe>
  		 									<input type="${value}" name="Feature" >${valuemiltipe}		
 					       				</#list>
 						   			</#list>
-						   	  </td>
-						   	
 								<#list getAllTypesValue as keys, valueAll>
 						    			<#list valueAll as valueAll>
  		 									<#if valueAll=="string" >
- 		 										<td>autre<input type="text"/> </td><#break>
+ 		 										<label>Autre<input type="text"/> </label><#break>
  		 									</#if>		
 					       	            </#list>
 					       	           <#break>
 								</#list>
-						</tr>
 					<#else>
-						<tr>
-							<td> <label>${key} :</td><td> <input id="${i}" type="${value}" name="Feature"></br></br></label></td>
-						</tr>
+							<label>${key} : </label><br/><br/> <input id="${i}" type="${value}" name="Feature"></br></br>
 					</#if>
-					
-					
 				</#list>
-		</table>
-		<button type="submit">Ajouter un produit</button>
-	</fieldset>
-	<script>
+		<script>
 		<#assign j=0>
 		<#list allContentsCell as key, value>
           $("#<#assign j++>${j}").typeahead({
@@ -72,7 +69,12 @@
             local : [<#list value as  values>'${values}',</#list>'']
           });
         </#list>
-        </script>
-		
+    </script>
+    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
+		</form></fieldset>
+		</div>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+		</div>
 </body>
 </html>
