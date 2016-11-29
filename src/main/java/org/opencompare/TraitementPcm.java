@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -243,22 +244,35 @@ public class TraitementPcm {
 	private Map<String, List<String>> getAllContentsCell(List<Feature> listFeatures) {
 		// Cette méthode servira pour l'auto-completion en javascript
 		String currentContent = "";
-		// Map qui contient tous les contenus de la case pour chaque feature de la matrice
-		Map<String, List<String>> feat_content = new HashMap<String, List<String>>();
-
-		for(Feature feat : listFeatures) {
-			List<String> listContents = new ArrayList<String>();
+		
+				
+				
+				
+				
+		Map<String, List<String>> feat_content = new LinkedHashMap<String, List<String>>();
+		
+			for(String type : this.bestTypesValue.keySet()) {
+				if(bestTypesValue.get(type) == "text") {
+						for(Feature feat : listFeatures) {
+							if(type.contains(feat.getName())) {
+								List<String> listContents = new ArrayList<String>();
+								
+								// Si le feature existe ou n'est pas vide
+								if(feat.getName() != null && !feat.getName().equals("") && bestTypesValue.get(feat.getName()) =="text") {
+								for(Cell cell : feat.getCells()) {
+										// Obtenir le contenu de la case
+										currentContent = cell.getContent();
+										if(!listContents.contains(currentContent)) {
+											// Ajout dans la liste le contenu de la case courante
+											listContents.add(currentContent);
+										}
+									}
+									// Ajout dans la map le feature et sa liste de contenus disponible
+									feat_content.put(feat.getName(), listContents);
+								}
+						}
+		 				}
 			
-			// Si le feature existe ou n'est pas vide
-			if(feat.getName() != null && !feat.getName().equals("")) {
-				for(Cell cell : feat.getCells()) {
-					// Obtenir le contenu de la case
-					currentContent = cell.getContent();
-					// Ajout dans la liste le contenu de la case courante
-					listContents.add(currentContent);
-				}
-				// Ajout dans la map le feature et sa liste de contenus disponible
-				feat_content.put(feat.getName(), listContents);
 			}
 		}
 		return feat_content;

@@ -30,20 +30,20 @@
 					<#assign i++>
 					<#if value == "radio">
  		 					<label>${key} :</label><br/>
- 		 					 <input type="${value}" name="Feature${key}" value="oui"> <input type="${value}" name="Feature${key}" value = "non"> </br></br>
+ 		 					 <input type="${value}" name="Feature${key}" value="oui">oui <input type="${value}" name="Feature${key}" value = "non">non </br></br>
 								<#list getAllTypesValue as keys, valueAll>
 									
 						    			<#list valueAll as valueAll>
  		 									<#if valueAll=="string" >
- 		 								 		<label>Autres</label><input type="text"/><#break>
+ 		 								 		<label>Autre</label><br/><br/><input type="text"/><#break><br/><br/>
  		 									</#if>		
 					       				</#list>
 					       				<#break>
 								</#list>
 					<#elseif value == "conditional">
- 		 					<label>${key} :</label> <input type="${value}" name="Feature">  Condition : <input type="text" name="Feature"></br></br>
+ 		 					<label>${key} :</label> <br/><br/><input type="${value}" name="Feature">  Condition : <input type="text" name="Feature"></br></br>
 					<#elseif value == "checkbox">
-							<label>${key} :</label>
+							<label>${key} :</label><br/><br/>
  		 					 <#list ListMultiple as keys, valueMultiple>
  		 								<#list valueMultiple as valuemiltipe>
  		 									<input type="${value}" name="Feature" >${valuemiltipe}		
@@ -52,13 +52,14 @@
 								<#list getAllTypesValue as keys, valueAll>
 						    			<#list valueAll as valueAll>
  		 									<#if valueAll=="string" >
- 		 										<label>Autre<input type="text"/> </label><#break>
+ 		 										<label>Autre</label><br/><input type="text"/> <#break>
  		 									</#if>		
 					       	            </#list>
 					       	           <#break>
 								</#list>
 					<#else>
-							<label>${key} : </label><br/><br/> <input id="${i}" type="${value}" name="Feature"></br></br>
+					<br/><br/>
+							<label>${key} : </label><br/><br/> <input id="${i}" type="${value}" name="Feature"></br>
 					</#if>
 				</#list>
 		<script>
