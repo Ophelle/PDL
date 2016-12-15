@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		// Chargement fichier + pcm + traitement des types
-		File file = new File("pcms/Comparison_of_assemblers_2.pcm");
+		File file = new File("testPrototype/example0.pcm");
 		TraitementPcm trait = new TraitementPcm(file);
 
 		// Generation avec un template html : freemarker
@@ -15,14 +15,5 @@ public class Main {
 		//generator.getTraitPcm().loadPcm(new File("testPrototype/example1.pcm"));
 		generator.generateHtml();
 		//generator.generatAllHtml();
-		
-		
-		// test sur feature/type dominant
-		/*Set<String> set1 = generator.getTraitPcm().getBestTypes().keySet();
-		Collection<String> set1 = generator.getTraitPcm().getBestTypes().values();
-
-		for (String str : set1) {
-			System.out.println(str);
-		}*/
 	}
 }

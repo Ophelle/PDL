@@ -74,8 +74,8 @@ public class TraitementPcmTest {
 		list2.add("string");
 		map.put("Ecran", list1);
 		map.put("Puissance", list1);
-		traitementpcm.setAllTypesValue(map);
-		assertEquals(map, traitementpcm.getAllTypesValue());
+		traitementpcm.setAllTypesOfFeature(map);
+		assertEquals(map, traitementpcm.getAllTypesOfFeature());
 	}
 
 	@Test
@@ -107,8 +107,8 @@ public class TraitementPcmTest {
 		list2.add("10");
 		map.put("Ecran", list1);
 		map.put("Puissance", list1);
-		traitementpcm.setAllContentsCell(map);
-		assertEquals(map, traitementpcm.getAllContentsCell());
+		traitementpcm.setAllContentsOfEachCell(map);;
+		assertEquals(map, traitementpcm.getAllContentsOfEachCell());
 	}
 	
 	@Test
@@ -205,7 +205,7 @@ public class TraitementPcmTest {
    @Test(expected = UnsupportedOperationException.class)
    public void testUnknownValueType() {
 	 
-   	traitementpcm.valueToType(new Value() {
+   	traitementpcm.valueToString(new Value() {
 		
 		@Override
 		public PCMElement clone(PCMFactory factory) {
@@ -225,21 +225,21 @@ public class TraitementPcmTest {
    public void assertValueToType(Value value, String expectedResult) {
    
          final String result =
-                 traitementpcm.valueToType(value);
+                 traitementpcm.valueToString(value);
           Assert.assertEquals(expectedResult, result);
       }
      
        @Test
        public void setConditionalTypeHtml() {
        	
-       	final String result = traitementpcm.setTypeHtml("conditional");
+       	final String result = traitementpcm.setTypeForHtml("conditional");
        	Assert.assertEquals("text", result);
        }
        
       
        @Test (expected = NullPointerException.class)
        public void setTypeHtmlnull(){
-    	  traitementpcm.setTypeHtml(null);
+    	  traitementpcm.setTypeForHtml("conditional");
        }
      }
 

@@ -4,10 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-
-import org.opencompare.api.java.Feature;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -40,10 +37,10 @@ public class GenerationHtml {
 		Map<String, Object> ajoutVar = new HashMap<String, Object>();
 		ajoutVar.put("titre", this.traitPcm.getNamePcm());
 		ajoutVar.put("name", "Prototype de formulaire");
-		ajoutVar.put("bestType", this.traitPcm.getBestTypes());
-		ajoutVar.put("allContentsCell", this.traitPcm.getAllContentsCell());
+		ajoutVar.put("bestType", this.traitPcm.getBestTypeForEachFeature());
+		ajoutVar.put("allContentsCell", this.traitPcm.getAllContentsOfEachCell());
 		ajoutVar.put("ListMultiple",this.traitPcm.getContentsTypeMultiple());
-		ajoutVar.put("getAllTypesValue", this.traitPcm.getAllTypesValue());
+		ajoutVar.put("getAllTypesValue", this.traitPcm.getAllTypesOfFeature());
 		// Création html
 		File file = new File(this.output);
 		FileWriter writer = null;
@@ -87,10 +84,10 @@ public class GenerationHtml {
 			// Attribution des variables au code html source
 			ajoutVar.put("titre", this.traitPcm.getNamePcm());
 			ajoutVar.put("name", "Prototype de formulaire");
-			ajoutVar.put("bestType", this.traitPcm.getBestTypes());
-			ajoutVar.put("allContentsCell", this.traitPcm.getAllContentsCell());
+			ajoutVar.put("bestType", this.traitPcm.getBestTypeForEachFeature());
+			ajoutVar.put("allContentsCell", this.traitPcm.getAllContentsOfEachCell());
 			ajoutVar.put("ListMultiple",this.traitPcm.getContentsTypeMultiple());
-			ajoutVar.put("getAllTypesValue", this.traitPcm.getAllTypesValue());
+			ajoutVar.put("getAllTypesValue", this.traitPcm.getAllTypesOfFeature());
 			
 			setOutput("html/" + filesPcm[i].getName() + ".html");
 			File file = new File(this.output);

@@ -35,14 +35,14 @@ public class TraitementPcm {
 	private String namePcm;
 	private File file;
 	private List<Feature> listFeatures;
-	private Map<String, List<String>> allTypesValue;
-	private Map<String, List<String>> allContentsCell;
+	private Map<String, List<String>> allTypesOfFeature;
+	private Map<String, List<String>> allContentsOfEachCell;
 	private Map<String, List<String>> contentsTypeMultiple;
-	private Map<String, String> bestTypesValue;
+	private Map<String, String> bestTypeForEachFeature;
 
 	public TraitementPcm(File file) {
 		this.loadPcm(file);
-		this.allContentsCell = getAllContentsCell(this.listFeatures);
+		this.allContentsOfEachCell = getAllContentsOfEachCell(this.listFeatures);
 		this.contentsTypeMultiple = contentsTypeMultiple(this.listFeatures);
 	}
 
@@ -74,20 +74,20 @@ public class TraitementPcm {
 		return this.listFeatures;
 	}
 
-	public Map<String, List<String>> getAllTypesValue() {
-		return this.allTypesValue;
+	public Map<String, List<String>> getAllTypesOfFeature() {
+		return this.allTypesOfFeature;
 	}
 
-	public void setAllTypesValue(Map<String, List<String>> allTypesValue) {
-		this.allTypesValue = allTypesValue;
+	public void setAllTypesOfFeature(Map<String, List<String>> allTypesValue) {
+		this.allTypesOfFeature = allTypesValue;
 	}
 
-	public Map<String, List<String>> getAllContentsCell() {
-		return this.allContentsCell;
+	public Map<String, List<String>> getAllContentsOfEachCell() {
+		return this.allContentsOfEachCell;
 	}
 
-	public void setAllContentsCell(Map<String, List<String>> allContentsCell) {
-		this.allContentsCell = allContentsCell;
+	public void setAllContentsOfEachCell(Map<String, List<String>> allContentsCell) {
+		this.allContentsOfEachCell = allContentsCell;
 	}
 
 	public Map<String, List<String>> getContentsTypeMultiple() {
@@ -98,12 +98,12 @@ public class TraitementPcm {
 		this.contentsTypeMultiple = contentsTypeMultiple;
 	}
 
-	public Map<String, String> getBestTypes() {
-		return this.bestTypesValue;
+	public Map<String, String> getBestTypeForEachFeature() {
+		return this.bestTypeForEachFeature;
 	}
 
-	public void setBestTypes(Map<String, String> bestTypes) {
-		this.bestTypesValue = bestTypes;
+	public void setBestTypeForEachFeature(Map<String, String> bestTypes) {
+		this.bestTypeForEachFeature = bestTypes;
 	}
 
 	public void loadPcm(File file) {
@@ -116,12 +116,12 @@ public class TraitementPcm {
 		}
 		this.namePcm = this.pcm.getName();
 		this.listFeatures = this.pcm.getConcreteFeatures();
-		this.allTypesValue = getAllTypesValue(this.listFeatures);
-		this.bestTypesValue = getBestTypes(this.allTypesValue);
+		this.allTypesOfFeature = getAllTypesOfFeature(this.listFeatures);
+		this.bestTypeForEachFeature = getBestTypeForEachFeature(this.allTypesOfFeature);
 		this.contentsTypeMultiple = contentsTypeMultiple(this.listFeatures);
 	}
 
-	public static String valueToType(Value kValue) {
+	public static String valueToString(Value kValue) {
 		if (kValue == null) {
 			return "string";
 		} else if (kValue instanceof BooleanValue) {
@@ -155,7 +155,7 @@ public class TraitementPcm {
 		}
 	}
 
-	private Map<String, List<String>> getAllTypesValue(List<Feature> listFeatures) {
+	private Map<String, List<String>> getAllTypesOfFeature(List<Feature> listFeatures) {
 
 		String currentType = "";
 		// Map qui contient tous les types pour chaque feature de la matrice
@@ -175,7 +175,7 @@ public class TraitementPcm {
 						abstractFeature = cell.getFeature().getParentGroup().getName() + " - ";
 					}
 					// Obtenir le type de la case courante
-					currentType = valueToType(cell.getInterpretation());
+					currentType = valueToString(cell.getInterpretation());
 					// Ajout dans la liste le type de la case courante
 					listTypes.add(currentType);
 				}
@@ -203,7 +203,7 @@ public class TraitementPcm {
 
 					for (Cell cell : feat.getCells()) {
 
-						currentType = valueToType(cell.getInterpretation());
+						currentType = valueToString(cell.getInterpretation());
 
 						if (currentType == "multiple") {
 							currentContent = cell.getContent().split("[,/]");
@@ -226,21 +226,21 @@ public class TraitementPcm {
 		return feat_contentMultiple;
 	}
 
-	private Map<String, List<String>> getAllContentsCell(List<Feature> listFeatures) {
+	private Map<String, List<String>> getAllContentsOfEachCell(List<Feature> listFeatures) {
 		// Cette méthode servira pour l'auto-completion en javascript
 		String currentContent = "";
 
 		Map<String, List<String>> feat_content = new LinkedHashMap<String, List<String>>();
 
-		for (String type : this.bestTypesValue.keySet()) {
-			if (bestTypesValue.get(type) == "text") {
+		for (String type : this.bestTypeForEachFeature.keySet()) {
+			if (bestTypeForEachFeature.get(type) == "text") {
 				for (Feature feat : listFeatures) {
 					if (type.contains(feat.getName())) {
 						List<String> listContents = new ArrayList<String>();
 
 						// Si le feature existe ou n'est pas vide
 						if (feat.getName() != null && !feat.getName().equals("")
-								&& bestTypesValue.get(feat.getName()) == "text") {
+								&& bestTypeForEachFeature.get(feat.getName()) == "text") {
 							for (Cell cell : feat.getCells()) {
 								// Obtenir le contenu de la case
 								currentContent = cell.getContent();
@@ -261,8 +261,8 @@ public class TraitementPcm {
 		}
 		return feat_content;
 	}
-
-	public String setTypeHtml(String str) {
+	
+	public String setTypeForHtml(String str) {
 		switch (str) {
 		case "conditional":
 			str = "text";
@@ -300,7 +300,7 @@ public class TraitementPcm {
 		return str;
 	}
 
-	public Map<String, String> getBestTypes(Map<String, List<String>> allTypes) {
+	public Map<String, String> getBestTypeForEachFeature(Map<String, List<String>> allTypes) {
 
 		Map<String, Integer> nbOccurrence = new HashMap<String, Integer>();
 		Map<String, String> bestTypes = new HashMap<String, String>();
@@ -340,7 +340,7 @@ public class TraitementPcm {
 					max = currentNb;
 					bestType = currentFeat;
 					// attribut le type Html en fonction du type dominant trouvé
-					bestType = setTypeHtml(bestType);
+					bestType = setTypeForHtml(bestType);
 				}
 			}
 
