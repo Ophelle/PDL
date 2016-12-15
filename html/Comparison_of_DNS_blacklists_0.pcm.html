@@ -1,1434 +1,256 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
 <link href="css/moncss.css" rel="stylesheet"type="text/css">
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
 <script type="text/javascript" src="js/typeahead.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
 <body>
-	<h1>Comparison of DNS blacklists</h1>
+		<div class="container">
+  	<div class="row">
+      		<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of DNS blacklists</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+	</div>
+	<div class="row">
 	<fieldset>
-		<table>
+		<div class="col-md-2">&nbsp;</div>
+		<div class="col-md-8">
+		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
-						<tr>
-							<td> <label>DNS blacklist :</td>
- 		 					  <td>	
- 		 									<input type="checkbox" name="Feature" >ivmSIP		
- 		 									<input type="checkbox" name="Feature" >24		
-
- 		 									<input type="checkbox" name="Feature" >ARM Research Labs		
- 		 									<input type="checkbox" name="Feature" > LLC GBUdb		
- 		 									<input type="checkbox" name="Feature" >Heise Zeitschriften Verlag GmbH & Co. KG		
- 		 									<input type="checkbox" name="Feature" > hosted by manitu GmbH		
-
-
-
- 		 									<input type="checkbox" name="Feature" >N		
+						</br>	
+							<label>DNS blacklist :</label></br>
+							
+ 		 									<input type="checkbox" name="Feature" >ivmSIP</br>	
+ 		 									<input type="checkbox" name="Feature" >24</br>	
+ 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
+							<label>Blacklist operator :</label></br>
+							
+ 		 									<input type="checkbox" name="Feature" >ARM Research Labs</br>	
+ 		 									<input type="checkbox" name="Feature" > LLC GBUdb</br>	
+ 		 									<input type="checkbox" name="Feature" >Heise Zeitschriften Verlag GmbH & Co. KG</br>	
+ 		 									<input type="checkbox" name="Feature" > hosted by manitu GmbH</br>	
+ 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
+							<label>Products : </label></br> <input id="3" type="text" name="Feature"></br>
+							
+						</br>	
+							<label>Notifies upon listing : </label></br> <input id="4" type="text" name="Feature"></br>
+							
+						</br>	
+							<label>Zone :</label></br>
+							
+ 		 									<input type="checkbox" name="Feature" >N</br>	
  		 									<input type="checkbox" name="Feature" >A
-(paid access via rsync)		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A
-(paid access via rsync)		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A
-(paid access via rsync)		
-
- 		 									<input type="checkbox" name="Feature" >IP addresses and related generic netblocks that have sent spam.		
- 		 									<input type="checkbox" name="Feature" >Spam sources		
- 		 									<input type="checkbox" name="Feature" > relay abusers		
- 		 									<input type="checkbox" name="Feature" >Verified sources of spam		
- 		 									<input type="checkbox" name="Feature" > including spammers and their support services		
- 		 									<input type="checkbox" name="Feature" > per policy		
- 		 									<input type="checkbox" name="Feature" >Single IP addresses which only send UBE. Specializing in snowshoe spam and other 'under the radar' spams which evade many other DNSBLs. Has FP-level comparable to Zen.		
- 		 									<input type="checkbox" name="Feature" >Addresses not meant to be initiating SMTP connections		
- 		 									<input type="checkbox" name="Feature" > such as residential dynamic IPs		
- 		 									<input type="checkbox" name="Feature" >Unsolicited bulk		
- 		 									<input type="checkbox" name="Feature" >commercial email senders		
- 		 									<input type="checkbox" name="Feature" >A single lookup for querying the SBL and XBL databases		
- 		 									<input type="checkbox" name="Feature" >Detects viruses by behavior using fake high MX and tracking non-use of QUIT		
- 		 									<input type="checkbox" name="Feature" >IP addresses used to send spam to traps or members		
- 		 									<input type="checkbox" name="Feature" >Unsolicited bulk		
- 		 									<input type="checkbox" name="Feature" >commercial email senders		
- 		 									<input type="checkbox" name="Feature" >A single lookup for querying the SBL		
- 		 									<input type="checkbox" name="Feature" > XBL and PBL databases.		
- 		 									<input type="checkbox" name="Feature" >IP addresses detected as abusive at ISP's using MagicMail Servers		
- 		 									<input type="checkbox" name="Feature" > with non-conforming reverse DNS service (See Best Practises) indicative of compromised systems		
- 		 									<input type="checkbox" name="Feature" >Extremely conservative list of single IP4 addresses that produce exclusively spam		
- 		 									<input type="checkbox" name="Feature" >malware as indicated by the GBUdb IP Reputation system. Most systems should be able to safely reject connections based on this list.		
- 		 									<input type="checkbox" name="Feature" >IP addresses detected as abusive at ISP's using MagicMail Servers		
- 		 									<input type="checkbox" name="Feature" > with no reverse DNS service		
- 		 									<input type="checkbox" name="Feature" >comparable to uribl.com and surbl.org		
- 		 									<input type="checkbox" name="Feature" > this is a list of IP addresses and domains which are used by spammers in the clickable links found in the body of spam messages		
- 		 									<input type="checkbox" name="Feature" >IP addresses detected as abusive at ISP's using MagicMail Servers		
- 		 									<input type="checkbox" name="Feature" > and manually confirmed as spam sources		
- 		 									<input type="checkbox" name="Feature" >Spam sources from email		
- 		 									<input type="checkbox" name="Feature" > forums		
- 		 									<input type="checkbox" name="Feature" > referrer spam and dictionary attacks		
- 		 									<input type="checkbox" name="Feature" >Lists single IPs (no IP ranges) that send spam to spamtraps. Lists mailhosts		
- 		 									<input type="checkbox" name="Feature" > rather than domains		
- 		 									<input type="checkbox" name="Feature" > and thus blocks entire hosting providers and ISPs.		
- 		 									<input type="checkbox" name="Feature" >Only IP addresses exhibiting characteristics specific to open proxies		
- 		 									<input type="checkbox" name="Feature" > spamware		
- 		 									<input type="checkbox" name="Feature" > malware downloaders		
- 		 									<input type="checkbox" name="Feature" > botnets and the like.		
- 		 									<input type="checkbox" name="Feature" >lists 		
- 		 									<input type="checkbox" name="Feature" >24 blocks of IP addresses which usually only send UBE and containing at least several addresses which are confirmed emitters of junk mail. Collateral listings are kept to a minimum because subsections are often carved from 		
- 		 									<input type="checkbox" name="Feature" >24 listings when spammers and legit senders share the same 		
- 		 									<input type="checkbox" name="Feature" >24 block.		
- 		 									<input type="checkbox" name="Feature" >Domains with invalid A or MX records in DNS		
- 		 									<input type="checkbox" name="Feature" >IP-Addresses who Attacks other Server		
- 		 									<input type="checkbox" name="Feature" >Honeypots over ssh		
- 		 									<input type="checkbox" name="Feature" > imap		
- 		 									<input type="checkbox" name="Feature" > smtp		
- 		 									<input type="checkbox" name="Feature" > ftp		
- 		 									<input type="checkbox" name="Feature" > web		
- 		 									<input type="checkbox" name="Feature" > rfi		
- 		 									<input type="checkbox" name="Feature" > sqli		
- 		 									<input type="checkbox" name="Feature" > ddos....		
-
- 		 									<input type="checkbox" name="Feature" >Manual		
- 		 									<input type="checkbox" name="Feature" > by providers controlling the IPs or by Spamhaus PBL Team		
- 		 									<input type="checkbox" name="Feature" >Automatic (upon receipt of a spam to a real person's mailbox)		
- 		 									<input type="checkbox" name="Feature" > with extensive whitelists and filtering to prevent false positives		
- 		 									<input type="checkbox" name="Feature" >IP addresses can be reported as known spam sources by users		
- 		 									<input type="checkbox" name="Feature" > additionally automated listing if spam arrives at the mailservers of inps.de		
- 		 									<input type="checkbox" name="Feature" >Automatic: large spamtraps		
- 		 									<input type="checkbox" name="Feature" > production mail servers and other detecton methods.		
- 		 									<input type="checkbox" name="Feature" >Automatic once at least several IP addresses from a given block are individually listed on ivmSIP		
- 		 									<input type="checkbox" name="Feature" > with extensive whitelists and filtering to prevent false positives		
- 		 									<input type="checkbox" name="Feature" >Listings based on "instant" automated checks		
- 		 									<input type="checkbox" name="Feature" > recipient nomination and traps.		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap		
- 		 									<input type="checkbox" name="Feature" >Automated listing due to spamtrap hits. Exceptions apply to bounces		
- 		 									<input type="checkbox" name="Feature" > NDRs and whitelisted IPs.		
- 		 									<input type="checkbox" name="Feature" >Automatic: over Honeypots and with over 515 Users and 630 Servers from blocklist.de via Fail2Ban or own scripts		
- 		 									<input type="checkbox" name="Feature" >spamtraps		
- 		 									<input type="checkbox" name="Feature" > in order to avoid abusive reports (Competitors		
- 		 									<input type="checkbox" name="Feature" > false positive		
- 		 									<input type="checkbox" name="Feature" > etc...) only MegaRBL team can add an IP to the list.		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap.		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap		
- 		 									<input type="checkbox" name="Feature" >Automatic: IPs are added when the GBUdb "cloud" statistics reach a probability figure that indicates 95% of messages produce a spam		
- 		 									<input type="checkbox" name="Feature" >malware pattern match and a confidence figure that indicates sufficient data to trust the probability data.		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >Automatic (upon receipt of a spam to a real person's mailbox)		
- 		 									<input type="checkbox" name="Feature" > with extensive whitelists and filtering to prevent false positives		
-
- 		 									<input type="checkbox" name="Feature" >UCEPROTECT's primary and the only independent list		
- 		 									<input type="checkbox" name="Feature" >Services is free! Source data is from Honeypot-Systems and over 515 User with 630 Servern there reports Attacks with Fail2Ban		
- 		 									<input type="checkbox" name="Feature" >Should not be confused with the MAPS DUL and Wirehub Dynablocker lists		
- 		 									<input type="checkbox" name="Feature" >Even if a particular IP has not sent spam		
- 		 									<input type="checkbox" name="Feature" > it may be included in a generic netblock which will provide many false positives. listed=127.0.0.2		
- 		 									<input type="checkbox" name="Feature" >Those not already listed in the HTTP or SOCKS databases		
- 		 									<input type="checkbox" name="Feature" >A- and TXT records are available for each entry; Removal is free after 30 days for automatic additions and after 7 days for manual additions; otherwise removal fee is at least EUR 10		
- 		 									<input type="checkbox" name="Feature" >00.		
- 		 									<input type="checkbox" name="Feature" >Spam samples are always kept on file for each listing. Removal requests are manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Allows basic monitoring		
- 		 									<input type="checkbox" name="Feature" > listed if A=127.0.0.2 or TXT=blocked		
- 		 									<input type="checkbox" name="Feature" >Spam samples are always kept on file for each listing. Removal requests are quickly and manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Removal requests are quickly and manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Public list follows standard dnsbl protocol.  Subscription based service is more capable		
- 		 									<input type="checkbox" name="Feature" > but does not follow standard.		
- 		 									<input type="checkbox" name="Feature" >Use Spamhaus XBL or Spamhaus Zen instead; they include CBL.		
- 		 									<input type="checkbox" name="Feature" >Removal requests are quickly and manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Removal requests are quickly and manually reviewed and processed without fees.		
-
-
-
- 		 									<input type="checkbox" name="Feature" >From five minutes to a year or more		
- 		 									<input type="checkbox" name="Feature" > depending on issue and resolution		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" >As announced		
- 		 									<input type="checkbox" name="Feature" > all public zones are no longer functioning (they return positive responses for all queries)		
- 		 									<input type="checkbox" name="Feature" >Varies		
- 		 									<input type="checkbox" name="Feature" > under a month		
- 		 									<input type="checkbox" name="Feature" > self removal via Composite Blocking List lookup.		
- 		 									<input type="checkbox" name="Feature" >As announced		
- 		 									<input type="checkbox" name="Feature" > all public zones are no longer functioning (they return positive responses for all queries)		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >Typically an automatic expiration 11 days after the last abuse was seen		
- 		 									<input type="checkbox" name="Feature" > but with some exceptions		
- 		 									<input type="checkbox" name="Feature" >Until delisting requested and matter resolved.		
- 		 									<input type="checkbox" name="Feature" >less than a month after last listable event		
- 		 									<input type="checkbox" name="Feature" > self-removal via CBL lookup.		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" > has self removal		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >until removal requested and matter resolved by changing server DNS ptr record to a non-generic name.		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" >As announced		
- 		 									<input type="checkbox" name="Feature" > all public zones are no longer functioning (they return positive responses for all queries)		
- 		 									<input type="checkbox" name="Feature" >Varies from spam type		
- 		 									<input type="checkbox" name="Feature" > rate and other sophisticated factors. 30 s to 1 week.		
- 		 									<input type="checkbox" name="Feature" >12 hours after last listing or until self delisting		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" >Listed until removed		
- 		 									<input type="checkbox" name="Feature" > and reverse DNS set to conform to Best Practises		
- 		 									<input type="checkbox" name="Feature" >Automatic expiration 7 days after the last abuse was seen		
- 		 									<input type="checkbox" name="Feature" > optionally express delisting for a small fee.		
- 		 									<input type="checkbox" name="Feature" >Automatic removal as soon as Level 1 listings decrease below Level 3 listing border		
- 		 									<input type="checkbox" name="Feature" > optionally express delisting (fee)		
- 		 									<input type="checkbox" name="Feature" >Listed until removed		
- 		 									<input type="checkbox" name="Feature" > and reverse DNS configured		
- 		 									<input type="checkbox" name="Feature" >Automatic removal as soon as Level 1 listings decrease below Level 2 listing border		
- 		 									<input type="checkbox" name="Feature" > optionally express delisting (for a fee)		
- 		 									<input type="checkbox" name="Feature" >Until 1 year after the last spam is received and a request has been made or until the "fine" is paid for express delisting		
- 		 									<input type="checkbox" name="Feature" >Automatic expiry (varies by type); webpage allows delisting		
- 		 									<input type="checkbox" name="Feature" >expiration time increases to many weeks as the fraction of IP addresses in the 		
- 		 									<input type="checkbox" name="Feature" >24 block in question sending junk mail increases		
- 		 									<input type="checkbox" name="Feature" >Until delisting requested or Automated Expiry		
- 		 									<input type="checkbox" name="Feature" >Automatic: Continuous while reputation statistics remain bad. Warning: Produces false positives		
- 		 									<input type="checkbox" name="Feature" > and has no remedy		
- 		 									<input type="checkbox" name="Feature" >removal process. IPs are dropped quickly if the statistics improve (within an hour). IPs are dropped within 36 hours (typ) if no more messages are seen (dead zombie).		
-						   	  </td>
-						   	
- 		 										<td>autre<input type="text"/> </td>						</tr>
-					
-					
-						<tr>
-							<td> <label>Blacklist operator :</td>
- 		 					  <td>	
- 		 									<input type="checkbox" name="Feature" >ivmSIP		
- 		 									<input type="checkbox" name="Feature" >24		
-
- 		 									<input type="checkbox" name="Feature" >ARM Research Labs		
- 		 									<input type="checkbox" name="Feature" > LLC GBUdb		
- 		 									<input type="checkbox" name="Feature" >Heise Zeitschriften Verlag GmbH & Co. KG		
- 		 									<input type="checkbox" name="Feature" > hosted by manitu GmbH		
-
-
-
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A
-(paid access via rsync)		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A
-(paid access via rsync)		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A
-(paid access via rsync)		
-
- 		 									<input type="checkbox" name="Feature" >IP addresses and related generic netblocks that have sent spam.		
- 		 									<input type="checkbox" name="Feature" >Spam sources		
- 		 									<input type="checkbox" name="Feature" > relay abusers		
- 		 									<input type="checkbox" name="Feature" >Verified sources of spam		
- 		 									<input type="checkbox" name="Feature" > including spammers and their support services		
- 		 									<input type="checkbox" name="Feature" > per policy		
- 		 									<input type="checkbox" name="Feature" >Single IP addresses which only send UBE. Specializing in snowshoe spam and other 'under the radar' spams which evade many other DNSBLs. Has FP-level comparable to Zen.		
- 		 									<input type="checkbox" name="Feature" >Addresses not meant to be initiating SMTP connections		
- 		 									<input type="checkbox" name="Feature" > such as residential dynamic IPs		
- 		 									<input type="checkbox" name="Feature" >Unsolicited bulk		
- 		 									<input type="checkbox" name="Feature" >commercial email senders		
- 		 									<input type="checkbox" name="Feature" >A single lookup for querying the SBL and XBL databases		
- 		 									<input type="checkbox" name="Feature" >Detects viruses by behavior using fake high MX and tracking non-use of QUIT		
- 		 									<input type="checkbox" name="Feature" >IP addresses used to send spam to traps or members		
- 		 									<input type="checkbox" name="Feature" >Unsolicited bulk		
- 		 									<input type="checkbox" name="Feature" >commercial email senders		
- 		 									<input type="checkbox" name="Feature" >A single lookup for querying the SBL		
- 		 									<input type="checkbox" name="Feature" > XBL and PBL databases.		
- 		 									<input type="checkbox" name="Feature" >IP addresses detected as abusive at ISP's using MagicMail Servers		
- 		 									<input type="checkbox" name="Feature" > with non-conforming reverse DNS service (See Best Practises) indicative of compromised systems		
- 		 									<input type="checkbox" name="Feature" >Extremely conservative list of single IP4 addresses that produce exclusively spam		
- 		 									<input type="checkbox" name="Feature" >malware as indicated by the GBUdb IP Reputation system. Most systems should be able to safely reject connections based on this list.		
- 		 									<input type="checkbox" name="Feature" >IP addresses detected as abusive at ISP's using MagicMail Servers		
- 		 									<input type="checkbox" name="Feature" > with no reverse DNS service		
- 		 									<input type="checkbox" name="Feature" >comparable to uribl.com and surbl.org		
- 		 									<input type="checkbox" name="Feature" > this is a list of IP addresses and domains which are used by spammers in the clickable links found in the body of spam messages		
- 		 									<input type="checkbox" name="Feature" >IP addresses detected as abusive at ISP's using MagicMail Servers		
- 		 									<input type="checkbox" name="Feature" > and manually confirmed as spam sources		
- 		 									<input type="checkbox" name="Feature" >Spam sources from email		
- 		 									<input type="checkbox" name="Feature" > forums		
- 		 									<input type="checkbox" name="Feature" > referrer spam and dictionary attacks		
- 		 									<input type="checkbox" name="Feature" >Lists single IPs (no IP ranges) that send spam to spamtraps. Lists mailhosts		
- 		 									<input type="checkbox" name="Feature" > rather than domains		
- 		 									<input type="checkbox" name="Feature" > and thus blocks entire hosting providers and ISPs.		
- 		 									<input type="checkbox" name="Feature" >Only IP addresses exhibiting characteristics specific to open proxies		
- 		 									<input type="checkbox" name="Feature" > spamware		
- 		 									<input type="checkbox" name="Feature" > malware downloaders		
- 		 									<input type="checkbox" name="Feature" > botnets and the like.		
- 		 									<input type="checkbox" name="Feature" >lists 		
- 		 									<input type="checkbox" name="Feature" >24 blocks of IP addresses which usually only send UBE and containing at least several addresses which are confirmed emitters of junk mail. Collateral listings are kept to a minimum because subsections are often carved from 		
- 		 									<input type="checkbox" name="Feature" >24 listings when spammers and legit senders share the same 		
- 		 									<input type="checkbox" name="Feature" >24 block.		
- 		 									<input type="checkbox" name="Feature" >Domains with invalid A or MX records in DNS		
- 		 									<input type="checkbox" name="Feature" >IP-Addresses who Attacks other Server		
- 		 									<input type="checkbox" name="Feature" >Honeypots over ssh		
- 		 									<input type="checkbox" name="Feature" > imap		
- 		 									<input type="checkbox" name="Feature" > smtp		
- 		 									<input type="checkbox" name="Feature" > ftp		
- 		 									<input type="checkbox" name="Feature" > web		
- 		 									<input type="checkbox" name="Feature" > rfi		
- 		 									<input type="checkbox" name="Feature" > sqli		
- 		 									<input type="checkbox" name="Feature" > ddos....		
-
- 		 									<input type="checkbox" name="Feature" >Manual		
- 		 									<input type="checkbox" name="Feature" > by providers controlling the IPs or by Spamhaus PBL Team		
- 		 									<input type="checkbox" name="Feature" >Automatic (upon receipt of a spam to a real person's mailbox)		
- 		 									<input type="checkbox" name="Feature" > with extensive whitelists and filtering to prevent false positives		
- 		 									<input type="checkbox" name="Feature" >IP addresses can be reported as known spam sources by users		
- 		 									<input type="checkbox" name="Feature" > additionally automated listing if spam arrives at the mailservers of inps.de		
- 		 									<input type="checkbox" name="Feature" >Automatic: large spamtraps		
- 		 									<input type="checkbox" name="Feature" > production mail servers and other detecton methods.		
- 		 									<input type="checkbox" name="Feature" >Automatic once at least several IP addresses from a given block are individually listed on ivmSIP		
- 		 									<input type="checkbox" name="Feature" > with extensive whitelists and filtering to prevent false positives		
- 		 									<input type="checkbox" name="Feature" >Listings based on "instant" automated checks		
- 		 									<input type="checkbox" name="Feature" > recipient nomination and traps.		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap		
- 		 									<input type="checkbox" name="Feature" >Automated listing due to spamtrap hits. Exceptions apply to bounces		
- 		 									<input type="checkbox" name="Feature" > NDRs and whitelisted IPs.		
- 		 									<input type="checkbox" name="Feature" >Automatic: over Honeypots and with over 515 Users and 630 Servers from blocklist.de via Fail2Ban or own scripts		
- 		 									<input type="checkbox" name="Feature" >spamtraps		
- 		 									<input type="checkbox" name="Feature" > in order to avoid abusive reports (Competitors		
- 		 									<input type="checkbox" name="Feature" > false positive		
- 		 									<input type="checkbox" name="Feature" > etc...) only MegaRBL team can add an IP to the list.		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap.		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap		
- 		 									<input type="checkbox" name="Feature" >Automatic: IPs are added when the GBUdb "cloud" statistics reach a probability figure that indicates 95% of messages produce a spam		
- 		 									<input type="checkbox" name="Feature" >malware pattern match and a confidence figure that indicates sufficient data to trust the probability data.		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >Automatic (upon receipt of a spam to a real person's mailbox)		
- 		 									<input type="checkbox" name="Feature" > with extensive whitelists and filtering to prevent false positives		
-
- 		 									<input type="checkbox" name="Feature" >UCEPROTECT's primary and the only independent list		
- 		 									<input type="checkbox" name="Feature" >Services is free! Source data is from Honeypot-Systems and over 515 User with 630 Servern there reports Attacks with Fail2Ban		
- 		 									<input type="checkbox" name="Feature" >Should not be confused with the MAPS DUL and Wirehub Dynablocker lists		
- 		 									<input type="checkbox" name="Feature" >Even if a particular IP has not sent spam		
- 		 									<input type="checkbox" name="Feature" > it may be included in a generic netblock which will provide many false positives. listed=127.0.0.2		
- 		 									<input type="checkbox" name="Feature" >Those not already listed in the HTTP or SOCKS databases		
- 		 									<input type="checkbox" name="Feature" >A- and TXT records are available for each entry; Removal is free after 30 days for automatic additions and after 7 days for manual additions; otherwise removal fee is at least EUR 10		
- 		 									<input type="checkbox" name="Feature" >00.		
- 		 									<input type="checkbox" name="Feature" >Spam samples are always kept on file for each listing. Removal requests are manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Allows basic monitoring		
- 		 									<input type="checkbox" name="Feature" > listed if A=127.0.0.2 or TXT=blocked		
- 		 									<input type="checkbox" name="Feature" >Spam samples are always kept on file for each listing. Removal requests are quickly and manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Removal requests are quickly and manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Public list follows standard dnsbl protocol.  Subscription based service is more capable		
- 		 									<input type="checkbox" name="Feature" > but does not follow standard.		
- 		 									<input type="checkbox" name="Feature" >Use Spamhaus XBL or Spamhaus Zen instead; they include CBL.		
- 		 									<input type="checkbox" name="Feature" >Removal requests are quickly and manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Removal requests are quickly and manually reviewed and processed without fees.		
-
-
-
- 		 									<input type="checkbox" name="Feature" >From five minutes to a year or more		
- 		 									<input type="checkbox" name="Feature" > depending on issue and resolution		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" >As announced		
- 		 									<input type="checkbox" name="Feature" > all public zones are no longer functioning (they return positive responses for all queries)		
- 		 									<input type="checkbox" name="Feature" >Varies		
- 		 									<input type="checkbox" name="Feature" > under a month		
- 		 									<input type="checkbox" name="Feature" > self removal via Composite Blocking List lookup.		
- 		 									<input type="checkbox" name="Feature" >As announced		
- 		 									<input type="checkbox" name="Feature" > all public zones are no longer functioning (they return positive responses for all queries)		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >Typically an automatic expiration 11 days after the last abuse was seen		
- 		 									<input type="checkbox" name="Feature" > but with some exceptions		
- 		 									<input type="checkbox" name="Feature" >Until delisting requested and matter resolved.		
- 		 									<input type="checkbox" name="Feature" >less than a month after last listable event		
- 		 									<input type="checkbox" name="Feature" > self-removal via CBL lookup.		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" > has self removal		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >until removal requested and matter resolved by changing server DNS ptr record to a non-generic name.		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" >As announced		
- 		 									<input type="checkbox" name="Feature" > all public zones are no longer functioning (they return positive responses for all queries)		
- 		 									<input type="checkbox" name="Feature" >Varies from spam type		
- 		 									<input type="checkbox" name="Feature" > rate and other sophisticated factors. 30 s to 1 week.		
- 		 									<input type="checkbox" name="Feature" >12 hours after last listing or until self delisting		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" >Listed until removed		
- 		 									<input type="checkbox" name="Feature" > and reverse DNS set to conform to Best Practises		
- 		 									<input type="checkbox" name="Feature" >Automatic expiration 7 days after the last abuse was seen		
- 		 									<input type="checkbox" name="Feature" > optionally express delisting for a small fee.		
- 		 									<input type="checkbox" name="Feature" >Automatic removal as soon as Level 1 listings decrease below Level 3 listing border		
- 		 									<input type="checkbox" name="Feature" > optionally express delisting (fee)		
- 		 									<input type="checkbox" name="Feature" >Listed until removed		
- 		 									<input type="checkbox" name="Feature" > and reverse DNS configured		
- 		 									<input type="checkbox" name="Feature" >Automatic removal as soon as Level 1 listings decrease below Level 2 listing border		
- 		 									<input type="checkbox" name="Feature" > optionally express delisting (for a fee)		
- 		 									<input type="checkbox" name="Feature" >Until 1 year after the last spam is received and a request has been made or until the "fine" is paid for express delisting		
- 		 									<input type="checkbox" name="Feature" >Automatic expiry (varies by type); webpage allows delisting		
- 		 									<input type="checkbox" name="Feature" >expiration time increases to many weeks as the fraction of IP addresses in the 		
- 		 									<input type="checkbox" name="Feature" >24 block in question sending junk mail increases		
- 		 									<input type="checkbox" name="Feature" >Until delisting requested or Automated Expiry		
- 		 									<input type="checkbox" name="Feature" >Automatic: Continuous while reputation statistics remain bad. Warning: Produces false positives		
- 		 									<input type="checkbox" name="Feature" > and has no remedy		
- 		 									<input type="checkbox" name="Feature" >removal process. IPs are dropped quickly if the statistics improve (within an hour). IPs are dropped within 36 hours (typ) if no more messages are seen (dead zombie).		
-						   	  </td>
-						   	
- 		 										<td>autre<input type="text"/> </td>						</tr>
-					
-					
-						<tr>
-							<td> <label>Products :</td><td> <input id="3" type="text" name="Feature"></br></br></label></td>
-						</tr>
-					
-					
-						<tr>
-							<td> <label>Notifies upon listing :</td><td> <input id="4" type="text" name="Feature"></br></br></label></td>
-						</tr>
-					
-					
-						<tr>
-							<td> <label>Zone :</td>
- 		 					  <td>	
- 		 									<input type="checkbox" name="Feature" >ivmSIP		
- 		 									<input type="checkbox" name="Feature" >24		
-
- 		 									<input type="checkbox" name="Feature" >ARM Research Labs		
- 		 									<input type="checkbox" name="Feature" > LLC GBUdb		
- 		 									<input type="checkbox" name="Feature" >Heise Zeitschriften Verlag GmbH & Co. KG		
- 		 									<input type="checkbox" name="Feature" > hosted by manitu GmbH		
-
-
-
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A
-(paid access via rsync)		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A
-(paid access via rsync)		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A
-(paid access via rsync)		
-
- 		 									<input type="checkbox" name="Feature" >IP addresses and related generic netblocks that have sent spam.		
- 		 									<input type="checkbox" name="Feature" >Spam sources		
- 		 									<input type="checkbox" name="Feature" > relay abusers		
- 		 									<input type="checkbox" name="Feature" >Verified sources of spam		
- 		 									<input type="checkbox" name="Feature" > including spammers and their support services		
- 		 									<input type="checkbox" name="Feature" > per policy		
- 		 									<input type="checkbox" name="Feature" >Single IP addresses which only send UBE. Specializing in snowshoe spam and other 'under the radar' spams which evade many other DNSBLs. Has FP-level comparable to Zen.		
- 		 									<input type="checkbox" name="Feature" >Addresses not meant to be initiating SMTP connections		
- 		 									<input type="checkbox" name="Feature" > such as residential dynamic IPs		
- 		 									<input type="checkbox" name="Feature" >Unsolicited bulk		
- 		 									<input type="checkbox" name="Feature" >commercial email senders		
- 		 									<input type="checkbox" name="Feature" >A single lookup for querying the SBL and XBL databases		
- 		 									<input type="checkbox" name="Feature" >Detects viruses by behavior using fake high MX and tracking non-use of QUIT		
- 		 									<input type="checkbox" name="Feature" >IP addresses used to send spam to traps or members		
- 		 									<input type="checkbox" name="Feature" >Unsolicited bulk		
- 		 									<input type="checkbox" name="Feature" >commercial email senders		
- 		 									<input type="checkbox" name="Feature" >A single lookup for querying the SBL		
- 		 									<input type="checkbox" name="Feature" > XBL and PBL databases.		
- 		 									<input type="checkbox" name="Feature" >IP addresses detected as abusive at ISP's using MagicMail Servers		
- 		 									<input type="checkbox" name="Feature" > with non-conforming reverse DNS service (See Best Practises) indicative of compromised systems		
- 		 									<input type="checkbox" name="Feature" >Extremely conservative list of single IP4 addresses that produce exclusively spam		
- 		 									<input type="checkbox" name="Feature" >malware as indicated by the GBUdb IP Reputation system. Most systems should be able to safely reject connections based on this list.		
- 		 									<input type="checkbox" name="Feature" >IP addresses detected as abusive at ISP's using MagicMail Servers		
- 		 									<input type="checkbox" name="Feature" > with no reverse DNS service		
- 		 									<input type="checkbox" name="Feature" >comparable to uribl.com and surbl.org		
- 		 									<input type="checkbox" name="Feature" > this is a list of IP addresses and domains which are used by spammers in the clickable links found in the body of spam messages		
- 		 									<input type="checkbox" name="Feature" >IP addresses detected as abusive at ISP's using MagicMail Servers		
- 		 									<input type="checkbox" name="Feature" > and manually confirmed as spam sources		
- 		 									<input type="checkbox" name="Feature" >Spam sources from email		
- 		 									<input type="checkbox" name="Feature" > forums		
- 		 									<input type="checkbox" name="Feature" > referrer spam and dictionary attacks		
- 		 									<input type="checkbox" name="Feature" >Lists single IPs (no IP ranges) that send spam to spamtraps. Lists mailhosts		
- 		 									<input type="checkbox" name="Feature" > rather than domains		
- 		 									<input type="checkbox" name="Feature" > and thus blocks entire hosting providers and ISPs.		
- 		 									<input type="checkbox" name="Feature" >Only IP addresses exhibiting characteristics specific to open proxies		
- 		 									<input type="checkbox" name="Feature" > spamware		
- 		 									<input type="checkbox" name="Feature" > malware downloaders		
- 		 									<input type="checkbox" name="Feature" > botnets and the like.		
- 		 									<input type="checkbox" name="Feature" >lists 		
- 		 									<input type="checkbox" name="Feature" >24 blocks of IP addresses which usually only send UBE and containing at least several addresses which are confirmed emitters of junk mail. Collateral listings are kept to a minimum because subsections are often carved from 		
- 		 									<input type="checkbox" name="Feature" >24 listings when spammers and legit senders share the same 		
- 		 									<input type="checkbox" name="Feature" >24 block.		
- 		 									<input type="checkbox" name="Feature" >Domains with invalid A or MX records in DNS		
- 		 									<input type="checkbox" name="Feature" >IP-Addresses who Attacks other Server		
- 		 									<input type="checkbox" name="Feature" >Honeypots over ssh		
- 		 									<input type="checkbox" name="Feature" > imap		
- 		 									<input type="checkbox" name="Feature" > smtp		
- 		 									<input type="checkbox" name="Feature" > ftp		
- 		 									<input type="checkbox" name="Feature" > web		
- 		 									<input type="checkbox" name="Feature" > rfi		
- 		 									<input type="checkbox" name="Feature" > sqli		
- 		 									<input type="checkbox" name="Feature" > ddos....		
-
- 		 									<input type="checkbox" name="Feature" >Manual		
- 		 									<input type="checkbox" name="Feature" > by providers controlling the IPs or by Spamhaus PBL Team		
- 		 									<input type="checkbox" name="Feature" >Automatic (upon receipt of a spam to a real person's mailbox)		
- 		 									<input type="checkbox" name="Feature" > with extensive whitelists and filtering to prevent false positives		
- 		 									<input type="checkbox" name="Feature" >IP addresses can be reported as known spam sources by users		
- 		 									<input type="checkbox" name="Feature" > additionally automated listing if spam arrives at the mailservers of inps.de		
- 		 									<input type="checkbox" name="Feature" >Automatic: large spamtraps		
- 		 									<input type="checkbox" name="Feature" > production mail servers and other detecton methods.		
- 		 									<input type="checkbox" name="Feature" >Automatic once at least several IP addresses from a given block are individually listed on ivmSIP		
- 		 									<input type="checkbox" name="Feature" > with extensive whitelists and filtering to prevent false positives		
- 		 									<input type="checkbox" name="Feature" >Listings based on "instant" automated checks		
- 		 									<input type="checkbox" name="Feature" > recipient nomination and traps.		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap		
- 		 									<input type="checkbox" name="Feature" >Automated listing due to spamtrap hits. Exceptions apply to bounces		
- 		 									<input type="checkbox" name="Feature" > NDRs and whitelisted IPs.		
- 		 									<input type="checkbox" name="Feature" >Automatic: over Honeypots and with over 515 Users and 630 Servers from blocklist.de via Fail2Ban or own scripts		
- 		 									<input type="checkbox" name="Feature" >spamtraps		
- 		 									<input type="checkbox" name="Feature" > in order to avoid abusive reports (Competitors		
- 		 									<input type="checkbox" name="Feature" > false positive		
- 		 									<input type="checkbox" name="Feature" > etc...) only MegaRBL team can add an IP to the list.		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap.		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap		
- 		 									<input type="checkbox" name="Feature" >Automatic: IPs are added when the GBUdb "cloud" statistics reach a probability figure that indicates 95% of messages produce a spam		
- 		 									<input type="checkbox" name="Feature" >malware pattern match and a confidence figure that indicates sufficient data to trust the probability data.		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >Automatic (upon receipt of a spam to a real person's mailbox)		
- 		 									<input type="checkbox" name="Feature" > with extensive whitelists and filtering to prevent false positives		
-
- 		 									<input type="checkbox" name="Feature" >UCEPROTECT's primary and the only independent list		
- 		 									<input type="checkbox" name="Feature" >Services is free! Source data is from Honeypot-Systems and over 515 User with 630 Servern there reports Attacks with Fail2Ban		
- 		 									<input type="checkbox" name="Feature" >Should not be confused with the MAPS DUL and Wirehub Dynablocker lists		
- 		 									<input type="checkbox" name="Feature" >Even if a particular IP has not sent spam		
- 		 									<input type="checkbox" name="Feature" > it may be included in a generic netblock which will provide many false positives. listed=127.0.0.2		
- 		 									<input type="checkbox" name="Feature" >Those not already listed in the HTTP or SOCKS databases		
- 		 									<input type="checkbox" name="Feature" >A- and TXT records are available for each entry; Removal is free after 30 days for automatic additions and after 7 days for manual additions; otherwise removal fee is at least EUR 10		
- 		 									<input type="checkbox" name="Feature" >00.		
- 		 									<input type="checkbox" name="Feature" >Spam samples are always kept on file for each listing. Removal requests are manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Allows basic monitoring		
- 		 									<input type="checkbox" name="Feature" > listed if A=127.0.0.2 or TXT=blocked		
- 		 									<input type="checkbox" name="Feature" >Spam samples are always kept on file for each listing. Removal requests are quickly and manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Removal requests are quickly and manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Public list follows standard dnsbl protocol.  Subscription based service is more capable		
- 		 									<input type="checkbox" name="Feature" > but does not follow standard.		
- 		 									<input type="checkbox" name="Feature" >Use Spamhaus XBL or Spamhaus Zen instead; they include CBL.		
- 		 									<input type="checkbox" name="Feature" >Removal requests are quickly and manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Removal requests are quickly and manually reviewed and processed without fees.		
-
-
-
- 		 									<input type="checkbox" name="Feature" >From five minutes to a year or more		
- 		 									<input type="checkbox" name="Feature" > depending on issue and resolution		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" >As announced		
- 		 									<input type="checkbox" name="Feature" > all public zones are no longer functioning (they return positive responses for all queries)		
- 		 									<input type="checkbox" name="Feature" >Varies		
- 		 									<input type="checkbox" name="Feature" > under a month		
- 		 									<input type="checkbox" name="Feature" > self removal via Composite Blocking List lookup.		
- 		 									<input type="checkbox" name="Feature" >As announced		
- 		 									<input type="checkbox" name="Feature" > all public zones are no longer functioning (they return positive responses for all queries)		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >Typically an automatic expiration 11 days after the last abuse was seen		
- 		 									<input type="checkbox" name="Feature" > but with some exceptions		
- 		 									<input type="checkbox" name="Feature" >Until delisting requested and matter resolved.		
- 		 									<input type="checkbox" name="Feature" >less than a month after last listable event		
- 		 									<input type="checkbox" name="Feature" > self-removal via CBL lookup.		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" > has self removal		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >until removal requested and matter resolved by changing server DNS ptr record to a non-generic name.		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" >As announced		
- 		 									<input type="checkbox" name="Feature" > all public zones are no longer functioning (they return positive responses for all queries)		
- 		 									<input type="checkbox" name="Feature" >Varies from spam type		
- 		 									<input type="checkbox" name="Feature" > rate and other sophisticated factors. 30 s to 1 week.		
- 		 									<input type="checkbox" name="Feature" >12 hours after last listing or until self delisting		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" >Listed until removed		
- 		 									<input type="checkbox" name="Feature" > and reverse DNS set to conform to Best Practises		
- 		 									<input type="checkbox" name="Feature" >Automatic expiration 7 days after the last abuse was seen		
- 		 									<input type="checkbox" name="Feature" > optionally express delisting for a small fee.		
- 		 									<input type="checkbox" name="Feature" >Automatic removal as soon as Level 1 listings decrease below Level 3 listing border		
- 		 									<input type="checkbox" name="Feature" > optionally express delisting (fee)		
- 		 									<input type="checkbox" name="Feature" >Listed until removed		
- 		 									<input type="checkbox" name="Feature" > and reverse DNS configured		
- 		 									<input type="checkbox" name="Feature" >Automatic removal as soon as Level 1 listings decrease below Level 2 listing border		
- 		 									<input type="checkbox" name="Feature" > optionally express delisting (for a fee)		
- 		 									<input type="checkbox" name="Feature" >Until 1 year after the last spam is received and a request has been made or until the "fine" is paid for express delisting		
- 		 									<input type="checkbox" name="Feature" >Automatic expiry (varies by type); webpage allows delisting		
- 		 									<input type="checkbox" name="Feature" >expiration time increases to many weeks as the fraction of IP addresses in the 		
- 		 									<input type="checkbox" name="Feature" >24 block in question sending junk mail increases		
- 		 									<input type="checkbox" name="Feature" >Until delisting requested or Automated Expiry		
- 		 									<input type="checkbox" name="Feature" >Automatic: Continuous while reputation statistics remain bad. Warning: Produces false positives		
- 		 									<input type="checkbox" name="Feature" > and has no remedy		
- 		 									<input type="checkbox" name="Feature" >removal process. IPs are dropped quickly if the statistics improve (within an hour). IPs are dropped within 36 hours (typ) if no more messages are seen (dead zombie).		
-						   	  </td>
-						   	
- 		 										<td>autre<input type="text"/> </td>						</tr>
-					
-					
-						<tr>
-							<td> <label>Listing goal :</td>
- 		 					  <td>	
- 		 									<input type="checkbox" name="Feature" >ivmSIP		
- 		 									<input type="checkbox" name="Feature" >24		
-
- 		 									<input type="checkbox" name="Feature" >ARM Research Labs		
- 		 									<input type="checkbox" name="Feature" > LLC GBUdb		
- 		 									<input type="checkbox" name="Feature" >Heise Zeitschriften Verlag GmbH & Co. KG		
- 		 									<input type="checkbox" name="Feature" > hosted by manitu GmbH		
-
-
-
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A
-(paid access via rsync)		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A
-(paid access via rsync)		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A
-(paid access via rsync)		
-
- 		 									<input type="checkbox" name="Feature" >IP addresses and related generic netblocks that have sent spam.		
- 		 									<input type="checkbox" name="Feature" >Spam sources		
- 		 									<input type="checkbox" name="Feature" > relay abusers		
- 		 									<input type="checkbox" name="Feature" >Verified sources of spam		
- 		 									<input type="checkbox" name="Feature" > including spammers and their support services		
- 		 									<input type="checkbox" name="Feature" > per policy		
- 		 									<input type="checkbox" name="Feature" >Single IP addresses which only send UBE. Specializing in snowshoe spam and other 'under the radar' spams which evade many other DNSBLs. Has FP-level comparable to Zen.		
- 		 									<input type="checkbox" name="Feature" >Addresses not meant to be initiating SMTP connections		
- 		 									<input type="checkbox" name="Feature" > such as residential dynamic IPs		
- 		 									<input type="checkbox" name="Feature" >Unsolicited bulk		
- 		 									<input type="checkbox" name="Feature" >commercial email senders		
- 		 									<input type="checkbox" name="Feature" >A single lookup for querying the SBL and XBL databases		
- 		 									<input type="checkbox" name="Feature" >Detects viruses by behavior using fake high MX and tracking non-use of QUIT		
- 		 									<input type="checkbox" name="Feature" >IP addresses used to send spam to traps or members		
- 		 									<input type="checkbox" name="Feature" >Unsolicited bulk		
- 		 									<input type="checkbox" name="Feature" >commercial email senders		
- 		 									<input type="checkbox" name="Feature" >A single lookup for querying the SBL		
- 		 									<input type="checkbox" name="Feature" > XBL and PBL databases.		
- 		 									<input type="checkbox" name="Feature" >IP addresses detected as abusive at ISP's using MagicMail Servers		
- 		 									<input type="checkbox" name="Feature" > with non-conforming reverse DNS service (See Best Practises) indicative of compromised systems		
- 		 									<input type="checkbox" name="Feature" >Extremely conservative list of single IP4 addresses that produce exclusively spam		
- 		 									<input type="checkbox" name="Feature" >malware as indicated by the GBUdb IP Reputation system. Most systems should be able to safely reject connections based on this list.		
- 		 									<input type="checkbox" name="Feature" >IP addresses detected as abusive at ISP's using MagicMail Servers		
- 		 									<input type="checkbox" name="Feature" > with no reverse DNS service		
- 		 									<input type="checkbox" name="Feature" >comparable to uribl.com and surbl.org		
- 		 									<input type="checkbox" name="Feature" > this is a list of IP addresses and domains which are used by spammers in the clickable links found in the body of spam messages		
- 		 									<input type="checkbox" name="Feature" >IP addresses detected as abusive at ISP's using MagicMail Servers		
- 		 									<input type="checkbox" name="Feature" > and manually confirmed as spam sources		
- 		 									<input type="checkbox" name="Feature" >Spam sources from email		
- 		 									<input type="checkbox" name="Feature" > forums		
- 		 									<input type="checkbox" name="Feature" > referrer spam and dictionary attacks		
- 		 									<input type="checkbox" name="Feature" >Lists single IPs (no IP ranges) that send spam to spamtraps. Lists mailhosts		
- 		 									<input type="checkbox" name="Feature" > rather than domains		
- 		 									<input type="checkbox" name="Feature" > and thus blocks entire hosting providers and ISPs.		
- 		 									<input type="checkbox" name="Feature" >Only IP addresses exhibiting characteristics specific to open proxies		
- 		 									<input type="checkbox" name="Feature" > spamware		
- 		 									<input type="checkbox" name="Feature" > malware downloaders		
- 		 									<input type="checkbox" name="Feature" > botnets and the like.		
- 		 									<input type="checkbox" name="Feature" >lists 		
- 		 									<input type="checkbox" name="Feature" >24 blocks of IP addresses which usually only send UBE and containing at least several addresses which are confirmed emitters of junk mail. Collateral listings are kept to a minimum because subsections are often carved from 		
- 		 									<input type="checkbox" name="Feature" >24 listings when spammers and legit senders share the same 		
- 		 									<input type="checkbox" name="Feature" >24 block.		
- 		 									<input type="checkbox" name="Feature" >Domains with invalid A or MX records in DNS		
- 		 									<input type="checkbox" name="Feature" >IP-Addresses who Attacks other Server		
- 		 									<input type="checkbox" name="Feature" >Honeypots over ssh		
- 		 									<input type="checkbox" name="Feature" > imap		
- 		 									<input type="checkbox" name="Feature" > smtp		
- 		 									<input type="checkbox" name="Feature" > ftp		
- 		 									<input type="checkbox" name="Feature" > web		
- 		 									<input type="checkbox" name="Feature" > rfi		
- 		 									<input type="checkbox" name="Feature" > sqli		
- 		 									<input type="checkbox" name="Feature" > ddos....		
-
- 		 									<input type="checkbox" name="Feature" >Manual		
- 		 									<input type="checkbox" name="Feature" > by providers controlling the IPs or by Spamhaus PBL Team		
- 		 									<input type="checkbox" name="Feature" >Automatic (upon receipt of a spam to a real person's mailbox)		
- 		 									<input type="checkbox" name="Feature" > with extensive whitelists and filtering to prevent false positives		
- 		 									<input type="checkbox" name="Feature" >IP addresses can be reported as known spam sources by users		
- 		 									<input type="checkbox" name="Feature" > additionally automated listing if spam arrives at the mailservers of inps.de		
- 		 									<input type="checkbox" name="Feature" >Automatic: large spamtraps		
- 		 									<input type="checkbox" name="Feature" > production mail servers and other detecton methods.		
- 		 									<input type="checkbox" name="Feature" >Automatic once at least several IP addresses from a given block are individually listed on ivmSIP		
- 		 									<input type="checkbox" name="Feature" > with extensive whitelists and filtering to prevent false positives		
- 		 									<input type="checkbox" name="Feature" >Listings based on "instant" automated checks		
- 		 									<input type="checkbox" name="Feature" > recipient nomination and traps.		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap		
- 		 									<input type="checkbox" name="Feature" >Automated listing due to spamtrap hits. Exceptions apply to bounces		
- 		 									<input type="checkbox" name="Feature" > NDRs and whitelisted IPs.		
- 		 									<input type="checkbox" name="Feature" >Automatic: over Honeypots and with over 515 Users and 630 Servers from blocklist.de via Fail2Ban or own scripts		
- 		 									<input type="checkbox" name="Feature" >spamtraps		
- 		 									<input type="checkbox" name="Feature" > in order to avoid abusive reports (Competitors		
- 		 									<input type="checkbox" name="Feature" > false positive		
- 		 									<input type="checkbox" name="Feature" > etc...) only MegaRBL team can add an IP to the list.		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap.		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap		
- 		 									<input type="checkbox" name="Feature" >Automatic: IPs are added when the GBUdb "cloud" statistics reach a probability figure that indicates 95% of messages produce a spam		
- 		 									<input type="checkbox" name="Feature" >malware pattern match and a confidence figure that indicates sufficient data to trust the probability data.		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >Automatic (upon receipt of a spam to a real person's mailbox)		
- 		 									<input type="checkbox" name="Feature" > with extensive whitelists and filtering to prevent false positives		
-
- 		 									<input type="checkbox" name="Feature" >UCEPROTECT's primary and the only independent list		
- 		 									<input type="checkbox" name="Feature" >Services is free! Source data is from Honeypot-Systems and over 515 User with 630 Servern there reports Attacks with Fail2Ban		
- 		 									<input type="checkbox" name="Feature" >Should not be confused with the MAPS DUL and Wirehub Dynablocker lists		
- 		 									<input type="checkbox" name="Feature" >Even if a particular IP has not sent spam		
- 		 									<input type="checkbox" name="Feature" > it may be included in a generic netblock which will provide many false positives. listed=127.0.0.2		
- 		 									<input type="checkbox" name="Feature" >Those not already listed in the HTTP or SOCKS databases		
- 		 									<input type="checkbox" name="Feature" >A- and TXT records are available for each entry; Removal is free after 30 days for automatic additions and after 7 days for manual additions; otherwise removal fee is at least EUR 10		
- 		 									<input type="checkbox" name="Feature" >00.		
- 		 									<input type="checkbox" name="Feature" >Spam samples are always kept on file for each listing. Removal requests are manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Allows basic monitoring		
- 		 									<input type="checkbox" name="Feature" > listed if A=127.0.0.2 or TXT=blocked		
- 		 									<input type="checkbox" name="Feature" >Spam samples are always kept on file for each listing. Removal requests are quickly and manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Removal requests are quickly and manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Public list follows standard dnsbl protocol.  Subscription based service is more capable		
- 		 									<input type="checkbox" name="Feature" > but does not follow standard.		
- 		 									<input type="checkbox" name="Feature" >Use Spamhaus XBL or Spamhaus Zen instead; they include CBL.		
- 		 									<input type="checkbox" name="Feature" >Removal requests are quickly and manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Removal requests are quickly and manually reviewed and processed without fees.		
-
-
-
- 		 									<input type="checkbox" name="Feature" >From five minutes to a year or more		
- 		 									<input type="checkbox" name="Feature" > depending on issue and resolution		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" >As announced		
- 		 									<input type="checkbox" name="Feature" > all public zones are no longer functioning (they return positive responses for all queries)		
- 		 									<input type="checkbox" name="Feature" >Varies		
- 		 									<input type="checkbox" name="Feature" > under a month		
- 		 									<input type="checkbox" name="Feature" > self removal via Composite Blocking List lookup.		
- 		 									<input type="checkbox" name="Feature" >As announced		
- 		 									<input type="checkbox" name="Feature" > all public zones are no longer functioning (they return positive responses for all queries)		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >Typically an automatic expiration 11 days after the last abuse was seen		
- 		 									<input type="checkbox" name="Feature" > but with some exceptions		
- 		 									<input type="checkbox" name="Feature" >Until delisting requested and matter resolved.		
- 		 									<input type="checkbox" name="Feature" >less than a month after last listable event		
- 		 									<input type="checkbox" name="Feature" > self-removal via CBL lookup.		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" > has self removal		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >until removal requested and matter resolved by changing server DNS ptr record to a non-generic name.		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" >As announced		
- 		 									<input type="checkbox" name="Feature" > all public zones are no longer functioning (they return positive responses for all queries)		
- 		 									<input type="checkbox" name="Feature" >Varies from spam type		
- 		 									<input type="checkbox" name="Feature" > rate and other sophisticated factors. 30 s to 1 week.		
- 		 									<input type="checkbox" name="Feature" >12 hours after last listing or until self delisting		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" >Listed until removed		
- 		 									<input type="checkbox" name="Feature" > and reverse DNS set to conform to Best Practises		
- 		 									<input type="checkbox" name="Feature" >Automatic expiration 7 days after the last abuse was seen		
- 		 									<input type="checkbox" name="Feature" > optionally express delisting for a small fee.		
- 		 									<input type="checkbox" name="Feature" >Automatic removal as soon as Level 1 listings decrease below Level 3 listing border		
- 		 									<input type="checkbox" name="Feature" > optionally express delisting (fee)		
- 		 									<input type="checkbox" name="Feature" >Listed until removed		
- 		 									<input type="checkbox" name="Feature" > and reverse DNS configured		
- 		 									<input type="checkbox" name="Feature" >Automatic removal as soon as Level 1 listings decrease below Level 2 listing border		
- 		 									<input type="checkbox" name="Feature" > optionally express delisting (for a fee)		
- 		 									<input type="checkbox" name="Feature" >Until 1 year after the last spam is received and a request has been made or until the "fine" is paid for express delisting		
- 		 									<input type="checkbox" name="Feature" >Automatic expiry (varies by type); webpage allows delisting		
- 		 									<input type="checkbox" name="Feature" >expiration time increases to many weeks as the fraction of IP addresses in the 		
- 		 									<input type="checkbox" name="Feature" >24 block in question sending junk mail increases		
- 		 									<input type="checkbox" name="Feature" >Until delisting requested or Automated Expiry		
- 		 									<input type="checkbox" name="Feature" >Automatic: Continuous while reputation statistics remain bad. Warning: Produces false positives		
- 		 									<input type="checkbox" name="Feature" > and has no remedy		
- 		 									<input type="checkbox" name="Feature" >removal process. IPs are dropped quickly if the statistics improve (within an hour). IPs are dropped within 36 hours (typ) if no more messages are seen (dead zombie).		
-						   	  </td>
-						   	
- 		 										<td>autre<input type="text"/> </td>						</tr>
-					
-					
-						<tr>
-							<td> <label>Nomination :</td>
- 		 					  <td>	
- 		 									<input type="checkbox" name="Feature" >ivmSIP		
- 		 									<input type="checkbox" name="Feature" >24		
-
- 		 									<input type="checkbox" name="Feature" >ARM Research Labs		
- 		 									<input type="checkbox" name="Feature" > LLC GBUdb		
- 		 									<input type="checkbox" name="Feature" >Heise Zeitschriften Verlag GmbH & Co. KG		
- 		 									<input type="checkbox" name="Feature" > hosted by manitu GmbH		
-
-
-
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A
-(paid access via rsync)		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A
-(paid access via rsync)		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A
-(paid access via rsync)		
-
- 		 									<input type="checkbox" name="Feature" >IP addresses and related generic netblocks that have sent spam.		
- 		 									<input type="checkbox" name="Feature" >Spam sources		
- 		 									<input type="checkbox" name="Feature" > relay abusers		
- 		 									<input type="checkbox" name="Feature" >Verified sources of spam		
- 		 									<input type="checkbox" name="Feature" > including spammers and their support services		
- 		 									<input type="checkbox" name="Feature" > per policy		
- 		 									<input type="checkbox" name="Feature" >Single IP addresses which only send UBE. Specializing in snowshoe spam and other 'under the radar' spams which evade many other DNSBLs. Has FP-level comparable to Zen.		
- 		 									<input type="checkbox" name="Feature" >Addresses not meant to be initiating SMTP connections		
- 		 									<input type="checkbox" name="Feature" > such as residential dynamic IPs		
- 		 									<input type="checkbox" name="Feature" >Unsolicited bulk		
- 		 									<input type="checkbox" name="Feature" >commercial email senders		
- 		 									<input type="checkbox" name="Feature" >A single lookup for querying the SBL and XBL databases		
- 		 									<input type="checkbox" name="Feature" >Detects viruses by behavior using fake high MX and tracking non-use of QUIT		
- 		 									<input type="checkbox" name="Feature" >IP addresses used to send spam to traps or members		
- 		 									<input type="checkbox" name="Feature" >Unsolicited bulk		
- 		 									<input type="checkbox" name="Feature" >commercial email senders		
- 		 									<input type="checkbox" name="Feature" >A single lookup for querying the SBL		
- 		 									<input type="checkbox" name="Feature" > XBL and PBL databases.		
- 		 									<input type="checkbox" name="Feature" >IP addresses detected as abusive at ISP's using MagicMail Servers		
- 		 									<input type="checkbox" name="Feature" > with non-conforming reverse DNS service (See Best Practises) indicative of compromised systems		
- 		 									<input type="checkbox" name="Feature" >Extremely conservative list of single IP4 addresses that produce exclusively spam		
- 		 									<input type="checkbox" name="Feature" >malware as indicated by the GBUdb IP Reputation system. Most systems should be able to safely reject connections based on this list.		
- 		 									<input type="checkbox" name="Feature" >IP addresses detected as abusive at ISP's using MagicMail Servers		
- 		 									<input type="checkbox" name="Feature" > with no reverse DNS service		
- 		 									<input type="checkbox" name="Feature" >comparable to uribl.com and surbl.org		
- 		 									<input type="checkbox" name="Feature" > this is a list of IP addresses and domains which are used by spammers in the clickable links found in the body of spam messages		
- 		 									<input type="checkbox" name="Feature" >IP addresses detected as abusive at ISP's using MagicMail Servers		
- 		 									<input type="checkbox" name="Feature" > and manually confirmed as spam sources		
- 		 									<input type="checkbox" name="Feature" >Spam sources from email		
- 		 									<input type="checkbox" name="Feature" > forums		
- 		 									<input type="checkbox" name="Feature" > referrer spam and dictionary attacks		
- 		 									<input type="checkbox" name="Feature" >Lists single IPs (no IP ranges) that send spam to spamtraps. Lists mailhosts		
- 		 									<input type="checkbox" name="Feature" > rather than domains		
- 		 									<input type="checkbox" name="Feature" > and thus blocks entire hosting providers and ISPs.		
- 		 									<input type="checkbox" name="Feature" >Only IP addresses exhibiting characteristics specific to open proxies		
- 		 									<input type="checkbox" name="Feature" > spamware		
- 		 									<input type="checkbox" name="Feature" > malware downloaders		
- 		 									<input type="checkbox" name="Feature" > botnets and the like.		
- 		 									<input type="checkbox" name="Feature" >lists 		
- 		 									<input type="checkbox" name="Feature" >24 blocks of IP addresses which usually only send UBE and containing at least several addresses which are confirmed emitters of junk mail. Collateral listings are kept to a minimum because subsections are often carved from 		
- 		 									<input type="checkbox" name="Feature" >24 listings when spammers and legit senders share the same 		
- 		 									<input type="checkbox" name="Feature" >24 block.		
- 		 									<input type="checkbox" name="Feature" >Domains with invalid A or MX records in DNS		
- 		 									<input type="checkbox" name="Feature" >IP-Addresses who Attacks other Server		
- 		 									<input type="checkbox" name="Feature" >Honeypots over ssh		
- 		 									<input type="checkbox" name="Feature" > imap		
- 		 									<input type="checkbox" name="Feature" > smtp		
- 		 									<input type="checkbox" name="Feature" > ftp		
- 		 									<input type="checkbox" name="Feature" > web		
- 		 									<input type="checkbox" name="Feature" > rfi		
- 		 									<input type="checkbox" name="Feature" > sqli		
- 		 									<input type="checkbox" name="Feature" > ddos....		
-
- 		 									<input type="checkbox" name="Feature" >Manual		
- 		 									<input type="checkbox" name="Feature" > by providers controlling the IPs or by Spamhaus PBL Team		
- 		 									<input type="checkbox" name="Feature" >Automatic (upon receipt of a spam to a real person's mailbox)		
- 		 									<input type="checkbox" name="Feature" > with extensive whitelists and filtering to prevent false positives		
- 		 									<input type="checkbox" name="Feature" >IP addresses can be reported as known spam sources by users		
- 		 									<input type="checkbox" name="Feature" > additionally automated listing if spam arrives at the mailservers of inps.de		
- 		 									<input type="checkbox" name="Feature" >Automatic: large spamtraps		
- 		 									<input type="checkbox" name="Feature" > production mail servers and other detecton methods.		
- 		 									<input type="checkbox" name="Feature" >Automatic once at least several IP addresses from a given block are individually listed on ivmSIP		
- 		 									<input type="checkbox" name="Feature" > with extensive whitelists and filtering to prevent false positives		
- 		 									<input type="checkbox" name="Feature" >Listings based on "instant" automated checks		
- 		 									<input type="checkbox" name="Feature" > recipient nomination and traps.		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap		
- 		 									<input type="checkbox" name="Feature" >Automated listing due to spamtrap hits. Exceptions apply to bounces		
- 		 									<input type="checkbox" name="Feature" > NDRs and whitelisted IPs.		
- 		 									<input type="checkbox" name="Feature" >Automatic: over Honeypots and with over 515 Users and 630 Servers from blocklist.de via Fail2Ban or own scripts		
- 		 									<input type="checkbox" name="Feature" >spamtraps		
- 		 									<input type="checkbox" name="Feature" > in order to avoid abusive reports (Competitors		
- 		 									<input type="checkbox" name="Feature" > false positive		
- 		 									<input type="checkbox" name="Feature" > etc...) only MegaRBL team can add an IP to the list.		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap.		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap		
- 		 									<input type="checkbox" name="Feature" >Automatic: IPs are added when the GBUdb "cloud" statistics reach a probability figure that indicates 95% of messages produce a spam		
- 		 									<input type="checkbox" name="Feature" >malware pattern match and a confidence figure that indicates sufficient data to trust the probability data.		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >Automatic (upon receipt of a spam to a real person's mailbox)		
- 		 									<input type="checkbox" name="Feature" > with extensive whitelists and filtering to prevent false positives		
-
- 		 									<input type="checkbox" name="Feature" >UCEPROTECT's primary and the only independent list		
- 		 									<input type="checkbox" name="Feature" >Services is free! Source data is from Honeypot-Systems and over 515 User with 630 Servern there reports Attacks with Fail2Ban		
- 		 									<input type="checkbox" name="Feature" >Should not be confused with the MAPS DUL and Wirehub Dynablocker lists		
- 		 									<input type="checkbox" name="Feature" >Even if a particular IP has not sent spam		
- 		 									<input type="checkbox" name="Feature" > it may be included in a generic netblock which will provide many false positives. listed=127.0.0.2		
- 		 									<input type="checkbox" name="Feature" >Those not already listed in the HTTP or SOCKS databases		
- 		 									<input type="checkbox" name="Feature" >A- and TXT records are available for each entry; Removal is free after 30 days for automatic additions and after 7 days for manual additions; otherwise removal fee is at least EUR 10		
- 		 									<input type="checkbox" name="Feature" >00.		
- 		 									<input type="checkbox" name="Feature" >Spam samples are always kept on file for each listing. Removal requests are manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Allows basic monitoring		
- 		 									<input type="checkbox" name="Feature" > listed if A=127.0.0.2 or TXT=blocked		
- 		 									<input type="checkbox" name="Feature" >Spam samples are always kept on file for each listing. Removal requests are quickly and manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Removal requests are quickly and manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Public list follows standard dnsbl protocol.  Subscription based service is more capable		
- 		 									<input type="checkbox" name="Feature" > but does not follow standard.		
- 		 									<input type="checkbox" name="Feature" >Use Spamhaus XBL or Spamhaus Zen instead; they include CBL.		
- 		 									<input type="checkbox" name="Feature" >Removal requests are quickly and manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Removal requests are quickly and manually reviewed and processed without fees.		
-
-
-
- 		 									<input type="checkbox" name="Feature" >From five minutes to a year or more		
- 		 									<input type="checkbox" name="Feature" > depending on issue and resolution		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" >As announced		
- 		 									<input type="checkbox" name="Feature" > all public zones are no longer functioning (they return positive responses for all queries)		
- 		 									<input type="checkbox" name="Feature" >Varies		
- 		 									<input type="checkbox" name="Feature" > under a month		
- 		 									<input type="checkbox" name="Feature" > self removal via Composite Blocking List lookup.		
- 		 									<input type="checkbox" name="Feature" >As announced		
- 		 									<input type="checkbox" name="Feature" > all public zones are no longer functioning (they return positive responses for all queries)		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >Typically an automatic expiration 11 days after the last abuse was seen		
- 		 									<input type="checkbox" name="Feature" > but with some exceptions		
- 		 									<input type="checkbox" name="Feature" >Until delisting requested and matter resolved.		
- 		 									<input type="checkbox" name="Feature" >less than a month after last listable event		
- 		 									<input type="checkbox" name="Feature" > self-removal via CBL lookup.		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" > has self removal		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >until removal requested and matter resolved by changing server DNS ptr record to a non-generic name.		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" >As announced		
- 		 									<input type="checkbox" name="Feature" > all public zones are no longer functioning (they return positive responses for all queries)		
- 		 									<input type="checkbox" name="Feature" >Varies from spam type		
- 		 									<input type="checkbox" name="Feature" > rate and other sophisticated factors. 30 s to 1 week.		
- 		 									<input type="checkbox" name="Feature" >12 hours after last listing or until self delisting		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" >Listed until removed		
- 		 									<input type="checkbox" name="Feature" > and reverse DNS set to conform to Best Practises		
- 		 									<input type="checkbox" name="Feature" >Automatic expiration 7 days after the last abuse was seen		
- 		 									<input type="checkbox" name="Feature" > optionally express delisting for a small fee.		
- 		 									<input type="checkbox" name="Feature" >Automatic removal as soon as Level 1 listings decrease below Level 3 listing border		
- 		 									<input type="checkbox" name="Feature" > optionally express delisting (fee)		
- 		 									<input type="checkbox" name="Feature" >Listed until removed		
- 		 									<input type="checkbox" name="Feature" > and reverse DNS configured		
- 		 									<input type="checkbox" name="Feature" >Automatic removal as soon as Level 1 listings decrease below Level 2 listing border		
- 		 									<input type="checkbox" name="Feature" > optionally express delisting (for a fee)		
- 		 									<input type="checkbox" name="Feature" >Until 1 year after the last spam is received and a request has been made or until the "fine" is paid for express delisting		
- 		 									<input type="checkbox" name="Feature" >Automatic expiry (varies by type); webpage allows delisting		
- 		 									<input type="checkbox" name="Feature" >expiration time increases to many weeks as the fraction of IP addresses in the 		
- 		 									<input type="checkbox" name="Feature" >24 block in question sending junk mail increases		
- 		 									<input type="checkbox" name="Feature" >Until delisting requested or Automated Expiry		
- 		 									<input type="checkbox" name="Feature" >Automatic: Continuous while reputation statistics remain bad. Warning: Produces false positives		
- 		 									<input type="checkbox" name="Feature" > and has no remedy		
- 		 									<input type="checkbox" name="Feature" >removal process. IPs are dropped quickly if the statistics improve (within an hour). IPs are dropped within 36 hours (typ) if no more messages are seen (dead zombie).		
-						   	  </td>
-						   	
- 		 										<td>autre<input type="text"/> </td>						</tr>
-					
-					
-						<tr>
-							<td> <label>Notes :</td>
- 		 					  <td>	
- 		 									<input type="checkbox" name="Feature" >ivmSIP		
- 		 									<input type="checkbox" name="Feature" >24		
-
- 		 									<input type="checkbox" name="Feature" >ARM Research Labs		
- 		 									<input type="checkbox" name="Feature" > LLC GBUdb		
- 		 									<input type="checkbox" name="Feature" >Heise Zeitschriften Verlag GmbH & Co. KG		
- 		 									<input type="checkbox" name="Feature" > hosted by manitu GmbH		
-
-
-
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A
-(paid access via rsync)		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A
-(paid access via rsync)		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A
-(paid access via rsync)		
-
- 		 									<input type="checkbox" name="Feature" >IP addresses and related generic netblocks that have sent spam.		
- 		 									<input type="checkbox" name="Feature" >Spam sources		
- 		 									<input type="checkbox" name="Feature" > relay abusers		
- 		 									<input type="checkbox" name="Feature" >Verified sources of spam		
- 		 									<input type="checkbox" name="Feature" > including spammers and their support services		
- 		 									<input type="checkbox" name="Feature" > per policy		
- 		 									<input type="checkbox" name="Feature" >Single IP addresses which only send UBE. Specializing in snowshoe spam and other 'under the radar' spams which evade many other DNSBLs. Has FP-level comparable to Zen.		
- 		 									<input type="checkbox" name="Feature" >Addresses not meant to be initiating SMTP connections		
- 		 									<input type="checkbox" name="Feature" > such as residential dynamic IPs		
- 		 									<input type="checkbox" name="Feature" >Unsolicited bulk		
- 		 									<input type="checkbox" name="Feature" >commercial email senders		
- 		 									<input type="checkbox" name="Feature" >A single lookup for querying the SBL and XBL databases		
- 		 									<input type="checkbox" name="Feature" >Detects viruses by behavior using fake high MX and tracking non-use of QUIT		
- 		 									<input type="checkbox" name="Feature" >IP addresses used to send spam to traps or members		
- 		 									<input type="checkbox" name="Feature" >Unsolicited bulk		
- 		 									<input type="checkbox" name="Feature" >commercial email senders		
- 		 									<input type="checkbox" name="Feature" >A single lookup for querying the SBL		
- 		 									<input type="checkbox" name="Feature" > XBL and PBL databases.		
- 		 									<input type="checkbox" name="Feature" >IP addresses detected as abusive at ISP's using MagicMail Servers		
- 		 									<input type="checkbox" name="Feature" > with non-conforming reverse DNS service (See Best Practises) indicative of compromised systems		
- 		 									<input type="checkbox" name="Feature" >Extremely conservative list of single IP4 addresses that produce exclusively spam		
- 		 									<input type="checkbox" name="Feature" >malware as indicated by the GBUdb IP Reputation system. Most systems should be able to safely reject connections based on this list.		
- 		 									<input type="checkbox" name="Feature" >IP addresses detected as abusive at ISP's using MagicMail Servers		
- 		 									<input type="checkbox" name="Feature" > with no reverse DNS service		
- 		 									<input type="checkbox" name="Feature" >comparable to uribl.com and surbl.org		
- 		 									<input type="checkbox" name="Feature" > this is a list of IP addresses and domains which are used by spammers in the clickable links found in the body of spam messages		
- 		 									<input type="checkbox" name="Feature" >IP addresses detected as abusive at ISP's using MagicMail Servers		
- 		 									<input type="checkbox" name="Feature" > and manually confirmed as spam sources		
- 		 									<input type="checkbox" name="Feature" >Spam sources from email		
- 		 									<input type="checkbox" name="Feature" > forums		
- 		 									<input type="checkbox" name="Feature" > referrer spam and dictionary attacks		
- 		 									<input type="checkbox" name="Feature" >Lists single IPs (no IP ranges) that send spam to spamtraps. Lists mailhosts		
- 		 									<input type="checkbox" name="Feature" > rather than domains		
- 		 									<input type="checkbox" name="Feature" > and thus blocks entire hosting providers and ISPs.		
- 		 									<input type="checkbox" name="Feature" >Only IP addresses exhibiting characteristics specific to open proxies		
- 		 									<input type="checkbox" name="Feature" > spamware		
- 		 									<input type="checkbox" name="Feature" > malware downloaders		
- 		 									<input type="checkbox" name="Feature" > botnets and the like.		
- 		 									<input type="checkbox" name="Feature" >lists 		
- 		 									<input type="checkbox" name="Feature" >24 blocks of IP addresses which usually only send UBE and containing at least several addresses which are confirmed emitters of junk mail. Collateral listings are kept to a minimum because subsections are often carved from 		
- 		 									<input type="checkbox" name="Feature" >24 listings when spammers and legit senders share the same 		
- 		 									<input type="checkbox" name="Feature" >24 block.		
- 		 									<input type="checkbox" name="Feature" >Domains with invalid A or MX records in DNS		
- 		 									<input type="checkbox" name="Feature" >IP-Addresses who Attacks other Server		
- 		 									<input type="checkbox" name="Feature" >Honeypots over ssh		
- 		 									<input type="checkbox" name="Feature" > imap		
- 		 									<input type="checkbox" name="Feature" > smtp		
- 		 									<input type="checkbox" name="Feature" > ftp		
- 		 									<input type="checkbox" name="Feature" > web		
- 		 									<input type="checkbox" name="Feature" > rfi		
- 		 									<input type="checkbox" name="Feature" > sqli		
- 		 									<input type="checkbox" name="Feature" > ddos....		
-
- 		 									<input type="checkbox" name="Feature" >Manual		
- 		 									<input type="checkbox" name="Feature" > by providers controlling the IPs or by Spamhaus PBL Team		
- 		 									<input type="checkbox" name="Feature" >Automatic (upon receipt of a spam to a real person's mailbox)		
- 		 									<input type="checkbox" name="Feature" > with extensive whitelists and filtering to prevent false positives		
- 		 									<input type="checkbox" name="Feature" >IP addresses can be reported as known spam sources by users		
- 		 									<input type="checkbox" name="Feature" > additionally automated listing if spam arrives at the mailservers of inps.de		
- 		 									<input type="checkbox" name="Feature" >Automatic: large spamtraps		
- 		 									<input type="checkbox" name="Feature" > production mail servers and other detecton methods.		
- 		 									<input type="checkbox" name="Feature" >Automatic once at least several IP addresses from a given block are individually listed on ivmSIP		
- 		 									<input type="checkbox" name="Feature" > with extensive whitelists and filtering to prevent false positives		
- 		 									<input type="checkbox" name="Feature" >Listings based on "instant" automated checks		
- 		 									<input type="checkbox" name="Feature" > recipient nomination and traps.		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap		
- 		 									<input type="checkbox" name="Feature" >Automated listing due to spamtrap hits. Exceptions apply to bounces		
- 		 									<input type="checkbox" name="Feature" > NDRs and whitelisted IPs.		
- 		 									<input type="checkbox" name="Feature" >Automatic: over Honeypots and with over 515 Users and 630 Servers from blocklist.de via Fail2Ban or own scripts		
- 		 									<input type="checkbox" name="Feature" >spamtraps		
- 		 									<input type="checkbox" name="Feature" > in order to avoid abusive reports (Competitors		
- 		 									<input type="checkbox" name="Feature" > false positive		
- 		 									<input type="checkbox" name="Feature" > etc...) only MegaRBL team can add an IP to the list.		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap.		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap		
- 		 									<input type="checkbox" name="Feature" >Automatic: IPs are added when the GBUdb "cloud" statistics reach a probability figure that indicates 95% of messages produce a spam		
- 		 									<input type="checkbox" name="Feature" >malware pattern match and a confidence figure that indicates sufficient data to trust the probability data.		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >Automatic (upon receipt of a spam to a real person's mailbox)		
- 		 									<input type="checkbox" name="Feature" > with extensive whitelists and filtering to prevent false positives		
-
- 		 									<input type="checkbox" name="Feature" >UCEPROTECT's primary and the only independent list		
- 		 									<input type="checkbox" name="Feature" >Services is free! Source data is from Honeypot-Systems and over 515 User with 630 Servern there reports Attacks with Fail2Ban		
- 		 									<input type="checkbox" name="Feature" >Should not be confused with the MAPS DUL and Wirehub Dynablocker lists		
- 		 									<input type="checkbox" name="Feature" >Even if a particular IP has not sent spam		
- 		 									<input type="checkbox" name="Feature" > it may be included in a generic netblock which will provide many false positives. listed=127.0.0.2		
- 		 									<input type="checkbox" name="Feature" >Those not already listed in the HTTP or SOCKS databases		
- 		 									<input type="checkbox" name="Feature" >A- and TXT records are available for each entry; Removal is free after 30 days for automatic additions and after 7 days for manual additions; otherwise removal fee is at least EUR 10		
- 		 									<input type="checkbox" name="Feature" >00.		
- 		 									<input type="checkbox" name="Feature" >Spam samples are always kept on file for each listing. Removal requests are manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Allows basic monitoring		
- 		 									<input type="checkbox" name="Feature" > listed if A=127.0.0.2 or TXT=blocked		
- 		 									<input type="checkbox" name="Feature" >Spam samples are always kept on file for each listing. Removal requests are quickly and manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Removal requests are quickly and manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Public list follows standard dnsbl protocol.  Subscription based service is more capable		
- 		 									<input type="checkbox" name="Feature" > but does not follow standard.		
- 		 									<input type="checkbox" name="Feature" >Use Spamhaus XBL or Spamhaus Zen instead; they include CBL.		
- 		 									<input type="checkbox" name="Feature" >Removal requests are quickly and manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Removal requests are quickly and manually reviewed and processed without fees.		
-
-
-
- 		 									<input type="checkbox" name="Feature" >From five minutes to a year or more		
- 		 									<input type="checkbox" name="Feature" > depending on issue and resolution		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" >As announced		
- 		 									<input type="checkbox" name="Feature" > all public zones are no longer functioning (they return positive responses for all queries)		
- 		 									<input type="checkbox" name="Feature" >Varies		
- 		 									<input type="checkbox" name="Feature" > under a month		
- 		 									<input type="checkbox" name="Feature" > self removal via Composite Blocking List lookup.		
- 		 									<input type="checkbox" name="Feature" >As announced		
- 		 									<input type="checkbox" name="Feature" > all public zones are no longer functioning (they return positive responses for all queries)		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >Typically an automatic expiration 11 days after the last abuse was seen		
- 		 									<input type="checkbox" name="Feature" > but with some exceptions		
- 		 									<input type="checkbox" name="Feature" >Until delisting requested and matter resolved.		
- 		 									<input type="checkbox" name="Feature" >less than a month after last listable event		
- 		 									<input type="checkbox" name="Feature" > self-removal via CBL lookup.		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" > has self removal		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >until removal requested and matter resolved by changing server DNS ptr record to a non-generic name.		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" >As announced		
- 		 									<input type="checkbox" name="Feature" > all public zones are no longer functioning (they return positive responses for all queries)		
- 		 									<input type="checkbox" name="Feature" >Varies from spam type		
- 		 									<input type="checkbox" name="Feature" > rate and other sophisticated factors. 30 s to 1 week.		
- 		 									<input type="checkbox" name="Feature" >12 hours after last listing or until self delisting		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" >Listed until removed		
- 		 									<input type="checkbox" name="Feature" > and reverse DNS set to conform to Best Practises		
- 		 									<input type="checkbox" name="Feature" >Automatic expiration 7 days after the last abuse was seen		
- 		 									<input type="checkbox" name="Feature" > optionally express delisting for a small fee.		
- 		 									<input type="checkbox" name="Feature" >Automatic removal as soon as Level 1 listings decrease below Level 3 listing border		
- 		 									<input type="checkbox" name="Feature" > optionally express delisting (fee)		
- 		 									<input type="checkbox" name="Feature" >Listed until removed		
- 		 									<input type="checkbox" name="Feature" > and reverse DNS configured		
- 		 									<input type="checkbox" name="Feature" >Automatic removal as soon as Level 1 listings decrease below Level 2 listing border		
- 		 									<input type="checkbox" name="Feature" > optionally express delisting (for a fee)		
- 		 									<input type="checkbox" name="Feature" >Until 1 year after the last spam is received and a request has been made or until the "fine" is paid for express delisting		
- 		 									<input type="checkbox" name="Feature" >Automatic expiry (varies by type); webpage allows delisting		
- 		 									<input type="checkbox" name="Feature" >expiration time increases to many weeks as the fraction of IP addresses in the 		
- 		 									<input type="checkbox" name="Feature" >24 block in question sending junk mail increases		
- 		 									<input type="checkbox" name="Feature" >Until delisting requested or Automated Expiry		
- 		 									<input type="checkbox" name="Feature" >Automatic: Continuous while reputation statistics remain bad. Warning: Produces false positives		
- 		 									<input type="checkbox" name="Feature" > and has no remedy		
- 		 									<input type="checkbox" name="Feature" >removal process. IPs are dropped quickly if the statistics improve (within an hour). IPs are dropped within 36 hours (typ) if no more messages are seen (dead zombie).		
-						   	  </td>
-						   	
- 		 										<td>autre<input type="text"/> </td>						</tr>
-					
-					
-						<tr>
-							<td> <label>Collateral Listings :</td><td> <input id="9" type="text" name="Feature"></br></br></label></td>
-						</tr>
-					
-					
-						<tr>
-							<td> <label>Informational URL :</td><td> <input id="10" type="text" name="Feature"></br></br></label></td>
-						</tr>
-					
-					
-						<tr>
-							<td> <label>Listing lifetime :</td>
- 		 					  <td>	
- 		 									<input type="checkbox" name="Feature" >ivmSIP		
- 		 									<input type="checkbox" name="Feature" >24		
-
- 		 									<input type="checkbox" name="Feature" >ARM Research Labs		
- 		 									<input type="checkbox" name="Feature" > LLC GBUdb		
- 		 									<input type="checkbox" name="Feature" >Heise Zeitschriften Verlag GmbH & Co. KG		
- 		 									<input type="checkbox" name="Feature" > hosted by manitu GmbH		
-
-
-
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A
-(paid access via rsync)		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A
-(paid access via rsync)		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A
-(paid access via rsync)		
-
- 		 									<input type="checkbox" name="Feature" >IP addresses and related generic netblocks that have sent spam.		
- 		 									<input type="checkbox" name="Feature" >Spam sources		
- 		 									<input type="checkbox" name="Feature" > relay abusers		
- 		 									<input type="checkbox" name="Feature" >Verified sources of spam		
- 		 									<input type="checkbox" name="Feature" > including spammers and their support services		
- 		 									<input type="checkbox" name="Feature" > per policy		
- 		 									<input type="checkbox" name="Feature" >Single IP addresses which only send UBE. Specializing in snowshoe spam and other 'under the radar' spams which evade many other DNSBLs. Has FP-level comparable to Zen.		
- 		 									<input type="checkbox" name="Feature" >Addresses not meant to be initiating SMTP connections		
- 		 									<input type="checkbox" name="Feature" > such as residential dynamic IPs		
- 		 									<input type="checkbox" name="Feature" >Unsolicited bulk		
- 		 									<input type="checkbox" name="Feature" >commercial email senders		
- 		 									<input type="checkbox" name="Feature" >A single lookup for querying the SBL and XBL databases		
- 		 									<input type="checkbox" name="Feature" >Detects viruses by behavior using fake high MX and tracking non-use of QUIT		
- 		 									<input type="checkbox" name="Feature" >IP addresses used to send spam to traps or members		
- 		 									<input type="checkbox" name="Feature" >Unsolicited bulk		
- 		 									<input type="checkbox" name="Feature" >commercial email senders		
- 		 									<input type="checkbox" name="Feature" >A single lookup for querying the SBL		
- 		 									<input type="checkbox" name="Feature" > XBL and PBL databases.		
- 		 									<input type="checkbox" name="Feature" >IP addresses detected as abusive at ISP's using MagicMail Servers		
- 		 									<input type="checkbox" name="Feature" > with non-conforming reverse DNS service (See Best Practises) indicative of compromised systems		
- 		 									<input type="checkbox" name="Feature" >Extremely conservative list of single IP4 addresses that produce exclusively spam		
- 		 									<input type="checkbox" name="Feature" >malware as indicated by the GBUdb IP Reputation system. Most systems should be able to safely reject connections based on this list.		
- 		 									<input type="checkbox" name="Feature" >IP addresses detected as abusive at ISP's using MagicMail Servers		
- 		 									<input type="checkbox" name="Feature" > with no reverse DNS service		
- 		 									<input type="checkbox" name="Feature" >comparable to uribl.com and surbl.org		
- 		 									<input type="checkbox" name="Feature" > this is a list of IP addresses and domains which are used by spammers in the clickable links found in the body of spam messages		
- 		 									<input type="checkbox" name="Feature" >IP addresses detected as abusive at ISP's using MagicMail Servers		
- 		 									<input type="checkbox" name="Feature" > and manually confirmed as spam sources		
- 		 									<input type="checkbox" name="Feature" >Spam sources from email		
- 		 									<input type="checkbox" name="Feature" > forums		
- 		 									<input type="checkbox" name="Feature" > referrer spam and dictionary attacks		
- 		 									<input type="checkbox" name="Feature" >Lists single IPs (no IP ranges) that send spam to spamtraps. Lists mailhosts		
- 		 									<input type="checkbox" name="Feature" > rather than domains		
- 		 									<input type="checkbox" name="Feature" > and thus blocks entire hosting providers and ISPs.		
- 		 									<input type="checkbox" name="Feature" >Only IP addresses exhibiting characteristics specific to open proxies		
- 		 									<input type="checkbox" name="Feature" > spamware		
- 		 									<input type="checkbox" name="Feature" > malware downloaders		
- 		 									<input type="checkbox" name="Feature" > botnets and the like.		
- 		 									<input type="checkbox" name="Feature" >lists 		
- 		 									<input type="checkbox" name="Feature" >24 blocks of IP addresses which usually only send UBE and containing at least several addresses which are confirmed emitters of junk mail. Collateral listings are kept to a minimum because subsections are often carved from 		
- 		 									<input type="checkbox" name="Feature" >24 listings when spammers and legit senders share the same 		
- 		 									<input type="checkbox" name="Feature" >24 block.		
- 		 									<input type="checkbox" name="Feature" >Domains with invalid A or MX records in DNS		
- 		 									<input type="checkbox" name="Feature" >IP-Addresses who Attacks other Server		
- 		 									<input type="checkbox" name="Feature" >Honeypots over ssh		
- 		 									<input type="checkbox" name="Feature" > imap		
- 		 									<input type="checkbox" name="Feature" > smtp		
- 		 									<input type="checkbox" name="Feature" > ftp		
- 		 									<input type="checkbox" name="Feature" > web		
- 		 									<input type="checkbox" name="Feature" > rfi		
- 		 									<input type="checkbox" name="Feature" > sqli		
- 		 									<input type="checkbox" name="Feature" > ddos....		
-
- 		 									<input type="checkbox" name="Feature" >Manual		
- 		 									<input type="checkbox" name="Feature" > by providers controlling the IPs or by Spamhaus PBL Team		
- 		 									<input type="checkbox" name="Feature" >Automatic (upon receipt of a spam to a real person's mailbox)		
- 		 									<input type="checkbox" name="Feature" > with extensive whitelists and filtering to prevent false positives		
- 		 									<input type="checkbox" name="Feature" >IP addresses can be reported as known spam sources by users		
- 		 									<input type="checkbox" name="Feature" > additionally automated listing if spam arrives at the mailservers of inps.de		
- 		 									<input type="checkbox" name="Feature" >Automatic: large spamtraps		
- 		 									<input type="checkbox" name="Feature" > production mail servers and other detecton methods.		
- 		 									<input type="checkbox" name="Feature" >Automatic once at least several IP addresses from a given block are individually listed on ivmSIP		
- 		 									<input type="checkbox" name="Feature" > with extensive whitelists and filtering to prevent false positives		
- 		 									<input type="checkbox" name="Feature" >Listings based on "instant" automated checks		
- 		 									<input type="checkbox" name="Feature" > recipient nomination and traps.		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap		
- 		 									<input type="checkbox" name="Feature" >Automated listing due to spamtrap hits. Exceptions apply to bounces		
- 		 									<input type="checkbox" name="Feature" > NDRs and whitelisted IPs.		
- 		 									<input type="checkbox" name="Feature" >Automatic: over Honeypots and with over 515 Users and 630 Servers from blocklist.de via Fail2Ban or own scripts		
- 		 									<input type="checkbox" name="Feature" >spamtraps		
- 		 									<input type="checkbox" name="Feature" > in order to avoid abusive reports (Competitors		
- 		 									<input type="checkbox" name="Feature" > false positive		
- 		 									<input type="checkbox" name="Feature" > etc...) only MegaRBL team can add an IP to the list.		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap.		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap		
- 		 									<input type="checkbox" name="Feature" >Automatic: IPs are added when the GBUdb "cloud" statistics reach a probability figure that indicates 95% of messages produce a spam		
- 		 									<input type="checkbox" name="Feature" >malware pattern match and a confidence figure that indicates sufficient data to trust the probability data.		
- 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >Automatic (upon receipt of a spam to a real person's mailbox)		
- 		 									<input type="checkbox" name="Feature" > with extensive whitelists and filtering to prevent false positives		
-
- 		 									<input type="checkbox" name="Feature" >UCEPROTECT's primary and the only independent list		
- 		 									<input type="checkbox" name="Feature" >Services is free! Source data is from Honeypot-Systems and over 515 User with 630 Servern there reports Attacks with Fail2Ban		
- 		 									<input type="checkbox" name="Feature" >Should not be confused with the MAPS DUL and Wirehub Dynablocker lists		
- 		 									<input type="checkbox" name="Feature" >Even if a particular IP has not sent spam		
- 		 									<input type="checkbox" name="Feature" > it may be included in a generic netblock which will provide many false positives. listed=127.0.0.2		
- 		 									<input type="checkbox" name="Feature" >Those not already listed in the HTTP or SOCKS databases		
- 		 									<input type="checkbox" name="Feature" >A- and TXT records are available for each entry; Removal is free after 30 days for automatic additions and after 7 days for manual additions; otherwise removal fee is at least EUR 10		
- 		 									<input type="checkbox" name="Feature" >00.		
- 		 									<input type="checkbox" name="Feature" >Spam samples are always kept on file for each listing. Removal requests are manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Allows basic monitoring		
- 		 									<input type="checkbox" name="Feature" > listed if A=127.0.0.2 or TXT=blocked		
- 		 									<input type="checkbox" name="Feature" >Spam samples are always kept on file for each listing. Removal requests are quickly and manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Removal requests are quickly and manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Public list follows standard dnsbl protocol.  Subscription based service is more capable		
- 		 									<input type="checkbox" name="Feature" > but does not follow standard.		
- 		 									<input type="checkbox" name="Feature" >Use Spamhaus XBL or Spamhaus Zen instead; they include CBL.		
- 		 									<input type="checkbox" name="Feature" >Removal requests are quickly and manually reviewed and processed without fees.		
- 		 									<input type="checkbox" name="Feature" >Removal requests are quickly and manually reviewed and processed without fees.		
-
-
-
- 		 									<input type="checkbox" name="Feature" >From five minutes to a year or more		
- 		 									<input type="checkbox" name="Feature" > depending on issue and resolution		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" >As announced		
- 		 									<input type="checkbox" name="Feature" > all public zones are no longer functioning (they return positive responses for all queries)		
- 		 									<input type="checkbox" name="Feature" >Varies		
- 		 									<input type="checkbox" name="Feature" > under a month		
- 		 									<input type="checkbox" name="Feature" > self removal via Composite Blocking List lookup.		
- 		 									<input type="checkbox" name="Feature" >As announced		
- 		 									<input type="checkbox" name="Feature" > all public zones are no longer functioning (they return positive responses for all queries)		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >Typically an automatic expiration 11 days after the last abuse was seen		
- 		 									<input type="checkbox" name="Feature" > but with some exceptions		
- 		 									<input type="checkbox" name="Feature" >Until delisting requested and matter resolved.		
- 		 									<input type="checkbox" name="Feature" >less than a month after last listable event		
- 		 									<input type="checkbox" name="Feature" > self-removal via CBL lookup.		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" > has self removal		
- 		 									<input type="checkbox" name="Feature" >N		
- 		 									<input type="checkbox" name="Feature" >A (See individual zones)		
- 		 									<input type="checkbox" name="Feature" >until removal requested and matter resolved by changing server DNS ptr record to a non-generic name.		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" >As announced		
- 		 									<input type="checkbox" name="Feature" > all public zones are no longer functioning (they return positive responses for all queries)		
- 		 									<input type="checkbox" name="Feature" >Varies from spam type		
- 		 									<input type="checkbox" name="Feature" > rate and other sophisticated factors. 30 s to 1 week.		
- 		 									<input type="checkbox" name="Feature" >12 hours after last listing or until self delisting		
- 		 									<input type="checkbox" name="Feature" >Temporary		
- 		 									<input type="checkbox" name="Feature" > until spam stops		
- 		 									<input type="checkbox" name="Feature" >Listed until removed		
- 		 									<input type="checkbox" name="Feature" > and reverse DNS set to conform to Best Practises		
- 		 									<input type="checkbox" name="Feature" >Automatic expiration 7 days after the last abuse was seen		
- 		 									<input type="checkbox" name="Feature" > optionally express delisting for a small fee.		
- 		 									<input type="checkbox" name="Feature" >Automatic removal as soon as Level 1 listings decrease below Level 3 listing border		
- 		 									<input type="checkbox" name="Feature" > optionally express delisting (fee)		
- 		 									<input type="checkbox" name="Feature" >Listed until removed		
- 		 									<input type="checkbox" name="Feature" > and reverse DNS configured		
- 		 									<input type="checkbox" name="Feature" >Automatic removal as soon as Level 1 listings decrease below Level 2 listing border		
- 		 									<input type="checkbox" name="Feature" > optionally express delisting (for a fee)		
- 		 									<input type="checkbox" name="Feature" >Until 1 year after the last spam is received and a request has been made or until the "fine" is paid for express delisting		
- 		 									<input type="checkbox" name="Feature" >Automatic expiry (varies by type); webpage allows delisting		
- 		 									<input type="checkbox" name="Feature" >expiration time increases to many weeks as the fraction of IP addresses in the 		
- 		 									<input type="checkbox" name="Feature" >24 block in question sending junk mail increases		
- 		 									<input type="checkbox" name="Feature" >Until delisting requested or Automated Expiry		
- 		 									<input type="checkbox" name="Feature" >Automatic: Continuous while reputation statistics remain bad. Warning: Produces false positives		
- 		 									<input type="checkbox" name="Feature" > and has no remedy		
- 		 									<input type="checkbox" name="Feature" >removal process. IPs are dropped quickly if the statistics improve (within an hour). IPs are dropped within 36 hours (typ) if no more messages are seen (dead zombie).		
-						   	  </td>
-						   	
- 		 										<td>autre<input type="text"/> </td>						</tr>
-					
-					
-		</table>
-		<button type="submit">Ajouter un produit</button>
-	</fieldset>
-	<script>
+(paid access via rsync)</br>	
+ 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
+							<label>Listing goal :</label></br>
+							
+ 		 									<input type="checkbox" name="Feature" >IP addresses and related generic netblocks that have sent spam.</br>	
+ 		 									<input type="checkbox" name="Feature" >Spam sources</br>	
+ 		 									<input type="checkbox" name="Feature" > relay abusers</br>	
+ 		 									<input type="checkbox" name="Feature" >Verified sources of spam</br>	
+ 		 									<input type="checkbox" name="Feature" > including spammers and their support services</br>	
+ 		 									<input type="checkbox" name="Feature" > per policy</br>	
+ 		 									<input type="checkbox" name="Feature" >Single IP addresses which only send UBE. Specializing in snowshoe spam and other 'under the radar' spams which evade many other DNSBLs. Has FP-level comparable to Zen.</br>	
+ 		 									<input type="checkbox" name="Feature" >Addresses not meant to be initiating SMTP connections</br>	
+ 		 									<input type="checkbox" name="Feature" > such as residential dynamic IPs</br>	
+ 		 									<input type="checkbox" name="Feature" >Unsolicited bulk</br>	
+ 		 									<input type="checkbox" name="Feature" >commercial email senders</br>	
+ 		 									<input type="checkbox" name="Feature" >A single lookup for querying the SBL and XBL databases</br>	
+ 		 									<input type="checkbox" name="Feature" >Detects viruses by behavior using fake high MX and tracking non-use of QUIT</br>	
+ 		 									<input type="checkbox" name="Feature" >IP addresses used to send spam to traps or members</br>	
+ 		 									<input type="checkbox" name="Feature" >A single lookup for querying the SBL</br>	
+ 		 									<input type="checkbox" name="Feature" > XBL and PBL databases.</br>	
+ 		 									<input type="checkbox" name="Feature" >IP addresses detected as abusive at ISP's using MagicMail Servers</br>	
+ 		 									<input type="checkbox" name="Feature" > with non-conforming reverse DNS service (See Best Practises) indicative of compromised systems</br>	
+ 		 									<input type="checkbox" name="Feature" >Extremely conservative list of single IP4 addresses that produce exclusively spam</br>	
+ 		 									<input type="checkbox" name="Feature" >malware as indicated by the GBUdb IP Reputation system. Most systems should be able to safely reject connections based on this list.</br>	
+ 		 									<input type="checkbox" name="Feature" > with no reverse DNS service</br>	
+ 		 									<input type="checkbox" name="Feature" >comparable to uribl.com and surbl.org</br>	
+ 		 									<input type="checkbox" name="Feature" > this is a list of IP addresses and domains which are used by spammers in the clickable links found in the body of spam messages</br>	
+ 		 									<input type="checkbox" name="Feature" > and manually confirmed as spam sources</br>	
+ 		 									<input type="checkbox" name="Feature" >Spam sources from email</br>	
+ 		 									<input type="checkbox" name="Feature" > forums</br>	
+ 		 									<input type="checkbox" name="Feature" > referrer spam and dictionary attacks</br>	
+ 		 									<input type="checkbox" name="Feature" >Lists single IPs (no IP ranges) that send spam to spamtraps. Lists mailhosts</br>	
+ 		 									<input type="checkbox" name="Feature" > rather than domains</br>	
+ 		 									<input type="checkbox" name="Feature" > and thus blocks entire hosting providers and ISPs.</br>	
+ 		 									<input type="checkbox" name="Feature" >Only IP addresses exhibiting characteristics specific to open proxies</br>	
+ 		 									<input type="checkbox" name="Feature" > spamware</br>	
+ 		 									<input type="checkbox" name="Feature" > malware downloaders</br>	
+ 		 									<input type="checkbox" name="Feature" > botnets and the like.</br>	
+ 		 									<input type="checkbox" name="Feature" >lists </br>	
+ 		 									<input type="checkbox" name="Feature" >24 blocks of IP addresses which usually only send UBE and containing at least several addresses which are confirmed emitters of junk mail. Collateral listings are kept to a minimum because subsections are often carved from </br>	
+ 		 									<input type="checkbox" name="Feature" >24 listings when spammers and legit senders share the same </br>	
+ 		 									<input type="checkbox" name="Feature" >24 block.</br>	
+ 		 									<input type="checkbox" name="Feature" >Domains with invalid A or MX records in DNS</br>	
+ 		 									<input type="checkbox" name="Feature" >IP-Addresses who Attacks other Server</br>	
+ 		 									<input type="checkbox" name="Feature" >Honeypots over ssh</br>	
+ 		 									<input type="checkbox" name="Feature" > imap</br>	
+ 		 									<input type="checkbox" name="Feature" > smtp</br>	
+ 		 									<input type="checkbox" name="Feature" > ftp</br>	
+ 		 									<input type="checkbox" name="Feature" > web</br>	
+ 		 									<input type="checkbox" name="Feature" > rfi</br>	
+ 		 									<input type="checkbox" name="Feature" > sqli</br>	
+ 		 									<input type="checkbox" name="Feature" > ddos....</br>	
+ 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
+							<label>Nomination :</label></br>
+							
+ 		 									<input type="checkbox" name="Feature" >Manual</br>	
+ 		 									<input type="checkbox" name="Feature" > by providers controlling the IPs or by Spamhaus PBL Team</br>	
+ 		 									<input type="checkbox" name="Feature" >Automatic (upon receipt of a spam to a real person's mailbox)</br>	
+ 		 									<input type="checkbox" name="Feature" > with extensive whitelists and filtering to prevent false positives</br>	
+ 		 									<input type="checkbox" name="Feature" >IP addresses can be reported as known spam sources by users</br>	
+ 		 									<input type="checkbox" name="Feature" > additionally automated listing if spam arrives at the mailservers of inps.de</br>	
+ 		 									<input type="checkbox" name="Feature" >Automatic: large spamtraps</br>	
+ 		 									<input type="checkbox" name="Feature" > production mail servers and other detecton methods.</br>	
+ 		 									<input type="checkbox" name="Feature" >Automatic once at least several IP addresses from a given block are individually listed on ivmSIP</br>	
+ 		 									<input type="checkbox" name="Feature" >Listings based on "instant" automated checks</br>	
+ 		 									<input type="checkbox" name="Feature" > recipient nomination and traps.</br>	
+ 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap</br>	
+ 		 									<input type="checkbox" name="Feature" >Automated listing due to spamtrap hits. Exceptions apply to bounces</br>	
+ 		 									<input type="checkbox" name="Feature" > NDRs and whitelisted IPs.</br>	
+ 		 									<input type="checkbox" name="Feature" >Automatic: over Honeypots and with over 515 Users and 630 Servers from blocklist.de via Fail2Ban or own scripts</br>	
+ 		 									<input type="checkbox" name="Feature" >spamtraps</br>	
+ 		 									<input type="checkbox" name="Feature" > in order to avoid abusive reports (Competitors</br>	
+ 		 									<input type="checkbox" name="Feature" > false positive</br>	
+ 		 									<input type="checkbox" name="Feature" > etc...) only MegaRBL team can add an IP to the list.</br>	
+ 		 									<input type="checkbox" name="Feature" >SORBS Admin and Spamtrap.</br>	
+ 		 									<input type="checkbox" name="Feature" >N</br>	
+ 		 									<input type="checkbox" name="Feature" >A (See individual zones)</br>	
+ 		 									<input type="checkbox" name="Feature" >Automatic: IPs are added when the GBUdb "cloud" statistics reach a probability figure that indicates 95% of messages produce a spam</br>	
+ 		 									<input type="checkbox" name="Feature" >malware pattern match and a confidence figure that indicates sufficient data to trust the probability data.</br>	
+ 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
+							<label>Notes :</label></br>
+							
+ 		 									<input type="checkbox" name="Feature" >UCEPROTECT's primary and the only independent list</br>	
+ 		 									<input type="checkbox" name="Feature" >Services is free! Source data is from Honeypot-Systems and over 515 User with 630 Servern there reports Attacks with Fail2Ban</br>	
+ 		 									<input type="checkbox" name="Feature" >Should not be confused with the MAPS DUL and Wirehub Dynablocker lists</br>	
+ 		 									<input type="checkbox" name="Feature" >Even if a particular IP has not sent spam</br>	
+ 		 									<input type="checkbox" name="Feature" > it may be included in a generic netblock which will provide many false positives. listed=127.0.0.2</br>	
+ 		 									<input type="checkbox" name="Feature" >Those not already listed in the HTTP or SOCKS databases</br>	
+ 		 									<input type="checkbox" name="Feature" >A- and TXT records are available for each entry; Removal is free after 30 days for automatic additions and after 7 days for manual additions; otherwise removal fee is at least EUR 10</br>	
+ 		 									<input type="checkbox" name="Feature" >00.</br>	
+ 		 									<input type="checkbox" name="Feature" >Spam samples are always kept on file for each listing. Removal requests are manually reviewed and processed without fees.</br>	
+ 		 									<input type="checkbox" name="Feature" >Allows basic monitoring</br>	
+ 		 									<input type="checkbox" name="Feature" > listed if A=127.0.0.2 or TXT=blocked</br>	
+ 		 									<input type="checkbox" name="Feature" >Spam samples are always kept on file for each listing. Removal requests are quickly and manually reviewed and processed without fees.</br>	
+ 		 									<input type="checkbox" name="Feature" >Removal requests are quickly and manually reviewed and processed without fees.</br>	
+ 		 									<input type="checkbox" name="Feature" >Public list follows standard dnsbl protocol.  Subscription based service is more capable</br>	
+ 		 									<input type="checkbox" name="Feature" > but does not follow standard.</br>	
+ 		 									<input type="checkbox" name="Feature" >Use Spamhaus XBL or Spamhaus Zen instead; they include CBL.</br>	
+ 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
+							<label>Collateral Listings : </label></br> <input id="9" type="text" name="Feature"></br>
+							
+						</br>	
+							<label>Informational URL : </label></br> <input id="10" type="text" name="Feature"></br>
+							
+						</br>	
+							<label>Listing lifetime :</label></br>
+							
+ 		 									<input type="checkbox" name="Feature" >From five minutes to a year or more</br>	
+ 		 									<input type="checkbox" name="Feature" > depending on issue and resolution</br>	
+ 		 									<input type="checkbox" name="Feature" >Temporary</br>	
+ 		 									<input type="checkbox" name="Feature" > until spam stops</br>	
+ 		 									<input type="checkbox" name="Feature" >As announced</br>	
+ 		 									<input type="checkbox" name="Feature" > all public zones are no longer functioning (they return positive responses for all queries)</br>	
+ 		 									<input type="checkbox" name="Feature" >Varies</br>	
+ 		 									<input type="checkbox" name="Feature" > under a month</br>	
+ 		 									<input type="checkbox" name="Feature" > self removal via Composite Blocking List lookup.</br>	
+ 		 									<input type="checkbox" name="Feature" >N</br>	
+ 		 									<input type="checkbox" name="Feature" >A (See individual zones)</br>	
+ 		 									<input type="checkbox" name="Feature" >Typically an automatic expiration 11 days after the last abuse was seen</br>	
+ 		 									<input type="checkbox" name="Feature" > but with some exceptions</br>	
+ 		 									<input type="checkbox" name="Feature" >Until delisting requested and matter resolved.</br>	
+ 		 									<input type="checkbox" name="Feature" >less than a month after last listable event</br>	
+ 		 									<input type="checkbox" name="Feature" > self-removal via CBL lookup.</br>	
+ 		 									<input type="checkbox" name="Feature" > has self removal</br>	
+ 		 									<input type="checkbox" name="Feature" >until removal requested and matter resolved by changing server DNS ptr record to a non-generic name.</br>	
+ 		 									<input type="checkbox" name="Feature" >Varies from spam type</br>	
+ 		 									<input type="checkbox" name="Feature" > rate and other sophisticated factors. 30 s to 1 week.</br>	
+ 		 									<input type="checkbox" name="Feature" >12 hours after last listing or until self delisting</br>	
+ 		 									<input type="checkbox" name="Feature" >Listed until removed</br>	
+ 		 									<input type="checkbox" name="Feature" > and reverse DNS set to conform to Best Practises</br>	
+ 		 									<input type="checkbox" name="Feature" >Automatic expiration 7 days after the last abuse was seen</br>	
+ 		 									<input type="checkbox" name="Feature" > optionally express delisting for a small fee.</br>	
+ 		 									<input type="checkbox" name="Feature" >Automatic removal as soon as Level 1 listings decrease below Level 3 listing border</br>	
+ 		 									<input type="checkbox" name="Feature" > optionally express delisting (fee)</br>	
+ 		 									<input type="checkbox" name="Feature" > and reverse DNS configured</br>	
+ 		 									<input type="checkbox" name="Feature" >Automatic removal as soon as Level 1 listings decrease below Level 2 listing border</br>	
+ 		 									<input type="checkbox" name="Feature" > optionally express delisting (for a fee)</br>	
+ 		 									<input type="checkbox" name="Feature" >Until 1 year after the last spam is received and a request has been made or until the "fine" is paid for express delisting</br>	
+ 		 									<input type="checkbox" name="Feature" >Automatic expiry (varies by type); webpage allows delisting</br>	
+ 		 									<input type="checkbox" name="Feature" >expiration time increases to many weeks as the fraction of IP addresses in the </br>	
+ 		 									<input type="checkbox" name="Feature" >24 block in question sending junk mail increases</br>	
+ 		 									<input type="checkbox" name="Feature" >Until delisting requested or Automated Expiry</br>	
+ 		 									<input type="checkbox" name="Feature" >Automatic: Continuous while reputation statistics remain bad. Warning: Produces false positives</br>	
+ 		 									<input type="checkbox" name="Feature" > and has no remedy</br>	
+ 		 									<input type="checkbox" name="Feature" >removal process. IPs are dropped quickly if the statistics improve (within an hour). IPs are dropped within 36 hours (typ) if no more messages are seen (dead zombie).</br>	
+ 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['100%','95%','95%','95%','100%','100%','95%','95%','100%','95%','95%','95%','95%','95%','95%','96%','100%','95%','100%','100%','100%','95%','100%','95%','100%','100%','100%','95%','100%','96%','96%','95%','95%','100%','96%','95%','100%','95%','100%','100%','100%','100%','100%','']
+            local : ['100%','95%','96%','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['CMOS','CMOS','CMOS','CMOS','CMOS','CMOS','CCD','CMOS','CMOS','CCD','JFET-LBCAST','CCD','CMOS','CMOS','CMOS','CMOS','CCD','CMOS','CMOS','CCD','CMOS','CMOS','CMOS','CMOS','CCD','JFET-LBCAST','CMOS','CCD','CMOS','CCD','CMOS','CMOS','CCD','CMOS','CCD','CMOS','CMOS','CMOS','CMOS','CCD','CCD','CMOS','CCD','']
+            local : ['Sony','Nikon','Toshiba','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['3.0" 921k dots','2.5" 230k dots','2.0" 114k dots','3.0" 230k dots','3.0" 921k dots','3.2" 921k dots','3.2" 921k dots','2.5" 230k dots','3.0" 921k dots','3.0" 921k dots','3.0" 921k dots','3.0" 921k dots','3.2" 921k dots','3.2" 921k dots','3.2" 1037k dots','2.7" 230k dots','3.0" 921k dots','3.2" 921k dots','2.5" 230k dots','1.8" 118k dots','3.2" 1229k dots','3.2" 1229k dots','2.5" 230k dots','2.5" 230k dots','3.0" 921k dots','2.5" 230k dots','3.0" 921k dots','2.0" 130k dots','3.0" 921k dots','2.0" 130k dots','3.2" 1229k dots','3.0" 230k dots','3.2" 1229k dots','2.0" 130k dots','3" 921k dots','3.2" 921k dots','1.8" 130k dots','3.2" 1037k dots','2.5" 211k dots','2.0" 130k dots','3.0" 921k dots','2.5" 235k dots','2.5" 232k dots','']
+            local : ['CMOS','CCD','JFET-LBCAST','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['1005','1005','420','420','420','1005','2016','420','91000','91000','1005','420','1005','91000','2016','1005','91000','420','1005','420','2016','1005','2016','1005','2016','1005','2016','2016','1005','420','1005','420','2016','1005','420','1005','1005','420','2016','420','1005','91000','1005','']
+            local : ['3.0" 921k dots','2.5" 230k dots','2.0" 114k dots','3.0" 230k dots','3.2" 921k dots','3.2" 1037k dots','2.7" 230k dots','1.8" 118k dots','3.2" 1229k dots','2.0" 130k dots','3" 921k dots','1.8" 130k dots','2.5" 211k dots','2.5" 235k dots','2.5" 232k dots','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['4.5','2.5','6','9','5.5','5','5','4','3','9','3','6.5','8','5','5','5.5','5','3','3','4.5','4','5','6','4','5','5','2.5','10','7','5','3','5','3','6','10','9','6','9','3','4','6','5','3','']
+            local : ['-','EXPEED 4','EXPEED','EXPEED 3','EXPEED 2','']
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['-','-','-','-','-','-','Yes (Built-in)','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','']
+            local : ['-','Yes (Built-in)','']
           });
           $("#7").typeahead({
             name:"list7",
-            local : ['51','51','5','3','51','11','11','11','5','51','51','39','51','39','11','39','11','11','3','11','51','51','11','5','51','39','39','3','51','51','11','51','5','39','51','39','5','11','5','11','11','11','5','']
+            local : ['APS-C','Full-frame','']
           });
           $("#8").typeahead({
             name:"list8",
-            local : ['APS-C','APS-C','Full-frame','APS-C','APS-C','APS-C','APS-C','APS-C','APS-C','APS-C','APS-C','APS-C','Full-frame','Full-frame','Full-frame','APS-C','APS-C','Full-frame','APS-C','APS-C','APS-C','APS-C','APS-C','APS-C','APS-C','APS-C','Full-frame','Full-frame','Full-frame','Full-frame','APS-C','APS-C','Full-frame','APS-C','APS-C','APS-C','APS-C','Full-frame','APS-C','Full-frame','APS-C','APS-C','APS-C','']
+            local : ['0.94x','0.8x','0.78x','0.7x','0.86x','0.82x','0.85x','0.75x','']
           });
           $("#9").typeahead({
             name:"list9",
-            local : ['1600','12800','3200','25600','6400','12800','1600','1600','1600','6400','12800','1600','6400','1600','3200','6400','12800','1600','6400','1600','3200','1600','800','1600','1600','25600','6400','800','3200','12800','12800','6400','12800','1600','1600','1600','3200','12800','6400','6400','1600','800','6400','']
+            local : ['D100','D40','D1','D5200','D3300','D5300','D80','D2Xs','D800','D3','D7100','D7000','D1H','D4S','D1X','D610','D200','D5000','D70','D50','D2H','D3200','D5500','D300S','D60','D3X','Df','D600','D70s','D810','D5100','D3S','D7200','D40X','D700','D3000','D90','D2X','D4','D300','D750','D2Hs','D3100','']
           });
           $("#10").typeahead({
             name:"list10",
-            local : ['2.66','12.3','14.2','12.3','10.2','16.2','12.4','24.2','24.3','24.1','16.2','6.1','16.2','24.1','10.2','10.2','6.1','16.2','12.3','36.3','6.1','6.1','4.1','12.1','36.3','24.1','24.2','24.5','12.1','4.1','24.2','24.1','10.2','6.1','16.2','24.9','10.2','12.1','2.7','5.3','12.3','12.4','24.3','']
+            local : ['-','Yes (Built-in)','']
           });
           $("#11").typeahead({
             name:"list11",
-            local : ['-','-','-','Yes (Built-in)','-','-','-','-','Yes (Built-in)','-','-','-','Yes (Built-in)','-','-','-','-','-','Yes (Built-in)','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','']
+            local : ['1999 2Q','2015 2Q','2005 4Q','2006 4Q','2003 3Q','2007 3Q','2010 3Q','2009 2Q','2014 2Q','2006 3Q','2014 1Q','2013 1Q','2004 1Q','2014 3Q','2012 3Q','2015 1Q','2006 2Q','2008 4Q','2012 1Q','2008 3Q','2011 2Q','2009 4Q','2013 4Q','2001 1Q','2008 1Q','2009 3Q','2013 3Q','2005 2Q','2005 1Q','2002 1Q','2004 3Q','2012 4Q','2007 2Q','2012 2Q','']
           });
-          $("#12").typeahead({
-            name:"list12",
-            local : ['710','550','1220','760','585','430','455','1100','540','830','485','825','700','1240','995','1070','1180','690','510','560','840','620','475','1240','1180','1070','420','455','1070','880','495','600','1100','750','480','495','1100','760','675','595','1070','900','675','']
-          });
-          $("#13").typeahead({
-            name:"list13",
-            local : ['CF, MicroDrive','SD, SDHC, SDXC','SD SDHC SDXC','CF, MicroDrive','SD/SDHC/SDXC (×2)','CF, MicroDrive','SD, SDHC','CF (x2)','CF, SDHC, SDXC','CF, XQD','CF, MicroDrive','SD','SD/SDHC/SDXC (×2)','SD/SDHC/SDXC','SD, SDHC','CF, MicroDrive','SD, SDHC','SD, SDHC, SDXC','CF, MicroDrive','CF, MicroDrive','CF, MicroDrive (x2)','CF, SD, SDHC','CF, MicroDrive','CF','SD, SDHC, SDXC','SD, SDHC, SDXC','CF, MicroDrive','SD, SDHC, SDXC','SD, SDHC, SDXC','SD, SDHC','CF, MicroDrive','SD, SDHC','CF, MicroDrive','CF','CF, MicroDrive (x2)','CF, SDHC, SDXC','SD, SDHC, SDXC','SD/SDHC/SDXC (×2)','SD, SDHC','SD, SDHC','CF, XQD','SD/SDHC/SDXC (×2)','SD/SDHC/SDXC (×2)','']
-          });
-          $("#14").typeahead({
-            name:"list14",
-            local : ['Sony','Sony','Nikon','Sony','Sony','Sony','Toshiba','Sony','Sony','Sony','Sony','Sony','Sony','Sony','Nikon','Sony','Sony','Nikon','Sony','Nikon','Sony','Sony','Sony','Sony','Nikon','Nikon','Nikon','Sony','Sony','Sony','Sony','Sony','Sony','Nikon','Sony','Sony','Sony','Nikon','Toshiba','Nikon','Nikon','Sony','Nikon','']
-          });
-          $("#15").typeahead({
-            name:"list15",
-            local : ['200','100','200','100','100','200','125','100','100','200','200','100','100','100','200','200','100','100','200','200','200','100','200','100','100','100','200','100','64','100','100','200','100','100','100','100','100','100','200','200','100','100','200','']
-          });
-          $("#16").typeahead({
-            name:"list16",
-            local : ['Yes','Yes','No','No','Yes','No','Yes','Yes','No','No','No','Yes','No','Yes','Yes','Yes','Yes','Yes','No','Yes','Yes','No','Yes','No','No','Yes','No','Yes','Yes','No','No','Yes','No','Yes','No','Yes','Yes','Yes','Yes','Yes','Yes','No','Yes','']
-          });
-          $("#17").typeahead({
-            name:"list17",
-            local : ['50','100','100','200','200','100','50','100','100','100','200','100','32','100','100','100','200','200','100','200','100','200','200','100','50','50','50','100','100','100','125','100','100','100','50','50','100','100','100','50','200','100','100','']
-          });
-          $("#18").typeahead({
-            name:"list18",
-            local : ['-','-','EXPEED 4','EXPEED','-','-','-','-','-','EXPEED 3','EXPEED','EXPEED','EXPEED 3','-','EXPEED 4','EXPEED 3','EXPEED','-','EXPEED 4','EXPEED 3','EXPEED 3','-','EXPEED','-','EXPEED 2','EXPEED','EXPEED','EXPEED','EXPEED 3','EXPEED 4','EXPEED 2','-','EXPEED','EXPEED 4','-','EXPEED 3','EXPEED 3','EXPEED 4','EXPEED','EXPEED 2','EXPEED 4','-','-','']
-          });
-          $("#19").typeahead({
-            name:"list19",
-            local : ['147 × 114 × 74','146 x 123 x 81.5','132 × 103 × 77','133 × 102 × 76','157 × 153 × 86','158 × 150 × 86','140 × 112 × 79','127 × 104 × 80','147 × 123 × 77','135.5 x 106.5 x 76','140 × 111 × 78','126 × 94 × 64','158 × 150 × 86','160 × 157 × 88','150.5 × 113 × 78','132 × 103 × 77','127 × 97 × 79','144 × 110 × 67','158 × 150 × 86','124 × 97 × 70','145 × 122 × 81','147 × 113 × 74','129 × 98 × 78','126 × 94 × 64','126 × 94 × 64','160 × 157 × 88','132 × 103 × 77','160 × 157 × 88','125 × 98 × 76','135.5 x 106.5 x 76','115 × 117 × 81','147 × 114 × 74','124 x 98 x 76','125 × 97 × 74','157 × 153 × 86','160 × 157 × 91','126 × 94 × 64','160 × 157 × 91','157 × 153 × 85','141 × 113 × 82','158 × 150 × 86','141 × 113 × 82','125 x 96 x 77','']
-          });
-          $("#20").typeahead({
-            name:"list20",
-            local : ['3200','25600','12800','25600','6400','3200','25600','409600','204800','1600','6400','12800','1600','25600','800','204800','3200','1600','800','102400','25600','6400','6400','1600','25600','6400','1600','1600','102400','51200','51200','1600','1600','25600','3200','25600','25600','6400','3200','25600','1600','25600','25600','']
-          });
-          $("#21").typeahead({
-            name:"list21",
-            local : ['0.94x','0.8x','0.94x','0.78x','0.8x','0.8x','0.7x','0.7x','0.86x','0.78x','0.8x','0.82x','0.94x','0.94x','0.86x','0.94x','0.8x','0.8x','0.94x','0.7x','0.78x','0.7x','0.86x','0.8x','0.94x','0.8x','0.85x','0.7x','0.7x','0.7x','0.7x','0.75x','0.94x','0.7x','0.8x','0.82x','0.7x','0.7x','0.75x','0.75x','0.8x','0.86x','0.7x','']
-          });
-          $("#22").typeahead({
-            name:"list22",
-            local : ['D100','D40','D1','D5200','D3300','D5300','D80','D2Xs','D800','D3','D7100','D7000','D1H','D4S','D1X','D610','D200','D5000','D70','D50','D2H','D3200','D5500','D300S','D60','D3X','Df','D600','D70s','D810','D5100','D3S','D7200','D40X','D700','D3000','D90','D2X','D4','D300','D750','D2Hs','D3100','']
-          });
-          $("#23").typeahead({
-            name:"list23",
-            local : ['Yes','No','Yes','Yes','Yes','No','Yes','No','No','No','No','No','Yes','No','Yes','No','No','Yes','No','No','Yes','No','Yes','No','Yes','No','No','No','No','Yes','Yes','No','Yes','Yes','No','Yes','Yes','Yes','No','Yes','Yes','Yes','No','']
-          });
-          $("#24").typeahead({
-            name:"list24",
-            local : ['1999 2Q','2015 2Q','2005 4Q','2006 4Q','2003 3Q','2007 3Q','2010 3Q','2009 2Q','2014 2Q','2006 3Q','2014 1Q','2013 1Q','2004 1Q','2014 3Q','2012 3Q','2015 1Q','2006 2Q','2010 3Q','2008 4Q','2012 1Q','2008 3Q','2007 3Q','2011 2Q','2009 4Q','2013 4Q','2014 1Q','2001 1Q','2008 1Q','2009 3Q','2013 3Q','2008 3Q','2005 2Q','2009 3Q','2005 2Q','2001 1Q','2012 1Q','2013 4Q','2005 1Q','2002 1Q','2004 3Q','2012 4Q','2007 2Q','2012 2Q','']
-          });
-        </script>
-		
+    </script>
+    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
+		</form></fieldset>
+		</div>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+		</div>
 </body>
 </html>
