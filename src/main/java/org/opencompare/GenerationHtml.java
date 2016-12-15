@@ -44,7 +44,6 @@ public class GenerationHtml {
 		ajoutVar.put("allContentsCell", this.traitPcm.getAllContentsCell());
 		ajoutVar.put("ListMultiple",this.traitPcm.getContentsTypeMultiple());
 		ajoutVar.put("getAllTypesValue", this.traitPcm.getAllTypesValue());
-		//ajoutVar.put("type", this.traitPcm.getTrueType());
 		// Création html
 		File file = new File(this.output);
 		FileWriter writer = null;

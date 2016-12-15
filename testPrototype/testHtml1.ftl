@@ -44,10 +44,13 @@
  		 					<label>${key} :</label> <br/><br/><input type="${value}" name="Feature">  Condition : <input type="text" name="Feature"></br></br>
 					<#elseif value == "checkbox">
 							<label>${key} :</label><br/><br/>
+							
  		 					 <#list ListMultiple as keys, valueMultiple>
+ 		 					 	<#if key == keys>
  		 								<#list valueMultiple as valuemiltipe>
  		 									<input type="${value}" name="Feature" >${valuemiltipe}		
 					       				</#list>
+					       				</#if>
 						   			</#list>
 								<#list getAllTypesValue as keys, valueAll>
 						    			<#list valueAll as valueAll>
@@ -57,6 +60,7 @@
 					       	            </#list>
 					       	           <#break>
 								</#list>
+								
 					<#else>
 					<br/><br/>
 							<label>${key} : </label><br/><br/> <input id="${i}" type="${value}" name="Feature"></br>
