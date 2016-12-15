@@ -222,7 +222,6 @@ public class TraitementPcm {
 				}
 			}
 		}
-		System.out.println(feat_contentMultiple);
 		return feat_contentMultiple;
 	}
 

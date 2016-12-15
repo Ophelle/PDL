@@ -29,41 +29,55 @@
 				<#list bestType as key, value>
 					<#assign i++>
 					<#if value == "radio">
- 		 					<label>${key} :</label><br/>
- 		 					 <input type="${value}" name="Feature${key}" value="oui">oui <input type="${value}" name="Feature${key}" value = "non">non </br></br>
+						</br>	
+ 		 					<label>${key} :</label></br>
+ 		 					 <input type="${value}" name="Feature${key}" value="oui">oui <input type="${value}" name="Feature${key}" value = "non">non </br>
 								<#list getAllTypesValue as keys, valueAll>
 									
 						    			<#list valueAll as valueAll>
  		 									<#if valueAll=="string" >
- 		 								 		<label>Autre</label><br/><br/><input type="text"/><#break><br/><br/>
+ 		 								 		<input type="text"/></br><#break>
  		 									</#if>		
 					       				</#list>
 					       				<#break>
 								</#list>
 					<#elseif value == "conditional">
- 		 					<label>${key} :</label> <br/><br/><input type="${value}" name="Feature">  Condition : <input type="text" name="Feature"></br></br>
+						</br>	
+ 		 					<label>${key} :</label> </br><input type="${value}" name="Feature">  Condition : <input type="text" name="Feature"></br>
 					<#elseif value == "checkbox">
-							<label>${key} :</label><br/><br/>
+						</br>	
+							<label>${key} :</label></br>
 							
  		 					 <#list ListMultiple as keys, valueMultiple>
  		 					 	<#if key == keys>
  		 								<#list valueMultiple as valuemiltipe>
- 		 									<input type="${value}" name="Feature" >${valuemiltipe}		
+ 		 									<input type="${value}" name="Feature" >${valuemiltipe}</br>	
 					       				</#list>
 					       				</#if>
 						   			</#list>
 								<#list getAllTypesValue as keys, valueAll>
 						    			<#list valueAll as valueAll>
  		 									<#if valueAll=="string" >
- 		 										<label>Autre</label><br/><input type="text"/> <#break>
+ 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> <#break>
  		 									</#if>		
 					       	            </#list>
 					       	           <#break>
 								</#list>
 								
 					<#else>
-					<br/><br/>
-							<label>${key} : </label><br/><br/> <input id="${i}" type="${value}" name="Feature"></br>
+						</br>	
+							<label>${key} : </label></br> <input id="${i}" type="${value}" name="Feature"></br>
+							
+							<#list getAllTypesValue as keys, valueAll>
+						    			<#list valueAll as valueAll>
+ 		 									<#if value != "text">
+ 		 										<#if valueAll=="string">
+ 		 								 		<input type="text"/></br><#break>
+ 		 										</#if>		
+ 		 									</#if>		
+					       				</#list>
+					       				<#break>
+								</#list>
 					</#if>
 				</#list>
 		<script>
