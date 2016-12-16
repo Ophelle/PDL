@@ -42,8 +42,22 @@ public class TraitementPcm {
 
 	public TraitementPcm(File file) {
 		this.loadPcm(file);
-		this.allContentsOfEachCell = getAllContentsOfEachCell(this.listFeatures);
+	}
+	
+	public void loadPcm(File file) {
+		this.file = file;
+		PCMLoader loader = new KMFJSONLoader();
+		try {
+			this.pcm = loader.load(file).get(0).getPcm();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		this.namePcm = this.pcm.getName();
+		this.listFeatures = this.pcm.getConcreteFeatures();
+		this.allTypesOfFeature = getAllTypesOfFeature(this.listFeatures);
+		this.bestTypeForEachFeature = getBestTypeForEachFeature(this.allTypesOfFeature);
 		this.contentsTypeMultiple = contentsTypeMultiple(this.listFeatures);
+		this.allContentsOfEachCell = getAllContentsOfEachCell(this.listFeatures);
 	}
 
 	public PCM getPcm() {
@@ -106,22 +120,7 @@ public class TraitementPcm {
 		this.bestTypeForEachFeature = bestTypes;
 	}
 
-	public void loadPcm(File file) {
-		this.file = file;
-		PCMLoader loader = new KMFJSONLoader();
-		try {
-			this.pcm = loader.load(file).get(0).getPcm();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		this.namePcm = this.pcm.getName();
-		this.listFeatures = this.pcm.getConcreteFeatures();
-		this.allTypesOfFeature = getAllTypesOfFeature(this.listFeatures);
-		this.bestTypeForEachFeature = getBestTypeForEachFeature(this.allTypesOfFeature);
-		this.contentsTypeMultiple = contentsTypeMultiple(this.listFeatures);
-	}
-
-	public static String valueToString(Value kValue) {
+	public String valueToString(Value kValue) {
 		if (kValue == null) {
 			return "string";
 		} else if (kValue instanceof BooleanValue) {

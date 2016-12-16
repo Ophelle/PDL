@@ -7,8 +7,6 @@ import java.io.IOException;
 
 import org.junit.Test;
 
-import freemarker.template.TemplateException;
-
 public class GenerationHtmlTest{
 	
 	File file;

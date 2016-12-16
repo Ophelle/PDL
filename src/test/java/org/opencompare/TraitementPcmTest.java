@@ -3,28 +3,10 @@ package org.opencompare;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.opencompare.api.java.Cell;
-import org.opencompare.api.java.Feature;
-import org.opencompare.api.java.PCM;
 import org.opencompare.api.java.PCMElement;
 import org.opencompare.api.java.PCMFactory;
 import org.opencompare.api.java.Value;
-import org.opencompare.api.java.impl.io.KMFJSONLoader;
-import org.opencompare.api.java.io.PCMLoader;
 import org.opencompare.api.java.util.PCMVisitor;
-import org.opencompare.api.java.value.BooleanValue;
-import org.opencompare.api.java.value.Conditional;
-import org.opencompare.api.java.value.DateValue;
-import org.opencompare.api.java.value.Dimension;
-import org.opencompare.api.java.value.IntegerValue;
-import org.opencompare.api.java.value.Multiple;
-import org.opencompare.api.java.value.NotApplicable;
-import org.opencompare.api.java.value.NotAvailable;
-import org.opencompare.api.java.value.Partial;
-import org.opencompare.api.java.value.RealValue;
-import org.opencompare.api.java.value.StringValue;
-import org.opencompare.api.java.value.Unit;
-import org.opencompare.api.java.value.Version;
 
 import static org.junit.Assert.assertEquals;
 
@@ -80,8 +62,8 @@ public class TraitementPcmTest {
 
 	@Test
     public void GetAndSetAllContentsCell() throws IOException {
-		List<String> list1 = new ArrayList();
-		List<String> list2 = new ArrayList();
+		List<String> list1 = new ArrayList<>();
+		List<String> list2 = new ArrayList<>();
 		Map<String, List<String>> map = new HashMap<String, List<String>>();
 		list1.add("10 pouces");
 		list1.add("10 pouces");
@@ -113,8 +95,8 @@ public class TraitementPcmTest {
 	
 	@Test
     public void GetAndSetContentsTypeMultiple() throws IOException {
-		List<String> list1 = new ArrayList();
-		List<String> list2 = new ArrayList();
+		List<String> list1 = new ArrayList<>();
+		List<String> list2 = new ArrayList<>();
 		Map<String, List<String>> map = new HashMap<String, List<String>>();
 		list1.add("10 pouces");
 		list1.add("10 pouces");
@@ -224,8 +206,7 @@ public class TraitementPcmTest {
   
    public void assertValueToType(Value value, String expectedResult) {
    
-         final String result =
-                 traitementpcm.valueToString(value);
+         final String result = traitementpcm.valueToString(value);
           Assert.assertEquals(expectedResult, result);
       }
      
@@ -242,6 +223,5 @@ public class TraitementPcmTest {
     	  traitementpcm.setTypeForHtml("conditional");
        }
      }
-
 
 
