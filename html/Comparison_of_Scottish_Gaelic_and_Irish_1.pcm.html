@@ -32,36 +32,11 @@
 							<label>Scottish Gaelic : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Notes :</label></br>
+							<label>Notes : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Also</br>	
- 		 									<input type="checkbox" name="Feature" > cainnt in Scottish Gaelic. Bruíon (formerly bruighean) in Irish means "fighting"</br>	
- 		 									<input type="checkbox" name="Feature" > "quarrelling"</br>	
- 		 									<input type="checkbox" name="Feature" >In Classical Irish the forms were "i"</br>	
- 		 									<input type="checkbox" name="Feature" > "a"</br>	
- 		 									<input type="checkbox" name="Feature" > "in"</br>	
- 		 									<input type="checkbox" name="Feature" > "an" – "i</br>	
- 		 									<input type="checkbox" name="Feature" >in" when the following sound was slender</br>	
- 		 									<input type="checkbox" name="Feature" > and "a</br>	
- 		 									<input type="checkbox" name="Feature" >an" when the following sound was broad.  In both Irish and Scottish</br>	
- 		 									<input type="checkbox" name="Feature" > in the spoken language</br>	
- 		 									<input type="checkbox" name="Feature" > the four forms of "i"</br>	
- 		 									<input type="checkbox" name="Feature" > "an" still exist.</br>	
- 		 									<input type="checkbox" name="Feature" >In Irish</br>	
- 		 									<input type="checkbox" name="Feature" > aire for a government minister</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Irish :</label></br>
+							<label>Irish : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Meiriceá</br>	
- 		 									<input type="checkbox" name="Feature" > Meirice</br>	
- 		 									<input type="checkbox" name="Feature" >i</br>	
- 		 									<input type="checkbox" name="Feature" > in</br>	
- 		 									<input type="checkbox" name="Feature" >bóthar</br>	
- 		 									<input type="checkbox" name="Feature" >ród</br>	
- 		 									<input type="checkbox" name="Feature" >ministir</br>	
- 		 									<input type="checkbox" name="Feature" > ministéir</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -70,6 +45,14 @@
           $("#2").typeahead({
             name:"list2",
             local : ['cnatan','A' Ghearmailt','Ameireaga','Lunnain','ministear','bruidhinn','rathad','(ann) an','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['','Also, cainnt in Scottish Gaelic. Bruíon (formerly bruighean) in Irish means "fighting", "quarrelling"','In Classical Irish the forms were "i", "a", "in", "an" – "i/in" when the following sound was slender, and "a/an" when the following sound was broad.  In both Irish and Scottish, in the spoken language, the four forms of "i", "a", "in", "an" still exist.','Meaning illness','In Irish, aire for a government minister','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Meiriceá, Meirice','Londain','i, in','An Ghearmáin','slaghdán','bóthar/ród','ministir, ministéir','ag caint','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

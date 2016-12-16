@@ -26,68 +26,44 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Remote controllable : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Outbound streaming : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Remote controllable :</label></br>
+ 		 					 <input type="radio" name="FeatureRemote controllable" value="oui">oui <input type="radio" name="FeatureRemote controllable" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Outbound streaming :</label></br>
+ 		 					 <input type="radio" name="FeatureOutbound streaming" value="oui">oui <input type="radio" name="FeatureOutbound streaming" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Audio player : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Gapless audio decoding : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Media database : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Video playback : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Skinnable : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Visualizer : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Intelligent playlists from database (based on criteria) : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>Gapless audio decoding :</label></br>
+ 		 					 <input type="radio" name="FeatureGapless audio decoding" value="oui">oui <input type="radio" name="FeatureGapless audio decoding" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Media database :</label></br>
+ 		 					 <input type="radio" name="FeatureMedia database" value="oui">oui <input type="radio" name="FeatureMedia database" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Video playback :</label></br>
+ 		 					 <input type="radio" name="FeatureVideo playback" value="oui">oui <input type="radio" name="FeatureVideo playback" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Skinnable :</label></br>
+ 		 					 <input type="radio" name="FeatureSkinnable" value="oui">oui <input type="radio" name="FeatureSkinnable" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Visualizer :</label></br>
+ 		 					 <input type="radio" name="FeatureVisualizer" value="oui">oui <input type="radio" name="FeatureVisualizer" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Intelligent playlists from database (based on criteria) :</label></br>
+ 		 					 <input type="radio" name="FeatureIntelligent playlists from database (based on criteria)" value="oui">oui <input type="radio" name="FeatureIntelligent playlists from database (based on criteria)" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Partial','No','Yes','?','via Plugins','Remote controllable','Yes (also LCD ability)','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['No','Yes','Partial','?','via Plugins','Outbound streaming','']
-          });
-          $("#3").typeahead({
-            name:"list3",
             local : ['MPXPLAY','XMMS','Audacious','Musicmatch Jukebox','JuK','MediaMonkey','Sonique','Audion','Cog','Quod Libet','Music Player Daemon','Zinf','Amarok','cmus','MusicBee','Rhythmbox','Exaile','AIMP','XMPlay','Clementine','Audio player','foobar2000','Rhapsody','Winamp','Spotify','musikCube','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','No','Gapless audio decoding','?','Partial','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes','Media database','No','?','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['No','Partial','Video playback','Only sound output','?','Yes','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['No','Yes','Partial','?','text-interface','Skinnable','Client dependent','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['No','Yes','Partial','Visualizer','Client dependent','?','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['Yes','Intelligent playlists from database (based on criteria)','No','Client dependent','?','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

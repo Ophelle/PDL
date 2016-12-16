@@ -30,8 +30,9 @@
  		 					 <input type="radio" name="FeatureData access - Cell security" value="oui">oui <input type="radio" name="FeatureData access - Cell security" value = "non">non </br>
 									
 						</br>	
-							<label>Data access - Visual totals : </label></br> <input id="2" type="text" name="Feature"></br>
-							
+ 		 					<label>Data access - Visual totals :</label></br>
+ 		 					 <input type="radio" name="FeatureData access - Visual totals" value="oui">oui <input type="radio" name="FeatureData access - Visual totals" value = "non">non </br>
+									
 						</br>	
 							<label>Authentication :</label></br>
 							
@@ -65,26 +66,23 @@ Microsoft Active Directory</br>
  		 					 <input type="radio" name="FeatureData access - Dimension security" value="oui">oui <input type="radio" name="FeatureData access - Dimension security" value = "non">non </br>
 									
 						</br>	
-							<label>Network encryption :</label></br>
+							<label>Network encryption : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >SSL</br>	
- 		 									<input type="checkbox" name="Feature" > AES</br>	
- 		 									<input type="checkbox" name="Feature" >SSL and SSPI</br>	
-								
 						</br>	
 							<label>OLAP Server : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>On-the-Fly : </label></br> <input id="7" type="text" name="Feature"></br>
-							
+ 		 					<label>On-the-Fly :</label></br>
+ 		 					 <input type="radio" name="FeatureOn-the-Fly" value="oui">oui <input type="radio" name="FeatureOn-the-Fly" value = "non">non </br>
+									
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['SAS OLAP Server','MicroStrategy Intelligence Server','Oracle Database OLAP Option','Infor BI OLAP Server','TM1','Microsoft Analysis Services','Essbase','icCube','Jedox OLAP Server','']
+            local : ['SSL','SSL, AES','Yes','SSL and SSPI','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','?','']
+            local : ['SAS OLAP Server','MicroStrategy Intelligence Server','Oracle Database OLAP Option','Infor BI OLAP Server','TM1','Microsoft Analysis Services','Essbase','icCube','Jedox OLAP Server','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

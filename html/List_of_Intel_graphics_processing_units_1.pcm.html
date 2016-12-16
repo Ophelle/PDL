@@ -43,9 +43,9 @@ pipelines : </label></br> <input id="3" type="number" name="Feature"></br>
 							
 						</br>	
 							<label>Memory bandwidth 
-(GB/s) : </label></br> <input id="6" type="number" name="Feature"></br>
+(GB/s) : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Market : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
@@ -71,8 +71,9 @@ clock (MHz) : </label></br> <input id="11" type="number" name="Feature"></br>
 							<label>Graphics : </label></br> <input id="12" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>API support - OpenCL : </label></br> <input id="13" type="number" name="Feature"></br>
-							
+ 		 					<label>API support - OpenCL :</label></br>
+ 		 					 <input type="radio" name="FeatureAPI support - OpenCL" value="oui">oui <input type="radio" name="FeatureAPI support - OpenCL" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>						</br>	
 							<label>Code name : </label></br> <input id="14" type="text" name="Feature"></br>
 							
@@ -101,14 +102,18 @@ clock (MHz) : </label></br> <input id="11" type="number" name="Feature"></br>
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Desktop','Mobile','']
+            local : ['2.1','','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Extreme Graphics','Extreme Graphics 2','']
+            local : ['Desktop','Mobile','']
           });
           $("#4").typeahead({
             name:"list4",
+            local : ['Extreme Graphics','Extreme Graphics 2','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['Springdale','Almador','Brookdale','Montara','']
           });
     </script>

@@ -26,15 +26,12 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Bus interface :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >AGP 4x</br>	
- 		 									<input type="checkbox" name="Feature" > PCI</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Products : </label></br> <input id="2" type="text" name="Feature"></br>
+							<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
+							<label>Products : </label></br> <input id="2" type="aaaa" name="Feature"></br>
+							
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Memory clock (MHz) : </label></br> <input id="3" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -50,12 +47,15 @@
 							<label>Fillrate - MTexels/s : </label></br> <input id="7" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Memory (MB) : </label></br> <input id="8" type="number" name="Feature"></br>
+							<label>Memory (MB) :</label></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Launch : </label></br> <input id="9" type="number" name="Feature"></br>
+ 		 									<input type="checkbox" name="Feature" >32</br>	
+ 		 									<input type="checkbox" name="Feature" > 64</br>	
+ 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
+							<label>Launch : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Fillrate - MPixels/s : </label></br> <input id="10" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -96,11 +96,15 @@
  		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['P8','P1','P6','P2','P4','P5','P9','P3','P7','P10','']
+            local : ['AGP 4x','AGP 4x, PCI','Bus interface','']
           });
           $("#2").typeahead({
             name:"list2",
             local : ['2:0:6:2','Config core','1:0:3:1','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['2001','May 1, 2001','June 2000','N/A','Launch','Feb 19, 2001','April 2000','Aug 14, 2001','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

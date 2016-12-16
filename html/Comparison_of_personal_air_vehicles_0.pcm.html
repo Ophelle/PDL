@@ -26,11 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Speed :</label></br>
+							<label>Speed : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >? km</br>	
- 		 									<input type="checkbox" name="Feature" >h</br>	
-								
 						</br>	
 							<label>Type : </label></br> <input id="2" type="text" name="Feature"></br>
 							
@@ -60,14 +57,18 @@ capable" value = "non">non </br>
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Motor glider','Ultra-light','']
+            local : ['? km/h','186 mph (299 km/h)','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Distar UFM-13 Lambada','Pipistrel Virus','']
+            local : ['Motor glider','Ultra-light','']
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['Distar UFM-13 Lambada','Pipistrel Virus','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['882 mi (1,419 km)','','']
           });
     </script>

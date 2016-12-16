@@ -34,8 +34,9 @@
  		 					 <input type="radio" name="FeatureFAT12" value="oui">oui <input type="radio" name="FeatureFAT12" value = "non">non </br>
 									
 						</br>	
-							<label>HPFS : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>HPFS :</label></br>
+ 		 					 <input type="radio" name="FeatureHPFS" value="oui">oui <input type="radio" name="FeatureHPFS" value = "non">non </br>
+									
 						</br>	
 							<label>UDF (More Info) : </label></br> <input id="4" type="text" name="Feature"></br>
 							
@@ -57,14 +58,10 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Partial','Yes','']
+            local : ['Yes','Yes (2.6)','?','Yes (2.01)','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','Yes (2.6)','?','Yes (2.01)','']
-          });
-          $("#3").typeahead({
-            name:"list3",
             local : ['Yes v5','Yes v3.1','Yes v1.2','Yes v1.0/v1.1','Yes v3.0','']
           });
     </script>

@@ -39,35 +39,40 @@
  		 									<input type="checkbox" name="Feature" >Linux</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Version : </label></br> <input id="3" type="number" name="Feature"></br>
+							<label>Version : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>License :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >GPL </br>	
- 		 									<input type="checkbox" name="Feature" > LGPL</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Developer :</label></br>
+							<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Patrick Luby and Edward Peterlin</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
+							<label>Developer : </label></br> <input id="5" type="text" name="Feature"></br>
+							
 						</br>	
 							<label>Notes : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>ISO/IEC 26300:2006 :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >ISO</br>	
- 		 									<input type="checkbox" name="Feature" >IEC 26300:2006</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-		<script>
+ 		 					<label>ISO/IEC 26300:2006 :</label></br>
+ 		 					 <input type="radio" name="FeatureISO/IEC 26300:2006" value="oui">oui <input type="radio" name="FeatureISO/IEC 26300:2006" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['Calligra Suite','Office suite','KOffice','IBM Workplace Collaboration Services','NeoOffice','IBM Lotus Symphony','Standalone','Microsoft Office','LibreOffice','StarOffice','OpenOffice.org','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['1.2','1.0+','2.2.5','3.3.0','1.4+','8','2.4+','2.5+','2006','2.0+','Version','2007 SP2','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['GPL / LGPL','Proprietary','LGPL','GPL','License','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Microsoft','KDE Project','Patrick Luby and Edward Peterlin','Sun Microsystems','LibreOffice','AdventNet','IBM','OpenOffice.org','Developer','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['','Notes','no longer being actively marketed','Import only','']
           });
     </script>

@@ -32,24 +32,25 @@
 							<label>namespace member : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>class member :</label></br>
+							<label>class member : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >INVOKE cls "method" «USING parameters» «RETURNING result» or
-
-cls::"method"«(«parameters»)» or
-
-property OF cls</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>object member - method :</label></br>
+							<label>object member - method : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>object member - property : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['','N/A','INVOKE cls "method" «USING parameters» «RETURNING result» or
+
+cls::"method"«(«parameters»)» or
+
+property OF cls','']
+          });
+          $("#2").typeahead({
+            name:"list2",
             local : ['','N/A','']
           });
     </script>

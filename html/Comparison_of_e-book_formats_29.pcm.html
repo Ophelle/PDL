@@ -26,59 +26,54 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Filename extension :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >.tr2</br>	
- 		 									<input type="checkbox" name="Feature" > .tr3</br>	
- 		 									<input type="checkbox" name="Feature" >.oxps</br>	
- 		 									<input type="checkbox" name="Feature" > .xps</br>	
- 		 									<input type="checkbox" name="Feature" >.prc</br>	
- 		 									<input type="checkbox" name="Feature" > .mobi</br>	
- 		 									<input type="checkbox" name="Feature" >.cbr</br>	
- 		 									<input type="checkbox" name="Feature" > .cbz</br>	
- 		 									<input type="checkbox" name="Feature" > .cb7</br>	
- 		 									<input type="checkbox" name="Feature" > .cbt</br>	
- 		 									<input type="checkbox" name="Feature" > .cba</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Book- marking : </label></br> <input id="2" type="text" name="Feature"></br>
+							<label>Filename extension : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
+ 		 					<label>Book- marking :</label></br>
+ 		 					 <input type="radio" name="FeatureBook- marking" value="oui">oui <input type="radio" name="FeatureBook- marking" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
  		 					<label>Image support :</label></br>
  		 					 <input type="radio" name="FeatureImage support" value="oui">oui <input type="radio" name="FeatureImage support" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Embedded annotation support : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Embedded annotation support :</label></br>
+ 		 					 <input type="radio" name="FeatureEmbedded annotation support" value="oui">oui <input type="radio" name="FeatureEmbedded annotation support" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
  		 					<label>Open standard :</label></br>
  		 					 <input type="radio" name="FeatureOpen standard" value="oui">oui <input type="radio" name="FeatureOpen standard" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Interactivity support : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Table support : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Interactivity support :</label></br>
+ 		 					 <input type="radio" name="FeatureInteractivity support" value="oui">oui <input type="radio" name="FeatureInteractivity support" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Table support :</label></br>
+ 		 					 <input type="radio" name="FeatureTable support" value="oui">oui <input type="radio" name="FeatureTable support" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Format : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Word wrap support : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Sound support : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>DRM support : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Word wrap support :</label></br>
+ 		 					 <input type="radio" name="FeatureWord wrap support" value="oui">oui <input type="radio" name="FeatureWord wrap support" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Sound support :</label></br>
+ 		 					 <input type="radio" name="FeatureSound support" value="oui">oui <input type="radio" name="FeatureSound support" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>DRM support :</label></br>
+ 		 					 <input type="radio" name="FeatureDRM support" value="oui">oui <input type="radio" name="FeatureDRM support" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Video support : </label></br> <input id="12" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','?','No','Yes/No','']
+            local : ['.ibook','.tr2, .tr3','.pkg','.exe','.ps','.epub','.fb2','.oxps, .xps','.azw','.html','.lit','.docx','.pdb','.txt','.prc, .mobi','.pdf','.doc','.djvu','.cbr, .cbz, .cb7, .cbt, .cba','']
           });
           $("#2").typeahead({
             name:"list2",
@@ -86,30 +81,6 @@
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes','Yes/No','No','?','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['No','Yes','Yes/No','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['No','?','Yes','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['?','Yes','No','Yes/No','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['No','Yes','?','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['Yes','?','No','']
-          });
-          $("#9").typeahead({
-            name:"list9",
             local : ['?','Yes','No','']
           });
     </script>

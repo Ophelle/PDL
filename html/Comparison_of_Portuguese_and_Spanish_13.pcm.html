@@ -26,20 +26,11 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Latin :</label></br>
+							<label>Latin : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >cl-</br>	
- 		 									<input type="checkbox" name="Feature" > fl-</br>	
- 		 									<input type="checkbox" name="Feature" > pl-</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Spanish :</label></br>
+							<label>Spanish : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >ll- or pl</br>	
- 		 									<input type="checkbox" name="Feature" >h- 
- (later silent) 
- or f-</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Portuguese : </label></br> <input id="3" type="text" name="Feature"></br>
 							
@@ -104,17 +95,50 @@ filivm → S. hijo</br>
  		 									<input type="checkbox" name="Feature" > P. filho</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Meaning :</label></br>
+							<label>Meaning : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >'already' 
-
-'to lie</br>	
- 		 									<input type="checkbox" name="Feature" > as in a grave'</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['-it-','-lh-','-nh-','ja-','ch-','-l-','(elided)','-n-','f-','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['-li-','-ll-','-l-','-nn-','-lt-,','-n-','cl-, fl-, pl-','-ni-','f-','j(a)-','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['-j-','ll- or pl','h- 
+ (later silent) 
+ or f-','-n-','-l-','-ñ-','-ch-','ya-','-ll-','-ni-','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : [''much' 
+
+'night' 
+
+'chest'',''to call' 
+
+'lead' (metal) 
+
+'flame' 
+
+'full'',''sky' 
+ 
+'to fly'',''June'',''year' 
+
+'reed'',''to speak' 
+ 
+'son' 
+
+'fire'',''garlic' 
+
+'son'',''already' 
+
+'to lie, as in a grave'',''castle'',''general' (adj.) 
+
+'to have'','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

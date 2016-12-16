@@ -32,11 +32,8 @@
 							<label>Camera model : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Adjustment :</label></br>
+							<label>Adjustment : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >manually while running or in standby</br>	
- 		 									<input type="checkbox" name="Feature" >electronic or manually while running or in standby</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Angles :</label></br>
 							
@@ -74,12 +71,10 @@
  		 									<input type="checkbox" name="Feature" >160°; many conversions for different angles</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Reflex? :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >No</br>	
- 		 									<input type="checkbox" name="Feature" > but many conversions</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
+ 		 					<label>Reflex? :</label></br>
+ 		 					 <input type="radio" name="FeatureReflex?" value="oui">oui <input type="radio" name="FeatureReflex?" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Location : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 		<script>
@@ -93,6 +88,10 @@
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['manual','electronic','manually while running or in standby','fixed','electronic or manually while running or in standby','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['Underneath gate','Beside gate','']
           });
     </script>

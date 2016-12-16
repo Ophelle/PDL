@@ -262,19 +262,14 @@
 							<label>PDF : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Program :</label></br>
+							<label>Program : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Windows Picture and Fax Viewer</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>BMP : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>GIF :</label></br>
+							<label>GIF : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >GIF</br>	
- 		 									<input type="checkbox" name="Feature" >aGIF</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>PNG : </label></br> <input id="8" type="text" name="Feature"></br>
 							
@@ -282,14 +277,8 @@
 							<label>JPEG : </label></br> <input id="9" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Comic book :</label></br>
+							<label>Comic book : </label></br> <input id="10" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >CBZ</br>	
- 		 									<input type="checkbox" name="Feature" > CBR</br>	
- 		 									<input type="checkbox" name="Feature" > CB7</br>	
- 		 									<input type="checkbox" name="Feature" > CBT</br>	
- 		 									<input type="checkbox" name="Feature" > CBA</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -305,15 +294,27 @@
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['','BMP','']
+            local : ['Aperture','Geeqie','Lphoto','CDisplay','Simple Comic','Gwenview','Program','Picasa','Adobe Bridge','Comix','Gonvisor','ImageAXS','Firehand Ember','KPhotoAlbum','XnView','IrfanView','Photos','digiKam','ACDSee','Phase One Media Pro','IMatch','Shotwell','KSquirrel','STDU Viewer','Windows Picture and Fax Viewer','FastPictureViewer','Zoner Photo Studio','GraphicConverter','Eye of GNOME','Preview','Xv','gThumb','iPhoto','F-Spot','FastStone Image Viewer','ResourceSpace','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['PNG','','PNG (with patch)','']
+            local : ['','BMP','']
           });
           $("#6").typeahead({
             name:"list6",
+            local : ['','GIF','GIF/aGIF','']
+          });
+          $("#7").typeahead({
+            name:"list7",
+            local : ['PNG','','PNG (with patch)','']
+          });
+          $("#8").typeahead({
+            name:"list8",
             local : ['','JPEG','JPEG (IPTC&Exif)','']
+          });
+          $("#9").typeahead({
+            name:"list9",
+            local : ['','CBZ, CBR, CB7','CBZ, CBR, CBT, CBA','Comic book','CBZ, CBR, CBA, CB7','CBZ, CBR, CBT','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

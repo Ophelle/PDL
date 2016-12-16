@@ -26,51 +26,32 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Partition : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>Partition :</label></br>
+ 		 					 <input type="radio" name="FeaturePartition" value="oui">oui <input type="radio" name="FeaturePartition" value = "non">non </br>
+									
 						</br>	
-							<label>Swap space : </label></br> <input id="2" type="text" name="Feature"></br>
-							
+ 		 					<label>Swap space :</label></br>
+ 		 					 <input type="radio" name="FeatureSwap space" value="oui">oui <input type="radio" name="FeatureSwap space" value = "non">non </br>
+									
 						</br>	
-							<label>Whole disk : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>Whole disk :</label></br>
+ 		 					 <input type="radio" name="FeatureWhole disk" value="oui">oui <input type="radio" name="FeatureWhole disk" value = "non">non </br>
+									
 						</br>	
-							<label>Hibernation file : </label></br> <input id="4" type="text" name="Feature"></br>
-							
+ 		 					<label>Hibernation file :</label></br>
+ 		 					 <input type="radio" name="FeatureHibernation file" value="oui">oui <input type="radio" name="FeatureHibernation file" value = "non">non </br>
+									
 						</br>	
-							<label>File : </label></br> <input id="5" type="text" name="Feature"></br>
-							
+ 		 					<label>File :</label></br>
+ 		 					 <input type="radio" name="FeatureFile" value="oui">oui <input type="radio" name="FeatureFile" value = "non">non </br>
+									
 						</br>	
-							<label>Name :</label></br>
+							<label>Name : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >softraid </br>	
- 		 									<input type="checkbox" name="Feature" > RAID C</br>	
- 		 									<input type="checkbox" name="Feature" >svnd </br>	
- 		 									<input type="checkbox" name="Feature" > vnconfig</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','N/A','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Yes','No','N/A','Yes
-(parent volume is encrypted)','Yes (encrypted by default in OpenBSD)','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','Yes','Yes
-(except for the boot volume)','?','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['No','Yes','Each sector on disk is encrypted','Yes
-(parent volume is encrypted)','only on Windows','N/A','?','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes','No','extra module','']
+            local : ['GELI','EgoSecure HDD Encryption','GBDE','FREE CompuSec','FreeOTFE','BestCrypt','eCryptfs','SecuBox','SafeGuard Easy','Scramdisk 4 Linux','CenterTools DriveLock','R-Crypto','softraid / RAID C','SpyProof!','McAfee Drive Encryption (SafeBoot)','Trend Micro Endpoint Encryption','TrueCrypt','ArchiCrypt Live','DriveSentry GoAnywhere 2','Aloaha Secure Stick','Bloombase Keyparc','Sentry 2020','SafeGuard Enterprise','DriveCrypt','loop-AES','FileVault 2','dm-crypt','VeraCrypt','FileVault','SecureDoc','Cryptomill','CipherShed','Scramdisk','Private Disk','n-Crypt Pro','svnd / vnconfig','cryptoloop','Check Point Full Disk Encryption','E4M','CryptArchiver','e-Capsule Private Safe','BitArmor DataControl','SafeHouse Professional','ProxyCrypt','SafeGuard PrivateDisk','DiskCryptor','BitLocker Drive Encryption','CrossCrypt','CGD','Symantec Endpoint Encryption','PGPDisk','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

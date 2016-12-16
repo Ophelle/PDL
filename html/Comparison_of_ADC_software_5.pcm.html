@@ -26,47 +26,32 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>BSD : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Linux : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>BSD :</label></br>
+ 		 					 <input type="radio" name="FeatureBSD" value="oui">oui <input type="radio" name="FeatureBSD" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Linux :</label></br>
+ 		 					 <input type="radio" name="FeatureLinux" value="oui">oui <input type="radio" name="FeatureLinux" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>ADC client : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>OS X : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Windows : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Haiku : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>OS X :</label></br>
+ 		 					 <input type="radio" name="FeatureOS X" value="oui">oui <input type="radio" name="FeatureOS X" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Windows :</label></br>
+ 		 					 <input type="radio" name="FeatureWindows" value="oui">oui <input type="radio" name="FeatureWindows" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Haiku :</label></br>
+ 		 					 <input type="radio" name="FeatureHaiku" value="oui">oui <input type="radio" name="FeatureHaiku" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','BSD','?','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['No','Yes','Linux','']
-          });
-          $("#3").typeahead({
-            name:"list3",
             local : ['ncdc','TKDC++','jucy','LinuxDC++','FlylinkDC++','DC++','EiskaltDC++','ApexDC++','AirDC++ nano','ADC client','AirDC++','RSX++','StrongDC++','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['No','Yes','OS X','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Windows','Yes','No','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['?','No','Yes','Haiku','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

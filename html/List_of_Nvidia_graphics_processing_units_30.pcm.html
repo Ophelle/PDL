@@ -29,9 +29,9 @@
 							<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Products : </label></br> <input id="2" type="text" name="Feature"></br>
+							<label>Products : </label></br> <input id="2" type="aaaa" name="Feature"></br>
 							
-						</br>	
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Clock speed - Shader (MHz) : </label></br> <input id="3" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -65,11 +65,8 @@
 							<label>API support (version) - DirectX : </label></br> <input id="13" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Code name :</label></br>
+							<label>Code name : </label></br> <input id="14" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >MCP77MH</br>	
- 		 									<input type="checkbox" name="Feature" > MCP79MH</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>API support (version) - OpenGL : </label></br> <input id="15" type="number" name="Feature"></br>
 							
@@ -77,9 +74,8 @@
 							<label>Model : </label></br> <input id="16" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Memory - Bus type :</label></br>
+							<label>Memory - Bus type : </label></br> <input id="17" type="text" name="Feature"></br>
 							
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Fab (nm) : </label></br> <input id="18" type="number" name="Feature"></br>
 							
@@ -90,10 +86,8 @@
 							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="20" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Notes :</label></br>
+							<label>Notes : </label></br> <input id="21" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >PureVideo HD with VP3. Known as the GeForce 9400M in Apple systems and Nvidia ION based systems</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Fillrate - Pixel (GP/s) : </label></br> <input id="22" type="number" name="Feature"></br>
 							
@@ -105,16 +99,20 @@
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['P16','P1','P4','P14','P19','P8','P15','P11','P3','P10','P2','P7','P18','P13','P6','P12','P9','P17','P5','']
+            local : ['64:32:16','32:16:8','8:8:4','Core config','16:8:4','112:56:16','96:48:16','48:24:16','16:8:8','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['64:32:16','32:16:8','8:8:4','Core config','16:8:4','112:56:16','96:48:16','48:24:16','16:8:8','']
+            local : ['NB9P-GV(G96)','NB9P-GT(G96)','NB9E-GS(G94)','NB9M-GE(G98)','NB9P(G96)','MCP79MX','NB9E-GT2(G92)','MCP77MH, MCP79MH','NB9E-GT(G94)','NB9P-GE2(G96)','Code name','NB9M-GE(G86)','NB9E-GE(G96)','NB9P-GS(G96)','NB9E-GTX(G92)','NB9P-GS1(G84)','']
           });
           $("#4").typeahead({
             name:"list4",
             local : ['GeForce 9800M GTX','GeForce 9650M GT','GeForce 9800M GTS','Model','GeForce 9800M GS','GeForce 9500M GS','GeForce 9300M G','GeForce 9600M GS','GeForce 9300M GS','GeForce 9700M GTS','GeForce 9800M GT','GeForce 9600M GT','GeForce 9100M G 
 mGPU','GeForce 9400M G','GeForce 9200M GS','GeForce 9650M GS','GeForce 9500M G','GeForce 9700M GT','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['PureVideo HD with VP3. Known as the GeForce 9400M in Apple systems and Nvidia ION based systems','','Rebranded 8800M GTX','Notes','Similar to 8400M G','Rebranded 8600M GT','Rebranded 8700M GT','Down Clocked 9800M GTS Via Firmware','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

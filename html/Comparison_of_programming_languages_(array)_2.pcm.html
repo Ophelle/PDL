@@ -26,23 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Languages :</label></br>
+							<label>Languages : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Fortran</br>	
- 		 									<input type="checkbox" name="Feature" > GNU Octave</br>	
- 		 									<input type="checkbox" name="Feature" > MATLAB</br>	
- 		 									<input type="checkbox" name="Feature" >ALGOL 68</br>	
- 		 									<input type="checkbox" name="Feature" > Julia</br>	
- 		 									<input type="checkbox" name="Feature" >Haxe</br>	
- 		 									<input type="checkbox" name="Feature" > JavaScript</br>	
- 		 									<input type="checkbox" name="Feature" > Scala</br>	
- 		 									<input type="checkbox" name="Feature" >Pascal</br>	
- 		 									<input type="checkbox" name="Feature" > Object Pascal</br>	
- 		 									<input type="checkbox" name="Feature" > Delphi</br>	
- 		 									<input type="checkbox" name="Feature" > D</br>	
- 		 									<input type="checkbox" name="Feature" >Python</br>	
- 		 									<input type="checkbox" name="Feature" > Go</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Format : </label></br> <input id="2" type="text" name="Feature"></br>
 							
@@ -50,6 +35,10 @@
           $("#1").typeahead({
             name:"list1",
             local : ['','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['OCaml','CFML','S-Lang','Fortran, GNU Octave, MATLAB','Objective-C (NSArray * only)','Swift','ALGOL 68, Julia','Mathematica','Perl','F#','Cobra','Windows PowerShell','J','Haxe, JavaScript, Scala','Common Lisp','Ada','Rust','Pascal, Object Pascal, Delphi, D','PHP','ISLISP','Python, Go','Ruby','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

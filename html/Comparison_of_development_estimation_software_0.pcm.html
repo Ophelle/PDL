@@ -30,14 +30,8 @@
  		 					 <input type="radio" name="FeatureSchedule estimate" value="oui">oui <input type="radio" name="FeatureSchedule estimate" value = "non">non </br>
 									
 						</br>	
-							<label>Platforms :</label></br>
+							<label>Platforms : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Full web-based</br>	
- 		 									<input type="checkbox" name="Feature" > collaborative platform</br>	
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 									<input type="checkbox" name="Feature" > Any (Web-based)</br>	
- 		 									<input type="checkbox" name="Feature" > SunOS</br>	
-								
 						</br>	
 							<label>Input :</label></br>
 							
@@ -81,26 +75,11 @@
  		 									<input type="checkbox" name="Feature" > Prioritities</br>	
 								
 						</br>	
-							<label>License :</label></br>
+							<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Proprietary Free for NGO and educational use</br>	
- 		 									<input type="checkbox" name="Feature" >Proprietary Free for personal and educational use</br>	
-								
 						</br>	
-							<label>Supported Programming Languages :</label></br>
+							<label>Supported Programming Languages : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >C</br>	
- 		 									<input type="checkbox" name="Feature" > C++</br>	
- 		 									<input type="checkbox" name="Feature" > C#</br>	
- 		 									<input type="checkbox" name="Feature" > J#</br>	
- 		 									<input type="checkbox" name="Feature" > Java</br>	
- 		 									<input type="checkbox" name="Feature" > PHP</br>	
- 		 									<input type="checkbox" name="Feature" > Objective C</br>	
- 		 									<input type="checkbox" name="Feature" > JavaScript</br>	
- 		 									<input type="checkbox" name="Feature" > UnrealEngine script</br>	
- 		 									<input type="checkbox" name="Feature" > Flash ActionScript</br>	
- 		 									<input type="checkbox" name="Feature" > DigitalMars D</br>	
-								
 						</br>	
  		 					<label>Cost estimate :</label></br>
  		 					 <input type="radio" name="FeatureCost estimate" value="oui">oui <input type="radio" name="FeatureCost estimate" value = "non">non </br>
@@ -129,33 +108,34 @@
  		 									<input type="checkbox" name="Feature" > MS Project</br>	
 								
 						</br>	
-							<label>Cost Models :</label></br>
+							<label>Cost Models : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >ALA</br>	
- 		 									<input type="checkbox" name="Feature" > COCOMO</br>	
- 		 									<input type="checkbox" name="Feature" >Weighted Micro Function Points</br>	
- 		 									<input type="checkbox" name="Feature" > COCOMO II 2000</br>	
- 		 									<input type="checkbox" name="Feature" > COCOMO 81</br>	
- 		 									<input type="checkbox" name="Feature" > REVIC</br>	
- 		 									<input type="checkbox" name="Feature" >SLIM</br>	
- 		 									<input type="checkbox" name="Feature" > COCOMO II</br>	
- 		 									<input type="checkbox" name="Feature" > Monte Carlo</br>	
- 		 									<input type="checkbox" name="Feature" >COCOMO.II.2000</br>	
- 		 									<input type="checkbox" name="Feature" > COCOMO.II.1999</br>	
- 		 									<input type="checkbox" name="Feature" > COCOMO.II.1998</br>	
- 		 									<input type="checkbox" name="Feature" >COCOMO II Early Design and Post-Architecture (1997 - 2003); CX COCOMO 2009 - 2012; REVIC</br>	
- 		 									<input type="checkbox" name="Feature" >COCOMO II</br>	
-								
 						</br>	
 							<label>Cost : </label></br> <input id="10" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Forecast.it','Costar','ProjectCodeMeter','Seer for Software','TruePlanning','USC COCOMO II','Construx Estimate','AFCAA REVIC','SystemStar','Cost Xpert sucCXess 2012 R2','SLIM','TSA Metric Studio','']
+            local : ['Windows','Full web-based, collaborative platform','DOS','Windows, Any (Web-based)','Windows, SunOS','Any (Web-based) runs on any Java Application Server','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['Proprietary','Proprietary Free for NGO and educational use','Proprietary Free for public distribution','Proprietary Free for personal and educational use','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['any','Any through the API','C, C++, C#, J#, Java, PHP, Objective C, JavaScript, UnrealEngine script, Flash ActionScript, DigitalMars D','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Forecast.it','Costar','ProjectCodeMeter','Seer for Software','TruePlanning','USC COCOMO II','Construx Estimate','AFCAA REVIC','SystemStar','Cost Xpert sucCXess 2012 R2','SLIM','TSA Metric Studio','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['COSYSMO 2005','Function points','SLIM','ALA, COCOMO','REVIC','Weighted Micro Function Points, COCOMO II 2000, COCOMO 81, REVIC','SLIM, COCOMO II, Monte Carlo','COCOMO.II.2000, COCOMO.II.1999, COCOMO.II.1998','COCOMO II Early Design and Post-Architecture (1997 - 2003); CX COCOMO 2009 - 2012; REVIC','PRICE','COCOMO II, COCOMO 81, REVIC','SEER-SEM','']
+          });
+          $("#6").typeahead({
+            name:"list6",
             local : ['Commercial','Free','']
           });
     </script>

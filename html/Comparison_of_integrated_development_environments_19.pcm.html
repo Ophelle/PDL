@@ -26,18 +26,11 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>License :</label></br>
+							<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >GPL</br>	
- 		 									<input type="checkbox" name="Feature" > proprietary</br>	
- 		 									<input type="checkbox" name="Feature" >CDDL and GPL</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Developer :</label></br>
+							<label>Developer : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Aptana</br>	
- 		 									<input type="checkbox" name="Feature" > Inc.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Latest stable release :</label></br>
 							
@@ -57,24 +50,28 @@
  		 									<input type="checkbox" name="Feature" > Jun 06</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>IDE :</label></br>
+							<label>IDE : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Eric Python and Ruby IDE</br>	
- 		 									<input type="checkbox" name="Feature" >Komodo IDE </br>	
- 		 									<input type="checkbox" name="Feature" > Edit</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Platform :</label></br>
+							<label>Platform : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 									<input type="checkbox" name="Feature" > Linux</br>	
- 		 									<input type="checkbox" name="Feature" > Mac OS X</br>	
- 		 									<input type="checkbox" name="Feature" > FreeBSD</br>	
- 		 									<input type="checkbox" name="Feature" > JVM</br>	
- 		 									<input type="checkbox" name="Feature" > Solaris</br>	
- 		 									<input type="checkbox" name="Feature" > OpenBSD</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['JVM','Windows, Linux, Mac OS X, FreeBSD, JVM, Solaris','Cross-platform','Independent','Windows, Linux, Mac OS X, FreeBSD, OpenBSD, Solaris','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['Proprietary','GPL, proprietary','GPL','CDDL and GPL','EPL','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Thomas Enebo (JRuby co-lead)','Aptana, Inc.','ActiveState','Eclipse Foundation','JetBrains','Detlev Offenbach','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['NetBeans','RubyMine (IntelliJ IDEA)','Aptana Studio with integrated RadRails plugin (Eclipse)','Eclipse DLTK Ruby Plugin','Eric Python and Ruby IDE','Komodo IDE / Edit','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

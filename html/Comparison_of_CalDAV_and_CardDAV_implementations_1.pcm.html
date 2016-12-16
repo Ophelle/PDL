@@ -26,15 +26,17 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>DAViCal : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>DAViCal :</label></br>
+ 		 					 <input type="radio" name="FeatureDAViCal" value="oui">oui <input type="radio" name="FeatureDAViCal" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>DavMail : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Baïkal : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Baïkal :</label></br>
+ 		 					 <input type="radio" name="FeatureBaïkal" value="oui">oui <input type="radio" name="FeatureBaïkal" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Tryton : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
@@ -44,36 +46,41 @@
 							<label>Fennel : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Daylite Server : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Calypso : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Calendar and Contacts Server : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>IT Hit Active Directory CardDAV Server : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Group-Office :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >AGPL</br>	
- 		 									<input type="checkbox" name="Feature" >Commercial</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
+ 		 					<label>Daylite Server :</label></br>
+ 		 					 <input type="radio" name="FeatureDaylite Server" value="oui">oui <input type="radio" name="FeatureDaylite Server" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Calypso :</label></br>
+ 		 					 <input type="radio" name="FeatureCalypso" value="oui">oui <input type="radio" name="FeatureCalypso" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Calendar and Contacts Server :</label></br>
+ 		 					 <input type="radio" name="FeatureCalendar and Contacts Server" value="oui">oui <input type="radio" name="FeatureCalendar and Contacts Server" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>IT Hit Active Directory CardDAV Server :</label></br>
+ 		 					 <input type="radio" name="FeatureIT Hit Active Directory CardDAV Server" value="oui">oui <input type="radio" name="FeatureIT Hit Active Directory CardDAV Server" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Group-Office :</label></br>
+ 		 					 <input type="radio" name="FeatureGroup-Office" value="oui">oui <input type="radio" name="FeatureGroup-Office" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Bedework : </label></br> <input id="12" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Oracle : </label></br> <input id="13" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Radicale : </label></br> <input id="14" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>SabreDAV : </label></br> <input id="15" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Oracle :</label></br>
+ 		 					 <input type="radio" name="FeatureOracle" value="oui">oui <input type="radio" name="FeatureOracle" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Radicale :</label></br>
+ 		 					 <input type="radio" name="FeatureRadicale" value="oui">oui <input type="radio" name="FeatureRadicale" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>SabreDAV :</label></br>
+ 		 					 <input type="radio" name="FeatureSabreDAV" value="oui">oui <input type="radio" name="FeatureSabreDAV" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Zimbra : </label></br> <input id="16" type="text" name="Feature"></br>
 							
 						</br>	
@@ -83,80 +90,41 @@
 							<label>Server name : </label></br> <input id="18" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>IT Hit WebDAV Server Engine for .Net : </label></br> <input id="19" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>IT Hit WebDAV Server Engine for .Net :</label></br>
+ 		 					 <input type="radio" name="FeatureIT Hit WebDAV Server Engine for .Net" value="oui">oui <input type="radio" name="FeatureIT Hit WebDAV Server Engine for .Net" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','GPL','?','']
+            local : ['?','GPL','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['?','GPL','']
+            local : ['Yes','?','GPL','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['No','GPL','Yes','?','Some','']
+            local : ['?','Yes','AGPLv3','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['Yes','?','GPL','']
+            local : ['?','GPLv3','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['?','Yes','AGPLv3','']
+            local : ['Yes','?','Apache','']
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['?','GPLv3','']
+            local : ['?','Yes','ZPL','']
           });
           $("#7").typeahead({
             name:"list7",
-            local : ['Yes','No','?','Proprietary','']
+            local : ['?','Gpl','']
           });
           $("#8").typeahead({
             name:"list8",
-            local : ['Yes','?','GPL','No','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['Yes','Apache','No','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['Yes','No','Commercial','']
-          });
-          $("#11").typeahead({
-            name:"list11",
-            local : ['Yes','?','Apache','']
-          });
-          $("#12").typeahead({
-            name:"list12",
-            local : ['No','Yes','Commercial','']
-          });
-          $("#13").typeahead({
-            name:"list13",
-            local : ['Some','Yes','GPL','No','']
-          });
-          $("#14").typeahead({
-            name:"list14",
-            local : ['Yes','BSD','']
-          });
-          $("#15").typeahead({
-            name:"list15",
-            local : ['?','Yes','ZPL','']
-          });
-          $("#16").typeahead({
-            name:"list16",
-            local : ['?','Gpl','']
-          });
-          $("#17").typeahead({
-            name:"list17",
             local : ['RFC 4791 Cal DAV spec.','RFC 6638 CalDAV Scheduling','RFC 6352 Card DAV vCard','RFC 5397 Web DAV principal','RFC 4709 Web DAV mount','RFC 4918 Web DAV ext.','RFC 5545 rev. iCal spec.','RFC 2518 Web DAV spec.','RFC 2616 HTTP 1.1 spec.','RFC 3744 Web DAV ACL','RFC 3253 Web DAV ext.','Lic.','RFC 5546 iCal iTIP spec.','RFC 4324 iCal CAP spec.','RFC 5689 WebDAV ext. MKCOL','RFC 2617 HTTP access auth.','']
-          });
-          $("#18").typeahead({
-            name:"list18",
-            local : ['Yes','Commercial','?','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

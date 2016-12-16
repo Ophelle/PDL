@@ -26,84 +26,58 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Shared editing : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Shared editing :</label></br>
+ 		 					 <input type="radio" name="FeatureShared editing" value="oui">oui <input type="radio" name="FeatureShared editing" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Templates Update Sync : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>Form Handler : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Spell checking : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Server-side scripting : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>FTP Upload : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Templates : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Page Preview : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>WYSIWYG : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Spell checking :</label></br>
+ 		 					 <input type="radio" name="FeatureSpell checking" value="oui">oui <input type="radio" name="FeatureSpell checking" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Server-side scripting :</label></br>
+ 		 					 <input type="radio" name="FeatureServer-side scripting" value="oui">oui <input type="radio" name="FeatureServer-side scripting" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>FTP Upload :</label></br>
+ 		 					 <input type="radio" name="FeatureFTP Upload" value="oui">oui <input type="radio" name="FeatureFTP Upload" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Templates :</label></br>
+ 		 					 <input type="radio" name="FeatureTemplates" value="oui">oui <input type="radio" name="FeatureTemplates" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Page Preview :</label></br>
+ 		 					 <input type="radio" name="FeaturePage Preview" value="oui">oui <input type="radio" name="FeaturePage Preview" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>WYSIWYG :</label></br>
+ 		 					 <input type="radio" name="FeatureWYSIWYG" value="oui">oui <input type="radio" name="FeatureWYSIWYG" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Editor : </label></br> <input id="10" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>WebDAV Upload : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>WebDAV Upload :</label></br>
+ 		 					 <input type="radio" name="FeatureWebDAV Upload" value="oui">oui <input type="radio" name="FeatureWebDAV Upload" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','?','Yes','Shared editing','']
+            local : ['?','No','Yes','Templates Update Sync','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','Yes
-(via commercial proprietary add-on)','Yes (via extension)','Templates','Partial','No','?','Some (i.e. Snippets)','']
+            local : ['Yes','?','Form Handler','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['?','No','Yes','Templates Update Sync','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','?','Form Handler','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes','No','Yes (via extension)','Spell checking','?','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['?','Server-side scripting','Yes','No','Yes (via plugins)','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['Yes','No','FTP Upload','?','Yes (via extension)','No
-(add-on)','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['Yes','Page Preview','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['Yes','"Live Preview" in-browser','No','WYSIWYG','']
-          });
-          $("#10").typeahead({
-            name:"list10",
             local : ['Dreamweaver','Bluefish','KompoZer','Microsoft Expression Web','Amaya','CoffeeCup HTML Editor','openElement','Quanta Plus','Maqetta','EZGenerator','OpenOffice.org','Microsoft Visual Web Developer','Web Architect','Nvu','OpenBEXI','Editor','Freeway','Microsoft SharePoint Designer','Claris Homepage','HTML-Kit','Arachnophilia','Microsoft FrontPage','RapidWeaver','BlueGriffon','GoLive','SeaMonkey Composer','TOWeb','Aptana','Brackets','']
-          });
-          $("#11").typeahead({
-            name:"list11",
-            local : ['Yes','No','?','WebDAV Upload','No (cvs instead)','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -44,8 +44,9 @@
 							<label>AV  (Anti-Virus) : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>NAT (static, dynamic w/o ports, PAT) : </label></br> <input id="7" type="text" name="Feature"></br>
-							
+ 		 					<label>NAT (static, dynamic w/o ports, PAT) :</label></br>
+ 		 					 <input type="radio" name="FeatureNAT (static, dynamic w/o ports, PAT)" value="oui">oui <input type="radio" name="FeatureNAT (static, dynamic w/o ports, PAT)" value = "non">non </br>
+									
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -70,10 +71,6 @@
           $("#6").typeahead({
             name:"list6",
             local : ['Yes (with clamav)','Yes (with clamav,Sophos Antivirus (optional) )','Yes (Kaspersky Labs)','Yes (clamav,commtouch (optional) )','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['Yes','Yes (supports three NAT types)','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

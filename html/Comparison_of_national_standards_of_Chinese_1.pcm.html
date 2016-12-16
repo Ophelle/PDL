@@ -26,9 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Taiwan - (Simplified) :</label></br>
+							<label>Taiwan - (Simplified) : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>China - Simplified : </label></br> <input id="2" type="text" name="Feature"></br>
 							
@@ -45,22 +44,14 @@
 							<label>Macau - (Simplified) : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Taiwan - Traditional :</label></br>
+							<label>Taiwan - Traditional : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Malaysia / Singapore - Simplified : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Meaning :</label></br>
+							<label>Meaning : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >lorry</br>	
- 		 									<input type="checkbox" name="Feature" >truck</br>	
- 		 									<input type="checkbox" name="Feature" >tights</br>	
- 		 									<input type="checkbox" name="Feature" >pantyhose</br>	
- 		 									<input type="checkbox" name="Feature" >lunch box</br>	
- 		 									<input type="checkbox" name="Feature" >bento</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Macau - Traditional : </label></br> <input id="10" type="text" name="Feature"></br>
 							
@@ -68,6 +59,10 @@
 							<label>China - (Traditional) : </label></br> <input id="11" type="text" name="Feature"></br>
 							
 		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['Standard Chinese','town square','taxi','police','potato','lorry/truck','air-conditioner','rapid transit','butter','bus','light rail','laser','tights/pantyhose','lunch box/bento','instant noodles','pineapple','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

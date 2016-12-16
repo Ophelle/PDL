@@ -26,9 +26,10 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Wintin.Net : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Wintin.Net :</label></br>
+ 		 					 <input type="radio" name="FeatureWintin.Net" value="oui">oui <input type="radio" name="FeatureWintin.Net" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
  		 					<label>TinyFugue :</label></br>
  		 					 <input type="radio" name="FeatureTinyFugue" value="oui">oui <input type="radio" name="FeatureTinyFugue" value = "non">non </br>
 									
@@ -42,11 +43,8 @@
 							<label>muby : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Name :</label></br>
+							<label>Name : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >GNU</br>	
- 		 									<input type="checkbox" name="Feature" >Linux</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Soiled : </label></br> <input id="7" type="text" name="Feature"></br>
 							
@@ -121,9 +119,10 @@
  		 					 <input type="radio" name="FeaturePowwow" value="oui">oui <input type="radio" name="FeaturePowwow" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>						</br>	
-							<label>MudMagic : </label></br> <input id="26" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>MudMagic :</label></br>
+ 		 					 <input type="radio" name="FeatureMudMagic" value="oui">oui <input type="radio" name="FeatureMudMagic" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
  		 					<label>GGMUD :</label></br>
  		 					 <input type="radio" name="FeatureGGMUD" value="oui">oui <input type="radio" name="FeatureGGMUD" value = "non">non </br>
 									
@@ -138,7 +137,7 @@
  		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Windows 8 requires beta','No','']
+            local : ['PFI','']
           });
           $("#2").typeahead({
             name:"list2",
@@ -146,11 +145,11 @@
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['PFI','']
+            local : ['PFI','No','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['PFI','No','']
+            local : ['GNU/Linux','Mac OS X','BSD','Windows','Unix','']
           });
           $("#5").typeahead({
             name:"list5",
@@ -163,10 +162,6 @@
           $("#7").typeahead({
             name:"list7",
             local : ['PFI','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['Yes','Yes*','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

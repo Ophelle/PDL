@@ -26,8 +26,9 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>application/mathml+xml : </label></br> <input id="1" type="number" name="Feature"></br>
-							
+ 		 					<label>application/mathml+xml :</label></br>
+ 		 					 <input type="radio" name="Featureapplication/mathml+xml" value="oui">oui <input type="radio" name="Featureapplication/mathml+xml" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>						</br>	
 							<label>application/xml : </label></br> <input id="2" type="text" name="Feature"></br>
 							
@@ -41,9 +42,9 @@
 							<label>text/xml : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>image/svg+xml : </label></br> <input id="6" type="number" name="Feature"></br>
+							<label>image/svg+xml : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>application/rss+xml : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
@@ -78,18 +79,22 @@
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['?','7.50 beta 1','']
+            local : ['9.50','?','1.0','']
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['9.00 beta 1','?','']
+            local : ['?','7.50 beta 1','']
           });
           $("#7").typeahead({
             name:"list7",
-            local : ['Presto','Trident','Gecko','WebKit','KHTML','Prince XML','Tasman','']
+            local : ['9.00 beta 1','?','']
           });
           $("#8").typeahead({
             name:"list8",
+            local : ['Presto','Trident','Gecko','WebKit','KHTML','Prince XML','Tasman','']
+          });
+          $("#9").typeahead({
+            name:"list9",
             local : ['Prompt for download','XHTML
 125','XHTML 5.0','HTML','XHTML
 1.0','XHTML','?','']

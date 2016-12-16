@@ -44,7 +44,7 @@
 							<label>Fillrate - Texture (GT/s) : </label></br> <input id="5" type="number" name="Feature"></br>
 							
 						</br>	
-							<label>Max. Combined TDP (W) : </label></br> <input id="6" type="number" name="Feature"></br>
+							<label>Max. Combined TDP (W) : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>APU : </label></br> <input id="7" type="text" name="Feature"></br>
@@ -73,18 +73,22 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['A4-3300M A4-3310MX','E2-3000M','A8-3500M A8-3510MX A8-3530MX','A6-3400M A6-3410MX','']
+            local : ['35 - 45','35','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['160:8:4','240:12:4','320:16:8','400:20:8','']
+            local : ['A4-3300M A4-3310MX','E2-3000M','A8-3500M A8-3510MX A8-3530MX','A6-3400M A6-3410MX','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['WinterPark','BeaverCreek','']
+            local : ['160:8:4','240:12:4','320:16:8','400:20:8','']
           });
           $("#4").typeahead({
             name:"list4",
+            local : ['WinterPark','BeaverCreek','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['Radeon HD 6480G','Radeon HD 6620G','Radeon HD 6380G','Radeon HD 6520G','']
           });
     </script>

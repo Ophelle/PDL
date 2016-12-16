@@ -32,35 +32,30 @@
 							<label>Developer : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Software :</label></br>
+							<label>Software : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >BeeOne SMOD</br>	
- 		 									<input type="checkbox" name="Feature" >HMS</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Operating systems :</label></br>
+							<label>Operating systems : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >FreeBSD</br>	
- 		 									<input type="checkbox" name="Feature" > Linux</br>	
- 		 									<input type="checkbox" name="Feature" > Mac OS X</br>	
- 		 									<input type="checkbox" name="Feature" > Windows</br>	
- 		 									<input type="checkbox" name="Feature" >DOS</br>	
- 		 									<input type="checkbox" name="Feature" > FreeBSD</br>	
- 		 									<input type="checkbox" name="Feature" > WinCE</br>	
- 		 									<input type="checkbox" name="Feature" >Mac OS X</br>	
- 		 									<input type="checkbox" name="Feature" > iOS</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Version : </label></br> <input id="5" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['GPL','Proprietary','']
+            local : ['FreeBSD, Linux, Mac OS X, Windows','iOS','Windows','Android','DOS, FreeBSD, Linux, Mac OS X, Windows, WinCE','Mac OS X, iOS','Linux','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['GPL','Proprietary','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['CMLStudio','isone','Transparent Corp.','Stan Lysiak','Tensai','gnaural','Volition','Hemi-Synths Explorers','Noromaa Solutions Oy.','RCS Software','Uazu','Steve Duell','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['SBaGen','Neuro Sequencer Pro','BeeOne SMOD/HMS','Lux VST Brainwave Entrainment Instrument','Brainwave Studio','Neuro Entrainment','BrainIgniter Player','Discord','Isochronic Tone Generator','BrainWave Generator','Gnaural','Mind WorkStation','Neuro-Programmer 3','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

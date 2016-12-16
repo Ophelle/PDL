@@ -35,9 +35,9 @@
 							<label>TDP (watts) : </label></br> <input id="3" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Memory clock (MHz) : </label></br> <input id="4" type="number" name="Feature"></br>
+							<label>Memory clock (MHz) : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Memory - Bus width (bit) : </label></br> <input id="5" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -73,9 +73,9 @@ GFLOPS - Single Precision : </label></br> <input id="11" type="number" name="Fea
 							
 						</br>	
 							<label>Processing Power
-GFLOPS - Double Precision : </label></br> <input id="16" type="number" name="Feature"></br>
+GFLOPS - Double Precision : </label></br> <input id="16" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Fab (nm) : </label></br> <input id="17" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -94,6 +94,14 @@ GFLOPS - Double Precision : </label></br> <input id="16" type="number" name="Fea
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['','1250
+(5000)','1800','900
+(1800)','1350
+(5400)','1500
+(6000)','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['384:24:16
 (3 SMM)','640:40:16
 (5 SMM)','192:16:16
@@ -102,16 +110,16 @@ GFLOPS - Double Precision : </label></br> <input id="16" type="number" name="Fea
 (12 SMX)','512:32:16
 (4 SMM)','']
           });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['GM107','GK104','GK110B','GK107','']
-          });
           $("#4").typeahead({
             name:"list4",
-            local : ['Quadro K620','Quadro K4200','Quadro K420','Quadro K2200','Quadro K5200','Quadro K1200','']
+            local : ['GM107','GK104','GK110B','GK107','']
           });
           $("#5").typeahead({
             name:"list5",
+            local : ['Quadro K620','Quadro K4200','Quadro K420','Quadro K2200','Quadro K5200','Quadro K1200','']
+          });
+          $("#6").typeahead({
+            name:"list6",
             local : ['7.97" Card','','9.5" Card','6.3" Card','10.5" Card','']
           });
     </script>

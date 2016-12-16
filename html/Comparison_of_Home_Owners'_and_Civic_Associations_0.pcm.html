@@ -26,34 +26,17 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Neighborhood association :</label></br>
+							<label>Neighborhood association : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Membership fluctuates as members are free to leave or join without restitution</br>	
- 		 									<input type="checkbox" name="Feature" >Board of directors seeks volunteers to help</br>	
- 		 									<input type="checkbox" name="Feature" > then hires services</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Civic association :</label></br>
+							<label>Civic association : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Membership fluctuates as members are free to leave or join without restitution</br>	
- 		 									<input type="checkbox" name="Feature" >Board of directors seeks volunteers to help</br>	
- 		 									<input type="checkbox" name="Feature" > then hires services</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Homeowner association :</label></br>
+							<label>Homeowner association : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Fines</br>	
- 		 									<input type="checkbox" name="Feature" > disable access to amenities</br>	
- 		 									<input type="checkbox" name="Feature" > liens</br>	
- 		 									<input type="checkbox" name="Feature" > foreclosure</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Property owners association :</label></br>
+							<label>Property owners association : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Fines</br>	
- 		 									<input type="checkbox" name="Feature" > liens</br>	
- 		 									<input type="checkbox" name="Feature" > foreclosure</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Residents association : </label></br> <input id="5" type="text" name="Feature"></br>
 							
@@ -63,10 +46,26 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['','']
+            local : ['Membership fluctuates as members are free to leave or join without restitution','Voluntary membership','None','No','Removal from the association','Board of directors seeks volunteers to help, then hires services','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['Membership fluctuates as members are free to leave or join without restitution','Removal from the association','None','Voluntary membership','Board of directors seeks volunteers to help, then hires services','No','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Board of directors of management company handles hired services','Fines, disable access to amenities, liens, foreclosure','Membership remains constant','Deed restricted','Yes','Mandatory membership','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Membership remains constant','Mandatory membership','Yes','Board of directors of management company handles hired services','Fines, liens, foreclosure','Deed restricted','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['','']
+          });
+          $("#6").typeahead({
+            name:"list6",
             local : ['Membership requirements','Entity owns property','Violations of regulations','Right to rule','Size of association','Maintenance issues','']
           });
     </script>

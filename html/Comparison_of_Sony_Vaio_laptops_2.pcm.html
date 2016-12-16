@@ -32,16 +32,13 @@
 							<label>STORAGE : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>OS :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >[] Processor</br>	
- 		 									<input type="checkbox" name="Feature" >
- 2.30 GHz</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>FINGER PRINT SENSOR : </label></br> <input id="4" type="text" name="Feature"></br>
+							<label>OS : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
+ 		 					<label>FINGER PRINT SENSOR :</label></br>
+ 		 					 <input type="radio" name="FeatureFINGER PRINT SENSOR" value="oui">oui <input type="radio" name="FeatureFINGER PRINT SENSOR" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>CPU :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >2nd Gen Intel®
@@ -116,7 +113,12 @@ HDD','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['','No','']
+            local : ['[] Processor,
+ 2.30 GHz','Genuine Windows 7 
+Home Basic','Windows® 7
+ Home Premium','NVIDIA GeForce 
+410M GPU (512 MB)','Genuine Windows 7 
+Professional','']
           });
           $("#4").typeahead({
             name:"list4",

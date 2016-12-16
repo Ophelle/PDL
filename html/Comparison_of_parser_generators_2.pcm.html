@@ -26,43 +26,14 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Output languages :</label></br>
+							<label>Output languages : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Smalltalk</br>	
- 		 									<input type="checkbox" name="Feature" > Java</br>	
- 		 									<input type="checkbox" name="Feature" > Dart</br>	
- 		 									<input type="checkbox" name="Feature" >C</br>	
- 		 									<input type="checkbox" name="Feature" > JavaScript</br>	
- 		 									<input type="checkbox" name="Feature" > Python</br>	
- 		 									<input type="checkbox" name="Feature" > Ruby</br>	
- 		 									<input type="checkbox" name="Feature" > Scheme</br>	
- 		 									<input type="checkbox" name="Feature" >JavaScript</br>	
- 		 									<input type="checkbox" name="Feature" > Squeak</br>	
- 		 									<input type="checkbox" name="Feature" >Java</br>	
- 		 									<input type="checkbox" name="Feature" > Scala</br>	
- 		 									<input type="checkbox" name="Feature" > OCaml</br>	
- 		 									<input type="checkbox" name="Feature" >Python </br>	
- 		 									<input type="checkbox" name="Feature" > C++ (beta)</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>License :</label></br>
+							<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >MIT or Public domain</br>	
- 		 									<input type="checkbox" name="Feature" >GNU GPL</br>	
- 		 									<input type="checkbox" name="Feature" > commercial license available on request</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Parsing algorithm :</label></br>
+							<label>Parsing algorithm : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >PEG parser interpreter</br>	
- 		 									<input type="checkbox" name="Feature" > Packrat</br>	
- 		 									<input type="checkbox" name="Feature" >Packrat (modified)</br>	
- 		 									<input type="checkbox" name="Feature" > mutating interpreter</br>	
- 		 									<input type="checkbox" name="Feature" >Hybrid recursive descent </br>	
- 		 									<input type="checkbox" name="Feature" > operator precedence</br>	
- 		 									<input type="checkbox" name="Feature" >Recursive descent </br>	
- 		 									<input type="checkbox" name="Feature" > Packrat (selectively)</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Website : </label></br> <input id="4" type="text" name="Feature"></br>
 							
@@ -70,25 +41,38 @@
 							<label>Grammar, code : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Development platform :</label></br>
+							<label>Development platform : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >POSIX</br>	
- 		 									<input type="checkbox" name="Feature" > Microsoft Windows</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Name : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['','Parser Grammar Engine','']
+            local : ['Haskell','Java','C#','Smalltalk, Java, Dart','C, Java, JavaScript, Python, Ruby, Scheme','C','Ruby','Parrot bytecode','Dylan','C++','JavaScript, Squeak, Python','C++11','Common Lisp','Lua','D','Nemerle','Scheme','Java, Scala','PHP','C, OCaml, Java','Python','Erlang','JavaScript','Tcl','Python / C++ (beta)','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['mixed','separate','identical','']
+            local : ['Apache License 2.0','GNU GPL','MIT','BSD','MIT or Public domain','Public domain','','Boost','Artistic 2.0','GNU LGPL','Proprietary','GNU GPL, commercial license available on request','']
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['Packrat','Recursive descent','PEG parser interpreter, Packrat','2-phase scannerless top-down backtracking + runtime support','Packrat (modified to support left-recursion and resolve grammar ambiguity)','?','Packrat (modified), mutating interpreter','Hybrid recursive descent / operator precedence','Parsing Machine','PEG parser interpreter','Packrat (modified)','Recursive descent / Packrat (selectively)','Packrat + Cut + Left Recursion','Recursive descent + Pratt','? (PEG Parser?)','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['','Parser Grammar Engine','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['mixed','separate','identical','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['Java Virtual Machine','all','POSIX, Microsoft Windows','Parrot virtual machine','Microsoft Windows','']
+          });
+          $("#7").typeahead({
+            name:"list7",
             local : ['parboiled','peg','PyPy rlib','PetitParser','Nemerle.Peg','parsepp','Treetop','Narwhal','Lambda PEG','PGE','lars::parser','Laja','Grako','Mouse','grammar::peg','PEGTL','pyPEG','neotoma','PHP PEG','CL-peg','LPeg','Yard','Drat!','AustenX','Katahdin','Spirit2','IronMeta','peg-parser','Pegasus','Arpeggio','NPEG','Aurochs','PackCC','Pappy','Rats!','Packrat','OMeta','Waxeye','Frisby','PEG.js','pegc','Parsnip','']
           });
     </script>

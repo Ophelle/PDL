@@ -38,9 +38,9 @@
  		 									<input type="checkbox" name="Feature" >XDS Sigma systems</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>ASEM-51 : </label></br> <input id="4" type="number" name="Feature"></br>
+							<label>ASEM-51 : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>MPW IIgs Assembler : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
@@ -54,12 +54,8 @@
 							
 						</br>	
 							<label>MAP
-(Macro Assembly Program) :</label></br>
+(Macro Assembly Program) : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >IBM 709</br>	
- 		 									<input type="checkbox" name="Feature" > 704x</br>	
- 		 									<input type="checkbox" name="Feature" > 709x</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>ID3E : </label></br> <input id="10" type="text" name="Feature"></br>
 							
@@ -76,11 +72,8 @@
 used for GEORGE_(operating_system) : </label></br> <input id="12" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>vasm :</label></br>
+							<label>vasm : </label></br> <input id="13" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Zilog Z80</br>	
- 		 									<input type="checkbox" name="Feature" > Motorola 6800 family</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>ASMB, ASBL, NSBL - Numeric op codes, 
 used for 1900 Operating System Executive : </label></br> <input id="14" type="text" name="Feature"></br>
@@ -94,12 +87,8 @@ used for 1900 Operating System Executive : </label></br> <input id="14" type="te
 							
 						</br>	
 							<label>FAP
-(Fortran Assembly Program) :</label></br>
+(Fortran Assembly Program) : </label></br> <input id="17" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >IBM 709</br>	
- 		 									<input type="checkbox" name="Feature" > 704x</br>	
- 		 									<input type="checkbox" name="Feature" > 709x</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Symbolic Programming System (SPS) :</label></br>
 							
@@ -117,17 +106,8 @@ used for 1900 Operating System Executive : </label></br> <input id="14" type="te
 							<label>Assembler : </label></br> <input id="20" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Autocoder :</label></br>
+							<label>Autocoder : </label></br> <input id="21" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >IBM 705</br>	
- 		 									<input type="checkbox" name="Feature" > 14xx</br>	
- 		 									<input type="checkbox" name="Feature" > 1410</br>	
- 		 									<input type="checkbox" name="Feature" > 7010</br>	
- 		 									<input type="checkbox" name="Feature" > 7070</br>	
- 		 									<input type="checkbox" name="Feature" > 7072</br>	
- 		 									<input type="checkbox" name="Feature" > 7074</br>	
- 		 									<input type="checkbox" name="Feature" > 7080</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>GPASM : </label></br> <input id="22" type="text" name="Feature"></br>
 							
@@ -145,54 +125,74 @@ used for 1900 Operating System Executive : </label></br> <input id="14" type="te
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['License','Instruction set','Host platform','']
+            local : ['Embedded Systems','8051','Free','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['Proprietary','Apple IIgs','WD 65C816','']
+            local : ['License','Instruction set','Host platform','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['PDP-10','Free','']
+            local : ['Proprietary','Apple IIgs','WD 65C816','']
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['VAX','Unknown','']
+            local : ['PDP-10','Free','']
           });
           $("#7").typeahead({
             name:"list7",
-            local : ['Unknown','PDP-11','']
+            local : ['VAX','Unknown','']
           });
           $("#8").typeahead({
             name:"list8",
-            local : ['SC123','Free for academic use','SC123 emulator','']
+            local : ['Unknown','PDP-11','']
           });
           $("#9").typeahead({
             name:"list9",
-            local : ['Proprietary','ICL 1900','']
+            local : ['Free','IBM 709, 704x, 709x','various','']
           });
           $("#10").typeahead({
             name:"list10",
-            local : ['Proprietary','ICL 1900','']
+            local : ['SC123','Free for academic use','SC123 emulator','']
           });
           $("#11").typeahead({
             name:"list11",
-            local : ['IBM 650','Proprietary','']
+            local : ['Proprietary','ICL 1900','']
           });
           $("#12").typeahead({
             name:"list12",
-            local : ['Proprietary','GEC 4000 series','']
+            local : ['Free','various','Zilog Z80, Motorola 6800 family','']
           });
           $("#13").typeahead({
             name:"list13",
-            local : ['MIPS architecture','Free','']
+            local : ['Proprietary','ICL 1900','']
           });
           $("#14").typeahead({
             name:"list14",
-            local : ['PIC microcontroller','many','GPL','']
+            local : ['IBM 650','Proprietary','']
           });
           $("#15").typeahead({
             name:"list15",
+            local : ['Proprietary','GEC 4000 series','']
+          });
+          $("#16").typeahead({
+            name:"list16",
+            local : ['various','IBM 709, 704x, 709x','Free','']
+          });
+          $("#17").typeahead({
+            name:"list17",
+            local : ['MIPS architecture','Free','']
+          });
+          $("#18").typeahead({
+            name:"list18",
+            local : ['Free','IBM 705, 14xx, 1410, 7010, 7070, 7072, 7074, 7080','various','']
+          });
+          $("#19").typeahead({
+            name:"list19",
+            local : ['PIC microcontroller','many','GPL','']
+          });
+          $("#20").typeahead({
+            name:"list20",
             local : ['MIT License','GE-645
 Honeywell 6180','']
           });

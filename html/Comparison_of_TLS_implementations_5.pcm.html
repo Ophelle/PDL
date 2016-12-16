@@ -26,80 +26,51 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>PSK-RSA : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>SRP : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>ECDH-ANON (insecure) : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>DH-ANON (insecure) :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Client side only</br>	
- 		 									<input type="checkbox" name="Feature" > disabled by default</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>SRP-DSS : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>KRB5 : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>PSK : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>ECDHE-PSK (forward secrecy) : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>SRP-RSA : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>PSK-RSA :</label></br>
+ 		 					 <input type="radio" name="FeaturePSK-RSA" value="oui">oui <input type="radio" name="FeaturePSK-RSA" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>SRP :</label></br>
+ 		 					 <input type="radio" name="FeatureSRP" value="oui">oui <input type="radio" name="FeatureSRP" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>ECDH-ANON (insecure) :</label></br>
+ 		 					 <input type="radio" name="FeatureECDH-ANON (insecure)" value="oui">oui <input type="radio" name="FeatureECDH-ANON (insecure)" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>DH-ANON (insecure) :</label></br>
+ 		 					 <input type="radio" name="FeatureDH-ANON (insecure)" value="oui">oui <input type="radio" name="FeatureDH-ANON (insecure)" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>SRP-DSS :</label></br>
+ 		 					 <input type="radio" name="FeatureSRP-DSS" value="oui">oui <input type="radio" name="FeatureSRP-DSS" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>KRB5 :</label></br>
+ 		 					 <input type="radio" name="FeatureKRB5" value="oui">oui <input type="radio" name="FeatureKRB5" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>PSK :</label></br>
+ 		 					 <input type="radio" name="FeaturePSK" value="oui">oui <input type="radio" name="FeaturePSK" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>ECDHE-PSK (forward secrecy) :</label></br>
+ 		 					 <input type="radio" name="FeatureECDHE-PSK (forward secrecy)" value="oui">oui <input type="radio" name="FeatureECDHE-PSK (forward secrecy)" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>SRP-RSA :</label></br>
+ 		 					 <input type="radio" name="FeatureSRP-RSA" value="oui">oui <input type="radio" name="FeatureSRP-RSA" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Implementation : </label></br> <input id="10" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>DHE-PSK (forward secrecy) : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>DHE-PSK (forward secrecy) :</label></br>
+ 		 					 <input type="radio" name="FeatureDHE-PSK (forward secrecy)" value="oui">oui <input type="radio" name="FeatureDHE-PSK (forward secrecy)" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','PSK-RSA','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['No','PSK','Yes','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Yes','SRP','No','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['ECDH-ANON (insecure)','Disabled by default','No','Yes','Disabled by default in Java 8','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes','No','SRP-DSS','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['No','KRB5','Unknown','Yes','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['Yes','No','DHE-PSK (forward secrecy)','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['No','Yes','ECDHE-PSK (forward secrecy)','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['No','Yes','SRP-RSA','']
-          });
-          $("#10").typeahead({
-            name:"list10",
             local : ['mbed TLS','OpenSSL','Implementation','cryptlib','JSSE','MatrixSSL','NSS','SChannel','Secure Transport','LibreSSL','RSA BSAFE','GnuTLS','wolfSSL','Botan','SharkSSL','']
           });
     </script>

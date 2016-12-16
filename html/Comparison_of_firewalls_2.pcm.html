@@ -30,8 +30,9 @@
  		 					 <input type="radio" name="FeatureIP source address(es)" value="oui">oui <input type="radio" name="FeatureIP source address(es)" value = "non">non </br>
 									
 						</br>	
-							<label>TCP/UDP destination port(s) : </label></br> <input id="2" type="text" name="Feature"></br>
-							
+ 		 					<label>TCP/UDP destination port(s) :</label></br>
+ 		 					 <input type="radio" name="FeatureTCP/UDP destination port(s)" value="oui">oui <input type="radio" name="FeatureTCP/UDP destination port(s)" value = "non">non </br>
+									
 						</br>	
  		 					<label>Ethernet MAC source address :</label></br>
  		 					 <input type="radio" name="FeatureEthernet MAC source address" value="oui">oui <input type="radio" name="FeatureEthernet MAC source address" value = "non">non </br>
@@ -57,13 +58,8 @@
  		 					 <input type="radio" name="FeatureInbound firewall (ingress)" value="oui">oui <input type="radio" name="FeatureInbound firewall (ingress)" value = "non">non </br>
 									
 						</br>	
-							<label>Can Target: :</label></br>
+							<label>Can Target: : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Windows 7 </br>	
- 		 									<input type="checkbox" name="Feature" >
-Windows 2008 R2
-Firewall</br>	
-								
 						</br>	
  		 					<label>TCP/UDP source port(s) :</label></br>
  		 					 <input type="radio" name="FeatureTCP/UDP source port(s)" value="oui">oui <input type="radio" name="FeatureTCP/UDP source port(s)" value = "non">non </br>
@@ -71,7 +67,9 @@ Firewall</br>
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','Partial','']
+            local : ['IPFire','OPNsense','Untangle','Vyatta','Windows XP Firewall','Windows 7 /
+Windows 2008 R2
+Firewall','Windows Vista Firewall','Trend Micro Internet Security','WinGate','Zeroshell','Zorp','pfSense','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

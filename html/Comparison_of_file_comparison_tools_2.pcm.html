@@ -26,30 +26,16 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>CLI : </label></br> <input id="1" type="text" name="Feature"></br>
+ 		 					<label>CLI :</label></br>
+ 		 					 <input type="radio" name="FeatureCLI" value="oui">oui <input type="radio" name="FeatureCLI" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Syntax Highlighting :</label></br>
+ 		 					 <input type="radio" name="FeatureSyntax Highlighting" value="oui">oui <input type="radio" name="FeatureSyntax Highlighting" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Reports : </label></br> <input id="3" type="text" name="Feature"></br>
 							
-						</br>	
-							<label>Syntax Highlighting : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Reports :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >CSV</br>	
- 		 									<input type="checkbox" name="Feature" > Tab-delimited</br>	
- 		 									<input type="checkbox" name="Feature" > HTML</br>	
- 		 									<input type="checkbox" name="Feature" > XML</br>	
- 		 									<input type="checkbox" name="Feature" >Text</br>	
- 		 									<input type="checkbox" name="Feature" > CSV</br>	
- 		 									<input type="checkbox" name="Feature" >HTML</br>	
- 		 									<input type="checkbox" name="Feature" > Text(combined or side-by-side)</br>	
- 		 									<input type="checkbox" name="Feature" > Text</br>	
- 		 									<input type="checkbox" name="Feature" > Unix Patch</br>	
- 		 									<input type="checkbox" name="Feature" >UNIX</br>	
- 		 									<input type="checkbox" name="Feature" > Diff</br>	
- 		 									<input type="checkbox" name="Feature" > Text(unified</br>	
- 		 									<input type="checkbox" name="Feature" > traditional or side-by-side)</br>	
- 		 									<input type="checkbox" name="Feature" >XML</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
  		 					<label>GUI :</label></br>
  		 					 <input type="radio" name="FeatureGUI" value="oui">oui <input type="radio" name="FeatureGUI" value = "non">non </br>
@@ -66,22 +52,18 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','','by Intent()','']
+            local : ['No','','CSV, Tab-delimited, HTML, XML','Text, CSV','HTML, Text(combined or side-by-side)','Text','XHTML','HTML, Text, Unix Patch','HTML','UNIX, HTML, Diff','Yes','HTML, Text(unified, traditional or side-by-side)','XML, HTML, CSV, Text, Unix Patch','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['No','Yes','','Yes pipe to diff-highlight','']
+            local : ['Yes','horizontal','vertical','','both','optional','Both','landscape + portrait','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes','horizontal','vertical','','both','optional','Both','landscape + portrait','']
+            local : ['','Yes','Java API','JavaScript','elisp','vim script','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['','Yes','Java API','JavaScript','elisp','vim script','']
-          });
-          $("#5").typeahead({
-            name:"list5",
             local : ['Far Manager (compare)','Lazarus Diff','WinDiff','DiffTool','Eclipse (compare)','diff','diff3','Beyond Compare','vimdiff','UCC','SG DiffMerge','jEdit JDiff plugin','Pretty Diff','IntelliJ IDEA (compare)','Perforce P4Merge','Araxis Merge','Guiffy SureMerge','Tkdiff','ExamDiff Pro','Total Commander (compare)','Diffuse','FileMerge','Meld','Compare++','Ediff','KDiff3','WinMerge','fc','Kompare','Notepad++ (compare)','']
           });
     </script>

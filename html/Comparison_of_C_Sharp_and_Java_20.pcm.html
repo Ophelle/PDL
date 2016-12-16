@@ -26,25 +26,19 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>C# : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>C# :</label></br>
+ 		 					 <input type="radio" name="FeatureC#" value="oui">oui <input type="radio" name="FeatureC#" value = "non">non </br>
+									
 						</br>	
 							<label>Threading and Synchronization : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Java : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>Java :</label></br>
+ 		 					 <input type="radio" name="FeatureJava" value="oui">oui <input type="radio" name="FeatureJava" value = "non">non </br>
+									
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','Yes; ThreadStaticAttribute','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Partial','Yes','']
-          });
-          $("#3").typeahead({
-            name:"list3",
             local : ['Thread pool','Monitors','Task-based parallelism','Threads','Thread-local variables','Semaphores','']
           });
     </script>

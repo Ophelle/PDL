@@ -26,39 +26,25 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Languages :</label></br>
+							<label>Languages : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >AWK (changes string)</br>	
- 		 									<input type="checkbox" name="Feature" > Perl</br>	
- 		 									<input type="checkbox" name="Feature" > PHP</br>	
- 		 									<input type="checkbox" name="Feature" >Java</br>	
- 		 									<input type="checkbox" name="Feature" > JavaScript</br>	
- 		 									<input type="checkbox" name="Feature" >Cobra</br>	
- 		 									<input type="checkbox" name="Feature" > Python</br>	
- 		 									<input type="checkbox" name="Feature" > Go</br>	
- 		 									<input type="checkbox" name="Feature" >C++ (STL)</br>	
- 		 									<input type="checkbox" name="Feature" >VB .NET</br>	
- 		 									<input type="checkbox" name="Feature" > C#</br>	
- 		 									<input type="checkbox" name="Feature" > Windows PowerShell</br>	
- 		 									<input type="checkbox" name="Feature" > F#</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Format :</label></br>
+							<label>Format : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >string[startpos</br>	
- 		 									<input type="checkbox" name="Feature" > numChars] 
- string[startpos .. endpos-1] 
- string[startpos ... endpos]</br>	
- 		 									<input type="checkbox" name="Feature" >[string substringWithRange:NSMakeRange(startpos</br>	
- 		 									<input type="checkbox" name="Feature" > numChars)]</br>	
- 		 									<input type="checkbox" name="Feature" >strncpy(result</br>	
- 		 									<input type="checkbox" name="Feature" > string + startpos</br>	
- 		 									<input type="checkbox" name="Feature" > numChars);</br>	
- 		 									<input type="checkbox" name="Feature" >StringTake[string</br>	
- 		 									<input type="checkbox" name="Feature" > {startpos</br>	
- 		 									<input type="checkbox" name="Feature" > endpos}]</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['String.sub string startpos numChars','string[startpos:endpos]','(subseq string startpos endpos)','string (startpos .. endpos)','take numChars $ drop startpos string','string.[startpos..endpos]','string.slice(startpos«, endpos»)','string:sub_string(string, startpos, endpos)
+string:substr(string, startpos, numChars)','substr(string, startpos, numChars)','string[startpos, numChars] 
+ string[startpos .. endpos-1] 
+ string[startpos ... endpos]','(substring string startpos endpos)','string[startpos .. endpos]','substr(string, startpos «,numChars, padChar»)','copy(string, startpos, numChars)','[string substringWithRange:NSMakeRange(startpos, numChars)]','string.Substring(startpos, numChars)','string.substr(startpos«, numChars»)','Mid(string, startpos, numChars)','string copyFrom: startpos to: endpos','substring (string, startpos, numChars)','string(startpos:endpos)','string[startpos .. endpos] 
+ string[startpos len numChars]','MID$(string, startpos, numChars)','string.sub(string, startpos, endpos) 
+ (string):sub(startpos, endpos)','SUBSTRING(string FROM startpos «FOR numChars»)','string[startpos .. endpos+1]','strncpy(result, string + startpos, numChars);','string.substring(startpos«, endpos»)','mid(string, startpos, numChars)','StringTake[string, {startpos, endpos}]','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['AWK (changes string), Perl, PHP','VB','Java, JavaScript','ALGOL 68 (changes base index)','Ruby','BASIC','Common Lisp','REXX','C','SQL','OCaml','Haskell','Objective-C (NSString * only)','Standard ML','ISLISP','Object Pascal (Delphi)','Ya','Lua','Erlang','Fortran','Mathematica','F#','Smalltalk','Seed7','Ada (changes base index)','Cobra, Python, Go','FreeBASIC','C++ (STL), JavaScript','Scheme','VB .NET, C#, Windows PowerShell, F#','D','JavaScript','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

@@ -26,54 +26,39 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>CMYK : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>CMYK :</label></br>
+ 		 					 <input type="radio" name="FeatureCMYK" value="oui">oui <input type="radio" name="FeatureCMYK" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>HSV : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>LAB : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Indexed : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Grayscale : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Adobe RGB : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>sRGB : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>Indexed :</label></br>
+ 		 					 <input type="radio" name="FeatureIndexed" value="oui">oui <input type="radio" name="FeatureIndexed" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Grayscale :</label></br>
+ 		 					 <input type="radio" name="FeatureGrayscale" value="oui">oui <input type="radio" name="FeatureGrayscale" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Adobe RGB :</label></br>
+ 		 					 <input type="radio" name="FeatureAdobe RGB" value="oui">oui <input type="radio" name="FeatureAdobe RGB" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>sRGB :</label></br>
+ 		 					 <input type="radio" name="FeaturesRGB" value="oui">oui <input type="radio" name="FeaturesRGB" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Partial','Yes','Import only','No','?','CMYK','']
+            local : ['','No','Partial','Yes','?','HSV','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['','No','Partial','Yes','?','HSV','']
-          });
-          $("#3").typeahead({
-            name:"list3",
             local : ['No','Yes','','?','Curve editing only','Partial','LAB','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['?','Partial','Yes','Indexed','No','Import only','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['No','Yes','?','Partial','Import only','Grayscale','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Yes','?','No','Partial','Adobe RGB','Import only','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['Yes','sRGB','No','?','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

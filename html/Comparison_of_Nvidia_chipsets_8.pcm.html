@@ -42,9 +42,10 @@
 process (nm) : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>SLI : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>SLI :</label></br>
+ 		 					 <input type="radio" name="FeatureSLI" value="oui">oui <input type="radio" name="FeatureSLI" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Processors Supported :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >Athlon 64 X2</br>	
@@ -122,26 +123,22 @@ Frequency (MHz) : </label></br> <input id="8" type="text" name="Feature"></br>
           });
           $("#7").typeahead({
             name:"list7",
-            local : ['No','x8+x8','x16+x16','']
+            local : ['HT 1 GHz','']
           });
           $("#8").typeahead({
             name:"list8",
-            local : ['HT 1 GHz','']
+            local : ['nForce 510','nForce 590 SLI','nForce 520','nForce 570 LT SLI','nForce 500 SLI','nForce 560 SLI','nForce 520 LE','nForce 550','nForce 560','nForce 570 Ultra','nForce 500 Ultra','nForce 500','nForce 570 SLI','']
           });
           $("#9").typeahead({
             name:"list9",
-            local : ['nForce 510','nForce 590 SLI','nForce 520','nForce 570 LT SLI','nForce 500 SLI','nForce 560 SLI','nForce 520 LE','nForce 550','nForce 560','nForce 570 Ultra','nForce 500 Ultra','nForce 500','nForce 570 SLI','']
+            local : ['','']
           });
           $("#10").typeahead({
             name:"list10",
-            local : ['','']
+            local : ['2 Ports UDMA 133','1 Ports UDMA 133','']
           });
           $("#11").typeahead({
             name:"list11",
-            local : ['2 Ports UDMA 133','1 Ports UDMA 133','']
-          });
-          $("#12").typeahead({
-            name:"list12",
             local : ['','Rebranded nForce4 SLI','Rebranded nForce4 Ultra','Rebranded nForce4','Same chipset as nForce 570 LT SLI but with some resistors removed thus disabling SLI','']
           });
     </script>

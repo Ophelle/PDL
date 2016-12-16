@@ -72,44 +72,44 @@
  		 									<input type="checkbox" name="Feature" >Cloudscape</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Standalone or bundled into a larger toolkit :</label></br>
+							<label>Standalone or bundled into a larger toolkit : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Standalone with Data</br>	
- 		 									<input type="checkbox" name="Feature" > UML</br>	
- 		 									<input type="checkbox" name="Feature" > and process modeling</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Supported OSs :</label></br>
+							<label>Supported OSs : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 									<input type="checkbox" name="Feature" > Mac OS</br>	
- 		 									<input type="checkbox" name="Feature" > Linux</br>	
- 		 									<input type="checkbox" name="Feature" > Mac</br>	
- 		 									<input type="checkbox" name="Feature" > Linux and FreeBSB (both through Wine)</br>	
- 		 									<input type="checkbox" name="Feature" >Linux</br>	
- 		 									<input type="checkbox" name="Feature" > Windows</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>License :</label></br>
+							<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Proprietary or GPL</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Creator :</label></br>
+							<label>Creator : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Webyog</br>	
- 		 									<input type="checkbox" name="Feature" > Inc.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Launch Date : </label></br> <input id="7" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Tool :</label></br>
+							<label>Tool : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >ER</br>	
- 		 									<input type="checkbox" name="Feature" >Studio</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['part of IBM's  information management software portfolio','Standalone','Standalone with Data, UML, and process modeling','Data modeling is supported as part of a complete modeling platform.','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['Cross-platform','Windows','Windows, Mac OS, Linux','Windows, Linux, Mac','Windows, Linux and FreeBSB (both through Wine)','Linux, Windows, Mac OS','Windows, Linux','Windows and Linux (using Wine)','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Proprietary','Proprietary or GPL','GNU GPL3','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Sybase','Grandite','IBM','Embarcadero','ModelRight','Oracle','CA Technologies','Upscene Productions','Sparx Systems','Webyog, Inc.','PremiumSoft','Datanamic','Quest Software','Dusan Rodina','No Magic','MySQL (An Oracle Company)','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['MySQL Workbench','Database Workbench','MagicDraw','ModelRight','Enterprise Architect','InfoSphere Data Architect (Rational Data Architect)','Toad Data Modeler','DeZign for Databases','PowerDesigner','Oracle SQL Developer Data Modeler','Navicat Data Modeler','ER/Studio','SQLyog','Open ModelSphere','CA ERwin Data Modeler','Software Ideas Modeler','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

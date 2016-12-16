@@ -34,23 +34,23 @@
  		 					 <input type="radio" name="FeatureSWI-Prolog" value="oui">oui <input type="radio" name="FeatureSWI-Prolog" value = "non">non </br>
 									
 						</br>	
-							<label>Ciao : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>Ciao :</label></br>
+ 		 					 <input type="radio" name="FeatureCiao" value="oui">oui <input type="radio" name="FeatureCiao" value = "non">non </br>
+									
 						</br>	
 							<label>Jekejeke Prolog : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>XSB : </label></br> <input id="5" type="text" name="Feature"></br>
+ 		 					<label>XSB :</label></br>
+ 		 					 <input type="radio" name="FeatureXSB" value="oui">oui <input type="radio" name="FeatureXSB" value = "non">non </br>
+									
+						</br>	
+							<label>Visual Prolog : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Visual Prolog :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >N</br>	
- 		 									<input type="checkbox" name="Feature" >A (compile time)</br>	
-								
-						</br>	
-							<label>GNU Prolog : </label></br> <input id="7" type="text" name="Feature"></br>
-							
+ 		 					<label>GNU Prolog :</label></br>
+ 		 					 <input type="radio" name="FeatureGNU Prolog" value="oui">oui <input type="radio" name="FeatureGNU Prolog" value = "non">non </br>
+									
 						</br>	
  		 					<label>SICStus Prolog :</label></br>
  		 					 <input type="radio" name="FeatureSICStus Prolog" value="oui">oui <input type="radio" name="FeatureSICStus Prolog" value = "non">non </br>
@@ -61,22 +61,14 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','?','']
+            local : ['Yes (runtime)','Yes','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes (runtime)','Yes','']
+            local : ['N/A','Yes (compile time)','N/A (compile time)','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes','?','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','?','']
-          });
-          $("#5").typeahead({
-            name:"list5",
             local : ['Choice Point Elimination','Just-in-Time Indexing','Tail-Call Optimization','Environment Trimming','']
           });
     </script>

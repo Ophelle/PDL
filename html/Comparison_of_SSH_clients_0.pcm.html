@@ -39,42 +39,20 @@
  		 					 <input type="radio" name="FeatureSource available" value="oui">oui <input type="radio" name="FeatureSource available" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Based on :</label></br>
+							<label>Based on : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >OpenSSH</br>	
- 		 									<input type="checkbox" name="Feature" > Telnet</br>	
- 		 									<input type="checkbox" name="Feature" > FTP</br>	
- 		 									<input type="checkbox" name="Feature" > vncviewer</br>	
- 		 									<input type="checkbox" name="Feature" > rdesktop</br>	
- 		 									<input type="checkbox" name="Feature" > cu</br>	
- 		 									<input type="checkbox" name="Feature" > remote-tty</br>	
- 		 									<input type="checkbox" name="Feature" > mosh</br>	
- 		 									<input type="checkbox" name="Feature" > cadaver</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>License : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>First release : </label></br> <input id="7" type="number" name="Feature"></br>
+							<label>First release : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Developer :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >EmTec</br>	
- 		 									<input type="checkbox" name="Feature" > Innovative Software</br>	
- 		 									<input type="checkbox" name="Feature" >Kenny Root </br>	
- 		 									<input type="checkbox" name="Feature" > Jeffrey Sharkey</br>	
- 		 									<input type="checkbox" name="Feature" >SDI USA</br>	
- 		 									<input type="checkbox" name="Feature" > Inc.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Name :</label></br>
+							<label>Developer : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >SSH Tectia Client</br>	
- 		 									<input type="checkbox" name="Feature" >ConnectSecure</br>	
- 		 									<input type="checkbox" name="Feature" >Bitvise SSH Client</br>	
- 		 									<input type="checkbox" name="Feature" >Tunnelier</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
+							<label>Name : </label></br> <input id="9" type="text" name="Feature"></br>
+							
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -86,7 +64,23 @@
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['','Own implementation in C','OpenSSH 2.3','OpenSSH','OpenSSH, Telnet, FTP, vncviewer, rdesktop, cu, remote-tty, mosh, cadaver','ossh','PuTTY','F-Secure SSH','TeraTerm 2.3 (1994–1998)','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['Proprietary','BSD','MIT','GPL','Apache','CDDL','Microsoft MS-CL','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['1995-07-01','2002-05','2006','1999-01-22','','2015-05','1998-06','2003-04','1995-07','1996','2000','2010-01-01','2002-07','1998','1999-12-01','2008','1998-11-13','2004','2002','1998?','2007-11','2011-11','2003-04-06','2012-11-28','2001-06-22','2001','1999-05-23','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['Matt Johnston','Bitvise','Choung Networks','Celestial Software (Brian Pence)','Simon Tatham','SSH Communications Security (former Tectia)','FCS Software','David Torrejón Vaquerizas','Imposant','TeraTerm Project','Martin Prikryl','EmTec, Innovative Software','NetSarang','Open Solaris','The OpenBSD project','Terminals CodePlex Project','Maarten L. Hekkelman','SmartSoft Ltd','Attachmate','Ecode Software','Kenny Root / Jeffrey Sharkey','Cryptzone','Tim Kosse','Proxy Labs','Admin Hands','SDI USA, Inc.','SolarWinds','Niels Möller','VanDyke Software','Mobatek','siliconcircus','']
+          });
+          $("#7").typeahead({
+            name:"list7",
+            local : ['TtyEmulator','SecureCRT','TN3270 Plus','SmartFTP','Salt','SSH Tectia Client/ConnectSecure','Reflection for Secure IT','WinSCP','Bitvise SSH Client/Tunnelier','lsh','Tera Term','MobaXterm','ZOC Terminal','Token2Shell','DameWare','Admin Hands','Dropbear','OpenSSH','AbsoluteTelnet','FileZilla','MindTerm','SunSSH','PuTTY','Private Shell','ProxyCap','Terminals CodePlex','ConnectBot','eSSH Client','PACManager','Xshell','Penguinet','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

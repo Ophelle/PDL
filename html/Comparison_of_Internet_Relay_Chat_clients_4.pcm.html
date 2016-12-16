@@ -26,21 +26,24 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>CTCP : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>CTCP :</label></br>
+ 		 					 <input type="radio" name="FeatureCTCP" value="oui">oui <input type="radio" name="FeatureCTCP" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>SASL : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>IPv6 : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>IPv6 :</label></br>
+ 		 					 <input type="radio" name="FeatureIPv6" value="oui">oui <input type="radio" name="FeatureIPv6" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>OCSP : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>DCC : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>DCC :</label></br>
+ 		 					 <input type="radio" name="FeatureDCC" value="oui">oui <input type="radio" name="FeatureDCC" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>TLS : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
@@ -53,55 +56,37 @@
 							<label>CRL : </label></br> <input id="9" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>OTR : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>SSL : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>OTR :</label></br>
+ 		 					 <input type="radio" name="FeatureOTR" value="oui">oui <input type="radio" name="FeatureOTR" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>SSL :</label></br>
+ 		 					 <input type="radio" name="FeatureSSL" value="oui">oui <input type="radio" name="FeatureSSL" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['?','Yes','Partial','CTCP','No','']
+            local : ['Yes','script','SASL','No','?','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','script','SASL','No','?','']
+            local : ['No','Yes','?','OCSP','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['No','Yes','?','Partial','IPv6','']
+            local : ['No','?','Yes','TLS','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['No','Yes','?','OCSP','']
+            local : ['?','Yes','No','DANE','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['Yes','Partial','No','DCC','?','']
+            local : ['ERC','Nettalk','Irssi','BitchX','Neebly','rcirc','Convos','Colloquy','Opera','Ircle','Snak','IceChat','mIRC','jIRCii','Bersirc','ii (IRC IT)','Smuxi','LimeChat','Visual IRC','Scrollback','ChatZilla','IRCjr','PJIRC','f-irc','Linkinus','AmIRC','LeetIRC','PIRCH','KVIrc','XChat','WeeChat','Konversation','qwebirc','DMDirc','HexChat','KiwiIRC','ircII','Quassel','Mibbit','Lingo','Textual','Client','HydraIRC','AdiIRC','']
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['No','?','Yes','TLS','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['?','Yes','No','DANE','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['ERC','Nettalk','Irssi','BitchX','Neebly','rcirc','Convos','Colloquy','Opera','Ircle','Snak','IceChat','mIRC','jIRCii','Bersirc','ii (IRC IT)','Smuxi','LimeChat','Visual IRC','Scrollback','ChatZilla','IRCjr','PJIRC','f-irc','Linkinus','AmIRC','LeetIRC','PIRCH','KVIrc','XChat','WeeChat','Konversation','qwebirc','DMDirc','HexChat','KiwiIRC','ircII','Quassel','Mibbit','Lingo','Textual','Client','HydraIRC','AdiIRC','']
-          });
-          $("#9").typeahead({
-            name:"list9",
             local : ['?','No','CRL','Yes','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['No','Yes','?','OTR','']
-          });
-          $("#11").typeahead({
-            name:"list11",
-            local : ['Yes','SSL','No','?','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

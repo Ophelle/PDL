@@ -26,10 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>John McCain voted for the appointment of Justice Roberts.  McCain favors a more Constructionist standpoint and says he would work to safeguard against Judicial activism. :</label></br>
+							<label>John McCain voted for the appointment of Justice Roberts.  McCain favors a more Constructionist standpoint and says he would work to safeguard against Judicial activism. : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >John McCain voted for the appointment of Justice Roberts.  McCain favors a more Constructionist standpoint and says he would work to safeguard against Judicial activism.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Chuck Baldwin : </label></br> <input id="2" type="text" name="Feature"></br>
 							
@@ -42,15 +40,19 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Cynthia McKinney','Bob Barr','Ralph Nader','']
+            local : ['John McCain','Barack Obama','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['','']
+            local : ['Barack Obama was 1 of 22 Senators to vote against the appointment of Justice Roberts.','John McCain voted for the appointment of Justice Roberts.  McCain favors a more Constructionist standpoint and says he would work to safeguard against Judicial activism.','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['John McCain','Barack Obama','']
+            local : ['Cynthia McKinney','Bob Barr','Ralph Nader','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -35,9 +35,10 @@
 							<label>USB : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>AGP : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>AGP :</label></br>
+ 		 					 <input type="radio" name="FeatureAGP" value="oui">oui <input type="radio" name="FeatureAGP" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Sound : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
@@ -72,13 +73,8 @@ Frequency (MHz) : </label></br> <input id="9" type="text" name="Feature"></br>
 							<label>Model : </label></br> <input id="12" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Features :</label></br>
+							<label>Features : </label></br> <input id="13" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >RAID 0</br>	
- 		 									<input type="checkbox" name="Feature" >1</br>	
- 		 									<input type="checkbox" name="Feature" >0+1</br>	
- 		 									<input type="checkbox" name="Feature" >5</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>PATA : </label></br> <input id="14" type="text" name="Feature"></br>
 							
@@ -117,23 +113,23 @@ Frequency (MHz) : </label></br> <input id="9" type="text" name="Feature"></br>
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['No','AGP4X','AGP8X','']
+            local : ['HDA','AC'97 2.1','']
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['HDA','AC'97 2.1','']
+            local : ['','']
           });
           $("#7").typeahead({
             name:"list7",
-            local : ['','']
+            local : ['HT 800 MHz','HT3.0 2.6 GHz','HT 400 MHz','HT 600 MHz','HT 1 GHz','']
           });
           $("#8").typeahead({
             name:"list8",
-            local : ['HT 800 MHz','HT3.0 2.6 GHz','HT 400 MHz','HT 600 MHz','HT 1 GHz','']
+            local : ['nForce 8200M','nForce3 Go 120','nForce 630m','nForce 430 Go','nForce 610m','nForce3 Go 150','']
           });
           $("#9").typeahead({
             name:"list9",
-            local : ['nForce 8200M','nForce3 Go 120','nForce 630m','nForce 430 Go','nForce 610m','nForce3 Go 150','']
+            local : ['','Onboard GeForce 7150M','RAID 0,1,0+1,5','Onboard GeForce 8200M','Onboard GeForce 7000M','']
           });
           $("#10").typeahead({
             name:"list10",

@@ -30,10 +30,13 @@
 (*2) - Exif : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Supported file formats
-(*3) - RAW : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Supported file formats
+(*3) - RAW :</label></br>
+ 		 					 <input type="radio" name="FeatureSupported file formats
+(*3) - RAW" value="oui">oui <input type="radio" name="FeatureSupported file formats
+(*3) - RAW" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Description :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >Allows you read and edit metadata within your digital photos.</br>	
@@ -101,17 +104,16 @@
 (*1) : </label></br> <input id="6" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>License :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Freeware and Shareware</br>	
- 		 									<input type="checkbox" name="Feature" >GPL</br>	
- 		 									<input type="checkbox" name="Feature" >Proprietary (Dual licensed)</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Supported file formats
-(*3) - JPG : </label></br> <input id="8" type="text" name="Feature"></br>
+							<label>License : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
+ 		 					<label>Supported file formats
+(*3) - JPG :</label></br>
+ 		 					 <input type="radio" name="FeatureSupported file formats
+(*3) - JPG" value="oui">oui <input type="radio" name="FeatureSupported file formats
+(*3) - JPG" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Last release year : </label></br> <input id="9" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -130,14 +132,15 @@
 (*2) - Other : </label></br> <input id="13" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Supported file formats
-(*3) - TIF : </label></br> <input id="14" type="text" name="Feature"></br>
+ 		 					<label>Supported file formats
+(*3) - TIF :</label></br>
+ 		 					 <input type="radio" name="FeatureSupported file formats
+(*3) - TIF" value="oui">oui <input type="radio" name="FeatureSupported file formats
+(*3) - TIF" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Software : </label></br> <input id="15" type="text" name="Feature"></br>
 							
-						</br>	
-							<label>Software :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >JPEG &amp; PNG Stripper</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Supported metadata standards
 (*2) - Maker : </label></br> <input id="16" type="text" name="Feature"></br>
@@ -147,10 +150,13 @@
 (*2) - XMP : </label></br> <input id="17" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Supported file formats
-(*3) - Other : </label></br> <input id="18" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>Supported file formats
+(*3) - Other :</label></br>
+ 		 					 <input type="radio" name="FeatureSupported file formats
+(*3) - Other" value="oui">oui <input type="radio" name="FeatureSupported file formats
+(*3) - Other" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['Windows','Windows
@@ -159,6 +165,14 @@ Linux','Windows
 Linux','Windows
 MacOS','Linux
 MacOS','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['Freeware','GPL','Freeware and Shareware','Shareware','Freeware (for private and educational use)','GPL/Proprietary (Dual licensed)','GPLv1','Free for non-commercial use','GPLv2','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['iTag','Daminion','Exiv2','EXIF-O-Matic','JExifViewer','ExifCleaner','ExifTool GUI','MetaEditor','ExifDropper','ExifMixer','AvPicFaceXmpTagger','Opanda PowerExif','XNView','MetadataFox','ExifTool','EXIF Browser','Image Info Toolkit','GUI2','ImBatch','JPEG &amp; PNG Stripper','Easy Exif Delete','Auto ISO Tool','Free EXIF Eraser','ExifAuto','MAT','MetaLith','IPTC-PLUS Photo Metadata Toolkit','MetadataTouch','PhotoME','Exif Pilot','Exif Copier','Exif Tag Remover','DBGallery','Description Explorer','EXIFutils','ExposurePlot','ExifyMe','Exif Stats','EXIF Date Changer','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

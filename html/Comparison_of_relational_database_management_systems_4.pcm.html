@@ -26,20 +26,14 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Materialized view : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>Materialized view :</label></br>
+ 		 					 <input type="radio" name="FeatureMaterialized view" value="oui">oui <input type="radio" name="FeatureMaterialized view" value = "non">non </br>
+									
 						</br>	
-							<label>Temporary table : </label></br> <input id="2" type="text" name="Feature"></br>
-							
+ 		 					<label>Temporary table :</label></br>
+ 		 					 <input type="radio" name="FeatureTemporary table" value="oui">oui <input type="radio" name="FeatureTemporary table" value = "non">non </br>
+									
 		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['No','Yes','No (only common views)','?','Yes - see precomputed result sets','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Yes','No','?','']
-          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

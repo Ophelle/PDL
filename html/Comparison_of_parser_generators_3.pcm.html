@@ -26,66 +26,20 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Output languages :</label></br>
+							<label>Output languages : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >C</br>	
- 		 									<input type="checkbox" name="Feature" > C++</br>	
- 		 									<input type="checkbox" name="Feature" > Java</br>	
- 		 									<input type="checkbox" name="Feature" >N</br>	
- 		 									<input type="checkbox" name="Feature" >A (state machine is runtime generated)</br>	
- 		 									<input type="checkbox" name="Feature" > Python</br>	
- 		 									<input type="checkbox" name="Feature" >Haskell</br>	
- 		 									<input type="checkbox" name="Feature" >C++</br>	
- 		 									<input type="checkbox" name="Feature" > C#</br>	
- 		 									<input type="checkbox" name="Feature" > Visual Basic .NET</br>	
- 		 									<input type="checkbox" name="Feature" > Lex</br>	
- 		 									<input type="checkbox" name="Feature" > Haskell</br>	
- 		 									<input type="checkbox" name="Feature" > HTML</br>	
- 		 									<input type="checkbox" name="Feature" > Object Pascal</br>	
- 		 									<input type="checkbox" name="Feature" > Yacc</br>	
- 		 									<input type="checkbox" name="Feature" >JavaScript</br>	
- 		 									<input type="checkbox" name="Feature" > PHP</br>	
- 		 									<input type="checkbox" name="Feature" > OCaml</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Lexer :</label></br>
+							<label>Lexer : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >generated or external</br>	
- 		 									<input type="checkbox" name="Feature" >external</br>	
- 		 									<input type="checkbox" name="Feature" > or scannerless</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>License :</label></br>
+							<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >"No licensing or copyright restrictions"</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Website : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Parsing algorithm :</label></br>
+							<label>Parsing algorithm : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >LALR</br>	
- 		 									<input type="checkbox" name="Feature" > GLR</br>	
- 		 									<input type="checkbox" name="Feature" >LALR(1)</br>	
- 		 									<input type="checkbox" name="Feature" > LR</br>	
- 		 									<input type="checkbox" name="Feature" >Pruning</br>	
- 		 									<input type="checkbox" name="Feature" > Scannerless GLR</br>	
- 		 									<input type="checkbox" name="Feature" >General tabular</br>	
- 		 									<input type="checkbox" name="Feature" > SLL(k)</br>	
- 		 									<input type="checkbox" name="Feature" > Linear normal form (Conjunctive grammar)</br>	
- 		 									<input type="checkbox" name="Feature" > Binary normal form (Boolean grammar)</br>	
- 		 									<input type="checkbox" name="Feature" >Earley</br>	
- 		 									<input type="checkbox" name="Feature" >combinators</br>	
- 		 									<input type="checkbox" name="Feature" > infinitary CFGs</br>	
- 		 									<input type="checkbox" name="Feature" > LR(1)</br>	
- 		 									<input type="checkbox" name="Feature" > IELR(1)</br>	
- 		 									<input type="checkbox" name="Feature" >Scannerless</br>	
- 		 									<input type="checkbox" name="Feature" > two phase</br>	
- 		 									<input type="checkbox" name="Feature" >GLR</br>	
- 		 									<input type="checkbox" name="Feature" > LALR(1)</br>	
- 		 									<input type="checkbox" name="Feature" > LL(k)</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Input grammar notation : </label></br> <input id="6" type="text" name="Feature"></br>
 							
@@ -100,27 +54,44 @@
 							<label>Development platform : </label></br> <input id="9" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Name :</label></br>
+							<label>Name : </label></br> <input id="10" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >SDF</br>	
- 		 									<input type="checkbox" name="Feature" >SGLR</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['','']
+            local : ['Parlanse','C, C++, Java','N/A (state machine is runtime generated)','OCaml','C, Java','D','C, Python','C','Haskell, Java','C++, C#, Java, Visual Basic .NET','Python','C, Lex, Haskell, HTML, Java, Object Pascal, Yacc','JavaScript, C#, PHP','Haskell','Java','C++, OCaml','C#','Smalltalk','C++','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['BNF-like','?','YACC','C#','Laja','SDF','Annotated class model','']
+            local : ['generated','scannerless','external','generated or external','external, or scannerless','none','internal','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['separate','mixed','generated','']
+            local : ['Apache License 2.0','BSD','Proprietary','MIT','Artistic','"No licensing or copyright restrictions"','GNU GPL','CeCILL-B','?','GNU LGPL','']
           });
           $("#4").typeahead({
             name:"list4",
+            local : ['','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['LALR, GLR','LALR(1), GLR','LALR(1), LR(0), SLR(1)','Earley','runtime-extensible GLR','GLR','LALR, LR, GLR','Pruning, LR, GLR, Scannerless GLR','Combinators','General tabular, SLL(k), Linear normal form (Conjunctive grammar), LR, Binary normal form (Boolean grammar)','GLR(1), LALR(1), LR(1)','Scannerless GLR','Earley/combinators, infinitary CFGs','LALR(1), LR(1), IELR(1), GLR','Scannerless, two phase','Earley/combinators','GLR, LALR(1), LL(k)','Scannerless GLR (Boolean grammar)','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['BNF-like','?','YACC','C#','Laja','SDF','Annotated class model','']
+          });
+          $("#7").typeahead({
+            name:"list7",
+            local : ['separate','mixed','generated','']
+          });
+          $("#8").typeahead({
+            name:"list8",
             local : ['.NET Framework','all','POSIX','Microsoft Windows','Java Virtual Machine','']
+          });
+          $("#9").typeahead({
+            name:"list9",
+            local : ['Happy','SPARK','IronText Library','E3','GDK','P1','Wormhole','Bison','DMS Software Reengineering Toolkit','Dypgen','APaGeD','Jison','SDF/SGLR','Elkhound','UltraGram','DParser','Whale Calf','Tom','P3','Laja','eu.h8me.Parsing','SmaCC','ACCENT','Scannerless Boolean Parser','ModelCC','P4','Hime Parser Generator','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

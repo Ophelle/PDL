@@ -26,22 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>OS :</label></br>
+							<label>OS : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >OSX</br>	
- 		 									<input type="checkbox" name="Feature" > OmniGroup software for iOS</br>	
- 		 									<input type="checkbox" name="Feature" > open source framework available</br>	
- 		 									<input type="checkbox" name="Feature" >Windows (Vista and greater)</br>	
- 		 									<input type="checkbox" name="Feature" > Windows Mobile</br>	
- 		 									<input type="checkbox" name="Feature" > OSX</br>	
- 		 									<input type="checkbox" name="Feature" >Windows </br>	
- 		 									<input type="checkbox" name="Feature" > Mac OS X </br>	
- 		 									<input type="checkbox" name="Feature" > Linux </br>	
- 		 									<input type="checkbox" name="Feature" > FreeBSD </br>	
- 		 									<input type="checkbox" name="Feature" > Android </br>	
- 		 									<input type="checkbox" name="Feature" > iOS</br>	
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Comments :</label></br>
 							
@@ -64,9 +50,10 @@
  		 									<input type="checkbox" name="Feature" >Syncs mobile devices; successor to Microsoft ActiveSync</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Remote desktop : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Remote desktop :</label></br>
+ 		 					 <input type="radio" name="FeatureRemote desktop" value="oui">oui <input type="radio" name="FeatureRemote desktop" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Scheduling :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >No</br>	
@@ -75,24 +62,19 @@
  		 									<input type="checkbox" name="Feature" > Monitoring synchronizing folder continuously (once a minute)</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Vendor :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >BitTorrent</br>	
- 		 									<input type="checkbox" name="Feature" > Inc</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Detect rename : </label></br> <input id="6" type="text" name="Feature"></br>
+							<label>Vendor : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Detect move : </label></br> <input id="7" type="text" name="Feature"></br>
+ 		 					<label>Detect rename :</label></br>
+ 		 					 <input type="radio" name="FeatureDetect rename" value="oui">oui <input type="radio" name="FeatureDetect rename" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Detect move :</label></br>
+ 		 					 <input type="radio" name="FeatureDetect move" value="oui">oui <input type="radio" name="FeatureDetect move" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Prior file versions, revision control : </label></br> <input id="8" type="text" name="Feature"></br>
 							
-						</br>	
-							<label>Prior file versions, revision control :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >No</br>	
- 		 									<input type="checkbox" name="Feature" > recycle bin only</br>	
- 		 									<input type="checkbox" name="Feature" > via local Time Machine backup only</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Full duplex transfer : </label></br> <input id="9" type="text" name="Feature"></br>
 							
@@ -100,37 +82,32 @@
 							<label>Name : </label></br> <input id="10" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Portable : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Online cloud storage :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >No</br>	
- 		 									<input type="checkbox" name="Feature" > browsing only</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-		<script>
+ 		 					<label>Portable :</label></br>
+ 		 					 <input type="radio" name="FeaturePortable" value="oui">oui <input type="radio" name="FeaturePortable" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Online cloud storage :</label></br>
+ 		 					 <input type="radio" name="FeatureOnline cloud storage" value="oui">oui <input type="radio" name="FeatureOnline cloud storage" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['','Yes','No','']
+            local : ['Windows','OSX, OmniGroup software for iOS, open source framework available','Windows (Vista and greater), Windows Mobile, OSX','Windows / Mac OS X / Linux / FreeBSD / Android / iOS','Windows, OSX','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['No','Yes, via VNC or RDP','Yes','']
+            local : ['Microsoft','CodeStunts','Gbridge LLC','BitTorrent, Inc','CobianSoft','OmniGroup','SOB Soft','Lumisoft','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes','','?','No','']
+            local : ['No, recycle bin only','Yes (previous versions moved to archive folder)','?','','Yes, trash folder','Yes, via VNC or RDP','No','No, via local Time Machine backup only','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['No','Yes','','?','']
+            local : ['','Yes','No','?','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['','Yes','No','?','']
-          });
-          $("#6").typeahead({
-            name:"list6",
             local : ['Microsoft SyncToy','OmniGroup OmniPresence','Cobian Backup','FTP LiveSync','Windows Mobile Device Center','Microsoft ActiveSync','Magic Mirror Sync','BitTorrent Sync','Windows Live Mesh (discontinued 13 February 2013)','Gbridge','Microsoft Sync Framework','Echosync','Windows Live Sync (discontinued 31 March 2011)','Briefcase in Microsoft Windows','']
           });
     </script>

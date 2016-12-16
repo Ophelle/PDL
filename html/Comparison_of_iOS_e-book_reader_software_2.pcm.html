@@ -26,13 +26,9 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Edit meta-data :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Author</br>	
- 		 									<input type="checkbox" name="Feature" > Title</br>	
- 		 									<input type="checkbox" name="Feature" > Publisher</br>	
- 		 									<input type="checkbox" name="Feature" > Label</br>	
-								
+ 		 					<label>Edit meta-data :</label></br>
+ 		 					 <input type="radio" name="FeatureEdit meta-data" value="oui">oui <input type="radio" name="FeatureEdit meta-data" value = "non">non </br>
+									
 						</br>	
  		 					<label>Online dictionary :</label></br>
  		 					 <input type="radio" name="FeatureOnline dictionary" value="oui">oui <input type="radio" name="FeatureOnline dictionary" value = "non">non </br>
@@ -53,8 +49,9 @@
  		 					 <input type="radio" name="FeatureAnnotate" value="oui">oui <input type="radio" name="FeatureAnnotate" value = "non">non </br>
 									
 						</br>	
-							<label>TTS support (read aloud) : </label></br> <input id="7" type="text" name="Feature"></br>
-							
+ 		 					<label>TTS support (read aloud) :</label></br>
+ 		 					 <input type="radio" name="FeatureTTS support (read aloud)" value="oui">oui <input type="radio" name="FeatureTTS support (read aloud)" value = "non">non </br>
+									
 						</br>	
  		 					<label>Export to iTunes :</label></br>
  		 					 <input type="radio" name="FeatureExport to iTunes" value="oui">oui <input type="radio" name="FeatureExport to iTunes" value = "non">non </br>
@@ -80,20 +77,13 @@
  		 					 <input type="radio" name="FeatureTranslate" value="oui">oui <input type="radio" name="FeatureTranslate" value = "non">non </br>
 									
 						</br>	
-							<label>DRM support : </label></br> <input id="12" type="text" name="Feature"></br>
-							
+ 		 					<label>DRM support :</label></br>
+ 		 					 <input type="radio" name="FeatureDRM support" value="oui">oui <input type="radio" name="FeatureDRM support" value = "non">non </br>
+									
 		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['eBookMobi','ShuBook','Bluefire Reader','Apabi Reader','uBooks','i2Reader','Ebook Reader','MegaReader','iBouquiniste','Kindle','PocketBook reader','Stanza','iBooks','Marvin','Blio','KyBook','DL Reader','Kobo Reading App','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Yes','No','Adobe DRM','Apple FairPlay','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','Yes','yes, via VoiceOver','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -65,11 +65,8 @@
  		 									<input type="checkbox" name="Feature" > 8 CPUs</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Name :</label></br>
+							<label>Name : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Containers</br>	
- 		 									<input type="checkbox" name="Feature" > or Zones</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -86,6 +83,10 @@
           $("#4").typeahead({
             name:"list4",
             local : ['No limit','N/A','64 TB','Depending on filesystem','2 TB minus 512 bytes','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['Containers, or Zones','Hyper-V Server 2008 R2','VMware vSphere Hypervisor (ESXi 5.5) (free)','VMware Player 4.0','VMware Server 2.0','VMware vSphere Hypervisor (ESXi 5.5)','VMware vSphere Hypervisor (ESXi) 4.1','Hyper-V Server 2012','VMware vSphere ESXi 5.0','VirtualBox 4.1.x','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

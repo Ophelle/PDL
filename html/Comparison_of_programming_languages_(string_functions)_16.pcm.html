@@ -26,34 +26,28 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Format string syntax :</label></br>
+							<label>Format string syntax : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >PL</br>	
- 		 									<input type="checkbox" name="Feature" >I (similar to Fortran)</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Languages :</label></br>
+							<label>Languages : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Python</br>	
- 		 									<input type="checkbox" name="Feature" > Ruby</br>	
- 		 									<input type="checkbox" name="Feature" >PL</br>	
- 		 									<input type="checkbox" name="Feature" >I</br>	
- 		 									<input type="checkbox" name="Feature" >OCaml</br>	
- 		 									<input type="checkbox" name="Feature" > F#</br>	
- 		 									<input type="checkbox" name="Feature" >Perl</br>	
- 		 									<input type="checkbox" name="Feature" > PHP</br>	
- 		 									<input type="checkbox" name="Feature" >VB .NET</br>	
- 		 									<input type="checkbox" name="Feature" > C#</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Format :</label></br>
+							<label>Format : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >[NSString stringWithFormat:formatstring</br>	
- 		 									<input type="checkbox" name="Feature" > items]</br>	
- 		 									<input type="checkbox" name="Feature" >WRITE (outputstring</br>	
- 		 									<input type="checkbox" name="Feature" > formatstring) items</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['String.format(formatstring, items)','put string(string) edit(items)(format)','fmt.Sprintf(formatstring, items)','associate(file, string); putf(file, $formatstring$, items)','(format formatstring items)','[NSString stringWithFormat:formatstring, items]','(format nil formatstring items)','Text.Printf.printf formatstring items','string.format(formatstring, items) 
+ (formatstring):format(items)','formatstring -f items','String.Format(formatstring, items)','sprintf(outputstring, formatstring, items)','Format(formatstring, items)','printf -v outputstring formatstring items','sprintf(formatstring, items)','WRITE (outputstring, formatstring) items','formatstring % (items)','io_lib:format(formatstring, items)','String(format:formatstring, items)','formatstring printf: items','Printf.sprintf formatstring items','Format(item, formatstring)','formatstring.format(items)','std.string.format(formatstring, items)','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['Lisp','C','.NET','','ALGOL','Fortran','PL/I (similar to Fortran)','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Python, Ruby','Lua','Smalltalk  (GHC)','Cobra','Object Pascal (Delphi)','ALGOL 68','Windows PowerShell','Clojure','PL/I','Swift (Foundation)','Bash shell','Haskell (GHC)','VB','D','Java','Erlang','C','Go','Scheme (SRFI 28)','Common Lisp','Python 3.x','OCaml, F#','Perl, PHP, Ruby','Objective-C (NSString * only)','Fortran','VB .NET, C#, F#','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

@@ -26,16 +26,13 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Screencast on device :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >No</br>	
- 		 									<input type="checkbox" name="Feature" > 3rd party software on jailbroken devices</br>	
- 		 									<input type="checkbox" name="Feature" > 3rd party software like CyanogenMod ScreenCast</br>	
- 		 									<input type="checkbox" name="Feature" > AOKP or OmniROM</br>	
-								
+ 		 					<label>Screencast on device :</label></br>
+ 		 					 <input type="radio" name="FeatureScreencast on device" value="oui">oui <input type="radio" name="FeatureScreencast on device" value = "non">non </br>
+									
 						</br>	
-							<label>Move apps to external storage : </label></br> <input id="2" type="text" name="Feature"></br>
-							
+ 		 					<label>Move apps to external storage :</label></br>
+ 		 					 <input type="radio" name="FeatureMove apps to external storage" value="oui">oui <input type="radio" name="FeatureMove apps to external storage" value = "non">non </br>
+									
 						</br>	
 							<label>Other Features : </label></br> <input id="3" type="text" name="Feature"></br>
 							
@@ -43,21 +40,17 @@
 							<label>Remote Frame Buffer (RFB) protocol : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Non-intrusive incoming calls :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >5+ or 3rd party software</br>	
- 		 									<input type="checkbox" name="Feature" >No</br>	
- 		 									<input type="checkbox" name="Feature" > 3rd party software on jailbroken devices</br>	
-								
+ 		 					<label>Non-intrusive incoming calls :</label></br>
+ 		 					 <input type="radio" name="FeatureNon-intrusive incoming calls" value="oui">oui <input type="radio" name="FeatureNon-intrusive incoming calls" value = "non">non </br>
+									
 						</br>	
-							<label>Screencast over USB :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >4.4+ over USB</br>	
- 		 									<input type="checkbox" name="Feature" > for prior versions root required for 3rd party app</br>	
-								
+ 		 					<label>Screencast over USB :</label></br>
+ 		 					 <input type="radio" name="FeatureScreencast over USB" value="oui">oui <input type="radio" name="FeatureScreencast over USB" value = "non">non </br>
+									
 						</br>	
-							<label>Screen share : </label></br> <input id="7" type="text" name="Feature"></br>
-							
+ 		 					<label>Screen share :</label></br>
+ 		 					 <input type="radio" name="FeatureScreen share" value="oui">oui <input type="radio" name="FeatureScreen share" value = "non">non </br>
+									
 						</br>	
 							<label>Non-intrusive notifications : </label></br> <input id="8" type="text" name="Feature"></br>
 							
@@ -67,26 +60,18 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','?','2.2+','8.1+','']
+            local : ['Windows Phone','Android','Firefox OS','Mer','Tizen','Ubuntu Touch','iOS','Sailfish OS','BlackBerry 10','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Windows Phone','Android','Firefox OS','Mer','Tizen','Ubuntu Touch','iOS','Sailfish OS','BlackBerry 10','']
+            local : ['Other Features','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Other Features','']
+            local : ['?','Yes','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['?','Yes','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['No','10+','']
-          });
-          $("#6").typeahead({
-            name:"list6",
             local : ['Yes, except Calendar Reminders','Yes','?','5+','6+','']
           });
     </script>

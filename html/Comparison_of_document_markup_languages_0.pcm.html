@@ -73,37 +73,14 @@
  		 									<input type="checkbox" name="Feature" > AFP viewer</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Creator :</label></br>
+							<label>Creator : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >John Gruber and Aaron Swartz</br>	
- 		 									<input type="checkbox" name="Feature" >OASIS</br>	
- 		 									<input type="checkbox" name="Feature" > ISO</br>	
- 		 									<input type="checkbox" name="Feature" >IEC</br>	
- 		 									<input type="checkbox" name="Feature" >Han-Wen Nienhuys</br>	
- 		 									<input type="checkbox" name="Feature" > Jan Nieuwenhuizen</br>	
- 		 									<input type="checkbox" name="Feature" >Ecma International</br>	
- 		 									<input type="checkbox" name="Feature" >IBM</br>	
- 		 									<input type="checkbox" name="Feature" > OASIS</br>	
- 		 									<input type="checkbox" name="Feature" >The Davenport Group</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Language : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Editor :</label></br>
+							<label>Editor : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Text editor</br>	
- 		 									<input type="checkbox" name="Feature" > HTML editor</br>	
- 		 									<input type="checkbox" name="Feature" >Text</br>	
- 		 									<input type="checkbox" name="Feature" >XML editor</br>	
- 		 									<input type="checkbox" name="Feature" > TeX converter</br>	
- 		 									<input type="checkbox" name="Feature" > E-mail client</br>	
- 		 									<input type="checkbox" name="Feature" > Scorewriter</br>	
- 		 									<input type="checkbox" name="Feature" > Word processor</br>	
- 		 									<input type="checkbox" name="Feature" > FrameMaker</br>	
- 		 									<input type="checkbox" name="Feature" >Emacs</br>	
- 		 									<input type="checkbox" name="Feature" > text editor</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>First public release date : </label></br> <input id="5" type="number" name="Feature"></br>
 							
@@ -111,6 +88,14 @@
           $("#1").typeahead({
             name:"list1",
             local : ['Music Extensible Markup Language (MusicXML)','Script','Markdown','Office Open XML (OOXML)','Math Markup Language (MathML)','Open Mathematical Documents (OMDoc)','Maker Interchange Format (MIF)','OpenDocument Format (ODF)','Rich Text Format (RTF)','DocBook','HyperText Markup Language (HTML)','Textile','Computable Document Format','MakeDoc','Text Encoding Initiative (TEI)','Texinfo','reStructuredText','LilyPond','Language','The Music Encoding Initiative (MEI)','AsciiDoc','Creole','Scalable Vector Graphics (SVG)','TeX','Wireless Markup Language (WML)','Org-mode','Darwin Information Typing Architecture (DITA)','Extensible HyperText Markup Language (XHTML)','troff (typesetter runoff), groff (GNU runoff)','Encoded Archival Description (EAD)','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['Dean Allen','Donald Knuth','IBM','Org-mode project','W3C','John Gruber and Aaron Swartz','Text Encoding Initiative Consortium','Richard Stallman','Joe Ossanna','Carl Sassenrath','OASIS, ISO/IEC','Berkeley Project','WAP Forum','Microsoft','Han-Wen Nienhuys, Jan Nieuwenhuizen','Recordare','David_Goodger','','Ecma International, ISO/IEC','Frame Technology acquired by Adobe Systems in 1995','IBM, OASIS','Creator','Michael Kohlhase','Tim Berners-Lee','Wolfram Research','The MEI Community','The Davenport Group, OASIS','Stuart Rackham','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Text editor, HTML editor','XML editor','Text editor','Text/XML editor, TeX converter','Text editor, E-mail client','Text/XML editor','Text/XML editor, HTML editor','Text editor, Scorewriter','Mathematica','Text editor, Word processor','Text editor, FrameMaker','Scorewriter','Office suite','Vector graphics editor','Editor','Emacs, text editor','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -29,11 +29,8 @@
 							<label>Object/Universal : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Enumeration :</label></br>
+							<label>Enumeration : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >N</br>	
- 		 									<input type="checkbox" name="Feature" >A - User defined</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Text - String : </label></br> <input id="3" type="text" name="Feature"></br>
 							
@@ -46,10 +43,14 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['','N/A','']
+            local : ['','N/A','...','N/A - User defined','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['','N/A','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['','']
           });
     </script>

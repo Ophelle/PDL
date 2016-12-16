@@ -26,29 +26,33 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>John McCain has stated that the oil-for-food scandal and perennial failure to uphold Human Rights has demonstrated a "crying need for reform" in the UN. :</label></br>
+							<label>John McCain has stated that the oil-for-food scandal and perennial failure to uphold Human Rights has demonstrated a "crying need for reform" in the UN. : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >John McCain has stated that the oil-for-food scandal and perennial failure to uphold Human Rights has demonstrated a "crying need for reform" in the UN.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Chuck Baldwin : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Baldwin would withdraw the US from the United Nations, perceiving it to be a threat to American sovereignty. :</label></br>
+							<label>Baldwin would withdraw the US from the United Nations, perceiving it to be a threat to American sovereignty. : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Barr calls the United Nations "an enormous disappointment" and asserts that "[t]he U.S. should push to roll back the UN’s functions and slash America’s financial contribution".</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>John McCain : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Bob Barr','Cynthia McKinney','Ralph Nader','']
+            local : ['Barack Obama','John McCain','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Barack Obama','John McCain','']
+            local : ['','John McCain has stated that the oil-for-food scandal and perennial failure to uphold Human Rights has demonstrated a "crying need for reform" in the UN.','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['','Barr calls the United Nations "an enormous disappointment" and asserts that "[t]he U.S. should push to roll back the UN’s functions and slash America’s financial contribution".','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Bob Barr','Cynthia McKinney','Ralph Nader','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

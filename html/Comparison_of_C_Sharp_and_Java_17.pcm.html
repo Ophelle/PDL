@@ -26,9 +26,10 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>C# : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>C# :</label></br>
+ 		 					 <input type="radio" name="FeatureC#" value="oui">oui <input type="radio" name="FeatureC#" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Java : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
@@ -37,14 +38,10 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','Only on x64','']
+            local : ['Yes (As of Java 8)','No; but see 'Java 8 Stream' (Monad)','No','All lambdas do not introduce a new level of scope. All referenced variables must be effectively final(As of Java 8)','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes (As of Java 8)','No; but see 'Java 8 Stream' (Monad)','No','All lambdas do not introduce a new level of scope. All referenced variables must be effectively final(As of Java 8)','']
-          });
-          $("#3").typeahead({
-            name:"list3",
             local : ['Lambda expressions','Generic query language','Closures','Tail recursion compiler optimizations','Expression trees','Method references','']
           });
     </script>

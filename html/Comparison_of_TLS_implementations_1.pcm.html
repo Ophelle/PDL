@@ -26,73 +26,43 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>DTLS 1.2 : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>TLS 1.0 : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>DTLS 1.2 :</label></br>
+ 		 					 <input type="radio" name="FeatureDTLS 1.2" value="oui">oui <input type="radio" name="FeatureDTLS 1.2" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>TLS 1.0 :</label></br>
+ 		 					 <input type="radio" name="FeatureTLS 1.0" value="oui">oui <input type="radio" name="FeatureTLS 1.0" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>SSL 3.0 (insecure) : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>TLS 1.1 : </label></br> <input id="4" type="text" name="Feature"></br>
+ 		 					<label>TLS 1.1 :</label></br>
+ 		 					 <input type="radio" name="FeatureTLS 1.1" value="oui">oui <input type="radio" name="FeatureTLS 1.1" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>DTLS 1.0 :</label></br>
+ 		 					 <input type="radio" name="FeatureDTLS 1.0" value="oui">oui <input type="radio" name="FeatureDTLS 1.0" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>TLS 1.2 :</label></br>
+ 		 					 <input type="radio" name="FeatureTLS 1.2" value="oui">oui <input type="radio" name="FeatureTLS 1.2" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>SSL 2.0 (insecure) :</label></br>
+ 		 					 <input type="radio" name="FeatureSSL 2.0 (insecure)" value="oui">oui <input type="radio" name="FeatureSSL 2.0 (insecure)" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Implementation : </label></br> <input id="8" type="text" name="Feature"></br>
 							
-						</br>	
-							<label>DTLS 1.0 : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>TLS 1.2 : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>SSL 2.0 (insecure) : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Implementation :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >SChannel 8 </br>	
- 		 									<input type="checkbox" name="Feature" > 2012</br>	
- 		 									<input type="checkbox" name="Feature" >Secure Transport OS X 10.2-10.7 </br>	
- 		 									<input type="checkbox" name="Feature" > iOS 1-4</br>	
- 		 									<input type="checkbox" name="Feature" >SChannel XP </br>	
- 		 									<input type="checkbox" name="Feature" > 2003</br>	
- 		 									<input type="checkbox" name="Feature" >SChannel 8.1 </br>	
- 		 									<input type="checkbox" name="Feature" > 2012R2</br>	
- 		 									<input type="checkbox" name="Feature" > 10 Technical Preview</br>	
- 		 									<input type="checkbox" name="Feature" >Secure Transport OS X 10.8-10.10 </br>	
- 		 									<input type="checkbox" name="Feature" > iOS 5-8</br>	
- 		 									<input type="checkbox" name="Feature" >SChannel Vista </br>	
- 		 									<input type="checkbox" name="Feature" > 2008</br>	
- 		 									<input type="checkbox" name="Feature" >SChannel 7 </br>	
- 		 									<input type="checkbox" name="Feature" > 2008R2</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','Enabled by default in MSIE 11','TLS 1.2','No','Disabled by default','']
+            local : ['Enabled by default','Disabled by default in MSIE 11','Yes','SSL 3.0 (insecure)','Disabled by default','No','Disabled by default at compile time','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['No','Yes','DTLS 1.2','Beta','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Yes','TLS 1.0','Enabled by default in MSIE 7','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Enabled by default','Disabled by default in MSIE 11','Yes','SSL 3.0 (insecure)','Disabled by default','No','Disabled by default at compile time','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes','No','Disabled by default','TLS 1.1','Enabled by default in MSIE 11','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Yes','No','DTLS 1.0','Beta','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['Disabled by default','Disabled by default in MSIE 7','Enabled by default','No','Yes','SSL 2.0 (insecure)','']
+            local : ['Botan','SChannel 8 / 2012','Secure Transport OS X 10.2-10.7 / iOS 1-4','JSSE','SChannel XP / 2003','SharkSSL','mbed TLS','wolfSSL','LibreSSL','MatrixSSL','Implementation','RSA BSAFE','OpenSSL','SChannel 8.1 / 2012R2, 10 Technical Preview','Secure Transport OS X 10.8-10.10 / iOS 5-8','SChannel Vista / 2008','SChannel 7 / 2008R2','cryptlib','GnuTLS','NSS','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

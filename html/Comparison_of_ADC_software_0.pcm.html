@@ -26,38 +26,34 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>FOSS : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>FOSS :</label></br>
+ 		 					 <input type="radio" name="FeatureFOSS" value="oui">oui <input type="radio" name="FeatureFOSS" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Software license : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Active : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Active :</label></br>
+ 		 					 <input type="radio" name="FeatureActive" value="oui">oui <input type="radio" name="FeatureActive" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>ADC hub : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Notes :</label></br>
+							<label>Notes : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >In Debian and OpenWrt</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','Active','No','?','']
+            local : ['GPL','source code available','MIT License','AGPL','Proprietary','Software license','GPLv2','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','No','FOSS','']
+            local : ['Nexthub','ADCH++','RusHub','DSHub','Starlet ADC Hub','Starhub','ErlHub','ADC hub','uhub','Luadch','ADCH++ GUI','Qhub','FlexHub','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['GPL','source code available','MIT License','AGPL','Proprietary','Software license','GPLv2','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Nexthub','ADCH++','RusHub','DSHub','Starlet ADC Hub','Starhub','ErlHub','ADC hub','uhub','Luadch','ADCH++ GUI','Qhub','FlexHub','']
+            local : ['','In Debian and OpenWrt','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

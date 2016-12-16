@@ -26,13 +26,14 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Forms : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>Forms :</label></br>
+ 		 					 <input type="radio" name="FeatureForms" value="oui">oui <input type="radio" name="FeatureForms" value = "non">non </br>
+									
 						</br>	
 							<label>Program : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Version : </label></br> <input id="3" type="number" name="Feature"></br>
+							<label>Version : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>Author : </label></br> <input id="4" type="text" name="Feature"></br>
@@ -56,24 +57,19 @@ Compliant : </label></br> <input id="7" type="text" name="Feature"></br>
 							<label>Cost : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>System :</label></br>
+							<label>System : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Unix</br>	
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 									<input type="checkbox" name="Feature" > Windows</br>	
- 		 									<input type="checkbox" name="Feature" > Macintosh</br>	
-								
 						</br>	
 							<label>Display : </label></br> <input id="10" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','Partial','No','']
+            local : ['WebMagic','Live Markup','Symposia','asWedit','Phoenix','HoTMetaL','HoTMetaL pro','Webtor','Tkhtml','WebPages','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['WebMagic','Live Markup','Symposia','asWedit','Phoenix','HoTMetaL','HoTMetaL pro','Webtor','Tkhtml','WebPages','']
+            local : ['0.1.7','1.7','1','1.1','.91prealpha2','1.0+','0.8','2.3','16b4a','']
           });
           $("#3").typeahead({
             name:"list3",
@@ -89,6 +85,10 @@ Compliant : </label></br> <input id="7" type="text" name="Feature"></br>
           });
           $("#6").typeahead({
             name:"list6",
+            local : ['Unix','NextStep','Windows','Unix,Windows','Irix','Unix, Windows, Macintosh','Macintosh','']
+          });
+          $("#7").typeahead({
+            name:"list7",
             local : ['WYSIWYG','source','']
           });
     </script>

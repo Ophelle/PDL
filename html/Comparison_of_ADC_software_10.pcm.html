@@ -26,30 +26,30 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>CLI : </label></br> <input id="1" type="text" name="Feature"></br>
+ 		 					<label>CLI :</label></br>
+ 		 					 <input type="radio" name="FeatureCLI" value="oui">oui <input type="radio" name="FeatureCLI" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Programming language : </label></br> <input id="2" type="text" name="Feature"></br>
 							
-						</br>	
-							<label>Programming language :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Java</br>	
- 		 									<input type="checkbox" name="Feature" > Lua</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Based on : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>GUI : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>GUI :</label></br>
+ 		 					 <input type="radio" name="FeatureGUI" value="oui">oui <input type="radio" name="FeatureGUI" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Other software : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Other : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>Other :</label></br>
+ 		 					 <input type="radio" name="FeatureOther" value="oui">oui <input type="radio" name="FeatureOther" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['CLI','No','Yes','']
+            local : ['C#','Programming language','Java, Lua','Lua','Visual Basic','Java','C++','Object Pascal (Delphi)','wxLua','']
           });
           $("#2").typeahead({
             name:"list2",
@@ -57,15 +57,7 @@
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['No','Yes','GUI','']
-          });
-          $("#4").typeahead({
-            name:"list4",
             local : ['DC-Hublink','FlowLib','DCWatch','ADC hub','ADCCore','Embla','NetChatLink','Announcer Bot','Certmanager','DCBouncer','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['No','Other','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

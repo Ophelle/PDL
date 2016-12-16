@@ -26,18 +26,21 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Supports IPv6 : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>Supports IPv6 :</label></br>
+ 		 					 <input type="radio" name="FeatureSupports IPv6" value="oui">oui <input type="radio" name="FeatureSupports IPv6" value = "non">non </br>
+									
 						</br>	
  		 					<label>SCP :</label></br>
  		 					 <input type="radio" name="FeatureSCP" value="oui">oui <input type="radio" name="FeatureSCP" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Supports OpenSSH authorized keys : </label></br> <input id="3" type="text" name="Feature"></br>
-							
 						</br>	
-							<label>Privilege separation : </label></br> <input id="4" type="text" name="Feature"></br>
-							
+ 		 					<label>Supports OpenSSH authorized keys :</label></br>
+ 		 					 <input type="radio" name="FeatureSupports OpenSSH authorized keys" value="oui">oui <input type="radio" name="FeatureSupports OpenSSH authorized keys" value = "non">non </br>
+									
+						</br>	
+ 		 					<label>Privilege separation :</label></br>
+ 		 					 <input type="radio" name="FeaturePrivilege separation" value="oui">oui <input type="radio" name="FeaturePrivilege separation" value = "non">non </br>
+									
 						</br>	
 							<label>FIPS 140-2 certified : </label></br> <input id="5" type="text" name="Feature"></br>
 							
@@ -45,40 +48,28 @@
  		 					<label>SFTP :</label></br>
  		 					 <input type="radio" name="FeatureSFTP" value="oui">oui <input type="radio" name="FeatureSFTP" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
  		 					<label>Port forwarding :</label></br>
  		 					 <input type="radio" name="FeaturePort forwarding" value="oui">oui <input type="radio" name="FeaturePort forwarding" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
  		 					<label>SSH2 :</label></br>
  		 					 <input type="radio" name="FeatureSSH2" value="oui">oui <input type="radio" name="FeatureSSH2" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
  		 					<label>SSH1 :</label></br>
  		 					 <input type="radio" name="FeatureSSH1" value="oui">oui <input type="radio" name="FeatureSSH1" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Name : </label></br> <input id="10" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['?','Yes','No','']
+            local : ['Yes','?','Partial','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','Partial','?','No','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','Yes','Partial','?','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','?','Partial','']
-          });
-          $("#5").typeahead({
-            name:"list5",
             local : ['Bitvise SSH Server','Copssh','CrushFTP Server','GoAnywhere Services','MobaSSH SSH Server','Apache MINA SSHD','Syncplify.me Server','Attachmate Reflection for Secure IT','Maverick SSHD','TinySSH','OpenSSH','Pragma Fortress SSH Server','Tectia SSH Server','SilverSHielD','KpyM SSH Server','Georgia SoftWorks SSH Server','Dropbear','Lsh','']
           });
     </script>

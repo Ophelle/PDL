@@ -41,9 +41,10 @@
 							<label>Sun Java Communications Suite : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Isode M-Link : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Isode M-Link :</label></br>
+ 		 					 <input type="radio" name="FeatureIsode M-Link" value="oui">oui <input type="radio" name="FeatureIsode M-Link" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Tigase : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
@@ -59,15 +60,17 @@
 							<label>Prosody : </label></br> <input id="11" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>MongooseIM : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>MongooseIM :</label></br>
+ 		 					 <input type="radio" name="FeatureMongooseIM" value="oui">oui <input type="radio" name="FeatureMongooseIM" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>jabberd2 : </label></br> <input id="13" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>ejabberd : </label></br> <input id="14" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>ejabberd :</label></br>
+ 		 					 <input type="radio" name="Featureejabberd" value="oui">oui <input type="radio" name="Featureejabberd" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['Final','Obsolete','Informational','']
@@ -90,19 +93,19 @@
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['No','Yes','N/A','']
+            local : ['Unknown','Yes','']
           });
           $("#7").typeahead({
             name:"list7",
-            local : ['Unknown','Yes','']
+            local : ['RFC 3923','RFC 4979','RFC 6121','RFC 6120','RFC 4854','RFC 3922','RFC 5122','RFC 3921','RFC 6122','RFC 3920','']
           });
           $("#8").typeahead({
             name:"list8",
-            local : ['RFC 3923','RFC 4979','RFC 6121','RFC 6120','RFC 4854','RFC 3922','RFC 5122','RFC 3921','RFC 6122','RFC 3920','']
+            local : ['Yes/Partial','Yes','Unknown','']
           });
           $("#9").typeahead({
             name:"list9",
-            local : ['Yes/Partial','Yes','Unknown','']
+            local : ['Unknown','Yes','']
           });
           $("#10").typeahead({
             name:"list10",
@@ -111,18 +114,6 @@
           $("#11").typeahead({
             name:"list11",
             local : ['Unknown','Yes','']
-          });
-          $("#12").typeahead({
-            name:"list12",
-            local : ['Unknown','Yes/Maybe','No','Yes','']
-          });
-          $("#13").typeahead({
-            name:"list13",
-            local : ['Unknown','Yes','']
-          });
-          $("#14").typeahead({
-            name:"list14",
-            local : ['Yes','Yes/Maybe','Unknown','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

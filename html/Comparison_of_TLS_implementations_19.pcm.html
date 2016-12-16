@@ -26,46 +26,19 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Build tools :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Makefile</br>	
- 		 									<input type="checkbox" name="Feature" > CMake</br>	
- 		 									<input type="checkbox" name="Feature" > MSVC project workspaces</br>	
- 		 									<input type="checkbox" name="Feature" > Xcode projects for Mac OS X and iOS</br>	
- 		 									<input type="checkbox" name="Feature" >Autoconf</br>	
- 		 									<input type="checkbox" name="Feature" > automake</br>	
- 		 									<input type="checkbox" name="Feature" > libtool</br>	
- 		 									<input type="checkbox" name="Feature" > XCode projects</br>	
- 		 									<input type="checkbox" name="Feature" > CodeWarrior projects</br>	
- 		 									<input type="checkbox" name="Feature" > MPLAB X projects</br>	
- 		 									<input type="checkbox" name="Feature" > Keil</br>	
- 		 									<input type="checkbox" name="Feature" > IAR</br>	
- 		 									<input type="checkbox" name="Feature" > Clang</br>	
- 		 									<input type="checkbox" name="Feature" > GCC</br>	
- 		 									<input type="checkbox" name="Feature" >makefile</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Crypto back-end :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Included</br>	
- 		 									<input type="checkbox" name="Feature" > PKCS#11 based</br>	
- 		 									<input type="checkbox" name="Feature" >Java Cryptography Architecture</br>	
- 		 									<input type="checkbox" name="Feature" >
-Java Cryptography Extension</br>	
- 		 									<input type="checkbox" name="Feature" >External</br>	
- 		 									<input type="checkbox" name="Feature" > libnettle</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>API manual :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >API Reference (PDF)</br>	
- 		 									<input type="checkbox" name="Feature" > Integration Guide</br>	
- 		 									<input type="checkbox" name="Feature" >(online) HTML Manual and API Reference</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>OpenSSL compatibility Layer : </label></br> <input id="4" type="text" name="Feature"></br>
+							<label>Build tools : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
+							<label>Crypto back-end : </label></br> <input id="2" type="text" name="Feature"></br>
+							
+						</br>	
+							<label>API manual : </label></br> <input id="3" type="text" name="Feature"></br>
+							
+						</br>	
+ 		 					<label>OpenSSL compatibility Layer :</label></br>
+ 		 					 <input type="radio" name="FeatureOpenSSL compatibility Layer" value="oui">oui <input type="radio" name="FeatureOpenSSL compatibility Layer" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Namespace : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
@@ -74,10 +47,20 @@ Java Cryptography Extension</br>
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes (Subset: SSL_read, SSL_write, etc.)','N/A','Yes (limited)','OpenSSL compatibility layer','Yes (about 10% of API)','Yes (separate package called nss_compat_ossl)','']
+            local : ['Makefile','Makefile, CMake, MSVC project workspaces','Build tools','Makefile, MSVC project workspaces, Xcode projects for Mac OS X and iOS','Autoconf, automake, libtool, MSVC project workspaces, XCode projects, CodeWarrior projects, MPLAB X projects, Keil, IAR, Clang, GCC','Autoconf, automake, libtool','makefile, MSVC project workspaces','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['Included (pluggable)','Included, PKCS#11 based','Included (monolithic)','Crypto back-end','Java Cryptography Architecture/
+Java Cryptography Extension','External, libnettle','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['API Reference (HTML) +
+Java SE 8','Programmers reference manual (PDF), architecture design manual (PDF)','Manual (HTML)','Manual and API reference (HTML, PDF)','API manual','Man pages','API Reference (PDF), Integration Guide','(online) HTML Manual and API Reference','Manual and API Reference (HTML, PDF)','API Reference + High Level and Module Level Documentation (HTML)','Sphinx','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['crypt*','ssl_*
 
 sha1_*
@@ -112,8 +95,8 @@ EVP_*
 
 ...','Namespace','Botan::TLS','']
           });
-          $("#3").typeahead({
-            name:"list3",
+          $("#5").typeahead({
+            name:"list5",
             local : ['NSS','Botan','GnuTLS','cryptlib','JSSE','mbed TLS','MatrixSSL','SharkSSL','OpenSSL','wolfSSL','Implementation','']
           });
     </script>

@@ -92,34 +92,29 @@
  		 									<input type="checkbox" name="Feature" > UV Mapping</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>License :</label></br>
+							<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >GNU GPLv2+ </br>	
- 		 									<input type="checkbox" name="Feature" > Apache 2.0</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Developed by :</label></br>
+							<label>Developed by : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >autodessys</br>	
- 		 									<input type="checkbox" name="Feature" > Inc.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Latest release date  
 and version : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Application :</label></br>
+							<label>Application : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >SketchUp </br>	
- 		 									<input type="checkbox" name="Feature" > SketchUp Pro</br>	
- 		 									<input type="checkbox" name="Feature" >Pro</br>	
- 		 									<input type="checkbox" name="Feature" >Engineer</br>	
- 		 									<input type="checkbox" name="Feature" >form-Z </br>	
- 		 									<input type="checkbox" name="Feature" > form-Z Renderzone Plus</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['Proprietary','GNU GPLv2+ / Apache 2.0','GNU AGPLv3','BSD','GNU GPLv2','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['The POV-Team','solidThinking','Inivis','Remograph','Trimble Navigation','Blender Foundation','Autodesk','MAXON','Shade3D','Michael L. Farrell','autodessys, Inc.','Reallusion','O. Mizno','NewTek','Dassault systems','SpaceClaim Corporation','DAZ 3D','Missler Software','Ashlar-Vellum','Caligari Corporation','EIAS3D','Nevercenter','Pixologic','The Foundry','Electric Rain','Siemens PLM Software','Dr. Martin Wengenmayer','McNeel','E-on Software','Peter Eastman','Side Effects Software','Massive Software','Parametric Technology Corporation','Exocortex','Dan Gudmundsson (maintainer)','Procedural','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['2014 
 "2015"','v 2015','2014 
 v 6.0','2009-06-03 
@@ -156,6 +151,10 @@ v 2.74','2014
 v 11.6.2','2015-01-29 
 v 4R7','v 2013','2015-01-15 
 v 14','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['MODO','Houdini','CityEngine','SketchUp / SketchUp Pro','Remo 3D','Cinema 4D','Carrara','Sculptris','Pro/Engineer','Swift 3D','TopSolid','Hexagon','solidThinking','ZBrush','Cobalt','MASSIVE','Rhinoceros 3D','Maya','AOI','POV-Ray','Metasequoia','Verto Studio 3D','trueSpace','LightWave 3D','Silo','E-on Vue','Clara.io','Electric Image Animation System','Mudbox','AC3D','SpaceClaim','Bryce','Shade 3D','Wings3d','Cheetah 3D','Solid Edge','IClone','Softimage','3ds Max','Blender','form-Z / form-Z Renderzone Plus','SolidWorks','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

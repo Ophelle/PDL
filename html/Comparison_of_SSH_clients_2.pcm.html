@@ -34,15 +34,17 @@
  		 					 <input type="radio" name="FeatureTunneling - SOCKS" value="oui">oui <input type="radio" name="FeatureTunneling - SOCKS" value = "non">non </br>
 									
 						</br>	
-							<label>SFTP/SCP : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>SFTP/SCP :</label></br>
+ 		 					 <input type="radio" name="FeatureSFTP/SCP" value="oui">oui <input type="radio" name="FeatureSFTP/SCP" value = "non">non </br>
+									
 						</br>	
  		 					<label>SSH2 :</label></br>
  		 					 <input type="radio" name="FeatureSSH2" value="oui">oui <input type="radio" name="FeatureSSH2" value = "non">non </br>
 									
 						</br>	
-							<label>Terminal : </label></br> <input id="5" type="text" name="Feature"></br>
-							
+ 		 					<label>Terminal :</label></br>
+ 		 					 <input type="radio" name="FeatureTerminal" value="oui">oui <input type="radio" name="FeatureTerminal" value = "non">non </br>
+									
 						</br>	
  		 					<label>SSH1 :</label></br>
  		 					 <input type="radio" name="FeatureSSH1" value="oui">oui <input type="radio" name="FeatureSSH1" value = "non">non </br>
@@ -70,24 +72,26 @@
  		 									<input type="checkbox" name="Feature" > 5; HTTP; Telnet; Generic</br>	
 								
 						</br>	
-							<label>User interface :</label></br>
+							<label>User interface : </label></br> <input id="10" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >GUI or command line</br>	
- 		 									<input type="checkbox" name="Feature" >GUI or command Line or browser</br>	
- 		 									<input type="checkbox" name="Feature" >TDI or command line</br>	
-								
 						</br>	
  		 					<label>Tunneling - VPN :</label></br>
  		 					 <input type="radio" name="FeatureTunneling - VPN" value="oui">oui <input type="radio" name="FeatureTunneling - VPN" value = "non">non </br>
 									
 						</br>	
-							<label>Session
-multiplexing : </label></br> <input id="12" type="text" name="Feature"></br>
-							
+ 		 					<label>Session
+multiplexing :</label></br>
+ 		 					 <input type="radio" name="FeatureSession
+multiplexing" value="oui">oui <input type="radio" name="FeatureSession
+multiplexing" value = "non">non </br>
+									
 						</br>	
-							<label>Tunneling - Port
-forwarding : </label></br> <input id="13" type="text" name="Feature"></br>
-							
+ 		 					<label>Tunneling - Port
+forwarding :</label></br>
+ 		 					 <input type="radio" name="FeatureTunneling - Port
+forwarding" value="oui">oui <input type="radio" name="FeatureTunneling - Port
+forwarding" value = "non">non </br>
+									
 						</br>	
  		 					<label>Additional protocols - rlogin :</label></br>
  		 					 <input type="radio" name="FeatureAdditional protocols - rlogin" value="oui">oui <input type="radio" name="FeatureAdditional protocols - rlogin" value = "non">non </br>
@@ -99,19 +103,12 @@ forwarding : </label></br> <input id="13" type="text" name="Feature"></br>
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','SCP','No','']
+            local : ['PuTTY','TN3270 Plus','Token2Shell','Private Shell','ProxyCap','OpenSSH','Dropbear','MobaXterm','lsh','WinSCP','Tera Term','TtyEmulator','MindTerm','ZOC','SecureCRT','Salt','AbsoluteTelnet','SmartFTP','Penguinet','PACManager','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','No','simple','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['PuTTY','TN3270 Plus','Token2Shell','Private Shell','ProxyCap','OpenSSH','Dropbear','MobaXterm','lsh','WinSCP','Tera Term','TtyEmulator','MindTerm','ZOC','SecureCRT','Salt','AbsoluteTelnet','SmartFTP','Penguinet','PACManager','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','No','','?','']
+            local : ['GUI (multi-session,
+single-window)','GUI or command line','GUI','command line','GUI or command Line or browser','TDI or command line','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

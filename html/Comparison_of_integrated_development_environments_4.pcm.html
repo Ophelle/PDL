@@ -37,10 +37,8 @@
 							<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Developer :</label></br>
+							<label>Developer : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Xamarin and the Mono community</br>	
-								
 						</br>	
 							<label>Latest stable release :</label></br>
 							
@@ -61,12 +59,8 @@
  		 					 <input type="radio" name="FeatureWindows" value="oui">oui <input type="radio" name="FeatureWindows" value = "non">non </br>
 									
 						</br>	
-							<label>Other platforms :</label></br>
+							<label>Other platforms : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >FreeBSD</br>	
- 		 									<input type="checkbox" name="Feature" > OpenBSD</br>	
- 		 									<input type="checkbox" name="Feature" > Solaris</br>	
-								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -75,7 +69,15 @@ Community Edition: Freeware','LGPL','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['IC#Code Team','Microsoft','Xamarin and the Mono community','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['Microsoft Visual Studio','MonoDevelop','SharpDevelop','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['','FreeBSD, OpenBSD, Solaris','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -34,9 +34,10 @@
  		 									<input type="checkbox" name="Feature" > Privileges</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Encrypted file systems : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Encrypted file systems :</label></br>
+ 		 					 <input type="radio" name="FeatureEncrypted file systems" value="oui">oui <input type="radio" name="FeatureEncrypted file systems" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Subsystem isolation mechanisms :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >Win32 WindowStation</br>	
@@ -54,10 +55,6 @@
  		 									<input type="checkbox" name="Feature" >Windows Firewall (from SP2)</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Yes (NTFS only)','Yes','']
-          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

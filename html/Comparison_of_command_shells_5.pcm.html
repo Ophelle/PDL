@@ -26,74 +26,50 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Safe data subset : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>Safe data subset :</label></br>
+ 		 					 <input type="radio" name="FeatureSafe data subset" value="oui">oui <input type="radio" name="FeatureSafe data subset" value = "non">non </br>
+									
 						</br>	
-							<label>Restricted shell subset : </label></br> <input id="2" type="text" name="Feature"></br>
-							
+ 		 					<label>Restricted shell subset :</label></br>
+ 		 					 <input type="radio" name="FeatureRestricted shell subset" value="oui">oui <input type="radio" name="FeatureRestricted shell subset" value = "non">non </br>
+									
 						</br>	
 							<label>Secure (password) prompt : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Script origin execution restriction : </label></br> <input id="4" type="text" name="Feature"></br>
-							
+ 		 					<label>Script origin execution restriction :</label></br>
+ 		 					 <input type="radio" name="FeatureScript origin execution restriction" value="oui">oui <input type="radio" name="FeatureScript origin execution restriction" value = "non">non </br>
+									
 						</br>	
-							<label>Non-password credentials prompt : </label></br> <input id="5" type="text" name="Feature"></br>
-							
+ 		 					<label>Non-password credentials prompt :</label></br>
+ 		 					 <input type="radio" name="FeatureNon-password credentials prompt" value="oui">oui <input type="radio" name="FeatureNon-password credentials prompt" value = "non">non </br>
+									
 						</br>	
-							<label>Encrypted variables/ parameters : </label></br> <input id="6" type="text" name="Feature"></br>
-							
+ 		 					<label>Encrypted variables/ parameters :</label></br>
+ 		 					 <input type="radio" name="FeatureEncrypted variables/ parameters" value="oui">oui <input type="radio" name="FeatureEncrypted variables/ parameters" value = "non">non </br>
+									
 						</br>	
-							<label>Signed script restriction : </label></br> <input id="7" type="text" name="Feature"></br>
-							
+ 		 					<label>Signed script restriction :</label></br>
+ 		 					 <input type="radio" name="FeatureSigned script restriction" value="oui">oui <input type="radio" name="FeatureSigned script restriction" value = "non">non </br>
+									
 						</br>	
-							<label>Execute permission : </label></br> <input id="8" type="text" name="Feature"></br>
-							
+ 		 					<label>Execute permission :</label></br>
+ 		 					 <input type="radio" name="FeatureExecute permission" value="oui">oui <input type="radio" name="FeatureExecute permission" value = "non">non </br>
+									
 						</br>	
-							<label>Multilevel execution policies : </label></br> <input id="9" type="text" name="Feature"></br>
-							
+ 		 					<label>Multilevel execution policies :</label></br>
+ 		 					 <input type="radio" name="FeatureMultilevel execution policies" value="oui">oui <input type="radio" name="FeatureMultilevel execution policies" value = "non">non </br>
+									
 						</br>	
 							<label>File/directory passwords : </label></br> <input id="10" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','?','']
+            local : ['via','No','Yes (via ,  or )','?','Yes','','Partial (only under DR-DOS, prompts for password if file/directory is protected)','Yes (via  or )','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','No','?','Yes (via )','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['via','No','Yes (via ,  or )','?','Yes','','Partial (only under DR-DOS, prompts for password if file/directory is protected)','Yes (via  or )','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['No','Yes (via NTFS  config setting)','Yes','?','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['No','?','Yes','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['No','Yes','?','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['No','?','Yes','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['No','?','Partial (only under DR-DOS, if files are password-protected for read and/or execute permission)','Yes','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['No','?','Yes','']
-          });
-          $("#10").typeahead({
-            name:"list10",
             local : ['Partial (only under DR-DOS via  syntax)','?','No','']
           });
     </script>

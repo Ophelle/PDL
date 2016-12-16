@@ -26,27 +26,26 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Statement separator/terminator :</label></br>
+							<label>Statement separator/terminator : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >whitespace separated</br>	
- 		 									<input type="checkbox" name="Feature" > sometimes period separated</br>	
- 		 									<input type="checkbox" name="Feature" > optionally separated with commas and semi-colons.</br>	
- 		 									<input type="checkbox" name="Feature" >semicolon and comma separated</br>	
- 		 									<input type="checkbox" name="Feature" >colon separated</br>	
- 		 									<input type="checkbox" name="Feature" > period terminated</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Language : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Secondary separator :</label></br>
+							<label>Secondary separator : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >semicolon or comma</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['Mathematica','ALGOL','Erlang','Fortran','Eiffel','Perl','COBOL','Haskell (in do-notation)','C++','JavaScript','MATLAB','Windows PowerShell','Go','Perl 6','Ada','AutoHotkey','GFA BASIC','OCaml','ABAP','Visual Basic .NET','C#','Objective-C','Rust','D','Python','Visual Basic','S-Lang','PHP','Ruby','C','AppleScript','Seed7','Forth','Pascal','BASIC','Swift','Java','Object Pascal (Delphi)','Scala','Smalltalk','Falcon','Standard ML','Boo','Prolog','Cobra','ALGOL 68','Lua','Xojo','Haskell (in do-notation, when braces are omitted)','Simula','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['semicolon separated','newline  terminated','semicolon terminated','whitespace separated, sometimes period separated, optionally separated with commas and semi-colons.','newline terminated','period  terminated','semicolon separated (but sometimes implicitly inserted on newlines)','newline separated','semicolon separated (inserted by compiler)','period separated','semicolons terminate word definitions','semicolon terminates statements','semicolon and comma separated','newline terminated (semicolon optional)','whitespace separated (semicolon optional)','semicolon separated (semicolon termination is allowed)','colon separated, period terminated','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['comma separates expressions','','semicolon','semicolon or comma','colon separated','semicolon separated','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

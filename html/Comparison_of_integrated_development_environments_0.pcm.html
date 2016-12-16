@@ -37,12 +37,8 @@
 							<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Other platforms :</label></br>
+							<label>Other platforms : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >FreeBSD</br>	
- 		 									<input type="checkbox" name="Feature" > OpenBSD</br>	
- 		 									<input type="checkbox" name="Feature" > Solaris</br>	
-								
 						</br>	
  		 					<label>GUI builder :</label></br>
  		 					 <input type="radio" name="FeatureGUI builder" value="oui">oui <input type="radio" name="FeatureGUI builder" value = "non">non </br>
@@ -81,6 +77,10 @@
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['JVM','','FreeBSD, OpenBSD, Solaris','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['IntelliJ IDEA','Flash Professional','FlashDevelop','Powerflasher FDT','Flash Builder','']
           });
     </script>

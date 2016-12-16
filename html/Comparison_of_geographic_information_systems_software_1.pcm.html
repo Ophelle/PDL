@@ -30,20 +30,16 @@
  		 					 <input type="radio" name="FeatureWFS-T" value="oui">oui <input type="radio" name="FeatureWFS-T" value = "non">non </br>
 									
 						</br>	
-							<label>Language :</label></br>
+							<label>Language : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Java</br>	
- 		 									<input type="checkbox" name="Feature" >C++</br>	
- 		 									<input type="checkbox" name="Feature" >C#</br>	
- 		 									<input type="checkbox" name="Feature" >.NET</br>	
-								
 						</br>	
  		 					<label>WFS :</label></br>
  		 					 <input type="radio" name="FeatureWFS" value="oui">oui <input type="radio" name="FeatureWFS" value = "non">non </br>
 									
 						</br>	
-							<label>FES : </label></br> <input id="4" type="text" name="Feature"></br>
-							
+ 		 					<label>FES :</label></br>
+ 		 					 <input type="radio" name="FeatureFES" value="oui">oui <input type="radio" name="FeatureFES" value = "non">non </br>
+									
 						</br>	
  		 					<label>WCS :</label></br>
  		 					 <input type="radio" name="FeatureWCS" value="oui">oui <input type="radio" name="FeatureWCS" value = "non">non </br>
@@ -81,7 +77,7 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','','Yes','']
+            local : ['Java/C++','C#/.NET','C++','Java','.NET/Java','C','ASP C#','.NET/C++','']
           });
           $("#2").typeahead({
             name:"list2",

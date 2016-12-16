@@ -48,12 +48,8 @@
  		 									<input type="checkbox" name="Feature" > 5.5 lb</br>	
 								
 						</br>	
-							<label>Color :</label></br>
+							<label>Color : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Silver</br>	
- 		 									<input type="checkbox" name="Feature" > black border around screen</br>	
- 		 									<input type="checkbox" name="Feature" >Silver with black or silver border around screen</br>	
-								
 						</br>	
 							<label>Model : </label></br> <input id="3" type="text" name="Feature"></br>
 							
@@ -119,14 +115,18 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Mac Mini','MacBook Air 13 in','iMac 21.5 in','MacBook Air 11 in','MacBook Pro 13 in','iMac 27 in','MacBook Pro 15 in','Mac Mini Server','Mac Pro','']
+            local : ['Silver','Silver, black border around screen','Silver with black border around screen','Silver with black or silver border around screen','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Aluminum','']
+            local : ['Mac Mini','MacBook Air 13 in','iMac 21.5 in','MacBook Air 11 in','MacBook Pro 13 in','iMac 27 in','MacBook Pro 15 in','Mac Mini Server','Mac Pro','']
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['Aluminum','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['','']
           });
     </script>

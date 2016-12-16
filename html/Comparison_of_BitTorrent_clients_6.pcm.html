@@ -26,10 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>MonoTorrent :</label></br>
+							<label>MonoTorrent : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >September 2006; 8 years ago</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>BitTorrent library : </label></br> <input id="2" type="text" name="Feature"></br>
 							
@@ -43,14 +41,19 @@
  		 									<input type="checkbox" name="Feature" > 2014; 12 months ago)</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>libtorrent (Rasterbar) :</label></br>
+							<label>libtorrent (Rasterbar) : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >September 8</br>	
- 		 									<input type="checkbox" name="Feature" > 2005; 9 years ago</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['0.90 (May 22, 2010; 5 years ago)','Free software','September 2006; 8 years ago','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['Free software','1.0.5 (May 11, 2015; 31 days ago)','September 8, 2005; 9 years ago','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['First public release date','Latest stable','Software license','']
           });
     </script>

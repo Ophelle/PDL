@@ -42,8 +42,9 @@
  		 					 <input type="radio" name="FeatureLog" value="oui">oui <input type="radio" name="FeatureLog" value = "non">non </br>
 									
 						</br>	
-							<label>Filter according to time of day : </label></br> <input id="5" type="text" name="Feature"></br>
-							
+ 		 					<label>Filter according to time of day :</label></br>
+ 		 					 <input type="radio" name="FeatureFilter according to time of day" value="oui">oui <input type="radio" name="FeatureFilter according to time of day" value = "non">non </br>
+									
 						</br>	
  		 					<label>work at OSI Layer 4 (stateful firewall) :</label></br>
  		 					 <input type="radio" name="Featurework at OSI Layer 4 (stateful firewall)" value="oui">oui <input type="radio" name="Featurework at OSI Layer 4 (stateful firewall)" value = "non">non </br>
@@ -68,8 +69,9 @@
 							<label>Can: : </label></br> <input id="11" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>work at OSI Layer 7 (application inspection) : </label></br> <input id="12" type="text" name="Feature"></br>
-							
+ 		 					<label>work at OSI Layer 7 (application inspection) :</label></br>
+ 		 					 <input type="radio" name="Featurework at OSI Layer 7 (application inspection)" value="oui">oui <input type="radio" name="Featurework at OSI Layer 7 (application inspection)" value = "non">non </br>
+									
 						</br>	
  		 					<label>Traffic rate-limit / QoS :</label></br>
  		 					 <input type="radio" name="FeatureTraffic rate-limit / QoS" value="oui">oui <input type="radio" name="FeatureTraffic rate-limit / QoS" value = "non">non </br>
@@ -77,15 +79,7 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','Yes (With Policy manager)','']
-          });
-          $("#2").typeahead({
-            name:"list2",
             local : ['Untangle','IPFire','OPNsense','Sidewinder','WinGate','pfSense','Zeroshell','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Yes','Yes (Some modules)','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

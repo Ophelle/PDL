@@ -26,44 +26,37 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Language :</label></br>
+							<label>Language : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >.NET</br>	
- 		 									<input type="checkbox" name="Feature" > ExtJS JavaScript</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
  		 					<label>WFS :</label></br>
  		 					 <input type="radio" name="FeatureWFS" value="oui">oui <input type="radio" name="FeatureWFS" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>						</br>	
-							<label>GeoRSS : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>GeoRSS :</label></br>
+ 		 					 <input type="radio" name="FeatureGeoRSS" value="oui">oui <input type="radio" name="FeatureGeoRSS" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
  		 					<label>WMS :</label></br>
  		 					 <input type="radio" name="FeatureWMS" value="oui">oui <input type="radio" name="FeatureWMS" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Other :</label></br>
+							<label>Other : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Generic web client; Also supports WMTS</br>	
- 		 									<input type="checkbox" name="Feature" > WMS Time dimension</br>	
- 		 									<input type="checkbox" name="Feature" > WFS-G</br>	
- 		 									<input type="checkbox" name="Feature" > WCTS</br>	
- 		 									<input type="checkbox" name="Feature" > WPS-CT</br>	
- 		 									<input type="checkbox" name="Feature" > CSW 2.0.2 ISO AP 1.0</br>	
- 		 									<input type="checkbox" name="Feature" > OpenLS</br>	
- 		 									<input type="checkbox" name="Feature" > WMC</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Name : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','','']
+            local : ['JavaScript','Flash','.NET, ExtJS JavaScript','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['an Ajax Web GIS client','','Generic web client; Also supports WMTS, WMS Time dimension, WFS-G, WCTS, WPS-CT, CSW 2.0.2 ISO AP 1.0, OpenLS, WMC','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['WorldKit','Mscross','GeoMedia SDI Portal','']
           });
     </script>

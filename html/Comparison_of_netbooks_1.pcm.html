@@ -29,31 +29,34 @@
 							<label>Display size : </label></br> <input id="1" type="number" name="Feature"></br>
 							
 						</br>	
-							<label>Expected release date :</label></br>
+							<label>Expected release date : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >June</br>	
- 		 									<input type="checkbox" name="Feature" >July 2009</br>	
-								
 						</br>	
 							<label>CPU : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>Weight 
-[kg] : </label></br> <input id="4" type="number" name="Feature"></br>
+[kg] :</label></br>
 							
+ 		 									<input type="checkbox" name="Feature" >0.65</br>	
+ 		 									<input type="checkbox" name="Feature" >1.29</br>	
+								
 						</br>	
 							<label>RAM
-[MB] : </label></br> <input id="5" type="number" name="Feature"></br>
+[MB] :</label></br>
 							
+ 		 									<input type="checkbox" name="Feature" >128 or 256</br>	
+								
 						</br>	
-							<label>Linux OS choice(s) : </label></br> <input id="6" type="text" name="Feature"></br>
-							
+ 		 					<label>Linux OS choice(s) :</label></br>
+ 		 					 <input type="radio" name="FeatureLinux OS choice(s)" value="oui">oui <input type="radio" name="FeatureLinux OS choice(s)" value = "non">non </br>
+									
 						</br>	
 							<label>Storage type : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>Storage size
-[GB] : </label></br> <input id="8" type="number" name="Feature"></br>
+[GB] : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>Model : </label></br> <input id="9" type="text" name="Feature"></br>
@@ -62,7 +65,7 @@
 							<label>Manufacturer : </label></br> <input id="10" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Windows OS choice(s) : </label></br> <input id="11" type="number" name="Feature"></br>
+							<label>Windows OS choice(s) : </label></br> <input id="11" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>Display : </label></br> <input id="12" type="text" name="Feature"></br>
@@ -74,11 +77,11 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Freescale i.MX31','Intel Atom Z530','']
+            local : ['June/July 2009','November 2009','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Android','No','']
+            local : ['Freescale i.MX31','Intel Atom Z530','']
           });
           $("#3").typeahead({
             name:"list3",
@@ -86,14 +89,22 @@
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['GL-750','Nokia Booklet 3G','']
+            local : ['2 to 8','120','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['Nokia','GNB','']
+            local : ['GL-750','Nokia Booklet 3G','']
           });
           $("#6").typeahead({
             name:"list6",
+            local : ['Nokia','GNB','']
+          });
+          $("#7").typeahead({
+            name:"list7",
+            local : ['7','None (not x86 based)','']
+          });
+          $("#8").typeahead({
+            name:"list8",
             local : ['800×480 touchscreen','1280×720','']
           });
     </script>

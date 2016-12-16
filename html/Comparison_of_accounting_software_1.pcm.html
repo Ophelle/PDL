@@ -210,86 +210,45 @@
  		 									<input type="checkbox" name="Feature" >Business Accounting and Invoicing</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Linux : </label></br> <input id="2" type="text" name="Feature"></br>
+ 		 					<label>Linux :</label></br>
+ 		 					 <input type="radio" name="FeatureLinux" value="oui">oui <input type="radio" name="FeatureLinux" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>License :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Proprietary and Software as a service</br>	
- 		 									<input type="checkbox" name="Feature" >Software as a service and freeware</br>	
- 		 									<input type="checkbox" name="Feature" >Software as a Service and freeware</br>	
- 		 									<input type="checkbox" name="Feature" >Proprietary and freeware</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>OS X : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Windows : </label></br> <input id="5" type="text" name="Feature"></br>
+ 		 					<label>OS X :</label></br>
+ 		 					 <input type="radio" name="FeatureOS X" value="oui">oui <input type="radio" name="FeatureOS X" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Windows :</label></br>
+ 		 					 <input type="radio" name="FeatureWindows" value="oui">oui <input type="radio" name="FeatureWindows" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Package : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Package :</label></br>
+							<label>Structure : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >QuickBooks Pro</br>	
- 		 									<input type="checkbox" name="Feature" >Premier</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Structure :</label></br>
+							<label>Market focus : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Stand alone</br>	
- 		 									<input type="checkbox" name="Feature" >Web Access</br>	
- 		 									<input type="checkbox" name="Feature" >Stand alone and Web based</br>	
- 		 									<input type="checkbox" name="Feature" >Stand alone and web based</br>	
- 		 									<input type="checkbox" name="Feature" >Stand alone and</br>	
- 		 									<input type="checkbox" name="Feature" >or Web based</br>	
- 		 									<input type="checkbox" name="Feature" >Multi-User</br>	
- 		 									<input type="checkbox" name="Feature" >Location</br>	
- 		 									<input type="checkbox" name="Feature" > Terminal Server</br>	
- 		 									<input type="checkbox" name="Feature" > Remote Access</br>	
- 		 									<input type="checkbox" name="Feature" > Web Access</br>	
- 		 									<input type="checkbox" name="Feature" > Mobile Access</br>	
- 		 									<input type="checkbox" name="Feature" > Cloud Hostable</br>	
- 		 									<input type="checkbox" name="Feature" >Stand alone and Web Based</br>	
- 		 									<input type="checkbox" name="Feature" >Stand Alone</br>	
- 		 									<input type="checkbox" name="Feature" >Stand Alone and Web based</br>	
- 		 									<input type="checkbox" name="Feature" >Stand alone and Mobile</br>	
- 		 									<input type="checkbox" name="Feature" >Stand alone  and</br>	
- 		 									<input type="checkbox" name="Feature" >or  Web Access</br>	
- 		 									<input type="checkbox" name="Feature" >Stand alone </br>	
- 		 									<input type="checkbox" name="Feature" > multi-user</br>	
- 		 									<input type="checkbox" name="Feature" >location</br>	
- 		 									<input type="checkbox" name="Feature" > terminal server</br>	
- 		 									<input type="checkbox" name="Feature" > remote access</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Market focus :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Entrepreneurs</br>	
- 		 									<input type="checkbox" name="Feature" > freelancers</br>	
- 		 									<input type="checkbox" name="Feature" > Contractors</br>	
- 		 									<input type="checkbox" name="Feature" > Consultants</br>	
- 		 									<input type="checkbox" name="Feature" > Small businesses - Low Market</br>	
- 		 									<input type="checkbox" name="Feature" >Private Enterprises</br>	
- 		 									<input type="checkbox" name="Feature" > Public Sectors and Accounting Firms</br>	
- 		 									<input type="checkbox" name="Feature" >Small</br>	
- 		 									<input type="checkbox" name="Feature" > Medium to Mid-size Enterprises (SME)</br>	
- 		 									<input type="checkbox" name="Feature" >Low to Mid-Market nonprofit and faith-based organizations</br>	
- 		 									<input type="checkbox" name="Feature" >Freelancers and Microbusiness</br>	
- 		 									<input type="checkbox" name="Feature" > contractors</br>	
- 		 									<input type="checkbox" name="Feature" > consultants</br>	
- 		 									<input type="checkbox" name="Feature" > small businesses – Low Market)</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','Yes (Linux server)','Linux','']
+            local : ['Software as a Service','Proprietary','Proprietary and Software as a service','Licence','Software as a service and freeware','Software as a Service and freeware','Proprietary and freeware','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['No','Yes','OS X','']
+            local : ['iBank','Microsoft Dynamics AX','FlexAccount','BIG4books','Wave Accounting','Saasu','Aplos Software','Outright','Gem Accounts','CODA','invoiceit','CGram Enterprise','Moneydance','Sage 300 ERP','Acumatica','QuickBooks Online','FreshBooks','TRAVERSE','Intacct','Passport Software','Fortora Fresh Finance','MYOB AccountRight','POS solutions','Microsoft Dynamics NAV','Microsoft Dynamics SL','MoneyWiz','Sage Group','Kashoo','Package','24SevenOffice','Sage Pastel Evolution','Microsoft Money','NewViews','Xero','Oracle E-Business Suite','NOSA XP','Express Accounts from NCH Software','FreeAgent','MYOB EXO Business','NolaPro','FinancialForce.com','Open Systems Accounting Software','Microsoft Dynamics C5','SAP ERP','Cougar Mountain Software','The Access Group','Tally','Baan Corporation','QuickBooks Enterprise Solutions','You Need a Budget','SAP Business One','Sage Line 50','SAP Business ByDesign','Openda QX','KashFlow','Cheqbook','QuickBooks Pro/Premier','Microsoft Office Accounting','Red Wing Software','AME Accounting Software','Sage 50 Accounting','Comarch Altum','NetSuite','Brightpearl','Sage PFW ERP','Simply Accounting','Softline Pastel','Quicken','Mint.com','Microsoft Dynamics GP','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes','Yes (client)','Windows','No','']
+            local : ['Stand alone','Stand alone/Web Access','Web based','Stand alone and Web based','Stand alone and web based','Stand alone and/or Web based','Stand-alone','Multi-User/Location, Terminal Server, Remote Access, Web Access, Mobile Access, Cloud Hostable','Stand alone and Web Based','Stand Alone/Web Access','Stand Alone','Stand Alone and Web based','Web Based','Windows remote connect client','Structure','Multi-User, Remote Access, Web Access, Mobile Access, Cloud Hostable','Stand alone and Mobile','Multi-User/Location, Terminal Server, Web Access','Multi-User/Location, Terminal Server','Stand alone  and/or  Web Access','Stand alone / Web Access','Stand alone, multi-user/location, terminal server, remote access','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Low to Mid Market','Mid-Market','(Small Businesses)','Accounting Firms','Mid Market','Personal','Entrepreneurs, freelancers, Contractors, Consultants, Small businesses - Low Market','Midsize to High-end','Low to High End Market','Small Business','Low to Mid-Market','Small & Midsize Enterprises (SME)','Private Enterprises, Public Sectors and Accounting Firms','Low-market (for SME)','Mid-market','Low-end to High End Markets','Low-end to High end','High Market','Low to Mid-Market. Small & Midsize Enterprises (SME)','Mid-Market to Enterprise','Small, Medium to Mid-size Enterprises (SME)','Low to Mid-Market nonprofit and faith-based organizations','Mid to High End Market','Low Market','Mid to Low-Market','Freelancers and Microbusiness','Newsagency pharmacy','Entrepreneurs, freelancers, contractors, consultants, small businesses – Low Market)','Market focus','Low-end','Midsize to High-end Enterprises','Small Businesses (Small Businesses)','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

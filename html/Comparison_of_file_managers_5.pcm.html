@@ -26,73 +26,56 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Synchronizer : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>Synchronizer :</label></br>
+ 		 					 <input type="radio" name="FeatureSynchronizer" value="oui">oui <input type="radio" name="FeatureSynchronizer" value = "non">non </br>
+									
 						</br>	
 							<label>File manager : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>For Directories, size column shows: :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >folder only size (default) selectable to file count</br>	
- 		 									<input type="checkbox" name="Feature" >total size</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Browse compressed folders : </label></br> <input id="4" type="text" name="Feature"></br>
+							<label>For Directories, size column shows: : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Find as you type (Type-ahead find) : </label></br> <input id="5" type="text" name="Feature"></br>
-							
+ 		 					<label>Browse compressed folders :</label></br>
+ 		 					 <input type="radio" name="FeatureBrowse compressed folders" value="oui">oui <input type="radio" name="FeatureBrowse compressed folders" value = "non">non </br>
+									
+						</br>	
+ 		 					<label>Find as you type (Type-ahead find) :</label></br>
+ 		 					 <input type="radio" name="FeatureFind as you type (Type-ahead find)" value="oui">oui <input type="radio" name="FeatureFind as you type (Type-ahead find)" value = "non">non </br>
+									
 						</br>	
 							<label>Symbolic link : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Shows combined Size of Selected Directories : </label></br> <input id="7" type="text" name="Feature"></br>
-							
+ 		 					<label>Shows combined Size of Selected Directories :</label></br>
+ 		 					 <input type="radio" name="FeatureShows combined Size of Selected Directories" value="oui">oui <input type="radio" name="FeatureShows combined Size of Selected Directories" value = "non">non </br>
+									
 						</br>	
-							<label>Directory Compare : </label></br> <input id="8" type="text" name="Feature"></br>
-							
+ 		 					<label>Directory Compare :</label></br>
+ 		 					 <input type="radio" name="FeatureDirectory Compare" value="oui">oui <input type="radio" name="FeatureDirectory Compare" value = "non">non </br>
+									
 						</br>	
-							<label>Slideshows : </label></br> <input id="9" type="text" name="Feature"></br>
-							
+ 		 					<label>Slideshows :</label></br>
+ 		 					 <input type="radio" name="FeatureSlideshows" value="oui">oui <input type="radio" name="FeatureSlideshows" value = "non">non </br>
+									
 						</br>	
 							<label>Branch Sizes : </label></br> <input id="10" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','?','Yes(with kdiff3 plugin)','Partial','Partial (for remote folders)','']
+            local : ['Altap Salamander','Disk Order','Path Finder','emelFM2','Total Commander','Xandros File Manager','Xfm','PCManFM','Nautilus','FAR Manager','Konqueror','muCommander','Windows Explorer','Double Commander','ROX-Filer','Dolphin','xplorer²','Xfe','XYplorer','ZTreeWin','Finder','Xfile','Midnight Commander','File Commander','DOS Navigator','Krusader','GNOME Commander','Directory Opus','Thunar','Dired','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Altap Salamander','Disk Order','Path Finder','emelFM2','Total Commander','Xandros File Manager','Xfm','PCManFM','Nautilus','FAR Manager','Konqueror','muCommander','Windows Explorer','Double Commander','ROX-Filer','Dolphin','xplorer²','Xfe','XYplorer','ZTreeWin','Finder','Xfile','Midnight Commander','File Commander','DOS Navigator','Krusader','GNOME Commander','Directory Opus','Thunar','Dired','']
+            local : ['number of entries','?','Total size including subdirectories','Yes','literal*','Contents including subs','nothing','literal','DIR','--','folder only size (default) selectable to file count/total size','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['?','Yes','No','']
+            local : ['?','No','Partial','Yes','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['Yes','?','Yes, and browsing with tab completion','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['?','No','Partial','Yes','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Yes','?','Partial','No','Yes(with konq-plugin)','Yes (in folder tooltips)','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['Yes','No','?','Yes(with kdiff3 plugin)','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['?','Yes','No','Partial','Yes In plugin','']
-          });
-          $("#9").typeahead({
-            name:"list9",
             local : ['Yes','?','No','Partial','']
           });
     </script>

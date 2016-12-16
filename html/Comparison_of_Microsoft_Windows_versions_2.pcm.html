@@ -188,15 +188,11 @@ HyperV Core</br>
 Foundation</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Current version : </label></br> <input id="4" type="number" name="Feature"></br>
+							<label>Current version : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>License :</label></br>
+						</br>	
+							<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Closed source</br>	
- 		 									<input type="checkbox" name="Feature" >
-Shared source</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Supported architectures :</label></br>
 							
@@ -234,19 +230,8 @@ HPC</br>
  		 									<input type="checkbox" name="Feature" > Multi-Touch</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Codename, working name :</label></br>
+							<label>Codename, working name : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >New Technology OS</br>	
- 		 									<input type="checkbox" name="Feature" >2</br>	
- 		 									<input type="checkbox" name="Feature" >Whistler Server</br>	
- 		 									<input type="checkbox" name="Feature" > Windows .NET Server</br>	
- 		 									<input type="checkbox" name="Feature" >Q</br>	
- 		 									<input type="checkbox" name="Feature" > Quattro</br>	
- 		 									<input type="checkbox" name="Feature" >Eiger</br>	
- 		 									<input type="checkbox" name="Feature" > Monch</br>	
- 		 									<input type="checkbox" name="Feature" >"7"</br>	
- 		 									<input type="checkbox" name="Feature" > Vienna</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Status support : </label></br> <input id="10" type="text" name="Feature"></br>
 							
@@ -265,14 +250,38 @@ HPC</br>
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['6.2','6.1','6.0 SP2
+(2008-02-27)','4.00.1381 SP6a
+(1999-11-30)','5.0 SP4 Rollup 1 v2
+(2005-09-13)','5.2.3790 SP2
+(2007-03-13)','6.3','5.1.2600 SP3
+(2008-04-21)','3.10.528 SP3
+(1994-11-10)','3.50.807 SP3
+(1995-06-21)','RTM
+(2006-07-08)','6.0 SP2
+(2009-04-28)','5.2','3.51.1057 SP5
+(1996-09-19)','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Shared source','Closed source,
+Shared source','Closed source','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['Daytona','Memphis NT','Whistler','New Technology OS/2','?','Whistler Server, Windows .NET Server','Longhorn Server','"8" Server','Q, Quattro','"Blue" Server','Cairo
+Hydra (Terminal Server)','"7" Server','Eiger, Monch','"8"','Longhorn','Vail','"Blue"','"7", Vienna','']
+          });
+          $("#6").typeahead({
+            name:"list6",
             local : ['Supported','Unsupported
 (2001-12-31)','Unsupported
 (2014-04-08)','Supported (Until 2015-07-15)','Unsupported (8 January 2013)','Unsupported
 (2004-12-31)','Unsupported
 (2010-07-13)','']
           });
-          $("#4").typeahead({
-            name:"list4",
+          $("#7").typeahead({
+            name:"list7",
             local : ['Windows Home Server','Windows Home Server 2011','Windows Server 2012','Windows XP','Windows NT 3.5','Windows 7','Windows 8.1','Windows NT 3.1','Windows 2000','Windows NT 4.0','Windows Server 2008 R2','Windows NT 3.51','Windows Server 2008','Windows Server 2012 R2','Windows Fundamentals for Legacy PCs','Windows Server 2003','Windows 8','Windows Vista','']
           });
     </script>

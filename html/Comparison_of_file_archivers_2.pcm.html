@@ -26,76 +26,51 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Unicode file /
+ 		 					<label>Unicode file /
 directory names :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Unicode file </br>	
- 		 									<input type="checkbox" name="Feature" >
-directory names</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+ 		 					 <input type="radio" name="FeatureUnicode file /
+directory names" value="oui">oui <input type="radio" name="FeatureUnicode file /
+directory names" value = "non">non </br>
+									
 						</br>	
-							<label>Password protection : </label></br> <input id="2" type="text" name="Feature"></br>
-							
+ 		 					<label>Password protection :</label></br>
+ 		 					 <input type="radio" name="FeaturePassword protection" value="oui">oui <input type="radio" name="FeaturePassword protection" value = "non">non </br>
+									
 						</br>	
-							<label>Data compression : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>Data compression :</label></br>
+ 		 					 <input type="radio" name="FeatureData compression" value="oui">oui <input type="radio" name="FeatureData compression" value = "non">non </br>
+									
 						</br>	
-							<label>Batch conversion : </label></br> <input id="4" type="text" name="Feature"></br>
-							
+ 		 					<label>Batch conversion :</label></br>
+ 		 					 <input type="radio" name="FeatureBatch conversion" value="oui">oui <input type="radio" name="FeatureBatch conversion" value = "non">non </br>
+									
 						</br>	
-							<label>Shell integration : </label></br> <input id="5" type="text" name="Feature"></br>
-							
+ 		 					<label>Shell integration :</label></br>
+ 		 					 <input type="radio" name="FeatureShell integration" value="oui">oui <input type="radio" name="FeatureShell integration" value = "non">non </br>
+									
 						</br>	
-							<label>File repairing : </label></br> <input id="6" type="text" name="Feature"></br>
-							
+ 		 					<label>File repairing :</label></br>
+ 		 					 <input type="radio" name="FeatureFile repairing" value="oui">oui <input type="radio" name="FeatureFile repairing" value = "non">non </br>
+									
 						</br>	
-							<label>Encryption : </label></br> <input id="7" type="text" name="Feature"></br>
-							
+ 		 					<label>Encryption :</label></br>
+ 		 					 <input type="radio" name="FeatureEncryption" value="oui">oui <input type="radio" name="FeatureEncryption" value = "non">non </br>
+									
 						</br>	
-							<label>Multiple volumes : </label></br> <input id="8" type="text" name="Feature"></br>
-							
+ 		 					<label>Multiple volumes :</label></br>
+ 		 					 <input type="radio" name="FeatureMultiple volumes" value="oui">oui <input type="radio" name="FeatureMultiple volumes" value = "non">non </br>
+									
 						</br>	
 							<label>Filename Encryption : </label></br> <input id="9" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Self extraction : </label></br> <input id="10" type="text" name="Feature"></br>
-							
+ 		 					<label>Self extraction :</label></br>
+ 		 					 <input type="radio" name="FeatureSelf extraction" value="oui">oui <input type="radio" name="FeatureSelf extraction" value = "non">non </br>
+									
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','Password protection','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Yes','No','Data compression','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Yes','Batch conversion','No','Unknown','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','Not enabled by default','No','some formats','Shell integration','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['No','Separate','Yes','File repairing','Unknown','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Unknown','Encryption','Yes','Weak','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['Unknown','Yes','No','Multiple volumes','']
-          });
-          $("#8").typeahead({
-            name:"list8",
             local : ['Yes','Unknown','No','','Filename Encryption','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['Yes','No','Unknown','Self extraction','Separate','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

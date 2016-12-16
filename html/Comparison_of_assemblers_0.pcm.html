@@ -29,33 +29,30 @@
 							<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Assembler :</label></br>
+							<label>Assembler : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >MAC</br>	
- 		 									<input type="checkbox" name="Feature" >65</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Host platform :</label></br>
+							<label>Host platform : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Apple II series</br>	
- 		 									<input type="checkbox" name="Feature" > Commodore 64</br>	
- 		 									<input type="checkbox" name="Feature" > Commodore 128</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Instruction set :</label></br>
+							<label>Instruction set : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >MOS Technology 6502</br>	
- 		 									<input type="checkbox" name="Feature" > WDC 65C02</br>	
- 		 									<input type="checkbox" name="Feature" > WDC 65816</br>	
- 		 									<input type="checkbox" name="Feature" >65802</br>	
- 		 									<input type="checkbox" name="Feature" > others</br>	
- 		 									<input type="checkbox" name="Feature" > MOS Technology 4502</br>	
- 		 									<input type="checkbox" name="Feature" >4510 (experimental)</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['various','Apple II series','Apple II series, Commodore 64, Commodore 128','Atari 8-bit family','Commodore 64','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['MOS Technology 6502','MOS Technology 6502, WDC 65C02, WDC 65816/65802','MOS Technology 6502, WDC 65816/65802','MOS Technology 6502, others','MOS Technology 6502, WDC 65C02, MOS Technology 4502/4510 (experimental)','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['GPL','Proprietary','Public domain','MIT License','Free','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Kick Assembler','Merlin','ACME','MOSASM','ASM6','dreamass','XA65','Atari Assembler Editor','Lisa','CA65','MAC/65','ATASM','dasm','MADS','XASM','64tass','WLA DX','Ophis','TMPx','vasm','French Silk','AS65','C64List','VISUAL6502','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -26,14 +26,17 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>iRip : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>iRip :</label></br>
+ 		 					 <input type="radio" name="FeatureiRip" value="oui">oui <input type="radio" name="FeatureiRip" value = "non">non </br>
+									
 						</br>	
-							<label>Banshee : </label></br> <input id="2" type="text" name="Feature"></br>
-							
+ 		 					<label>Banshee :</label></br>
+ 		 					 <input type="radio" name="FeatureBanshee" value="oui">oui <input type="radio" name="FeatureBanshee" value = "non">non </br>
+									
 						</br>	
-							<label>Amarok : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>Amarok :</label></br>
+ 		 					 <input type="radio" name="FeatureAmarok" value="oui">oui <input type="radio" name="FeatureAmarok" value = "non">non </br>
+									
 						</br>	
  		 					<label>Winamp native :</label></br>
  		 					 <input type="radio" name="FeatureWinamp native" value="oui">oui <input type="radio" name="FeatureWinamp native" value = "non">non </br>
@@ -43,8 +46,9 @@
  		 					 <input type="radio" name="FeatureRhythmbox" value="oui">oui <input type="radio" name="FeatureRhythmbox" value = "non">non </br>
 									
 						</br>	
-							<label>Senuti : </label></br> <input id="6" type="text" name="Feature"></br>
-							
+ 		 					<label>Senuti :</label></br>
+ 		 					 <input type="radio" name="FeatureSenuti" value="oui">oui <input type="radio" name="FeatureSenuti" value = "non">non </br>
+									
 						</br>	
 							<label>Manager :</label></br>
 							
@@ -79,36 +83,17 @@
  		 					 <input type="radio" name="FeatureMediaMonkey" value="oui">oui <input type="radio" name="FeatureMediaMonkey" value = "non">non </br>
 									
 						</br>	
-							<label>gtkpod : </label></br> <input id="14" type="text" name="Feature"></br>
-							
+ 		 					<label>gtkpod :</label></br>
+ 		 					 <input type="radio" name="Featuregtkpod" value="oui">oui <input type="radio" name="Featuregtkpod" value = "non">non </br>
+									
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes, Read-only','Yes','']
+            local : ['Yes, Read only','Yes','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','Yes, Read-only','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Yes, Read-only','Yes','No','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','No','?','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes, Read only','Yes','']
-          });
-          $("#6").typeahead({
-            name:"list6",
             local : ['Yes, limited','No','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['?','Yes','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

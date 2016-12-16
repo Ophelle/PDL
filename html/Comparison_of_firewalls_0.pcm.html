@@ -29,16 +29,8 @@
 							<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Cost / Usage Limits :</label></br>
+							<label>Cost / Usage Limits : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Included with Windows 
-XP SP2 and later</br>	
- 		 									<input type="checkbox" name="Feature" >Free </br>	
- 		 									<input type="checkbox" name="Feature" > Paid</br>	
- 		 									<input type="checkbox" name="Feature" >$59</br>	
- 		 									<input type="checkbox" name="Feature" >95 Year </br>	
- 		 									<input type="checkbox" name="Feature" > 30 day trial</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>OS :</label></br>
 							
@@ -58,15 +50,32 @@ XP SP2 and later</br>
  		 									<input type="checkbox" name="Feature" >Mac OS X 10.5 or later; on an Xserve</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Firewall :</label></br>
+							<label>Firewall : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Netfilter</br>	
- 		 									<input type="checkbox" name="Feature" >iptables</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['Proprietary','BSD','GPL','GPLv2','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['Free','discontinued','$59.99 Year','Paid','?','€39.95 Year','Included with Windows 
+XP SP2 and later','Free / Paid','Freemium','Free ?','€36 Year','$59,95 Year / 30 day trial','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Lavasoft 
+Personal Firewall','IPFilter','Microsoft 
+Forefront Threat 
+Management 
+Gateway','NPF','ipfirewall','PF','ZoneAlarm','Kaspersky 
+Internet Security','Netfilter/iptables','Glasswire','Outpost 
+Firewall Pro','FirewallD','WinGate','PC Tools 
+Firewall Plus','Sygate 
+Personal Firewall','Sunbelt 
+Personal Firewall','Windows Firewall','Online Armor 
+Personal Firewall','Comodo Internet 
+Security','Norton 360','Intego VirusBarrier','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

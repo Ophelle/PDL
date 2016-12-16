@@ -26,22 +26,21 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>C# :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >No; can be simulated with instance constructor</br>	
-								
+ 		 					<label>C# :</label></br>
+ 		 					 <input type="radio" name="FeatureC#" value="oui">oui <input type="radio" name="FeatureC#" value = "non">non </br>
+									
 						</br>	
-							<label>Java :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >No; can be simulated</br>	
-								
+ 		 					<label>Java :</label></br>
+ 		 					 <input type="radio" name="FeatureJava" value="oui">oui <input type="radio" name="FeatureJava" value = "non">non </br>
+									
 						</br>	
-							<label>Fields and initialization :</label></br>
+							<label>Fields and initialization : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Finalizers</br>	
- 		 									<input type="checkbox" name="Feature" >destructors</br>	
-								
 		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['Instance initializers','Array initializers','Fields','Instance constructors','Collection initializers','Object initializers','Object initialization','Constants','Static (class) constructors','Finalizers/destructors','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

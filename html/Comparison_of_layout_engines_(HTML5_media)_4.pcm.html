@@ -26,18 +26,28 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>WebKit : </label></br> <input id="1" type="number" name="Feature"></br>
+							<label>WebKit : </label></br> <input id="1" type="text" name="Feature"></br>
 							
+						</br>	
+							<label>Trident : </label></br> <input id="2" type="text" name="Feature"></br>
+							
+						</br>	
+ 		 					<label>Presto :</label></br>
+ 		 					 <input type="radio" name="FeaturePresto" value="oui">oui <input type="radio" name="FeaturePresto" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Trident : </label></br> <input id="2" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Presto : </label></br> <input id="3" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Gecko : </label></br> <input id="4" type="number" name="Feature"></br>
-							
+ 		 					<label>Gecko :</label></br>
+ 		 					 <input type="radio" name="FeatureGecko" value="oui">oui <input type="radio" name="FeatureGecko" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['Depends','525','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['5.0','Manual install','In IE 12 ??','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

@@ -26,52 +26,46 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Latest release : </label></br> <input id="1" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>USB Card : </label></br> <input id="2" type="text" name="Feature"></br>
+							<label>Latest release : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Bombs : </label></br> <input id="3" type="text" name="Feature"></br>
+ 		 					<label>USB Card :</label></br>
+ 		 					 <input type="radio" name="FeatureUSB Card" value="oui">oui <input type="radio" name="FeatureUSB Card" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Bombs :</label></br>
+ 		 					 <input type="radio" name="FeatureBombs" value="oui">oui <input type="radio" name="FeatureBombs" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>First release : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>First release : </label></br> <input id="4" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
 							<label>Developer : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Courses : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Courses :</label></br>
+ 		 					 <input type="radio" name="FeatureCourses" value="oui">oui <input type="radio" name="FeatureCourses" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Panels/pad : </label></br> <input id="7" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Modifiers : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>Modifiers :</label></br>
+ 		 					 <input type="radio" name="FeatureModifiers" value="oui">oui <input type="radio" name="FeatureModifiers" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['?','No','Yes','Yes 
-(X to X3)','']
+            local : ['N/A','(StepMania 5)','2013 (Dance Dance Revolution)','(TechnoMotion The 2nd Dance Floor!)','2010','2004 (EZ2Dancer SuperChina)','2008 (Mungyodance 3 The Third Rave)','2015 (Pump It Up Prime)','2000 (ParaParaDancing)','2010 (Pump It Up Pro 2)','2005 (In The Groove 2)','2007 (Dance Praise 2: The ReMix)','2000 (Dance Freaks)','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Partial','No','Yes','?','']
+            local : ['2005 (Mungyodance)','2003 (Dance:UK)','2004 (In The Groove)','2005 (Original Dance Praise)','1999 (Dance Maniax)','2000 (EZ2Dancer)','1999 (Pump It Up)','2000 (3DDX)','2003 (EyeToy: Groove)','2005 (Dance 86.4 Funky Radio Station)','2009','2007 (Cyber coach)','1998 (StepMania)','2007 (Pump It Up Pro)','1998 (Dance Dance Revolution)','2000 (ParaParaParadise)','2000 (TechnoMotion)','1987 (Dance Aerobics)','2004 (MC Groovz Dance Craze)','']
           });
           $("#3").typeahead({
             name:"list3",
             local : ['Human Entertainment','Andamiro','F2 Systems','Konami','MIT License','Roxor','NGG Entertainment','Mad Catz','Broadsword Interactive Limited','Fun in Motion','Empathetic Gaming (MGD/MGD2) 
  Monakai (MGD3)','AmuseWorld','Digital Praise','Quick Controls Ltd','GPL License','SCE London Studio','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','?','No','Dropped','Partial','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['?','No','Yes','Yes 
- (limited)','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -26,11 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Governor term limit :</label></br>
+							<label>Governor term limit : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >No limit on number</br>	
- 		 									<input type="checkbox" name="Feature" > but terms cannot be consecutive</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Governor term length : </label></br> <input id="2" type="text" name="Feature"></br>
 							
@@ -47,14 +44,18 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Four years','Two years','Mayor: Four years','']
+            local : ['None','Two terms','Two consecutive terms','Mayor: None','Two terms in a 12-year period','No limit on number, but terms cannot be consecutive','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Lieutenant Governor','Secretary of State','District of Columbia Council Chairman','President of the Senate','']
+            local : ['Four years','Two years','Mayor: Four years','']
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['Lieutenant Governor','Secretary of State','District of Columbia Council Chairman','President of the Senate','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['Wyoming','Louisiana','Pennsylvania','New York','Puerto Rico','Massachusetts','North Carolina','Ohio','Florida','Colorado','California','New Mexico','Arizona','Minnesota','Maine','New Jersey','Oregon','Connecticut','Vermont','Michigan','Virginia','Texas','Mississippi','Alaska','Maryland','Tennessee','Utah','Illinois','Washington','Alabama','Indiana','Hawaii','Oklahoma','Nebraska','West Virginia','North Dakota','Arkansas','Montana','South Dakota','Idaho','Missouri','Kansas','Kentucky','Georgia','Iowa','New Hampshire','Delaware','Rhode Island','South Carolina','District of Columbia','Wisconsin','Nevada','']
           });
     </script>

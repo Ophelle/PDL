@@ -26,21 +26,18 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Firefox Sync : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Opera Link :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Solaris</br>	
- 		 									<input type="checkbox" name="Feature" > Java ME</br>	
- 		 									<input type="checkbox" name="Feature" > S60</br>	
- 		 									<input type="checkbox" name="Feature" > UIQ3</br>	
- 		 									<input type="checkbox" name="Feature" > BREW</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Xmarks : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Firefox Sync :</label></br>
+ 		 					 <input type="radio" name="FeatureFirefox Sync" value="oui">oui <input type="radio" name="FeatureFirefox Sync" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Opera Link :</label></br>
+ 		 					 <input type="radio" name="FeatureOpera Link" value="oui">oui <input type="radio" name="FeatureOpera Link" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Xmarks :</label></br>
+ 		 					 <input type="radio" name="FeatureXmarks" value="oui">oui <input type="radio" name="FeatureXmarks" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
  		 					<label>BookmarkSync :</label></br>
  		 					 <input type="radio" name="FeatureBookmarkSync" value="oui">oui <input type="radio" name="FeatureBookmarkSync" value = "non">non </br>
 									
@@ -53,18 +50,10 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','OpenSolaris','']
+            local : ['Symbian','Linux','other','Windows','Windows Phone','Android','iOS','FreeBSD','OS X','BlackBerry OS','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Xmarks Premium','No','Yes','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Symbian','Linux','other','Windows','Windows Phone','Android','iOS','FreeBSD','OS X','BlackBerry OS','']
-          });
-          $("#4").typeahead({
-            name:"list4",
             local : ['Mobile operating system','PC operating system','','']
           });
     </script>

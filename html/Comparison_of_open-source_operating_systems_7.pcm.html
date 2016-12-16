@@ -26,21 +26,14 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Others :</label></br>
+							<label>Others : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >grsecurity</br>	
- 		 									<input type="checkbox" name="Feature" > RSBAC</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Virtualisation : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Software executable space protection :</label></br>
+							<label>Software executable space protection : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >PaX style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes"|z1</br>	
- 		 									<input type="checkbox" name="Feature" >style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes"|z5</br>	
- 		 									<input type="checkbox" name="Feature" >style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes"|z6</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Mandatory access control :</label></br>
 							
@@ -50,31 +43,39 @@
  		 									<input type="checkbox" name="Feature" >style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes"|z3 TrustedBSD</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Operating system-level virtualization :</label></br>
+							<label>Operating system-level virtualization : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Linux-VServer</br>	
- 		 									<input type="checkbox" name="Feature" > OpenVZ
-style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes"|z1</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Userspace protection :</label></br>
+							<label>Userspace protection : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >IPFW</br>	
- 		 									<input type="checkbox" name="Feature" > PF</br>	
- 		 									<input type="checkbox" name="Feature" >IPFilter</br>	
- 		 									<input type="checkbox" name="Feature" > Iptables</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Operating system : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['','KVM','']
+            local : ['','RBAC','grsecurity, RSBAC','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['','KVM','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['','No','PaX style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes"|z1','style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes"|z5','style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes"|z6','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['OpenSolaris','OpenBSD','AuroraUX','Plan 9','Inferno','Darwin','Linux','FreeBSD','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['jail','Solaris Containers','per-process namespaces','','Linux-VServer, OpenVZ
+style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes"|z1','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['','IPFilter','PF','IPFW','IPFW, PF','IPFilter, Iptables','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

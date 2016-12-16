@@ -32,15 +32,9 @@
 							<label>Desktop Environment : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Office Integration :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >If you use Exchange</br>	
- 		 									<input type="checkbox" name="Feature" > Riva provides native support for Snow Leopard Mac iCal</br>	
- 		 									<input type="checkbox" name="Feature" > Mail and Address Book and Microsoft Entourage for Mac.</br>	
- 		 									<input type="checkbox" name="Feature" >Outlook Addon and Google Docs</br>	
- 		 									<input type="checkbox" name="Feature" >Google Apps</br>	
- 		 									<input type="checkbox" name="Feature" > Microsoft Exchange</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+ 		 					<label>Office Integration :</label></br>
+ 		 					 <input type="radio" name="FeatureOffice Integration" value="oui">oui <input type="radio" name="FeatureOffice Integration" value = "non">non </br>
+									
 						</br>	
 							<label>LDAP Support : </label></br> <input id="4" type="text" name="Feature"></br>
 							
@@ -48,33 +42,20 @@
 							<label>Global Search : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Multi Lingual : </label></br> <input id="6" type="text" name="Feature"></br>
-							
+ 		 					<label>Multi Lingual :</label></br>
+ 		 					 <input type="radio" name="FeatureMulti Lingual" value="oui">oui <input type="radio" name="FeatureMulti Lingual" value = "non">non </br>
+									
 						</br>	
-							<label>Time Tracking : </label></br> <input id="7" type="text" name="Feature"></br>
-							
+ 		 					<label>Time Tracking :</label></br>
+ 		 					 <input type="radio" name="FeatureTime Tracking" value="oui">oui <input type="radio" name="FeatureTime Tracking" value = "non">non </br>
+									
 						</br>	
 							<label>System : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Web-Based :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Web</br>	
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 									<input type="checkbox" name="Feature" >zh-cn</br>	
- 		 									<input type="checkbox" name="Feature" > da</br>	
- 		 									<input type="checkbox" name="Feature" > nl</br>	
- 		 									<input type="checkbox" name="Feature" > en</br>	
- 		 									<input type="checkbox" name="Feature" > fr</br>	
- 		 									<input type="checkbox" name="Feature" > de</br>	
- 		 									<input type="checkbox" name="Feature" > it</br>	
- 		 									<input type="checkbox" name="Feature" > ja</br>	
- 		 									<input type="checkbox" name="Feature" > pl</br>	
- 		 									<input type="checkbox" name="Feature" > pt</br>	
- 		 									<input type="checkbox" name="Feature" > es</br>	
- 		 									<input type="checkbox" name="Feature" > sv</br>	
- 		 									<input type="checkbox" name="Feature" > tr</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+ 		 					<label>Web-Based :</label></br>
+ 		 					 <input type="radio" name="FeatureWeb-Based" value="oui">oui <input type="radio" name="FeatureWeb-Based" value = "non">non </br>
+									
 						</br>	
 							<label>Languages Supported :</label></br>
 							
@@ -118,7 +99,7 @@
  		 									<input type="checkbox" name="Feature" > tr</br>	
  		 									<input type="checkbox" name="Feature" > lat</br>	
  		 									<input type="checkbox" name="Feature" > but supports UTF8</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -138,14 +119,6 @@
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['Yes','No','?','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Yes','?','No','']
-          });
-          $("#7").typeahead({
-            name:"list7",
             local : ['Salesforce.com','Tryton','SugarCRM','SageCRM','SuperOfficeCRM','Casengo','Group-Office','WORKetc','Siebel','AddressTwo','WebCRM','EpesiCRM','Nutshell CRM','TeamLab','CiviCRM','Adempiere','Really Simple Systems','Odoo CRM','Base CRM','Microsoft Dynamics CRM','LeadMaster','Pivotal CRM','GNU Enterprise','TeamWox','Workbooks.com','Streak','Vtiger CRM','Zoho CRM','SuiteCRM','']
           });
     </script>

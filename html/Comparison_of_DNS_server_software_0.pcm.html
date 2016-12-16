@@ -26,42 +26,52 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Slave mode : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>Slave mode :</label></br>
+ 		 					 <input type="radio" name="FeatureSlave mode" value="oui">oui <input type="radio" name="FeatureSlave mode" value = "non">non </br>
+									
 						</br>	
 							<label>Server : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Authoritative : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>Authoritative :</label></br>
+ 		 					 <input type="radio" name="FeatureAuthoritative" value="oui">oui <input type="radio" name="FeatureAuthoritative" value = "non">non </br>
+									
 						</br>	
-							<label>IPv6 : </label></br> <input id="4" type="text" name="Feature"></br>
-							
+ 		 					<label>IPv6 :</label></br>
+ 		 					 <input type="radio" name="FeatureIPv6" value="oui">oui <input type="radio" name="FeatureIPv6" value = "non">non </br>
+									
 						</br>	
-							<label>Recursion ACL : </label></br> <input id="5" type="text" name="Feature"></br>
-							
+ 		 					<label>Recursion ACL :</label></br>
+ 		 					 <input type="radio" name="FeatureRecursion ACL" value="oui">oui <input type="radio" name="FeatureRecursion ACL" value = "non">non </br>
+									
 						</br>	
-							<label>DNSSEC : </label></br> <input id="6" type="text" name="Feature"></br>
-							
+ 		 					<label>DNSSEC :</label></br>
+ 		 					 <input type="radio" name="FeatureDNSSEC" value="oui">oui <input type="radio" name="FeatureDNSSEC" value = "non">non </br>
+									
 						</br>	
-							<label>split horizon : </label></br> <input id="7" type="text" name="Feature"></br>
-							
+ 		 					<label>split horizon :</label></br>
+ 		 					 <input type="radio" name="Featuresplit horizon" value="oui">oui <input type="radio" name="Featuresplit horizon" value = "non">non </br>
+									
 						</br>	
-							<label>Caching : </label></br> <input id="8" type="text" name="Feature"></br>
-							
+ 		 					<label>Caching :</label></br>
+ 		 					 <input type="radio" name="FeatureCaching" value="oui">oui <input type="radio" name="FeatureCaching" value = "non">non </br>
+									
 						</br>	
  		 					<label>Free Software :</label></br>
  		 					 <input type="radio" name="FeatureFree Software" value="oui">oui <input type="radio" name="FeatureFree Software" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Wildcard : </label></br> <input id="10" type="text" name="Feature"></br>
-							
 						</br>	
-							<label>TSIG : </label></br> <input id="11" type="text" name="Feature"></br>
-							
+ 		 					<label>Wildcard :</label></br>
+ 		 					 <input type="radio" name="FeatureWildcard" value="oui">oui <input type="radio" name="FeatureWildcard" value = "non">non </br>
+									
 						</br>	
-							<label>Recursive : </label></br> <input id="12" type="text" name="Feature"></br>
-							
+ 		 					<label>TSIG :</label></br>
+ 		 					 <input type="radio" name="FeatureTSIG" value="oui">oui <input type="radio" name="FeatureTSIG" value = "non">non </br>
+									
+						</br>	
+ 		 					<label>Recursive :</label></br>
+ 		 					 <input type="radio" name="FeatureRecursive" value="oui">oui <input type="radio" name="FeatureRecursive" value = "non">non </br>
+									
 						</br>	
 							<label>Interface :</label></br>
 							
@@ -82,51 +92,11 @@
  		 									<input type="checkbox" name="Feature" > API</br>	
  		 									<input type="checkbox" name="Feature" > WMI</br>	
  		 									<input type="checkbox" name="Feature" > RPC</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','Partial','N/A','']
-          });
-          $("#2").typeahead({
-            name:"list2",
             local : ['Dnsmasq','Unbound','YADIFA','djbdns','Nominum Vantio','yaku-ns','pdnsd','NSD','Nominum ANS','Posadis','gdnsd','dbndns','MaraDNS','PowerDNS','Microsoft DNS','dnrd','Knot DNS','BIND','Simple DNS Plus','DNS Blast','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','Partial','Yes','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','No','Partial via generic records.','Partial','Yes (since 9.x)','?','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['No','N/A','Yes','Partial','?','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['No','Yes','Partial','Yes (since 3.0)','Yes (since 2.69)','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['Yes','No','Partial','?','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['Yes','N/A','No','?','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['Yes','Yes (since 4.x)','N/A','?','Partial','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['No','Yes','Partial','Yes (since 3.0)','']
-          });
-          $("#11").typeahead({
-            name:"list11",
-            local : ['Yes','?','No','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

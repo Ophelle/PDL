@@ -29,35 +29,27 @@
 							<label>Type system : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Object-oriented : </label></br> <input id="2" type="text" name="Feature"></br>
+ 		 					<label>Object-oriented :</label></br>
+ 		 					 <input type="radio" name="FeatureObject-oriented" value="oui">oui <input type="radio" name="FeatureObject-oriented" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Textual/graphical : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Textual/graphical :</label></br>
+							<label>Name : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Textual</br>	
- 		 									<input type="checkbox" name="Feature" >Graphical (FLTK</br>	
- 		 									<input type="checkbox" name="Feature" >Qt</br>	
- 		 									<input type="checkbox" name="Feature" >HTML5)</br>	
- 		 									<input type="checkbox" name="Feature" >Graphical (Cocoa</br>	
- 		 									<input type="checkbox" name="Feature" >Swing</br>	
- 		 									<input type="checkbox" name="Feature" >Qt)</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Name :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Max</br>	
- 		 									<input type="checkbox" name="Feature" >MSP</br>	
- 		 									<input type="checkbox" name="Feature" >MPEG-4</br>	
- 		 									<input type="checkbox" name="Feature" >SA</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Dynamic','','In development','Dynamic & static','No','Static','']
+            local : ['Textual/Graphical (FLTK/Qt/HTML5)','Graphical','Textual','Mostly textual','Textual/Graphical (Cocoa/Swing/Qt)','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['No','-','Yes','']
+            local : ['Dynamic','','In development','Dynamic & static','No','Static','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Csound','Reaktor','Pure Data','Max/MSP','Impromptu','SuperCollider','MPEG-4/SA','ChucK','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

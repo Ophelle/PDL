@@ -29,14 +29,10 @@
 							<label>Tax Year 2015 : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Loans :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >When still employed with employer setting up the 401(k)</br>	
- 		 									<input type="checkbox" name="Feature" > loans may be available depending upon the plan</br>	
- 		 									<input type="checkbox" name="Feature" > not more than 50% of balance or $50</br>	
- 		 									<input type="checkbox" name="Feature" >000</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
+ 		 					<label>Loans :</label></br>
+ 		 					 <input type="radio" name="FeatureLoans" value="oui">oui <input type="radio" name="FeatureLoans" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Changing Institutions :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >Can roll over to another employer's Roth 401(k) plan or to a Roth IRA at an independent institution.</br>	
@@ -45,20 +41,11 @@
  		 									<input type="checkbox" name="Feature" >Funds can be either transferred to another institution or they can be sent to the owner of the Roth IRA who has 60 days to put the money in another institution in a rollover contribution to another Roth IRA</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Employer or Individual :</label></br>
+							<label>Employer or Individual : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Employer or Sole Proprietor sets up this plan</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Subjected taxes :</label></br>
+							<label>Subjected taxes : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Contributions are deductible (subject to conditions). When deducted</br>	
- 		 									<input type="checkbox" name="Feature" > contributions are pre-tax</br>	
- 		 									<input type="checkbox" name="Feature" > otherwise</br>	
- 		 									<input type="checkbox" name="Feature" > they are post-tax. Distributions are taxed as ordinary income (except any non-deducted principal).</br>	
- 		 									<input type="checkbox" name="Feature" >Contributions are usually pre-tax; but can also be post-tax</br>	
- 		 									<input type="checkbox" name="Feature" > if allowed by plan. Distributions are taxed as ordinary income (except any post-tax principal).</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Education Expenses :</label></br>
 							
@@ -74,10 +61,8 @@
  		 									<input type="checkbox" name="Feature" > and grandchildren</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Forced Distributions :</label></br>
+							<label>Forced Distributions : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Must start withdrawing funds at age 70½ unless employee is still employed and not a 5% owner. Penalty is 50% of minimum distribution.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Contribution notes : </label></br> <input id="8" type="text" name="Feature"></br>
 							
@@ -137,11 +122,8 @@ Also</br>
  		 									<input type="checkbox" name="Feature" > depending on tax filing status. See full rules and Backdoor Roth IRA Contributions.</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Matching Contributions :</label></br>
+							<label>Matching Contributions : </label></br> <input id="14" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Matching contributions available through some employers</br>	
- 		 									<input type="checkbox" name="Feature" > but they must sit in a pretax account</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Home Down Payment :</label></br>
 							
@@ -199,10 +181,26 @@ Also</br>
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['','Effective limit is higher compared to traditional IRA as the contributions are post-tax.','Effective limit is higher compared to traditional 401k as the contributions are post-tax.','']
+            local : ['Individual sets up this plan','Employer or Sole Proprietor sets up this plan','']
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['Contributions are deductible (subject to conditions). When deducted, contributions are pre-tax, otherwise, they are post-tax. Distributions are taxed as ordinary income (except any non-deducted principal).','Contributions are usually pre-tax; but can also be post-tax, if allowed by plan. Distributions are taxed as ordinary income (except any post-tax principal).','Contributions are post-tax. Qualified distributions are not taxable.','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Must start withdrawing funds at age 70½. Penalty is 50% of minimum distribution.','Must start withdrawing funds at age 70½ unless employee is still employed. Penalty is 50% of minimum distribution.','Must start withdrawing funds at age 70½ unless employee is still employed and not a 5% owner. Penalty is 50% of minimum distribution.','None.','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['','Effective limit is higher compared to traditional IRA as the contributions are post-tax.','Effective limit is higher compared to traditional 401k as the contributions are post-tax.','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['Matching contributions available through some employers, but they must sit in a pretax account','No matching contributions available','Matching contributions available from some employers.','']
+          });
+          $("#7").typeahead({
+            name:"list7",
             local : ['Account is protected from bankruptcy and creditors (with limited exceptions, e.g. IRS)','Account is protected from bankruptcy up to $1 million. Protection from creditors varies by state (from none to full protection).','']
           });
     </script>

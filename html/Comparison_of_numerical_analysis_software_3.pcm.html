@@ -26,18 +26,14 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>GUI creation support :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Win32</br>	
- 		 									<input type="checkbox" name="Feature" > .NET</br>	
- 		 									<input type="checkbox" name="Feature" > WPF</br>	
- 		 									<input type="checkbox" name="Feature" > HTML</br>	
- 		 									<input type="checkbox" name="Feature" >JS</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Symbolic computation support : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>GUI creation support :</label></br>
+ 		 					 <input type="radio" name="FeatureGUI creation support" value="oui">oui <input type="radio" name="FeatureGUI creation support" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Symbolic computation support :</label></br>
+ 		 					 <input type="radio" name="FeatureSymbolic computation support" value="oui">oui <input type="radio" name="FeatureSymbolic computation support" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Can be called from other languages :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >Perl</br>	
@@ -58,11 +54,10 @@
  		 									<input type="checkbox" name="Feature" >.NET</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>OOP support :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >DS2 and SCL</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
+ 		 					<label>OOP support :</label></br>
+ 		 					 <input type="radio" name="FeatureOOP support" value="oui">oui <input type="radio" name="FeatureOOP support" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Can call code in other languages :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >C</br>	
@@ -93,21 +88,14 @@
  		 					 <input type="radio" name="FeatureMulti-dimensional arrays as primitive data type" value="oui">oui <input type="radio" name="FeatureMulti-dimensional arrays as primitive data type" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Standalone executable creation support : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Standalone executable creation support :</label></br>
+ 		 					 <input type="radio" name="FeatureStandalone executable creation support" value="oui">oui <input type="radio" name="FeatureStandalone executable creation support" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
  		 					<label>Centralized extension library website :</label></br>
  		 					 <input type="radio" name="FeatureCentralized extension library website" value="oui">oui <input type="radio" name="FeatureCentralized extension library website" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Yes','only with GiNaC extension','No','Yes and extended via Ryacas package','with extension library','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['with extension','Yes with mkoctfile','No','Yes','']
-          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

@@ -41,11 +41,8 @@
  		 					 <input type="radio" name="FeatureIntegrated firewall" value="oui">oui <input type="radio" name="FeatureIntegrated firewall" value = "non">non </br>
 									
 						</br>	
-							<label>APIs :</label></br>
+							<label>APIs : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Win16</br>	
- 		 									<input type="checkbox" name="Feature" > Win32s</br>	
-								
 						</br>	
  		 					<label>UDMA support :</label></br>
  		 					 <input type="radio" name="FeatureUDMA support" value="oui">oui <input type="radio" name="FeatureUDMA support" value = "non">non </br>
@@ -72,6 +69,10 @@
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['Win16','Win16, Win32s','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['Windows 2.0','Windows 3.1x','Windows 3.0','Windows 1.0','']
           });
     </script>

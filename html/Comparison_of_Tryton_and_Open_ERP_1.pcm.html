@@ -26,42 +26,23 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Odoo : </label></br> <input id="1" type="text" name="Feature"></br>
+ 		 					<label>Odoo :</label></br>
+ 		 					 <input type="radio" name="FeatureOdoo" value="oui">oui <input type="radio" name="FeatureOdoo" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Subject : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Subject :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Integrated w</br>	
- 		 									<input type="checkbox" name="Feature" > Google Drive</br>	
- 		 									<input type="checkbox" name="Feature" > Calendar</br>	
- 		 									<input type="checkbox" name="Feature" > Spreadsheet</br>	
- 		 									<input type="checkbox" name="Feature" >Website</br>	
- 		 									<input type="checkbox" name="Feature" >CMS integration</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Tryton :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >No </br>	
- 		 									<input type="checkbox" name="Feature" > Partial up to version 2.8</br>	
- 		 									<input type="checkbox" name="Feature" >Support SIP and "Call To" URL widgets.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-		<script>
+ 		 					<label>Tryton :</label></br>
+ 		 					 <input type="radio" name="FeatureTryton" value="oui">oui <input type="radio" name="FeatureTryton" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes 
-(document size limit: Filesystem limit 
- or PostgreSQL 1GB)','Yes','Yes  
-Community integration:
- JERA® B2C E-commerce Suite
- Magento
- Prestashop
- OSCommerce
- Zen Cart
- Odoo e-Sale','No standard modules.
-Community integration:
- Asterisk','Yes 
-Community integration:
- Joomla! CMS integration using JERA® Framework','']
+            local : ['Integrated w/ Google Drive, Calendar, Spreadsheet','Human Resources','Website/CMS integration','Manufacturing Management','E-mail integration','Point of Sale','CRM','Payroll Management','VoIP','Portals','Document Management System','Sales Management','Analytic accounting','Warehouse Management','Integration with payment gateways','Purchase Management','E-commerce
+(useful general discussions about 
+ integrating any such webapp, 
+ versus building a front-end )','Accounting & Financial Management','Project Management','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

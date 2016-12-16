@@ -26,47 +26,32 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Function :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >I</br>	
- 		 									<input type="checkbox" name="Feature" >O caching</br>	
- 		 									<input type="checkbox" name="Feature" >Mirroring and Replication</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Openfiler : </label></br> <input id="2" type="text" name="Feature"></br>
+							<label>Function : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Microsoft Windows Storage Server : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Open-E :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >4</br>	
- 		 									<input type="checkbox" name="Feature" >8</br>	
- 		 									<input type="checkbox" name="Feature" >16 (more need additional license)</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>FalconStor : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>FreeNAS : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>Openfiler :</label></br>
+ 		 					 <input type="radio" name="FeatureOpenfiler" value="oui">oui <input type="radio" name="FeatureOpenfiler" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Microsoft Windows Storage Server :</label></br>
+ 		 					 <input type="radio" name="FeatureMicrosoft Windows Storage Server" value="oui">oui <input type="radio" name="FeatureMicrosoft Windows Storage Server" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Open-E :</label></br>
+ 		 					 <input type="radio" name="FeatureOpen-E" value="oui">oui <input type="radio" name="FeatureOpen-E" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>FalconStor :</label></br>
+ 		 					 <input type="radio" name="FeatureFalconStor" value="oui">oui <input type="radio" name="FeatureFalconStor" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>FreeNAS :</label></br>
+ 		 					 <input type="radio" name="FeatureFreeNAS" value="oui">oui <input type="radio" name="FeatureFreeNAS" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','Yes(Old v:1)','Unlimited','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Yes','No','Unlimited','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Yes','No','64 TB','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['No','Yes','Unlimited','']
+            local : ['Unlimited Network Interface Controller Support','Storage limits','I/O caching','Microsoft Windows Server Core Support','Virtual tape library','Mirroring and Replication','Thin Provisioning','Virtual Optical Drive','Microsoft Management Console support','MPIO','EventViewer support','PerfMon support','Remote management','Windows Volume Snapshot Service','High availability support','Software RAID','Continuous Data Protection (CDP)','Virtual Burner support','Snapshot','VHD support','Multi-user mutual CHAP authorization','IPsec tunnelling','Dynamically expanding file support','VMware integration toolkit','Challenge-handshake authentication protocol','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

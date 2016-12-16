@@ -35,17 +35,14 @@
 							<label>State : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Mandatory retirement age : </label></br> <input id="4" type="number" name="Feature"></br>
+							<label>Mandatory retirement age : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>High court term : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>High court judicial placement method :</label></br>
+							<label>High court judicial placement method : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Partisan election</br>	
- 		 									<input type="checkbox" name="Feature" >Retention election</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -59,7 +56,15 @@ Oklahoma Court of Criminal Appeals','Supreme Court of Virginia','New Mexico Supr
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['','70 (at end of calendar year)','75','70','72','70 (at end of term)','75 (may finish term or 4 years of term, whichever is shorter)','70 (or end of current term)','78','None','Must be under 70 at time of election','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['10 years','Lifetime','6 years','8 years','6 years (both)','12 years','7 years','4 years','14 years','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['Missouri Plan','Modified Missouri Plan','Appointment by the Governor','Appointment by governor','Non-partisan election','Election by the state legislature','Partisan election','Appointment by Governor','Partisan election/Retention election','Appointed by the Governor','Appointment by the Governor with confirmation by the Senate','Election by State Legislature','Tennessee Plan (Modified Missouri Plan)','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

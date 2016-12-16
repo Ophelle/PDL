@@ -26,15 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Free database backend support :</label></br>
+							<label>Free database backend support : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Apache Derby</br>	
- 		 									<input type="checkbox" name="Feature" > MySQL</br>	
- 		 									<input type="checkbox" name="Feature" > PostgreSQL</br>	
- 		 									<input type="checkbox" name="Feature" >MySQL</br>	
- 		 									<input type="checkbox" name="Feature" > SQLite3</br>	
- 		 									<input type="checkbox" name="Feature" > MySQLi</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Language : </label></br> <input id="2" type="text" name="Feature"></br>
 							
@@ -42,12 +35,12 @@
 							<label>Software name : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>First release date : </label></br> <input id="4" type="number" name="Feature"></br>
+							<label>First release date : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Current stable version : </label></br> <input id="5" type="number" name="Feature"></br>
+						</br>	
+							<label>Current stable version : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>License : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
@@ -59,22 +52,34 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['PHP','Java','Ruby','']
+            local : ['MySQL','Apache Derby, MySQL, PostgreSQL','MySQL, PostgreSQL, SQLite3','MySQL, MySQLi','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Avactis','Magento','Zen Cart','Apache OFBiz','LiteCart','Jigoshop','Drupal Commerce','pimcore','PrestaShop','OpenCart','H.H.G. multistore','Spree Commerce','OsCommerce','WooCommerce','AbanteCart','']
+            local : ['PHP','Java','Ruby','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['EULA','GNU GPL','GPLv3','Open Software License','Apache License 2.0','BSD Licence','New BSD License','GPLv2','']
+            local : ['Avactis','Magento','Zen Cart','Apache OFBiz','LiteCart','Jigoshop','Drupal Commerce','pimcore','PrestaShop','OpenCart','H.H.G. multistore','Spree Commerce','OsCommerce','WooCommerce','AbanteCart','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['2015-03-18','2014-11-24','2015-01-26','2015-04-31','2015-01-28','2014-12-31','2015-02-22','2015-04-02','2014-06-05','2015-03-05','2015-01-16','2014-12-05','2014-10-06','2015-03-15','']
+            local : ['2010','2007','Dec 2011','2015-01-26','2011','2007-08-31','2007-08-15','March 2000','2005-06-01','2012','2011-08-23','2006','June 2003','']
           });
           $("#5").typeahead({
             name:"list5",
+            local : ['13.07.1','1.6.0.14','4.9.4','3.0.3','1.11','1.2.2.1','2.3.4','1.16.1','2.3.7','1.5.4','1.9.1.0','2.4.2','2.0.2.0','4.7.3','1.2.1','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['EULA','GNU GPL','GPLv3','Open Software License','Apache License 2.0','BSD Licence','New BSD License','GPLv2','']
+          });
+          $("#7").typeahead({
+            name:"list7",
+            local : ['2015-03-18','2014-11-24','2015-01-26','2015-04-31','2015-01-28','2014-12-31','2015-02-22','2015-04-02','2014-06-05','2015-03-05','2015-01-16','2014-12-05','2014-10-06','2015-03-15','']
+          });
+          $("#8").typeahead({
+            name:"list8",
             local : ['','Model–View–Controller','H.H.G. multistore','Drupal','Zend Framework','Apache OFBiz','WordPress','Model-View-Controller','Ruby on Rails','']
           });
     </script>

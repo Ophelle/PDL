@@ -29,19 +29,8 @@
 							<label>First public release : </label></br> <input id="1" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Language :</label></br>
+							<label>Language : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >C</br>	
- 		 									<input type="checkbox" name="Feature" > Java</br>	
- 		 									<input type="checkbox" name="Feature" > C#</br>	
- 		 									<input type="checkbox" name="Feature" > Fortran</br>	
- 		 									<input type="checkbox" name="Feature" > Python</br>	
- 		 									<input type="checkbox" name="Feature" >C++</br>	
- 		 									<input type="checkbox" name="Feature" > FreePascal</br>	
- 		 									<input type="checkbox" name="Feature" > VBA</br>	
- 		 									<input type="checkbox" name="Feature" >C </br>	
- 		 									<input type="checkbox" name="Feature" > C++</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
 							
@@ -75,28 +64,28 @@
 							<label>Cost (USD) : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Notes :</label></br>
+							<label>Notes : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Automatically tuned implementation of BLAS. Also includes LU and Cholesky decompositions.</br>	
- 		 									<input type="checkbox" name="Feature" >C++ template library for linear algebra; includes various decompositions and factorisations; syntax (API) is similar to MATLAB.</br>	
- 		 									<input type="checkbox" name="Feature" >Math and statistical libraries for the .NET Framework</br>	
- 		 									<input type="checkbox" name="Feature" >Eigen is a C++ template library for linear algebra: matrices</br>	
- 		 									<input type="checkbox" name="Feature" > vectors</br>	
- 		 									<input type="checkbox" name="Feature" > numerical solvers</br>	
- 		 									<input type="checkbox" name="Feature" > and related algorithms.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Proprietary','GPL','BSD','MPL2','3-clause BSD','']
+            local : ['C, Java, C#, Fortran, Python','Python','C#','C++, C#, FreePascal, VBA','Fortran','C / C#','C++','C','C, C++','C++, Fortran','C, Fortran','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['','Rogue Wave Software','Intel','RTMath','The Numerical Algorithms Group','Enthought','GNU Project','R. Clint Whaley et al.','Benoît Jacob','NICTA','CenterSpace Software','Sergey Bochkanov','']
+            local : ['Proprietary','GPL','BSD','MPL2','3-clause BSD','']
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['','Rogue Wave Software','Intel','RTMath','The Numerical Algorithms Group','Enthought','GNU Project','R. Clint Whaley et al.','Benoît Jacob','NICTA','CenterSpace Software','Sergey Bochkanov','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['Non-free','Free','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['General purpose numerical analysis library. Includes some support for linear algebra.','Automatically tuned implementation of BLAS. Also includes LU and Cholesky decompositions.','General purpose numerical library for .NET.','based on Python','Numerical linear algebra library with long history','C++ template library for linear algebra; includes various decompositions and factorisations; syntax (API) is similar to MATLAB.','Math and statistical libraries for the .NET Framework','Numerical analysis library optimized for Intel CPUs','General purpose numerical analysis library. Uses automatic code generation to support several programming languages.','Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms.','General purpose numerical analysis library.','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

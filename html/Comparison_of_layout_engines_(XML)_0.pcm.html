@@ -29,14 +29,16 @@
 							<label>Associating CSS : </label></br> <input id="1" type="number" name="Feature"></br>
 							
 						</br>	
-							<label>XML Events : </label></br> <input id="2" type="number" name="Feature"></br>
+							<label>XML Events : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>xml:id : </label></br> <input id="3" type="number" name="Feature"></br>
-							
+ 		 					<label>xml:id :</label></br>
+ 		 					 <input type="radio" name="Featurexml:id" value="oui">oui <input type="radio" name="Featurexml:id" value = "non">non </br>
+									
 						</br>	
-							<label>XInclude : </label></br> <input id="4" type="number" name="Feature"></br>
-							
+ 		 					<label>XInclude :</label></br>
+ 		 					 <input type="radio" name="FeatureXInclude" value="oui">oui <input type="radio" name="FeatureXInclude" value = "non">non </br>
+									
 						</br>	
 							<label>XML Fragment Interchange : </label></br> <input id="5" type="text" name="Feature"></br>
 							
@@ -46,6 +48,10 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['?','1.0','1.8','No','']
+          });
+          $("#2").typeahead({
+            name:"list2",
             local : ['?','']
           });
     </script>

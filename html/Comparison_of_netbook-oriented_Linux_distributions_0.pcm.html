@@ -26,61 +26,32 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Release date : </label></br> <input id="1" type="number" name="Feature"></br>
+							<label>Release date : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Architecture support :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Atom</br>	
- 		 									<input type="checkbox" name="Feature" >CeleronM</br>	
- 		 									<input type="checkbox" name="Feature" >i386</br>	
- 		 									<input type="checkbox" name="Feature" > AMD64</br>	
- 		 									<input type="checkbox" name="Feature" > PowerPC</br>	
- 		 									<input type="checkbox" name="Feature" > SPARC</br>	
- 		 									<input type="checkbox" name="Feature" > ARM</br>	
- 		 									<input type="checkbox" name="Feature" > MIPS</br>	
- 		 									<input type="checkbox" name="Feature" > S390</br>	
- 		 									<input type="checkbox" name="Feature" > armhf</br>	
- 		 									<input type="checkbox" name="Feature" > s390x. Loongson</br>	
- 		 									<input type="checkbox" name="Feature" >Loongson</br>	
- 		 									<input type="checkbox" name="Feature" > x86</br>	
- 		 									<input type="checkbox" name="Feature" > X86-64</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Aim :</label></br>
+							<label>Architecture support : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >All Intel Atom processor netbooks and MID</br>	
- 		 									<input type="checkbox" name="Feature" >Intel Atom processor netbooks</br>	
- 		 									<input type="checkbox" name="Feature" > Nokia ARM smartphones</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Approximate number of pre-compiled packages : </label></br> <input id="4" type="number" name="Feature"></br>
+							<label>Aim : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
+							<label>Approximate number of pre-compiled packages : </label></br> <input id="4" type="text" name="Feature"></br>
+							
+						</br>	
 							<label>Default package management tools : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>Installed size (MB) : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Creator :</label></br>
+							<label>Creator : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Intel</br>	
- 		 									<input type="checkbox" name="Feature" > Nokia</br>	
- 		 									<input type="checkbox" name="Feature" > Maemo community</br>	
- 		 									<input type="checkbox" name="Feature" >Brian Brazil and Paul O'Malley</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Default file system : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Producer :</label></br>
+							<label>Producer : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Intel</br>	
- 		 									<input type="checkbox" name="Feature" >Linux Foundation</br>	
- 		 									<input type="checkbox" name="Feature" > Nokia</br>	
- 		 									<input type="checkbox" name="Feature" > Linux Foundation</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Default installer : </label></br> <input id="10" type="text" name="Feature"></br>
 							
@@ -91,51 +62,75 @@
 							<label>Base distribution : </label></br> <input id="12" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>End of Life :</label></br>
+							<label>End of Life : </label></br> <input id="13" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Last release October 10</br>	
- 		 									<input type="checkbox" name="Feature" > 2010</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Linux Kernel : </label></br> <input id="14" type="number" name="Feature"></br>
+							<label>Linux Kernel : </label></br> <input id="14" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Interface :</label></br>
+						</br>	
+							<label>Interface : </label></br> <input id="15" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Gnome or Gnome + Netbook Remix</br>	
- 		 									<input type="checkbox" name="Feature" >Gnome + Unity (user interface) or LXDE</br>	
- 		 									<input type="checkbox" name="Feature" >Gnome or LXDE</br>	
- 		 									<input type="checkbox" name="Feature" >Choice of IceWM</br>	
- 		 									<input type="checkbox" name="Feature" >OpenBox</br>	
- 		 									<input type="checkbox" name="Feature" >Flwm with ROX-Filer</br>	
- 		 									<input type="checkbox" name="Feature" >PcManFM</br>	
- 		 									<input type="checkbox" name="Feature" >LxLauncher</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['','APT','RPM','Pacman','Pet','RPM (may change)','RPM + YUM','']
+            local : ['2012-10-01','','2009-05-15','2009-03-23','2011-03-09','2010-10-28','2012','2010-04-24','2009-11-04','2007','2010-10-10','2013-01-19','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['','200MB','']
+            local : ['x86 + x86_64','','x86','x86 with SSSE3 support','Atom/CeleronM','i386, AMD64, PowerPC, SPARC, ARM, MIPS, S390, armhf, s390x. Loongson','Loongson, x86, X86-64','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['ext4','','ext3','AUFS+SquashFS+EXT2','btrfs','']
+            local : ['Firefly Linux community','Intel Atom processor netbooks','All netbooks','Limited hardware machines','ASUS Eee PC 701','ASUS Eee PC with Intel Chipsets','All netbooks including ASUS Eee PC 7" Screen','','Kuki Linux community','Aspire One optimized','All Intel Atom processor netbooks and MID','Free software','Asus Eee PC','ASUS Eee PC optimized','Intel Atom processor netbooks, Nokia ARM smartphones','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['','PetGet','Ubiquity','']
+            local : ['','32000','26000','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['Leeenux Linux v6','Moblin 2.1','gNewSense','OpenGeeeU 8.10','Puppeee Linux 4.3X','Aurora','Ubuntu Netbook Edition 10.10','Kuki Linux 2.0','Eeedora','Fuduntu','Joli OS 1.2
-(formerly named Jolicloud)','Firefly Linux 1.0 Beta 1','Linux4One 1.5','Midinux','Debian wheezy','Debian Eee Pc','MeeGo 1.2','CrunchBang Linux 11-20130119','EasyPeasy 1.6','']
+            local : ['','APT','RPM','Pacman','Pet','RPM (may change)','RPM + YUM','']
           });
           $("#6").typeahead({
             name:"list6",
+            local : ['','200MB','']
+          });
+          $("#7").typeahead({
+            name:"list7",
+            local : ['','Red Flag Linux','Luca De Marini','Aleksandar Ciric','Eeebuntu community','Linux4One community','Intel','Joli OS','Intel, Nokia, Maemo community','Canonical Ltd.','Martin Andrews','Philip Newborough','EasyPeasy Community','Brian Brazil and Paul O'Malley','Jemimah Ruhala','Andrew Wyatt "Fewt"','Last release 2009','']
+          });
+          $("#8").typeahead({
+            name:"list8",
+            local : ['ext4','','ext3','AUFS+SquashFS+EXT2','btrfs','']
+          });
+          $("#9").typeahead({
+            name:"list9",
+            local : ['Jon Ramvi','','Fuduntu.org','Joli OS','Intel/Linux Foundation','Canonical Ltd.','Sam Geeraerts with sponsorship from the FSF','Intel, Nokia, Linux Foundation','']
+          });
+          $("#10").typeahead({
+            name:"list10",
+            local : ['','PetGet','Ubiquity','']
+          });
+          $("#11").typeahead({
+            name:"list11",
+            local : ['Leeenux Linux v6','Moblin 2.1','gNewSense','OpenGeeeU 8.10','Puppeee Linux 4.3X','Aurora','Ubuntu Netbook Edition 10.10','Kuki Linux 2.0','Eeedora','Fuduntu','Joli OS 1.2
+(formerly named Jolicloud)','Firefly Linux 1.0 Beta 1','Linux4One 1.5','Midinux','Debian wheezy','Debian Eee Pc','MeeGo 1.2','CrunchBang Linux 11-20130119','EasyPeasy 1.6','']
+          });
+          $("#12").typeahead({
+            name:"list12",
             local : ['Arch Linux','Ubuntu Lucid Lynx','Debian','Ubuntu','Puppy Linux 4.3.1','None (borrows components for various distributions)','Fedora','None (Originally based on Fedora 14)','None (it is a distribution developed out of Maemo and Moblin)','','Easy Peasy','Written from scratch','']
+          });
+          $("#13").typeahead({
+            name:"list13",
+            local : ['','22 November 2013','Last release 2009','April 2009','14 April 2013','last release 2012','development stopped 6 Feb 2015','Last release October 10, 2010','August 2012','Aspire One optimized','Last release 2012','']
+          });
+          $("#14").typeahead({
+            name:"list14",
+            local : ['Linux-libre 2.6.32','3.2.35','2.6.27','','2.6.29.4','Array kernel (modified kernel)','2.6.35.10','2.6.32','3','3.6.9','2.6.33','2.6.35','']
+          });
+          $("#15").typeahead({
+            name:"list15",
+            local : ['Gnome or Gnome + Netbook Remix','','Openbox','Gnome + Unity (user interface) or LXDE','XFCE','Enlightenment plus Gnome','"Netbook User Experience" (based on Clutter)','Gnome','Gnome or LXDE','HTML5 + Gnome','LXDE','Unity','Clutter','Choice of IceWM/OpenBox/Flwm with ROX-Filer/PcManFM/LxLauncher','Gnome + Netbook Remix','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

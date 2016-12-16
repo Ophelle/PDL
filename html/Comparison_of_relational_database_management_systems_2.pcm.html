@@ -26,45 +26,35 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Unicode : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Transactions : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>ACID : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Unicode :</label></br>
+ 		 					 <input type="radio" name="FeatureUnicode" value="oui">oui <input type="radio" name="FeatureUnicode" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Transactions :</label></br>
+ 		 					 <input type="radio" name="FeatureTransactions" value="oui">oui <input type="radio" name="FeatureTransactions" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>ACID :</label></br>
+ 		 					 <input type="radio" name="FeatureACID" value="oui">oui <input type="radio" name="FeatureACID" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Fine-grained locking : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Referential integrity : </label></br> <input id="5" type="text" name="Feature"></br>
+ 		 					<label>Referential integrity :</label></br>
+ 		 					 <input type="radio" name="FeatureReferential integrity" value="oui">oui <input type="radio" name="FeatureReferential integrity" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Interface : </label></br> <input id="6" type="text" name="Feature"></br>
 							
-						</br>	
-							<label>Interface :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >SQL and JSON</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Unicode','Yes','No','Optional','Partial','']
+            local : ['?','No (Database-level locking)','Yes (Row-level locking)','Fine-grained locking','Yes (optimistic and pessimistic cell-level locking)','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','Yes except for DDL','No','Transactions','Yes (Except for DDL)','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Yes','No','ACID','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['?','No (Database-level locking)','Yes (Row-level locking)','Fine-grained locking','Yes (optimistic and pessimistic cell-level locking)','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes','No','Partial','Referential integrity','']
+            local : ['API & GUI & SQL','SQL and JSON','SQL','proprietary direct call & SQL (via 3rd party)','GUI & SQL','API & SQL','SQL & QUEL','SQL & API','Multiple','Interface','GUI  & SQL','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

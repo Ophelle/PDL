@@ -52,12 +52,10 @@
  		 									<input type="checkbox" name="Feature" > MIPS and the 64-bit variants of all three</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>DRM-free :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >No worse since Android 4.1 and Android 4.3 and more restrictions on Android 4.4</br>	
- 		 									<input type="checkbox" name="Feature" >No and prevents content migration from major OS versions</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
+ 		 					<label>DRM-free :</label></br>
+ 		 					 <input type="radio" name="FeatureDRM-free" value="oui">oui <input type="radio" name="FeatureDRM-free" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>License :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >Free and open-source</br>	
@@ -112,9 +110,9 @@ System: C</br>
 							<label>Market share : </label></br> <input id="9" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Current version : </label></br> <input id="10" type="number" name="Feature"></br>
+							<label>Current version : </label></br> <input id="10" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Current version release dates :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >May 4</br>	
@@ -135,23 +133,24 @@ System: C</br>
  		 									<input type="checkbox" name="Feature" > 2014; 9 months ago</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Package manager :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Click packages and dpkg</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Device independent system updates : </label></br> <input id="13" type="text" name="Feature"></br>
+							<label>Package manager : </label></br> <input id="12" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Public issues list : </label></br> <input id="14" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Device independent system updates :</label></br>
+ 		 					 <input type="radio" name="FeatureDevice independent system updates" value="oui">oui <input type="radio" name="FeatureDevice independent system updates" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Public issues list :</label></br>
+ 		 					 <input type="radio" name="FeaturePublic issues list" value="oui">oui <input type="radio" name="FeaturePublic issues list" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>OS family : </label></br> <input id="15" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Wireless system updates : </label></br> <input id="16" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>Wireless system updates :</label></br>
+ 		 					 <input type="radio" name="FeatureWireless system updates" value="oui">oui <input type="radio" name="FeatureWireless system updates" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['About OS','']
@@ -170,19 +169,15 @@ System: C</br>
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['No','Only for developers','Yes','']
+            local : ['8.3','1.1.4.29 Äijänpäiväjärvi','2.1.0','14.09 RTM','10.3.1.2708','2.3','5.1.1','1.2.0.10','Windows Phone 8.1 Update (8.10.14219.341)','']
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['Yes','3rd party','']
+            local : ['Zune Software (not since Windows 8)','RPM Package Manager','Click packages and dpkg','rpm+yum+zypper','APK','iTunes','Firefox OS Packaged Apps','BlackBerry Link','']
           });
           $("#7").typeahead({
             name:"list7",
             local : ['Linux','Darwin','QNX','Windows NT 8+','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['Yes','8+','5+','No','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

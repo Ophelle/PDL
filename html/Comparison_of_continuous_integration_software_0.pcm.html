@@ -26,26 +26,10 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Windows builders :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Visual Studio</br>	
- 		 									<input type="checkbox" name="Feature" > MSBuild</br>	
- 		 									<input type="checkbox" name="Feature" > Psake</br>	
- 		 									<input type="checkbox" name="Feature" >IncrediBuild</br>	
- 		 									<input type="checkbox" name="Feature" > NAnt</br>	
- 		 									<input type="checkbox" name="Feature" >NAnt</br>	
- 		 									<input type="checkbox" name="Feature" >  Rake</br>	
- 		 									<input type="checkbox" name="Feature" > and Xcode</br>	
- 		 									<input type="checkbox" name="Feature" >MSBuild</br>	
- 		 									<input type="checkbox" name="Feature" > Visual Studio</br>	
- 		 									<input type="checkbox" name="Feature" > Duplicates finder for .NET</br>	
- 		 									<input type="checkbox" name="Feature" >Ant</br>	
- 		 									<input type="checkbox" name="Feature" > Nant</br>	
- 		 									<input type="checkbox" name="Feature" > FinalBuilder</br>	
- 		 									<input type="checkbox" name="Feature" > Rake</br>	
- 		 									<input type="checkbox" name="Feature" > Powershell</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
+ 		 					<label>Windows builders :</label></br>
+ 		 					 <input type="radio" name="FeatureWindows builders" value="oui">oui <input type="radio" name="FeatureWindows builders" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Java builders :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >Ant</br>	
@@ -67,38 +51,14 @@
  		 									<input type="checkbox" name="Feature" > & 3</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Platform :</label></br>
+							<label>Platform : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >JDK</br>	
- 		 									<input type="checkbox" name="Feature" > Servlet Container</br>	
- 		 									<input type="checkbox" name="Feature" >Cross Platform</br>	
- 		 									<input type="checkbox" name="Feature" > Private Cloud</br>	
- 		 									<input type="checkbox" name="Feature" >Hosted</br>	
- 		 									<input type="checkbox" name="Feature" >Cross-platform</br>	
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 									<input type="checkbox" name="Feature" > VSTM</br>	
- 		 									<input type="checkbox" name="Feature" > Cross-platform</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>IDE Integration :</label></br>
+							<label>IDE Integration : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Eclipse</br>	
- 		 									<input type="checkbox" name="Feature" > Visual Studio</br>	
- 		 									<input type="checkbox" name="Feature" > IntelliJ IDEA</br>	
- 		 									<input type="checkbox" name="Feature" > RubyMine</br>	
- 		 									<input type="checkbox" name="Feature" > PyCharm</br>	
- 		 									<input type="checkbox" name="Feature" > PhpStorm</br>	
- 		 									<input type="checkbox" name="Feature" > WebStorm</br>	
- 		 									<input type="checkbox" name="Feature" >IntelliJ IDEA</br>	
- 		 									<input type="checkbox" name="Feature" > Eclipse</br>	
- 		 									<input type="checkbox" name="Feature" > NetBeans</br>	
- 		 									<input type="checkbox" name="Feature" >Visual Studio</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>License :</label></br>
+							<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Creative Commons and MIT</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Other builders :</label></br>
 							
@@ -261,12 +221,25 @@
  		 									<input type="checkbox" name="Feature" > Mercurial</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Name :</label></br>
+							<label>Name : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Jenkins</br>	
- 		 									<input type="checkbox" name="Feature" >Hudson</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['JDK, Servlet Container','Hosted','Cross Platform, Private Cloud','Linux','Windows','Python','Cross-platform','Ruby','Servlet Container','LAMP','Hosted/Cross-platform','Windows, VSTM','Node.js','Hosted, Cross-platform, Private Cloud','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['No','Eclipse, Visual Studio','Unknown','Eclipse, IntelliJ IDEA, Visual Studio','Eclipse','Eclipse, Visual Studio, IntelliJ IDEA, RubyMine, PyCharm, PhpStorm, WebStorm','IntelliJ IDEA, Eclipse, Visual Studio','Eclipse, IntelliJ IDEA, NetBeans','Visual Studio','Visual Studio, Eclipse','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Proprietary','Apache 2.0','Creative Commons and MIT','GPL2','MIT','BSD-style','BSD','GPL','MPL','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Bamboo','AppVeyor CI','Lordui','Jenkins/Hudson','Codeship','Apache Continuum','node.ci','ElectricCommander by Electric Cloud','Continua CI','BuildBot','Go','QuickBuild','CircleCI','AnthillPro','Flosum','Integrity','Koality','Build Forge','Semaphore','CruiseControl','Solano CI','CABIE','continuousphp','pyCI','Apache Gump','Draco.NET','AutoDE','Travis CI','CruiseControl.NET','Tinderbox','Ship.io','Drone.io','Automated Build Studio','BuildMaster','Snap CI','Shippable','TeamCity','easyCIS','Strider','Team Foundation Server','LuntBuild','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

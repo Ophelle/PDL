@@ -30,50 +30,36 @@
 (number / oldest) : </label></br> <input id="1" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Products : </label></br> <input id="2" type="text" name="Feature"></br>
+							<label>Products : </label></br> <input id="2" type="aaaa" name="Feature"></br>
 							
-						</br>	
-							<label>Encrypted
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Encrypted
 file
-systems : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>No execute (NX)
-page flag - Emulation : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
+systems :</label></br>
+ 		 					 <input type="radio" name="FeatureEncrypted
+file
+systems" value="oui">oui <input type="radio" name="FeatureEncrypted
+file
+systems" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>No execute (NX)
+page flag - Emulation :</label></br>
+ 		 					 <input type="radio" name="FeatureNo execute (NX)
+page flag - Emulation" value="oui">oui <input type="radio" name="FeatureNo execute (NX)
+page flag - Emulation" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Secunia - Highly critical
 (number / oldest) : </label></br> <input id="5" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Name :</label></br>
+							<label>Name : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >OS</br>	
- 		 									<input type="checkbox" name="Feature" >2</br>	
- 		 									<input type="checkbox" name="Feature" > eComStation</br>	
- 		 									<input type="checkbox" name="Feature" >z</br>	
- 		 									<input type="checkbox" name="Feature" >OS 1.11</br>	
- 		 									<input type="checkbox" name="Feature" >STOP 6</br>	
- 		 									<input type="checkbox" name="Feature" > XTS-400</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Integrated
-firewall :</label></br>
+firewall : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >IPFilter</br>	
- 		 									<input type="checkbox" name="Feature" > NPF</br>	
- 		 									<input type="checkbox" name="Feature" > PF</br>	
- 		 									<input type="checkbox" name="Feature" >IPFW2</br>	
- 		 									<input type="checkbox" name="Feature" > IPFilter</br>	
- 		 									<input type="checkbox" name="Feature" >PF</br>	
- 		 									<input type="checkbox" name="Feature" > from NetBSD</br>	
- 		 									<input type="checkbox" name="Feature" >Netfilter</br>	
- 		 									<input type="checkbox" name="Feature" > varied by distribution</br>	
- 		 									<input type="checkbox" name="Feature" >z</br>	
- 		 									<input type="checkbox" name="Feature" >OS IPSecurity</br>	
- 		 									<input type="checkbox" name="Feature" > IPsec VPNs</br>	
- 		 									<input type="checkbox" name="Feature" > basic IDS</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Subsystem
 isolation
@@ -111,10 +97,13 @@ mechanisms :</label></br>
  		 									<input type="checkbox" name="Feature" > AppArmor</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>No execute (NX)
-page flag - Hardware : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>No execute (NX)
+page flag - Hardware :</label></br>
+ 		 					 <input type="radio" name="FeatureNo execute (NX)
+page flag - Hardware" value="oui">oui <input type="radio" name="FeatureNo execute (NX)
+page flag - Hardware" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Secunia - Not critical
 (number / oldest) : </label></br> <input id="10" type="number" name="Feature"></br>
 							
@@ -149,18 +138,17 @@ control :</label></br>
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>SecurityFocus - Total
-(number / oldest) : </label></br> <input id="14" type="number" name="Feature"></br>
+(number / oldest) : </label></br> <input id="14" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>		<script>
+		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['P24','P17','P5','P4','P22','P29','P10','P14','P12','P8','P16','P7','P13','P3','P6','P9','P28','P27','P2','P11','P23','P18','P25','P1','P15','P20','P21','P19','P26','']
+            local : ['OES-Linux','Plan 9','NetWare 6.5 SP8','OS/2, eComStation','Inferno','Solaris 10','QNX 6.5.0','z/OS 1.11','','Name','Mac OS 9.2.2','OS X 10.6.4','AIX 7.1','STOP 6, XTS-400','OpenVMS 8.4','NetBSD 6.1.2','FreeBSD 8.1','PC-BSD 8.1','OpenSolaris 2009.06','Linux 2.6.39','Windows Server 2012','ZETA','OpenBSD 4.8','RISC OS','GhostBSD 3.1','HP-UX 11.31','Windows 8.1','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['No','Yes','Encrypted
-file
-systems','?','Optional','']
+            local : ['IPFilter','IPFilter, NPF, PF','?','ipmux','IPFW2, IPFilter, PF','Integrated
+firewall','Windows Firewall','PF','PF, from NetBSD','No','Netfilter, varied by distribution','z/OS IPSecurity','IPFLT.NLM','IPFilter, IPsec VPNs, basic IDS','ipfw','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -32,8 +32,9 @@
 							<label>QuickTime : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>AVI : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>AVI :</label></br>
+ 		 					 <input type="radio" name="FeatureAVI" value="oui">oui <input type="radio" name="FeatureAVI" value = "non">non </br>
+									
 						</br>	
 							<label>MXF : </label></br> <input id="4" type="text" name="Feature"></br>
 							
@@ -44,7 +45,7 @@
  		 					<label>Matroska :</label></br>
  		 					 <input type="radio" name="FeatureMatroska" value="oui">oui <input type="radio" name="FeatureMatroska" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>		<script>
+		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['?','Yes','No','']
@@ -55,14 +56,10 @@
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['?','No','Yes, via third party modifications','via DivX','']
+            local : ['?','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['?','']
-          });
-          $("#5").typeahead({
-            name:"list5",
             local : ['?','Yes','No','']
           });
     </script>

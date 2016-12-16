@@ -32,11 +32,8 @@
 							<label>Writing system : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Standardization :</label></br>
+							<label>Standardization : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >List of Commonly Used Characters in Modern Chinese</br>	
- 		 									<input type="checkbox" name="Feature" > Xin Zixing</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -44,6 +41,10 @@
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['character set promulgated by the Singaporean Ministry of Education','List of Commonly Used Characters in Modern Chinese, Xin Zixing','character set promulgated by the Malaysian Ministry of Education','List of Forms of Frequently Used Characters','none','Standard Form of National Characters','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['traditional Chinese characters','simplified Chinese characters','']
           });
     </script>

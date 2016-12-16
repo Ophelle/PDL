@@ -35,9 +35,9 @@
 							<label>Fillrate - Texture (GT/s) : </label></br> <input id="3" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>TDP (watts) : </label></br> <input id="4" type="number" name="Feature"></br>
+							<label>TDP (watts) : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Memory - Bus width (bit) : </label></br> <input id="5" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -90,13 +90,8 @@
 							<label>Fillrate - Pixel (GP/s) : </label></br> <input id="19" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Notes :</label></br>
+							<label>Notes : </label></br> <input id="20" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Similar to Desktop GTX 460</br>	
- 		 									<input type="checkbox" name="Feature" >560SE</br>	
- 		 									<input type="checkbox" name="Feature" >Similar to Desktop GT430</br>	
- 		 									<input type="checkbox" name="Feature" >440</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -104,16 +99,24 @@
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['96:16:4','48:8:4','144:24:16
-144:24:24','288:48:24','352:44:32','384:64:32','192:32:24','']
+            local : ['100(MXM module)','20-23(GPU only)','32-35(GPU only)','12','45-50(GPU only)','10-23(GPU only)','<12(GPU only)','30-35(GPU only)','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['GF104','GF108','GF100','GF106','GF119','']
+            local : ['96:16:4','48:8:4','144:24:16
+144:24:24','288:48:24','352:44:32','384:64:32','192:32:24','']
           });
           $("#4").typeahead({
             name:"list4",
+            local : ['GF104','GF108','GF100','GF106','GF119','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['GeForce GTX 460M','GeForce GTX 470M','GeForce GTX 485M','GeForce 410M','GeForce GT 415M','GeForce GT 425M','GeForce GT 435M','GeForce GT 420M','GeForce GT 445M','GeForce GTX 480M','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['Similar to Desktop GT420 OEM','Similar to Desktop GTX 460/560SE','Similar to Desktop GT430/440','Similar to Desktop GT430','Similar to Desktop GTX560 Ti','Similar to Desktop GTS450 OEM)','Similar to Desktop GTX465','Similar to Desktop GTX550 Ti','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

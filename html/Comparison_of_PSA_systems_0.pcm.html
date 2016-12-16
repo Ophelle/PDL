@@ -185,37 +185,11 @@
  		 									<input type="checkbox" name="Feature" > CSV</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Platform :</label></br>
+							<label>Platform : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Cloud computing with mobile app for iOS and Android</br>	
- 		 									<input type="checkbox" name="Feature" >Web-Based supporting any iPhone</br>	
- 		 									<input type="checkbox" name="Feature" > Android</br>	
- 		 									<input type="checkbox" name="Feature" > Blackberry or Windows Mobile device</br>	
- 		 									<input type="checkbox" name="Feature" >On-Premise; Web-Based; HTML 5 Web-Based Mobile Solution</br>	
- 		 									<input type="checkbox" name="Feature" >MS</br>	
- 		 									<input type="checkbox" name="Feature" >SQL Server On Premises or Hosted with Mobile Smart Device access</br>	
- 		 									<input type="checkbox" name="Feature" >Cloud or Self-Hosted</br>	
- 		 									<input type="checkbox" name="Feature" >Web-Based and Windows Client</br>	
- 		 									<input type="checkbox" name="Feature" >Cloud or Web-Based application with mobile web apps for iPhone</br>	
- 		 									<input type="checkbox" name="Feature" > BlackBerry or Windows Mobile</br>	
- 		 									<input type="checkbox" name="Feature" >Microsoft Server 2008</br>	
- 		 									<input type="checkbox" name="Feature" > Microsoft SQL Server 2008</br>	
- 		 									<input type="checkbox" name="Feature" >Web-Based or On-Premises</br>	
- 		 									<input type="checkbox" name="Feature" >On-Premise; RemoteApp; Web-Based; iPhone Application</br>	
- 		 									<input type="checkbox" name="Feature" >Web-based and mobile application</br>	
- 		 									<input type="checkbox" name="Feature" >Web-Based Mobility solutions for tablets and smartphone devices through multiple browsers</br>	
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 									<input type="checkbox" name="Feature" > Web-Based</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>License :</label></br>
+							<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >SaaS</br>	
- 		 									<input type="checkbox" name="Feature" > Buy and Host & On-Premises</br>	
- 		 									<input type="checkbox" name="Feature" >SaaS or On-site</br>	
- 		 									<input type="checkbox" name="Feature" >OnPremise</br>	
- 		 									<input type="checkbox" name="Feature" >Concurrent or Named</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>First Release Date : </label></br> <input id="4" type="number" name="Feature"></br>
 							
@@ -437,18 +411,29 @@
  		 									<input type="checkbox" name="Feature" > and built-in Knowledge Base.</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Creator :</label></br>
+							<label>Creator : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Tigerpaw Software</br>	
- 		 									<input type="checkbox" name="Feature" > Inc.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>System :</label></br>
+							<label>System : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >10</br>	
- 		 									<input type="checkbox" name="Feature" >000ft</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['Cloud computing with mobile app for iOS and Android','Web-based application with mobile app for iPhone','Web-based application','Cloud computing based application running natively on Force.com','Desktop Client-Server','Web-Based','Web-Based supporting any iPhone, Android, Blackberry or Windows Mobile device','Locally hosted Web-Based client','On-Premise; Web-Based; HTML 5 Web-Based Mobile Solution','Web-based','MS/SQL Server On Premises or Hosted with Mobile Smart Device access','Cloud or Self-Hosted','Web-Based and Windows Client','Cloud or Web-Based application with mobile web apps for iPhone, Android, BlackBerry or Windows Mobile','Microsoft Server 2008, Microsoft SQL Server 2008','Web-Based or On-Premises','On-Premise; RemoteApp; Web-Based; iPhone Application','Cloud based application running natively on Force.com','Web-based and mobile application','Web-Based Mobility solutions for tablets and smartphone devices through multiple browsers','Windows, Web-Based','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['SaaS, Buy and Host & On-Premises','SaaS & On-Premises','SaaS','SaaS or On-site','SaaS \
+OnPremise','','OnPremise/SaaS','Commercial','Concurrent or Named','Affero General Public License & SaaS','Active resource','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Atollon','Kimble Applications','AIT TMS','V1 Ltd','PIEmatrix','W.S Software Inc.','Connectwise.com','bigWebApps','PacketTrap PSA','Clarizen','Mavenlink','NetSuite','Precursive Ltd','Projector PSA','AtTask','Tigerpaw Software, Inc.','Tenrox','Autotask Corporation','Datalogic Solutions Ltd','Cyber IT Solutions','Artefact Product Group','Solutions360 Inc.','Deltek','FinancialForce.com','AffinityLive','Talygen Business Intelligence','PROMYS Inc.','Automation Centre','Commit Business Solutions Ltd','MoonPSA','Compuware','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['allocPSA','Vision','Autotask','Mavenlink','Tenrox PSA','Kimble','10,000ft','PROMYS PSA Anywhere','moon','AffinityLive','Clarizen','Connectwise','AtTask','WinServ','HarmonyPSA ]','Talygen','PacketTrap','CommitCRM','TrackerSuite.Net','FinancialForce PSA','Projectex','Changepoint','V1 PSA (Formerly Sharpowl)','Projector','Atollon Lagoon','Precursive]','Q360 Enterprise','Tigerpaw Business Suite','SherpaDesk','Pie','OpenAir','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

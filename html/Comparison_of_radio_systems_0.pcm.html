@@ -29,7 +29,7 @@
 							<label>Digital subchannel : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Products : </label></br> <input id="2" type="text" name="Feature"></br>
+							<label>Products : </label></br> <input id="2" type="aaaa" name="Feature"></br>
 							
 						</br>	
 							<label>Data rate :</label></br>
@@ -45,10 +45,11 @@
 up to 300 kbit</br>	
  		 									<input type="checkbox" name="Feature" >s on FM</br>	
  		 									<input type="checkbox" name="Feature" >up to 72 kbit</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+								
 						</br>	
-							<label>Metadata/RDS/RBDS : </label></br> <input id="4" type="text" name="Feature"></br>
-							
+ 		 					<label>Metadata/RDS/RBDS :</label></br>
+ 		 					 <input type="radio" name="FeatureMetadata/RDS/RBDS" value="oui">oui <input type="radio" name="FeatureMetadata/RDS/RBDS" value = "non">non </br>
+									
 						</br>	
 							<label>Sidebands? : </label></br> <input id="5" type="text" name="Feature"></br>
 							
@@ -56,33 +57,21 @@ up to 300 kbit</br>
 							<label>System : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Sound Codec :</label></br>
+							<label>Sound Codec : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >MPEG-4 HE-AAC</br>	
- 		 									<input type="checkbox" name="Feature" >CELP</br>	
- 		 									<input type="checkbox" name="Feature" >HVXC</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Type :</label></br>
+							<label>Type : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Hybrid</br>	
- 		 									<input type="checkbox" name="Feature" >Digital radio</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Modulation : </label></br> <input id="9" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>SFN : </label></br> <input id="10" type="text" name="Feature"></br>
-							
+ 		 					<label>SFN :</label></br>
+ 		 					 <input type="radio" name="FeatureSFN" value="oui">oui <input type="radio" name="FeatureSFN" value = "non">non </br>
+									
 						</br>	
-							<label>Ch. Bandwidth (KHz) :</label></br>
+							<label>Ch. Bandwidth (KHz) : </label></br> <input id="11" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >4.5–5 kHz (hybrid mode)</br>	
- 		 									<input type="checkbox" name="Feature" >
-9–10 kHz</br>	
- 		 									<input type="checkbox" name="Feature" >
-18-20 kHz</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Radio spectrum :</label></br>
 							
@@ -105,7 +94,7 @@ L-band</br>
 76-90 MHz (Japan)</br>	
  		 									<input type="checkbox" name="Feature" >
 65.8-74 MHz (USSR)</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -113,15 +102,15 @@ L-band</br>
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['P7','P3','P6','P1','P2','P4','P5','']
+            local : ['N/A','HDC','HE-AAC','MPEG-Layer 2','MPEG-4 HE-AAC/CELP/HVXC','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['OFDM (DQPSK)','Amplitude Modulation','QAM','COFDM (QAM)','Frequency Modulation','COFDM-HDC (SBR)','']
+            local : ['Hybrid/Digital radio','Digital radio','Analog radio','Analog radio (AM stereo)','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['Yes','None','Yes (depending on station)','']
+            local : ['OFDM (DQPSK)','Amplitude Modulation','QAM','COFDM (QAM)','Frequency Modulation','COFDM-HDC (SBR)','']
           });
           $("#5").typeahead({
             name:"list5",
@@ -129,7 +118,10 @@ L-band</br>
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['Yes','No?','No','None','']
+            local : ['20–30 kHz on AM band ±5 kHz (on adjacent channel),
+up to 400 kHz on FM band (2 full FM channels)','200 kHz','1500 kHz','18–20 kHz','4.5–5 kHz (hybrid mode),
+9–10 kHz,
+18-20 kHz','']
           });
           $("#7").typeahead({
             name:"list7",

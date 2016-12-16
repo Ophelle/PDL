@@ -26,32 +26,30 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Hardware token support :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >PKCS11 (via libpkcs11-helper) or standard hooks</br>	
- 		 									<input type="checkbox" name="Feature" >PKCS11 Java Cryptography Architecture</br>	
- 		 									<input type="checkbox" name="Feature" >
-Java Cryptography Extension</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>TPM support : </label></br> <input id="2" type="text" name="Feature"></br>
+							<label>Hardware token support : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Objects identified via :</label></br>
+ 		 					<label>TPM support :</label></br>
+ 		 					 <input type="radio" name="FeatureTPM support" value="oui">oui <input type="radio" name="FeatureTPM support" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Objects identified via : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >UUID</br>	
- 		 									<input type="checkbox" name="Feature" > User-defined label</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Implementation : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','TPM support','','']
+            local : ['PKCS11 (via 3rd party module)','Hardware token support','','PKCS11','No','PKCS11 (via libpkcs11-helper) or standard hooks','Microsoft CryptoAPI','PKCS11 Java Cryptography Architecture/
+Java Cryptography Extension','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['Custom method','Objects identified via','User-defined label','UUID, User-defined label','','RFC7512 PKCS #11 URLs','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['mbed TLS','SChannel','SharkSSL','OpenSSL','wolfSSL','cryptlib','Implementation','JSSE','RSA BSAFE MES','Secure Transport','NSS','Botan','RSA BSAFE SSL-J','MatrixSSL','GnuTLS','LibreSSL','']
           });
     </script>

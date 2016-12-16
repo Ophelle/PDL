@@ -32,33 +32,19 @@
 							<label>Language : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Structural markup : </label></br> <input id="3" type="text" name="Feature"></br>
+ 		 					<label>Structural markup :</label></br>
+ 		 					 <input type="radio" name="FeatureStructural markup" value="oui">oui <input type="radio" name="FeatureStructural markup" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Presentational markup :</label></br>
+ 		 					 <input type="radio" name="FeaturePresentational markup" value="oui">oui <input type="radio" name="FeaturePresentational markup" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Based on : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Presentational markup : </label></br> <input id="4" type="text" name="Feature"></br>
+							<label>Major purpose : </label></br> <input id="6" type="text" name="Feature"></br>
 							
-						</br>	
-							<label>Based on :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >XML </br>	
- 		 									<input type="checkbox" name="Feature" > ZIP</br>	
- 		 									<input type="checkbox" name="Feature" >SGML </br>	
- 		 									<input type="checkbox" name="Feature" > XML</br>	
- 		 									<input type="checkbox" name="Feature" >Structured Text and Setext</br>	
- 		 									<input type="checkbox" name="Feature" >TeX</br>	
- 		 									<input type="checkbox" name="Feature" > Scribe</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Major purpose :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Formatted Technical documents</br>	
- 		 									<input type="checkbox" name="Feature" > Hypertext documents</br>	
- 		 									<input type="checkbox" name="Feature" > E-mail</br>	
- 		 									<input type="checkbox" name="Feature" >Academic</br>	
- 		 									<input type="checkbox" name="Feature" > linguistic</br>	
- 		 									<input type="checkbox" name="Feature" > literary and technical documents</br>	
- 		 									<input type="checkbox" name="Feature" >Technical and Multi-purpose documents</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -70,11 +56,11 @@
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes','Structural markup','']
+            local : ['XML','Text E-mail conventions','XML / ZIP','Based on','','RUNOFF','Functional expressions','SGML / XML','Structured Text and Setext','Text outliner','SGML','TeX','TeX, Scribe','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['Yes','No','Presentational markup','']
+            local : ['Hypertext documents','Academic documents','Mathematical documents','Technical documents','Formatted Technical documents, Hypertext documents, E-mail','Finding aid','2D Vector graphics','Music notation','Multi-purpose','Major purpose','Multi-purpose (notes, project management, publishing, literate programming)','Academic, linguistic, literary and technical documents','Technical and Multi-purpose documents','Formatted documents','Interactive technical documents','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

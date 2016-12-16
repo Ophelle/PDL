@@ -26,47 +26,35 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Recursive globbing (generating files from any level of subdirectories) : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>Recursive globbing (generating files from any level of subdirectories) :</label></br>
+ 		 					 <input type="radio" name="FeatureRecursive globbing (generating files from any level of subdirectories)" value="oui">oui <input type="radio" name="FeatureRecursive globbing (generating files from any level of subdirectories)" value = "non">non </br>
+									
 						</br>	
 							<label>Pattern matching (filename globbing) : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Pattern matching (regular expression built-in) : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>Pattern matching (regular expression built-in) :</label></br>
+ 		 					 <input type="radio" name="FeaturePattern matching (regular expression built-in)" value="oui">oui <input type="radio" name="FeaturePattern matching (regular expression built-in)" value = "non">non </br>
+									
 						</br>	
-							<label>Globbing qualifiers (filename generation based on file attributes) : </label></br> <input id="4" type="text" name="Feature"></br>
-							
+ 		 					<label>Globbing qualifiers (filename generation based on file attributes) :</label></br>
+ 		 					 <input type="radio" name="FeatureGlobbing qualifiers (filename generation based on file attributes)" value="oui">oui <input type="radio" name="FeatureGlobbing qualifiers (filename generation based on file attributes)" value = "non">non </br>
+									
 						</br>	
 							<label>String processing : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Alternation (Brace expansion) : </label></br> <input id="6" type="text" name="Feature"></br>
-							
+ 		 					<label>Alternation (Brace expansion) :</label></br>
+ 		 					 <input type="radio" name="FeatureAlternation (Brace expansion)" value="oui">oui <input type="radio" name="FeatureAlternation (Brace expansion)" value = "non">non </br>
+									
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['?','Yes (with , no following of symlinks)','No','Yes (via indefinite directory  wildcard)','Yes (via  command, or indirectly via  command or, where available,  subdir option)','Yes ()','Yes (via )','Yes ( or  to follow symlinks)','Yes (via  command, or, where available, indirectly via  subdir option)','']
+            local : ['Yes','?','Yes (, , )','Yes (, , , extended wildcards,  popup command)','Yes (, )','Yes (, , , )','Yes (, , , extended globbing)','No','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','?','Yes (, , )','Yes (, , , extended wildcards,  popup command)','Yes (, )','Yes (, , , )','Yes (, , , extended globbing)','No','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Yes','No','Yes (full regex support)','Yes (via  command)','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['No','?','Yes','Yes (via  attribute and  description options and  size,  time,  date,  owner, and  file exclusion ranges)','Partial (only in  command)','Yes (via  attribute and  description options and  size,  time,  date, and  file exclusion ranges)','']
-          });
-          $("#5").typeahead({
-            name:"list5",
             local : ['Yes (Concat/Substring/Insert/Remove/Replace, ToLower/ToUpper, Trim/TrimStart/TrimEnd, Compare, Contains/StartsWith/EndWith, Format, IndexOf/LastIndexOf, Pad/PadLeft/PadRight, Split/Join, regular expression functions and other .NET string functions)','?','Yes (through variable functions , extended environment variable processing, various string commands and  and )','No','Yes (:s and other editing operators)','Yes (through variable processing: e.g. substring extraction, various transformations via parameter expansion)','Partial (only through  and )','Yes (:s and other editing operators + substr, strlen, strindex, printf, reverse, upper, lower, concat and other builtin functions)','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Yes','No','?','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

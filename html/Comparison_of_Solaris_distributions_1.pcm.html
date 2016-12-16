@@ -26,12 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Install-time desktop environment or window manager selection :</label></br>
+							<label>Install-time desktop environment or window manager selection : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Install-time desktop environment or window manager selection</br>	
- 		 									<input type="checkbox" name="Feature" >KDE</br>	
- 		 									<input type="checkbox" name="Feature" > Xfce</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Default file system : </label></br> <input id="2" type="text" name="Feature"></br>
 							
@@ -46,6 +42,10 @@
           $("#2").typeahead({
             name:"list2",
             local : ['BeleniX','Nexenta OS','Distribution','SchilliX','OpenIndiana','MilaX','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['?','Install-time desktop environment or window manager selection','jwm','KDE, Xfce','GNOME','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

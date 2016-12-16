@@ -32,11 +32,8 @@
 							<label>Business Model : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Connection Model :</label></br>
+							<label>Connection Model : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Client application needs to be connected always to data-server while working on the data</br>	
- 		 									<input type="checkbox" name="Feature" > unless using client-side cursors or a disconnected Record set</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Design-time support :</label></br>
 							
@@ -45,10 +42,8 @@
  		 									<input type="checkbox" name="Feature" >Leverages known metadata at design time in order to provide better run-time performance and more consistent run-time behavior.</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Disconnected Access :</label></br>
+							<label>Disconnected Access : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Provided by Data Adapter and Data set</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Control of data access behaviors :</label></br>
 							
@@ -72,6 +67,14 @@
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['Client application needs to be connected always to data-server while working on the data, unless using client-side cursors or a disconnected Record set','Client disconnected as soon as the data is processed. DataSet is disconnected at all times.','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Provided by Record set','Provided by Data Adapter and Data set','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['ADO.NET uses XML for passing the data.','ADO objects communicate in binary mode.','']
           });
     </script>

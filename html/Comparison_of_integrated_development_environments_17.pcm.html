@@ -26,21 +26,12 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Debugger : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>Debugger :</label></br>
+ 		 					 <input type="radio" name="FeatureDebugger" value="oui">oui <input type="radio" name="FeatureDebugger" value = "non">non </br>
+									
 						</br>	
-							<label>Platform :</label></br>
+							<label>Platform : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 									<input type="checkbox" name="Feature" > Linux</br>	
- 		 									<input type="checkbox" name="Feature" > Mac OS X</br>	
- 		 									<input type="checkbox" name="Feature" > FreeBSD</br>	
- 		 									<input type="checkbox" name="Feature" > IBM AIX</br>	
- 		 									<input type="checkbox" name="Feature" > OpenBSD</br>	
- 		 									<input type="checkbox" name="Feature" > Solaris</br>	
- 		 									<input type="checkbox" name="Feature" > other Unix</br>	
- 		 									<input type="checkbox" name="Feature" > JVM</br>	
-								
 						</br>	
 							<label>Python2x support : </label></br> <input id="3" type="text" name="Feature"></br>
 							
@@ -48,40 +39,27 @@
 							<label>Latest stable release date : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Latest stable release version : </label></br> <input id="5" type="number" name="Feature"></br>
+							<label>Latest stable release version : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>License :</label></br>
+							<label>License : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >BSD-like for free Canopy Express</br>	
- 		 									<input type="checkbox" name="Feature" > Proprietary for Canopy Pro</br>	
- 		 									<input type="checkbox" name="Feature" >Proprietary and Community Edition Apache License 2.0</br>	
-								
 						</br>	
-							<label>Developer :</label></br>
+							<label>Developer : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >SourceLair</br>	
- 		 									<input type="checkbox" name="Feature" > Limited.</br>	
- 		 									<input type="checkbox" name="Feature" >Novell and the Mono community</br>	
-								
 						</br>	
-							<label>Toolkit :</label></br>
+							<label>Toolkit : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >PyQT</br>	
- 		 									<input type="checkbox" name="Feature" > PySide</br>	
-								
 						</br>	
-							<label>IDE :</label></br>
+							<label>IDE : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Eric Python and Ruby IDE</br>	
-								
 						</br>	
 							<label>Python3x support : </label></br> <input id="10" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','Yes (with winpdb)','No','Yes (with wdebugger plugin)','Yes (also remote and multi-process debugging)','Yes (integrates with external debuggers)','']
+            local : ['Cross-platform','Windows, Linux, Mac OS X','Web-based','Windows, Linux, Mac OS X, FreeBSD, IBM AIX, OpenBSD, Solaris, other Unix','Windows, Linux, Mac OS X, FreeBSD, OpenBSD, Solaris','Windows','Windows, Linux, Mac OS X, FreeBSD, JVM, Solaris','Unix-like','']
           });
           $("#2").typeahead({
             name:"list2",
@@ -93,6 +71,26 @@
           });
           $("#4").typeahead({
             name:"list4",
+            local : ['0.8.4h','N/A','1.5.2','4.7.1','eric6 6.0.4','9.0.0','5.7.0','2.5.3','1.24.1','0.6.2','3.13.92','2.1','4.0.6','2.3.4','3.2','4.0.0','8.0.2','2.3','5.1.4','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['Apache License 2.0','GPL','BSD-like for free Canopy Express, Proprietary for Canopy Pro','Proprietary','EPL','Open-source','LGPL','MIT Licence','Proprietary and Community Edition Apache License 2.0','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['Carlos Cordoba','Guido van Rossum et al.','Aptana','PythonAnywhere LLP','Team','Microsoft','Kiriakos Vlahos','ActiveState','SourceLair, Limited.','Detlev Offenbach','Stani Michiels','Naba Kumar','KDE KDevelop Team','Oracle','JetBrains','Wingware','Enthought','Novell and the Mono community','']
+          });
+          $("#7").typeahead({
+            name:"list7",
+            local : ['HTML','GTK+','PyGTK','Gtk#','JVCL','Windows Forms','PyQT, PySide','Qt','SWT','wxPython','PyQt','Swing','Mozilla platform','Qt4 with PySide','Tkinter','']
+          });
+          $("#8").typeahead({
+            name:"list8",
+            local : ['IDLE','Python Tools for Visual Studio','PIDA','Komodo IDE','Geany','Wing IDE','KDevelop','PyScripter','SourceLair','Spyder','Canopy','Anjuta','Eric Python and Ruby IDE','PyCharm','Ninja-IDE','NetBeans (Doesn't support Python from version 7.0)','MonoDevelop','PyDev (Eclipse)','PythonAnywhere','Stani's Python Editor','']
+          });
+          $("#9").typeahead({
+            name:"list9",
             local : ['','Yes','Yes up to v3.3','No','Yes 3.2, 3.3, 3.4','']
           });
     </script>

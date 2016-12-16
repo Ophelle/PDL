@@ -26,19 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Transenc :</label></br>
+							<label>Transenc : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Single byte integers in the range [-32;127]
-
-Fixed length integers for 8-bits</br>	
- 		 									<input type="checkbox" name="Feature" > 16-bits</br>	
- 		 									<input type="checkbox" name="Feature" > 32-bits</br>	
- 		 									<input type="checkbox" name="Feature" > and 64-bits integers.
-
-Encoded as two's complement little-endian values.</br>	
- 		 									<input type="checkbox" name="Feature" >Little-endian IEEE single</br>	
- 		 									<input type="checkbox" name="Feature" >double precision numbers.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>ASN.1
 (BER, PER or OER encoding) :</label></br>
@@ -110,29 +99,18 @@ Byte order - Big-endian</br>
 Bytestring and UTF-8 have different typecode</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>BSON :</label></br>
+							<label>BSON : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >int32: 32-bit little-endian 2's complement or int64: 64-bit little-endian 2's complement</br>	
- 		 									<input type="checkbox" name="Feature" >UTF-8 encoded</br>	
- 		 									<input type="checkbox" name="Feature" > preceded by int32 encoded string length in bytes</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Format :</label></br>
+							<label>Format : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Associative array</br>	
- 		 									<input type="checkbox" name="Feature" >Object</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Property list
 (binary format) : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Netstring :</label></br>
+							<label>Netstring : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >True: 1:1</br>	
- 		 									<input type="checkbox" name="Feature" >
-False: 1:0</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Sereal :</label></br>
 							
@@ -159,27 +137,14 @@ or
 typecode (one byte) + "zigzag" encoded variable length integer</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Binn :</label></br>
+							<label>Binn : </label></br> <input id="11" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >big-endian 2's complement signed and unsigned 8</br>	
- 		 									<input type="checkbox" name="Feature" >16</br>	
- 		 									<input type="checkbox" name="Feature" >32</br>	
- 		 									<input type="checkbox" name="Feature" >64 bits</br>	
- 		 									<input type="checkbox" name="Feature" >Typecode (one byte) + 1-4 bytes size + 1-4 bytes items count + key</br>	
- 		 									<input type="checkbox" name="Feature" >value pairs</br>	
- 		 									<input type="checkbox" name="Feature" >UTF-8 encoded</br>	
- 		 									<input type="checkbox" name="Feature" > null terminated</br>	
- 		 									<input type="checkbox" name="Feature" > preceded by int8 or int32 string length in bytes</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>OGDL Binary : </label></br> <input id="12" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Protocol Buffers :</label></br>
+							<label>Protocol Buffers : </label></br> <input id="13" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >UTF-8 encoded</br>	
- 		 									<input type="checkbox" name="Feature" > preceded by varint-encoded integer length of string in bytes</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>MessagePack :</label></br>
 							
@@ -209,14 +174,53 @@ typecode (one byte) + 2-4 bytes length + array items</br>
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['','']
+            local : ['Single byte integers in the range [-32;127]
+
+Fixed length integers for 8-bits, 16-bits, 32-bits, and 64-bits integers.
+
+Encoded as two's complement little-endian values.','0x82','Little-endian IEEE single/double precision numbers.','Balanced brackets with an optional array count. Arrays can be nested.','UTF-8 encoded type-length-value string.','True: 0x81
+False: 0x80','Balanced brackets with an optional object count. Objects can be nested.','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['','']
+            local : ['int32: 32-bit little-endian 2's complement or int64: 64-bit little-endian 2's complement','double: little-endian binary64','Null type - 0 bytes for value','BSON embedded document with numeric keys','True: one byte \x01
+False: \x00','UTF-8 encoded, preceded by int32 encoded string length in bytes','BSON embedded document','']
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['Boolean','Array','Integer','Null','Associative array/Object','String','Floating-point','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['','True: 1:1,
+False: 1:0,','0:,','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['single:  big-endian binary32
+double: big-endian binary64','big-endian 2's complement signed and unsigned 8/16/32/64 bits','\x00','Typecode (one byte) + 1-4 bytes size + 1-4 bytes items count + list items','Typecode (one byte) + 1-4 bytes size + 1-4 bytes items count + key/value pairs','UTF-8 encoded, null terminated, preceded by int8 or int32 string length in bytes','True: \x01
+False: \x02','']
+          });
+          $("#7").typeahead({
+            name:"list7",
+            local : ['','']
+          });
+          $("#8").typeahead({
+            name:"list8",
+            local : ['UTF-8 encoded, preceded by varint-encoded integer length of string in bytes','N/A','','Variable encoding length signed 32-bit: varint encoding of "ZigZag"-encoded value (n << 1) XOR (n >> 31)
+Variable encoding length signed 64-bit: varint encoding of "ZigZag"-encoded (n << 1) XOR (n >> 63)
+
+Constant encoding length 32-bit: 32 bits in little-endian 2's complement
+
+Constant encoding length 64-bit: 64 bits in little-endian 2's complement','floats: little-endian binary32
+doubles: little-endian binary64','Repeated value with the same tag','']
+          });
+          $("#9").typeahead({
+            name:"list9",
             local : ['','']
           });
     </script>

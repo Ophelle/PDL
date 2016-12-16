@@ -82,7 +82,7 @@ GFLOPs - Single Precision : </label></br> <input id="11" type="number" name="Fea
 							<label>Fab (nm) : </label></br> <input id="17" type="number" name="Feature"></br>
 							
 						</br>	
-							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="18" type="number" name="Feature"></br>
+							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="18" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>Clock rate - Memory (MHz) : </label></br> <input id="19" type="number" name="Feature"></br>
@@ -91,11 +91,8 @@ GFLOPs - Single Precision : </label></br> <input id="11" type="number" name="Fea
 							<label>Fillrate - Pixel (GP/s) : </label></br> <input id="20" type="number" name="Feature"></br>
 							
 						</br>	
-							<label>Notes :</label></br>
+							<label>Notes : </label></br> <input id="21" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Four Mini DisplayPort</br>	
- 		 									<input type="checkbox" name="Feature" > One DVI-I</br>	
-								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -112,6 +109,10 @@ GFLOPs - Single Precision : </label></br> <input id="11" type="number" name="Fea
           $("#4").typeahead({
             name:"list4",
             local : ['Radeon Sky 700','Radeon Sky 900','Radeon Sky 500','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['One DisplayPort','Four Mini DisplayPort, One DVI-I','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -26,37 +26,36 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Bus interface :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Cardbus</br>	
- 		 									<input type="checkbox" name="Feature" > PCI</br>	
- 		 									<input type="checkbox" name="Feature" > Mini PCI</br>	
- 		 									<input type="checkbox" name="Feature" > ISA</br>	
- 		 									<input type="checkbox" name="Feature" >PC Card</br>	
- 		 									<input type="checkbox" name="Feature" > Cardbus</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>WPA2 : </label></br> <input id="2" type="text" name="Feature"></br>
+							<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>WEP : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Master mode : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Ad-Hoc mode : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>WPA : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>WPA2 :</label></br>
+ 		 					 <input type="radio" name="FeatureWPA2" value="oui">oui <input type="radio" name="FeatureWPA2" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>WEP :</label></br>
+ 		 					 <input type="radio" name="FeatureWEP" value="oui">oui <input type="radio" name="FeatureWEP" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Master mode :</label></br>
+ 		 					 <input type="radio" name="FeatureMaster mode" value="oui">oui <input type="radio" name="FeatureMaster mode" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Ad-Hoc mode :</label></br>
+ 		 					 <input type="radio" name="FeatureAd-Hoc mode" value="oui">oui <input type="radio" name="FeatureAd-Hoc mode" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>WPA :</label></br>
+ 		 					 <input type="radio" name="FeatureWPA" value="oui">oui <input type="radio" name="FeatureWPA" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Driver : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Monitor mode : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Monitor mode :</label></br>
+ 		 					 <input type="radio" name="FeatureMonitor mode" value="oui">oui <input type="radio" name="FeatureMonitor mode" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>802.11 :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >802.11a</br>	
@@ -69,31 +68,11 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','?','Yes (since 8.0)','']
+            local : ['Cardbus, PCI, Mini PCI','Cardbus, PCI','PCI','PC Card','USB','Cardbus, PCI, ISA','Mini PCI','PC Card, Cardbus, PCI','Cardbus','ISA','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','?','Yes (since 8.0)','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Yes','?','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['No','?','Yes','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes','No','?','']
-          });
-          $("#6").typeahead({
-            name:"list6",
             local : ['upgt','an','ural','ray','wpi','awi','uath','malo','run','iwi','acx','wi','bwi','arl','mwl','cnw','rum','ral','ath','iwn','urtw','zyd','ipw','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['?','Yes','No','Yes (since 8.0?)','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

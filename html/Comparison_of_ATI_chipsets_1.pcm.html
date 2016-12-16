@@ -26,42 +26,23 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Codename :</label></br>
+							<label>Codename : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >IXP400</br>	
- 		 									<input type="checkbox" name="Feature" >SB400</br>	
- 		 									<input type="checkbox" name="Feature" >IXP460</br>	
- 		 									<input type="checkbox" name="Feature" >SB460</br>	
- 		 									<input type="checkbox" name="Feature" >IXP450</br>	
- 		 									<input type="checkbox" name="Feature" >SB450</br>	
- 		 									<input type="checkbox" name="Feature" >IXP380</br>	
- 		 									<input type="checkbox" name="Feature" >SB380</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>SATA Ports : </label></br> <input id="2" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>IDE Channels (2 Devices/Channel) : </label></br> <input id="3" type="number" name="Feature"></br>
+							<label>IDE Channels (2 Devices/Channel) : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Year : </label></br> <input id="4" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Fabrication process (nm) : </label></br> <input id="5" type="number" name="Feature"></br>
+							<label>Fabrication process (nm) : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Model :</label></br>
+						</br>	
+							<label>Model : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Radeon 320(M)</br>	
- 		 									<input type="checkbox" name="Feature" >330</br>	
- 		 									<input type="checkbox" name="Feature" >34x(M)</br>	
- 		 									<input type="checkbox" name="Feature" >350M</br>	
- 		 									<input type="checkbox" name="Feature" >360 IGP</br>	
- 		 									<input type="checkbox" name="Feature" >AMD 480</br>	
- 		 									<input type="checkbox" name="Feature" >570</br>	
- 		 									<input type="checkbox" name="Feature" >580 
-CrossFire Chipset</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>USB Ports : </label></br> <input id="7" type="number" name="Feature"></br>
 							
@@ -92,6 +73,25 @@ eSATA</br>
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['IXP400/SB400','SB600','IXP460/SB460','SB300C','IXP250','IXP450/SB450','IXP380/SB380','IXP200','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['2 (ATA 133)','2 (UDMA 100/133)','1 (ATA 133)','2 (ATA133)','1','2','2 ATA100','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['','130','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Radeon Xpress 200
+Radeon Xpress 1150','Radeon 320(M)/330/34x(M)/350M/360 IGP','Radeon Xpress 1600
+Radeon Xpress 1150','','AMD 480/570/580 
+CrossFire Chipset','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['HD','AC'97','']
           });
     </script>

@@ -26,13 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>AudienceLogy :</label></br>
+							<label>AudienceLogy : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >24</br>	
- 		 									<input type="checkbox" name="Feature" >7 Open AdStream</br>	
- 		 									<input type="checkbox" name="Feature" >Emediate</br>	
- 		 									<input type="checkbox" name="Feature" >Cxense</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Content, Geography, Cookie, Technographic (E.g.: ISP Provider, Bandwidth, Connection Type, IP-Addresses, Browser, Browser Language, Operating System, Language, Domain). Time Based, Keyword Targeting, Frequency, Re-Targeting. Mobile (Mobile Carrier, Device Vendor, Device Type) :</label></br>
 							
@@ -145,6 +140,10 @@
  		 									<input type="checkbox" name="Feature" > and domain. Date and time targeting. Small Business version could have some limitations.</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['Adzerk','Ad Server Solutions','','24/7 Open AdStream','Zedo','Adform','AppNexus','Emediate/Cxense','Epom','Right Media','OpenX Ad Server','Atlas Solutions','Orbit Ad Server','Viewzd Ad server','Mirago M3','DoubleClick','ADTECH','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

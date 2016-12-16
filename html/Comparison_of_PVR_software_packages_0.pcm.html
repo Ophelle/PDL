@@ -50,12 +50,13 @@
 							<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Latest stable release : </label></br> <input id="6" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Windows : </label></br> <input id="7" type="text" name="Feature"></br>
+							<label>Latest stable release : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
+ 		 					<label>Windows :</label></br>
+ 		 					 <input type="radio" name="FeatureWindows" value="oui">oui <input type="radio" name="FeatureWindows" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Notes :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >DirectShow video player</br>	
@@ -106,11 +107,8 @@ While Snapstream is providing minor fixes for Beyond TV</br>
 See also: List of digital television deployments by country</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Name :</label></br>
+							<label>Name : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >MediaPhoenix</br>	
- 		 									<input type="checkbox" name="Feature" >ShowShifter</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
  		 					<label>Android :</label></br>
  		 					 <input type="radio" name="FeatureAndroid" value="oui">oui <input type="radio" name="FeatureAndroid" value = "non">non </br>
@@ -122,7 +120,15 @@ See also: List of digital television deployments by country</br>
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','No','Limited','']
+            local : ['14.2 "Helix".  28 March 2015; 2 months ago','Discontinued. Previously Bundled for no extra charge with various TV tuner devices.','2.0.6 (March 22, 2014)','0.6.2 / 2007-08-20','1.11.0 (March 31, 2015)','4.9.3
+
+Build 6335
+
+October 15, 2010','3.6.1','6.3.9600.16384 (© 2013)','2.46 Nov 11th 2014','winTV7, CD3.5, current Jul 14','7.1','1.0.2 (November 10, 2005)','3.3.8 (25 October 2014)','17.0.50 December 2011','3.1','0.27.4 (October 15, 2014)','','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Hauppauge WinTV','InterVideo WinDVR','Video Disk Recorder (VDR)','CenterStage','Beyond TV','NextPVR','DVBViewer','EyeTV','Kodi (formerly XBMC)','Tvtime','SageTV','MediaPhoenix/ShowShifter','Windows Media Center','VBox Home TV Gateway VBox@TV','JRiver Media Center','MediaPortal','MythTV','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

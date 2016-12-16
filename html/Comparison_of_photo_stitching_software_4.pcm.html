@@ -26,81 +26,43 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Fish eye lenses : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>Fish eye lenses :</label></br>
+ 		 					 <input type="radio" name="FeatureFish eye lenses" value="oui">oui <input type="radio" name="FeatureFish eye lenses" value = "non">non </br>
+									
 						</br>	
-							<label>Partial or full (spherical) panoramas or images from panoramic camera : </label></br> <input id="2" type="text" name="Feature"></br>
-							
+ 		 					<label>Partial or full (spherical) panoramas or images from panoramic camera :</label></br>
+ 		 					 <input type="radio" name="FeaturePartial or full (spherical) panoramas or images from panoramic camera" value="oui">oui <input type="radio" name="FeaturePartial or full (spherical) panoramas or images from panoramic camera" value = "non">non </br>
+									
 						</br>	
-							<label>Different lens types in single panorama : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>Different lens types in single panorama :</label></br>
+ 		 					 <input type="radio" name="FeatureDifferent lens types in single panorama" value="oui">oui <input type="radio" name="FeatureDifferent lens types in single panorama" value = "non">non </br>
+									
 						</br>	
-							<label>Other/Notes :</label></br>
+							<label>Other/Notes : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >*) Circular fish eyes not supported</br>	
- 		 									<input type="checkbox" name="Feature" > diagonal fish eyes up to 180 degree field of view.</br>	
- 		 									<input type="checkbox" name="Feature" >Also supports motorized panoramic heads</br>	
- 		 									<input type="checkbox" name="Feature" > in Giga & Pro versions.</br>	
- 		 									<input type="checkbox" name="Feature" >* As of v2010.2 onwards</br>	
- 		 									<input type="checkbox" name="Feature" > all known fish eye projections are supported (equisolid</br>	
- 		 									<input type="checkbox" name="Feature" > orthographic</br>	
- 		 									<input type="checkbox" name="Feature" > stereographic)</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
  		 					<label>Rectilinear lenses (i.e. normal camera lenses) :</label></br>
  		 					 <input type="radio" name="FeatureRectilinear lenses (i.e. normal camera lenses)" value="oui">oui <input type="radio" name="FeatureRectilinear lenses (i.e. normal camera lenses)" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Different focal length in single panorama : </label></br> <input id="6" type="text" name="Feature"></br>
-							
 						</br>	
-							<label>Perspective correction lens : </label></br> <input id="7" type="text" name="Feature"></br>
-							
+ 		 					<label>Different focal length in single panorama :</label></br>
+ 		 					 <input type="radio" name="FeatureDifferent focal length in single panorama" value="oui">oui <input type="radio" name="FeatureDifferent focal length in single panorama" value = "non">non </br>
+									
 						</br>	
-							<label>Name :</label></br>
+ 		 					<label>Perspective correction lens :</label></br>
+ 		 					 <input type="radio" name="FeaturePerspective correction lens" value="oui">oui <input type="radio" name="FeaturePerspective correction lens" value = "non">non </br>
+									
+						</br>	
+							<label>Name : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >ADG Panorama Tools </br>	
- 		 									<input type="checkbox" name="Feature" > Pro</br>	
- 		 									<input type="checkbox" name="Feature" >Panoweaver Standard </br>	
- 		 									<input type="checkbox" name="Feature" > Professional</br>	
- 		 									<input type="checkbox" name="Feature" >PanoramaStudio 2 </br>	
- 		 									<input type="checkbox" name="Feature" >Autopano Pro </br>	
- 		 									<input type="checkbox" name="Feature" > Giga </br>	
- 		 									<input type="checkbox" name="Feature" > Server</br>	
- 		 									<input type="checkbox" name="Feature" >PTgui </br>	
- 		 									<input type="checkbox" name="Feature" > PTgui Pro</br>	
- 		 									<input type="checkbox" name="Feature" >i2Align Quickage Express </br>	
- 		 									<input type="checkbox" name="Feature" >PixMaker Lite </br>	
- 		 									<input type="checkbox" name="Feature" > Home </br>	
- 		 									<input type="checkbox" name="Feature" > Business</br>	
- 		 									<input type="checkbox" name="Feature" >PhotoFit Harmony </br>	
- 		 									<input type="checkbox" name="Feature" > Premium</br>	
- 		 									<input type="checkbox" name="Feature" >PanaVue ImageAssembler Std. </br>	
- 		 									<input type="checkbox" name="Feature" > Pro. </br>	
- 		 									<input type="checkbox" name="Feature" > Ent.</br>	
- 		 									<input type="checkbox" name="Feature" >PanoramaBuilder 7.0 </br>	
- 		 									<input type="checkbox" name="Feature" > PanoramaBuilder 7.0 Pro</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes*','No','Yes','?','']
+            local : ['','*) Circular fish eyes not supported, diagonal fish eyes up to 180 degree field of view.','Also supports motorized panoramic heads, in Giga & Pro versions.','*) Cylindrical only','* As of v2010.2 onwards, all known fish eye projections are supported (equisolid, orthographic, stereographic)','(*) homographic model compensates for these type of lenses','"One shot" i.e. panoramic mirror lenses also supported.','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['No','Yes','?','Yes*','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','?','Yes','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','No','?','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['No','Yes','?','','Yes*','']
+            local : ['ADG Panorama Tools / Pro','Pixtra OmniStitcher','3DVista Stitcher 3.0','SharpStitch','hugin','D Joiner','Panoweaver Standard / Professional','PTAssembler','Calico Panorama','PanoramaStudio 2 / Pro','Autostitch','Autopano Pro / Giga / Server','Panorama Maker 6','The Panorama Factory v5','PTgui / PTgui Pro','i2Align Quickage Express / Pro','COOL 360','PixMaker Lite / Home / Business','VRstitcher Fisheye Pro','PanoramaPlus X4','PanoramaMaker','Gigapan Stitch 1.0','Panorama Perfect','Image Composite Editor','AIPR Lite 1','PhotoFit Harmony / Premium','Stitcher Unlimited 2009','360 Panorama Professional','Photoshop','PanoEdit','PanaVue ImageAssembler Std. / Pro. / Ent.','Panorama Composer 3','PanoramaBuilder 7.0 / PanoramaBuilder 7.0 Pro','Pixtra PanoStitcher','Photovista Panorama','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

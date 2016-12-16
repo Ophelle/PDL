@@ -45,9 +45,10 @@
 process (nm) : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>SLI : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>SLI :</label></br>
+ 		 					 <input type="radio" name="FeatureSLI" value="oui">oui <input type="radio" name="FeatureSLI" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Processors Supported :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >Pentium 4</br>	
@@ -79,11 +80,8 @@ Frequency (MHz) : </label></br> <input id="9" type="text" name="Feature"></br>
  		 									<input type="checkbox" name="Feature" >100 Mbit</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Features :</label></br>
+							<label>Features : </label></br> <input id="13" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Onboard GeForce 7100</br>	
- 		 									<input type="checkbox" name="Feature" >7150</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>PATA : </label></br> <input id="14" type="text" name="Feature"></br>
 							
@@ -95,10 +93,8 @@ Frequency (MHz) : </label></br> <input id="9" type="text" name="Feature"></br>
  		 									<input type="checkbox" name="Feature" >6 Ports 3.0Gbit</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Notes :</label></br>
+							<label>Notes : </label></br> <input id="16" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Supports quad core and 45nm CPUs</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Release Date : </label></br> <input id="17" type="number" name="Feature"></br>
 							
@@ -138,20 +134,23 @@ single channel','']
           });
           $("#8").typeahead({
             name:"list8",
-            local : ['x16+x16','No','x8+x8','x16+x16
-x8+x8+x8','']
+            local : ['1333 MHz','']
           });
           $("#9").typeahead({
             name:"list9",
-            local : ['1333 MHz','']
+            local : ['nForce 650i SLI','nForce 680i LT SLI','nForce 680i SLI','nForce 610i','nForce 630i','nForce 650i Ultra','']
           });
           $("#10").typeahead({
             name:"list10",
-            local : ['nForce 650i SLI','nForce 680i LT SLI','nForce 680i SLI','nForce 610i','nForce 630i','nForce 650i Ultra','']
+            local : ['','Onboard GeForce 7050','Onboard GeForce 7100/7150','']
           });
           $("#11").typeahead({
             name:"list11",
             local : ['2 Ports UDMA 133','4 Ports UDMA 133','']
+          });
+          $("#12").typeahead({
+            name:"list12",
+            local : ['','Supports quad core and 45nm CPUs','Unofficial support DDR2-1066','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -26,15 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Offline :</label></br>
+							<label>Offline : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Local cubes</br>	
- 		 									<input type="checkbox" name="Feature" >
- PowerPivot for Excel</br>	
- 		 									<input type="checkbox" name="Feature" >MicroStrategy Office</br>	
- 		 									<input type="checkbox" name="Feature" >
- Dynamic Dashboards</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>OLAP Server : </label></br> <input id="2" type="text" name="Feature"></br>
 							
@@ -53,6 +46,12 @@
  		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['','No','Local cubes,
+ PowerPivot for Excel','Local cubes','MicroStrategy Office,
+ Dynamic Dashboards','Offline Cubes','']
+          });
+          $("#2").typeahead({
+            name:"list2",
             local : ['Oracle Database OLAP Option','SAS OLAP Server','MicroStrategy Intelligence Server','Jedox OLAP Server','SAP NetWeaver BW','Microsoft Analysis Services','icCube','Cubes (OLAP server)','IBM Cognos','Mondrian OLAP server','Essbase','IBM TM1','Infor BI OLAP Server','']
           });
     </script>

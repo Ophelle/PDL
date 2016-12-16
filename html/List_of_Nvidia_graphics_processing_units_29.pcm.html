@@ -50,20 +50,22 @@
 							<label>Clock speed - Memory (MHz) : </label></br> <input id="8" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Memory (MB) : </label></br> <input id="9" type="number" name="Feature"></br>
+							<label>Memory (MB) :</label></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+ 		 									<input type="checkbox" name="Feature" >256 </br>	
+ 		 									<input type="checkbox" name="Feature" > 512</br>	
+ 		 									<input type="checkbox" name="Feature" >128 </br>	
+ 		 									<input type="checkbox" name="Feature" > 256</br>	
+ 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
 							<label>Launch : </label></br> <input id="10" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>Processing Power GFLOPS : </label></br> <input id="11" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Code name :</label></br>
+							<label>Code name : </label></br> <input id="12" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >MCP77MV</br>	
- 		 									<input type="checkbox" name="Feature" > MCP79MVL</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>API support (version) - DirectX : </label></br> <input id="13" type="number" name="Feature"></br>
 							
@@ -117,6 +119,10 @@
           });
           $("#4").typeahead({
             name:"list4",
+            local : ['NB8P(G84)','MCP77MV, MCP79MVL','NB8M(G86)','NB8P(G92)','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['GeForce 8600M GT','GeForce 8400M GS','GeForce 8400M GT','GeForce 8700M GT','GeForce 8800M GTS','GeForce 8600M GS','GeForce 8200M G','GeForce 8400M G','GeForce 8800M GTX','']
           });
     </script>

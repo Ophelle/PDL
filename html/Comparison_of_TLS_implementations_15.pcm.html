@@ -58,11 +58,8 @@
  		 					 <input type="radio" name="FeatureLibreSSL" value="oui">oui <input type="radio" name="FeatureLibreSSL" value = "non">non </br>
 									
 						</br>	
-							<label>Implementation :</label></br>
+							<label>Implementation : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Freescale CAU</br>	
- 		 									<input type="checkbox" name="Feature" >mmCAU</br>	
-								
 						</br>	
  		 					<label>SharkSSL :</label></br>
  		 					 <input type="radio" name="FeatureSharkSSL" value="oui">oui <input type="radio" name="FeatureSharkSSL" value = "non">non </br>
@@ -88,6 +85,10 @@
  		 					 <input type="radio" name="FeatureSecure Transport" value="oui">oui <input type="radio" name="FeatureSecure Transport" value = "non">non </br>
 									
 		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['Microchip PIC32MZ','Intel AES-NI','Cavium NITROX','STM32F2','PKCS #11 device','Freescale CAU/mmCAU','ARMv8-A','VIA PadLock','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

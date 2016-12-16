@@ -26,15 +26,18 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>OS X : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Windows : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Linux : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>OS X :</label></br>
+ 		 					 <input type="radio" name="FeatureOS X" value="oui">oui <input type="radio" name="FeatureOS X" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Windows :</label></br>
+ 		 					 <input type="radio" name="FeatureWindows" value="oui">oui <input type="radio" name="FeatureWindows" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Linux :</label></br>
+ 		 					 <input type="radio" name="FeatureLinux" value="oui">oui <input type="radio" name="FeatureLinux" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Other software : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
@@ -43,22 +46,10 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','Linux','?','No','']
+            local : ['ADCCore','DCWatch','Announcer Bot','SerieBot','DC-Hublink','Certmanager','FlowLib','DCBouncer','NetChatLink','Other software','Embla','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['No','OS X','?','Yes','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Yes','Windows','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['ADCCore','DCWatch','Announcer Bot','SerieBot','DC-Hublink','Certmanager','FlowLib','DCBouncer','NetChatLink','Other software','Embla','']
-          });
-          $("#5").typeahead({
-            name:"list5",
             local : ['Any Java enabled platform','Any C# enabled platform','Runs under Wine','No','Any .NET4 enabled platform','Other','']
           });
     </script>

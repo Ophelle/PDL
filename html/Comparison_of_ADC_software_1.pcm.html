@@ -26,45 +26,31 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>OS X : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>OS X :</label></br>
+ 		 					 <input type="radio" name="FeatureOS X" value="oui">oui <input type="radio" name="FeatureOS X" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>ADC hub : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Windows : </label></br> <input id="3" type="text" name="Feature"></br>
+ 		 					<label>Windows :</label></br>
+ 		 					 <input type="radio" name="FeatureWindows" value="oui">oui <input type="radio" name="FeatureWindows" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Linux :</label></br>
+ 		 					 <input type="radio" name="FeatureLinux" value="oui">oui <input type="radio" name="FeatureLinux" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Other : </label></br> <input id="5" type="text" name="Feature"></br>
 							
-						</br>	
-							<label>Linux : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Other :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >FreeBSD</br>	
- 		 									<input type="checkbox" name="Feature" > Solaris</br>	
- 		 									<input type="checkbox" name="Feature" >Raspberry Pi</br>	
- 		 									<input type="checkbox" name="Feature" > Synology NAS</br>	
- 		 									<input type="checkbox" name="Feature" > any GCC enabled platform</br>	
- 		 									<input type="checkbox" name="Feature" >BSD</br>	
- 		 									<input type="checkbox" name="Feature" > Haiku</br>	
- 		 									<input type="checkbox" name="Feature" > OpenWrt</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','Linux','No','?','']
+            local : ['Starlet ADC Hub','DSHub','Starhub','ADC hub','Luadch','FlexHub','uhub','Erlhub','Nexthub','ADCH++','Qhub','RusHub','ADCH++ GUI','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['No','Yes','?','OS X','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Starlet ADC Hub','DSHub','Starhub','ADC hub','Luadch','FlexHub','uhub','Erlhub','Nexthub','ADCH++','Qhub','RusHub','ADCH++ GUI','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','Windows','No','?','']
+            local : ['Any Java enabled platform','Any Erlang enabled platform','FreeBSD, Solaris','Any Python enabled platform','Any C# enabled platform','Raspberry Pi, Synology NAS, any GCC enabled platform','No','Other','BSD, Haiku, OpenWrt, Solaris','OpenVMS','?','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

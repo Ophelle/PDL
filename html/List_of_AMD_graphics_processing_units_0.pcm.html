@@ -39,11 +39,8 @@
 							<label>Memory - Bus width (bit) : </label></br> <input id="3" type="number" name="Feature"></br>
 							
 						</br>	
-							<label>Model :</label></br>
+							<label>Model : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Wonder MDA</br>	
- 		 									<input type="checkbox" name="Feature" >CGA</br>	
-								
 						</br>	
 							<label>Memory - Bus type : </label></br> <input id="5" type="text" name="Feature"></br>
 							
@@ -66,6 +63,10 @@
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['Wonder VGA','Wonder MDA/CGA','Wonder EGA','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['2D','']
           });
     </script>

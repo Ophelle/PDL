@@ -34,30 +34,30 @@
  		 									<input type="checkbox" name="Feature" >PCIe 2.1 x1</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Transistors (Million) : </label></br> <input id="2" type="number" name="Feature"></br>
+							<label>Transistors (Million) : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Fillrate - Texture (GT/s) : </label></br> <input id="3" type="number" name="Feature"></br>
+						</br>	
+							<label>Fillrate - Texture (GT/s) : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Memory clock (MHz) : </label></br> <input id="4" type="number" name="Feature"></br>
+						</br>	
+							<label>Memory clock (MHz) : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>API compliance (version) - DirectX : </label></br> <input id="5" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Die Size (mm) : </label></br> <input id="6" type="number" name="Feature"></br>
+							<label>Die Size (mm) : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Config core : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Memory - Bus width (bit) : </label></br> <input id="8" type="number" name="Feature"></br>
+							<label>Memory - Bus width (bit) : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Core clock (MHz) : </label></br> <input id="9" type="number" name="Feature"></br>
+						</br>	
+							<label>Core clock (MHz) : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Memory (MB) : </label></br> <input id="10" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -87,15 +87,15 @@
 							<label>Memory - Bus type : </label></br> <input id="15" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Fab (nm) : </label></br> <input id="16" type="number" name="Feature"></br>
+							<label>Fab (nm) : </label></br> <input id="16" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="17" type="number" name="Feature"></br>
+						</br>	
+							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="17" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Fillrate - Pixel (GP/s) : </label></br> <input id="18" type="number" name="Feature"></br>
+						</br>	
+							<label>Fillrate - Pixel (GP/s) : </label></br> <input id="18" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Notes :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >2x VHDCI for quad output: DVI-I or D-sub</br>	
@@ -111,15 +111,35 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['80(16×5):8:4','2:4:4:4','2x 40(8×5):4:4','']
+            local : ['292','Unknown','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['FirePro 2250','FirePro 2450 Multi-View','FirePro 2270','FirePro 2460 Multi-View','']
+            local : ['Unknown','600','']
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['59','Unknown','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['80(16×5):8:4','2:4:4:4','2x 40(8×5):4:4','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['Unknown','600','']
+          });
+          $("#6").typeahead({
+            name:"list6",
             local : ['2x RV620','Cedar','RV516','Cedar (RV810)','']
+          });
+          $("#7").typeahead({
+            name:"list7",
+            local : ['FirePro 2250','FirePro 2450 Multi-View','FirePro 2270','FirePro 2460 Multi-View','']
+          });
+          $("#8").typeahead({
+            name:"list8",
+            local : ['40','Unknown','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

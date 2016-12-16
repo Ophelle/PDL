@@ -42,9 +42,10 @@
 process (nm) : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>SLI : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>SLI :</label></br>
+ 		 					 <input type="radio" name="FeatureSLI" value="oui">oui <input type="radio" name="FeatureSLI" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Processors Supported :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >Phenom</br>	
@@ -85,9 +86,9 @@ Frequency (MHz) : </label></br> <input id="8" type="text" name="Feature"></br>
 							<label>Notes : </label></br> <input id="15" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Release Date : </label></br> <input id="16" type="number" name="Feature"></br>
+							<label>Release Date : </label></br> <input id="16" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>		<script>
+		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['2.0
@@ -117,29 +118,27 @@ Frequency (MHz) : </label></br> <input id="8" type="text" name="Feature"></br>
           });
           $("#7").typeahead({
             name:"list7",
-            local : ['No','x8+x8','x16+x16
-x16+x16+x8
-x8+x8+x8','']
+            local : ['HT3.0 2.6 GHz','']
           });
           $("#8").typeahead({
             name:"list8",
-            local : ['HT3.0 2.6 GHz','']
+            local : ['nForce 720a','nForce 750a SLI','nForce 730a','nForce 710a','nForce 720d','nForce 740a SLI','nForce 780a SLI','']
           });
           $("#9").typeahead({
             name:"list9",
-            local : ['nForce 720a','nForce 750a SLI','nForce 730a','nForce 710a','nForce 720d','nForce 740a SLI','nForce 780a SLI','']
+            local : ['Onboard GeForce 8200','Onboard GeForce 8100','','']
           });
           $("#10").typeahead({
             name:"list10",
-            local : ['Onboard GeForce 8200','Onboard GeForce 8100','','']
+            local : ['1 Ports UDMA 133','']
           });
           $("#11").typeahead({
             name:"list11",
-            local : ['1 Ports UDMA 133','']
+            local : ['Hybrid with IGP','','Rebranded nForce 710a','']
           });
           $("#12").typeahead({
             name:"list12",
-            local : ['Hybrid with IGP','','Rebranded nForce 710a','']
+            local : ['2008','May 2008','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

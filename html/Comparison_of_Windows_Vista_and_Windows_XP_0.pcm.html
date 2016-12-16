@@ -29,36 +29,27 @@
 							<label>Windows 8 : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Windows 7 : </label></br> <input id="2" type="text" name="Feature"></br>
-							
+ 		 					<label>Windows 7 :</label></br>
+ 		 					 <input type="radio" name="FeatureWindows 7" value="oui">oui <input type="radio" name="FeatureWindows 7" value = "non">non </br>
+									
 						</br>	
 							<label>Feature : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Windows Vista : </label></br> <input id="4" type="text" name="Feature"></br>
-							
+ 		 					<label>Windows Vista :</label></br>
+ 		 					 <input type="radio" name="FeatureWindows Vista" value="oui">oui <input type="radio" name="FeatureWindows Vista" value = "non">non </br>
+									
 						</br>	
-							<label>Windows XP : </label></br> <input id="5" type="text" name="Feature"></br>
-							
+ 		 					<label>Windows XP :</label></br>
+ 		 					 <input type="radio" name="FeatureWindows XP" value="oui">oui <input type="radio" name="FeatureWindows XP" value = "non">non </br>
+									
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','Yes (Enterprise and Ultimate only)','']
+            local : ['Yes (replaced by Family Safety)','Yes','Yes (replaced by Action Center)','Yes (Pro and Enterprise only)','Yes (added antivirus capabilities, available in older versions as the Microsoft Security Essentials download)','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes (starting w/ SP2)','No','Yes','Available as a free download','Some (Internet Explorer allows parental control of web browsing)','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Yes (replaced by Family Safety)','Yes','Yes (replaced by Action Center)','Yes (Pro and Enterprise only)','Yes (added antivirus capabilities, available in older versions as the Microsoft Security Essentials download)','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','Yes (Enterprise and Ultimate only)','Yes (replaced by Action Center)','']
-          });
-          $("#5").typeahead({
-            name:"list5",
             local : ['Windows Security Center','Windows Firewall','Data Execution Prevention','User Account Control','Windows Defender','BitLocker Drive Encryption','Parental controls','']
           });
     </script>

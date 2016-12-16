@@ -438,14 +438,16 @@ Will handle very large collections.</br>
  		 									<input type="checkbox" name="Feature" > print ...</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Name :</label></br>
+							<label>Name : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Windows Picture and Fax Viewer</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['Proprietary','GNU GPL','MIT','(Creative Commons Non commercial CC-BY-NC)','GNU LGPL','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['Gwenview','Zoner Photo Studio','Firehand Ember','gThumb','STDU Viewer','digiKam','Aperture','FastPictureViewer','Photos','ACDSee','Eye of GNOME','Windows Picture and Fax Viewer','F-Spot','KSquirrel','Lphoto','Simple Comic','XnView','Xv','IMatch','Preview','Paint.NET','Geeqie','Gonvisor','ImageAXS','Windows Live Photo Gallery','Windows Photo Gallery','iPhoto','GraphicConverter','Picasa','Shotwell','Adobe Bridge','KPhotoAlbum','Phase One Media Pro','Comix','IrfanView','Adobe Photoshop Lightroom','CDisplay','FastStone Image Viewer','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -26,26 +26,17 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Debugger : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>Debugger :</label></br>
+ 		 					 <input type="radio" name="FeatureDebugger" value="oui">oui <input type="radio" name="FeatureDebugger" value = "non">non </br>
+									
 						</br>	
-							<label>Import :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >SQL script</br>	
- 		 									<input type="checkbox" name="Feature" > CSV</br>	
- 		 									<input type="checkbox" name="Feature" > TSV or the above in zip (as a plugin); imports of server-site file in SQL or SQL in zip</br>	
- 		 									<input type="checkbox" name="Feature" > gzip or bzip2</br>	
- 		 									<input type="checkbox" name="Feature" >Toad for Oracle ERD</br>	
- 		 									<input type="checkbox" name="Feature" > ERWin 7.1(XML) via plugin</br>	
- 		 									<input type="checkbox" name="Feature" >CSV</br>	
- 		 									<input type="checkbox" name="Feature" > Text</br>	
- 		 									<input type="checkbox" name="Feature" > or binary</br>	
- 		 									<input type="checkbox" name="Feature" > XML</br>	
- 		 									<input type="checkbox" name="Feature" > MS Excel</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+ 		 					<label>Import :</label></br>
+ 		 					 <input type="radio" name="FeatureImport" value="oui">oui <input type="radio" name="FeatureImport" value = "non">non </br>
+									
 						</br>	
-							<label>user manager : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>user manager :</label></br>
+ 		 					 <input type="radio" name="Featureuser manager" value="oui">oui <input type="radio" name="Featureuser manager" value = "non">non </br>
+									
 						</br>	
 							<label>Export :</label></br>
 							
@@ -80,37 +71,22 @@
  		 									<input type="checkbox" name="Feature" >XML</br>	
  		 									<input type="checkbox" name="Feature" > XML Structure</br>	
  		 									<input type="checkbox" name="Feature" > text</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+								
 						</br>	
-							<label>Compare : </label></br> <input id="5" type="text" name="Feature"></br>
+ 		 					<label>Compare :</label></br>
+ 		 					 <input type="radio" name="FeatureCompare" value="oui">oui <input type="radio" name="FeatureCompare" value = "non">non </br>
+									
+						</br>	
+							<label>Source control : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Source control :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >SVN</br>	
- 		 									<input type="checkbox" name="Feature" > CVS</br>	
- 		 									<input type="checkbox" name="Feature" > TFS</br>	
- 		 									<input type="checkbox" name="Feature" > VSS</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Plugin : </label></br> <input id="7" type="text" name="Feature"></br>
-							
+ 		 					<label>Plugin :</label></br>
+ 		 					 <input type="radio" name="FeaturePlugin" value="oui">oui <input type="radio" name="FeaturePlugin" value = "non">non </br>
+									
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','?','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Yes','No','Some','?','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['?','Yes','No','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Some','No','Yes','?','']
+            local : ['No','?','SVN, CVS, TFS, VSS','Git','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

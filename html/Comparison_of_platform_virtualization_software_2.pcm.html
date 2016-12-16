@@ -38,8 +38,9 @@
 							<label>OpenVZ : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>DOSBox : </label></br> <input id="5" type="text" name="Feature"></br>
-							
+ 		 					<label>DOSBox :</label></br>
+ 		 					 <input type="radio" name="FeatureDOSBox" value="oui">oui <input type="radio" name="FeatureDOSBox" value = "non">non </br>
+									
 						</br>	
 							<label>DOSEMU : </label></br> <input id="6" type="text" name="Feature"></br>
 							
@@ -50,14 +51,8 @@
 							<label>z LPAR : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Name :</label></br>
+							<label>Name : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >physical disk </br>	
- 		 									<input type="checkbox" name="Feature" > device</br>	
- 		 									<input type="checkbox" name="Feature" >raw </br>	
- 		 									<input type="checkbox" name="Feature" > flat (partition)</br>	
- 		 									<input type="checkbox" name="Feature" > flat (whole disk)</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>SVISTA 2004 : </label></br> <input id="10" type="text" name="Feature"></br>
 							
@@ -65,8 +60,9 @@
 							<label>XenServer : </label></br> <input id="11" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Virtual PC 2007 : </label></br> <input id="12" type="text" name="Feature"></br>
-							
+ 		 					<label>Virtual PC 2007 :</label></br>
+ 		 					 <input type="radio" name="FeatureVirtual PC 2007" value="oui">oui <input type="radio" name="FeatureVirtual PC 2007" value = "non">non </br>
+									
 						</br>	
 							<label>QEMU : </label></br> <input id="13" type="text" name="Feature"></br>
 							
@@ -98,16 +94,17 @@
  		 					<label>FreeBSD Jail :</label></br>
  		 					 <input type="radio" name="FeatureFreeBSD Jail" value="oui">oui <input type="radio" name="FeatureFreeBSD Jail" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>LXC : </label></br> <input id="23" type="text" name="Feature"></br>
 							
 						</br>	
  		 					<label>PearPC :</label></br>
  		 					 <input type="radio" name="FeaturePearPC" value="oui">oui <input type="radio" name="FeaturePearPC" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Windows Virtual PC : </label></br> <input id="25" type="text" name="Feature"></br>
-							
+						</br>	
+ 		 					<label>Windows Virtual PC :</label></br>
+ 		 					 <input type="radio" name="FeatureWindows Virtual PC" value="oui">oui <input type="radio" name="FeatureWindows Virtual PC" value = "non">non </br>
+									
 						</br>	
 							<label>Parallels Desktop for Mac : </label></br> <input id="26" type="text" name="Feature"></br>
 							
@@ -127,8 +124,9 @@
 							<label>Linux-VServer : </label></br> <input id="31" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>KVM : </label></br> <input id="32" type="text" name="Feature"></br>
-							
+ 		 					<label>KVM :</label></br>
+ 		 					 <input type="radio" name="FeatureKVM" value="oui">oui <input type="radio" name="FeatureKVM" value = "non">non </br>
+									
 						</br>	
 							<label>PowerVM : </label></br> <input id="33" type="text" name="Feature"></br>
 							
@@ -139,7 +137,7 @@
  		 					<label>Virtual PC 7 for Mac :</label></br>
  		 					 <input type="radio" name="FeatureVirtual PC 7 for Mac" value="oui">oui <input type="radio" name="FeatureVirtual PC 7 for Mac" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>VMware ESX Server : </label></br> <input id="36" type="text" name="Feature"></br>
 							
 						</br>	
@@ -203,8 +201,9 @@
 							<label>User Mode Linux : </label></br> <input id="56" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>VirtualBox : </label></br> <input id="57" type="text" name="Feature"></br>
-							
+ 		 					<label>VirtualBox :</label></br>
+ 		 					 <input type="radio" name="FeatureVirtualBox" value="oui">oui <input type="radio" name="FeatureVirtualBox" value = "non">non </br>
+									
 						</br>	
 							<label>Oracle VM for x86 : </label></br> <input id="58" type="text" name="Feature"></br>
 							
@@ -227,11 +226,9 @@
 							<label>Virtual Server 2005 R2 : </label></br> <input id="64" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Bochs :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >v3</br>	
- 		 									<input type="checkbox" name="Feature" > v4</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+ 		 					<label>Bochs :</label></br>
+ 		 					 <input type="radio" name="FeatureBochs" value="oui">oui <input type="radio" name="FeatureBochs" value = "non">non </br>
+									
 						</br>	
 							<label>Mac-on-Linux : </label></br> <input id="66" type="text" name="Feature"></br>
 							
@@ -257,11 +254,11 @@
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['No','Yes','?','']
+            local : ['?','Yes','']
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['?','Yes','']
+            local : ['?','']
           });
           $("#7").typeahead({
             name:"list7",
@@ -269,7 +266,7 @@
           });
           $("#8").typeahead({
             name:"list8",
-            local : ['?','']
+            local : ['QCOW (QEMU)','physical disk / device','floppy','QCOW2 (QEMU)','VMDK (VMware)','VHD (Connectix Virtual PC)','ISO','folders on host','raw / flat (partition)','hdd (Parallels)','VHDX (Hyper-V)','raw / flat (whole disk)','QED (QEMU)','VDI (VirtualBox)','']
           });
           $("#9").typeahead({
             name:"list9",
@@ -281,11 +278,11 @@
           });
           $("#11").typeahead({
             name:"list11",
-            local : ['No','Yes','?','']
+            local : ['Yes','?','']
           });
           $("#12").typeahead({
             name:"list12",
-            local : ['Yes','?','']
+            local : ['?','']
           });
           $("#13").typeahead({
             name:"list13",
@@ -297,11 +294,11 @@
           });
           $("#15").typeahead({
             name:"list15",
-            local : ['?','']
+            local : ['?','No','Yes','']
           });
           $("#16").typeahead({
             name:"list16",
-            local : ['?','No','Yes','']
+            local : ['?','']
           });
           $("#17").typeahead({
             name:"list17",
@@ -313,19 +310,19 @@
           });
           $("#19").typeahead({
             name:"list19",
-            local : ['?','']
+            local : ['Yes','?','No','']
           });
           $("#20").typeahead({
             name:"list20",
-            local : ['Yes','?','No','']
+            local : ['?','']
           });
           $("#21").typeahead({
             name:"list21",
-            local : ['?','']
+            local : ['?','Yes','']
           });
           $("#22").typeahead({
             name:"list22",
-            local : ['Yes','No','?','']
+            local : ['?','']
           });
           $("#23").typeahead({
             name:"list23",
@@ -333,7 +330,7 @@
           });
           $("#24").typeahead({
             name:"list24",
-            local : ['?','']
+            local : ['?','Yes','No','']
           });
           $("#25").typeahead({
             name:"list25",
@@ -341,11 +338,11 @@
           });
           $("#26").typeahead({
             name:"list26",
-            local : ['?','Yes','No','']
+            local : ['?','']
           });
           $("#27").typeahead({
             name:"list27",
-            local : ['?','Yes','']
+            local : ['?','']
           });
           $("#28").typeahead({
             name:"list28",
@@ -353,7 +350,7 @@
           });
           $("#29").typeahead({
             name:"list29",
-            local : ['Yes','?','']
+            local : ['?','']
           });
           $("#30").typeahead({
             name:"list30",
@@ -373,7 +370,7 @@
           });
           $("#34").typeahead({
             name:"list34",
-            local : ['?','']
+            local : ['?','Yes','']
           });
           $("#35").typeahead({
             name:"list35",
@@ -385,7 +382,7 @@
           });
           $("#37").typeahead({
             name:"list37",
-            local : ['?','Yes','']
+            local : ['No','?','.sparseimage','']
           });
           $("#38").typeahead({
             name:"list38",
@@ -397,11 +394,11 @@
           });
           $("#40").typeahead({
             name:"list40",
-            local : ['No','?','.sparseimage','']
+            local : ['?','']
           });
           $("#41").typeahead({
             name:"list41",
-            local : ['?','']
+            local : ['Yes','?','']
           });
           $("#42").typeahead({
             name:"list42",
@@ -409,11 +406,11 @@
           });
           $("#43").typeahead({
             name:"list43",
-            local : ['?','']
+            local : ['?','Yes','']
           });
           $("#44").typeahead({
             name:"list44",
-            local : ['Yes','?','']
+            local : ['?','']
           });
           $("#45").typeahead({
             name:"list45",
@@ -421,7 +418,7 @@
           });
           $("#46").typeahead({
             name:"list46",
-            local : ['?','Yes','']
+            local : ['?','']
           });
           $("#47").typeahead({
             name:"list47",
@@ -445,23 +442,23 @@
           });
           $("#52").typeahead({
             name:"list52",
-            local : ['?','']
+            local : ['Yes','?','']
           });
           $("#53").typeahead({
             name:"list53",
-            local : ['Yes','No','read-only','up to v2','']
+            local : ['?','']
           });
           $("#54").typeahead({
             name:"list54",
-            local : ['?','']
+            local : ['Yes','?','No','']
           });
           $("#55").typeahead({
             name:"list55",
-            local : ['?','']
+            local : ['No','?','Yes','']
           });
           $("#56").typeahead({
             name:"list56",
-            local : ['Yes','?','']
+            local : ['?','']
           });
           $("#57").typeahead({
             name:"list57",
@@ -469,22 +466,6 @@
           });
           $("#58").typeahead({
             name:"list58",
-            local : ['Yes','?','No','']
-          });
-          $("#59").typeahead({
-            name:"list59",
-            local : ['No','?','Yes','']
-          });
-          $("#60").typeahead({
-            name:"list60",
-            local : ['?','']
-          });
-          $("#61").typeahead({
-            name:"list61",
-            local : ['?','']
-          });
-          $("#62").typeahead({
-            name:"list62",
             local : ['?','']
           });
     </script>

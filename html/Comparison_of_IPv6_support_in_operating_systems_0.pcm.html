@@ -26,16 +26,12 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>ND RDNSS : </label></br> <input id="1" type="text" name="Feature"></br>
+ 		 					<label>ND RDNSS :</label></br>
+ 		 					 <input type="radio" name="FeatureND RDNSS" value="oui">oui <input type="radio" name="FeatureND RDNSS" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>OS : </label></br> <input id="2" type="text" name="Feature"></br>
 							
-						</br>	
-							<label>OS :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >z</br>	
- 		 									<input type="checkbox" name="Feature" >VSE</br>	
- 		 									<input type="checkbox" name="Feature" >OS</br>	
- 		 									<input type="checkbox" name="Feature" >VM</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Version : </label></br> <input id="3" type="number" name="Feature"></br>
 							
@@ -44,43 +40,24 @@
  		 					 <input type="radio" name="FeatureInstalled by Default" value="oui">oui <input type="radio" name="FeatureInstalled by Default" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Claimed IPv6-ready : </label></br> <input id="5" type="text" name="Feature"></br>
+ 		 					<label>Claimed IPv6-ready :</label></br>
+ 		 					 <input type="radio" name="FeatureClaimed IPv6-ready" value="oui">oui <input type="radio" name="FeatureClaimed IPv6-ready" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>DHCPv6 :</label></br>
+ 		 					 <input type="radio" name="FeatureDHCPv6" value="oui">oui <input type="radio" name="FeatureDHCPv6" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Notes : </label></br> <input id="7" type="text" name="Feature"></br>
 							
-						</br>	
-							<label>DHCPv6 : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Notes :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >iOS supports stateless DHCPv6 since version 4 and stateful DHCPv6 since 4.3.1.</br>	
- 		 									<input type="checkbox" name="Feature" >RDNSS support available so long as NetworkManager uses IPv6 "Automatic" setting</br>	
- 		 									<input type="checkbox" name="Feature" > otherwise "rdnssd" package required.</br>	
- 		 									<input type="checkbox" name="Feature" >Via a third party TCP</br>	
- 		 									<input type="checkbox" name="Feature" >IP stack</br>	
- 		 									<input type="checkbox" name="Feature" > IP6</br>	
- 		 									<input type="checkbox" name="Feature" >VSE from Barnard Software</br>	
- 		 									<input type="checkbox" name="Feature" > Inc.</br>	
- 		 									<input type="checkbox" name="Feature" >Supports ND-RDNSS in Android 5.0 and above. Does not support DHCPv6. Suffers from intermittent loss of its unicast address on some phones.</br>	
- 		 									<input type="checkbox" name="Feature" >Versions 10.7 and later often prefer IPv4 even when working IPv6 connectivity is available.</br>	
- 		 									<input type="checkbox" name="Feature" >Support for RDNSS option as of 15.4(1)T</br>	
- 		 									<input type="checkbox" name="Feature" > 15.3(2)S.</br>	
- 		 									<input type="checkbox" name="Feature" >If the OEM explicitly unsets the SYSGEN_TCPIP6 pre-processor symbol</br>	
- 		 									<input type="checkbox" name="Feature" > the built image will not have any IPv6 capabilities.</br>	
- 		 									<input type="checkbox" name="Feature" >Windows XP users can use Dibbler</br>	
- 		 									<input type="checkbox" name="Feature" > an open source DHCPv6 implementation</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['','Yes','No','Addon','']
+            local : ['IBM i','MeeGo','Solaris','Windows NT','z/VSE','Windows Phone','HP-UX','Android','SUSE Linux Enterprise Server','Juniper JUNOS','OpenBSD','AlliedWare Plus','Fedora','Windows Mobile','z/OS','NetBSD','Red Hat Enterprise Linux','Cisco IOS','Mac OS X','webOS','FreeBSD','z/VM','OpenVMS','Ubuntu','iOS','Symbian','AIX','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','No','Addon','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Yes','Lite','Addon','No','','']
+            local : ['','iOS supports stateless DHCPv6 since version 4 and stateful DHCPv6 since 4.3.1.','RDNSS support available so long as NetworkManager uses IPv6 "Automatic" setting, otherwise "rdnssd" package required.','8 might have some support.','Via a third party TCP/IP stack, IP6/VSE from Barnard Software, Inc.','Supports ND-RDNSS in Android 5.0 and above. Does not support DHCPv6. Suffers from intermittent loss of its unicast address on some phones.','Private lab research. No privacy extensions (RFC4941).','RDNSS is only supported for rtadvd so far.','Versions 10.7 and later often prefer IPv4 even when working IPv6 connectivity is available.','Support for RDNSS option as of 15.4(1)T, 15.3(2)S.','If the OEM explicitly unsets the SYSGEN_TCPIP6 pre-processor symbol, the built image will not have any IPv6 capabilities.','rdnssd-win32 provides an open source implementation of ND RDNSS','RDNSS support introduced in JUNOS 14.1','Windows XP users can use Dibbler, an open source DHCPv6 implementation','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

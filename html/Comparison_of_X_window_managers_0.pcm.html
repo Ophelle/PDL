@@ -26,82 +26,60 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Type :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Tiling and stacking</br>	
- 		 									<input type="checkbox" name="Feature" >Compositing or Stacking</br>	
- 		 									<input type="checkbox" name="Feature" >Tiling and Stacking</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Themeable : </label></br> <input id="2" type="text" name="Feature"></br>
+							<label>Type : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Panel for window switching : </label></br> <input id="3" type="text" name="Feature"></br>
+ 		 					<label>Themeable :</label></br>
+ 		 					 <input type="radio" name="FeatureThemeable" value="oui">oui <input type="radio" name="FeatureThemeable" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Panel for window switching :</label></br>
+ 		 					 <input type="radio" name="FeaturePanel for window switching" value="oui">oui <input type="radio" name="FeaturePanel for window switching" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Language : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Language :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >C</br>	
- 		 									<input type="checkbox" name="Feature" > C++ (GTK+)</br>	
- 		 									<input type="checkbox" name="Feature" >Lisp</br>	
- 		 									<input type="checkbox" name="Feature" > C</br>	
- 		 									<input type="checkbox" name="Feature" > Lua</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>License :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >GPL</br>	
- 		 									<input type="checkbox" name="Feature" > LGPL</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Configurable titlebar buttons : </label></br> <input id="6" type="text" name="Feature"></br>
+							<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Graphical configuration : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Tabbed windows : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>ICCCM/EWMH compliant : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Hotkey : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Configurable titlebar buttons :</label></br>
+ 		 					 <input type="radio" name="FeatureConfigurable titlebar buttons" value="oui">oui <input type="radio" name="FeatureConfigurable titlebar buttons" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Graphical configuration :</label></br>
+ 		 					 <input type="radio" name="FeatureGraphical configuration" value="oui">oui <input type="radio" name="FeatureGraphical configuration" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Tabbed windows :</label></br>
+ 		 					 <input type="radio" name="FeatureTabbed windows" value="oui">oui <input type="radio" name="FeatureTabbed windows" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>ICCCM/EWMH compliant :</label></br>
+ 		 					 <input type="radio" name="FeatureICCCM/EWMH compliant" value="oui">oui <input type="radio" name="FeatureICCCM/EWMH compliant" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Hotkey :</label></br>
+ 		 					 <input type="radio" name="FeatureHotkey" value="oui">oui <input type="radio" name="FeatureHotkey" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Name : </label></br> <input id="11" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','third-party','can change colours','No','solid colors','']
+            local : ['Stacking','Tiling and stacking','Dynamic','Compositing','Tiling','re-parenting','Compositing or Stacking','stacking','Tiling and Stacking','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','There is a window list menu','','No','third-party','Gnome Shell','']
+            local : ['C (Clutter)','C (OpenGL)','C++','Common Lisp','C, C++ (GTK+)','C','Haskell','Lisp, C','Go','C, Lua','C++ (Qt)','C (FLTK)','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes','No','no titlebar buttons','','']
+            local : ['GPL','MIT License','WTFPL','MIT','BSD','Artistic','ISC','The Open Group Public License','LGPL with naming restrictions on modified versions','GPL, LGPL','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['No','third-party','Yes','','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['No','Yes','','primitive','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Yes','','EWMH compliance','EWMH','Partial','Yes / ?','No','through 0.65 / from 0.70','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['Yes','No','with bbkeys','','']
-          });
-          $("#8").typeahead({
-            name:"list8",
             local : ['PekWM','Enlightenment','twm','9wm','evilwm','Blackbox','Fluxbox','i3','Xfwm (Xfce)','Wingo','mwm (Motif Window Manager)','Mutter (GNOME/MeeGo)','Matchbox','Ion','Compiz','KWin (KDE)','Ratpoison','Metacity (GNOME)','Sawfish','WMFS','wmii','aewm','cwm','FLWM','IceWM','FVWM','awesome','JWM','xmonad','StumpWM','dwm','PlayWM','spectrwm','Openbox','sithWM','']
           });
     </script>

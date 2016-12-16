@@ -41,9 +41,9 @@
 							<label>Memory - Bus width (bit) : </label></br> <input id="5" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>TDP (Watts)GPU only : </label></br> <input id="6" type="number" name="Feature"></br>
+							<label>TDP (Watts)GPU only : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Memory (MB) : </label></br> <input id="7" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -72,13 +72,8 @@
 							<label>Clock rate - Boost (MHz) : </label></br> <input id="14" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Model :</label></br>
+							<label>Model : </label></br> <input id="15" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Radeon HD 8570M</br>	
- 		 									<input type="checkbox" name="Feature" >8650M</br>	
- 		 									<input type="checkbox" name="Feature" >Radeon HD 8550M</br>	
- 		 									<input type="checkbox" name="Feature" >8630M</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Memory - Bus type : </label></br> <input id="16" type="text" name="Feature"></br>
 							
@@ -105,10 +100,18 @@
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Mars','Mars XT','Mars XTX','Venus PRO','Venus XT','Neptune XT','Mars LP','Venus LE','Mars Pro','']
+            local : ['Unknown','100','']
           });
           $("#4").typeahead({
             name:"list4",
+            local : ['Radeon HD 8570M/8650M','Radeon HD 8770M','Radeon HD 8750M','Radeon HD 8670M','Radeon HD 8830M','Radeon HD 8550M/8630M','Radeon HD 8790M','Radeon HD 8850M','Radeon HD 8970M','Radeon HD 8870M','Radeon HD 8690M','Radeon HD 8730M','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['Mars','Mars XT','Mars XTX','Venus PRO','Venus XT','Neptune XT','Mars LP','Venus LE','Mars Pro','']
+          });
+          $("#6").typeahead({
+            name:"list6",
             local : ['Oland','Pitcairn','Cape Verde','']
           });
     </script>

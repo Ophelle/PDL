@@ -47,62 +47,62 @@ UFS (beta)</br>
  		 									<input type="checkbox" name="Feature" > NTFS (experimental)</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Mount or extract : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Hot transfer : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Operation model - Client–server : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Mount or extract :</label></br>
+ 		 					 <input type="radio" name="FeatureMount or extract" value="oui">oui <input type="radio" name="FeatureMount or extract" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Hot transfer :</label></br>
+ 		 					 <input type="radio" name="FeatureHot transfer" value="oui">oui <input type="radio" name="FeatureHot transfer" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Operation model - Client–server :</label></br>
+ 		 					 <input type="radio" name="FeatureOperation model - Client–server" value="oui">oui <input type="radio" name="FeatureOperation model - Client–server" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>User interface : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Operation model - Standalone : </label></br> <input id="6" type="text" name="Feature"></br>
+ 		 					<label>Operation model - Standalone :</label></br>
+ 		 					 <input type="radio" name="FeatureOperation model - Standalone" value="oui">oui <input type="radio" name="FeatureOperation model - Standalone" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Operation model - Offline
+(From a Live OS) :</label></br>
+ 		 					 <input type="radio" name="FeatureOperation model - Offline
+(From a Live OS)" value="oui">oui <input type="radio" name="FeatureOperation model - Offline
+(From a Live OS)" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>License : </label></br> <input id="8" type="text" name="Feature"></br>
 							
-						</br>	
-							<label>Operation model - Offline
-(From a Live OS) : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>License :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >BSD</br>	
- 		 									<input type="checkbox" name="Feature" >CDDL</br>	
- 		 									<input type="checkbox" name="Feature" >GNU</br>	
- 		 									<input type="checkbox" name="Feature" >others</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
  		 					<label>Sector by sector :</label></br>
  		 					 <input type="radio" name="FeatureSector by sector" value="oui">oui <input type="radio" name="FeatureSector by sector" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Operating system :</label></br>
+							<label>Operating system : </label></br> <input id="10" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 									<input type="checkbox" name="Feature" > Linux</br>	
- 		 									<input type="checkbox" name="Feature" > DOS</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Name :</label></br>
+							<label>Name : </label></br> <input id="11" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Redo Backup and Recovery</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['?','No','Yes','Through a hack','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['?','Yes','No','']
-          });
-          $("#3").typeahead({
-            name:"list3",
             local : ['Graphical','Command-line','Text-based','Text-based
 Command-line','Graphical
 Command-line','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['GPL','Shareware','Freeware','BSD/CDDL/GNU/others','Part of Mac OS X','Freemium','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Linux','OS X','Windows','Independent (Live OS)','Unix','Windows, Linux, DOS','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['partimage','Acronis True Image','Apple Software Restore','ntfsclone','Clonezilla','dd (Unix)','Mondo Rescue','Macrium Reflect','Ghost v15','FSArchiver','Disk Utility','GParted Live CD','Kleo Bare Metal Backup','Partition-Saving','PING','EASIS Drive Cloning','dcfldd','Image for Windows','Redo Backup and Recovery','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

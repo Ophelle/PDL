@@ -26,20 +26,24 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>.rtf : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>.rtf :</label></br>
+ 		 					 <input type="radio" name="Feature.rtf" value="oui">oui <input type="radio" name="Feature.rtf" value = "non">non </br>
+									
 						</br>	
-							<label>.html : </label></br> <input id="2" type="text" name="Feature"></br>
-							
+ 		 					<label>.html :</label></br>
+ 		 					 <input type="radio" name="Feature.html" value="oui">oui <input type="radio" name="Feature.html" value = "non">non </br>
+									
 						</br>	
-							<label>.djvu : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>.djvu :</label></br>
+ 		 					 <input type="radio" name="Feature.djvu" value="oui">oui <input type="radio" name="Feature.djvu" value = "non">non </br>
+									
 						</br>	
 							<label>Formats total # : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>.oeb : </label></br> <input id="5" type="text" name="Feature"></br>
-							
+ 		 					<label>.oeb :</label></br>
+ 		 					 <input type="radio" name="Feature.oeb" value="oui">oui <input type="radio" name="Feature.oeb" value = "non">non </br>
+									
 						</br>	
 							<label>Developer : </label></br> <input id="6" type="text" name="Feature"></br>
 							
@@ -50,19 +54,22 @@
  		 					<label>.mobi :</label></br>
  		 					 <input type="radio" name="Feature.mobi" value="oui">oui <input type="radio" name="Feature.mobi" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>.chm : </label></br> <input id="9" type="text" name="Feature"></br>
-							
+						</br>	
+ 		 					<label>.chm :</label></br>
+ 		 					 <input type="radio" name="Feature.chm" value="oui">oui <input type="radio" name="Feature.chm" value = "non">non </br>
+									
 						</br>	
  		 					<label>.epub :</label></br>
  		 					 <input type="radio" name="Feature.epub" value="oui">oui <input type="radio" name="Feature.epub" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>.pdf : </label></br> <input id="11" type="text" name="Feature"></br>
-							
 						</br>	
-							<label>.txt : </label></br> <input id="12" type="text" name="Feature"></br>
-							
+ 		 					<label>.pdf :</label></br>
+ 		 					 <input type="radio" name="Feature.pdf" value="oui">oui <input type="radio" name="Feature.pdf" value = "non">non </br>
+									
+						</br>	
+ 		 					<label>.txt :</label></br>
+ 		 					 <input type="radio" name="Feature.txt" value="oui">oui <input type="radio" name="Feature.txt" value = "non">non </br>
+									
 						</br>	
 							<label>.pdb : </label></br> <input id="13" type="text" name="Feature"></br>
 							
@@ -73,64 +80,33 @@
 							<label>.doc : </label></br> <input id="15" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>.fb2 : </label></br> <input id="16" type="text" name="Feature"></br>
-							
+ 		 					<label>.fb2 :</label></br>
+ 		 					 <input type="radio" name="Feature.fb2" value="oui">oui <input type="radio" name="Feature.fb2" value = "non">non </br>
+									
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','?','']
+            local : ['02+','07+','05+','11+','08+','09+','01+','04+','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','No','?','']
+            local : ['?','eBooks.com','Aldiko Limited','Mantano SAS','Moon+','Vadim Lopatin','Unidocs Inc.','FBReader.ORG Limited','Kobo eBooks','AK2','Alan.Neverland','AEL Data Services LLP','GigaMarket Ltd.','ZXStyles','Google Inc.','Obreey Products','Amazon Mobile LLC','Snapplify','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['No','Yes','?','']
+            local : ['Kindle','ezPDF Reader','Google Play Books','Mantano Ebook Reader','EBookDroid','Ebook Reader','iReader','Cool Reader','FBReader','Lektz eBook Reader','AlReader','Socio eReader','Moon+ reader Pro','Snapplify','ZXReader','PocketBook','Aldiko Book Reader','Kobo Books','BookBox','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['02+','07+','05+','11+','08+','09+','01+','04+','']
+            local : ['?','No','Yes','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['No','?','Yes','']
+            local : ['?','No','Yes','']
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['?','eBooks.com','Aldiko Limited','Mantano SAS','Moon+','Vadim Lopatin','Unidocs Inc.','FBReader.ORG Limited','Kobo eBooks','AK2','Alan.Neverland','AEL Data Services LLP','GigaMarket Ltd.','ZXStyles','Google Inc.','Obreey Products','Amazon Mobile LLC','Snapplify','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['Kindle','ezPDF Reader','Google Play Books','Mantano Ebook Reader','EBookDroid','Ebook Reader','iReader','Cool Reader','FBReader','Lektz eBook Reader','AlReader','Socio eReader','Moon+ reader Pro','Snapplify','ZXReader','PocketBook','Aldiko Book Reader','Kobo Books','BookBox','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['No','Yes','?','']
-          });
-          $("#9").typeahead({
-            name:"list9",
             local : ['No','?','Yes','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['Yes','?','No','']
-          });
-          $("#11").typeahead({
-            name:"list11",
-            local : ['?','No','Yes','']
-          });
-          $("#12").typeahead({
-            name:"list12",
-            local : ['?','No','Yes','']
-          });
-          $("#13").typeahead({
-            name:"list13",
-            local : ['No','?','Yes','']
-          });
-          $("#14").typeahead({
-            name:"list14",
-            local : ['Yes','No','?','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

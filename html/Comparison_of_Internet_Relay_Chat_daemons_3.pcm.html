@@ -26,18 +26,21 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Operator prefixing : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>RDBMS integration (SQL) : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Operator prefixing :</label></br>
+ 		 					 <input type="radio" name="FeatureOperator prefixing" value="oui">oui <input type="radio" name="FeatureOperator prefixing" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>RDBMS integration (SQL) :</label></br>
+ 		 					 <input type="radio" name="FeatureRDBMS integration (SQL)" value="oui">oui <input type="radio" name="FeatureRDBMS integration (SQL)" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>IRC daemon : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>vHost via I-line (or equivalent) : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>vHost via I-line (or equivalent) :</label></br>
+ 		 					 <input type="radio" name="FeaturevHost via I-line (or equivalent)" value="oui">oui <input type="radio" name="FeaturevHost via I-line (or equivalent)" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
  		 					<label>Halfop support
 (+h %) :</label></br>
  		 					 <input type="radio" name="FeatureHalfop support
@@ -45,65 +48,42 @@
 (+h %)" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Advanced operator ACL : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>i18n nicknames : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Founder/owner support
-(+q ~/.) : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Advanced operator ACL :</label></br>
+ 		 					 <input type="radio" name="FeatureAdvanced operator ACL" value="oui">oui <input type="radio" name="FeatureAdvanced operator ACL" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>i18n nicknames :</label></br>
+ 		 					 <input type="radio" name="Featurei18n nicknames" value="oui">oui <input type="radio" name="Featurei18n nicknames" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Founder/owner support
+(+q ~/.) :</label></br>
+ 		 					 <input type="radio" name="FeatureFounder/owner support
+(+q ~/.)" value="oui">oui <input type="radio" name="FeatureFounder/owner support
+(+q ~/.)" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Channel types : </label></br> <input id="9" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Operator "levels" : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Admin/protect support
-(+a/+u &/!/*) : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>Operator "levels" :</label></br>
+ 		 					 <input type="radio" name="FeatureOperator "levels"" value="oui">oui <input type="radio" name="FeatureOperator "levels"" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Admin/protect support
+(+a/+u &/!/*) :</label></br>
+ 		 					 <input type="radio" name="FeatureAdmin/protect support
+(+a/+u &/!/*)" value="oui">oui <input type="radio" name="FeatureAdmin/protect support
+(+a/+u &/!/*)" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Unknown','No','Yes','Module','']
+            local : ['ShadowIRCd','solid-ircd','ircd-ratbox','RockIRCd','ircu','IRCD-Hybrid','ithildin','OfficeIRC Server','PleXusIRCd','Bahamut','ConferenceRoom','bIRCd','pureIRCd','IRCD','RubIRCd','InspIRCd','miniircd','UnrealIRCd','Charybdis','WeIRCd','Nefarious IRCu','snircd','Synchronet IRCd','ngIRCd','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['MySQL  PostgreSQL: Third party modules','No','SQLite in services module','Old versions: MySQL, SQLite & PostgreSQL: Authorization, Services Integration, Logging, Operaccess','Partial','Unknown','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['ShadowIRCd','solid-ircd','ircd-ratbox','RockIRCd','ircu','IRCD-Hybrid','ithildin','OfficeIRC Server','PleXusIRCd','Bahamut','ConferenceRoom','bIRCd','pureIRCd','IRCD','RubIRCd','InspIRCd','miniircd','UnrealIRCd','Charybdis','WeIRCd','Nefarious IRCu','snircd','Synchronet IRCd','ngIRCd','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['No','Yes','Yes, vhost block in conf','Partial','Unknown','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['No','Yes','Third party module','Unknown','Partial','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['No','iso8859-1/2/7/8-I/9/16, windows-1250/1251, Multibyte','Unknown','Module','Partial','Yes','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['No','Yes','Module','Unknown','']
-          });
-          $("#8").typeahead({
-            name:"list8",
             local : ['#','# &','# %# & %&','# & ! +','+ # & !','# & +','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['No','Yes','Unknown','Module','Third party module (netadmins)','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['No','Yes','Module','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

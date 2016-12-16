@@ -44,32 +44,24 @@
  		 									<input type="checkbox" name="Feature" > S80)</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Version : </label></br> <input id="3" type="number" name="Feature"></br>
+							<label>Version : </label></br> <input id="3" type="text" name="Feature"></br>
 							
+						</br>	
+ 		 					<label>ECMA-376 :</label></br>
+ 		 					 <input type="radio" name="FeatureECMA-376" value="oui">oui <input type="radio" name="FeatureECMA-376" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>						</br>	
-							<label>ECMA-376 : </label></br> <input id="4" type="text" name="Feature"></br>
+							<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>License :</label></br>
+							<label>Developer : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >LGPL</br>	
- 		 									<input type="checkbox" name="Feature" > CDDL</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Developer :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Patrick Luby</br>	
- 		 									<input type="checkbox" name="Feature" > Edward Peterlin</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Notes : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>ISO/IEC 29500:2008 :</label></br>
+							<label>ISO/IEC 29500:2008 : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >ISO</br>	
- 		 									<input type="checkbox" name="Feature" >IEC 29500:2008</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -77,11 +69,23 @@
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','ECMA-376','']
+            local : ['1.3',''08','2.2.0','11.000','2.2.5','6.1','All versions','2009, 5.0.1272.101','3.0','2013, 2011 for Mac','9','Version','','X4 (2008)','3.0.0','']
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['GPL','Proprietary','MPL','LGPL','LGPL, CDDL','License','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Microsoft','IBM','Apple Inc.','DataViz','Free software community','ThinkFree Corp','OpenOffice.org','Sun Microsystems','Evermore Software','The Document Foundation','Patrick Luby, Edward Peterlin','Corel','Developer','Butler Software Solutions','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['','Notes','Import only','Full support via email','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['Yes','','ISO/IEC 29500:2008','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

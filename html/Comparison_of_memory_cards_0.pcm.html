@@ -105,16 +105,8 @@
  		 									<input type="checkbox" name="Feature" > 16 MB to 4 GB</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Varieties :</label></br>
+							<label>Varieties : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >3.3</br>	
- 		 									<input type="checkbox" name="Feature" >5 V</br>	
- 		 									<input type="checkbox" name="Feature" >RS-MMC</br>	
- 		 									<input type="checkbox" name="Feature" >MMC Mobile</br>	
- 		 									<input type="checkbox" name="Feature" >USB 1.1</br>	
- 		 									<input type="checkbox" name="Feature" >2.0</br>	
- 		 									<input type="checkbox" name="Feature" >3.0</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -123,6 +115,10 @@
           $("#2").typeahead({
             name:"list2",
             local : ['MultiMediaCard','CompactFlash','Secure Digital','SmartMedia','Memory Stick','XQD','xD','USB flash drive','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Micro (M2)','3.3/5 V','microSDHC','MMC','Standard','PRO','RS-MMC/MMC Mobile','SDHC','microSDXC','Duo','I','SD','PRO-HG Duo','Type H','II','PRO Duo','MMCmicro','SDXC','microSD','Type M','miniSD','USB 1.1/2.0/3.0','MMCplus','miniSDHC','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

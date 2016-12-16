@@ -26,52 +26,38 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Platform :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >MS Outlook add-in</br>	
- 		 									<input type="checkbox" name="Feature" > Microsoft Windows</br>	
- 		 									<input type="checkbox" name="Feature" >iOS and Mac OS X</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Client name :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >iCal Import</br>	
- 		 									<input type="checkbox" name="Feature" >Export CalDAV</br>	
- 		 									<input type="checkbox" name="Feature" >Calendars</br>	
- 		 									<input type="checkbox" name="Feature" >Reminders</br>	
- 		 									<input type="checkbox" name="Feature" >Contacts</br>	
- 		 									<input type="checkbox" name="Feature" >Mail</br>	
- 		 									<input type="checkbox" name="Feature" >Inverse SOGo Connector</br>	
- 		 									<input type="checkbox" name="Feature" >Integrator</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>CalDAV Tasks : </label></br> <input id="3" type="text" name="Feature"></br>
+							<label>Platform : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>CardDAV : </label></br> <input id="4" type="text" name="Feature"></br>
+							<label>Client name : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>License :</label></br>
+ 		 					<label>CalDAV Tasks :</label></br>
+ 		 					 <input type="radio" name="FeatureCalDAV Tasks" value="oui">oui <input type="radio" name="FeatureCalDAV Tasks" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>CardDAV :</label></br>
+ 		 					 <input type="radio" name="FeatureCardDAV" value="oui">oui <input type="radio" name="FeatureCardDAV" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >MPL</br>	
- 		 									<input type="checkbox" name="Feature" >GPL</br>	
- 		 									<input type="checkbox" name="Feature" >LGPL</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>CalDAV Events : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>CalDAV Events :</label></br>
+ 		 					 <input type="radio" name="FeatureCalDAV Events" value="oui">oui <input type="radio" name="FeatureCalDAV Events" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['N/A','Yes','No','?','']
+            local : ['Cross-platform JavaScript Web application','Microsoft Windows','Android App','Cross-platform','Mac OS X','MS Outlook add-in, Microsoft Windows','Cross-platform Thunderbird Add-on','Cross-platform Python','iOS and Mac OS X','Command-line','Cross-platform Kontact add-on','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['No','Yes','N/A','Cards via WebDAV','?','']
+            local : ['OpenProtocols Connector for Outlook','KCardDAV (discontinued)','CalDAV Tasksync free','Chandler Desktop','CardDavMATE','Evolution','AndroidCaldavSyncAdapater','Lightning','aCal','Mulberry','CardDAV-Sync','AgenDAV','CalendarSync','SurGATE Outlook Sync Client','pyCardDAV','Fantastical','iCal Import/Export CalDAV','CalDAV-Sync','Calendars/Reminders/Contacts/Mail','cadaver','Inverse SOGo Connector/Integrator','cFos Outlook DAV','ContactSync','InfCloud (CalDavZAP+CardDavMATE)','CalDavZAP','eM Client','BusyCal','Daylite','Contacts CardDAV Sync 2 Cloud','DAVdroid','jqCalDAV','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes','N/A','No','']
+            local : ['Proprietary','?','GPL','MPL/GPL/LGPL','AGPL','MIT','Apache','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

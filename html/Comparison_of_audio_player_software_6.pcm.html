@@ -29,11 +29,8 @@
 							<label>JuK : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Audio player :</label></br>
+							<label>Audio player : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >smil</br>	
- 		 									<input type="checkbox" name="Feature" >smi</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Amarok : </label></br> <input id="3" type="text" name="Feature"></br>
 							
@@ -47,8 +44,9 @@
 							<label>Media Jukebox : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>cmus : </label></br> <input id="7" type="text" name="Feature"></br>
-							
+ 		 					<label>cmus :</label></br>
+ 		 					 <input type="radio" name="Featurecmus" value="oui">oui <input type="radio" name="Featurecmus" value = "non">non </br>
+									
 						</br>	
 							<label>musikCube : </label></br> <input id="8" type="text" name="Feature"></br>
 							
@@ -68,14 +66,17 @@
 							<label>XMMS : </label></br> <input id="13" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>foobar2000 : </label></br> <input id="14" type="text" name="Feature"></br>
-							
+ 		 					<label>foobar2000 :</label></br>
+ 		 					 <input type="radio" name="Featurefoobar2000" value="oui">oui <input type="radio" name="Featurefoobar2000" value = "non">non </br>
+									
 						</br>	
-							<label>Audacious : </label></br> <input id="15" type="text" name="Feature"></br>
-							
+ 		 					<label>Audacious :</label></br>
+ 		 					 <input type="radio" name="FeatureAudacious" value="oui">oui <input type="radio" name="FeatureAudacious" value = "non">non </br>
+									
 						</br>	
-							<label>AIMP : </label></br> <input id="16" type="text" name="Feature"></br>
-							
+ 		 					<label>AIMP :</label></br>
+ 		 					 <input type="radio" name="FeatureAIMP" value="oui">oui <input type="radio" name="FeatureAIMP" value = "non">non </br>
+									
 						</br>	
 							<label>Rhapsody : </label></br> <input id="17" type="text" name="Feature"></br>
 							
@@ -95,7 +96,7 @@
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['?','','']
+            local : ['MIDI(rmi)','NSF','RealPix','QuickTime Video Effects in mov','SVG','Flash','','MIDI(kar)','MIDI(xmf)','smil/smi','MIDI(xmi)','MIDI(smf)','SPC','HTML+TIME(+VML)','PSF','']
           });
           $("#3").typeahead({
             name:"list3",
@@ -111,7 +112,7 @@
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['No','','']
+            local : ['?','','']
           });
           $("#7").typeahead({
             name:"list7",
@@ -139,30 +140,18 @@
           });
           $("#13").typeahead({
             name:"list13",
-            local : ['Yes (plugin)','No','?','','']
+            local : ['?','','']
           });
           $("#14").typeahead({
             name:"list14",
-            local : ['','No','Yes','']
+            local : ['?','','']
           });
           $("#15").typeahead({
             name:"list15",
-            local : ['No','','Yes','']
+            local : ['?','Yes','']
           });
           $("#16").typeahead({
             name:"list16",
-            local : ['?','','']
-          });
-          $("#17").typeahead({
-            name:"list17",
-            local : ['?','','']
-          });
-          $("#18").typeahead({
-            name:"list18",
-            local : ['?','Yes','']
-          });
-          $("#19").typeahead({
-            name:"list19",
             local : ['?','Yes (Winamp plugin)','','']
           });
     </script>

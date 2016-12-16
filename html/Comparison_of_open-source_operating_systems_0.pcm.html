@@ -29,89 +29,55 @@
 							<label>Kernel type : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Oldest non-EOL version : </label></br> <input id="2" type="number" name="Feature"></br>
-							
+ 		 					<label>Oldest non-EOL version :</label></br>
+ 		 					 <input type="radio" name="FeatureOldest non-EOL version" value="oui">oui <input type="radio" name="FeatureOldest non-EOL version" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Kernel thread support :</label></br>
+							<label>Kernel thread support : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >POSIX</br>	
- 		 									<input type="checkbox" name="Feature" > RTEID</br>	
- 		 									<input type="checkbox" name="Feature" >ORKID</br>	
- 		 									<input type="checkbox" name="Feature" > uITRON</br>	
- 		 									<input type="checkbox" name="Feature" >1:1</br>	
- 		 									<input type="checkbox" name="Feature" > M:N</br>	
- 		 									<input type="checkbox" name="Feature" > 1:M Cothread style.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>License :</label></br>
+							<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Menuet 64</br>	
- 		 									<input type="checkbox" name="Feature" > commerce excluded</br>	
- 		 									<input type="checkbox" name="Feature" >GPL</br>	
- 		 									<input type="checkbox" name="Feature" > LGPL</br>	
- 		 									<input type="checkbox" name="Feature" > LGPL; MIT</br>	
- 		 									<input type="checkbox" name="Feature" >LGPL</br>	
- 		 									<input type="checkbox" name="Feature" >BSD</br>	
- 		 									<input type="checkbox" name="Feature" >CDDL</br>	
- 		 									<input type="checkbox" name="Feature" >BSD; GPL</br>	
- 		 									<input type="checkbox" name="Feature" > LGPL software usually included</br>	
- 		 									<input type="checkbox" name="Feature" >modified GPL</br>	
- 		 									<input type="checkbox" name="Feature" > eCos</br>	
- 		 									<input type="checkbox" name="Feature" >Some GPL</br>	
- 		 									<input type="checkbox" name="Feature" > some BSD</br>	
- 		 									<input type="checkbox" name="Feature" > BSD</br>	
- 		 									<input type="checkbox" name="Feature" > Stanford</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Kernel programming language :</label></br>
+							<label>Kernel programming language : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >C and ASM with native support for other languages including C++ and Ada</br>	
- 		 									<input type="checkbox" name="Feature" >C</br>	
- 		 									<input type="checkbox" name="Feature" > C++</br>	
- 		 									<input type="checkbox" name="Feature" >ASM</br>	
- 		 									<input type="checkbox" name="Feature" > C</br>	
- 		 									<input type="checkbox" name="Feature" > Ada</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Name :</label></br>
+							<label>Name : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >L4</br>	
- 		 									<input type="checkbox" name="Feature" > Fiasco</br>	
- 		 									<input type="checkbox" name="Feature" > Pistachio</br>	
- 		 									<input type="checkbox" name="Feature" >E</br>	
- 		 									<input type="checkbox" name="Feature" >OS</br>	
- 		 									<input type="checkbox" name="Feature" >OpenSolaris</br>	
- 		 									<input type="checkbox" name="Feature" > OpenIndiana</br>	
- 		 									<input type="checkbox" name="Feature" >Darwin</br>	
- 		 									<input type="checkbox" name="Feature" > OpenDarwin</br>	
- 		 									<input type="checkbox" name="Feature" > PureDarwin</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>OS family :</label></br>
+							<label>OS family : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >BeOS</br>	
- 		 									<input type="checkbox" name="Feature" > Unix-like</br>	
- 		 									<input type="checkbox" name="Feature" >BSD</br>	
- 		 									<input type="checkbox" name="Feature" > Unix</br>	
- 		 									<input type="checkbox" name="Feature" > OS X</br>	
- 		 									<input type="checkbox" name="Feature" >own</br>	
- 		 									<input type="checkbox" name="Feature" >original</br>	
- 		 									<input type="checkbox" name="Feature" > Unix informed</br>	
- 		 									<input type="checkbox" name="Feature" >Unix-like</br>	
- 		 									<input type="checkbox" name="Feature" > BeOS</br>	
- 		 									<input type="checkbox" name="Feature" > AmigaOS</br>	
- 		 									<input type="checkbox" name="Feature" > POSIX</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Forks :</label></br>
+							<label>Forks : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Inferno</br>	
- 		 									<input type="checkbox" name="Feature" > Plan B</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['Hybrid','Monolithic with modules','Monolithic','Microkernel','','RTOS','Multiserver Microkernel (Hurd kernel) or Monolithic (Linux-libre kernel, fork of Linux kernel, and other kernels that it's not part of the GNU Project)','Kernel type','Exokernel','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['1:1','M:N','','POSIX, RTEID/ORKID, uITRON','1:1, M:N','Kernel thread support','1:1, 1:M Cothread style.','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Menuet 64, commerce excluded','CDDL','BSD','LPL','License','GPL, LGPL','MIT','GPL','GPL, LGPL; MIT','GPL/LGPL','BSD/CDDL','BSD; GPL, LGPL software usually included','APL','modified GPL, eCos','Some GPL, some BSD','modified GPL, BSD, Stanford','APSL','GPLv2','modified GPL','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['C','C and ASM with native support for other languages including C++ and Ada','C, C++','ASM, C','C, Ada','ASM','Kernel programming language','C++','Haskell','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['FreeRTOS','OpenBSD','L4, Fiasco, Pistachio','RTEMS','E/OS','Inferno','OpenSolaris, OpenIndiana','HelenOS','NetBSD','GNU','Linux','ReactOS','MINIX','Haiku','Plan 9','AuroraUX','AROS','eCos','FreeBSD','DragonFly BSD','Syllable','KolibriOS','MenuetOS','House','FreeDOS','Name','Darwin, OpenDarwin, PureDarwin','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['L4','BeOS, Unix-like','BSD, Unix-like','BSD, Unix, Unix-like, OS X','BeOS','own/original','Unix-like','Unix','RTOS','OS family','own, Unix informed','Windows-like','Unix-like, BeOS, AmigaOS, POSIX','Plan 9','MenuetOS','AmigaOS','DOS','']
+          });
+          $("#7").typeahead({
+            name:"list7",
+            local : ['','KolibriOS','Forks','TiltOS','OpenBSD','DragonFly BSD','MirOS','Linux','Inferno, Plan B','No','OzInferno','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

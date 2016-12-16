@@ -26,27 +26,20 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>C# : </label></br> <input id="1" type="text" name="Feature"></br>
+ 		 					<label>C# :</label></br>
+ 		 					 <input type="radio" name="FeatureC#" value="oui">oui <input type="radio" name="FeatureC#" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Java :</label></br>
+ 		 					 <input type="radio" name="FeatureJava" value="oui">oui <input type="radio" name="FeatureJava" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Methods and properties : </label></br> <input id="3" type="text" name="Feature"></br>
 							
-						</br>	
-							<label>Java : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Methods and properties :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Extension </br>	
- 		 									<input type="checkbox" name="Feature" > default methods</br>	
- 		 									<input type="checkbox" name="Feature" >Reference (input</br>	
- 		 									<input type="checkbox" name="Feature" >output) parameters</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','Non-virtual by default','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['No','Virtual by default','Yes','Default methods in Java 8','Yes;final parameters','']
+            local : ['Constant (immutable) parameters','Conditional methods','Sealing','Extension / default methods','Explicit interface implementation','Virtual methods','Partial methods','Generator methods','Optional arguments','Variadic methods','Reference (input/output) parameters','Value (input) parameters','Named arguments','Output (output) parameters','Static imports','Abstract','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -38,13 +38,8 @@
 							<label>Introduced : </label></br> <input id="4" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Lens mount :</label></br>
+							<label>Lens mount : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Arri PL</br>	
- 		 									<input type="checkbox" name="Feature" > Aaton universal</br>	
- 		 									<input type="checkbox" name="Feature" > or PV mount</br>	
- 		 									<input type="checkbox" name="Feature" >Arri PL and Nikon</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Weight :</label></br>
 							
@@ -77,6 +72,10 @@
           });
           $("#4").typeahead({
             name:"list4",
+            local : ['Arri PL','Arri bayonet (Arri PL for some later models)','Arri PL, Aaton universal, or PV mount','PV mount','Aaton universal','Arri PL and Nikon','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['Sync','']
           });
     </script>

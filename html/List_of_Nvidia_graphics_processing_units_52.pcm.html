@@ -47,18 +47,14 @@
 							
  		 								 		<input type="text"/></br>						</br>	
 							<label>Processing Power
-GFLOPS - Single precision : </label></br> <input id="5" type="number" name="Feature"></br>
+GFLOPS - Single precision : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Memory - Bus width (bit) : </label></br> <input id="6" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Core config :</label></br>
+							<label>Core config : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >0:2:4:2</br>	
- 		 									<input type="checkbox" name="Feature" >
-1:2:2:2 *:4:4:4</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Core clock (MHz) : </label></br> <input id="8" type="number" name="Feature"></br>
 							
@@ -90,25 +86,29 @@ GFLOPS - Single precision : </label></br> <input id="5" type="number" name="Feat
 							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="17" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Notes :</label></br>
+							<label>Notes : </label></br> <input id="18" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >DVI-I</br>	
- 		 									<input type="checkbox" name="Feature" > S-Video</br>	
- 		 									<input type="checkbox" name="Feature" >2× DisplayPort or 2× DVI-D</br>	
- 		 									<input type="checkbox" name="Feature" >2x DVI-I</br>	
- 		 									<input type="checkbox" name="Feature" > VGA</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Fillrate - Pixel (GP/s) : </label></br> <input id="19" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['GF119','2× NV17','NV18','NV17','G98','GT218','2×NV43','GK107','NV34GL','2×G98','MCP51','G86','NV44','']
+            local : ['48:8:4','','1:2:2:1','0:2:4:2','3:4:4:2','2× 0:2:4:2','2× 8:8:4','16:8:4','192:16:8
+(1 SMX)','0:2:4:2/
+1:2:2:2 *:4:4:4','8:8:4','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['GF119','2× NV17','NV18','NV17','G98','GT218','2×NV43','GK107','NV34GL','2×G98','MCP51','G86','NV44','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['NVS 400','NVS 290','NVS 310','NVS 200','NVS 280','NVS 50','NVS 295','NVS 300','NVS 510','NVS 210S','NVS 100','NVS 285','NVS 420','NVS 315','NVS 440','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['DMS-59','DVI-I, S-Video','2x DMS-59','4× miniDisplayPort','2× DisplayPort','2× DisplayPort or 2× DVI-D','LFH-60','DVI + VGA','through VHDCI to (4× DisplayPort or 4× DVI-D)','2x DVI-I, VGA, S-Video','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -26,12 +26,14 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Day/Night mode : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Styles (bold/italic/etc.) : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Day/Night mode :</label></br>
+ 		 					 <input type="radio" name="FeatureDay/Night mode" value="oui">oui <input type="radio" name="FeatureDay/Night mode" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Styles (bold/italic/etc.) :</label></br>
+ 		 					 <input type="radio" name="FeatureStyles (bold/italic/etc.)" value="oui">oui <input type="radio" name="FeatureStyles (bold/italic/etc.)" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Product : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
@@ -39,39 +41,42 @@
  		 					 <input type="radio" name="FeatureThemes" value="oui">oui <input type="radio" name="FeatureThemes" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Page Turn Effects : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Enable/Disable CSS : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Customize margins :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >None</br>	
- 		 									<input type="checkbox" name="Feature" > small</br>	
- 		 									<input type="checkbox" name="Feature" > large</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Indent paragraph : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Enable/Disable sleep mode : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Customize spacing: line/paragraph :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Line; pre-set choices only</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Multi-column mode : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Customize text alignment : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Brightness Control : </label></br> <input id="13" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Page Turn Effects :</label></br>
+ 		 					 <input type="radio" name="FeaturePage Turn Effects" value="oui">oui <input type="radio" name="FeaturePage Turn Effects" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Enable/Disable CSS :</label></br>
+ 		 					 <input type="radio" name="FeatureEnable/Disable CSS" value="oui">oui <input type="radio" name="FeatureEnable/Disable CSS" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Customize margins :</label></br>
+ 		 					 <input type="radio" name="FeatureCustomize margins" value="oui">oui <input type="radio" name="FeatureCustomize margins" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Indent paragraph :</label></br>
+ 		 					 <input type="radio" name="FeatureIndent paragraph" value="oui">oui <input type="radio" name="FeatureIndent paragraph" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Enable/Disable sleep mode :</label></br>
+ 		 					 <input type="radio" name="FeatureEnable/Disable sleep mode" value="oui">oui <input type="radio" name="FeatureEnable/Disable sleep mode" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Customize spacing: line/paragraph :</label></br>
+ 		 					 <input type="radio" name="FeatureCustomize spacing: line/paragraph" value="oui">oui <input type="radio" name="FeatureCustomize spacing: line/paragraph" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Multi-column mode :</label></br>
+ 		 					 <input type="radio" name="FeatureMulti-column mode" value="oui">oui <input type="radio" name="FeatureMulti-column mode" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Customize text alignment :</label></br>
+ 		 					 <input type="radio" name="FeatureCustomize text alignment" value="oui">oui <input type="radio" name="FeatureCustomize text alignment" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Brightness Control :</label></br>
+ 		 					 <input type="radio" name="FeatureBrightness Control" value="oui">oui <input type="radio" name="FeatureBrightness Control" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
  		 					<label>Enable/Disable hyphenation :</label></br>
  		 					 <input type="radio" name="FeatureEnable/Disable hyphenation" value="oui">oui <input type="radio" name="FeatureEnable/Disable hyphenation" value = "non">non </br>
 									
@@ -82,43 +87,7 @@
  		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','Using styles','Using themes','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Yes','Buggy','']
-          });
-          $("#3").typeahead({
-            name:"list3",
             local : ['iBooks','MegaReader','Stanza','Apabi Reader','Blio','Kobo Reading App','DL Reader','Bluefire Reader','eBookMobi','Marvin','PocketBook reader','Kindle','uBooks','i2Reader','Ebook Reader','KyBook','iBouquiniste','ShuBook','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','No','Configurable','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['No','Yes','Configurable','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['No','Yes','Configurable','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['No','Yes','(Disabled by default)','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['Yes','No','Configurable','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['Yes','Justification only','No','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['Yes','Vertical swipe','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -30,8 +30,9 @@
  		 					 <input type="radio" name="FeatureCode security" value="oui">oui <input type="radio" name="FeatureCode security" value = "non">non </br>
 									
 						</br>	
-							<label>Shared libraries : </label></br> <input id="2" type="text" name="Feature"></br>
-							
+ 		 					<label>Shared libraries :</label></br>
+ 		 					 <input type="radio" name="FeatureShared libraries" value="oui">oui <input type="radio" name="FeatureShared libraries" value = "non">non </br>
+									
 						</br>	
  		 					<label>Interpreter :</label></br>
  		 					 <input type="radio" name="FeatureInterpreter" value="oui">oui <input type="radio" name="FeatureInterpreter" value = "non">non </br>
@@ -41,13 +42,12 @@
  		 					 <input type="radio" name="FeatureJIT" value="oui">oui <input type="radio" name="FeatureJIT" value = "non">non </br>
 									
 						</br>	
-							<label>Precompilation : </label></br> <input id="5" type="text" name="Feature"></br>
-							
+ 		 					<label>Precompilation :</label></br>
+ 		 					 <input type="radio" name="FeaturePrecompilation" value="oui">oui <input type="radio" name="FeaturePrecompilation" value = "non">non </br>
+									
 						</br>	
-							<label>Memory management :</label></br>
+							<label>Memory management : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >automatic or manual</br>	
-								
 						</br>	
 							<label>Virtual machine : </label></br> <input id="7" type="text" name="Feature"></br>
 							
@@ -65,18 +65,14 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','?','']
+            local : ['automatic','automatic or manual','manual','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','?','No','source to bytecode','']
+            local : ['JikesRVM','Dalvik','DotGNU Portable.NET','CLR','Dis (Inferno)','Java Virtual Machine (JVM)','LLVM','Squeak','Parrot','Mono','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['JikesRVM','Dalvik','DotGNU Portable.NET','CLR','Dis (Inferno)','Java Virtual Machine (JVM)','LLVM','Squeak','Parrot','Mono','']
-          });
-          $("#4").typeahead({
-            name:"list4",
             local : ['register','stack','']
           });
     </script>

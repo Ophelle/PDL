@@ -26,32 +26,26 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>FOSS : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>FOSS :</label></br>
+ 		 					 <input type="radio" name="FeatureFOSS" value="oui">oui <input type="radio" name="FeatureFOSS" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Software license : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Active : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Active :</label></br>
+ 		 					 <input type="radio" name="FeatureActive" value="oui">oui <input type="radio" name="FeatureActive" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>ADC client : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','Active','']
+            local : ['ADC client','StrongDC++','DC++','AirDC++','FlylinkDC++','RSX++','EiskaltDC++','RevConnect','ApexDC++','LinuxDC++','AirDC++ nano','ncdc','jucy','TkDC++','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['ADC client','StrongDC++','DC++','AirDC++','FlylinkDC++','RSX++','EiskaltDC++','RevConnect','ApexDC++','LinuxDC++','AirDC++ nano','ncdc','jucy','TkDC++','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Yes','FOSS','']
-          });
-          $("#4").typeahead({
-            name:"list4",
             local : ['GNU GPL','Software license','MIT','BSD','']
           });
     </script>

@@ -26,14 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Southbridge :</label></br>
+							<label>Southbridge : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >MCP2
-MCP2-T
-MCP2-S</br>	
- 		 									<input type="checkbox" name="Feature" >R</br>	
- 		 									<input type="checkbox" name="Feature" >GB</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Processors Supported :</label></br>
 							
@@ -89,26 +83,33 @@ process (nm) : </label></br> <input id="10" type="text" name="Feature"></br>
  		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['3 GB','']
+            local : ['MCP2
+MCP2-T
+MCP2-S/R/GB','MCP2
+MCP2-T','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['nForce2 SPP','nForce2 400','nForce2 IGP','nForce2 Ultra 400','']
+            local : ['3 GB','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['AGP 8×','']
+            local : ['nForce2 SPP','nForce2 400','nForce2 IGP','nForce2 Ultra 400','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['GeForce 4 MX IGP','','']
+            local : ['AGP 8×','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['','']
+            local : ['GeForce 4 MX IGP','','']
           });
           $("#6").typeahead({
             name:"list6",
+            local : ['','']
+          });
+          $("#7").typeahead({
+            name:"list7",
             local : ['','']
           });
     </script>

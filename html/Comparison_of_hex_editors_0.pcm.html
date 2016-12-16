@@ -26,26 +26,28 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Linux : </label></br> <input id="1" type="text" name="Feature"></br>
+ 		 					<label>Linux :</label></br>
+ 		 					 <input type="radio" name="FeatureLinux" value="oui">oui <input type="radio" name="FeatureLinux" value = "non">non </br>
+									
+						</br>	
+ 		 					<label>Macintosh :</label></br>
+ 		 					 <input type="radio" name="FeatureMacintosh" value="oui">oui <input type="radio" name="FeatureMacintosh" value = "non">non </br>
+									
+						</br>	
+ 		 					<label>Console :</label></br>
+ 		 					 <input type="radio" name="FeatureConsole" value="oui">oui <input type="radio" name="FeatureConsole" value = "non">non </br>
+									
+						</br>	
+							<label>Software license : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Macintosh : </label></br> <input id="2" type="text" name="Feature"></br>
-							
+ 		 					<label>GUI :</label></br>
+ 		 					 <input type="radio" name="FeatureGUI" value="oui">oui <input type="radio" name="FeatureGUI" value = "non">non </br>
+									
 						</br>	
-							<label>Console : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Software license :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >GPL </br>	
- 		 									<input type="checkbox" name="Feature" > Free Software</br>	
-								
-						</br>	
-							<label>GUI : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Windows : </label></br> <input id="6" type="text" name="Feature"></br>
-							
+ 		 					<label>Windows :</label></br>
+ 		 					 <input type="radio" name="FeatureWindows" value="oui">oui <input type="radio" name="FeatureWindows" value = "non">non </br>
+									
 						</br>	
 							<label>Cost : </label></br> <input id="7" type="number" name="Feature"></br>
 							
@@ -107,23 +109,7 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','Yes (Source code)','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Yes','No','Yes (Mac OS X 10.6 and up)','Yes (680x0/PowerPC)','Yes (via MacPorts)','Yes (Homebrew)','Yes (MacPorts, Homebrew)','','Yes (Source code)','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','Yes','','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['No','Yes','','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes','Yes (Win98 and up)','Yes (WinNT4 and up)','Yes (Windows XP and up)','No','Yes (DOS, Win95 and up)','Yes (Win2000 and up)','Yes (Win95 and up)','Yes (any windows with Java 1.4 or more)','Yes (KDEWin)','Yes (Win95, WinNT4 and up)','Yes (Win2K and up)','Yes (Win2k and up)','Yes (msdos)','Yes (Source code)','']
+            local : ['Proprietary','Proprietary (Freeware)','none (web application)','GPL / Free Software','free (web application)','APL','BSD-3','MPL','Two-clause BSD license','MIT License','Proprietary (sourcecode included)','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

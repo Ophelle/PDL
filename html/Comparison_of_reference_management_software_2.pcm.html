@@ -34,8 +34,9 @@
  		 					 <input type="radio" name="FeatureBibTeX" value="oui">oui <input type="radio" name="FeatureBibTeX" value = "non">non </br>
 									
 						</br>	
-							<label>MODS XML : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>MODS XML :</label></br>
+ 		 					 <input type="radio" name="FeatureMODS XML" value="oui">oui <input type="radio" name="FeatureMODS XML" value = "non">non </br>
+									
 						</br>	
 							<label>Software : </label></br> <input id="4" type="text" name="Feature"></br>
 							
@@ -44,55 +45,20 @@
  		 					 <input type="radio" name="FeatureMedline" value="oui">oui <input type="radio" name="FeatureMedline" value = "non">non </br>
 									
 						</br>	
-							<label>RIS : </label></br> <input id="6" type="text" name="Feature"></br>
-							
+ 		 					<label>RIS :</label></br>
+ 		 					 <input type="radio" name="FeatureRIS" value="oui">oui <input type="radio" name="FeatureRIS" value = "non">non </br>
+									
 						</br>	
-							<label>Other :</label></br>
+							<label>Other : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >PDF</br>	
- 		 									<input type="checkbox" name="Feature" > PostScript</br>	
- 		 									<input type="checkbox" name="Feature" > HTML</br>	
- 		 									<input type="checkbox" name="Feature" > XML</br>	
- 		 									<input type="checkbox" name="Feature" > RTF</br>	
- 		 									<input type="checkbox" name="Feature" >Plain text</br>	
- 		 									<input type="checkbox" name="Feature" >COinS</br>	
- 		 									<input type="checkbox" name="Feature" > Delicious</br>	
- 		 									<input type="checkbox" name="Feature" >BibTeXML</br>	
- 		 									<input type="checkbox" name="Feature" > DocBook</br>	
- 		 									<input type="checkbox" name="Feature" > OpenDocument for OO.o</br>	
- 		 									<input type="checkbox" name="Feature" > SQL database</br>	
- 		 									<input type="checkbox" name="Feature" > user-customizable</br>	
- 		 									<input type="checkbox" name="Feature" >RDF</br>	
- 		 									<input type="checkbox" name="Feature" > TEI</br>	
- 		 									<input type="checkbox" name="Feature" > Wikipedia citation templates</br>	
- 		 									<input type="checkbox" name="Feature" > Endnote XML</br>	
- 		 									<input type="checkbox" name="Feature" > SRW XML via SRU</br>	
- 		 									<input type="checkbox" name="Feature" > unAPI</br>	
- 		 									<input type="checkbox" name="Feature" > Word XML</br>	
- 		 									<input type="checkbox" name="Feature" >EndNote XML</br>	
- 		 									<input type="checkbox" name="Feature" > CSL formatted HTML</br>	
- 		 									<input type="checkbox" name="Feature" >SRW XML via SRU web service</br>	
- 		 									<input type="checkbox" name="Feature" >MEDLARS</br>	
- 		 									<input type="checkbox" name="Feature" > TSV</br>	
- 		 									<input type="checkbox" name="Feature" > CSV</br>	
- 		 									<input type="checkbox" name="Feature" > Reference Manager XML</br>	
- 		 									<input type="checkbox" name="Feature" >Bookends</br>	
- 		 									<input type="checkbox" name="Feature" > PDF</br>	
- 		 									<input type="checkbox" name="Feature" >Endnote XML</br>	
- 		 									<input type="checkbox" name="Feature" > user customizable</br>	
-								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','Depends','']
+            local : ['BibSonomy','CiteULike','Bookends','Paperpile','Bibus','Biblioscape','refbase','Zotero','BibBase','Sente','Qiqqa','Referencer','RefWorks','RefDB','KBibTeX','Wikindx','Mendeley','Pybliographer','Papers','Aigaion','ReadCube','JabRef','Docear','WizFolio','SciRef','Bebop','BibDesk','colwiz','Citavi','EndNote','Reference Manager','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['BibSonomy','CiteULike','Bookends','Paperpile','Bibus','Biblioscape','refbase','Zotero','BibBase','Sente','Qiqqa','Referencer','RefWorks','RefDB','KBibTeX','Wikindx','Mendeley','Pybliographer','Papers','Aigaion','ReadCube','JabRef','Docear','WizFolio','SciRef','Bebop','BibDesk','colwiz','Citavi','EndNote','Reference Manager','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Yes','Depends','No','']
+            local : ['PDF, PostScript, HTML, XML, RTF','Plain text, RTF','COinS, Delicious','Ovid','none','No','BibTeXML, DocBook, OpenDocument for OO.o, SQL database, user-customizable','unAPI','RDF, TEI, Wikipedia citation templates, Endnote XML','various','user-customizable','SQLite','COinS, OpenDocument for OO.o, SRW XML via SRU, unAPI, Word XML','EndNote XML, CSL formatted HTML','SRW XML via SRU web service, DocBook, TEI','MEDLARS, TSV, CSV, Reference Manager XML, user-customizable','Endnote XML','Bookends, CSV, Endnote XML, PDF','various user-customizable','COinS','Endnote XML, user customizable','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

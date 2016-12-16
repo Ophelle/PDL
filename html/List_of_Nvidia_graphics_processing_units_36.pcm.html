@@ -47,9 +47,9 @@
 							<label>Core config : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Memory (MB) : </label></br> <input id="8" type="number" name="Feature"></br>
+							<label>Memory (MB) : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Clock speed - Memory (MT/s) : </label></br> <input id="9" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -57,13 +57,8 @@
  (GFLOPS) : </label></br> <input id="10" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Launch :</label></br>
+							<label>Launch : </label></br> <input id="11" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >October 23</br>	
- 		 									<input type="checkbox" name="Feature" > 2012</br>	
- 		 									<input type="checkbox" name="Feature" >March 22</br>	
- 		 									<input type="checkbox" name="Feature" >June 4</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>API support (version) - DirectX : </label></br> <input id="12" type="number" name="Feature"></br>
 							
@@ -110,17 +105,28 @@ PCIe 3.0 x16','']
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['2048','1024
+2048','1536
+3072','2048
+1536','4096','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['October 2012','October 23, 2012','March 22, 2012','April 2012','Apr 2012','Dec 2011','June 4, 2012','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['GK104 (N13E-GR)','GK107 (N13P-GT)','GF106 (N12E-GE2)
 GF116','GK104','GF114 (N13E-GS1-LP)','GK107 (N13P-GS)','GK107 (N13E-GE)','GF117 (N13M-GS)','GF108
 GK107 (N13P-LP)','GF108 (N13P-GL)
 GF117','GK104  (N13E-GSR)','GK104 (N13E-GTX)','GF119 (N13M-GE)','GF114 (N13E-GS1)','']
           });
-          $("#4").typeahead({
-            name:"list4",
+          $("#6").typeahead({
+            name:"list6",
             local : ['GeForce GTX 670M','GeForce GTX 680M','GeForce GTX 675MX','GeForce GT 630M','GeForce GT 645M','GeForce GTX 660M','GeForce GT 650M','GeForce GT 625M','GeForce GTX 680MX','GeForce GT 620M','GeForce GTX 670MX','GeForce GTX 675M','GeForce 610M','GeForce GT 640M LE','GeForce GT 640M','GeForce GT 635M','']
           });
-          $("#5").typeahead({
-            name:"list5",
+          $("#7").typeahead({
+            name:"list7",
             local : ['GF108: 94% of desktop GT630
 GK107: 47% of desktop GTX650','OEM. Die-Shrink GF108','OEM. Rebadged GT 520MX','67% of desktop GTX650','79% of desktop GTX650
 *','75% of desktop GTX 560Ti','72% of desktop GTX 680','73% of desktop GTX 560','79% of desktop GTX650','78% of desktop GTX 670','GF108: OEM. Rebadged GT 540M

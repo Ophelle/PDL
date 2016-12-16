@@ -42,57 +42,56 @@
  		 									<input type="checkbox" name="Feature" > SDIO ?</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Wireless Security - WPA : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Wireless Security - WEP : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Ad-Hoc mode : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>802.11 - ac : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Wireless Security - WPA2 : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Wireless Security - WPA :</label></br>
+ 		 					 <input type="radio" name="FeatureWireless Security - WPA" value="oui">oui <input type="radio" name="FeatureWireless Security - WPA" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Wireless Security - WEP :</label></br>
+ 		 					 <input type="radio" name="FeatureWireless Security - WEP" value="oui">oui <input type="radio" name="FeatureWireless Security - WEP" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Ad-Hoc mode :</label></br>
+ 		 					 <input type="radio" name="FeatureAd-Hoc mode" value="oui">oui <input type="radio" name="FeatureAd-Hoc mode" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>802.11 - ac :</label></br>
+ 		 					 <input type="radio" name="Feature802.11 - ac" value="oui">oui <input type="radio" name="Feature802.11 - ac" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Wireless Security - WPA2 :</label></br>
+ 		 					 <input type="radio" name="FeatureWireless Security - WPA2" value="oui">oui <input type="radio" name="FeatureWireless Security - WPA2" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Driver : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Master (AP) mode : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>802.11 - n : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>802.11 - g : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Monitor mode : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>802.11 - a : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>802.11 - b : </label></br> <input id="13" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>Master (AP) mode :</label></br>
+ 		 					 <input type="radio" name="FeatureMaster (AP) mode" value="oui">oui <input type="radio" name="FeatureMaster (AP) mode" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>802.11 - n :</label></br>
+ 		 					 <input type="radio" name="Feature802.11 - n" value="oui">oui <input type="radio" name="Feature802.11 - n" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>802.11 - g :</label></br>
+ 		 					 <input type="radio" name="Feature802.11 - g" value="oui">oui <input type="radio" name="Feature802.11 - g" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Monitor mode :</label></br>
+ 		 					 <input type="radio" name="FeatureMonitor mode" value="oui">oui <input type="radio" name="FeatureMonitor mode" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>802.11 - a :</label></br>
+ 		 					 <input type="radio" name="Feature802.11 - a" value="oui">oui <input type="radio" name="Feature802.11 - a" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>802.11 - b :</label></br>
+ 		 					 <input type="radio" name="Feature802.11 - b" value="oui">oui <input type="radio" name="Feature802.11 - b" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','?','Yes some issues in HAL, outdoor sensitivity?','No','']
-          });
-          $("#2").typeahead({
-            name:"list2",
             local : ['zd1211','ipw2200-ap','ath10k','ipw2100','islsm','orinoco','MadWifi','brcmsmac','ath9k','rndis_wlan','rt2x00','libertas','hostap','iwlwifi','carl9170','ath5k','rtl8187','iwlagn','acx1xx','ipw3945','zd1201','bcm43xx','adm8211','brcmfmac','prism54','ipw2200','p54','zd1211rw','b43','rtl8180','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','Yes','Experimental','Yes (since 2.6.31)','?','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','?','No','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

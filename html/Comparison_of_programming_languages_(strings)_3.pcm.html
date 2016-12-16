@@ -26,27 +26,18 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Language(s) :</label></br>
+							<label>Language(s) : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >C</br>	
- 		 									<input type="checkbox" name="Feature" > C++</br>	
- 		 									<input type="checkbox" name="Feature" > C#</br>	
- 		 									<input type="checkbox" name="Feature" > D</br>	
- 		 									<input type="checkbox" name="Feature" > F#</br>	
- 		 									<input type="checkbox" name="Feature" > Java</br>	
- 		 									<input type="checkbox" name="Feature" > Ocaml</br>	
- 		 									<input type="checkbox" name="Feature" > Perl</br>	
- 		 									<input type="checkbox" name="Feature" > Python</br>	
- 		 									<input type="checkbox" name="Feature" > JavaScript</br>	
- 		 									<input type="checkbox" name="Feature" > Mathematica</br>	
- 		 									<input type="checkbox" name="Feature" > Ya</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Syntax : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['C, C++, C#, D, F#, Java, Ocaml, Perl, Python, JavaScript, Mathematica, Ya','Smalltalk','Windows Powershell','REBOL','Eiffel','FreeBASIC','']
+          });
+          $("#2").typeahead({
+            name:"list2",
             local : ['','']
           });
     </script>

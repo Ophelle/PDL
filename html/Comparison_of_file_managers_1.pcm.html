@@ -26,66 +26,48 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Unix : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>Unix :</label></br>
+ 		 					 <input type="radio" name="FeatureUnix" value="oui">oui <input type="radio" name="FeatureUnix" value = "non">non </br>
+									
 						</br>	
-							<label>BSD : </label></br> <input id="2" type="text" name="Feature"></br>
-							
+ 		 					<label>BSD :</label></br>
+ 		 					 <input type="radio" name="FeatureBSD" value="oui">oui <input type="radio" name="FeatureBSD" value = "non">non </br>
+									
 						</br>	
 							<label>File manager : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Mac OS X : </label></br> <input id="4" type="text" name="Feature"></br>
-							
+ 		 					<label>Mac OS X :</label></br>
+ 		 					 <input type="radio" name="FeatureMac OS X" value="oui">oui <input type="radio" name="FeatureMac OS X" value = "non">non </br>
+									
 						</br>	
  		 					<label>Linux :</label></br>
  		 					 <input type="radio" name="FeatureLinux" value="oui">oui <input type="radio" name="FeatureLinux" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>AmigaOS : </label></br> <input id="6" type="text" name="Feature"></br>
-							
 						</br>	
-							<label>OS/2 & eCS : </label></br> <input id="7" type="text" name="Feature"></br>
-							
+ 		 					<label>AmigaOS :</label></br>
+ 		 					 <input type="radio" name="FeatureAmigaOS" value="oui">oui <input type="radio" name="FeatureAmigaOS" value = "non">non </br>
+									
+						</br>	
+ 		 					<label>OS/2 & eCS :</label></br>
+ 		 					 <input type="radio" name="FeatureOS/2 & eCS" value="oui">oui <input type="radio" name="FeatureOS/2 & eCS" value = "non">non </br>
+									
 						</br>	
  		 					<label>DOS :</label></br>
  		 					 <input type="radio" name="FeatureDOS" value="oui">oui <input type="radio" name="FeatureDOS" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Windows : </label></br> <input id="9" type="text" name="Feature"></br>
-							
+						</br>	
+ 		 					<label>Windows :</label></br>
+ 		 					 <input type="radio" name="FeatureWindows" value="oui">oui <input type="radio" name="FeatureWindows" value = "non">non </br>
+									
 						</br>	
  		 					<label>OpenVMS :</label></br>
  		 					 <input type="radio" name="FeatureOpenVMS" value="oui">oui <input type="radio" name="FeatureOpenVMS" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>		<script>
+		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','?','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['No','Yes','?','']
-          });
-          $("#3").typeahead({
-            name:"list3",
             local : ['File Commander','Xandros File Manager','Xfile','Midnight Commander','Krusader','Thunar','DOS Navigator','emelFM2','Dired','PCManFM','ROX-Filer','Double Commander','Xfm','Konqueror','ZTreeWin','Volkov Commander','muCommander','Nautilus','GNOME Commander','Dolphin','Xfe','PathMinder','Directory Opus','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['No','Yes','','Needs POSIX-compliant platform','Needs X','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['No','Yes','?','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Needs POSIX-compliant platform','Yes','No','Needs X','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['No','Needs X','Yes','','Needs KDE','Needs POSIX-compliant platform','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

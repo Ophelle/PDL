@@ -38,9 +38,9 @@
 							<label>Memory Configuration - Bus width (bit) : </label></br> <input id="4" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Memory (MB) : </label></br> <input id="5" type="number" name="Feature"></br>
+							<label>Memory (MB) : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Clock rate - Core (MHz) : </label></br> <input id="6" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -68,17 +68,28 @@
 							<label>TDP (watts) : </label></br> <input id="14" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Comments :</label></br>
+							<label>Comments : </label></br> <input id="15" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Palit and EVGA launched 2GB versions. EVGA GTX285 Classified can support 4-way SLI</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Memory Configuration - DRAM type : </label></br> <input id="16" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Launch : </label></br> <input id="17" type="number" name="Feature"></br>
+							<label>Launch :</label></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+ 		 									<input type="checkbox" name="Feature" >January 15</br>	
+ 		 									<input type="checkbox" name="Feature" > 2009</br>	
+ 		 									<input type="checkbox" name="Feature" >November 17</br>	
+ 		 									<input type="checkbox" name="Feature" >June 16</br>	
+ 		 									<input type="checkbox" name="Feature" > 2008</br>	
+ 		 									<input type="checkbox" name="Feature" >November 26</br>	
+ 		 									<input type="checkbox" name="Feature" >June 17</br>	
+ 		 									<input type="checkbox" name="Feature" >October 12</br>	
+ 		 									<input type="checkbox" name="Feature" >September 16</br>	
+ 		 									<input type="checkbox" name="Feature" >April 9</br>	
+ 		 									<input type="checkbox" name="Feature" >March 3</br>	
+ 		 									<input type="checkbox" name="Feature" >January 8</br>	
+ 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
 							<label>Die Count : </label></br> <input id="18" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -108,16 +119,25 @@ PCI','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['96:48:12','48:24:16','96:32:8','16:8:4','128:64:16','8:4:4','240:80:32','240:80:28','Core config','112:56:16','192:64:28','2x 240:80:28','216:72:28','48:16:8','']
+            local : ['','Replaced by GTX 260 Core 216','Some cards are rebranded GeForce 9800 GTX+','Comments','OEM only','Effectively one-half of the GTX 295','Replaced by GTX 285','Palit and EVGA launched 2GB versions. EVGA GTX285 Classified can support 4-way SLI','Dual PCB models were phased out in favor of a single PCB model with 2 GPUs','']
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['96:48:12','48:24:16','96:32:8','16:8:4','128:64:16','8:4:4','240:80:32','240:80:28','Core config','112:56:16','192:64:28','2x 240:80:28','216:72:28','48:16:8','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Memory (MB)','512','512
+1024','2x 896','1024','1024 (2048*)','896 (1792)','896','1536','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['GT218','GT200-400-B3','G92b','Code name','G92a
 G92b','GT218-325-B1','GT200-100-A2','GT200-350-B3','GT215','G92-428-B1','GT216','GT200-103-A2
 GT200-105-B3','GT200-300-A2','G94b','']
           });
-          $("#4").typeahead({
-            name:"list4",
+          $("#6").typeahead({
+            name:"list6",
             local : ['Model','GeForce GTX 260 Core 216','GeForce GTX 280','GeForce GTX 285','GeForce GT 230 v.2','GeForce 210','GeForce GTS 250','GeForce GT 230 v.1','GeForce GTS 240','GeForce GT 220','GeForce GTX 295','GeForce 205','GeForce GTS 250 Green','GeForce GT 240','GeForce GTX 275','GeForce GTX 260','']
           });
     </script>

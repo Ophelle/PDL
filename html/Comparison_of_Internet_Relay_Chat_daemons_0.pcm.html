@@ -26,76 +26,50 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Basis :</label></br>
+							<label>Basis : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >charybdis 3.1.x</br>	
- 		 									<input type="checkbox" name="Feature" >trunk</br>	
- 		 									<input type="checkbox" name="Feature" >Hybrid 7 and Bahamut</br>	
- 		 									<input type="checkbox" name="Feature" >ircd-ratbox</br>	
- 		 									<input type="checkbox" name="Feature" > IRCD-Hybrid</br>	
- 		 									<input type="checkbox" name="Feature" > ircu</br>	
- 		 									<input type="checkbox" name="Feature" > ShadowIRCd</br>	
- 		 									<input type="checkbox" name="Feature" >DreamForge</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>First public release : </label></br> <input id="2" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Programming language :</label></br>
+							<label>Programming language : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >C</br>	
- 		 									<input type="checkbox" name="Feature" > C++</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>IRC daemon : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Creator/network :</label></br>
+							<label>Creator/network : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Sirius</br>	
- 		 									<input type="checkbox" name="Feature" > Y4kuzi</br>	
- 		 									<input type="checkbox" name="Feature" >Chris Williams</br>	
- 		 									<input type="checkbox" name="Feature" > Hinrik Örn Sigurðsson</br>	
- 		 									<input type="checkbox" name="Feature" >Evilnet Development</br>	
- 		 									<input type="checkbox" name="Feature" > AfterNET</br>	
- 		 									<input type="checkbox" name="Feature" >Yusuf Iskenderoglu</br>	
- 		 									<input type="checkbox" name="Feature" > Ekim Engin</br>	
- 		 									<input type="checkbox" name="Feature" > Dimitris Ginosatiris</br>	
- 		 									<input type="checkbox" name="Feature" > Maksut Cagil</br>	
- 		 									<input type="checkbox" name="Feature" > Burak Cifter</br>	
- 		 									<input type="checkbox" name="Feature" >ircd-hybrid Development Team</br>	
- 		 									<input type="checkbox" name="Feature" > OFTC</br>	
- 		 									<input type="checkbox" name="Feature" > EFnet</br>	
- 		 									<input type="checkbox" name="Feature" >Jarkko Oikarinen</br>	
- 		 									<input type="checkbox" name="Feature" > IRCnet</br>	
- 		 									<input type="checkbox" name="Feature" >Aaron Sethman</br>	
- 		 									<input type="checkbox" name="Feature" > Lee Hardy</br>	
- 		 									<input type="checkbox" name="Feature" >Toshi Morita</br>	
- 		 									<input type="checkbox" name="Feature" > Juan Baez</br>	
- 		 									<input type="checkbox" name="Feature" >Gabriel Baez</br>	
- 		 									<input type="checkbox" name="Feature" >Taros</br>	
- 		 									<input type="checkbox" name="Feature" > jdhore</br>	
- 		 									<input type="checkbox" name="Feature" > jilles</br>	
- 		 									<input type="checkbox" name="Feature" > nenolod</br>	
- 		 									<input type="checkbox" name="Feature" >Rizon</br>	
- 		 									<input type="checkbox" name="Feature" > thaprince</br>	
- 		 									<input type="checkbox" name="Feature" > static</br>	
- 		 									<input type="checkbox" name="Feature" >Office IRC Inc</br>	
- 		 									<input type="checkbox" name="Feature" > Paul Heinlein</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Software license :</label></br>
+							<label>Software license : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >GPL</br>	
- 		 									<input type="checkbox" name="Feature" >BSD</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Latest version (numeric 351) : </label></br> <input id="7" type="number" name="Feature"></br>
+							<label>Latest version (numeric 351) : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>		<script>
+		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['dancer-ircd 1.0.35+pre2','from scratch','charybdis 3.1.x/trunk','Hybrid 7-rc1','POE::Component::Server::IRC','Charybdis','irc2.7','Hybrid 7 and Bahamut','EliteIRCd (potvin)','Bahamut','DreamForge 2.8','ShadowIRCD','irc2.8.mu3','ircu2.10.12','ircd-ratbox, IRCD-Hybrid, ircu, ShadowIRCd','DreamForge, IRCD-Hybrid','Hybrid 6','ircu','DreamForge','Titan','ircu2.10.12.14','Pure-IRCD (VB6 version)','Hybrid 7.2.3','irc2.8','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['C','Visual Basic','Delphi','C, C++','Python','C++','mSL','QuickBASIC','VB.NET','Perl','Ruby','JavaScript','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['WeIRCd','ProvisionIRCd','RockIRCd','hyperion','Charybdis','DreamForge','PleXusIRCd','Faerion IRC Server','Bahamut','Viagra IRCd','ircd-ratbox','ngIRCd','snircd','TR-IRCd','ithildin','miniircd','bIRCd','UnrealIRCd','Elemental-IRCd','pureIRCd','ircd-hybrid','Pocosi','ShadowIRCd','ircu','Synchronet IRCd','dancer-ircd','ircd-seven','ignitionServer','InspIRCd','OfficeIRC Server','RubIRCd','UltimateIRCd','solid-ircd','beware ircd','Asuka','Nefarious IRCu','IRCd','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Sirius, Y4kuzi','Chris Williams, Hinrik Örn Sigurðsson','Dennis Fisch aka Diligent','The Ignition Project','Evilnet Development, AfterNET','','Joel Rosdahl','Yusuf Iskenderoglu, Ekim Engin, Dimitris Ginosatiris, Maksut Cagil, Burak Cifter','DAMnet','ircd-hybrid Development Team, OFTC, EFnet','Jarkko Oikarinen, IRCnet','Alex Barton','beware','Mike Chambers','Chris Schiffner','Eloxoph IRC Network','Aaron Sethman, Lee Hardy, EFnet','freenode','Toshi Morita, Juan Baez,Gabriel Baez','Chip Norkus','Taros, jdhore, jilles, nenolod','Lloyd Dilley','DALnet','InspIRCd Development Team','Undernet Coder Committee','Randy E. Sommerfeld','Rizon, thaprince, static','UnrealIRCd Team','QuakeNet Dev Team','vhex','atheme.org (nenolod, jilles, dwr, gxti)','ShadowRealm Creations','Office IRC Inc, Paul Heinlein','QuakeNet','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['GPL','GPL2','GPL/BSD','BSD','Proprietary','Artistic','GPL v1','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['3.0.2  (now unmaintained)','2.0.5 QU10','? (replaced by bahamut)','hybrid-7.2.3+plexus-3.0.1(20090612_0-523)','beware1.6','6.6.2','0.02 (1.53 of POE::Component::Server::IRC)','Unknown','solid-ircd 3.4.8','? (replaced by hyperion)','1.2.1 (now replaced by snircd)','2.11.2','8.2.8','SynchronetIRCd-1.3a(1.151)','? (replaced by ircd-seven)','0.8.2 (now unmaintained)','bIRCd-2.1.0rc4','ignitionServer-0.3.6-P1','1.1','0.1a-maiden voyage','Unreal3.2.10.4','2.2','2.0.19','charybdis-3.4.2','ircd-ratbox-3.0.7','stable','1.3.4a','1.17.7.1','u2.10.12.14','ngircd-19.1','1.0.0-testing','u2.10.12.14+Nefarious(2.0.0)','6.3.3','bahamut-2.0.5','0.4','1.3.3 (now unmaintained)','5.6.1','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -29,31 +29,34 @@
 							<label>Organization : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>RPNs : </label></br> <input id="2" type="number" name="Feature"></br>
+							<label>RPNs : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Sounds banks available : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Simultaneous melodic voices : </label></br> <input id="4" type="number" name="Feature"></br>
+							<label>Simultaneous melodic voices :</label></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+ 		 									<input type="checkbox" name="Feature" >N</br>	
+ 		 									<input type="checkbox" name="Feature" >A
+XG synths have no separate limits on melodic </br>	
+ 		 									<input type="checkbox" name="Feature" > percussion sounds</br>	
+ 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
 							<label>Simultaneous voices : </label></br> <input id="5" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
 							<label>Melodic instruments : </label></br> <input id="6" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Special CC : </label></br> <input id="7" type="number" name="Feature"></br>
+							<label>Special CC : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Entry date : </label></br> <input id="8" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Channel recommendations :</label></br>
+							<label>Channel recommendations : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >#1: melody; #2: melody (duet); #3: bass; #4: pad; #5: riff; #10: drums</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>MIDI channels allocation :</label></br>
 							
@@ -71,21 +74,26 @@
  		 									<input type="checkbox" name="Feature" > every channel can play drum kits with Bank Select MSB (CC#0) set to 7FH</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Parametric effect CC : </label></br> <input id="11" type="number" name="Feature"></br>
+							<label>Parametric effect CC : </label></br> <input id="11" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Drum kits : </label></br> <input id="12" type="number" name="Feature"></br>
+						</br>	
+							<label>Drum kits : </label></br> <input id="12" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Drum sounds per kit : </label></br> <input id="13" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Simultaneous percussion voices : </label></br> <input id="14" type="number" name="Feature"></br>
+							<label>Simultaneous percussion voices :</label></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>SysEx messages : </label></br> <input id="15" type="number" name="Feature"></br>
+ 		 									<input type="checkbox" name="Feature" >N</br>	
+ 		 									<input type="checkbox" name="Feature" >A
+XG synths have no separate limits on melodic </br>	
+ 		 									<input type="checkbox" name="Feature" > percussion sounds</br>	
+ 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
+							<label>SysEx messages : </label></br> <input id="15" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Controls available : </label></br> <input id="16" type="text" name="Feature"></br>
 							
 						</br>	
@@ -98,14 +106,38 @@
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Sounds banks available','']
+            local : ['','5','6 (GM+1)','0','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Controls available','']
+            local : ['Sounds banks available','']
           });
           $("#4").typeahead({
             name:"list4",
+            local : ['6 (MT32+4)','','2','6 (GM)','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['','#1: melody; #2: melody (duet); #3: bass; #4: pad; #5: riff; #10: drums','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['16 (GM+11)','4','51 (GM+46)','5','12 (GM+7)','']
+          });
+          $("#7").typeahead({
+            name:"list7",
+            local : ['9 + 2 SFX kits','8 + 1 SFX kit','34 + 2 SFX kits','9','35 + 2 SFX kits','1','']
+          });
+          $("#8").typeahead({
+            name:"list8",
+            local : ['14','','2','']
+          });
+          $("#9").typeahead({
+            name:"list9",
+            local : ['Controls available','']
+          });
+          $("#10").typeahead({
+            name:"list10",
             local : ['Minimum equipment requirements','']
           });
     </script>

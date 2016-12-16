@@ -35,13 +35,8 @@
 							<label>Version : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>CPU :</label></br>
+							<label>CPU : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >486</br>	
- 		 									<input type="checkbox" name="Feature" > 33 MHz</br>	
- 		 									<input type="checkbox" name="Feature" >386</br>	
- 		 									<input type="checkbox" name="Feature" > 25 MHz</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>RAM - Minimum : </label></br> <input id="5" type="text" name="Feature"></br>
 							
@@ -62,6 +57,10 @@
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['133 MHz','233 MHz','1 GHz','1.4 GHz (x86-64)','700 MHz Itanium','1 GHz (x86) or 1.4 GHz (x64)','486, 33 MHz','386, 25 MHz','800 MHz','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['500 MB','20 GB 
 (~6.5 GB for OS)','90 MB','10 GB','6 GB','15 GB 
 (~6.5 GB for OS)','','650 MB','110 MB','16 GB 

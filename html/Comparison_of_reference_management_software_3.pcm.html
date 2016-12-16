@@ -30,8 +30,9 @@
  		 					 <input type="radio" name="FeatureEndnote/Refer/BibIX" value="oui">oui <input type="radio" name="FeatureEndnote/Refer/BibIX" value = "non">non </br>
 									
 						</br>	
-							<label>Copac : </label></br> <input id="2" type="text" name="Feature"></br>
-							
+ 		 					<label>Copac :</label></br>
+ 		 					 <input type="radio" name="FeatureCopac" value="oui">oui <input type="radio" name="FeatureCopac" value = "non">non </br>
+									
 						</br>	
  		 					<label>Ovid :</label></br>
  		 					 <input type="radio" name="FeatureOvid" value="oui">oui <input type="radio" name="FeatureOvid" value = "non">non </br>
@@ -49,8 +50,9 @@
  		 					 <input type="radio" name="FeatureCSA" value="oui">oui <input type="radio" name="FeatureCSA" value = "non">non </br>
 									
 						</br>	
-							<label>MODS XML : </label></br> <input id="7" type="text" name="Feature"></br>
-							
+ 		 					<label>MODS XML :</label></br>
+ 		 					 <input type="radio" name="FeatureMODS XML" value="oui">oui <input type="radio" name="FeatureMODS XML" value = "non">non </br>
+									
 						</br>	
  		 					<label>BibTeX :</label></br>
  		 					 <input type="radio" name="FeatureBibTeX" value="oui">oui <input type="radio" name="FeatureBibTeX" value = "non">non </br>
@@ -67,56 +69,20 @@
  		 					 <input type="radio" name="FeatureSciFinder" value="oui">oui <input type="radio" name="FeatureSciFinder" value = "non">non </br>
 									
 						</br>	
-							<label>ISI : </label></br> <input id="12" type="text" name="Feature"></br>
-							
+ 		 					<label>ISI :</label></br>
+ 		 					 <input type="radio" name="FeatureISI" value="oui">oui <input type="radio" name="FeatureISI" value = "non">non </br>
+									
 						</br>	
-							<label>Other :</label></br>
+							<label>Other : </label></br> <input id="13" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >BibTexML</br>	
- 		 									<input type="checkbox" name="Feature" > Biblioscape</br>	
- 		 									<input type="checkbox" name="Feature" > Biomail</br>	
- 		 									<input type="checkbox" name="Feature" > Inspec</br>	
- 		 									<input type="checkbox" name="Feature" > JSTOR</br>	
- 		 									<input type="checkbox" name="Feature" > MSBib</br>	
- 		 									<input type="checkbox" name="Feature" > PDF widh XMP annotations</br>	
- 		 									<input type="checkbox" name="Feature" > REPEC (NEP)</br>	
- 		 									<input type="checkbox" name="Feature" > SilverPlatter</br>	
- 		 									<input type="checkbox" name="Feature" > SixPack</br>	
- 		 									<input type="checkbox" name="Feature" >Dublin Core</br>	
- 		 									<input type="checkbox" name="Feature" > Marc21 SUTRS</br>	
- 		 									<input type="checkbox" name="Feature" >Endnote ENW</br>	
- 		 									<input type="checkbox" name="Feature" > Endnote XML</br>	
- 		 									<input type="checkbox" name="Feature" > CHM eBook</br>	
- 		 									<input type="checkbox" name="Feature" > PDF</br>	
- 		 									<input type="checkbox" name="Feature" >COinS</br>	
- 		 									<input type="checkbox" name="Feature" > MARC</br>	
- 		 									<input type="checkbox" name="Feature" > RDF</br>	
- 		 									<input type="checkbox" name="Feature" > unAPI</br>	
- 		 									<input type="checkbox" name="Feature" > Browser bookmarks</br>	
- 		 									<input type="checkbox" name="Feature" >with built-in browser</br>	
- 		 									<input type="checkbox" name="Feature" > bookmarklet</br>	
- 		 									<input type="checkbox" name="Feature" >MARC</br>	
- 		 									<input type="checkbox" name="Feature" > Reference Miner</br>	
- 		 									<input type="checkbox" name="Feature" >various ; user-customizable</br>	
- 		 									<input type="checkbox" name="Feature" > risx</br>	
- 		 									<input type="checkbox" name="Feature" >various; user-customizable</br>	
-								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Depends','No','Yes','']
+            local : ['JabRef','Sente','Paperpile','RefWorks','Bibus','RefDB','Mendeley','colwiz','Bebop','Docear','Bookends','Referencer','Qiqqa','WizFolio','Pybliographer','CiteULike','Citavi','ReadCube','BibSonomy','Reference Manager','Zotero','BibDesk','Biblioscape','Aigaion','EndNote','Papers','KBibTeX','BibBase','refbase','SciRef','Wikindx','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','No','Depends','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['JabRef','Sente','Paperpile','RefWorks','Bibus','RefDB','Mendeley','colwiz','Bebop','Docear','Bookends','Referencer','Qiqqa','WizFolio','Pybliographer','CiteULike','Citavi','ReadCube','BibSonomy','Reference Manager','Zotero','BibDesk','Biblioscape','Aigaion','EndNote','Papers','KBibTeX','BibBase','refbase','SciRef','Wikindx','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','No','Depends','']
+            local : ['none','various','BibTexML, Biblioscape, Biomail, Inspec, JSTOR, MSBib, PDF widh XMP annotations, REPEC (NEP), SilverPlatter, SixPack','Dublin Core, Marc21 SUTRS, JSTOR, SilverPlatter','Firefox bookmarks','Endnote ENW, Endnote XML, CHM eBook, PDF','COinS, MARC, RDF, unAPI, Browser bookmarks, Endnote XML','Internet Browser bookmarks','PDF','?','User plug-ins','with built-in browser, bookmarklet','MARC, JSTOR, Reference Miner','various ; user-customizable','MARC, risx','various; user-customizable','RefWorks','Browser bookmarks','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

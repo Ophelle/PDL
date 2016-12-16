@@ -26,19 +26,18 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Language(s) :</label></br>
+							<label>Language(s) : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >PHP</br>	
- 		 									<input type="checkbox" name="Feature" > Perl</br>	
- 		 									<input type="checkbox" name="Feature" > Windows PowerShell</br>	
- 		 									<input type="checkbox" name="Feature" > Bash shell</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Syntax : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['PHP','PHP, Perl, Windows PowerShell, Bash shell','Ruby','Common Lisp','JavaScript (ECMAScript 6)','']
+          });
+          $("#2").typeahead({
+            name:"list2",
             local : ['','']
           });
     </script>

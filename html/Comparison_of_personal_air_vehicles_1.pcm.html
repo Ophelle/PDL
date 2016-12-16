@@ -26,11 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Speed :</label></br>
+							<label>Speed : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >? km</br>	
- 		 									<input type="checkbox" name="Feature" >h</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Type : </label></br> <input id="2" type="text" name="Feature"></br>
 							
@@ -38,46 +35,42 @@
 							<label>Capacity : </label></br> <input id="3" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Price :</label></br>
+							<label>Price : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >$450</br>	
- 		 									<input type="checkbox" name="Feature" >000 US</br>	
- 		 									<input type="checkbox" name="Feature" >$60</br>	
- 		 									<input type="checkbox" name="Feature" >000 US (kit)</br>	
- 		 									<input type="checkbox" name="Feature" >€200</br>	
- 		 									<input type="checkbox" name="Feature" >000</br>	
- 		 									<input type="checkbox" name="Feature" >£50</br>	
- 		 									<input type="checkbox" name="Feature" >$67</br>	
- 		 									<input type="checkbox" name="Feature" >500 US</br>	
- 		 									<input type="checkbox" name="Feature" >€43</br>	
- 		 									<input type="checkbox" name="Feature" >$194</br>	
- 		 									<input type="checkbox" name="Feature" >$6</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Model :</label></br>
+							<label>Model : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Mosquito XE</br>	
- 		 									<input type="checkbox" name="Feature" >XEL</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Door-to-door
 capable : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Range :</label></br>
+							<label>Range : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >1</br>	
- 		 									<input type="checkbox" name="Feature" >210 mi (1</br>	
- 		 									<input type="checkbox" name="Feature" >950 km)</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['VTOL aircraft','?','autogyro','Roadable aircraft','STOL aircraft','Paramotor','Autogyro','Backpack helicopter','ultralight helicopter','Ultralight helicopter','']
+            local : ['unflown','80 mph (130 km/h)','115 mph (185 km/h)','? km/h','140 mph (230 km/h)','124 mph (200 km/h)','100 mph (160 km/h)','110 mph (180 km/h)','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['VTOL aircraft','?','autogyro','Roadable aircraft','STOL aircraft','Paramotor','Autogyro','Backpack helicopter','ultralight helicopter','Ultralight helicopter','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['? €','$450,000 US','?','$60,000 US (kit)','€200,000','7 500 000 JPY','£50,000','n/a','$67,500 US','€43,000','$194,000 US','$6,000 US','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Kestel PAV','Attila Melkuti AMV 211','TAM Libelula','AVCEN Jetpod','Terrafugia Transition','Butterfly Super Sky Cycle','Milner Motors Aircar','Peebles Fanwing','Carter PAV','PAL-V gyrocopter','Macro SkyRider X2R','Parajet Skycar','Entecho Hoverpod','Samson Switchblade','DARPA TX','BLI Helodyne','GEN H-4','Gress Aerospace PAV','Moller Skycar','DM AeroSafe Eagle Aero-Cart','Aeris Naviter AeroQuad','Samson Skybike','Mosquito XE/XEL','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['?','Yes','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['? km','220–310 mi (350–500 km)','200 mi (320 km)','489 mi (787 km)','','150 mi (240 km)','?','1,210 mi (1,950 km)','37 mi (60 km)','50 mi (80 km)','345 mi (555 km)','200 mph (320 km/h)','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

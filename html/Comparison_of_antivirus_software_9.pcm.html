@@ -26,21 +26,25 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Company :</label></br>
+							<label>Company : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Call</br>	
- 		 									<input type="checkbox" name="Feature" >SMS Filtering</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>BullGuard : </label></br> <input id="2" type="number" name="Feature"></br>
-							
+ 		 					<label>BullGuard :</label></br>
+ 		 					 <input type="radio" name="FeatureBullGuard" value="oui">oui <input type="radio" name="FeatureBullGuard" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Kaspersky Lab : </label></br> <input id="3" type="number" name="Feature"></br>
-							
+ 		 					<label>Kaspersky Lab :</label></br>
+ 		 					 <input type="radio" name="FeatureKaspersky Lab" value="oui">oui <input type="radio" name="FeatureKaspersky Lab" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>						</br>	
-							<label>McAfee : </label></br> <input id="4" type="number" name="Feature"></br>
-							
+ 		 					<label>McAfee :</label></br>
+ 		 					 <input type="radio" name="FeatureMcAfee" value="oui">oui <input type="radio" name="FeatureMcAfee" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['License','On-demand scan','Backup','Notes','Software','On-access scan','AntiSpam','First release','Support','Price','Country of origin','AntiTheft','Web protection','Parental Control','Firewall','Call/SMS Filtering','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

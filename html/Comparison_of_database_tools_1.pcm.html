@@ -26,9 +26,10 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Browse - Table : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Browse - Table :</label></br>
+ 		 					 <input type="radio" name="FeatureBrowse - Table" value="oui">oui <input type="radio" name="FeatureBrowse - Table" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Monitoring server : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
@@ -38,36 +39,46 @@
 							<label>Tools : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Create & Alter wizard - Trigger : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Multi server support : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Auto Completion : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Create & Alter wizard - Procedure : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Syntax colored : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Browse - Procedure : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Create & Alter wizard - Database : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Browse - Database : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Create & Alter wizard - Table : </label></br> <input id="13" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Browse - Trigger : </label></br> <input id="14" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>Create & Alter wizard - Trigger :</label></br>
+ 		 					 <input type="radio" name="FeatureCreate & Alter wizard - Trigger" value="oui">oui <input type="radio" name="FeatureCreate & Alter wizard - Trigger" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Multi server support :</label></br>
+ 		 					 <input type="radio" name="FeatureMulti server support" value="oui">oui <input type="radio" name="FeatureMulti server support" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Auto Completion :</label></br>
+ 		 					 <input type="radio" name="FeatureAuto Completion" value="oui">oui <input type="radio" name="FeatureAuto Completion" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Create & Alter wizard - Procedure :</label></br>
+ 		 					 <input type="radio" name="FeatureCreate & Alter wizard - Procedure" value="oui">oui <input type="radio" name="FeatureCreate & Alter wizard - Procedure" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Syntax colored :</label></br>
+ 		 					 <input type="radio" name="FeatureSyntax colored" value="oui">oui <input type="radio" name="FeatureSyntax colored" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Browse - Procedure :</label></br>
+ 		 					 <input type="radio" name="FeatureBrowse - Procedure" value="oui">oui <input type="radio" name="FeatureBrowse - Procedure" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Create & Alter wizard - Database :</label></br>
+ 		 					 <input type="radio" name="FeatureCreate & Alter wizard - Database" value="oui">oui <input type="radio" name="FeatureCreate & Alter wizard - Database" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Browse - Database :</label></br>
+ 		 					 <input type="radio" name="FeatureBrowse - Database" value="oui">oui <input type="radio" name="FeatureBrowse - Database" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Create & Alter wizard - Table :</label></br>
+ 		 					 <input type="radio" name="FeatureCreate & Alter wizard - Table" value="oui">oui <input type="radio" name="FeatureCreate & Alter wizard - Table" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Browse - Trigger :</label></br>
+ 		 					 <input type="radio" name="FeatureBrowse - Trigger" value="oui">oui <input type="radio" name="FeatureBrowse - Trigger" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['?','No','Yes','Some','']
@@ -79,18 +90,6 @@
           $("#3").typeahead({
             name:"list3",
             local : ['Navicat Data Modeler','Microsoft SQL Server Management Studio','Devgems Data Modeler','DeZign for Databases','Toad','Database Deployment Manager','Toad Data Modeler','phpPgAdmin','Adminer','Altova DatabaseSpy','phpLiteAdmin','SQLyog','DBEdit','MySQL Workbench','pgAdmin III','TOra','phpMyAdmin','Oracle SQL Developer','SQL Database Studio','SQuirreL SQL','Navicat','DaDaBIK','Embarcadero DBArtisan','Epictetus','Oracle Enterprise Manager','ModelRight','Database Workbench','Orbada','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','?','Some','','No','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['No','Yes','?','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['No','Yes','?','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

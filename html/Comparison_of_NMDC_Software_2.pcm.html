@@ -26,42 +26,42 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>CLI : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>CLI :</label></br>
+ 		 					 <input type="radio" name="FeatureCLI" value="oui">oui <input type="radio" name="FeatureCLI" value = "non">non </br>
+									
 						</br>	
-							<label>Mac OS X : </label></br> <input id="2" type="text" name="Feature"></br>
-							
+ 		 					<label>Mac OS X :</label></br>
+ 		 					 <input type="radio" name="FeatureMac OS X" value="oui">oui <input type="radio" name="FeatureMac OS X" value = "non">non </br>
+									
 						</br>	
-							<label>FOSS : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>FOSS :</label></br>
+ 		 					 <input type="radio" name="FeatureFOSS" value="oui">oui <input type="radio" name="FeatureFOSS" value = "non">non </br>
+									
 						</br>	
 							<label>Based on : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Windows : </label></br> <input id="5" type="text" name="Feature"></br>
-							
+ 		 					<label>Windows :</label></br>
+ 		 					 <input type="radio" name="FeatureWindows" value="oui">oui <input type="radio" name="FeatureWindows" value = "non">non </br>
+									
 						</br>	
 							<label>NMDC Client : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Other UI : </label></br> <input id="7" type="text" name="Feature"></br>
-							
+ 		 					<label>Other UI :</label></br>
+ 		 					 <input type="radio" name="FeatureOther UI" value="oui">oui <input type="radio" name="FeatureOther UI" value = "non">non </br>
+									
 						</br>	
  		 					<label>Active :</label></br>
  		 					 <input type="radio" name="FeatureActive" value="oui">oui <input type="radio" name="FeatureActive" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Linux : </label></br> <input id="9" type="text" name="Feature"></br>
-							
 						</br>	
-							<label>Programming language :</label></br>
+ 		 					<label>Linux :</label></br>
+ 		 					 <input type="radio" name="FeatureLinux" value="oui">oui <input type="radio" name="FeatureLinux" value = "non">non </br>
+									
+						</br>	
+							<label>Programming language : </label></br> <input id="10" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Visual Basic</br>	
- 		 									<input type="checkbox" name="Feature" > C++</br>	
- 		 									<input type="checkbox" name="Feature" >OCaml</br>	
- 		 									<input type="checkbox" name="Feature" > C</br>	
- 		 									<input type="checkbox" name="Feature" > assembly</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Software license : </label></br> <input id="11" type="text" name="Feature"></br>
 							
@@ -69,50 +69,27 @@
  		 					<label>GUI :</label></br>
  		 					 <input type="radio" name="FeatureGUI" value="oui">oui <input type="radio" name="FeatureGUI" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Other OS : </label></br> <input id="13" type="text" name="Feature"></br>
-							
+						</br>	
+ 		 					<label>Other OS :</label></br>
+ 		 					 <input type="radio" name="FeatureOther OS" value="oui">oui <input type="radio" name="FeatureOther OS" value = "non">non </br>
+									
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','Unknown','']
+            local : ['','DC++','Valknut','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['No','','Yes','']
+            local : ['ShakesPeer','Shareaza','NeoModus Direct Connect','EiskaltDC','DCDM++','DC#','LDCC','MLDonkey','RevConnect','Valknut','CzDC','DCTC','ncdc','fulDC','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes','No','Unknown','']
+            local : ['Visual Basic, C++','C++','C','OCaml, C, assembly','C#','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['','DC++','Valknut','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes','No','','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['ShakesPeer','Shareaza','NeoModus Direct Connect','EiskaltDC','DCDM++','DC#','LDCC','MLDonkey','RevConnect','Valknut','CzDC','DCTC','ncdc','fulDC','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['No','WebUI','Yes','Unknown','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['Yes','','No','']
-          });
-          $("#9").typeahead({
-            name:"list9",
             local : ['GNU GPL','Proprietary
 Freeware','Unknown','MIT Licence','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['No','FreeBSD','','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

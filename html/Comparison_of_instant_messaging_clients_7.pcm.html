@@ -26,9 +26,10 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Encryption : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Encryption :</label></br>
+ 		 					 <input type="radio" name="FeatureEncryption" value="oui">oui <input type="radio" name="FeatureEncryption" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>OTR : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
@@ -41,10 +42,6 @@
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes Not OpenPGP.','?','Yes','Partial Not OpenPGP.','Yes/No Not OpenPGP.','Sort of','']
-          });
-          $("#3").typeahead({
-            name:"list3",
             local : ['?','No','Yes','']
           });
     </script>

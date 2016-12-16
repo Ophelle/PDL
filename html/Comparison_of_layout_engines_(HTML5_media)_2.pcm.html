@@ -31,13 +31,13 @@
 						</br>	
 							<label>Trident : </label></br> <input id="2" type="number" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Presto : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Gecko : </label></br> <input id="4" type="number" name="Feature"></br>
+							<label>Gecko : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>		<script>
+		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['?','']
@@ -45,6 +45,10 @@
           $("#2").typeahead({
             name:"list2",
             local : ['?','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['1.9.1','1.9.2','8.0','No','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

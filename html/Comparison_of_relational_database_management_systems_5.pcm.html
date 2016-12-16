@@ -26,85 +26,55 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>GiST : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Bitmap : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Reverse : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Partial : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>GiST :</label></br>
+ 		 					 <input type="radio" name="FeatureGiST" value="oui">oui <input type="radio" name="FeatureGiST" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Bitmap :</label></br>
+ 		 					 <input type="radio" name="FeatureBitmap" value="oui">oui <input type="radio" name="FeatureBitmap" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Reverse :</label></br>
+ 		 					 <input type="radio" name="FeatureReverse" value="oui">oui <input type="radio" name="FeatureReverse" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Partial :</label></br>
+ 		 					 <input type="radio" name="FeaturePartial" value="oui">oui <input type="radio" name="FeaturePartial" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Spatial : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Expression : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Full-text :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >MyISAM tables and</br>	
- 		 									<input type="checkbox" name="Feature" > since v10.0.5</br>	
- 		 									<input type="checkbox" name="Feature" > InnoDB tables</br>	
- 		 									<input type="checkbox" name="Feature" > since v5.6.4</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
+ 		 					<label>Expression :</label></br>
+ 		 					 <input type="radio" name="FeatureExpression" value="oui">oui <input type="radio" name="FeatureExpression" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Full-text :</label></br>
+ 		 					 <input type="radio" name="FeatureFull-text" value="oui">oui <input type="radio" name="FeatureFull-text" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>FOT : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>R-/R+ tree :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >R-</br>	
- 		 									<input type="checkbox" name="Feature" >R+ tree</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Hash :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >MEMORY</br>	
- 		 									<input type="checkbox" name="Feature" > Cluster (NDB)</br>	
- 		 									<input type="checkbox" name="Feature" > InnoDB</br>	
- 		 									<input type="checkbox" name="Feature" > tables only</br>	
- 		 									<input type="checkbox" name="Feature" >Non</br>	
- 		 									<input type="checkbox" name="Feature" >Cluster & fill factor</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>GIN : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>R-/R+ tree :</label></br>
+ 		 					 <input type="radio" name="FeatureR-/R+ tree" value="oui">oui <input type="radio" name="FeatureR-/R+ tree" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Hash :</label></br>
+ 		 					 <input type="radio" name="FeatureHash" value="oui">oui <input type="radio" name="FeatureHash" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>GIN :</label></br>
+ 		 					 <input type="radio" name="FeatureGIN" value="oui">oui <input type="radio" name="FeatureGIN" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','?','Yes','GiST','']
+            local : ['Yes','?','PostGIS','No','Yes (Commercial only)','SpatiaLite','Spatial','MyISAM tables only','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['No','Bitmap','?','Yes','Ingres v10','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','?','Yes','Reverse','Yes ','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['No','Yes','Partial','?','Yes ','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes','?','PostGIS','No','Yes (Commercial only)','SpatiaLite','Spatial','MyISAM tables only','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['?','No','Yes for some scalar functions like LOWER and UPPER','Yes','Expression','PERSISTENT virtual columns only','Ingres v10','']
-          });
-          $("#7").typeahead({
-            name:"list7",
             local : ['?','FOT','No','Yes','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['?','No','Yes','GIN','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

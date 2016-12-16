@@ -35,9 +35,9 @@
 							<label>Memory clock (MHz) : </label></br> <input id="3" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>API compliance (version) - DirectX : </label></br> <input id="4" type="number" name="Feature"></br>
+							<label>API compliance (version) - DirectX : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Config core : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
@@ -69,24 +69,17 @@
 							
  		 								 		<input type="text"/></br>						</br>	
 							<label>Processing Power
-GFLOPs - Single precision : </label></br> <input id="15" type="number" name="Feature"></br>
+GFLOPs - Single precision : </label></br> <input id="15" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Fillrate - Pixel (GP/s) : </label></br> <input id="16" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Notes :</label></br>
+							<label>Notes : </label></br> <input id="17" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >never released</br>	
- 		 									<input type="checkbox" name="Feature" > superseded by 2007 Series</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Core :</label></br>
+							<label>Core : </label></br> <input id="18" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Radeon X700 Pro</br>	
- 		 									<input type="checkbox" name="Feature" >XT</br>	
- 		 									<input type="checkbox" name="Feature" >Radeon 1600 Rro</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -99,6 +92,14 @@ GFLOPs - Single precision : </label></br> <input id="15" type="number" name="Fea
           $("#3").typeahead({
             name:"list3",
             local : ['FireGL T2-128','FireGL 8800','FireGL X1-256','FireGL V5200','FireGL X1-128','FireGL X2-256T','FireGL V7400','FireGL V3200','FireGL V8600','FireGL 8700','FireGL V3100','FireGL V3350','FireGL V7350','FireGL V5100','FireGL V5000','FireGL Z1-128','FireGL X2-256','FireGL V5600','FireGL V7100','FireGL V3400','FireGL V7700','FireGL V3300','FireGL V3600','FireGL V7600','FireGL V8650','FireGL V7300','FireGL V7200','FireGL X3-256','FireGL T2-64','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['','DisplayPort. Can do double precision computation via the AMD Stream SDK.','never released, superseded by 2007 Series','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['Radeon HD 3870','Radeon 1300 Pro','Radeon 9600 Pro','Radeon X1800 XT','Radeon 9800 Pro','Radeon 8500','Radeon HD 2900 XT','Radeon 9500 Pro','Radeon X1600 XT','Radeon 9700 Pro','Radeon X700 Pro/XT','Radeon 9700','Radeon X600 XT','Radeon 1600 Rro/XT','Radeon HD 2600 XT','Radeon X800 Pro','Radeon 9800 XT','Radeon X800 XT','Radeon X1950 Pro','Radeon HD 2900 GT','Radeon HD 2600 Pro','Radeon X300 XT','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

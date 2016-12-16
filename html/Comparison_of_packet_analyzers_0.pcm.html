@@ -29,12 +29,8 @@
 							<label>Software license : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Creator :</label></br>
+							<label>Creator : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >ALoR and NaGA</br>	
- 		 									<input type="checkbox" name="Feature" >OPNET Technologies</br>	
- 		 									<input type="checkbox" name="Feature" >Riverbed Technology</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>User interface : </label></br> <input id="3" type="text" name="Feature"></br>
 							
@@ -46,6 +42,10 @@
           $("#2").typeahead({
             name:"list2",
             local : ['BSD-style','BSD License','Proprietary','GNU General Public License','?','N/A','Freeware','CDDL','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Daniel Borkmann','Clusterpoint','Fluke Corporation','ALoR and NaGA','Massimiliano Montoro','The Justniffer team','Network Instruments','Microsoft','Colasoft','OPNET Technologies/Riverbed Technology','The Xplico team','Clarified Networks','Juan Toledo','Federal Bureau of Investigation','Dug Song','The Wireshark team','Sun Microsystems','Mike Kershaw (dragorn)','Jordan Ritter','TamoSoft','WildPackets','The Tcpdump team','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

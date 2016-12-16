@@ -26,13 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>English :</label></br>
+							<label>English : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >is (am</br>	
- 		 									<input type="checkbox" name="Feature" > are) absorbed</br>	
- 		 									<input type="checkbox" name="Feature" >was going to (would</br>	
- 		 									<input type="checkbox" name="Feature" > should) be absorbed</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Novial : </label></br> <input id="2" type="text" name="Feature"></br>
 							
@@ -42,10 +37,15 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['sal ha es absorba-t','ha-d es absorba-t','vud es absorba-t','es absorba-t','es absorba-t!','let lo es absorba-t!','did es (es-ed) absorba-t','let nus es absorba-t!','sal-ed es absorba-t','sal es absorba-t','ha es absorba-t','vud ha es absorba-t','']
+            local : ['will (shall) have been absorbed','had been absorbed','was absorbed','is (am, are) absorbed','was going to (would, should) be absorbed','let us be absorbed!','have (has) been absorbed','would (should) be absorbed','(to) be absorbed','be absorbed!','let him be absorbed!','would (should) have been 
+absorbed','will (shall) be absorbed','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['sal ha es absorba-t','ha-d es absorba-t','vud es absorba-t','es absorba-t','es absorba-t!','let lo es absorba-t!','did es (es-ed) absorba-t','let nus es absorba-t!','sal-ed es absorba-t','sal es absorba-t','ha es absorba-t','vud ha es absorba-t','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['est-as absorb-at-a(j)','est-os absorb-at-a(j)','est-u absorb-at-a(j)!','li est-u absorb-at-a!','est-us absorb-at-a(j)','est-as absorb-it-a(j)','ni est-u absorb-ataj!','est-is absorb-ot-a(j)','est-us absorb-it-a(j)','est-is absorb-at-a(j)','est-i absorb-at-a(j)','est-is absorb-it-a(j)','est-os absorb-it-a(j)','']
           });
     </script>

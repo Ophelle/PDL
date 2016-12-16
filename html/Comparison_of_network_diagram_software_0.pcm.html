@@ -29,12 +29,8 @@
 							<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Platforms :</label></br>
+							<label>Platforms : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 									<input type="checkbox" name="Feature" > Linux</br>	
- 		 									<input type="checkbox" name="Feature" > OS X</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Deployment : </label></br> <input id="3" type="text" name="Feature"></br>
 							
@@ -44,14 +40,18 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Proprietary','Free','Free & Proprietary','']
+            local : ['Windows','Windows, Linux, OS X','Windows, Linux','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Desktop','']
+            local : ['Proprietary','Free','Free & Proprietary','']
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['Desktop','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['Graphical Networks','The Dude','Whatsupgold','Manage Engine','MaSSHandra','Solarwinds','10-Strike','10SCAPE','Docusnap','Netbrain Tech','Spiceworks','']
           });
     </script>

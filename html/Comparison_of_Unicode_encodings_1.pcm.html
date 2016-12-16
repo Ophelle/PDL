@@ -29,12 +29,8 @@
 							<label>UTF-16 base64 : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>GB 18030 base64 :</label></br>
+							<label>GB 18030 base64 : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >2  for characters inherited from GB2312</br>	
- 		 									<input type="checkbox" name="Feature" >GBK (e.g.
-most Chinese characters) 5  for everything else.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>UTF-7 :</label></br>
 							
@@ -48,30 +44,52 @@ most Chinese characters) 5  for everything else.</br>
  		 									<input type="checkbox" name="Feature" > depending on directness</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Code range (hexadecimal) :</label></br>
+							<label>Code range (hexadecimal) : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >ASCII
-control character:
-000000 – 00001F
-and 00007F</br>	
+						</br>	
+							<label>GB 18030 q.-p. :</label></br>
+							
+ 		 									<input type="checkbox" name="Feature" >4–6 for characters inherited from GB2312</br>	
+ 		 									<input type="checkbox" name="Feature" >GBK (e.g.
+most Chinese characters) 8 for everything else.</br>	
+ 		 									<input type="checkbox" name="Feature" >1 or 3 depending on directness</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>GB 18030 q.-p. : </label></br> <input id="5" type="number" name="Feature"></br>
+							<label>UTF-8 base64 : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>UTF-8 base64 : </label></br> <input id="6" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>UTF-8 quoted-
 printable : </label></br> <input id="7" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>UTF-16 q.-p. : </label></br> <input id="8" type="number" name="Feature"></br>
+							<label>UTF-16 q.-p. : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>		<script>
+		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['5 ','2 ','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['1 ','2  for characters inherited from GB2312/GBK (e.g.
+most Chinese characters) 5  for everything else.','5 ','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['010000 – 10FFFF','000800 – 00FFFF','00003D (equals sign)','000080 – 0007FF','ASCII
+control character:
+000000 – 00001F
+and 00007F','ASCII
+graphic character
+(except U+003D “=�?)','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['4','1 ','2 ','5 ','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['6','2–6 depending on if the byte values need to be escaped','4','8–12 depending on if the low bytes of the surrogates need to be escaped.','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

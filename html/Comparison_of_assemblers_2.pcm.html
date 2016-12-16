@@ -29,28 +29,30 @@
 							<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Assembler :</label></br>
+							<label>Assembler : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >ARM</br>	
- 		 									<input type="checkbox" name="Feature" > inc. armasm</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Host platform :</label></br>
+							<label>Host platform : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Linux</br>	
- 		 									<input type="checkbox" name="Feature" > Windows</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Instruction set : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['ARM','']
+            local : ['Acorn Archimedes','Linux, Windows','various','Windows','Visual Studio 2005','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['ARM','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['Proprietary','Free','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['ARM, inc. armasm','Microsoft armasm','FASMARM','vasm','Archimedes Assembler','IAR ARM Assembler','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -29,33 +29,67 @@
 							<label>Availability : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>License :</label></br>
+							<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Apache License 2.0 and Proprietary License</br>	
- 		 									<input type="checkbox" name="Feature" >GNU General Public License and Proprietary License</br>	
- 		 									<input type="checkbox" name="Feature" >WebORB for .NET and WebORB for Java = Proprietary License</br>	
- 		 									<input type="checkbox" name="Feature" > WebORB for PHP = Mozilla Public License</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Software :</label></br>
+							<label>Software : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >MyBatis</br>	
- 		 									<input type="checkbox" name="Feature" >iBATIS</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Platform :</label></br>
+							<label>Platform : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >.NET</br>	
- 		 									<input type="checkbox" name="Feature" > Java</br>	
- 		 									<input type="checkbox" name="Feature" > PHP</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Version : </label></br> <input id="5" type="number" name="Feature"></br>
+							<label>Version :</label></br>
 							
- 		 								 		<input type="text"/></br>		<script>
+ 		 									<input type="checkbox" name="Feature" >0.9.4 </br>	
+ 		 									<input type="checkbox" name="Feature" > March 28</br>	
+ 		 									<input type="checkbox" name="Feature" > 2014</br>	
+ 		 									<input type="checkbox" name="Feature" >2012.1.0930.0 </br>	
+ 		 									<input type="checkbox" name="Feature" > October 4</br>	
+ 		 									<input type="checkbox" name="Feature" > 2012</br>	
+ 		 									<input type="checkbox" name="Feature" >3.0.2 </br>	
+ 		 									<input type="checkbox" name="Feature" > July 21</br>	
+ 		 									<input type="checkbox" name="Feature" > 2011</br>	
+ 		 									<input type="checkbox" name="Feature" >3.2.0 </br>	
+ 		 									<input type="checkbox" name="Feature" > October 9</br>	
+ 		 									<input type="checkbox" name="Feature" > 2013</br>	
+ 		 									<input type="checkbox" name="Feature" >4.2.5 </br>	
+ 		 									<input type="checkbox" name="Feature" > August 28</br>	
+ 		 									<input type="checkbox" name="Feature" >2.4.2	</br>	
+ 		 									<input type="checkbox" name="Feature" > July 4</br>	
+ 		 									<input type="checkbox" name="Feature" >2.3.0 </br>	
+ 		 									<input type="checkbox" name="Feature" > October 30</br>	
+ 		 									<input type="checkbox" name="Feature" >3.0 </br>	
+ 		 									<input type="checkbox" name="Feature" > July 2009</br>	
+ 		 									<input type="checkbox" name="Feature" >2.1.2 </br>	
+ 		 									<input type="checkbox" name="Feature" > March 15</br>	
+ 		 									<input type="checkbox" name="Feature" > 2015</br>	
+ 		 									<input type="checkbox" name="Feature" >0.082810 </br>	
+ 		 									<input type="checkbox" name="Feature" > October 25</br>	
+ 		 									<input type="checkbox" name="Feature" >2.4</br>	
+ 		 									<input type="checkbox" name="Feature" >April 8</br>	
+ 		 									<input type="checkbox" name="Feature" > 2014</br>	
+ 		 									<input type="checkbox" name="Feature" >0.19 </br>	
+ 		 									<input type="checkbox" name="Feature" > October 5</br>	
+ 		 									<input type="checkbox" name="Feature" > 2011</br>	
+ 		 									<input type="checkbox" name="Feature" >4</br>	
+ 		 									<input type="checkbox" name="Feature" >April 1</br>	
+ 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['Commercial & Open source','Open source','Commercial','Part of .NET 4.5','Dual-licensed','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['Python','.NET 4.0','Java Virtual Machine','PHP','.NET, Java, PHP','.NET 4.5','Perl','Cross-platform','.NET 2.0','Cross-platform C++','.NET 3.5+','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['BSD License','GNU Lesser General Public License','Apache License 2.0','LGPL 2.1','MIT','Proprietary software','','Apache License 2.0 and Proprietary License','Artistic License 1.0 & GPL','Modified BSD License','Oracle License','GNU General Public License and Proprietary License','New BSD','LGPL','Eclipse Public License Version 1.0 (EPL) and Eclipse Distribution License Version 1.0 (EDL)','WebORB for .NET and WebORB for Java = Proprietary License, WebORB for PHP = Mozilla Public License','MIT License','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Apache Cayenne','Microsoft ADO.NET Entity Framework','Doctrine','jOOQ','RedBeanPHP','Hibernate','Skipper','SubSonic','DBIx::Class','nHibernate','ODB','EclipseLink','MyBatis/iBATIS','Dapper','SQLObject','SQLAlchemy','Storm','LLBLGen Pro','TopLink','WebORB Integration Server','EntitySpaces','ECO','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

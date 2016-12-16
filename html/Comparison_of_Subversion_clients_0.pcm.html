@@ -26,28 +26,13 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Visualization :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Diff</br>	
- 		 									<input type="checkbox" name="Feature" > Merge Files</br>	
- 		 									<input type="checkbox" name="Feature" > Log</br>	
- 		 									<input type="checkbox" name="Feature" > Branch</br>	
- 		 									<input type="checkbox" name="Feature" > Merge Branches</br>	
- 		 									<input type="checkbox" name="Feature" > File Properties</br>	
- 		 									<input type="checkbox" name="Feature" > blame</br>	
- 		 									<input type="checkbox" name="Feature" > history</br>	
- 		 									<input type="checkbox" name="Feature" > properties</br>	
- 		 									<input type="checkbox" name="Feature" > annotation</br>	
- 		 									<input type="checkbox" name="Feature" > revision graph</br>	
- 		 									<input type="checkbox" name="Feature" > merge</br>	
- 		 									<input type="checkbox" name="Feature" > Revision Tree</br>	
- 		 									<input type="checkbox" name="Feature" > revision graph with merge arrows</br>	
- 		 									<input type="checkbox" name="Feature" > log</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Server functionality : </label></br> <input id="2" type="text" name="Feature"></br>
+							<label>Visualization : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
+ 		 					<label>Server functionality :</label></br>
+ 		 					 <input type="radio" name="FeatureServer functionality" value="oui">oui <input type="radio" name="FeatureServer functionality" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Integration :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >GUI</br>	
@@ -82,20 +67,11 @@
  		 									<input type="checkbox" name="Feature" > (k)svn+ssh</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Current version : </label></br> <input id="5" type="number" name="Feature"></br>
+							<label>Current version : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>License :</label></br>
+						</br>	
+							<label>License : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Proprietary</br>	
- 		 									<input type="checkbox" name="Feature" > free on Mac App Store</br>	
- 		 									<input type="checkbox" name="Feature" >proprietary</br>	
- 		 									<input type="checkbox" name="Feature" > 30-day trial</br>	
- 		 									<input type="checkbox" name="Feature" > trials can be negotiated</br>	
- 		 									<input type="checkbox" name="Feature" >Trial with commercial upgrade or free 'Foundation' edition</br>	
- 		 									<input type="checkbox" name="Feature" >Free if used with PixelNovel web storage</br>	
- 		 									<input type="checkbox" name="Feature" > 30-day trial with commercial upgrade otherwise</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Programming language, toolkit :</label></br>
 							
@@ -112,34 +88,8 @@
  		 									<input type="checkbox" name="Feature" > Cocoa</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Languages :</label></br>
+							<label>Languages : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >English</br>	
- 		 									<input type="checkbox" name="Feature" > German</br>	
- 		 									<input type="checkbox" name="Feature" >ca</br>	
- 		 									<input type="checkbox" name="Feature" > cs</br>	
- 		 									<input type="checkbox" name="Feature" > de</br>	
- 		 									<input type="checkbox" name="Feature" > en</br>	
- 		 									<input type="checkbox" name="Feature" > es</br>	
- 		 									<input type="checkbox" name="Feature" > fa</br>	
- 		 									<input type="checkbox" name="Feature" > fr</br>	
- 		 									<input type="checkbox" name="Feature" > he</br>	
- 		 									<input type="checkbox" name="Feature" > hr</br>	
- 		 									<input type="checkbox" name="Feature" > it</br>	
- 		 									<input type="checkbox" name="Feature" > ja</br>	
- 		 									<input type="checkbox" name="Feature" > nb</br>	
- 		 									<input type="checkbox" name="Feature" > nl</br>	
- 		 									<input type="checkbox" name="Feature" > pl</br>	
- 		 									<input type="checkbox" name="Feature" > pt</br>	
- 		 									<input type="checkbox" name="Feature" > ro</br>	
- 		 									<input type="checkbox" name="Feature" > ru</br>	
- 		 									<input type="checkbox" name="Feature" > sk</br>	
- 		 									<input type="checkbox" name="Feature" > sl</br>	
- 		 									<input type="checkbox" name="Feature" > sv</br>	
- 		 									<input type="checkbox" name="Feature" > zh_CN</br>	
- 		 									<input type="checkbox" name="Feature" >Unicode</br>	
- 		 									<input type="checkbox" name="Feature" > many</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Operating system :</label></br>
 							
@@ -210,10 +160,22 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','?','']
+            local : ['External','?','Diff, Merge Files, Log, Branch, Merge Branches, File Properties','Diff, blame, history, properties','Diff','Log','Diff, annotation, blame, revision graph','Diff, merge, Revision Tree','Diff, merge, revision graph with merge arrows','Diff, merge, log','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['1.01','8.6.2','0.8.3','3.0.0','1.9.3','1.0.13.1023','1.6.0','1.0','4.0.10','0.6.12','1.1.23','2.5.12478','5.0.1 (4H127)','0.12.1','1.8.8','0.16.0','V4.0.1.2 (based on SVN 1.7.17)','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['GPL','Paid license needed (free trial available)','Proprietary, free on Mac App Store','proprietary, 30-day trial','Modified BSD','"two-clause Berkeley-style"','proprietary, trials can be negotiated','Apache License','proprietary','Trial with commercial upgrade or free 'Foundation' edition','Free if used with PixelNovel web storage, 30-day trial with commercial upgrade otherwise','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['English','41 languages (including en)','English, German','ca, cs, de, en, es, fa, fr, he, hr, it, ja, nb, nl, pl, pt, ro, ru, sk, sl, sv, zh_CN','[31 languages]','Unicode, many','en','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['eSvn','ViewVC','SmartSVN','RabbitVCS','TortoiseSVN','AnkhSVN','CODESYS SVN','PixelNovel Timeline','MagnetSVN','kdesvn','VisualSVN','SVNBreeze','SVN Notifier','Xcode','RapidSVN','Trac','QSvn','']
           });
     </script>

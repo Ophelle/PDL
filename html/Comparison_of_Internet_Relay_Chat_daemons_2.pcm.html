@@ -26,19 +26,22 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>SASL EXTERNAL support : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>SASL EXTERNAL support :</label></br>
+ 		 					 <input type="radio" name="FeatureSASL EXTERNAL support" value="oui">oui <input type="radio" name="FeatureSASL EXTERNAL support" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
  		 					<label>Zip linking :</label></br>
  		 					 <input type="radio" name="FeatureZip linking" value="oui">oui <input type="radio" name="FeatureZip linking" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>						</br>	
-							<label>IPv6 : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Services integration (built-in services) : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>IPv6 :</label></br>
+ 		 					 <input type="radio" name="FeatureIPv6" value="oui">oui <input type="radio" name="FeatureIPv6" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Services integration (built-in services) :</label></br>
+ 		 					 <input type="radio" name="FeatureServices integration (built-in services)" value="oui">oui <input type="radio" name="FeatureServices integration (built-in services)" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
  		 					<label>Remote includes :</label></br>
  		 					 <input type="radio" name="FeatureRemote includes" value="oui">oui <input type="radio" name="FeatureRemote includes" value = "non">non </br>
 									
@@ -47,72 +50,43 @@
  		 					 <input type="radio" name="FeatureHostmasking, cloaking" value="oui">oui <input type="radio" name="FeatureHostmasking, cloaking" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Modularity : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>IRCX support : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Modularity :</label></br>
+ 		 					 <input type="radio" name="FeatureModularity" value="oui">oui <input type="radio" name="FeatureModularity" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>IRCX support :</label></br>
+ 		 					 <input type="radio" name="FeatureIRCX support" value="oui">oui <input type="radio" name="FeatureIRCX support" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
  		 					<label>SSL linking :</label></br>
  		 					 <input type="radio" name="FeatureSSL linking" value="oui">oui <input type="radio" name="FeatureSSL linking" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>						</br>	
-							<label>LDAP authentication : </label></br> <input id="10" type="text" name="Feature"></br>
+ 		 					<label>LDAP authentication :</label></br>
+ 		 					 <input type="radio" name="FeatureLDAP authentication" value="oui">oui <input type="radio" name="FeatureLDAP authentication" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Server protocol : </label></br> <input id="11" type="text" name="Feature"></br>
 							
-						</br>	
-							<label>Server protocol :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Compatible with DreamForge and UnrealIRCd</br>	
- 		 									<input type="checkbox" name="Feature" >Proprietary</br>	
- 		 									<input type="checkbox" name="Feature" > binary</br>	
- 		 									<input type="checkbox" name="Feature" >DreamForge</br>	
- 		 									<input type="checkbox" name="Feature" >TS5 with extensions</br>	
- 		 									<input type="checkbox" name="Feature" >TS5</br>	
- 		 									<input type="checkbox" name="Feature" >TS6</br>	
- 		 									<input type="checkbox" name="Feature" >RFC 1459 and TSpre8</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>IRC daemon : </label></br> <input id="12" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>SASL support : </label></br> <input id="13" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>SASL support :</label></br>
+ 		 					 <input type="radio" name="FeatureSASL support" value="oui">oui <input type="radio" name="FeatureSASL support" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
  		 					<label>Client SSL :</label></br>
  		 					 <input type="radio" name="FeatureClient SSL" value="oui">oui <input type="radio" name="FeatureClient SSL" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Unknown','2.0+','Yes','']
+            local : ['Compatible with DreamForge and UnrealIRCd','RFC 2813','custom','RFC 2813 with IDs','No','P10','TS5 with extensions','P10 with extensions','TS6','Proprietary, binary','TS6 with extensions','DreamForge/TS5 with extensions','Module-dependent','TS5/TS6','RFC 1459 and TSpre8','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','No','2.0+','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','Yes','Yes (module)','Partial','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','No','Partial','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['No','Partial','Yes','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['No','Module','Yes','']
-          });
-          $("#7").typeahead({
-            name:"list7",
             local : ['PleXusIRCd','OfficeIRC Server','Bahamut','ircd-ratbox','ngIRCd','WeIRCd','Nefarious IRCu','ircu','miniircd','RubIRCd','solid-ircd','ithildin','IRCD','ShadowIRCd','UnrealIRCd','pureIRCd','InspIRCd','Synchronet IRCd','bIRCd','IRCD-Hybrid','beware ircd','Charybdis','RockIRCd','snircd','ConferenceRoom','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['No','3.2.10+','2.0+','Yes','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

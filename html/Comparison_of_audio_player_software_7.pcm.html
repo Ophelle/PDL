@@ -26,46 +26,34 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Podcasting : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Podcasting :</label></br>
+ 		 					 <input type="radio" name="FeaturePodcasting" value="oui">oui <input type="radio" name="FeaturePodcasting" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Audio player : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>RTSP (RTSPU, RTSPT) : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>HTTP : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>MMS (MMSU, MMST) : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>RTSP (RTSPU, RTSPT) :</label></br>
+ 		 					 <input type="radio" name="FeatureRTSP (RTSPU, RTSPT)" value="oui">oui <input type="radio" name="FeatureRTSP (RTSPU, RTSPT)" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>HTTP :</label></br>
+ 		 					 <input type="radio" name="FeatureHTTP" value="oui">oui <input type="radio" name="FeatureHTTP" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>MMS (MMSU, MMST) :</label></br>
+ 		 					 <input type="radio" name="FeatureMMS (MMSU, MMST)" value="oui">oui <input type="radio" name="FeatureMMS (MMSU, MMST)" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Other : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['?','Yes','No','Podcasting','Partial','']
+            local : ['Zinf','Rhapsody','Audion','musikCube','MediaMonkey','Rhythmbox','AIMP','Amarok','MusicBee','foobar2000','cmus','Audio player','Media Jukebox','Cog','JuK','Musicmatch Jukebox','Sonique','XMMS','Audacious','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Zinf','Rhapsody','Audion','musikCube','MediaMonkey','Rhythmbox','AIMP','Amarok','MusicBee','foobar2000','cmus','Audio player','Media Jukebox','Cog','JuK','Musicmatch Jukebox','Sonique','XMMS','Audacious','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['RTSP (RTSPU, RTSPT)','?','No','Partial','Yes','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','?','No','HTTP','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['?','Yes','No','MMS (MMSU, MMST)','']
-          });
-          $("#6").typeahead({
-            name:"list6",
             local : ['?','No','UPNP','Other','']
           });
     </script>

@@ -26,21 +26,20 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Internal storage :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >2 GB</br>	
- 		 									<input type="checkbox" name="Feature" > 1 GB available</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Library DRM compatible : </label></br> <input id="2" type="text" name="Feature"></br>
+							<label>Internal storage : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
+ 		 					<label>Library DRM compatible :</label></br>
+ 		 					 <input type="radio" name="FeatureLibrary DRM compatible" value="oui">oui <input type="radio" name="FeatureLibrary DRM compatible" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Screen pixels : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>USB peripherals : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>USB peripherals :</label></br>
+ 		 					 <input type="radio" name="FeatureUSB peripherals" value="oui">oui <input type="radio" name="FeatureUSB peripherals" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Card reader slot : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
@@ -57,36 +56,35 @@
  		 					 <input type="radio" name="FeatureTouch screen" value="oui">oui <input type="radio" name="FeatureTouch screen" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Replaceable battery : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Integrated dictionary : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Text-to-speech : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Web browser : </label></br> <input id="13" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Screen shades : </label></br> <input id="14" type="number" name="Feature"></br>
-							
+ 		 					<label>Replaceable battery :</label></br>
+ 		 					 <input type="radio" name="FeatureReplaceable battery" value="oui">oui <input type="radio" name="FeatureReplaceable battery" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Integrated dictionary :</label></br>
+ 		 					 <input type="radio" name="FeatureIntegrated dictionary" value="oui">oui <input type="radio" name="FeatureIntegrated dictionary" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Text-to-speech :</label></br>
+ 		 					 <input type="radio" name="FeatureText-to-speech" value="oui">oui <input type="radio" name="FeatureText-to-speech" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Web browser :</label></br>
+ 		 					 <input type="radio" name="FeatureWeb browser" value="oui">oui <input type="radio" name="FeatureWeb browser" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Screen shades : </label></br> <input id="14" type="text" name="Feature"></br>
+							
+						</br>	
 							<label>Model : </label></br> <input id="15" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>Hours reading : </label></br> <input id="16" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Wireless network :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Wi-Fi 802.11b</br>	
- 		 									<input type="checkbox" name="Feature" >g</br>	
- 		 									<input type="checkbox" name="Feature" >n</br>	
- 		 									<input type="checkbox" name="Feature" >Wi-Fi</br>	
- 		 									<input type="checkbox" name="Feature" > 3G</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
+ 		 					<label>Wireless network :</label></br>
+ 		 					 <input type="radio" name="FeatureWireless network" value="oui">oui <input type="radio" name="FeatureWireless network" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Screen size (inch) : </label></br> <input id="18" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -96,15 +94,14 @@
 							<label>Intro year : </label></br> <input id="20" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Operating system :</label></br>
+							<label>Operating system : </label></br> <input id="21" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >MicroC</br>	
- 		 									<input type="checkbox" name="Feature" >OS-II</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['?','Yes','Yes (US only)','']
+            local : ['8 GB
+(6 GB)','1GB DDR2 RAM
+1GB SLC','512 MB','2 GB','16-64 GB','4 GB','2 GB, 1 GB available','112 MB','256 MB','']
           });
           $("#2").typeahead({
             name:"list2",
@@ -112,47 +109,35 @@
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['No','?','Yes','']
+            local : ['microSDHC','microSD','SD','No','SDHC','SD via Camera Connection Kit','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['microSDHC','microSD','SD','No','SDHC','SD via Camera Connection Kit','']
+            local : ['PocketBook','Elonex','Aluratek','TrekStor','Barnes & Noble','Amazon.com','Ectaco','Zzbook','Apple Inc.','Notion Ink','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['PocketBook','Elonex','Aluratek','TrekStor','Barnes & Noble','Amazon.com','Ectaco','Zzbook','Apple Inc.','Notion Ink','']
+            local : ['601 g (21.2 oz)','199 g (7.0 oz)','245 g (8.6 oz)','725 g (25.6 oz)','516 g (18.2 oz)','413 g (14.6 oz)','190 g (6.7 oz)','300 g (11 oz)','170 g (6.0 oz)','450 g (16 oz)','275 g (9.7 oz)','212 g (7.5 oz)','']
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['601 g (21.2 oz)','199 g (7.0 oz)','245 g (8.6 oz)','725 g (25.6 oz)','516 g (18.2 oz)','413 g (14.6 oz)','190 g (6.7 oz)','300 g (11 oz)','170 g (6.0 oz)','450 g (16 oz)','275 g (9.7 oz)','212 g (7.5 oz)','']
+            local : ['LCD','Pixel Qi','TFT-LCD','LCD(IPS)','']
           });
           $("#7").typeahead({
             name:"list7",
-            local : ['LCD','Pixel Qi','TFT-LCD','LCD(IPS)','']
+            local : ['24-bit color','262K color','16 grey scale','?','16','16M','256?','']
           });
           $("#8").typeahead({
             name:"list8",
-            local : ['No','?','Yes','']
+            local : ['iPad','Nook Color','eBook Reader 3.0','Kindle Fire','Libre Touch eBook Reader','Adam','PocketBook IQ 701','eReader HD','jetBook','705EB','Libre Color eBook Reader','Libre Air eBook Reader','Libre Pro eBook Reader','']
           });
           $("#9").typeahead({
             name:"list9",
-            local : ['No','Yes','?','iBooks & system-wide dictionary with iOS 5','']
+            local : ['?','Yes','']
           });
           $("#10").typeahead({
             name:"list10",
-            local : ['No','?','Yes','for B&N Kids Books','']
-          });
-          $("#11").typeahead({
-            name:"list11",
-            local : ['No','Yes','?','']
-          });
-          $("#12").typeahead({
-            name:"list12",
-            local : ['iPad','Nook Color','eBook Reader 3.0','Kindle Fire','Libre Touch eBook Reader','Adam','PocketBook IQ 701','eReader HD','jetBook','705EB','Libre Color eBook Reader','Libre Air eBook Reader','Libre Pro eBook Reader','']
-          });
-          $("#13").typeahead({
-            name:"list13",
-            local : ['?','Yes','']
+            local : ['Android 2.2','Linux','MicroC/OS-II','Android 1.5','Linux + X11','?','Android','Android 2.3','Android 2.0','iOS','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

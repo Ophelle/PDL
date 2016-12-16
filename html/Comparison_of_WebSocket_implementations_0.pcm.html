@@ -26,10 +26,9 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Streaming API input/output :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >No</br>	
-								
+ 		 					<label>Streaming API input/output :</label></br>
+ 		 					 <input type="radio" name="FeatureStreaming API input/output" value="oui">oui <input type="radio" name="FeatureStreaming API input/output" value = "non">non </br>
+									
 						</br>	
 							<label>Protocol test report : </label></br> <input id="2" type="text" name="Feature"></br>
 							
@@ -70,13 +69,12 @@
  		 					 <input type="radio" name="FeatureText message support" value="oui">oui <input type="radio" name="FeatureText message support" value = "non">non </br>
 									
 						</br>	
-							<label>License :</label></br>
+							<label>License : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Both Commercial and Freeware</br>	
-								
 						</br>	
-							<label>Self-Hosted Server : </label></br> <input id="9" type="text" name="Feature"></br>
-							
+ 		 					<label>Self-Hosted Server :</label></br>
+ 		 					 <input type="radio" name="FeatureSelf-Hosted Server" value="oui">oui <input type="radio" name="FeatureSelf-Hosted Server" value = "non">non </br>
+									
 						</br>	
  		 					<label>Message-based API :</label></br>
  		 					 <input type="radio" name="FeatureMessage-based API" value="oui">oui <input type="radio" name="FeatureMessage-based API" value = "non">non </br>
@@ -105,13 +103,8 @@
  		 					 <input type="radio" name="FeatureBinary message support" value="oui">oui <input type="radio" name="FeatureBinary message support" value = "non">non </br>
 									
 						</br>	
-							<label>Protocol (spec) version support :</label></br>
+							<label>Protocol (spec) version support : </label></br> <input id="17" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >0</br>	
- 		 									<input type="checkbox" name="Feature" >7</br>	
- 		 									<input type="checkbox" name="Feature" >8</br>	
- 		 									<input type="checkbox" name="Feature" >13 (17)</br>	
-								
 						</br>	
 							<label>API language/environment :</label></br>
 							
@@ -168,7 +161,7 @@ Client-Languages: [JavaScript] </br>
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','No','','']
+            local : ['Boost Software License','Commercial','new BSD License','GPL & commercial','APL2 (Community Edition), Commercial (Enterprise Edition)','Both Commercial and Freeware','MPL & GPL & LGPL','complex','LGPL','MIT','']
           });
           $("#3").typeahead({
             name:"list3",
@@ -186,6 +179,10 @@ Client-Languages: [JavaScript] </br>
 12 Sep 2011','2.1.3
 24 Nov 2014','15.0.874.8
 12 Sep 2011','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['RFC 6455','8 (10)','0,7,8,13 (17)','13 (17/RFC 6455)','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

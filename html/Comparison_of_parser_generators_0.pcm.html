@@ -26,31 +26,14 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Lexer algorithm :</label></br>
+							<label>Lexer algorithm : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >DFA</br>	
- 		 									<input type="checkbox" name="Feature" > NFA</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Output languages :</label></br>
+							<label>Output languages : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >C</br>	
- 		 									<input type="checkbox" name="Feature" > C++</br>	
- 		 									<input type="checkbox" name="Feature" > D</br>	
- 		 									<input type="checkbox" name="Feature" > Go</br>	
- 		 									<input type="checkbox" name="Feature" > Java</br>	
- 		 									<input type="checkbox" name="Feature" > Objective-C</br>	
- 		 									<input type="checkbox" name="Feature" > Ruby</br>	
- 		 									<input type="checkbox" name="Feature" >Bytecode</br>	
- 		 									<input type="checkbox" name="Feature" > x86 assembly language</br>	
- 		 									<input type="checkbox" name="Feature" > interpreted</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>License :</label></br>
+							<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Proprietary</br>	
- 		 									<input type="checkbox" name="Feature" > CDDL</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Grammar, code : </label></br> <input id="4" type="text" name="Feature"></br>
 							
@@ -66,18 +49,30 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['mixed','','separate','']
+            local : ['DFA','DFA table driven','DFA direct code','DFA, NFA','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['','']
+            local : ['Java','C, C++','C, C++, D, Go, Java, Objective-C, Ruby','C#','Eiffel','C','Bytecode, x86 assembly language, interpreted','C++','Haskell','Go','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['all','POSIX','Java Virtual Machine','.NET CLR','Eiffel','Go','']
+            local : ['GNU LGPL','MIT','GNU GPL','BSD','BSD-like','Proprietary, CDDL','Public domain','Proprietary','BSD-style','?','']
           });
           $("#4").typeahead({
             name:"list4",
+            local : ['mixed','','separate','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['all','POSIX','Java Virtual Machine','.NET CLR','Eiffel','Go','']
+          });
+          $("#7").typeahead({
+            name:"list7",
             local : ['Quex','gplex','lex','JLex','CookCC','C# Flex','flex','AustenX','re2c','golex','Dolphin','gelex','lexertl','C# Lex','JFlex','Russ Cox's regular expression implementations','Alex','Ragel','']
           });
     </script>

@@ -58,18 +58,16 @@
  		 					 <input type="radio" name="FeaturePlastic" value="oui">oui <input type="radio" name="FeaturePlastic" value = "non">non </br>
 									
 						</br>	
-							<label>Name :</label></br>
+							<label>Name : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Jenkins</br>	
- 		 									<input type="checkbox" name="Feature" >Hudson</br>	
-								
 						</br>	
  		 					<label>PVCS :</label></br>
  		 					 <input type="radio" name="FeaturePVCS" value="oui">oui <input type="radio" name="FeaturePVCS" value = "non">non </br>
 									
 						</br>	
-							<label>ClearCase : </label></br> <input id="11" type="text" name="Feature"></br>
-							
+ 		 					<label>ClearCase :</label></br>
+ 		 					 <input type="radio" name="FeatureClearCase" value="oui">oui <input type="radio" name="FeatureClearCase" value = "non">non </br>
+									
 						</br>	
  		 					<label>Team Foundation Server :</label></br>
  		 					 <input type="radio" name="FeatureTeam Foundation Server" value="oui">oui <input type="radio" name="FeatureTeam Foundation Server" value = "non">non </br>
@@ -83,12 +81,8 @@
  		 					 <input type="radio" name="FeatureCA Software Change Manager" value="oui">oui <input type="radio" name="FeatureCA Software Change Manager" value = "non">non </br>
 									
 						</br>	
-							<label>Others :</label></br>
+							<label>Others : </label></br> <input id="15" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >File system</br>	
- 		 									<input type="checkbox" name="Feature" > FTP</br>	
- 		 									<input type="checkbox" name="Feature" > Robocopy</br>	
-								
 						</br>	
  		 					<label>Surround :</label></br>
  		 					 <input type="radio" name="FeatureSurround" value="oui">oui <input type="radio" name="FeatureSurround" value = "non">non </br>
@@ -144,7 +138,11 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','Yes (Base and UCM)','']
+            local : ['CruiseControl.NET','Team Foundation Server','CircleCI','AutoDE','BuildBot','Draco.NET','Snap CI','node.ci','Drone.io','ElectricCommander','Apache Gump','pyCI','Automated Build Studio','Lordui','CruiseControl','AppVeyor CI','Go','Integrity','Koality','Apache Continuum','Jenkins/Hudson','Travis-CI','Bamboo','BuildMaster','easyCIS','Build Forge','LuntBuild','Semaphore','Shippable','Continua CI','QuickBuild','continuousphp','CABIE','Solano CI','Strider','TeamCity','Tinderbox','AnthillPro','Codeship','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['','File system','File system, FTP, Robocopy','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

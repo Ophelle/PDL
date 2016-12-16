@@ -26,20 +26,14 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Text : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Binary : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Yes','No','Text','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Yes','No','No (except for .sav files)','No (except Java class files)','Binary','']
-          });
+ 		 					<label>Text :</label></br>
+ 		 					 <input type="radio" name="FeatureText" value="oui">oui <input type="radio" name="FeatureText" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Binary :</label></br>
+ 		 					 <input type="radio" name="FeatureBinary" value="oui">oui <input type="radio" name="FeatureBinary" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

@@ -26,11 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Notes/Form factor :</label></br>
+							<label>Notes/Form factor : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >4 dual-link DVI
-Deskside or 3U rackmount</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Memory - Clock (MHz) : </label></br> <input id="2" type="number" name="Feature"></br>
 							
@@ -38,12 +35,8 @@ Deskside or 3U rackmount</br>
 							<label>Compute capability : </label></br> <input id="3" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Configuration :</label></br>
+							<label>Configuration : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >M2070</br>	
- 		 									<input type="checkbox" name="Feature" >M2070Q
-GPU Computing Module</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>TDP (watts) : </label></br> <input id="5" type="number" name="Feature"></br>
 							
@@ -80,11 +73,8 @@ GPU Computing Module</br>
 (MB) : </label></br> <input id="13" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Model :</label></br>
+							<label>Model : </label></br> <input id="14" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >M2070</br>	
- 		 									<input type="checkbox" name="Feature" >M2070Q</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Memory - Bus type : </label></br> <input id="15" type="text" name="Feature"></br>
 							
@@ -102,6 +92,46 @@ tecture : </label></br> <input id="16" type="text" name="Feature"></br>
  		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['Full-height video card
+IEEE 754-2008 FMA capabilities','display readback Via PCI-Express Gen 2.0
+1U server','1U Rackmount External GPUs
+connect via 2x PCIe (x8 or x16)','Internal GPU
+(Full-height card)','Internal GPU 
+ (Full-height card)','Computing Module
+IEEE 754-2008 FMA capabilities','1U Rack
+IEEE 754-2008 FMA capabilities','Computing Module 
+IEEE 754-2008 FMA capabilities','4 dual-link DVI
+Deskside or 3U rackmount','1U Rackmount External GPUs','Deskside External GPUs','1U Rackmount External GPUs
+connect via 1x PCIe (x8 or x16)','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['S1075
+GPU Computing Server','C2050
+GPU Computing Module','C870
+GPU Computing Module','C2070
+GPU Computing Module','Quadro Plex Visual Computing System','S2050
+GPU Computing Server','K20X
+GPU Computing Module','S870
+GPU Computing Server','C1060
+GPU Computing Module','M2070/M2070Q
+GPU Computing Module','K80
+GPU Computing Module','K20
+GPU Computing Module','D870
+Deskside Computer','C2075
+GPU Computing Module','M2090
+GPU Computing Module','K40
+GPU Computing Module','K10
+GPU Computing Module','M2050
+GPU Computing Module','S1070
+GPU Computing Server','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['M2050','K10','M2070/M2070Q','C1060','K20','S1070','K80','2200 S4','M2090','C2075','C2050','C870','C2070','K20X','K40','S1075','D870','S870','2200 D2','S2050','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['GT200','GT200GL','GF100','GF110','G80','GK110B','GK104','GK110','GK210','']
           });
     </script>

@@ -26,28 +26,15 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Integration in mainline : </label></br> <input id="1" type="text" name="Feature"></br>
+ 		 					<label>Integration in mainline :</label></br>
+ 		 					 <input type="radio" name="FeatureIntegration in mainline" value="oui">oui <input type="radio" name="FeatureIntegration in mainline" value = "non">non </br>
+									
+						</br>	
+							<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>License :</label></br>
+							<label>Development : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Dual BSD</br>	
- 		 									<input type="checkbox" name="Feature" >MPL</br>	
- 		 									<input type="checkbox" name="Feature" >Dual GPL</br>	
- 		 									<input type="checkbox" name="Feature" >BSD</br>	
- 		 									<input type="checkbox" name="Feature" >Dual GPLv2 and BSD</br>	
-								
-						</br>	
-							<label>Development :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >cozybit</br>	
- 		 									<input type="checkbox" name="Feature" > Marvell supported</br>	
- 		 									<input type="checkbox" name="Feature" >rt2x00.serialmonkey.com; From partial documentation and GPL drivers by Ralink</br>	
- 		 									<input type="checkbox" name="Feature" >Reverse engineered; Obsoleted by p54.</br>	
- 		 									<input type="checkbox" name="Feature" >with support from Infineon</br>	
- 		 									<input type="checkbox" name="Feature" >ADMtek</br>	
- 		 									<input type="checkbox" name="Feature" >Written by Nokia and Texas Instruments</br>	
-								
 						</br>	
 							<label>Driver : </label></br> <input id="4" type="text" name="Feature"></br>
 							
@@ -177,24 +164,25 @@ RT3390</br>
  		 									<input type="checkbox" name="Feature" >g 88W8388</br>	
 								
 						</br>	
-							<label>Non-free firmware required : </label></br> <input id="7" type="text" name="Feature"></br>
-							
+ 		 					<label>Non-free firmware required :</label></br>
+ 		 					 <input type="radio" name="FeatureNon-free firmware required" value="oui">oui <input type="radio" name="FeatureNon-free firmware required" value = "non">non </br>
+									
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','Yes (since 2.6.24)','Yes (since 3.0)','Yes (since 3.11)','Yes (Only up to 3.2)','Yes (since 3.2)','Yes (since 2.6.35)','Yes (since 2.6.27)','No','Yes (since 3.12)','Yes (since 2.6.25)','Yes (since 2.6.38)','']
+            local : ['GPL','ISC','GPLv2+','','GPLv2','Dual BSD/MPL','Dual GPL/BSD','Dual GPLv2 and BSD','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['brcmsmac','at76c50x-USB','rtl8192de','rt2500usb','mwl8k','rt2400pci','iwlwifi','rtl8192se','rt73usb','libertas','HostAP','rtl8723ae','rtl8192ce','zd1211rw','prism54','rt61pci','b43','wil6210','brcmfmac','wl1251','b43legacy','ath6kl','acx100','libertastf','p54','atmel','adm8211','rt2800pci','ath9k','rt2800usb','orinoco','wl18xx','ipw2x00','wl12xx','ath5k','ar5523','carl9170','rtl8187','rtl8188eu','rtl8192c','airo','mwifiex','rt2500pci','rtl8192cu','RSI9113','rtl8188ee','cw1200','ath10k','ath9k_htc','rtl8180','iwlegacy','']
+            local : ['Written by Marvell','','Written by Nokia','rt2x00.serialmonkey.com','Written by Qualcomm Atheros','cozybit, Marvell supported','Written by Redpine Signals Inc.,','?','Reverse engineered','Written by Broadcom','Written by Texas Instruments','Written by Realtek et al.','rt2x00.serialmonkey.com; From partial documentation and GPL drivers by Ralink','Written by Realtek et al. Forked from rtl8180-sa2400 project.','Marvell supported','Written by Intel','Reverse engineered; Obsoleted by p54.','Qualcomm Atheros supported','with support from Infineon/ADMtek','Written by Nokia and Texas Instruments','various','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['libertas_tf','rtl818x','rt2x00','brcm80211','airo','ath','zd1211rw','hostap','atmel','iwlwifi','ipw2x00','rtlwifi rtl-wifi','rsi9113','b43legacy','ti','','libertas','p54','b43','orinoco','adm8211','cw1200','mwl8k','mwifiex','iwlegacy','at76c50x-usb at76c50x-usb','prism54','']
+            local : ['brcmsmac','at76c50x-USB','rtl8192de','rt2500usb','mwl8k','rt2400pci','iwlwifi','rtl8192se','rt73usb','libertas','HostAP','rtl8723ae','rtl8192ce','zd1211rw','prism54','rt61pci','b43','wil6210','brcmfmac','wl1251','b43legacy','ath6kl','acx100','libertastf','p54','atmel','adm8211','rt2800pci','ath9k','rt2800usb','orinoco','wl18xx','ipw2x00','wl12xx','ath5k','ar5523','carl9170','rtl8187','rtl8188eu','rtl8192c','airo','mwifiex','rt2500pci','rtl8192cu','RSI9113','rtl8188ee','cw1200','ath10k','ath9k_htc','rtl8180','iwlegacy','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['No','Yes','','Experimental OSS firmware','Depends on the model','Required for WPA support','']
+            local : ['libertas_tf','rtl818x','rt2x00','brcm80211','airo','ath','zd1211rw','hostap','atmel','iwlwifi','ipw2x00','rtlwifi rtl-wifi','rsi9113','b43legacy','ti','','libertas','p54','b43','orinoco','adm8211','cw1200','mwl8k','mwifiex','iwlegacy','at76c50x-usb at76c50x-usb','prism54','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

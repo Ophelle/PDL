@@ -26,40 +26,44 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>License :</label></br>
+							<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >GPL and Proprietary</br>	
- 		 									<input type="checkbox" name="Feature" >ESF License Agreement</br>	
- 		 									<input type="checkbox" name="Feature" > v1.0</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>OS :</label></br>
+							<label>OS : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >FreeBSD</br>	
- 		 									<input type="checkbox" name="Feature" >NanoBSD-based appliance
-firewall distribution</br>	
- 		 									<input type="checkbox" name="Feature" >Proprietary</br>	
- 		 									<input type="checkbox" name="Feature" > FortiOS</br>	
- 		 									<input type="checkbox" name="Feature" > runs only 
-on CISCO hardware</br>	
- 		 									<input type="checkbox" name="Feature" >Linux-based</br>	
- 		 									<input type="checkbox" name="Feature" > with optional web filtering </br>	
- 		 									<input type="checkbox" name="Feature" > auditing.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Cost :</label></br>
+							<label>Cost : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Free </br>	
- 		 									<input type="checkbox" name="Feature" > Paid</br>	
- 		 									<input type="checkbox" name="Feature" >Included on all CISCO
-switches and routers</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Firewall : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['FreeBSD/NanoBSD-based appliance
+firewall distribution','Proprietary, FortiOS','Linux-based appliance','Proprietary, runs only 
+on CISCO hardware','Proprietary operating system','Proprietary operating system ScreenOS','Proprietary operating system PANOS','Proprietary operating system Junos','Linux-based, with optional web filtering / auditing.','FreeBSD-based appliance
+embedded firewall distribution','Proprietary operating system Check Point IPSO
+and Gaia (Linux-based)','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['GPL','Proprietary','various','GPL version 2','BSD','GPL and Proprietary','ESF License Agreement, v1.0','BSD (2-clause)','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Included on Check Point
+security gateways','Free','Free / Paid','Included on all CISCO
+switches and routers','Included on Netscreen
+security gateways','Included on SRX
+security gateways','Included on Palo Alto
+Networks firewalls','Included on all CISCO
+PIX devices','Paid','Included on all CISCO
+ASA devices','?','Included on all Fortigate
+devices','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['Zeroshell','Juniper SRX','IPFire','CISCO ACLs','Sophos UTM','OPNsense','Opendium Iceni','Palo Alto Networks','FortiGate','Juniper SSG','IPCop','Check Point VPN-1','Monowall','pfsense','CISCO ASA','Untangle','Smoothwall','CISCO PIX','Vyatta','']
           });
     </script>

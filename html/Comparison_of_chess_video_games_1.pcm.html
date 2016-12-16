@@ -32,16 +32,8 @@
 							<label>3D Graphics/Animated pieces mode : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Variants (rules, pieces, boards) :</label></br>
+							<label>Variants (rules, pieces, boards) : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Chess960</br>	
- 		 									<input type="checkbox" name="Feature" > Bird Chess</br>	
- 		 									<input type="checkbox" name="Feature" > Capablanca Chess</br>	
- 		 									<input type="checkbox" name="Feature" > Capablanca Random Chess</br>	
- 		 									<input type="checkbox" name="Feature" > Carrera Chess</br>	
- 		 									<input type="checkbox" name="Feature" > Embassy Chess</br>	
- 		 									<input type="checkbox" name="Feature" > Janus Chess</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -50,6 +42,10 @@
           $("#2").typeahead({
             name:"list2",
             local : ['','No','Yes','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Yes Knightmate, Capablanca and Gothic Chess, Shatranj, Courier Chess, Cylinder chess, Berolina Chess under fairymax','','No','Chess960, Bird Chess, Capablanca Chess, Capablanca Random Chess, Carrera Chess, Embassy Chess, Janus Chess','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

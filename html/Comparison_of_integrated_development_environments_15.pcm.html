@@ -47,32 +47,27 @@
  		 									<input type="checkbox" name="Feature" > November 8</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>IDE :</label></br>
+							<label>IDE : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Komodo IDE </br>	
- 		 									<input type="checkbox" name="Feature" > Edit</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Platform :</label></br>
+							<label>Platform : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 									<input type="checkbox" name="Feature" > Linux</br>	
- 		 									<input type="checkbox" name="Feature" > Mac OS X</br>	
- 		 									<input type="checkbox" name="Feature" > FreeBSD</br>	
- 		 									<input type="checkbox" name="Feature" > JVM</br>	
- 		 									<input type="checkbox" name="Feature" > Solaris</br>	
- 		 									<input type="checkbox" name="Feature" > IBM AIX</br>	
- 		 									<input type="checkbox" name="Feature" > OpenBSD</br>	
- 		 									<input type="checkbox" name="Feature" > other Unix</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['GPL','Perl','Proprietary','CPL','']
+            local : ['Windows, Linux, Mac OS X, FreeBSD, JVM, Solaris','Windows, Linux, Mac OS X, FreeBSD, IBM AIX, OpenBSD, Solaris, other Unix','Cross-platform','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['GPL','Perl','Proprietary','CPL','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['Team','ActiveState','Padre Team','EPIC Project Team','KDevelop Team','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Geany','KDevelop','Eclipse EPIC','Padre','Komodo IDE / Edit','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

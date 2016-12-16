@@ -26,21 +26,25 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>RAM Use in MB : </label></br> <input id="1" type="number" name="Feature"></br>
+							<label>RAM Use in MB : </label></br> <input id="1" type="text" name="Feature"></br>
 							
+						</br>	
+ 		 					<label>Installable Over USBs :</label></br>
+ 		 					 <input type="radio" name="FeatureInstallable Over USBs" value="oui">oui <input type="radio" name="FeatureInstallable Over USBs" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Installable Over USBs : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Installable Live CD : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Boots from DVD : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Boots from CD-ROM : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Installable Live CD :</label></br>
+ 		 					 <input type="radio" name="FeatureInstallable Live CD" value="oui">oui <input type="radio" name="FeatureInstallable Live CD" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Boots from DVD :</label></br>
+ 		 					 <input type="radio" name="FeatureBoots from DVD" value="oui">oui <input type="radio" name="FeatureBoots from DVD" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Boots from CD-ROM :</label></br>
+ 		 					 <input type="radio" name="FeatureBoots from CD-ROM" value="oui">oui <input type="radio" name="FeatureBoots from CD-ROM" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Distribution : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
@@ -49,22 +53,10 @@
  		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','Installable Over USBs','']
+            local : ['RAM Use','?','128','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['No','Yes','Installable Live CD','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Boots from DVD','No','Yes','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Boots from CD-ROM','Yes','No','']
-          });
-          $("#5").typeahead({
-            name:"list5",
             local : ['SchilliX','MilaX','OpenIndiana','BeleniX','Distribution','Nexenta OS','']
           });
     </script>

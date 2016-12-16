@@ -26,39 +26,16 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>ZIP support : </label></br> <input id="1" type="text" name="Feature"></br>
+ 		 					<label>ZIP support :</label></br>
+ 		 					 <input type="radio" name="FeatureZIP support" value="oui">oui <input type="radio" name="FeatureZIP support" value = "non">non </br>
+									
+						</br>	
+							<label>Version Control browsing : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Version Control browsing :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >RCS</br>	
- 		 									<input type="checkbox" name="Feature" > CVS</br>	
- 		 									<input type="checkbox" name="Feature" > SVN</br>	
- 		 									<input type="checkbox" name="Feature" > Mercurial</br>	
- 		 									<input type="checkbox" name="Feature" > git (anything supported by Emacs' VC-mode)</br>	
- 		 									<input type="checkbox" name="Feature" >CVS</br>	
- 		 									<input type="checkbox" name="Feature" > Subversion</br>	
- 		 									<input type="checkbox" name="Feature" > Git</br>	
- 		 									<input type="checkbox" name="Feature" >  Baazar</br>	
- 		 									<input type="checkbox" name="Feature" >Mercurial</br>	
- 		 									<input type="checkbox" name="Feature" >  Visual Source Safe</br>	
- 		 									<input type="checkbox" name="Feature" > Rational ClearCase</br>	
- 		 									<input type="checkbox" name="Feature" >Git</br>	
- 		 									<input type="checkbox" name="Feature" > Microsoft TFS</br>	
- 		 									<input type="checkbox" name="Feature" > VSS 2005</br>	
- 		 									<input type="checkbox" name="Feature" > Subversion (compare against base)</br>	
- 		 									<input type="checkbox" name="Feature" >Baazar</br>	
- 		 									<input type="checkbox" name="Feature" > Darks Git</br>	
- 		 									<input type="checkbox" name="Feature" > Monotone</br>	
- 		 									<input type="checkbox" name="Feature" > RCS</br>	
- 		 									<input type="checkbox" name="Feature" > SVK</br>	
- 		 									<input type="checkbox" name="Feature" >SVN</br>	
- 		 									<input type="checkbox" name="Feature" > Perforce</br>	
- 		 									<input type="checkbox" name="Feature" > VSS using command line</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Unicode support : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>Unicode support :</label></br>
+ 		 					 <input type="radio" name="FeatureUnicode support" value="oui">oui <input type="radio" name="FeatureUnicode support" value = "non">non </br>
+									
 						</br>	
 							<label>Patch preview : </label></br> <input id="4" type="text" name="Feature"></br>
 							
@@ -72,49 +49,39 @@
 							<label>SFTP support : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>FTP support : </label></br> <input id="8" type="text" name="Feature"></br>
-							
+ 		 					<label>FTP support :</label></br>
+ 		 					 <input type="radio" name="FeatureFTP support" value="oui">oui <input type="radio" name="FeatureFTP support" value = "non">non </br>
+									
 						</br>	
-							<label>Patch creation : </label></br> <input id="9" type="text" name="Feature"></br>
-							
+ 		 					<label>Patch creation :</label></br>
+ 		 					 <input type="radio" name="FeaturePatch creation" value="oui">oui <input type="radio" name="FeaturePatch creation" value = "non">non </br>
+									
 						</br>	
 							<label>Name : </label></br> <input id="10" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','','Yes + APK','']
+            local : ['No','RCS, CVS, SVN, Mercurial, git (anything supported by Emacs' VC-mode)','Yes','','CVS, Subversion, Git, Mercurial,  Baazar','Mercurial, Subversion,  Visual Source Safe, Rational ClearCase','Git, Mercurial, SVN, Microsoft TFS, VSS 2005','Git, Subversion (compare against base)','Baazar, CVS, Darks Git, Mercurial, Monotone, RCS, SVN, SVK','SVN, CVS, Git, Microsoft TFS, Perforce, VSS using command line','Browse file versions but not folders','Yes CVS, Subversion, Git, Mercurial,  Baazar','CVS, RCS, Subversion','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','No','','']
+            local : ['','Yes with patch','Yes','No','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['','Yes with patch','Yes','No','']
+            local : ['','Yes','Yes with patch','No','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['','Yes','Yes with patch','No','']
+            local : ['Yes','No','','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['Yes','No','','']
+            local : ['','Yes','No','']
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['No','Yes','','supported by OS','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['','Yes','No','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['','No','Yes','normal diff only','']
-          });
-          $("#9").typeahead({
-            name:"list9",
             local : ['WinDiff','Pretty Diff','IntelliJ IDEA (compare)','Meld','WinMerge','diff3','Diffuse','Eclipse (compare)','SG DifMferge','Ediff','DiffTool','Perforce P4Merge','Compare++','UCC','Guiffy SureMerge','Araxis Merge','diff','Notepad++ (compare)','Tkdiff','Kompare','Beyond Compare','ExamDiff Pro','FileMerge','vimdiff','fc','jEdit JDiff plugin','Total Commander (compare)','Far Manager (compare)','Lazarus Diff','KDiff3','']
           });
     </script>

@@ -26,22 +26,15 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>3D : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>3D :</label></br>
+ 		 					 <input type="radio" name="Feature3D" value="oui">oui <input type="radio" name="Feature3D" value = "non">non </br>
+									
 						</br>	
 							<label>Color : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>License :</label></br>
+							<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >case-by-case</br>	
- 		 									<input type="checkbox" name="Feature" > non-commercial</br>	
- 		 									<input type="checkbox" name="Feature" > privacy protections</br>	
- 		 									<input type="checkbox" name="Feature" >Immediate download possible</br>	
- 		 									<input type="checkbox" name="Feature" > citation of paper is desired</br>	
- 		 									<input type="checkbox" name="Feature" > publications must reference; available for download after email correspondence</br>	
- 		 									<input type="checkbox" name="Feature" >publications must reference; available for immediate download</br>	
-								
 						</br>	
 							<label>Database : </label></br> <input id="4" type="text" name="Feature"></br>
 							
@@ -126,20 +119,24 @@
 							<label>Total images : </label></br> <input id="9" type="number" name="Feature"></br>
 							
 						</br>	
-							<label>Samples per subject : </label></br> <input id="10" type="number" name="Feature"></br>
+							<label>Samples per subject : </label></br> <input id="10" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','Yes; structured light acquisition','']
+            local : ['?','Yes','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['?','Yes','']
+            local : ['case-by-case, non-commercial, privacy protections','Immediate download possible, citation of paper is desired','case-by-case, non-commercial, publications must reference; available for download after email correspondence','?','publications must reference; available for immediate download','']
           });
           $("#3").typeahead({
             name:"list3",
             local : ['3D_RMA','PUT','MUCT','York-3DFace','BJUT-3D-R1','BU-3DFE','ND2006','FRAV3D','Bosphorus','FRGC v.2','GavabDB','CASIA','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['20+','25','6','9','1-22','1-63','37-38','4','31-54','16','15','slightly different but unlabeled','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

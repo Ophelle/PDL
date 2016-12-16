@@ -26,27 +26,29 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Function([[p1 [, p2 [, ...]],] body]) : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>Function([[p1 [, p2 [, ...]],] body]) :</label></br>
+ 		 					 <input type="radio" name="FeatureFunction([[p1 [, p2 [, ...]],] body])" value="oui">oui <input type="radio" name="FeatureFunction([[p1 [, p2 [, ...]],] body])" value = "non">non </br>
+									
 						</br>	
 							<label>toString() : </label></br> <input id="2" type="number" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>length : </label></br> <input id="3" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
+ 		 					<label>length :</label></br>
+ 		 					 <input type="radio" name="Featurelength" value="oui">oui <input type="radio" name="Featurelength" value = "non">non </br>
+									
+						</br>	
 							<label>constructor : </label></br> <input id="4" type="number" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>new Function([[p1 [, p2 [, ...]],] body]) : </label></br> <input id="5" type="number" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Properties : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>prototype : </label></br> <input id="7" type="number" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Properties of instances : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
@@ -58,35 +60,31 @@
 						</br>	
 							<label>call(thisArg [, arg1 [, arg2 [, ...]]]) : </label></br> <input id="11" type="number" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Properties of prototype : </label></br> <input id="12" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>apply(thisArg, argArray) : </label></br> <input id="13" type="number" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>		<script>
+		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','?','']
+            local : ['Properties','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Properties','']
+            local : ['Properties of instances','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Properties of instances','']
+            local : ['Called as function','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['Called as function','']
+            local : ['Called as constructor','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['Called as constructor','']
-          });
-          $("#6").typeahead({
-            name:"list6",
             local : ['Properties of prototype','']
           });
     </script>

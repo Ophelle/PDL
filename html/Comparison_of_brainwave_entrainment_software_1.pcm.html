@@ -26,11 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Software :</label></br>
+							<label>Software : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >BeeOne SMOD</br>	
- 		 									<input type="checkbox" name="Feature" >HMS</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
  		 					<label>Binaural beats :</label></br>
  		 					 <input type="radio" name="FeatureBinaural beats" value="oui">oui <input type="radio" name="FeatureBinaural beats" value = "non">non </br>
@@ -44,12 +41,13 @@
  		 					 <input type="radio" name="FeatureIsochronic tones" value="oui">oui <input type="radio" name="FeatureIsochronic tones" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Photic : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>Photic :</label></br>
+ 		 					 <input type="radio" name="FeaturePhotic" value="oui">oui <input type="radio" name="FeaturePhotic" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','?','']
+            local : ['Neuro Entrainment','Gnaural','BrainWave Generator','BeeOne SMOD/HMS','Brainwave Studio','Isochronic Tone Generator','SBaGen','Mind WorkStation','Lux VST Brainwave Entrainment Instrument','Neuro Sequencer Pro','Discord','Neuro-Programmer 3','BrainIgniter Player','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

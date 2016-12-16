@@ -29,9 +29,9 @@
 							<label>a ping : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>track : </label></br> <input id="2" type="number" name="Feature"></br>
+							<label>track : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
  		 					<label>device :</label></br>
  		 					 <input type="radio" name="Featuredevice" value="oui">oui <input type="radio" name="Featuredevice" value = "non">non </br>
 									
@@ -39,6 +39,10 @@
           $("#1").typeahead({
             name:"list1",
             local : ['No','Depends','','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['','6.0','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -40,17 +40,8 @@
 							<label>Display Size : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Calculator :</label></br>
+							<label>Calculator : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >TI-Nspire CX</br>	
- 		 									<input type="checkbox" name="Feature" > TI-Nspire CX CAS</br>	
- 		 									<input type="checkbox" name="Feature" >TI-Nspire</br>	
- 		 									<input type="checkbox" name="Feature" > TI-Nspire CAS</br>	
- 		 									<input type="checkbox" name="Feature" >TI-92</br>	
- 		 									<input type="checkbox" name="Feature" > TI-92 II</br>	
- 		 									<input type="checkbox" name="Feature" >TI-73</br>	
- 		 									<input type="checkbox" name="Feature" > TI-73 Explorer</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Programming Languages :</label></br>
 							
@@ -64,43 +55,14 @@
  		 									<input type="checkbox" name="Feature" > Lua</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>CPU :</label></br>
+							<label>CPU : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >ARM @ 90MHz</br>	
- 		 									<input type="checkbox" name="Feature" >120MHz</br>	
- 		 									<input type="checkbox" name="Feature" >Zilog Z80 @ 6 MHz</br>	
- 		 									<input type="checkbox" name="Feature" >15 MHz (Dual Speed)</br>	
- 		 									<input type="checkbox" name="Feature" >Motorola 68000 @ 10 MHz</br>	
- 		 									<input type="checkbox" name="Feature" >12 MHz (nominal)</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Predecessors :</label></br>
+							<label>Predecessors : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >TI-83 Plus Silver Edition</br>	
- 		 									<input type="checkbox" name="Feature" > TI-84 Plus</br>	
- 		 									<input type="checkbox" name="Feature" >TI-Nspire</br>	
- 		 									<input type="checkbox" name="Feature" > TI-Nspire CAS</br>	
- 		 									<input type="checkbox" name="Feature" >TI-84 Plus</br>	
- 		 									<input type="checkbox" name="Feature" > TI-89</br>	
- 		 									<input type="checkbox" name="Feature" >TI-92</br>	
- 		 									<input type="checkbox" name="Feature" > TI-92 II</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Successors :</label></br>
+							<label>Successors : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >TI-89</br>	
- 		 									<input type="checkbox" name="Feature" > TI-92 Plus</br>	
- 		 									<input type="checkbox" name="Feature" >TI-Nspire CX</br>	
- 		 									<input type="checkbox" name="Feature" > TI-Nspire CX CAS</br>	
- 		 									<input type="checkbox" name="Feature" >TI-Nspire</br>	
- 		 									<input type="checkbox" name="Feature" > TI-84 Plus C Silver Edition</br>	
- 		 									<input type="checkbox" name="Feature" >TI-73</br>	
- 		 									<input type="checkbox" name="Feature" > TI-73 Explorer</br>	
- 		 									<input type="checkbox" name="Feature" >TI-83 Plus Silver Edition</br>	
- 		 									<input type="checkbox" name="Feature" > TI-84 Plus</br>	
- 		 									<input type="checkbox" name="Feature" >TI-84 Plus Silver Edition</br>	
- 		 									<input type="checkbox" name="Feature" > TI-Nspire</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Year Released : </label></br> <input id="8" type="number" name="Feature"></br>
 							
@@ -146,6 +108,22 @@
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['TI-84 Plus','TI-84 Plus Silver Edition','TI-Nspire CX, TI-Nspire CX CAS','TI-80','TI-Nspire, TI-Nspire CAS','TI-92 Plus','TI-83 Plus Silver Edition','TI-82','TI-86','TI-89 Titanium','TI-83','TI-81','Calculator','TI-92, TI-92 II','TI-84 Plus C Silver Edition','TI-89','Voyage 200','TI-83 Plus','TI-73, TI-73 Explorer','TI-85','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['ARM @ 90MHz/120MHz','Zilog Z80 @ 6 MHz','Zilog Z80 @ 15 MHz','CPU','980 kHz Proprietary','Zilog Z80 @ 6MHz','Zilog Z80 @ 6 MHz/15 MHz (Dual Speed)','Motorola 68000 @ 10 MHz/12 MHz (nominal)','Zilog Z80 @ 2 MHz','Motorola 68000 @ 10 MHz','Motorola 68000 @ ≤16 MHz','Motorola 68000 @ 12 MHz','132 MHz ARM','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['TI-83 Plus Silver Edition, TI-84 Plus','TI-89','TI-Nspire, TI-Nspire CAS','TI-83','TI-82','TI-84 Plus Silver Edition','None','TI-84 Plus, TI-89','TI-92, TI-92 II','TI-92 Plus','TI-81','TI-85','TI-83 Plus','TI-80','Predecessors','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['None','TI-83','TI-Nspire CAS','TI-89, TI-92 Plus','TI-Nspire CX, TI-Nspire CX CAS','Successors','TI-Nspire, TI-84 Plus C Silver Edition','TI-82','TI-73, TI-73 Explorer','TI-89 Titanium','Voyage 200','TI-83 Plus','TI-83 Plus Silver Edition, TI-84 Plus','TI-84 Plus Silver Edition','TI-84 Plus Silver Edition, TI-Nspire','TI-86','']
+          });
+          $("#6").typeahead({
+            name:"list6",
             local : ['$159.99 
  Discontinued','$200 (TI-92) 
  Discontinued','$125 

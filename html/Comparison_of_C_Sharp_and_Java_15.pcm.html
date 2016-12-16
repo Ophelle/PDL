@@ -26,27 +26,20 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>C# : </label></br> <input id="1" type="text" name="Feature"></br>
+ 		 					<label>C# :</label></br>
+ 		 					 <input type="radio" name="FeatureC#" value="oui">oui <input type="radio" name="FeatureC#" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Java :</label></br>
+ 		 					 <input type="radio" name="FeatureJava" value="oui">oui <input type="radio" name="FeatureJava" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Generics : </label></br> <input id="3" type="text" name="Feature"></br>
 							
-						</br>	
-							<label>Java : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Generics :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Primitive</br>	
- 		 									<input type="checkbox" name="Feature" >value type support</br>	
- 		 									<input type="checkbox" name="Feature" >Value</br>	
- 		 									<input type="checkbox" name="Feature" >primitive type constraint</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','Reification','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Yes','Yes; implicit','No','Type erasure','']
+            local : ['Migration compatibility','Runtime realization','Contravariance','Constructor constraint','Implementation','Primitive/value type support','Relation constraint','Reference type constraint','Covariance','Value/primitive type constraint','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -26,45 +26,53 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Disk sector editing : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Find in Files : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>File Compare : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Bookmarks : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>File structure view : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Disk sector editing :</label></br>
+ 		 					 <input type="radio" name="FeatureDisk sector editing" value="oui">oui <input type="radio" name="FeatureDisk sector editing" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Find in Files :</label></br>
+ 		 					 <input type="radio" name="FeatureFind in Files" value="oui">oui <input type="radio" name="FeatureFind in Files" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>File Compare :</label></br>
+ 		 					 <input type="radio" name="FeatureFile Compare" value="oui">oui <input type="radio" name="FeatureFile Compare" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Bookmarks :</label></br>
+ 		 					 <input type="radio" name="FeatureBookmarks" value="oui">oui <input type="radio" name="FeatureBookmarks" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>File structure view :</label></br>
+ 		 					 <input type="radio" name="FeatureFile structure view" value="oui">oui <input type="radio" name="FeatureFile structure view" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Maximum file size : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Insert / Delete bytes :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Insert </br>	
- 		 									<input type="checkbox" name="Feature" > Delete bytes</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Bit editing : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Search Unicode : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Text editor : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Partial file loading : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Disassembler : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Insert / Delete bytes :</label></br>
+ 		 					 <input type="radio" name="FeatureInsert / Delete bytes" value="oui">oui <input type="radio" name="FeatureInsert / Delete bytes" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Bit editing :</label></br>
+ 		 					 <input type="radio" name="FeatureBit editing" value="oui">oui <input type="radio" name="FeatureBit editing" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Search Unicode :</label></br>
+ 		 					 <input type="radio" name="FeatureSearch Unicode" value="oui">oui <input type="radio" name="FeatureSearch Unicode" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Text editor :</label></br>
+ 		 					 <input type="radio" name="FeatureText editor" value="oui">oui <input type="radio" name="FeatureText editor" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Partial file loading :</label></br>
+ 		 					 <input type="radio" name="FeaturePartial file loading" value="oui">oui <input type="radio" name="FeaturePartial file loading" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Disassembler :</label></br>
+ 		 					 <input type="radio" name="FeatureDisassembler" value="oui">oui <input type="radio" name="FeatureDisassembler" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Character encodings :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >ASCII</br>	
@@ -122,49 +130,7 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','Partial (only Windows NT and up)','No','','Partial (DOS version only)','Yes (Windows 9x/NT and up)','Disk sector editing','Partial
-nix only','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Yes','','No','Yes (Replace)','Yes
-replace','Find in Files','Yes (replace)','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','','Yes','File Compare','Partial (same size)','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['No','Yes','','Bookmarks','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes','No','','File structure view','']
-          });
-          $("#6").typeahead({
-            name:"list6",
             local : ['unlimited','2 GB','4 GB','','limited by free RAM','> 2 GB','2^63','>4 GB','2 GB (standard), unlimited (Pro 64)','2 MB','> 200GB','32 GB','Unlimited','8'192 TB','2Gb','Maximum file size','2GB+','Not unlimited','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['Yes','No','','Bit editing','No (but view help)','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['No','Yes','','Yes, case insensitive','Search Unicode','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['No','','Text editor','Yes','Partial (external: notepad)','Partial (viewer)','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['No','Yes','','Partial file loading','']
-          });
-          $("#11").typeahead({
-            name:"list11",
-            local : ['No','','Yes (AVR, Java, x86, Pentium III, Pentium 4-Prescott, Athlon-K7, Athlon 64, Cyrix-M2)','Yes (PowerPC)','Disassembler','Yes (x86, x86-64, 3DNow!, MMX, SSE, SSE2, SSE3, AMD-V, Intel VT-x)','Yes (32/64-bits, MMX and SSE commands)','Yes (x86, x86-64, MMX, SSE, SSE2, 3DNow!, MSIL)','Yes (x86, Pentium II-Deschutes, x87, MMX, 3DNow!, also assembler)','Yes (x86, x86-64, MMX, SSE 4.2, 3DNow! - all assembler, ARM)','Partial (Only x86 Intel opcodes)','Yes (x86, ARM, PowerPC)','Yes (AVR, Java, x86, i386, x86-64, ARM/XScale, PowerPC, PPC64)','Yes','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -29,59 +29,43 @@
 							<label>Single sign-on : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>TPM : </label></br> <input id="2" type="text" name="Feature"></br>
+ 		 					<label>TPM :</label></br>
+ 		 					 <input type="radio" name="FeatureTPM" value="oui">oui <input type="radio" name="FeatureTPM" value = "non">non </br>
+									
+						</br>	
+ 		 					<label>Two-factor authentication :</label></br>
+ 		 					 <input type="radio" name="FeatureTwo-factor authentication" value="oui">oui <input type="radio" name="FeatureTwo-factor authentication" value = "non">non </br>
+									
+						</br>	
+ 		 					<label>Multiple keys :</label></br>
+ 		 					 <input type="radio" name="FeatureMultiple keys" value="oui">oui <input type="radio" name="FeatureMultiple keys" value = "non">non </br>
+									
+						</br>	
+							<label>Filesystems : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Two-factor authentication : </label></br> <input id="3" type="text" name="Feature"></br>
+ 		 					<label>Passphrase strengthening :</label></br>
+ 		 					 <input type="radio" name="FeaturePassphrase strengthening" value="oui">oui <input type="radio" name="FeaturePassphrase strengthening" value = "non">non </br>
+									
+						</br>	
+ 		 					<label>Pre-boot authentication :</label></br>
+ 		 					 <input type="radio" name="FeaturePre-boot authentication" value="oui">oui <input type="radio" name="FeaturePre-boot authentication" value = "non">non </br>
+									
+						</br>	
+ 		 					<label>Custom authentication :</label></br>
+ 		 					 <input type="radio" name="FeatureCustom authentication" value="oui">oui <input type="radio" name="FeatureCustom authentication" value = "non">non </br>
+									
+						</br>	
+ 		 					<label>Hardware acceleration :</label></br>
+ 		 					 <input type="radio" name="FeatureHardware acceleration" value="oui">oui <input type="radio" name="FeatureHardware acceleration" value = "non">non </br>
+									
+						</br>	
+							<label>Name : </label></br> <input id="10" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Multiple keys : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Filesystems :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >NTFS</br>	
- 		 									<input type="checkbox" name="Feature" > FAT32</br>	
- 		 									<input type="checkbox" name="Feature" >Only Windows MBR volumes; no UEFI GPT drives</br>	
- 		 									<input type="checkbox" name="Feature" >ext2</br>	
- 		 									<input type="checkbox" name="Feature" > ext3</br>	
- 		 									<input type="checkbox" name="Feature" > reiserfs</br>	
- 		 									<input type="checkbox" name="Feature" > minix</br>	
- 		 									<input type="checkbox" name="Feature" > ntfs</br>	
- 		 									<input type="checkbox" name="Feature" > vfat</br>	
- 		 									<input type="checkbox" name="Feature" >msdos</br>	
- 		 									<input type="checkbox" name="Feature" > and dynamic drives discouraged</br>	
- 		 									<input type="checkbox" name="Feature" >HFS+</br>	
- 		 									<input type="checkbox" name="Feature" > possibly others</br>	
- 		 									<input type="checkbox" name="Feature" > FAT32 on non-system volumes</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Passphrase strengthening : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Pre-boot authentication : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Custom authentication : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Hardware acceleration : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Name :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >cryptsetup</br>	
- 		 									<input type="checkbox" name="Feature" > dmsetup</br>	
- 		 									<input type="checkbox" name="Feature" >dm-crypt</br>	
- 		 									<input type="checkbox" name="Feature" >LUKS</br>	
- 		 									<input type="checkbox" name="Feature" >svnd </br>	
- 		 									<input type="checkbox" name="Feature" > vnconfig</br>	
- 		 									<input type="checkbox" name="Feature" >softraid </br>	
- 		 									<input type="checkbox" name="Feature" > RAID C</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Hidden containers : </label></br> <input id="11" type="text" name="Feature"></br>
-							
+ 		 					<label>Hidden containers :</label></br>
+ 		 					 <input type="radio" name="FeatureHidden containers" value="oui">oui <input type="radio" name="FeatureHidden containers" value = "non">non </br>
+									
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -89,37 +73,11 @@
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['No','?','Yes','Partial','']
+            local : ['?','Any supported by OS','NTFS, FAT32','Only Windows MBR volumes; no UEFI GPT drives','ext2, ext3, reiserfs, minix, ntfs, vfat/msdos','Chiefly NTFS','Only Windows MBR volumes; no UEFI GPT drives, and dynamic drives discouraged','Yes','HFS+, possibly others','NTFS, FAT32 on non-system volumes','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes','No','?','Last update to web site 2009-07-02','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['?','No','Yes','yes with multiple keyfiles','Two passwords','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes','No','?','N/A','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['No','Yes','only on Windows','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['?','No','Yes','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['?','No','Yes','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['No','Yes','?','Yes
-(limited to one per
-"outer" container)','']
+            local : ['McAfee Drive Encryption (SafeBoot)','GBDE','FREE CompuSec','PGPDisk','SafeGuard Easy','Private Disk','ArchiCrypt Live','cryptoloop','BestCrypt','Aloaha Secure Stick','Scramdisk','DISK Protect','loop-AES','Symantec Endpoint Encryption','SafeHouse Professional','ProxyCrypt','Check Point Full Disk Encryption','FileVault','eCryptfs','CenterTools DriveLock','cryptsetup/ dmsetup','CrossCrypt','SafeGuard PrivateDisk','Bloombase Keyparc','FileVault 2','Sentry 2020','n-Crypt Pro','e-Capsule Private Safe','CipherShed','dm-crypt/LUKS','DriveCrypt','svnd / vnconfig','CryptArchiver','TrueCrypt','BitArmor DataControl','SecureDoc','FreeOTFE','R-Crypto','SafeGuard Enterprise','softraid / RAID C','EgoSecure HDD Encryption','SecuBox','BitLocker Drive Encryption','GELI','VeraCrypt','CGD','E4M','DiskCryptor','Scramdisk 4 Linux','Trend Micro Endpoint Encryption','DriveSentry GoAnywhere 2','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

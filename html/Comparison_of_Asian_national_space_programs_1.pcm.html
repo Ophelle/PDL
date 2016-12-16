@@ -29,29 +29,17 @@
 							<label>Nation : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>World achievements :</label></br>
+							<label>World achievements : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >The first probe to reach Sun-Earth Lagrangian point from the lunar orbit and from there directly to an asteroid. Closest flyby of an asteroid at a distance of only 3.2 km.</br>	
- 		 									<input type="checkbox" name="Feature" >Highest in history with altitude 865 km</br>	
- 		 									<input type="checkbox" name="Feature" > also the fastest with speed 18k miles</br>	
- 		 									<input type="checkbox" name="Feature" >The first satellite</br>	
- 		 									<input type="checkbox" name="Feature" > Sputnik 1</br>	
- 		 									<input type="checkbox" name="Feature" > was launched.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>The firsts in Asia :</label></br>
+							<label>The firsts in Asia : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >First lunar soft landing and lunar rover.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Date : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Name :</label></br>
+							<label>Name : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Chang'e 3</br>	
- 		 									<input type="checkbox" name="Feature" >Yutu</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -60,7 +48,25 @@
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['','The first interplanetary launch by solid rocket (M-3SII)','The smallest satellite launch vehicle (L-4S; 9.4t weight, 1.4m diameter)','The first aerobraking test','The first probe to reach Sun-Earth Lagrangian point from the lunar orbit and from there directly to an asteroid. Closest flyby of an asteroid at a distance of only 3.2 km.','The fastest internet satellite','First Martian mission by an individual country to succeed on the first attempt.','Discovered water on the Moon before impact.','The world’s largest pressurized volume in space','The first spacecraft to successfully demonstrate solar-sail technology in interplanetary space','Highest in history with altitude 865 km, also the fastest with speed 18k miles','The first satellite, Sputnik 1, was launched.','The first asteroid ascent','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Satellite navigation system','Geosynchronous launch','Manned spacecraft','Manned spacecraft-launched satellite','Internet satellite','Lunar probe with extended deep space missions (asteroid mission to 4179 Toutatis).','Venus mission (Failure)','Solar probe','Asian in space (Soyuz 37)','First man in space launched by an Asian space program','Martian mission (Failure)','Simultaneous satellite launch','Soft-landed probe on extraterrestrial object','Greenhouse gas explorer','Probe designed for Lunar impact','Space observatory','Reach lunar orbit (assumed)','Spacework (STS-87)','First successful Mars mission by an Asian country','Rendezvous docking','Space station','Asian woman in space (STS-65)','ASAT test','Satellite recovery','Commercial launch (AsiaSat 1)','Data relay satellite (with ESA)','Manned foundations in space (STS-123, STS-124, STS-127)','Intentional lunar impact','First manned space docking (with Tiangong-1)','First lunar soft landing and lunar rover.','Satellite launch pad','Geosynchronous satellite (launched by NASA)','Leaving Earth orbit','Indigenous Tracking & Data Relay Satellite System 
+First TDRS system to support manned missions','Solar sail','Indigenous EVA','High resolution imaging satellite','Satellite','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['3 July 1998','23 February 1977','30 October 2000','7 April 1990','14 December 2013','11 March 2008','27 September 2008','24 February 1975','25 April 2008','19 November 2005','8 July 1976','21 February 1979','29 September 2011','11 February 1970','19 March 1990','11 January 2007','14 November 2008','20 May 2010','10 September 2002','8 January 1985','8 July 1994','26 October 1975','23 February 2008','23 July 1980','20 September 1981','15 October 2003','24 September 2014','4 October 1957','10 April 1993','21 May 2010','18 June 2012','23 January 2009','19 November 1997','25 August 2011','28 November 1997','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['FSW-0','Yang Liwei','Akatsuki','Osumi','ETS-VII','GOSAT','Chang'e 2','Nozomi','Hiten','Hagoromo','Taiyo','CZ-3','Baikonur Cosmodrome','Tianlian I','Chang'e 3/Yutu','Chiaki Mukai','Japanese Experiment Module','FB-1','Palapa A1','N-I','WINDS','Takao Doi','Hakucho','IKAROS','Beidou','Hayabusa','Tiangong-1','FY-1C','FSW-0: 
+ – 10m (1975)
+ FSW-1B: 
+ – 4m (1992)
+Beidou: 
+ – 0.5m (till 2007)','Moon Impact Probe','Kodama','Shenzhou 5','Mars Orbiter Mission','BanXing','Phạm Tuân','Zhai Zhigang (Shenzhou 7)','Sakigake','Shenzhou 9','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

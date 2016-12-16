@@ -30,40 +30,16 @@
  		 					 <input type="radio" name="FeatureSource availability" value="oui">oui <input type="radio" name="FeatureSource availability" value = "non">non </br>
 									
 						</br>	
-							<label>Platform :</label></br>
+							<label>Platform : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 									<input type="checkbox" name="Feature" > Linux</br>	
- 		 									<input type="checkbox" name="Feature" > Web</br>	
- 		 									<input type="checkbox" name="Feature" > i0S</br>	
- 		 									<input type="checkbox" name="Feature" > Mac</br>	
- 		 									<input type="checkbox" name="Feature" > Symbian S60</br>	
- 		 									<input type="checkbox" name="Feature" > Windows Mobile</br>	
- 		 									<input type="checkbox" name="Feature" >Windows 
-Web-Application
- iOS</br>	
- 		 									<input type="checkbox" name="Feature" > Android]</br>	
-								
 						</br>	
-							<label>Price :</label></br>
+							<label>Price : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >single users from 39</br>	
- 		 									<input type="checkbox" name="Feature" >99€
-
-network from 549</br>	
- 		 									<input type="checkbox" name="Feature" >00€</br>	
-								
 						</br>	
-							<label>License :</label></br>
+							<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Commercial        License</br>	
- 		 									<input type="checkbox" name="Feature" > Server</br>	
- 		 									<input type="checkbox" name="Feature" > SaaS</br>	
- 		 									<input type="checkbox" name="Feature" >GPL or Paid
-initiative taker</br>	
-								
 						</br>	
-							<label>Latest stable release : </label></br> <input id="5" type="number" name="Feature"></br>
+							<label>Latest stable release : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>Notes :</label></br>
@@ -97,6 +73,29 @@ initiative taker</br>
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['Cross-platform','Windows, Linux, Web, i0S','Windows','Windows, Mac','Cross-platform
+(Web application)','Unix compatible','Windows, Symbian S60, Windows Mobile','Ubuntu Linux','Windows, Linux','Windows, Linux, Web','Windows 
+Web-Application
+ iOS, Android]','Unix compatible
+Precompiled packages available for Debian','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['No fee required','Commercial','No Fee Required','$200 (desktop) – $15,000 and up (enterprise server)','Depends on configuration.','Depends on configuration','Depend on license ($9.90–$89 for one license)','single users from 39,99€
+
+network from 549,00€','No Required Fee','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Commercial','Proprietary software','SaaS','GPL','Commercial        License, Server, SaaS','GPL or Paid
+initiative taker','Freeware','LGPL','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['2.1','3.1.1','1.1.0','Version 7','?','2008-07-11','9.5','Beta','3.0','','1.0.3','10.3','2010-11-11','0.50','Final','12.1','6.0','1.0','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['IBM','Yandex.Translate','SYSTRAN','Promt','Apertium','Google Translate','Bing Translator','Babylon','OpenLogos','GramTrans','Moses for Mere Mortals','SAIC Omnifluent','Transsoftware','Anusaaraka','SDL Language Weaver','NiuTrans','IdiomaX','Moses (machine translation)','Asia Online
 Language Studio','lingenio translate','']
           });

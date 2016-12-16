@@ -26,75 +26,48 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>PDF : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>RTF : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>DocBook : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>XML : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>PDF :</label></br>
+ 		 					 <input type="radio" name="FeaturePDF" value="oui">oui <input type="radio" name="FeaturePDF" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>RTF :</label></br>
+ 		 					 <input type="radio" name="FeatureRTF" value="oui">oui <input type="radio" name="FeatureRTF" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>DocBook :</label></br>
+ 		 					 <input type="radio" name="FeatureDocBook" value="oui">oui <input type="radio" name="FeatureDocBook" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>XML :</label></br>
+ 		 					 <input type="radio" name="FeatureXML" value="oui">oui <input type="radio" name="FeatureXML" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>ePub : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>CHM : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>HTML : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>man pages : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>LaTeX : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>PostScript : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>CHM :</label></br>
+ 		 					 <input type="radio" name="FeatureCHM" value="oui">oui <input type="radio" name="FeatureCHM" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>HTML :</label></br>
+ 		 					 <input type="radio" name="FeatureHTML" value="oui">oui <input type="radio" name="FeatureHTML" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>man pages :</label></br>
+ 		 					 <input type="radio" name="Featureman pages" value="oui">oui <input type="radio" name="Featureman pages" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>LaTeX :</label></br>
+ 		 					 <input type="radio" name="FeatureLaTeX" value="oui">oui <input type="radio" name="FeatureLaTeX" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>PostScript :</label></br>
+ 		 					 <input type="radio" name="FeaturePostScript" value="oui">oui <input type="radio" name="FeaturePostScript" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','Indirectly','PDF','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['No','Yes','Indirectly','RTF','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','DocBook','Yes','Partial','Indirectly','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','No','Yes+JSON','Indirectly','XML','']
-          });
-          $("#5").typeahead({
-            name:"list5",
             local : ['','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Yes','Indirectly','No','CHM','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['Yes','HTML','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['No','Yes','Indirectly','man pages','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['No','Yes','Indirectly','LaTeX','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['Indirectly','No','Yes','PostScript','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

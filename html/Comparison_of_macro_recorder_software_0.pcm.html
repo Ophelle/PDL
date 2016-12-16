@@ -26,12 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>OS :</label></br>
+							<label>OS : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >OSes with X11</br>	
- 		 									<input type="checkbox" name="Feature" > like  Linux</br>	
- 		 									<input type="checkbox" name="Feature" > etc.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
  		 					<label>Records mouse :</label></br>
  		 					 <input type="radio" name="FeatureRecords mouse" value="oui">oui <input type="radio" name="FeatureRecords mouse" value = "non">non </br>
@@ -49,11 +45,8 @@
  		 					 <input type="radio" name="FeatureAllows conditional statements and other control flow ("if", "goto", "repeat X times")" value="oui">oui <input type="radio" name="FeatureAllows conditional statements and other control flow ("if", "goto", "repeat X times")" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>						</br>	
-							<label>License :</label></br>
+							<label>License : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Freeware </br>	
- 		 									<input type="checkbox" name="Feature" > Proprietary</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
  		 					<label>"Smart" mouse recording (not just absolute coordinates) :</label></br>
  		 					 <input type="radio" name="Feature"Smart" mouse recording (not just absolute coordinates)" value="oui">oui <input type="radio" name="Feature"Smart" mouse recording (not just absolute coordinates)" value = "non">non </br>
@@ -79,6 +72,14 @@
  		 					 <input type="radio" name="FeatureAllows custom commands (like "open file", "launch website", "shutdown" etc." value="oui">oui <input type="radio" name="FeatureAllows custom commands (like "open file", "launch website", "shutdown" etc." value = "non">non </br>
 									
  		 								 		<input type="text"/></br>		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['Mac OS X','Windows','OSes with X11, like  Linux, etc.','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['Proprietary','Freeware / Proprietary','GPL','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

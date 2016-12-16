@@ -26,28 +26,28 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>NetWare kernel : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>NetWare kernel :</label></br>
+ 		 					 <input type="radio" name="FeatureNetWare kernel" value="oui">oui <input type="radio" name="FeatureNetWare kernel" value = "non">non </br>
+									
 						</br>	
 							<label>Solaris kernel : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>FreeBSD kernel : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>FreeBSD kernel :</label></br>
+ 		 					 <input type="radio" name="FeatureFreeBSD kernel" value="oui">oui <input type="radio" name="FeatureFreeBSD kernel" value = "non">non </br>
+									
 						</br>	
-							<label>Linux kernel :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >both FUSE and native</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+ 		 					<label>Linux kernel :</label></br>
+ 		 					 <input type="radio" name="FeatureLinux kernel" value="oui">oui <input type="radio" name="FeatureLinux kernel" value = "non">non </br>
+									
 						</br>	
-							<label>DragonFly BSD kernel : </label></br> <input id="5" type="text" name="Feature"></br>
-							
+ 		 					<label>DragonFly BSD kernel :</label></br>
+ 		 					 <input type="radio" name="FeatureDragonFly BSD kernel" value="oui">oui <input type="radio" name="FeatureDragonFly BSD kernel" value = "non">non </br>
+									
 						</br>	
-							<label>MINIX 3 kernel :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Tools available</br>	
- 		 									<input type="checkbox" name="Feature" > cannot mount</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+ 		 					<label>MINIX 3 kernel :</label></br>
+ 		 					 <input type="radio" name="FeatureMINIX 3 kernel" value="oui">oui <input type="radio" name="FeatureMINIX 3 kernel" value = "non">non </br>
+									
 						</br>	
 							<label>Windows NT kernel : </label></br> <input id="7" type="text" name="Feature"></br>
 							
@@ -55,40 +55,25 @@
  		 					<label>ReactOS kernel :</label></br>
  		 					 <input type="radio" name="FeatureReactOS kernel" value="oui">oui <input type="radio" name="FeatureReactOS kernel" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Kernel : </label></br> <input id="9" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>XNU : </label></br> <input id="10" type="text" name="Feature"></br>
-							
+ 		 					<label>XNU :</label></br>
+ 		 					 <input type="radio" name="FeatureXNU" value="oui">oui <input type="radio" name="FeatureXNU" value = "non">non </br>
+									
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','?','']
+            local : ['?','Yes','No','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['?','Yes','No','']
+            local : ['?','No','Yes','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['No','Yes','read only','?','limited write','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['read only','No','Yes','limited write','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['?','No','Yes','']
-          });
-          $("#6").typeahead({
-            name:"list6",
             local : ['ext3','System V FS','JFFS','BeFS','HPFS','NTFS','Amiga FFS','cramfs','ext4','FAT','HFS','BFS','Acorn ADFS','ext2','ISO 9660','QNX4 FS','ZFS','FreeVxFS','JFFS2','OCFS','HFS+','Btrfs','Reiser4','UDF','JFS','MINIX fs','UFS','NSS','ReiserFS','HAMMER','EFS','XFS','Tux3','exFAT','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['No','limited write','Yes','read only','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

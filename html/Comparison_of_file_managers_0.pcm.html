@@ -27,44 +27,52 @@
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
 							<label>First public version
-(date) : </label></br> <input id="1" type="number" name="Feature"></br>
+(date) :</label></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+ 		 									<input type="checkbox" name="Feature" >January 9</br>	
+ 		 									<input type="checkbox" name="Feature" > 2006</br>	
+ 		 									<input type="checkbox" name="Feature" >September 30</br>	
+ 		 									<input type="checkbox" name="Feature" > 2000</br>	
+ 		 									<input type="checkbox" name="Feature" >January 8</br>	
+ 		 									<input type="checkbox" name="Feature" > 2008</br>	
+ 		 									<input type="checkbox" name="Feature" >June 10</br>	
+ 		 									<input type="checkbox" name="Feature" > 2004</br>	
+ 		 									<input type="checkbox" name="Feature" >February 17</br>	
+ 		 									<input type="checkbox" name="Feature" > 2002</br>	
+ 		 									<input type="checkbox" name="Feature" >September 6</br>	
+ 		 									<input type="checkbox" name="Feature" > 2003</br>	
+ 		 									<input type="checkbox" name="Feature" >August 14</br>	
+ 		 									<input type="checkbox" name="Feature" > 2008
+ (2.2.0.537 beta)</br>	
+ 		 									<input type="checkbox" name="Feature" >March 23</br>	
+ 		 									<input type="checkbox" name="Feature" > 2009</br>	
+ 		 									<input type="checkbox" name="Feature" >July 11</br>	
+ 		 									<input type="checkbox" name="Feature" >August 24</br>	
+ 		 									<input type="checkbox" name="Feature" > 1995</br>	
+ 		 									<input type="checkbox" name="Feature" >September 25</br>	
+ 		 									<input type="checkbox" name="Feature" > 1993; 21 years ago (1.00d)</br>	
+ 		 									<input type="checkbox" name="Feature" >April 11</br>	
+ 		 									<input type="checkbox" name="Feature" > 2001</br>	
+ 		 									<input type="checkbox" name="Feature" >March 2</br>	
+ 		 									<input type="checkbox" name="Feature" >Before March 10</br>	
+ 		 									<input type="checkbox" name="Feature" >January 22</br>	
+ 		 									<input type="checkbox" name="Feature" >June 7</br>	
+ 		 									<input type="checkbox" name="Feature" > 2006 (0.5)</br>	
+ 		 									<input type="checkbox" name="Feature" >August 15</br>	
+ 		 									<input type="checkbox" name="Feature" > 1997</br>	
+ 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
 							<label>File manager : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>Software license : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Creator :</label></br>
+							<label>Creator : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Peter Norton Computing</br>	
- 		 									<input type="checkbox" name="Feature" >
-later Symantec corporation</br>	
- 		 									<input type="checkbox" name="Feature" >Simon Marlow</br>	
- 		 									<input type="checkbox" name="Feature" > Albert Gräf</br>	
- 		 									<input type="checkbox" name="Feature" > Robert Vogelgesang</br>	
- 		 									<input type="checkbox" name="Feature" > Juan D. Martin</br>	
- 		 									<input type="checkbox" name="Feature" > Till Straumann</br>	
- 		 									<input type="checkbox" name="Feature" >Albert Nurick and
-Brittain Fraley</br>	
- 		 									<input type="checkbox" name="Feature" >integral part of Emacs</br>	
- 		 									<input type="checkbox" name="Feature" >
-part of the GNU project</br>	
- 		 									<input type="checkbox" name="Feature" >Eugene Roshal (original); Far Group</br>	
- 		 									<input type="checkbox" name="Feature" >Jonathan Potter</br>	
- 		 									<input type="checkbox" name="Feature" >
-GPSoftware</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Cost :</label></br>
+							<label>Cost : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >CHF40</br>	
- 		 									<input type="checkbox" name="Feature" > €32</br>	
- 		 									<input type="checkbox" name="Feature" > US$44</br>	
- 		 									<input type="checkbox" name="Feature" >shareware </br>	
- 		 									<input type="checkbox" name="Feature" > freeware</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Latest stable version
 (date, number) :</label></br>
@@ -140,6 +148,20 @@ DOS: 1998-07-01 (5.51))</br>
           $("#2").typeahead({
             name:"list2",
             local : ['GPL','Proprietary','BSD original','BSD revised','Software license','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['tooar','Donald Lessau','Peter Norton Computing,
+later Symantec corporation','alexx2000','Ritlabs','David Ercig','Simon Marlow, Albert Gräf, Robert Vogelgesang, Juan D. Martin, Till Straumann','Maxence Bernard','Vsevolod Volkov','KDE','WinSCP','GNOME Commander','Thomas Leonard et al.','Microsoft (Ian Ellison-Taylor)','Eugene Sichkar','Xandros Corporation','Hong Jen Yee','Apple Inc.','Albert Nurick and
+Brittain Fraley','Christian Ghisler','Rixstep','integral part of Emacs,
+part of the GNU project','Eugene Roshal (original); Far Group','Cocoatech','Roland Baudin','GNU Midnight Commander','Krusader Krew','Emil Brink','Kim Henkel','Creator','Nikos Bozinis','Eazel','Altap','LikeMac Group','Xfce','Microsoft','Brian Havard','Jonathan Potter,
+GPSoftware','STDUtility','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Free','A$35.00','CHF40, €32, US$44','Cost','A$85','US$39.95','US$29.95','Part of Windows','US$29.95 (1-4)','US$30','Part of Xandros Desktop','?','shareware / freeware','US$79.00
+(with 80+ other apps)','US$29.95
+(lite: free)','Part of OS X','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

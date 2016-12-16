@@ -26,11 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>British Army and Royal Marines :</label></br>
+							<label>British Army and Royal Marines : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Second Lieutenant (2Lt) </br>	
- 		 									<input type="checkbox" name="Feature" > Ensign</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>RAF : </label></br> <input id="2" type="text" name="Feature"></br>
 							
@@ -47,35 +44,40 @@ and U.S. Public Health Service : </label></br> <input id="3" type="text" name="F
 							
 						</br>	
 							<label>U.S. Army, USAF
-and USMC :</label></br>
+and USMC : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Officer Cadet </br>	
- 		 									<input type="checkbox" name="Feature" > USMC Midshipman (MIDN) </br>	
- 		 									<input type="checkbox" name="Feature" > Officer Candidate </br>	
- 		 									<input type="checkbox" name="Feature" > Officer Trainee (OT)</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Royal Navy : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Air Chief Marshal (Air Chf Mshl)','Air Marshal (Air Mshl)','Group Captain (Gp Capt)','Flight Lieutenant (Flt Lt)','Wing Commander (Wg Cdr)','Squadron Leader (Sqn Ldr)','Air Commodore (Air Cdre)','Pilot Officer (Plt Off)','Acting Pilot Officer (APO) [Non-Graduate Direct Entrant Officers only]','Air Vice‑Marshal (AVM)','Officer Cadet (OC)','Marshal of the Royal Air Force (MRAF)','Flying Officer (Fg Off)','']
+            local : ['General (Gen)','Captain (Capt)','Field Marshal (Army)
+Captain General (RM)','Lieutenant‑Colonel (Lt Col)','Second Lieutenant (2Lt) / Ensign','','Officer Cadet (OCdt)','Major (Maj)','Lieutenant‑General (Lt Gen)','Colonel (Col)','Major‑General (Maj Gen)','Lieutenant (Lt)','Brigadier (Brig)','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['','Lieutenant (Junior Grade) (LTJG)','Admiral (ADM)','Fleet Admiral (FADM) (U.S. Navy only)','Vice Admiral (VADM)','Rear Admiral (RADM)','Lieutenant (LT)','Ensign (ENS)','Lieutenant Commander (LCDR)','USN Midshipman (MIDN) / USCG Officer Cadet or Officer Candidate (OC)','Commander (CDR)','Captain (CAPT)','Rear Admiral (Lower Half) (RDML)','']
+            local : ['Air Chief Marshal (Air Chf Mshl)','Air Marshal (Air Mshl)','Group Captain (Gp Capt)','Flight Lieutenant (Flt Lt)','Wing Commander (Wg Cdr)','Squadron Leader (Sqn Ldr)','Air Commodore (Air Cdre)','Pilot Officer (Plt Off)','Acting Pilot Officer (APO) [Non-Graduate Direct Entrant Officers only]','Air Vice‑Marshal (AVM)','Officer Cadet (OC)','Marshal of the Royal Air Force (MRAF)','Flying Officer (Fg Off)','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['OF-9','OF-3','OF-2','OF-4','OF-5','OF-10','OF-1','OF-6','OF-8','OF-7','Student Officer','OF(D)','']
+            local : ['','Lieutenant (Junior Grade) (LTJG)','Admiral (ADM)','Fleet Admiral (FADM) (U.S. Navy only)','Vice Admiral (VADM)','Rear Admiral (RADM)','Lieutenant (LT)','Ensign (ENS)','Lieutenant Commander (LCDR)','USN Midshipman (MIDN) / USCG Officer Cadet or Officer Candidate (OC)','Commander (CDR)','Captain (CAPT)','Rear Admiral (Lower Half) (RDML)','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['O-2','O-1','O-10','O-3','','O-5','O-8','O-7','-','O-9','O-6','O-4','']
+            local : ['OF-9','OF-3','OF-2','OF-4','OF-5','OF-10','OF-1','OF-6','OF-8','OF-7','Student Officer','OF(D)','']
           });
           $("#5").typeahead({
             name:"list5",
+            local : ['O-2','O-1','O-10','O-3','','O-5','O-8','O-7','-','O-9','O-6','O-4','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['Captain (CPT/Capt/Capt)','General of the Army
+General of the Air Force','General (GEN/Gen/Gen)','','Colonel (COL/Col/Col)','Major (MAJ/Maj/Maj)','Major General (MG/Maj Gen/MajGen)','Officer Cadet / USMC Midshipman (MIDN) / Officer Candidate / Officer Trainee (OT)','Brigadier General (BG/Brig Gen/BGen)','Lieutenant Colonel (LTC/Lt Col/LtCol)','Lieutenant General (LTG/Lt Gen/LtGen)','Second Lieutenant (2LT/  2d Lt/ 2ndLt)','First Lieutenant (1LT/1st Lt/1stLt)','']
+          });
+          $("#7").typeahead({
+            name:"list7",
             local : ['Rear‑Admiral (RAdm)','Commodore (Cdre)','Midshipman (Mid)','Sub‑Lieutenant (SLt)','Lieutenant‑Commander (Lt Cdr)','Admiral of the Fleet','Officer Cadet (OCdt)','','Admiral (Adm)','Lieutenant (Lt)','Vice‑Admiral (VAdm)','Captain (Capt)','Commander (Cdr)','']
           });
     </script>

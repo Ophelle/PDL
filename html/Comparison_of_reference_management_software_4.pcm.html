@@ -26,52 +26,42 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Chicago/Turabian : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>Chicago/Turabian :</label></br>
+ 		 					 <input type="radio" name="FeatureChicago/Turabian" value="oui">oui <input type="radio" name="FeatureChicago/Turabian" value = "non">non </br>
+									
 						</br>	
-							<label>Harvard : </label></br> <input id="2" type="text" name="Feature"></br>
-							
+ 		 					<label>Harvard :</label></br>
+ 		 					 <input type="radio" name="FeatureHarvard" value="oui">oui <input type="radio" name="FeatureHarvard" value = "non">non </br>
+									
 						</br>	
-							<label>APA : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>APA :</label></br>
+ 		 					 <input type="radio" name="FeatureAPA" value="oui">oui <input type="radio" name="FeatureAPA" value = "non">non </br>
+									
 						</br>	
-							<label>MLA : </label></br> <input id="4" type="text" name="Feature"></br>
-							
+ 		 					<label>MLA :</label></br>
+ 		 					 <input type="radio" name="FeatureMLA" value="oui">oui <input type="radio" name="FeatureMLA" value = "non">non </br>
+									
 						</br>	
-							<label>Extension method :</label></br>
+							<label>Extension method : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >BibTeX and CSL</br>	
- 		 									<input type="checkbox" name="Feature" >Citavi format</br>	
- 		 									<input type="checkbox" name="Feature" > conditions and programmable components supported (through GUI)</br>	
- 		 									<input type="checkbox" name="Feature" >XML (citestylex.dtd)</br>	
- 		 									<input type="checkbox" name="Feature" > interactive script</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Software : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Other : </label></br> <input id="7" type="number" name="Feature"></br>
+							<label>Other : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>		<script>
+		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','?','']
+            local : ['CSL','none','BibTeX and CSL','BibDesk export templates','OSBIB','EndNote format (through GUI)','RefWorks format through GUI','bibus format (through GUI)','Sente format through GUI','Citavi format, conditions and programmable components supported (through GUI)','XML (citestylex.dtd), interactive script','SciRef format through GUI','BibTeX','Pybliographer XML','WizFolio format (through GUI)','PHP','?',':Template:GUI style editor','GUI style editor','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','No','?','']
+            local : ['BibSonomy','RefWorks','WizFolio','Biblioscape','ReadCube','RefDB','Reference Manager','Docear','SciRef','Paperpile','Bebop','Bookends','refbase','EndNote','Papers','JabRef','BibDesk','colwiz','Aigaion','Mendeley','Citavi','Bibus','KBibTeX','Sente','BibBase','CiteULike','Referencer','Zotero','Pybliographer','Wikindx','Qiqqa','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes','?','No','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','No','?','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['BibSonomy','RefWorks','WizFolio','Biblioscape','ReadCube','RefDB','Reference Manager','Docear','SciRef','Paperpile','Bebop','Bookends','refbase','EndNote','Papers','JabRef','BibDesk','colwiz','Aigaion','Mendeley','Citavi','Bibus','KBibTeX','Sente','BibBase','CiteULike','Referencer','Zotero','Pybliographer','Wikindx','Qiqqa','']
+            local : ['6506','various','any BibTeX style','6781 styles','6390+ styles','6750+ styles','style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes"|Yes','none','?','BMJ, IEEE','BMJ, IEEE, Editor supplied','6837+ styles','user-contributed','various polar & marine journals','Various biomedical & law journals','Any BibTeX style, plus 3500+ Citavi styles. Styles for journals are created upon request and centrally corrected','6770+ styles','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

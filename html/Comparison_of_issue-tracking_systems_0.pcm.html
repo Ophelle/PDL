@@ -26,74 +26,20 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Implementation language(s) :</label></br>
+							<label>Implementation language(s) : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >kernel: Java; API: Java</br>	
- 		 									<input type="checkbox" name="Feature" >C++ and PHP</br>	
- 		 									<input type="checkbox" name="Feature" >Java</br>	
- 		 									<input type="checkbox" name="Feature" > C#</br>	
- 		 									<input type="checkbox" name="Feature" >kernel: executables for several platforms; hooks: Perl and Visual Basic</br>	
- 		 									<input type="checkbox" name="Feature" > C++</br>	
- 		 									<input type="checkbox" name="Feature" > others</br>	
- 		 									<input type="checkbox" name="Feature" >C++</br>	
- 		 									<input type="checkbox" name="Feature" > JavaScript</br>	
- 		 									<input type="checkbox" name="Feature" >PHP</br>	
- 		 									<input type="checkbox" name="Feature" > Java</br>	
- 		 									<input type="checkbox" name="Feature" >C#</br>	
- 		 									<input type="checkbox" name="Feature" > .NET</br>	
- 		 									<input type="checkbox" name="Feature" >C</br>	
- 		 									<input type="checkbox" name="Feature" >Python</br>	
- 		 									<input type="checkbox" name="Feature" >  JavaScript</br>	
- 		 									<input type="checkbox" name="Feature" >ASP on Windows</br>	
- 		 									<input type="checkbox" name="Feature" > PHP on Mac</br>	
- 		 									<input type="checkbox" name="Feature" > FreeBSD</br>	
- 		 									<input type="checkbox" name="Feature" > and Linux</br>	
- 		 									<input type="checkbox" name="Feature" > MPS-based DSL</br>	
- 		 									<input type="checkbox" name="Feature" > Web Front-end In Perl</br>	
- 		 									<input type="checkbox" name="Feature" >HTML</br>	
- 		 									<input type="checkbox" name="Feature" > Java on all platforms</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Refs : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>License :</label></br>
+							<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Proprietary</br>	
- 		 									<input type="checkbox" name="Feature" > some parts GPL</br>	
- 		 									<input type="checkbox" name="Feature" > hosted.</br>	
- 		 									<input type="checkbox" name="Feature" > Saas</br>	
- 		 									<input type="checkbox" name="Feature" > stand-alone and hosted</br>	
- 		 									<input type="checkbox" name="Feature" > free version</br>	
- 		 									<input type="checkbox" name="Feature" > free for open source projects</br>	
- 		 									<input type="checkbox" name="Feature" >Proprietary. Free community licenses for open source and academic projects</br>	
- 		 									<input type="checkbox" name="Feature" > hosted; available for open source projects</br>	
- 		 									<input type="checkbox" name="Feature" > Commercial</br>	
- 		 									<input type="checkbox" name="Feature" > some parts LGPL</br>	
- 		 									<input type="checkbox" name="Feature" > online</br>	
- 		 									<input type="checkbox" name="Feature" > hosted</br>	
- 		 									<input type="checkbox" name="Feature" > hosted. Available for free for open source projects</br>	
- 		 									<input type="checkbox" name="Feature" > free version for public projects</br>	
- 		 									<input type="checkbox" name="Feature" > non-profits and academic institutions</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Launch date : </label></br> <input id="4" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Creator :</label></br>
+							<label>Creator : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Ka-Ping Yee</br>	
- 		 									<input type="checkbox" name="Feature" > Richard Jones</br>	
- 		 									<input type="checkbox" name="Feature" >originally Starbase Corporation</br>	
- 		 									<input type="checkbox" name="Feature" > currently Borland</br>	
- 		 									<input type="checkbox" name="Feature" >Best Practical Solutions</br>	
- 		 									<input type="checkbox" name="Feature" > LLC</br>	
- 		 									<input type="checkbox" name="Feature" >Wrike</br>	
- 		 									<input type="checkbox" name="Feature" > Inc.</br>	
- 		 									<input type="checkbox" name="Feature" >MacsDesign Studio</br>	
- 		 									<input type="checkbox" name="Feature" >Hewlett-Packard</br>	
- 		 									<input type="checkbox" name="Feature" > formerly Mercury Interactive</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>System : </label></br> <input id="6" type="text" name="Feature"></br>
 							
@@ -134,10 +80,22 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['','']
+            local : ['kernel: Java; API: Java','Ruby','C++ and PHP','C','Java','Java, C#','kernel: executables for several platforms; hooks: Perl and Visual Basic','PHP','ASP','Java, C++, others','.NET','Python','C++, JavaScript','PHP, Java','Perl','C#, .NET','C, Java','Python, JavaScript','Emacs','Python,  JavaScript','C#','ASP on Windows, PHP on Mac, FreeBSD, and Linux','Java, MPS-based DSL','C, Web Front-end In Perl','.NET (client), Java (server)','HTML, Java on all platforms','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Proprietary','Proprietary, some parts GPL','Proprietary, hosted.','Proprietary, Saas','Proprietary, stand-alone and hosted, free version, free for open source projects','Proprietary. Free community licenses for open source and academic projects','GPLv2','Saas','AGPL','GPL','Proprietary, hosted; available for open source projects','Proprietary, Commercial','MIT license (ZPL v 2.0 for the template system)','Apache License','New BSD','Proprietary, some parts LGPL','Proprietary, online, hosted.','BSD','MPL','Mozilla Public License 1.1','Proprietary, free version','Proprietary, hosted','Proprietary, hosted. Available for free for open source projects','Proprietary, free version for public projects, non-profits and academic institutions','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['BMC Software','Canonical Ltd.','Ivaldi','Axosoft LLC','Turbine interactive','Jean-Philippe Lang','SysAid Technologies','Rational Software','Ka-Ping Yee, Richard Jones','Open Lab','Free Software Foundation','Microsoft','Various (open source contributors)','originally Starbase Corporation, currently Borland','Apache Software Foundation','otrs.org','Artenum','Doug Luxem','Usersnap GmbH','Seapine Software','Best Practical Solutions, LLC','INDEPNET','TechExcel','Zoho Corp.','Debian','Atlassian','Wrike, Inc.','Hornbill Systems','Google Code','Mozilla Foundation','Edgewall Software','Fog Creek Software','Assembla','Pivotal Labs','Kayako','MacsDesign Studio, LLC','Carsten Dominik','Planbox','JetBrains s.r.o.','D. Richard Hipp','Bontq LLC','Hewlett-Packard, formerly Mercury Interactive','Automation Centre','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['LibreSource','Usersnap','YouTrack','Request Tracker','Apache Bloodhound','Bugzilla','OTRS','TrackerSuite.Net','Liberum Help Desk','StarTeam','Launchpad','Plain Ticket','Team Foundation Server','Assembla Tickets','GLPI','Brimir','org-mode','Planbox','Axosoft','TestTrack','MantisBT','IBM Rational Team Concert','Teamwork','Debbugs','Fossil','Pivotal Tracker','HP Quality Center','IBM Rational ClearQuest','The Bug Genie','Wrike','Web Help Desk','Microsoft Dynamics CRM','Roundup','SysAid','Redmine','Trac','Kayako SupportSuite','FusionForge','JIRA','TechExcel's DevTrack','FogBugz','Supportworks','Zoho BugTracker','GNATS','Google Code Hosting','Bontq','BMC Remedy Action Request System','']
           });
     </script>

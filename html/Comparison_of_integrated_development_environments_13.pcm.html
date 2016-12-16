@@ -29,11 +29,8 @@
 							<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Developer :</label></br>
+							<label>Developer : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Paul Kulchenko</br>	
- 		 									<input type="checkbox" name="Feature" > ZeroBrane LLC</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Latest stable release :</label></br>
 							
@@ -51,19 +48,23 @@
 							<label>IDE : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Platform :</label></br>
+							<label>Platform : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 									<input type="checkbox" name="Feature" > Mac</br>	
- 		 									<input type="checkbox" name="Feature" > Linux</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Open-source','Proprietary','MIT','']
+            local : ['Windows','Windows, Mac, Linux','iOS','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['Open-source','Proprietary','MIT','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Unknown Worlds Entertainment','TwoLivesLeft','Paul Kulchenko, ZeroBrane LLC','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['Decoda','Codea','ZeroBrane Studio','']
           });
     </script>

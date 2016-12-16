@@ -38,13 +38,8 @@
  		 					 <input type="radio" name="FeatureWritten in Java" value="oui">oui <input type="radio" name="FeatureWritten in Java" value = "non">non </br>
 									
 						</br>	
-							<label>License :</label></br>
+							<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Community Edition:  Apache License v2.0</br>	
- 		 									<input type="checkbox" name="Feature" > Ultimate Edition: proprietary</br>	
- 		 									<input type="checkbox" name="Feature" >CDDL</br>	
- 		 									<input type="checkbox" name="Feature" > GPL2</br>	
-								
 						</br>	
  		 					<label>GUI builder :</label></br>
  		 					 <input type="radio" name="FeatureGUI builder" value="oui">oui <input type="radio" name="FeatureGUI builder" value = "non">non </br>
@@ -57,21 +52,20 @@
 							<label>IDE : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Other platforms :</label></br>
+							<label>Other platforms : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >FreeBSD</br>	
- 		 									<input type="checkbox" name="Feature" > IBM AIX</br>	
- 		 									<input type="checkbox" name="Feature" > OpenBSD</br>	
- 		 									<input type="checkbox" name="Feature" > Solaris</br>	
- 		 									<input type="checkbox" name="Feature" > other Unix</br>	
- 		 									<input type="checkbox" name="Feature" >IBM AIX</br>	
- 		 									<input type="checkbox" name="Feature" > JVM</br>	
- 		 									<input type="checkbox" name="Feature" >OpenBSD</br>	
-								
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['GPL','Proprietary (freeware)','Proprietary','Proprietary OTN JDeveloper License (freeware)','EPL','Community Edition:  Apache License v2.0, Ultimate Edition: proprietary','Permissive','Cloud IDE','CDDL, GPL2','GPL2+GNU linking exception','']
+          });
+          $("#2").typeahead({
+            name:"list2",
             local : ['JDeveloper','Geany','BlueJ','IntelliJ IDEA','jGRASP','Xcode (Apple)','Eclipse JDT IBM','JCreator','Rational Application Developer','Servoy','Codenvy','DrJava','JBuilder','Greenfoot','NetBeans','KDevelop','MyEclipse','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['','FreeBSD, IBM AIX, OpenBSD, Solaris, other Unix','generic JVM','Solaris','IBM AIX, Solaris','FreeBSD, JVM, Solaris','FreeBSD, OpenBSD, Solaris','OpenBSD, Solaris','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

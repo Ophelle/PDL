@@ -26,36 +26,31 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Game engine type :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >2D</br>	
- 		 									<input type="checkbox" name="Feature" > 3D</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Fully customizable user interface : </label></br> <input id="2" type="text" name="Feature"></br>
+							<label>Game engine type : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
+ 		 					<label>Fully customizable user interface :</label></br>
+ 		 					 <input type="radio" name="FeatureFully customizable user interface" value="oui">oui <input type="radio" name="FeatureFully customizable user interface" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
  		 					<label>Windowable :</label></br>
  		 					 <input type="radio" name="FeatureWindowable" value="oui">oui <input type="radio" name="FeatureWindowable" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Source code available? : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Source code available? :</label></br>
+ 		 					 <input type="radio" name="FeatureSource code available?" value="oui">oui <input type="radio" name="FeatureSource code available?" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Custom UI Mods / Addons : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Partial','Yes','Adjustable/movable windows, no custom additions','No','Adjustable/movable windows','?','Yes (update 1.2)','Adjustable/movable windows and Colors, no custom additions','']
+            local : ['3D','2D','2D, 3D','']
           });
           $("#2").typeahead({
             name:"list2",
             local : ['','Yes','No','?','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','Yes','Some','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

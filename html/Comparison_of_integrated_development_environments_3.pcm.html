@@ -26,25 +26,22 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Debugger : </label></br> <input id="1" type="text" name="Feature"></br>
+ 		 					<label>Debugger :</label></br>
+ 		 					 <input type="radio" name="FeatureDebugger" value="oui">oui <input type="radio" name="FeatureDebugger" value = "non">non </br>
+									
+						</br>	
+ 		 					<label>Mac OS X :</label></br>
+ 		 					 <input type="radio" name="FeatureMac OS X" value="oui">oui <input type="radio" name="FeatureMac OS X" value = "non">non </br>
+									
+						</br>	
+ 		 					<label>Class browser :</label></br>
+ 		 					 <input type="radio" name="FeatureClass browser" value="oui">oui <input type="radio" name="FeatureClass browser" value = "non">non </br>
+									
+						</br>	
+							<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Mac OS X : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Class browser : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>License :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >GPL </br>	
- 		 									<input type="checkbox" name="Feature" > LGPL </br>	
- 		 									<input type="checkbox" name="Feature" > Proprietary</br>	
- 		 									<input type="checkbox" name="Feature" >Freeware </br>	
- 		 									<input type="checkbox" name="Feature" >CDDL and GPL</br>	
-								
-						</br>	
-							<label>Latest stable release : </label></br> <input id="5" type="number" name="Feature"></br>
+							<label>Latest stable release : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>Other platforms :</label></br>
@@ -71,22 +68,20 @@
  		 									<input type="checkbox" name="Feature" > NetBSD</br>	
 								
 						</br>	
-							<label>Windows : </label></br> <input id="7" type="text" name="Feature"></br>
+ 		 					<label>Windows :</label></br>
+ 		 					 <input type="radio" name="FeatureWindows" value="oui">oui <input type="radio" name="FeatureWindows" value = "non">non </br>
+									
+						</br>	
+							<label>IDE : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>IDE :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >NetBeans C</br>	
- 		 									<input type="checkbox" name="Feature" >C++ pack</br>	
- 		 									<input type="checkbox" name="Feature" >LabWindows</br>	
- 		 									<input type="checkbox" name="Feature" >CVI</br>	
-								
+ 		 					<label>GUI builder :</label></br>
+ 		 					 <input type="radio" name="FeatureGUI builder" value="oui">oui <input type="radio" name="FeatureGUI builder" value = "non">non </br>
+									
 						</br>	
-							<label>GUI builder : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>C++ compiler : </label></br> <input id="10" type="text" name="Feature"></br>
-							
+ 		 					<label>C++ compiler :</label></br>
+ 		 					 <input type="radio" name="FeatureC++ compiler" value="oui">oui <input type="radio" name="FeatureC++ compiler" value = "non">non </br>
+									
 						</br>	
  		 					<label>Code coverage :</label></br>
  		 					 <input type="radio" name="FeatureCode coverage" value="oui">oui <input type="radio" name="FeatureCode coverage" value = "non">non </br>
@@ -100,68 +95,41 @@
  		 					 <input type="radio" name="FeatureAutocomplete" value="oui">oui <input type="radio" name="FeatureAutocomplete" value = "non">non </br>
 									
 						</br>	
-							<label>Linux : </label></br> <input id="14" type="text" name="Feature"></br>
-							
+ 		 					<label>Linux :</label></br>
+ 		 					 <input type="radio" name="FeatureLinux" value="oui">oui <input type="radio" name="FeatureLinux" value = "non">non </br>
+									
 						</br>	
-							<label>Profiler : </label></br> <input id="15" type="text" name="Feature"></br>
-							
+ 		 					<label>Profiler :</label></br>
+ 		 					 <input type="radio" name="FeatureProfiler" value="oui">oui <input type="radio" name="FeatureProfiler" value = "non">non </br>
+									
 						</br>	
-							<label>C compiler : </label></br> <input id="16" type="text" name="Feature"></br>
-							
+ 		 					<label>C compiler :</label></br>
+ 		 					 <input type="radio" name="FeatureC compiler" value="oui">oui <input type="radio" name="FeatureC compiler" value = "non">non </br>
+									
 						</br>	
  		 					<label>Integrated toolchain :</label></br>
  		 					 <input type="radio" name="FeatureIntegrated toolchain" value="oui">oui <input type="radio" name="FeatureIntegrated toolchain" value = "non">non </br>
 									
 						</br>	
-							<label>Refactoring : </label></br> <input id="18" type="text" name="Feature"></br>
-							
+ 		 					<label>Refactoring :</label></br>
+ 		 					 <input type="radio" name="FeatureRefactoring" value="oui">oui <input type="radio" name="FeatureRefactoring" value = "non">non </br>
+									
 						</br>	
-							<label>GUI-based design : </label></br> <input id="19" type="text" name="Feature"></br>
-							
+ 		 					<label>GUI-based design :</label></br>
+ 		 					 <input type="radio" name="FeatureGUI-based design" value="oui">oui <input type="radio" name="FeatureGUI-based design" value = "non">non </br>
+									
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','Yes (GUI remote)','']
+            local : ['GPL','Proprietary','GPL / LGPL / Proprietary','Proprietary freeware','BSD','EPL','Freeware / Proprietary','CDDL and GPL','OSI Approved','LGPL','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['No','Yes','Yes (Cross compiler)','']
+            local : ['2011 10','2015 02','2015 05 XE8','2013 04','2010 12','2013 06','2013 10 (Unofficial Version), 2005 02 (Official Version)','2002 09','2008 11','2012 04','2013 02','2013 12','2012 12','2013 03','2010 06','2012','2012 10','2012 07','2014 06','2015 03','2014 05','2014 04','2014 12','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes','N/A','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['No','Yes','Yes (32-bit only)','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes (unstable)','Yes','No','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['External','Yes','No','Yes (GCC, Clang, VC  + Custom)','Yes (MinGW + custom)','Yes (Xcode toolchain)','Yes (GCC + Custom)','Yes, llvm (llvm-gcc and gcc deprecated)','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['Yes','No','Yes (obsolete)','No (Kylix deprecated)','partial','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['Yes','No','Yes (As of CodeLite 6.1, integration with Valgrind)','Yes (Xcode profiler)','Yes (bundled with AQTime)','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['Yes','External','Yes (MinGW + custom)','Yes (GCC, Clang, VC, + Custom)','Yes, llvm (llvm-gcc and gcc deprecated)','Yes (Xcode toolchain)','Yes (GCC + Custom)','No','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['Yes','No','Yes (via plugin)','']
-          });
-          $("#11").typeahead({
-            name:"list11",
-            local : ['Yes','No','Yes (wxWidgets)','']
+            local : ['C++Builder','AppCode (IntelliJ IDEA)','Philasmicos Entwickler Studio','Eclipse CDT','LccWin32','Microsoft Visual Studio','Dev-C++','NetBeans C/C++ pack','KDevelop','CodeLite','wxDev-C++','LabWindows/CVI','Ultimate++ TheIDE','Pelles C','OpenWatcom','MonoDevelop','Geany','Rational Software Architect (Eclipse IBM)','Xcode (Apple)','Anjuta','Microsoft Visual Studio Express','Code::Blocks','Qt Creator','Oracle Solaris Studio (formerly Sun Studio)','GNAT Programming Studio','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

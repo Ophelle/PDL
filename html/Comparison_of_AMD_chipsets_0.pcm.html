@@ -26,20 +26,15 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Southbridge :</label></br>
+							<label>Southbridge : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >AMD-766</br>	
- 		 									<input type="checkbox" name="Feature" > VIA-VT82C686B</br>	
- 		 									<input type="checkbox" name="Feature" >AMD-756</br>	
- 		 									<input type="checkbox" name="Feature" > VIA-VT82C686A</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>FSB/HT (MHz) : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Released : </label></br> <input id="3" type="number" name="Feature"></br>
+							<label>Released : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Code name : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
@@ -77,18 +72,26 @@ Most initial boards shipped without USB headers due to a fault with the integrat
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['66 (FSB)','100 (FSB)','133 (FSB)','800 (HT 1.x)','']
+            local : ['AMD-766, VIA-VT82C686B','AMD-645','AMD-8131 AMD-8132','AMD-756, VIA-VT82C686A','AMD-766','AMD-768','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['AMD-640','AMD-8111','AMD-762','AMD-751','AMD-761','']
+            local : ['66 (FSB)','100 (FSB)','133 (FSB)','800 (HT 1.x)','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['AMD-750 chipset','AMD-640 chipset','AMD-760MP chipset','AMD-760 chipset','AMD-760MPX chipset','AMD-8000 series chipset','']
+            local : ['May 2001','','Nov 2000','1999','Apr 2004','']
           });
           $("#4").typeahead({
             name:"list4",
+            local : ['AMD-640','AMD-8111','AMD-762','AMD-751','AMD-761','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['AMD-750 chipset','AMD-640 chipset','AMD-760MP chipset','AMD-760 chipset','AMD-760MPX chipset','AMD-8000 series chipset','']
+          });
+          $("#6").typeahead({
+            name:"list6",
             local : ['','']
           });
     </script>

@@ -26,16 +26,11 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Origin :</label></br>
+							<label>Origin : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Japan and Okinawa</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Stances :</label></br>
+							<label>Stances : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >deep</br>	
- 		 									<input type="checkbox" name="Feature" >natural</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Derived from :</label></br>
 							
@@ -135,9 +130,21 @@
  		 									<input type="checkbox" name="Feature" > 40 percent soft techniques</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label># of kata : </label></br> <input id="6" type="number" name="Feature"></br>
+							<label># of kata : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>		<script>
+		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['Okinawa','Japan and Okinawa','Japan','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['mainly natural','natural','deep/natural','deep (beginner), natural (advanced)','natural stride (beginner), shorter/narrower (advanced)','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['15','15 kata not including kihon and Bo kihon/kata','about 16','18','More than 60 counting all kobudo kata','8','12','23 (+ ura)','46 including weapons kata','15 including weapons kata','21','more than 80','26 + additional','15 (one hidden)','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

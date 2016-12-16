@@ -35,12 +35,13 @@
 							<label>Memory clock (MHz) : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>API compliance (version) - DirectX : </label></br> <input id="4" type="number" name="Feature"></br>
-							
+ 		 					<label>API compliance (version) - DirectX :</label></br>
+ 		 					 <input type="radio" name="FeatureAPI compliance (version) - DirectX" value="oui">oui <input type="radio" name="FeatureAPI compliance (version) - DirectX" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Memory - Bus width (bit) : </label></br> <input id="5" type="number" name="Feature"></br>
+							<label>Memory - Bus width (bit) : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Core config : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
@@ -50,9 +51,8 @@
 							<label>Memory (MB) : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>API compliance (version) - other :</label></br>
+							<label>API compliance (version) - other : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Fillrate - MTextels/s : </label></br> <input id="10" type="number" name="Feature"></br>
 							
@@ -78,32 +78,30 @@
 GFLOPs : </label></br> <input id="13" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Fillrate - Vertices/s : </label></br> <input id="14" type="number" name="Feature"></br>
+							<label>Fillrate - Vertices/s : </label></br> <input id="14" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Code name : </label></br> <input id="15" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>API compliance (version) - OpenGL : </label></br> <input id="16" type="number" name="Feature"></br>
+							<label>API compliance (version) - OpenGL : </label></br> <input id="16" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Fillrate - MOperations/s : </label></br> <input id="17" type="number" name="Feature"></br>
+						</br>	
+							<label>Fillrate - MOperations/s :</label></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+ 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
 							<label>Model : </label></br> <input id="18" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>Fab (nm) : </label></br> <input id="19" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="20" type="number" name="Feature"></br>
+							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="20" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Notes :</label></br>
+						</br>	
+							<label>Notes : </label></br> <input id="21" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Fixed-function T&L</br>	
- 		 									<input type="checkbox" name="Feature" > TEV "pixel shader"</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -148,6 +146,10 @@ Corona','']
           $("#6").typeahead({
             name:"list6",
             local : ['Model','Hollywood (Wii)','Flipper (GameCube)','Xenos (Xbox 360)','Latte (Wii U)','Durango (Xbox One)','Liverpool (PlayStation 4)','']
+          });
+          $("#7").typeahead({
+            name:"list7",
+            local : ['Fixed-function T&L, TEV "pixel shader"','Surface tessellation','','Notes','Tiled resources','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

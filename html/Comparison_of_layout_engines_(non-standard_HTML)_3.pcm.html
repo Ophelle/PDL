@@ -38,13 +38,15 @@
  		 									<input type="checkbox" name="Feature" > td</br>	
  		 									<input type="checkbox" name="Feature" > th</br>	
  		 									<input type="checkbox" name="Feature" > and tr elements</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+								
 						</br>	
-							<label>Presto : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>Presto :</label></br>
+ 		 					 <input type="radio" name="FeaturePresto" value="oui">oui <input type="radio" name="FeaturePresto" value = "non">non </br>
+									
 						</br>	
-							<label>KHTML : </label></br> <input id="4" type="text" name="Feature"></br>
-							
+ 		 					<label>KHTML :</label></br>
+ 		 					 <input type="radio" name="FeatureKHTML" value="oui">oui <input type="radio" name="FeatureKHTML" value = "non">non </br>
+									
 						</br>	
 							<label>Attribute : </label></br> <input id="5" type="text" name="Feature"></br>
 							
@@ -54,12 +56,13 @@
 						</br>	
 							<label>Trident : </label></br> <input id="7" type="number" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Supported first by : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Gecko : </label></br> <input id="9" type="text" name="Feature"></br>
-							
+ 		 					<label>Gecko :</label></br>
+ 		 					 <input type="radio" name="FeatureGecko" value="oui">oui <input type="radio" name="FeatureGecko" value = "non">non </br>
+									
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -67,27 +70,15 @@
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['No','?','','']
+            local : ['start','bgproperties','for','rightmargin','bordercolordark','leftmargin','controls','frame','framespacing','target','valign','bordercolor','event','loop','dynsrc','bordercolorlight','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['No','?','Yes','','']
+            local : ['img','body','table','caption','frameset','form','script','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['start','bgproperties','for','rightmargin','bordercolordark','leftmargin','controls','frame','framespacing','target','valign','bordercolor','event','loop','dynsrc','bordercolorlight','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['img','body','table','caption','frameset','form','script','']
-          });
-          $("#6").typeahead({
-            name:"list6",
             local : ['Internet Explorer','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['No','?','Partial','','Yes','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

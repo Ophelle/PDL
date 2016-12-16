@@ -26,70 +26,35 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Kile/LyX : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Kile/LyX :</label></br>
+ 		 					 <input type="radio" name="FeatureKile/LyX" value="oui">oui <input type="radio" name="FeatureKile/LyX" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Software : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Microsoft Word : </label></br> <input id="3" type="text" name="Feature"></br>
+ 		 					<label>Microsoft Word :</label></br>
+ 		 					 <input type="radio" name="FeatureMicrosoft Word" value="oui">oui <input type="radio" name="FeatureMicrosoft Word" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Apache OpenOffice / LibreOffice :</label></br>
+ 		 					 <input type="radio" name="FeatureApache OpenOffice / LibreOffice" value="oui">oui <input type="radio" name="FeatureApache OpenOffice / LibreOffice" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>RTF scan :</label></br>
+ 		 					 <input type="radio" name="FeatureRTF scan" value="oui">oui <input type="radio" name="FeatureRTF scan" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Other : </label></br> <input id="6" type="text" name="Feature"></br>
 							
-						</br>	
-							<label>Apache OpenOffice / LibreOffice : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>RTF scan : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Other :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >NeoOffice</br>	
- 		 									<input type="checkbox" name="Feature" > Google Docs</br>	
- 		 									<input type="checkbox" name="Feature" >OpenDocument Text scan</br>	
- 		 									<input type="checkbox" name="Feature" > LEd</br>	
- 		 									<input type="checkbox" name="Feature" > Texmaker</br>	
- 		 									<input type="checkbox" name="Feature" > TeXnicCenter</br>	
- 		 									<input type="checkbox" name="Feature" > TeXstudio</br>	
- 		 									<input type="checkbox" name="Feature" > TeXworks</br>	
- 		 									<input type="checkbox" name="Feature" > WinEdt</br>	
- 		 									<input type="checkbox" name="Feature" > WinShell</br>	
- 		 									<input type="checkbox" name="Feature" >Mellel</br>	
- 		 									<input type="checkbox" name="Feature" > Nisus</br>	
- 		 									<input type="checkbox" name="Feature" >PIRA</br>	
- 		 									<input type="checkbox" name="Feature" > MediaWiki</br>	
- 		 									<input type="checkbox" name="Feature" > SPIP</br>	
- 		 									<input type="checkbox" name="Feature" >Pages 4</br>	
- 		 									<input type="checkbox" name="Feature" > Mellel</br>	
- 		 									<input type="checkbox" name="Feature" > TextEdit; HTML</br>	
- 		 									<input type="checkbox" name="Feature" >Google Docs</br>	
- 		 									<input type="checkbox" name="Feature" > Zoho Writer</br>	
- 		 									<input type="checkbox" name="Feature" >Emacs</br>	
- 		 									<input type="checkbox" name="Feature" > Vim</br>	
- 		 									<input type="checkbox" name="Feature" >NeoOffice </br>	
- 		 									<input type="checkbox" name="Feature" > Star Office</br>	
- 		 									<input type="checkbox" name="Feature" >Pages</br>	
- 		 									<input type="checkbox" name="Feature" > TextEdit; HTML and plain text scan</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['(with LyZ)','No','?','Yes','']
+            local : ['refbase','Qiqqa','ReadCube','BibBase','colwiz','Sente','BibSonomy','Citavi','Bookends','Reference Manager','Docear','RefDB','WizFolio','RefWorks','Referencer','BibDesk','Bebop','JabRef','Zotero','Paperpile','Pybliographer','Wikindx','SciRef','Bibus','EndNote','CiteULike','KBibTeX','Aigaion','Biblioscape','Mendeley','Papers','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['refbase','Qiqqa','ReadCube','BibBase','colwiz','Sente','BibSonomy','Citavi','Bookends','Reference Manager','Docear','RefDB','WizFolio','RefWorks','Referencer','BibDesk','Bebop','JabRef','Zotero','Paperpile','Pybliographer','Wikindx','SciRef','Bibus','EndNote','CiteULike','KBibTeX','Aigaion','Biblioscape','Mendeley','Papers','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Yes','No','Depends','?','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['No','Yes','?','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['?','Yes','No','']
+            local : ['NeoOffice','none','NeoOffice, Google Docs','Integrated WYSIWYG word processor (RTF output for Word/OpenOffice)','OpenDocument Text scan, LEd, Texmaker, TeXnicCenter, TeXstudio, TeXworks, WinEdt, WinShell','Pages','Mellel, Nisus','PIRA, MediaWiki, SPIP','Pages 4, Mellel, TextEdit; HTML','Google Docs, Zoho Writer','Google Docs','?','No','Emacs, Vim, WinEdt','WordPerfect','NeoOffice , Star Office','Pages, Mellel, Nisus, TextEdit; HTML and plain text scan','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

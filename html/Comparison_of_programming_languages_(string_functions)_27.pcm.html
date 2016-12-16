@@ -26,21 +26,20 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Languages :</label></br>
+							<label>Languages : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Python</br>	
- 		 									<input type="checkbox" name="Feature" > Ruby(1.9+)</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Format :</label></br>
+							<label>Format : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >split </br>	
- 		 									<input type="checkbox" name="Feature" >(separator)</br>	
- 		 									<input type="checkbox" name="Feature" ></br>	
- 		 									<input type="checkbox" name="Feature" > string</br>	
- 		 									<input type="checkbox" name="Feature" > 2</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['split /(separator)/, string, 2','string.partition(separator)','lists:partition(pred, string)','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['Erlang','Python, Ruby(1.9+)','Perl','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

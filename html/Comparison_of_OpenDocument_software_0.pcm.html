@@ -26,14 +26,12 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Office suite :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Standalone or Google Apps</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Products : </label></br> <input id="2" type="text" name="Feature"></br>
+							<label>Office suite : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
+							<label>Products : </label></br> <input id="2" type="aaaa" name="Feature"></br>
+							
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Operating systems :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >Windows</br>	
@@ -47,39 +45,42 @@
  		 									<input type="checkbox" name="Feature" > Windows CE</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Version : </label></br> <input id="4" type="number" name="Feature"></br>
+							<label>Version : </label></br> <input id="4" type="text" name="Feature"></br>
 							
+						</br>	
+							<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
+							
+						</br>	
+							<label>Developer : </label></br> <input id="6" type="text" name="Feature"></br>
+							
+						</br>	
+ 		 					<label>ISO/IEC 26300:2006 :</label></br>
+ 		 					 <input type="radio" name="FeatureISO/IEC 26300:2006" value="oui">oui <input type="radio" name="FeatureISO/IEC 26300:2006" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>						</br>	
-							<label>License :</label></br>
+							<label>Notes : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Bundled with Mac OS X</br>	
- 		 									<input type="checkbox" name="Feature" >Source code available</br>	
- 		 									<input type="checkbox" name="Feature" >GPL </br>	
- 		 									<input type="checkbox" name="Feature" > LGPL</br>	
- 		 									<input type="checkbox" name="Feature" >LGPL </br>	
- 		 									<input type="checkbox" name="Feature" > SISSL</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Developer :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Patrick Luby and Edward Peterlin</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>ISO/IEC 26300:2006 :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >ISO</br>	
- 		 									<input type="checkbox" name="Feature" >IEC 26300:2006</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Notes :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >TextMaker 2006 - not valid files;
-TextMaker 2010 - valid</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['P1','P13','P15','P7','P5','P4','P8','P9','P18','P6','P2','P17','P11','P10','P14','P16','P3','P12','']
+            local : ['OpenOffice.org','StarOffice','IBM Lotus Symphony','IBM Workplace Collaboration Services','Microsoft Office','Calligra Suite','','Corel WordPerfect Office X4','Office suite','LibreOffice','SoftMaker Office','NeoOffice','Standalone','KOffice','Standalone or Google Apps','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['X4 (2008)','2.5+','2006 and higher','2.4+','2.4.1','4.0.3','2006','Version','1.0+','2007 SP2','1.1.5','8','1.5 and higher','2.1','2.4.2','3.0.0','1.4+','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['LGPL','Proprietary','License','Bundled with Mac OS X/Source code available','GPL','GPL / LGPL','LGPL / SISSL','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['KDE Project','Microsoft','Apple Inc.','AdventNet','LibreOffice','OpenOffice.org','IBM','Developer','Google','Corel','AbiSource','Sun Microsystems','Patrick Luby and Edward Peterlin','SoftMaker','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['','some limitations','Multiple ODF versions supported (ISO/ODF 1.0/1.1/1.2/1.2 Extended )','Based upon OpenOffice.org.','Import only','adjustable ODF version (ISO/ODF 1.2)','Notes','Only supports basic ODT documents. Complex ones created in OpenOffice are likely to be broken in AbiWord.','TextMaker 2006 - not valid files;
+TextMaker 2010 - valid','no longer being actively marketed','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

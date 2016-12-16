@@ -32,8 +32,9 @@
 							<label>HDD bays : </label></br> <input id="2" type="number" name="Feature"></br>
 							
 						</br>	
-							<label>Expansion slots : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>Expansion slots :</label></br>
+ 		 					 <input type="radio" name="FeatureExpansion slots" value="oui">oui <input type="radio" name="FeatureExpansion slots" value = "non">non </br>
+									
 						</br>	
 							<label>Model : </label></br> <input id="4" type="text" name="Feature"></br>
 							
@@ -47,14 +48,10 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['4 (PCI-E)','No','1 (ExpressCard/34, 17" only)','']
+            local : ['MacBook Pro','Mac Pro','MacBook Air','iMac','Mac Mini','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['MacBook Pro','Mac Pro','MacBook Air','iMac','Mac Mini','']
-          });
-          $("#3").typeahead({
-            name:"list3",
             local : ['32 GB','8 GB','16GB','8 GB (21.5") 16 GB (27")','']
           });
     </script>

@@ -32,23 +32,23 @@
 							<label>Released : </label></br> <input id="2" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Publisher :</label></br>
+							<label>Publisher : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Sunsoft</br>	
- 		 									<input type="checkbox" name="Feature" >Sega</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Platform :</label></br>
+							<label>Platform : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Sega Genesis </br>	
- 		 									<input type="checkbox" name="Feature" > Mega Drive</br>	
- 		 									<input type="checkbox" name="Feature" >OS</br>	
- 		 									<input type="checkbox" name="Feature" >2 (demo only)</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['Game Boy Color','Game Boy','PlayStation','Apple II','Sega Genesis / Mega Drive','Sega Game Gear','Atari Lynx','SAM Coupé','MS-DOS','PlayStation Portable','Amstrad CPC','Commodore Amiga CD32','Windows 95','Atari ST','OS/2 (demo only)','Acorn Archimedes','Arcade (prototype only)','TurboGrafx-CD','PC-98','PlayStation 2','CD-i','Cambridge Z88','Commodore 64','Mobile phone (Java ME)','ZX Spectrum','3DO','Commodore Amiga CDTV','Apple Macintosh','Commodore Amiga','NES','SNES','Sega Master System','Amstrad GX4000','']
+          });
+          $("#2").typeahead({
+            name:"list2",
             local : ['DMA Design?','DMA Design','Ocean Software','Sunsoft','Krisalis Software','Data East USA','Chris White','Take-Two Interactive','E & E Software','Kuusoukagaku Corp.','Team17','Brutal Deluxe Software','?','Distinctive Developments','Probe Software Limited','Visual Sciences','Dominic Morris','BANDIT Inc.','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Sunsoft','Psygnosis','Sega','Imagineer','Ocean Software','Philips Interactive Media','TBA','Krisalis Software','?','FRED Publishing','DMA Design','Take-Two Interactive?','Sony Computer Entertainment','Sunsoft/Sega','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

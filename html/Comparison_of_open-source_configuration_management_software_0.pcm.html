@@ -26,71 +26,59 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Agent-less : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Agent-less :</label></br>
+ 		 					 <input type="radio" name="FeatureAgent-less" value="oui">oui <input type="radio" name="FeatureAgent-less" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Have a GUI : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Encrypts : </label></br> <input id="3" type="text" name="Feature"></br>
+ 		 					<label>Encrypts :</label></br>
+ 		 					 <input type="radio" name="FeatureEncrypts" value="oui">oui <input type="radio" name="FeatureEncrypts" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Language : </label></br> <input id="4" type="text" name="Feature"></br>
 							
-						</br>	
-							<label>Language :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Perl</br>	
- 		 									<input type="checkbox" name="Feature" > Python</br>	
- 		 									<input type="checkbox" name="Feature" >Python</br>	
- 		 									<input type="checkbox" name="Feature" > Java</br>	
- 		 									<input type="checkbox" name="Feature" >C and Scala</br>	
- 		 									<input type="checkbox" name="Feature" > Go</br>	
- 		 									<input type="checkbox" name="Feature" > PHP</br>	
- 		 									<input type="checkbox" name="Feature" > C++</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Verify mode : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>License :</label></br>
+							<label>License : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >GPL and Affero GPL</br>	
- 		 									<input type="checkbox" name="Feature" >Apache from 2.7.0</br>	
- 		 									<input type="checkbox" name="Feature" > GPL before then</br>	
- 		 									<input type="checkbox" name="Feature" >GPL</br>	
- 		 									<input type="checkbox" name="Feature" > COSL</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>First release : </label></br> <input id="7" type="number" name="Feature"></br>
+							<label>First release : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Latest stable release : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Mutual auth : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>Mutual auth :</label></br>
+ 		 					 <input type="radio" name="FeatureMutual auth" value="oui">oui <input type="radio" name="FeatureMutual auth" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','','Both','']
+            local : ['','Yes','Yes (Free 30-day Trial)','No','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['','Yes','Yes (Free 30-day Trial)','No','']
+            local : ['Perl, Python','Python','Ruby','Perl','Python, Java','C','Java (C, Perl, Python, PL/SQL)','Java','C and Scala','Nix','Python, Go','C++','Perl, PHP, C++','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes','','No','Partial','']
+            local : ['','Yes','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['','Yes','']
+            local : ['GPLv2','Apache','BSD','GPL and Affero GPL','GPL','Apache 2.0','Affero General Public License','LGPL','CPL','Apache from 2.7.0, GPL before then','GPL, COSL','MIT License','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['2008-10-08 1.13.0','2014-09-05 1.3.5','2013-09-05 0.8','2014-08-28 2.10.5','2014-11-03 2014.7.0','2015-04-28 1.9.1','2007-09-10 1.19.0','2014-06-15 6.1','2014-12-05 3.6.3','2015-03-26  3.7.5','2009-01-26 3.16.004','2014-12-30 14.12','2006-08-13 4.2.8.233','2015-03-23 15.2.0','2015-03-19 3.1.12','2014-12-16 12.0.3 (client), 2014-12-17 12.0.1 (server)','2015-02-13 2.4.2','2012-12-16 3.4.16','2014-05-06 1.6.1','2014-07-14 0.50.0','2015-04 2.3','2013-04-03 0.7','2014-07-13','2013-03-01 4.0.3','Weekly Releases','']
+            local : ['2011','1998-02-16','1998','2004-08-11','2012-03-08','2002-03-26','1994','2010-11-05 0.9.0','2003','2005-04-01','2004-02-11','2010','2005-08-30','2004','2011-03-17 0.6.0','1993','2009-01-15 0.5.0','2010-09-17','2005-08-04','2010-01-21','2008-06','2010-05-01 1.0.0','']
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['Yes','','No','Partial','']
+            local : ['2008-10-08 1.13.0','2014-09-05 1.3.5','2013-09-05 0.8','2014-08-28 2.10.5','2014-11-03 2014.7.0','2015-04-28 1.9.1','2007-09-10 1.19.0','2014-06-15 6.1','2014-12-05 3.6.3','2015-03-26  3.7.5','2009-01-26 3.16.004','2014-12-30 14.12','2006-08-13 4.2.8.233','2015-03-23 15.2.0','2015-03-19 3.1.12','2014-12-16 12.0.3 (client), 2014-12-17 12.0.1 (server)','2015-02-13 2.4.2','2012-12-16 3.4.16','2014-05-06 1.6.1','2014-07-14 0.50.0','2015-04 2.3','2013-04-03 0.7','2014-07-13','2013-03-01 4.0.3','Weekly Releases','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

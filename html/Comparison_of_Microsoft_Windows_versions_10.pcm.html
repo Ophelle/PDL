@@ -26,8 +26,9 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>FAT32 : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>FAT32 :</label></br>
+ 		 					 <input type="radio" name="FeatureFAT32" value="oui">oui <input type="radio" name="FeatureFAT32" value = "non">non </br>
+									
 						</br>	
  		 					<label>FAT12 :</label></br>
  		 					 <input type="radio" name="FeatureFAT12" value="oui">oui <input type="radio" name="FeatureFAT12" value = "non">non </br>
@@ -52,18 +53,14 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','Yes (OSR2 or above)','']
+            local : ['Network Drive','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Network Drive','']
+            local : ['Yes (1.5, read)','No','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes (1.5, read)','No','']
-          });
-          $("#4").typeahead({
-            name:"list4",
             local : ['Network Drive','']
           });
     </script>

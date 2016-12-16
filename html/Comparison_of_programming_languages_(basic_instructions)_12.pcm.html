@@ -26,37 +26,46 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Products : </label></br> <input id="1" type="text" name="Feature"></br>
+							<label>Products : </label></br> <input id="1" type="aaaa" name="Feature"></br>
 							
 						</br>	
-							<label>string to floating point :</label></br>
+							<label>string to floating point : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >With prior declarations and association of:</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>string to integer :</label></br>
+							<label>string to integer : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >With prior declarations and association of:</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>string to long integer :</label></br>
+							<label>string to long integer : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >With prior declarations and association of:</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>floating point to string :</label></br>
+							<label>floating point to string : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >With prior declarations and association of:</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>integer to string :</label></br>
+							<label>integer to string : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >With prior declarations and association of:</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['P3','P31','P7','P21','P28','P4','P29','P25','P14','P19','P30','P5','P18','P24','P16','P2','P12','P11','P10','P22','P1','P15','P27','P6','P26','P13','P33','P9','P17','P20','P32','P23','P8','']
+            local : ['','With prior declarations and association of:','or','MOVE «FUNCTION» NUMVAL(string) TO number','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['MOVE «FUNCTION» NUMVAL(string) TO number','','orv','With prior declarations and association of:','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['','With prior declarations and association of:','MOVE «FUNCTION» NUMVAL(string) TO number','or','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['','MOVE number TO numeric-edited','With prior declarations and association of:','or
+
+
+etc.','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['','MOVE number TO numeric-edited','With prior declarations and association of:','or','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -26,38 +26,25 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>gvSIG Mobile :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Full vectorial editing capabilities both GPS and hand-based</br>	
- 		 									<input type="checkbox" name="Feature" > SRS support</br>	
- 		 									<input type="checkbox" name="Feature" > custom forms for alphanumeric attributes</br>	
- 		 									<input type="checkbox" name="Feature" > vector symbology</br>	
- 		 									<input type="checkbox" name="Feature" > thematic legend. SDI client.</br>	
-								
+ 		 					<label>gvSIG Mobile :</label></br>
+ 		 					 <input type="radio" name="FeaturegvSIG Mobile" value="oui">oui <input type="radio" name="FeaturegvSIG Mobile" value = "non">non </br>
+									
 						</br>	
-							<label>TouchGeo :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >OSM</br>	
- 		 									<input type="checkbox" name="Feature" > Google</br>	
- 		 									<input type="checkbox" name="Feature" > Bing</br>	
- 		 									<input type="checkbox" name="Feature" > MapQuest tile services</br>	
- 		 									<input type="checkbox" name="Feature" > integrated with SQL Server and Dynamics CRM for read and write.</br>	
-								
+ 		 					<label>TouchGeo :</label></br>
+ 		 					 <input type="radio" name="FeatureTouchGeo" value="oui">oui <input type="radio" name="FeatureTouchGeo" value = "non">non </br>
+									
 						</br>	
-							<label>gvSIG Mini :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >OpenStreetMap data + other free tile services. Integration with Twitter</br>	
- 		 									<input type="checkbox" name="Feature" > weather</br>	
- 		 									<input type="checkbox" name="Feature" > Facebook</br>	
- 		 									<input type="checkbox" name="Feature" > namefinder. Off-line.</br>	
-								
+ 		 					<label>gvSIG Mini :</label></br>
+ 		 					 <input type="radio" name="FeaturegvSIG Mini" value="oui">oui <input type="radio" name="FeaturegvSIG Mini" value = "non">non </br>
+									
 						</br>	
-							<label>Name :</label></br>
+							<label>Name : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >WMS-C</br>	
- 		 									<input type="checkbox" name="Feature" >WMTS</br>	
-								
 		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['SHP','Editing','WMS','Social Networks','Routing','GML','GPX','WMS-C/WMTS','WFS','GPS','Others','Raster','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

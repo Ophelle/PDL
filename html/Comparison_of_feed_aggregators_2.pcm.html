@@ -26,81 +26,51 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>other :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >BeOS</br>	
- 		 									<input type="checkbox" name="Feature" > QNX</br>	
- 		 									<input type="checkbox" name="Feature" > OS</br>	
- 		 									<input type="checkbox" name="Feature" >2</br>	
- 		 									<input type="checkbox" name="Feature" >every platform with Java and SWT</br>	
- 		 									<input type="checkbox" name="Feature" >Windows Phone</br>	
- 		 									<input type="checkbox" name="Feature" > Symbian</br>	
- 		 									<input type="checkbox" name="Feature" > WebOS</br>	
- 		 									<input type="checkbox" name="Feature" > Firefox OS</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>BSD : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Mac OS X : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>other :</label></br>
+ 		 					 <input type="radio" name="Featureother" value="oui">oui <input type="radio" name="Featureother" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>BSD :</label></br>
+ 		 					 <input type="radio" name="FeatureBSD" value="oui">oui <input type="radio" name="FeatureBSD" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Mac OS X :</label></br>
+ 		 					 <input type="radio" name="FeatureMac OS X" value="oui">oui <input type="radio" name="FeatureMac OS X" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>web browser : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Linux : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Solaris : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Windows : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Linux :</label></br>
+ 		 					 <input type="radio" name="FeatureLinux" value="oui">oui <input type="radio" name="FeatureLinux" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Solaris :</label></br>
+ 		 					 <input type="radio" name="FeatureSolaris" value="oui">oui <input type="radio" name="FeatureSolaris" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Windows :</label></br>
+ 		 					 <input type="radio" name="FeatureWindows" value="oui">oui <input type="radio" name="FeatureWindows" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Client : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>iOS : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Android : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>iOS :</label></br>
+ 		 					 <input type="radio" name="FeatureiOS" value="oui">oui <input type="radio" name="FeatureiOS" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Android :</label></br>
+ 		 					 <input type="radio" name="FeatureAndroid" value="oui">oui <input type="radio" name="FeatureAndroid" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','Web based','BSD','']
+            local : ['','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','No','Web based','Mac OS X','Included','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','No','Linux','Web based','Obsolete','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['No','Web based','Yes','Dropped','Solaris','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Yes','Web based','Included','Windows','No','']
-          });
-          $("#7").typeahead({
-            name:"list7",
             local : ['Juice','Netscape Browser','K-Meleon','AOL Explorer','iTunes','Internet Explorer','The Bat!','NetNewsWire','Claws Mail','CommaFeed','FeedDemon','NewsAccess','Liferea','Pegasus Mail','MediaMonkey','RSSOwl','Canto','IBM Lotus Notes','Mozilla Thunderbird','Safari','Client','NewsBlur','RSS Bandit','Feed Viewer','Tiny Tiny RSS','Sage','The Old Reader','Amarok','Zune','Shiira','Microsoft Office Outlook','Akregator','Kazehakase','OmniWeb','Sleipnir','Opera Mail','Mozilla Firefox','Windows Live Mail','Netscape Navigator 9','SeaMonkey Mail & Newsgroups','Rhythmbox','BlogBridge','Gnus','Songbird','Cooliris','NewsFire','Pulse','Winamp','Mail (OS X)','Feedreader','Avant','Zimbra','Maxthon','Flock','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['No','Yes','Dedicated App','iOS','Multiple apps','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['Yes','No','Multiple apps','Dedicated App','Android','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

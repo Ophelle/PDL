@@ -35,9 +35,9 @@
 							<label>Memory clock (MHz) : </label></br> <input id="3" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>TDP (watts) : </label></br> <input id="4" type="number" name="Feature"></br>
+							<label>TDP (watts) : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Memory - Bus width (bit) : </label></br> <input id="5" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -85,11 +85,8 @@ GFLOPS - Double Precision : </label></br> <input id="16" type="text" name="Featu
 							<label>Fillrate - Pixel (GP/s) : </label></br> <input id="19" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Notes :</label></br>
+							<label>Notes : </label></br> <input id="20" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Stereo Display</br>	
- 		 									<input type="checkbox" name="Feature" > Genlock</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -97,17 +94,25 @@ GFLOPS - Double Precision : </label></br> <input id="16" type="text" name="Featu
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['','142','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['3:4:8:8','2:4:8:8','1:2:2:2
 *:4:4:4','3:2:2:2
 *:4:4:4','5:12:12:8','']
           });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['NV34GL','NV30GL','NV40GL','NV35GL','NV36GL','']
-          });
           $("#4").typeahead({
             name:"list4",
+            local : ['NV34GL','NV30GL','NV40GL','NV35GL','NV36GL','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['Quadro FX 600','Quadro FX 1100','Quadro FX 1000','Quadro FX 2000','Quadro FX 3000G','Quadro FX 500','Quadro FX 4000','Quadro FX 700','Quadro FX 4000 SDI','Quadro FX 3000','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['Stereo Display','Stereo Display, Genlock','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

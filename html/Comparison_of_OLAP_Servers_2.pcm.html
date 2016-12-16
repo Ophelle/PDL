@@ -30,20 +30,8 @@
  		 					 <input type="radio" name="FeatureMDX" value="oui">oui <input type="radio" name="FeatureMDX" value = "non">non </br>
 									
 						</br>	
-							<label>Visualization :</label></br>
+							<label>Visualization : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >TM1 Web</br>	
- 		 									<input type="checkbox" name="Feature" >TM1 Contributor</br>	
- 		 									<input type="checkbox" name="Feature" > IBM Cognos Insight</br>	
- 		 									<input type="checkbox" name="Feature" > IBM Cognos Cafe for Excel</br>	
- 		 									<input type="checkbox" name="Feature" >SmartView (Excel-AddIn)</br>	
- 		 									<input type="checkbox" name="Feature" > WebAnalysis</br>	
- 		 									<input type="checkbox" name="Feature" > Financial Reports</br>	
- 		 									<input type="checkbox" name="Feature" >Java</br>	
- 		 									<input type="checkbox" name="Feature" > Javascript</br>	
- 		 									<input type="checkbox" name="Feature" >Microsoft Excel</br>	
- 		 									<input type="checkbox" name="Feature" > Microsoft Power BI</br>	
-								
 						</br>	
  		 					<label>LINQ :</label></br>
  		 					 <input type="radio" name="FeatureLINQ" value="oui">oui <input type="radio" name="FeatureLINQ" value = "non">non </br>
@@ -67,19 +55,9 @@
 							<label>JSON : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Stored procedures :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Cube Rules</br>	
- 		 									<input type="checkbox" name="Feature" > SVS Triggers</br>	
- 		 									<input type="checkbox" name="Feature" >Java</br>	
- 		 									<input type="checkbox" name="Feature" > R</br>	
- 		 									<input type="checkbox" name="Feature" >OLAP Rules</br>	
- 		 									<input type="checkbox" name="Feature" > Push Rules</br>	
- 		 									<input type="checkbox" name="Feature" > Application Engine</br>	
- 		 									<input type="checkbox" name="Feature" > PL</br>	
- 		 									<input type="checkbox" name="Feature" >SQL</br>	
- 		 									<input type="checkbox" name="Feature" > OLAP DML</br>	
-								
+ 		 					<label>Stored procedures :</label></br>
+ 		 					 <input type="radio" name="FeatureStored procedures" value="oui">oui <input type="radio" name="FeatureStored procedures" value = "non">non </br>
+									
 						</br>	
  		 					<label>SQL :</label></br>
  		 					 <input type="radio" name="FeatureSQL" value="oui">oui <input type="radio" name="FeatureSQL" value = "non">non </br>
@@ -87,10 +65,14 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['SAP NetWeaver BW','SAS OLAP Server','Oracle Database OLAP Option','icCube','Infor BI OLAP Server','Cubes','Mondrian OLAP server','Essbase','Jedox OLAP Server','Microsoft Analysis Services','MicroStrategy Intelligence Server','Cognos TM1','']
+            local : ['TM1 Web/TM1 Contributor, IBM Cognos Insight, IBM Cognos Cafe for Excel','?','SmartView (Excel-AddIn), WebAnalysis, Financial Reports','Java, Javascript','Application Studio','Yes','Web Report Studio','Cubes Viewer','Microsoft Excel, Microsoft Power BI','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['SAP NetWeaver BW','SAS OLAP Server','Oracle Database OLAP Option','icCube','Infor BI OLAP Server','Cubes','Mondrian OLAP server','Essbase','Jedox OLAP Server','Microsoft Analysis Services','MicroStrategy Intelligence Server','Cognos TM1','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['Yes','','']
           });
     </script>

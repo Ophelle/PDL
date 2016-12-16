@@ -26,15 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>keyword :</label></br>
+							<label>keyword : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >checked</br>	
- 		 									<input type="checkbox" name="Feature" > unchecked</br>	
- 		 									<input type="checkbox" name="Feature" >get</br>	
- 		 									<input type="checkbox" name="Feature" > set</br>	
- 		 									<input type="checkbox" name="Feature" >out</br>	
- 		 									<input type="checkbox" name="Feature" > ref</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>feature, example usage :</label></br>
 							
@@ -69,6 +62,10 @@
 In Java SE 7 a similar construct has been added called try-with-resources :</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['strictfp','switch','checked, unchecked','lock','get, set','synchronized','goto','using','out, ref','throws','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

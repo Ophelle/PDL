@@ -26,40 +26,28 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>List : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Range : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Hash : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>List :</label></br>
+ 		 					 <input type="radio" name="FeatureList" value="oui">oui <input type="radio" name="FeatureList" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Range :</label></br>
+ 		 					 <input type="radio" name="FeatureRange" value="oui">oui <input type="radio" name="FeatureRange" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Hash :</label></br>
+ 		 					 <input type="radio" name="FeatureHash" value="oui">oui <input type="radio" name="FeatureHash" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Expression : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Composite (Range+Hash) : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>Composite (Range+Hash) :</label></br>
+ 		 					 <input type="radio" name="FeatureComposite (Range+Hash)" value="oui">oui <input type="radio" name="FeatureComposite (Range+Hash)" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['?','No','Yes','Expression','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['No','Yes','Composite (Range+Hash)','?','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Yes','No','?','Range','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','No','Hash','?','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes','No','?','List','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -27,25 +27,34 @@
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
 							<label>Optional
-dependencies :</label></br>
+dependencies : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >sqlite</br>	
- 		 									<input type="checkbox" name="Feature" > zlib (compression)</br>	
- 		 									<input type="checkbox" name="Feature" > bzip2  (compression)</br>	
- 		 									<input type="checkbox" name="Feature" > liblzma (compression)</br>	
- 		 									<input type="checkbox" name="Feature" >libc</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Dependencies :</label></br>
+							<label>Dependencies : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >libc or newlib</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Implementation : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['zlib (compression)
+p11-kit (PKCS #11)
+trousers (TPM)','zlib (compression)','','sqlite, zlib (compression), bzip2  (compression), liblzma (compression)','libpkcs11-helper (PKCS #11)
+zlib (compression)','libc, zlib (compression)','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['None','C++11','libc','libc
+libnspr4
+libsoftokn3
+libplc4
+libplds4','libc or newlib','none','Java','libc
+nettle
+gmp','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['Botan','mbed TLS','JSSE','NSS','wolfSSL','MatrixSSL','GnuTLS','SharkSSL','OpenSSL','MatrixSSL-open','']
           });
     </script>

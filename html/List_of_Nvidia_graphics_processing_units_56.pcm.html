@@ -29,12 +29,12 @@
 							<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Fillrate - Texture (GT/s) : </label></br> <input id="2" type="number" name="Feature"></br>
+							<label>Fillrate - Texture (GT/s) : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>TDP (watts) : </label></br> <input id="3" type="number" name="Feature"></br>
+						</br>	
+							<label>TDP (watts) : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Memory clock (MHz) : </label></br> <input id="4" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -51,9 +51,9 @@
 							
  		 								 		<input type="text"/></br>						</br>	
 							<label>Processing Power 
- GFLOPS - Single precision : </label></br> <input id="9" type="number" name="Feature"></br>
+ GFLOPS - Single precision : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Code name : </label></br> <input id="10" type="text" name="Feature"></br>
 							
 						</br>	
@@ -78,32 +78,37 @@
 							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="17" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Notes :</label></br>
+							<label>Notes : </label></br> <input id="18" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >based on 8800M GTS</br>	
- 		 									<input type="checkbox" name="Feature" >
-8800M GTX</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Fillrate - Pixel (GP/s) : </label></br> <input id="19" type="number" name="Feature"></br>
+							<label>Fillrate - Pixel (GP/s) : </label></br> <input id="19" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>		<script>
+		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['PCIe 1.0 x16','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['32:16:8','64:32:16
-96:48:16','']
+            local : ['50?','70','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['G84M','G92M','']
+            local : ['32:16:8','64:32:16
+96:48:16','']
           });
           $("#4").typeahead({
             name:"list4",
+            local : ['G84M','G92M','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['Quadro FX 3600M','Quadro FX 1600M','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['','based on 8800M GTS/
+8800M GTX','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

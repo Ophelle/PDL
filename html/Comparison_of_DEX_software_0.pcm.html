@@ -30,14 +30,8 @@
  		 					 <input type="radio" name="FeatureWindows Phone" value="oui">oui <input type="radio" name="FeatureWindows Phone" value = "non">non </br>
 									
 						</br>	
-							<label>Software needs :</label></br>
+							<label>Software needs : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >QT</br>	
- 		 									<input type="checkbox" name="Feature" > g++</br>	
- 		 									<input type="checkbox" name="Feature" > only on Linux</br>	
- 		 									<input type="checkbox" name="Feature" >Perl</br>	
- 		 									<input type="checkbox" name="Feature" > wxWidgets</br>	
-								
 						</br>	
  		 					<label>Inflection search :</label></br>
  		 					 <input type="radio" name="FeatureInflection search" value="oui">oui <input type="radio" name="FeatureInflection search" value = "non">non </br>
@@ -105,14 +99,18 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['GPL','Freeware','GPLv3','']
+            local : ['','wxPython','QT, g++, only on Linux','Perl, wxWidgets, only on Linux','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['DEX for Windows Phone','Maestro DEX','Dixit','DEX for Android','PyDEX','']
+            local : ['GPL','Freeware','GPLv3','']
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['DEX for Windows Phone','Maestro DEX','Dixit','DEX for Android','PyDEX','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['Adrian Vintu','Octavian Râşniţă','Octavian Procopiuc','Cristian Năvălici','']
           });
     </script>

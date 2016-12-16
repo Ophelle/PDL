@@ -26,18 +26,12 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>C# :</label></br>
+ 		 					<label>C# :</label></br>
+ 		 					 <input type="radio" name="FeatureC#" value="oui">oui <input type="radio" name="FeatureC#" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Data types : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Immutable reference type</br>	
- 		 									<input type="checkbox" name="Feature" > Unicode</br>	
- 		 									<input type="checkbox" name="Feature" >No; but standard library support with limited arity</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Data types :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Date</br>	
- 		 									<input type="checkbox" name="Feature" >time</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Java :</label></br>
 							
@@ -52,6 +46,10 @@
  		 									<input type="checkbox" name="Feature" > Unicode</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['Pointers','Arrays','Type annotations','Tuples','Boolean type','Value types','IEEE 754 binary64 floating point number','IEEE 754 binary32 floating point number','High precision decimal number','Reference types','Lifted (nullable) types','Date/time','Arbitrary size integers','Strings','Unsigned integers','Single-root (unified) type system','Character','Enumerated types','Arbitrary size decimals','Signed integers','Complex numbers','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

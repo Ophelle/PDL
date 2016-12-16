@@ -35,11 +35,8 @@
 							<label>Function in R : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Procedure in SAS :</label></br>
+							<label>Procedure in SAS : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >PROC GLM</br>	
- 		 									<input type="checkbox" name="Feature" > PROC MIXED</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Special cases :</label></br>
 							
@@ -90,10 +87,14 @@
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['ls','','']
+            local : ['PROC GLM, PROC MIXED','PROC GENMOD (PROC LOGISTIC for logistic regression only)','']
           });
           $("#5").typeahead({
             name:"list5",
+            local : ['ls','','']
+          });
+          $("#6").typeahead({
+            name:"list6",
             local : ['LinearModelFit[]','GeneralizedLinearModelFit[]','']
           });
     </script>

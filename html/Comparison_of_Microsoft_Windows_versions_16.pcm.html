@@ -32,29 +32,8 @@
 							<label>Limit on x64 : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Operating system :</label></br>
+							<label>Operating system : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Windows Server 2008 R2 Web Server</br>	
- 		 									<input type="checkbox" name="Feature" >Standard</br>	
- 		 									<input type="checkbox" name="Feature" >Windows Server 2003 R2</br>	
- 		 									<input type="checkbox" name="Feature" >SP1 Enterprise</br>	
- 		 									<input type="checkbox" name="Feature" >Datacenter</br>	
- 		 									<input type="checkbox" name="Feature" >Windows Server 2003 RTM Enterprise</br>	
- 		 									<input type="checkbox" name="Feature" >Windows 8 Pro</br>	
- 		 									<input type="checkbox" name="Feature" >Enterprise</br>	
- 		 									<input type="checkbox" name="Feature" >Windows Server 2008 R2 Enterprise</br>	
- 		 									<input type="checkbox" name="Feature" >Windows 7 Professional</br>	
- 		 									<input type="checkbox" name="Feature" >Ultimate</br>	
- 		 									<input type="checkbox" name="Feature" >Windows 2000 Professional</br>	
- 		 									<input type="checkbox" name="Feature" >Server</br>	
- 		 									<input type="checkbox" name="Feature" >Windows Server 2012 Standard</br>	
- 		 									<input type="checkbox" name="Feature" >Windows Server 2008 Enterprise</br>	
- 		 									<input type="checkbox" name="Feature" >Windows Server 2008 Web Server</br>	
- 		 									<input type="checkbox" name="Feature" >Small Business</br>	
- 		 									<input type="checkbox" name="Feature" >SP1 Standard</br>	
- 		 									<input type="checkbox" name="Feature" >Windows Server 2003 RTM Standard</br>	
- 		 									<input type="checkbox" name="Feature" >Windows Vista Business</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -63,6 +42,10 @@
           $("#2").typeahead({
             name:"list2",
             local : ['32 GB','8 GB','128 GB','N/A','2 TB','1 TB','4 TB','192 GB','512 GB','64 GB','16 GB','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Windows HPC Server 2008','Windows Server 2012 Essentials','Windows 2000 Datacenter','Windows 7 Home Basic','Windows 7 Home Premium','Windows XP Home','Windows Vista Home Premium','Windows 8','Windows Storage Server 2012 Workgroup','Windows Server 2008 R2 Web Server/Standard','Windows Server 2003 R2/SP1 Enterprise/Datacenter','Windows Server 2003 RTM Enterprise/Datacenter','Windows XP Professional','Windows 8 Pro/Enterprise','Windows Storage Server 2012 Standard','Windows Server 2008 R2 Enterprise/Datacenter','Windows Home Server','Windows Vista Starter','Windows 7 Professional/Enterprise/Ultimate','Windows 2000 Professional/Server','Windows Server 2008 R2 Foundation','Windows Server 2012 Standard/Datacenter','Windows 2000 Advanced Server','Windows Server 2003 RTM Web','Windows Server 2008 Enterprise/Datacenter','Windows 7 Starter','Windows Server 2008 Web Server/Standard/Small Business','Windows Server 2003 R2/SP1 Standard','Windows Server 2003 RTM Standard/Small Business','Windows Vista Business/Enterprise/Ultimate','Windows XP Starter','Windows NT 4.0','Windows Vista Home Basic','Windows Server 2012 Foundation','Windows HPC Server 2008 R2','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -26,84 +26,46 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Latest release : </label></br> <input id="1" type="number" name="Feature"></br>
+							<label>Latest release : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Platform :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Amiga</br>	
- 		 									<input type="checkbox" name="Feature" > 3DO</br>	
- 		 									<input type="checkbox" name="Feature" > Acorn Archimedes</br>	
- 		 									<input type="checkbox" name="Feature" > Amiga CD32</br>	
- 		 									<input type="checkbox" name="Feature" >  Amiga CDTV</br>	
- 		 									<input type="checkbox" name="Feature" > Apple IIGS</br>	
- 		 									<input type="checkbox" name="Feature" > Apple IIe</br>	
- 		 									<input type="checkbox" name="Feature" > Atari ST</br>	
- 		 									<input type="checkbox" name="Feature" > Commodore 64</br>	
- 		 									<input type="checkbox" name="Feature" > DOS</br>	
- 		 									<input type="checkbox" name="Feature" > FM Towns</br>	
- 		 									<input type="checkbox" name="Feature" > NES</br>	
- 		 									<input type="checkbox" name="Feature" > Mac OS</br>	
- 		 									<input type="checkbox" name="Feature" > PC-98</br>	
- 		 									<input type="checkbox" name="Feature" > Sharp X68000</br>	
- 		 									<input type="checkbox" name="Feature" > Windows 3.x</br>	
- 		 									<input type="checkbox" name="Feature" >Microsoft Windows</br>	
- 		 									<input type="checkbox" name="Feature" > Mac OS X</br>	
- 		 									<input type="checkbox" name="Feature" > Windows Mobile</br>	
- 		 									<input type="checkbox" name="Feature" > Freescale DragonBall</br>	
- 		 									<input type="checkbox" name="Feature" > ARM-based Palm OS</br>	
- 		 									<input type="checkbox" name="Feature" > iPhone and iPod Touch</br>	
- 		 									<input type="checkbox" name="Feature" >Microsoft Windows 3.11</br>	
- 		 									<input type="checkbox" name="Feature" > Microsoft Windows</br>	
- 		 									<input type="checkbox" name="Feature" >PC</br>	
- 		 									<input type="checkbox" name="Feature" >Windows Vista</br>	
- 		 									<input type="checkbox" name="Feature" > Windows XP</br>	
- 		 									<input type="checkbox" name="Feature" > Mac</br>	
- 		 									<input type="checkbox" name="Feature" > Nintendo DS</br>	
- 		 									<input type="checkbox" name="Feature" > PlayStation 3</br>	
- 		 									<input type="checkbox" name="Feature" > Wii</br>	
- 		 									<input type="checkbox" name="Feature" > Windows 7</br>	
- 		 									<input type="checkbox" name="Feature" > PlayStation Portable</br>	
- 		 									<input type="checkbox" name="Feature" > Xbox 360</br>	
- 		 									<input type="checkbox" name="Feature" >PlayStation 3</br>	
- 		 									<input type="checkbox" name="Feature" > PlayStation Vita</br>	
- 		 									<input type="checkbox" name="Feature" >MS Windows</br>	
- 		 									<input type="checkbox" name="Feature" > MS-DOS</br>	
- 		 									<input type="checkbox" name="Feature" > PlayStation Xbox 360 (XBLA)</br>	
- 		 									<input type="checkbox" name="Feature" > PSP</br>	
- 		 									<input type="checkbox" name="Feature" > PS2</br>	
- 		 									<input type="checkbox" name="Feature" >Wii</br>	
- 		 									<input type="checkbox" name="Feature" > PlayStation 2</br>	
- 		 									<input type="checkbox" name="Feature" > iPad</br>	
- 		 									<input type="checkbox" name="Feature" >Playstation</br>	
- 		 									<input type="checkbox" name="Feature" > Linux</br>	
- 		 									<input type="checkbox" name="Feature" > iPhone</br>	
- 		 									<input type="checkbox" name="Feature" > Android</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Chess engine :</label></br>
+							<label>Platform : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Chessmaster</br>	
- 		 									<input type="checkbox" name="Feature" > Combat Chess</br>	
- 		 									<input type="checkbox" name="Feature" > Grandmaster Chess</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
+							<label>Chess engine : </label></br> <input id="3" type="text" name="Feature"></br>
+							
 						</br>	
 							<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>First release : </label></br> <input id="5" type="number" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Developer :</label></br>
+						</br>	
+							<label>Developer : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Robert Ancell</br>	
- 		 									<input type="checkbox" name="Feature" > GNOME Team</br>	
- 		 									<input type="checkbox" name="Feature" >Amir Ban and Shay Bushinsky</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['2002','','n/a','1998','2013','N/A','2007','2010','1994','2009','2012','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['Amiga, 3DO, Acorn Archimedes, Amiga CD32,  Amiga CDTV, Apple IIGS, Apple IIe, Atari ST, Commodore 64, DOS, FM Towns, NES, Mac OS, PC-98, Sharp X68000, Windows 3.x','','Microsoft Windows, Mac OS X, Windows Mobile, Freescale DragonBall, ARM-based Palm OS, iPhone and iPod Touch','Microsoft Windows 3.11, Microsoft Windows','Unix-like','PC, DOS','Windows Vista, Windows XP, Mac, Nintendo DS','Microsoft Windows','Windows Vista, Windows XP, PlayStation 3, Wii, Nintendo DS, Windows 7','Microsoft Windows, Mac OS X, Nintendo DS, PlayStation 3, PlayStation Portable, Xbox 360, Wii','PlayStation 3, PlayStation Vita','ZX Spectrum','Windows Vista, Windows 7','MS Windows, MS-DOS, PlayStation Xbox 360 (XBLA), PSP, PS2','Nintendo Wii','Wii, Nintendo DS, PlayStation 2, Microsoft Windows, iPad','Steam (software)','Unix-like X11 Microsoft Windows','Playstation, Microsoft Windows','KIM-1','Playstation 2','Wiiware','Microsoft Windows, Mac OS X, Linux, iPhone, iPad, Android','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['n/a','','Silver Star Chess','Pure Chess','Deep Fritz','third-party','N/A','Loop Express','Chessmaster, Combat Chess, Grandmaster Chess','Microchess','WChess','Deep Junior','ChessV','Rybka','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['Commercial','Free','GPL','Free GPL','','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['VooFoo Studios','David Horne','GNU Project','','Interplay
+Silicon & Synapse (C64)','Tim Mann','Nintendo','Sierra Entertainment','Robert Ancell, GNOME Team','Reinhard Scharnagl','Chessbase','Slam Games','Targem Games
+Zuxxez Entertainment','Vasik Rajlich','AgeTec','Ubisoft Romania
+Zonic Limited (Mac OS X)','Amir Ban and Shay Bushinsky','Oberon Games','Mastertronic','Interplay','Gregory Strong','System 3','PyChess Project','Stefan Meyer-Kahlen','Peter R. Jennings','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

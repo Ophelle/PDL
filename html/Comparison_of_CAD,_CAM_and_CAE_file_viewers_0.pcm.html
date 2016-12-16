@@ -55,9 +55,10 @@
  		 					 <input type="radio" name="Feature3D support?" value="oui">oui <input type="radio" name="Feature3D support?" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Runs on POSIX style systems? : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Runs on POSIX style systems? :</label></br>
+ 		 					 <input type="radio" name="FeatureRuns on POSIX style systems?" value="oui">oui <input type="radio" name="FeatureRuns on POSIX style systems?" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
  		 					<label>Runs on Windows? :</label></br>
  		 					 <input type="radio" name="FeatureRuns on Windows?" value="oui">oui <input type="radio" name="FeatureRuns on Windows?" value = "non">non </br>
 									
@@ -65,12 +66,13 @@
 							<label>Developer : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Latest stable release : </label></br> <input id="6" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Other platforms? : </label></br> <input id="7" type="text" name="Feature"></br>
+							<label>Latest stable release : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
+ 		 					<label>Other platforms? :</label></br>
+ 		 					 <input type="radio" name="FeatureOther platforms?" value="oui">oui <input type="radio" name="FeatureOther platforms?" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Application : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
@@ -96,22 +98,18 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','YLinux','Yes','']
+            local : ['VariCAD','Advanced Computer Solutions','LibreCAD','progeCAD','Sescoi','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['VariCAD','Advanced Computer Solutions','LibreCAD','progeCAD','Sescoi','']
+            local : ['14','1.7 (2009)','2014 v2','2009','2.0.6 (10/2014)','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['No','Yes','?','']
+            local : ['Caddie','VariCAD Viewer','WorkXPlore 3D','LibreCAD','progeCAD Viewer DWG (based on IntelliCAD) (incomplete entry)','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['Caddie','VariCAD Viewer','WorkXPlore 3D','LibreCAD','progeCAD Viewer DWG (based on IntelliCAD) (incomplete entry)','']
-          });
-          $("#5").typeahead({
-            name:"list5",
             local : ['Yes (GPLv2)','No(Free download)','No','']
           });
     </script>

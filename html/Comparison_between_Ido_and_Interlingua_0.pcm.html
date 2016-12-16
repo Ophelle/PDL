@@ -26,13 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>IPA :</label></br>
+							<label>IPA : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >o or ɒ</br>	
- 		 									<input type="checkbox" name="Feature" >ks or gz</br>	
- 		 									<input type="checkbox" name="Feature" >kw or kv</br>	
- 		 									<input type="checkbox" name="Feature" >e or ɛ</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Interlingua :</label></br>
 							
@@ -168,6 +163,10 @@
  		 									<input type="checkbox" name="Feature" > v</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['m','o or ɒ','n','i','d','ks or gz','f','u','k','kw or kv','ts','p','z','ʃ','ʒ','w','v','a','t','l','h','g','r','b','s','j','tʃ','e or ɛ','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

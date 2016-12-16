@@ -26,11 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Site :</label></br>
+							<label>Site : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Home</br>	
- 		 									<input type="checkbox" name="Feature" > demo</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Browser support :</label></br>
 							
@@ -65,54 +62,70 @@
  		 									<input type="checkbox" name="Feature" > Safari 3.1</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Software license :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >MIT</br>	
- 		 									<input type="checkbox" name="Feature" > GPL</br>	
- 		 									<input type="checkbox" name="Feature" >dual-licensed: BSD 3-clause and EPL</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Activity : </label></br> <input id="4" type="text" name="Feature"></br>
+							<label>Software license : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Style, clone of :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Markup editor</br>	
- 		 									<input type="checkbox" name="Feature" > no syntax highlight</br>	
- 		 									<input type="checkbox" name="Feature" >Sublime Text </br>	
- 		 									<input type="checkbox" name="Feature" > Microsoft Visual Studio</br>	
- 		 									<input type="checkbox" name="Feature" >Eclipse SWT StyledText</br>	
- 		 									<input type="checkbox" name="Feature" > regular textarea</br>	
- 		 									<input type="checkbox" name="Feature" >Emacs</br>	
- 		 									<input type="checkbox" name="Feature" > Vim and others</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Open source : </label></br> <input id="6" type="text" name="Feature"></br>
+ 		 					<label>Activity :</label></br>
+ 		 					 <input type="radio" name="FeatureActivity" value="oui">oui <input type="radio" name="FeatureActivity" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Style, clone of : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
+ 		 					<label>Open source :</label></br>
+ 		 					 <input type="radio" name="FeatureOpen source" value="oui">oui <input type="radio" name="FeatureOpen source" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Editor : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>Cost (US$) : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Latest version : </label></br> <input id="9" type="number" name="Feature"></br>
+							<label>Latest version :</label></br>
 							
- 		 								 		<input type="text"/></br>		<script>
+ 		 									<input type="checkbox" name="Feature" >1.1.3</br>	
+ 		 									<input type="checkbox" name="Feature" > 2014-03-08</br>	
+ 		 									<input type="checkbox" name="Feature" >1.1.14</br>	
+ 		 									<input type="checkbox" name="Feature" > 2013-02-04</br>	
+ 		 									<input type="checkbox" name="Feature" >8.0</br>	
+ 		 									<input type="checkbox" name="Feature" > 2015-03-04</br>	
+ 		 									<input type="checkbox" name="Feature" >0.9.6</br>	
+ 		 									<input type="checkbox" name="Feature" > 2007-09-26</br>	
+ 		 									<input type="checkbox" name="Feature" >5.2.0</br>	
+ 		 									<input type="checkbox" name="Feature" > 2015-4-20</br>	
+ 		 									<input type="checkbox" name="Feature" >0.5</br>	
+ 		 									<input type="checkbox" name="Feature" > 2012-03-28</br>	
+ 		 									<input type="checkbox" name="Feature" >2.10.17</br>	
+ 		 									<input type="checkbox" name="Feature" > 2014-01-17</br>	
+ 		 									<input type="checkbox" name="Feature" >Beta</br>	
+ 		 									<input type="checkbox" name="Feature" > 2014</br>	
+ 		 									<input type="checkbox" name="Feature" >0.9</br>	
+ 		 									<input type="checkbox" name="Feature" > unknown release date</br>	
+ 		 									<input type="checkbox" name="Feature" >2.10</br>	
+ 		 									<input type="checkbox" name="Feature" > 2008</br>	
+ 		 									<input type="checkbox" name="Feature" >0.8.2</br>	
+ 		 									<input type="checkbox" name="Feature" > 2010-01-14</br>	
+ 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','Some','']
+            local : ['Home','Home, demo','example','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','No','Code is readable','']
+            local : ['MIT, GPL','BSD','GPL','New BSD License','MIT-like','Dual','Public Cloud','LGPL','-','dual-licensed: BSD 3-clause and EPL','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['MDK-Editor','CodeTextArea','EditArea','9ne','Ace (editor)','Ymacs','Monaco Editor','Helene','jsvi','CodeMirror','LDT','CodePress','Markitup','GitHub Atom','Codenvy Editor','Orion','Micro','']
+            local : ['Microsoft Visual Studio','Eclipse','Markup editor, no syntax highlight','nano','plain textarea','Emacs','Sublime Text / Microsoft Visual Studio','Eclipse SWT StyledText, regular textarea','vi','Emacs, Vim and others','regular textarea','']
           });
           $("#4").typeahead({
             name:"list4",
+            local : ['MDK-Editor','CodeTextArea','EditArea','9ne','Ace (editor)','Ymacs','Monaco Editor','Helene','jsvi','CodeMirror','LDT','CodePress','Markitup','GitHub Atom','Codenvy Editor','Orion','Micro','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['Free','used only by Microsoft','-','Depends on use','']
           });
     </script>

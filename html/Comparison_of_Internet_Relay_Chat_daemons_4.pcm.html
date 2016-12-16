@@ -26,15 +26,17 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>DNSBL : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>DNSBL :</label></br>
+ 		 					 <input type="radio" name="FeatureDNSBL" value="oui">oui <input type="radio" name="FeatureDNSBL" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>IRC daemon : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>CGI:IRC/WEBIRC host spoofing : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>CGI:IRC/WEBIRC host spoofing :</label></br>
+ 		 					 <input type="radio" name="FeatureCGI:IRC/WEBIRC host spoofing" value="oui">oui <input type="radio" name="FeatureCGI:IRC/WEBIRC host spoofing" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Spamfilter
 regexp / glob :</label></br>
 							
@@ -43,21 +45,22 @@ regexp / glob :</label></br>
  		 									<input type="checkbox" name="Feature" > Yes</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Join throttling : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Variable per-channel banlist size :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >No </br>	
- 		 									<input type="checkbox" name="Feature" > No</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Timed bans : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Connect-flood detection : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Join throttling :</label></br>
+ 		 					 <input type="radio" name="FeatureJoin throttling" value="oui">oui <input type="radio" name="FeatureJoin throttling" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Variable per-channel banlist size :</label></br>
+ 		 					 <input type="radio" name="FeatureVariable per-channel banlist size" value="oui">oui <input type="radio" name="FeatureVariable per-channel banlist size" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Timed bans :</label></br>
+ 		 					 <input type="radio" name="FeatureTimed bans" value="oui">oui <input type="radio" name="FeatureTimed bans" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Connect-flood detection :</label></br>
+ 		 					 <input type="radio" name="FeatureConnect-flood detection" value="oui">oui <input type="radio" name="FeatureConnect-flood detection" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Channel censor
 IRCd config / chanop-controlled :</label></br>
 							
@@ -75,27 +78,7 @@ basic / advanced :</label></br>
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','Unknown','Third party module','']
-          });
-          $("#2").typeahead({
-            name:"list2",
             local : ['OfficeIRC Server','PleXusIRCd','WeIRCd','Nefarious IRCu','UnrealIRCd','Charybdis','ircd-ratbox','ShadowIRCd','ngIRCd','IRCD','IRCD-Hybrid','pureIRCd','ircu','miniircd','ConferenceRoom','RockIRCd','ithildin','solid-ircd','Bahamut','InspIRCd','RubIRCd','bIRCd','Synchronet IRCd','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Yes','Unknown','No','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Unknown','No','Yes','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['No','Partial','Yes','Unknown','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Yes','Module','Unknown','yes / NO','No','Partial','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

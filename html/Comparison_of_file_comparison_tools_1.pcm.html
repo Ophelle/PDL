@@ -29,37 +29,29 @@
 							<label>Moved lines : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>3-way comparison :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >arbitrary file diffs</br>	
- 		 									<input type="checkbox" name="Feature" > but not a 3-way diff</br>	
- 		 									<input type="checkbox" name="Feature" >can do 2</br>	
- 		 									<input type="checkbox" name="Feature" > 3</br>	
- 		 									<input type="checkbox" name="Feature" > or 4 file diffs</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Merge : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Manual compare aligment :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >alignment marker</br>	
- 		 									<input type="checkbox" name="Feature" > split</br>	
- 		 									<input type="checkbox" name="Feature" >join</br>	
- 		 									<input type="checkbox" name="Feature" >line alignment</br>	
- 		 									<input type="checkbox" name="Feature" > isolate</br>	
- 		 									<input type="checkbox" name="Feature" > unlink scroll</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Directory comparison : </label></br> <input id="5" type="text" name="Feature"></br>
+ 		 					<label>3-way comparison :</label></br>
+ 		 					 <input type="radio" name="Feature3-way comparison" value="oui">oui <input type="radio" name="Feature3-way comparison" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Merge :</label></br>
+ 		 					 <input type="radio" name="FeatureMerge" value="oui">oui <input type="radio" name="FeatureMerge" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Manual compare aligment : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Show in-line changes : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Binary comparison : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Directory comparison :</label></br>
+ 		 					 <input type="radio" name="FeatureDirectory comparison" value="oui">oui <input type="radio" name="FeatureDirectory comparison" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Show in-line changes :</label></br>
+ 		 					 <input type="radio" name="FeatureShow in-line changes" value="oui">oui <input type="radio" name="FeatureShow in-line changes" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Binary comparison :</label></br>
+ 		 					 <input type="radio" name="FeatureBinary comparison" value="oui">oui <input type="radio" name="FeatureBinary comparison" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Structured comparison : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
@@ -72,26 +64,14 @@
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['No','Yes','','Yes (Pro only)','Merge','Yes (folders)','']
+            local : ['alignment marker, split/join','','manual synchronization','No','line alignment, isolate','line alignment marker','line alignment, unlink scroll','resync comparasion','Yes','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['','Yes','No','Directory comparison','Yes (via DirDiff plugin)','']
+            local : ['No','Yes (C/C++,C#,Java,Javascript,CSS3)','','Structured comparison','Yes','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['Yes','No','','Yes (Via plugin)','Show in-line changes','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['','Yes','No','partly','Binary comparison','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['No','Yes (C/C++,C#,Java,Javascript,CSS3)','','Structured comparison','Yes','']
-          });
-          $("#7").typeahead({
-            name:"list7",
             local : ['SG DiffMerge','Perforce P4Merge','Name','Lazarus Diff','Guiffy SureMerge','IntelliJ IDEA (compare)','Eclipse (compare)','Meld','Araxis Merge','Beyond Compare','vimdiff','UCC','KDiff3','diff','Pretty Diff','WinDiff','WinMerge','ExamDiff Pro','Far Manager (compare)','DiffTool','Diffuse','diff3','Compare++','FileMerge','Tkdiff','jEdit JDiff plugin','Kompare','fc','Notepad++ (compare)','Ediff','Total Commander (compare)','']
           });
     </script>

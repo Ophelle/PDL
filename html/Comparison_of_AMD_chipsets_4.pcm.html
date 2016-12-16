@@ -26,9 +26,9 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Released : </label></br> <input id="1" type="number" name="Feature"></br>
+							<label>Released : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>NIC :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >10</br>	
@@ -44,26 +44,17 @@
  		 									<input type="checkbox" name="Feature" >5</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Features / Notes :</label></br>
+							<label>Features / Notes : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Features </br>	
- 		 									<input type="checkbox" name="Feature" > Notes</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Codename : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>TDP (W) : </label></br> <input id="6" type="number" name="Feature"></br>
+							<label>TDP (W) : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Model :</label></br>
+						</br>	
+							<label>Model : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >AMD 480</br>	
- 		 									<input type="checkbox" name="Feature" >570</br>	
- 		 									<input type="checkbox" name="Feature" >580</br>	
- 		 									<input type="checkbox" name="Feature" >690
-CrossFire Chipset</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>WNIC : </label></br> <input id="8" type="text" name="Feature"></br>
 							
@@ -103,16 +94,37 @@ AHCI 1.2 SATA Revision 2.0</br>
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['SB750','SB950','SB920','SB820M','SB600','SB810','SB850','SB700S','Codename','SB700','SB710','']
+            local : ['Q1 2008','Released','May 30, 2011','Q1 2010','2006','','Q4 2008','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['','Features / Notes','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['SB750','SB950','SB920','SB820M','SB600','SB810','SB850','SB700S','Codename','SB700','SB710','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['','DASH 1.0','TDP (W)','4.0','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['AMD 700
+chipset series','AMD 480/570/580/690
+CrossFire Chipset','AMD 800
+chipset series','Model','AMD 700 chipset series','AMD 900
+chipset series','AMD 700S
+chipset series','']
+          });
+          $("#6").typeahead({
+            name:"list6",
             local : ['548-pin
 FC-BGA','605-pin
 FC-BGA','WNIC','No','']
           });
-          $("#3").typeahead({
-            name:"list3",
+          $("#7").typeahead({
+            name:"list7",
             local : ['14 + 2','10 + 0','12 + 2','USB
 2.0 + 1.1','']
           });

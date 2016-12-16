@@ -26,82 +26,52 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Audit : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Enterprise directory compatibility : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Run unprivileged : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Brute-force protection : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Password complexity rules : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Native network encryption : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Audit :</label></br>
+ 		 					 <input type="radio" name="FeatureAudit" value="oui">oui <input type="radio" name="FeatureAudit" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Enterprise directory compatibility :</label></br>
+ 		 					 <input type="radio" name="FeatureEnterprise directory compatibility" value="oui">oui <input type="radio" name="FeatureEnterprise directory compatibility" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Run unprivileged :</label></br>
+ 		 					 <input type="radio" name="FeatureRun unprivileged" value="oui">oui <input type="radio" name="FeatureRun unprivileged" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Brute-force protection :</label></br>
+ 		 					 <input type="radio" name="FeatureBrute-force protection" value="oui">oui <input type="radio" name="FeatureBrute-force protection" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Password complexity rules :</label></br>
+ 		 					 <input type="radio" name="FeaturePassword complexity rules" value="oui">oui <input type="radio" name="FeaturePassword complexity rules" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Native network encryption :</label></br>
+ 		 					 <input type="radio" name="FeatureNative network encryption" value="oui">oui <input type="radio" name="FeatureNative network encryption" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Label Based Access Control (LBAC) : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Resource limit : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Security Certification : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Patch access : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Separation of duties (RBAC) : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>Resource limit :</label></br>
+ 		 					 <input type="radio" name="FeatureResource limit" value="oui">oui <input type="radio" name="FeatureResource limit" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Security Certification :</label></br>
+ 		 					 <input type="radio" name="FeatureSecurity Certification" value="oui">oui <input type="radio" name="FeatureSecurity Certification" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Patch access :</label></br>
+ 		 					 <input type="radio" name="FeaturePatch access" value="oui">oui <input type="radio" name="FeaturePatch access" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Separation of duties (RBAC) :</label></br>
+ 		 					 <input type="radio" name="FeatureSeparation of duties (RBAC)" value="oui">oui <input type="radio" name="FeatureSeparation of duties (RBAC)" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','?','No','Audit','Yes (optional)','Yes (From 2008)','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Yes (LDAP, Kerberos…)','No','Yes (Windows trusted authenification)','Yes','Enterprise directory compatibility','?','No (not relevant)','Yes (Open Directory, LDAP)','Yes (with 5.5, but only in commercial edition)','Yes (LDAP)','Yes (optional ?)','Yes (Microsoft Active Directory)','Yes (with 5.2, but not on Windows servers)','Yes (Kerberos)','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Yes','Yes (file access)','Run unprivileged','?','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes (for 9.1)','No','Yes','No (not relevant)','?','Brute-force protection','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['No','?','Yes','Yes (as of 9.0 with passwordcheck module)','No (not relevant)','Yes (optional)','Yes (length only)','Password complexity rules','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Yes','Yes (SSL with 4.0)','Yes (SSL)','No','Yes (optional; to pay)','Native network encryption','Yes  (with SSL. Optional)','No (not relevant, only file permissions)','?','Yes (with SSL)','']
-          });
-          $("#7").typeahead({
-            name:"list7",
             local : ['?','Label Based Access Control (LBAC)','Yes','No','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['?','No','Yes','Resource limit','Yes (optional)','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['Yes (EAL4+)','No','Yes (EAL3+ as Adaptive Server Anywhere)','Yes','?','Security Certification','Yes (EAL4+ )','Yes (EAL1)','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['Partial (no security page)','Yes','No','?','Patch access','Yes (optional)','Partial (need to register; depend on which product)','']
-          });
-          $("#11").typeahead({
-            name:"list11",
-            local : ['Yes','No','?','Separation of duties (RBAC)','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -26,45 +26,46 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Status :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Interpreter-only port of OpenJDK using almost no assembly language and designed to be very portable.</br>	
- 		 									<input type="checkbox" name="Feature" >Available free</br>	
- 		 									<input type="checkbox" name="Feature" > commercial support optional</br>	
- 		 									<input type="checkbox" name="Feature" >Translates Java to C and compiles it with a C compiler.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>JVM :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >HotSpot</br>	
- 		 									<input type="checkbox" name="Feature" > Java SE embedded edition</br>	
- 		 									<input type="checkbox" name="Feature" > Oracle JDK edition</br>	
- 		 									<input type="checkbox" name="Feature" > OpenJDK edition</br>	
- 		 									<input type="checkbox" name="Feature" > Zero port</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Performance - Interpretation : </label></br> <input id="3" type="text" name="Feature"></br>
+							<label>Status : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Supported class libraries - Other :</label></br>
-							
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Supported class libraries - OpenJDK : </label></br> <input id="5" type="text" name="Feature"></br>
+							<label>JVM : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Performance - AOT : </label></br> <input id="6" type="text" name="Feature"></br>
+ 		 					<label>Performance - Interpretation :</label></br>
+ 		 					 <input type="radio" name="FeaturePerformance - Interpretation" value="oui">oui <input type="radio" name="FeaturePerformance - Interpretation" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Supported class libraries - Other : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Performance - JIT : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Supported class libraries - GNU Classpath : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Supported class libraries - OpenJDK :</label></br>
+ 		 					 <input type="radio" name="FeatureSupported class libraries - OpenJDK" value="oui">oui <input type="radio" name="FeatureSupported class libraries - OpenJDK" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Performance - AOT :</label></br>
+ 		 					 <input type="radio" name="FeaturePerformance - AOT" value="oui">oui <input type="radio" name="FeaturePerformance - AOT" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Performance - JIT :</label></br>
+ 		 					 <input type="radio" name="FeaturePerformance - JIT" value="oui">oui <input type="radio" name="FeaturePerformance - JIT" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Supported class libraries - GNU Classpath :</label></br>
+ 		 					 <input type="radio" name="FeatureSupported class libraries - GNU Classpath" value="oui">oui <input type="radio" name="FeatureSupported class libraries - GNU Classpath" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Latest supported Java version : </label></br> <input id="9" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['Commercially available','','Interpreter-only port of OpenJDK using almost no assembly language and designed to be very portable.','Available free, commercial support optional','Unmaintained','Reference implementation.','Translates Java to C and compiles it with a C compiler.','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['VMKit J3','Jato VM','Zing','Skelmir','IKVM.NET','JAmiga','CACAO','JC virtual machine','GCJ','HotSpot, Java SE embedded edition','JamVM','HotSpot, Oracle JDK edition','Jikes RVM','Mysaifu JVM','Avian','SableVM','HotSpot, OpenJDK edition','HotSpot, Zero port','Kaffe','Zulu','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

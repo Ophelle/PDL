@@ -26,13 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>English :</label></br>
+							<label>English : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >is (am</br>	
- 		 									<input type="checkbox" name="Feature" > are) loving</br>	
- 		 									<input type="checkbox" name="Feature" >was going to (would</br>	
- 		 									<input type="checkbox" name="Feature" > should) love</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Novial : </label></br> <input id="2" type="text" name="Feature"></br>
 							
@@ -42,10 +37,14 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['sal-ed ama','es ama-nt','let lo ama!','sal ama','ama','sal ha ama','vud ha ama','ama!','let nus ama!','did ama (ama-d)','did es (es-ed) ama-nt','vud ama','ha-d ama','ha ama','sal es ama-nt','']
+            local : ['(to) love','let us love!','was (were) loving','would (should) love','is (am, are) loving','love!','have (has) loved','had loved','shall (will) be loving','loved','will (shall) love','will (shall) have loved','was going to (would, should) love','let him love!','love(s)','would (should) have loved','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['sal-ed ama','es ama-nt','let lo ama!','sal ama','ama','sal ha ama','vud ha ama','ama!','let nus ama!','did ama (ama-d)','did es (es-ed) ama-nt','vud ama','ha-d ama','ha ama','sal es ama-nt','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['am-is','est-us am-int-a(j)','am-as','est-is am-ont-a(j)','am-i','ni am-u!','est-is am-int-a(j)','am-us','li am-u!','est-as am-ant-a(j)','am-os','est-os am-ant-a(j)','est-is am-ant-a(j)','am-u!','est-as am-int-a(j)','est-os am-int-a(j)','']
           });
     </script>

@@ -41,9 +41,9 @@
 							<label>Core config : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Memory (MB) : </label></br> <input id="6" type="number" name="Feature"></br>
+							<label>Memory (MB) : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Fillrate - MTextels/s : </label></br> <input id="7" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -69,11 +69,8 @@
 							<label>Fillrate - MOperations/s : </label></br> <input id="11" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Model :</label></br>
+							<label>Model : </label></br> <input id="12" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >GeForce2 MX IGP + nForce 220</br>	
- 		 									<input type="checkbox" name="Feature" >420</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Memory - Bus type : </label></br> <input id="13" type="text" name="Feature"></br>
 							
@@ -95,7 +92,16 @@ PCI','']
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['32
+64','Up to 32 system RAM','64','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['NV15','NV11','NV1A','NV16','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['GeForce2 Ti','GeForce2 Pro','GeForce2 GTS','GeForce2 MX IGP + nForce 220/420','GeForce2 MX400','GeForce2 Ultra','GeForce2 MX200','GeForce2 MX','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

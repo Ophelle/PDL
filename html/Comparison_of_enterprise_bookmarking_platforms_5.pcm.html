@@ -57,15 +57,16 @@
  		 					 <input type="radio" name="FeatureApache" value="oui">oui <input type="radio" name="FeatureApache" value = "non">non </br>
 									
 						</br>	
-							<label>Notes :</label></br>
+							<label>Notes : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Written in Java 6</br>	
- 		 									<input type="checkbox" name="Feature" > runs on Apache Tomcat and compatible servers.</br>	
-								
 		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['Dogear','Knowledge Plaza','Licorize','Jumper 2.0','Scuttle','Connectbeam','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['none','requires IBM WebSphere Application Server 6.1.0.13 for the web server','Written in Java 6, runs on Apache Tomcat and compatible servers.','No OS management required. Infrastructure-as-a-Service for on-premises installation.','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -26,48 +26,38 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>WebUI : </label></br> <input id="1" type="text" name="Feature"></br>
+ 		 					<label>WebUI :</label></br>
+ 		 					 <input type="radio" name="FeatureWebUI" value="oui">oui <input type="radio" name="FeatureWebUI" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>CLI :</label></br>
+ 		 					 <input type="radio" name="FeatureCLI" value="oui">oui <input type="radio" name="FeatureCLI" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Programming language : </label></br> <input id="3" type="text" name="Feature"></br>
 							
-						</br>	
-							<label>CLI : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Programming language :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >C++</br>	
- 		 									<input type="checkbox" name="Feature" > Lua</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>ADC client : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Based on :</label></br>
+							<label>Based on : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >StrongDC++</br>	
- 		 									<input type="checkbox" name="Feature" > DC++</br>	
- 		 									<input type="checkbox" name="Feature" > ApexDC speed mode</br>	
- 		 									<input type="checkbox" name="Feature" >AirDC++</br>	
- 		 									<input type="checkbox" name="Feature" >nanodc</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>GUI : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>GUI :</label></br>
+ 		 					 <input type="radio" name="FeatureGUI" value="oui">oui <input type="radio" name="FeatureGUI" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','WebUI','']
+            local : ['Programming language','C++','C++, Lua','C','Java','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['No','CLI','Yes','']
+            local : ['TKDC++','ncdc','AirDC++','ADC client','AirDC++ nano','DC++','EiskaltDC++','LinuxDC++','ApexDC++','StrongDC++','FlylinkDC++','RSX++','Jucy','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['TKDC++','ncdc','AirDC++','ADC client','AirDC++ nano','DC++','EiskaltDC++','LinuxDC++','ApexDC++','StrongDC++','FlylinkDC++','RSX++','Jucy','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','GUI','No','']
+            local : ['StrongDC++, DC++, ApexDC speed mode','StrongDC++','AirDC++,nanodc','','DC++','StrongDC++, DC++','Based on','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

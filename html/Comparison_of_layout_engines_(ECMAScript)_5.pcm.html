@@ -26,12 +26,14 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>WebKit : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Blink : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>WebKit :</label></br>
+ 		 					 <input type="radio" name="FeatureWebKit" value="oui">oui <input type="radio" name="FeatureWebKit" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Blink :</label></br>
+ 		 					 <input type="radio" name="FeatureBlink" value="oui">oui <input type="radio" name="FeatureBlink" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Trident : </label></br> <input id="3" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -41,14 +43,6 @@
 							<label>Gecko : </label></br> <input id="5" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Yes','Called as constructor','Properties of prototype','Properties of instances','Properties','Called as function','Additional properties of prototype','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Yes','Properties of prototype','Properties of instances','Additional properties of prototype','Called as constructor','Called as function','Properties','']
-          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

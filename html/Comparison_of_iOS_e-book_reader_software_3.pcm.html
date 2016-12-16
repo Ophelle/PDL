@@ -34,23 +34,16 @@
  		 					 <input type="radio" name="FeatureIn-app Epub import" value="oui">oui <input type="radio" name="FeatureIn-app Epub import" value = "non">non </br>
 									
 						</br>	
-							<label>Import via in-app Browser : </label></br> <input id="3" type="text" name="Feature"></br>
+ 		 					<label>Import via in-app Browser :</label></br>
+ 		 					 <input type="radio" name="FeatureImport via in-app Browser" value="oui">oui <input type="radio" name="FeatureImport via in-app Browser" value = "non">non </br>
+									
+						</br>	
+							<label>Other import via : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Other import via :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Calibre (Bonjour</br>	
- 		 									<input type="checkbox" name="Feature" > Plugin)
-
-eMail (MIME type)
-
-Dropbox
-
-iTunes File Sharing</br>	
-								
-						</br>	
-							<label>Book store(s) : </label></br> <input id="5" type="text" name="Feature"></br>
-							
+ 		 					<label>Book store(s) :</label></br>
+ 		 					 <input type="radio" name="FeatureBook store(s)" value="oui">oui <input type="radio" name="FeatureBook store(s)" value = "non">non </br>
+									
 						</br>	
  		 					<label>Book search :</label></br>
  		 					 <input type="radio" name="FeatureBook search" value="oui">oui <input type="radio" name="FeatureBook search" value = "non">non </br>
@@ -69,14 +62,45 @@ iTunes File Sharing</br>
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','no authentication support','Yes','']
+            local : ['eMail (MIME type)','Calibre (Bonjour, Plugin)
+
+eMail (MIME type)
+
+Dropbox
+
+iTunes File Sharing','Calibre (Bonjour)
+
+eMail (MIME type)
+
+iTunes File Sharing','Calibre (Bonjour)
+
+Built-in web server','eMail (MIME type)
+iTunes File Sharing
+
+Built-in Web Server','Calibre (Bonjour)
+
+eMail (MIME type)','eMail (MIME type)
+
+Google Books
+
+Dropbox
+
+Google Drive
+
+Yandex Disk
+
+VK Docs
+
+Network folders
+
+iTunes File Sharing','eMail (MIME type)
+
+Built-in web server','iTunes File Sharing
+
+eMail (MIME type)','Built-in web server','iTunes File Sharing','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['No','Free ebook libraries only','Yes','Apple iBookstore','']
-          });
-          $("#3").typeahead({
-            name:"list3",
             local : ['iBouquiniste','Bluefire Reader','Blio','MegaReader','Kobo Reading App','PocketBook reader','Marvin','iBooks','Stanza','eBookMobi','uBooks','Apabi Reader','Kindle','KyBook','ShuBook','i2Reader','DL Reader','eBookReader','']
           });
     </script>

@@ -26,36 +26,23 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Languages :</label></br>
+							<label>Languages : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Cobra</br>	
- 		 									<input type="checkbox" name="Feature" > Python</br>	
- 		 									<input type="checkbox" name="Feature" > Java (1.5+)</br>	
- 		 									<input type="checkbox" name="Feature" >VB .NET</br>	
- 		 									<input type="checkbox" name="Feature" > C#</br>	
- 		 									<input type="checkbox" name="Feature" > F#</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Format :</label></br>
+							<label>Format : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >string.replace(find</br>	
- 		 									<input type="checkbox" name="Feature" > replace)</br>	
- 		 									<input type="checkbox" name="Feature" > or
-string -replace find_regex</br>	
- 		 									<input type="checkbox" name="Feature" > replace</br>	
- 		 									<input type="checkbox" name="Feature" >echo "string"  sed 's</br>	
- 		 									<input type="checkbox" name="Feature" >find_regex</br>	
- 		 									<input type="checkbox" name="Feature" >replace</br>	
- 		 									<input type="checkbox" name="Feature" >g'</br>	
- 		 									<input type="checkbox" name="Feature" >StringReplace[string</br>	
- 		 									<input type="checkbox" name="Feature" > find -> replace]</br>	
- 		 									<input type="checkbox" name="Feature" >string =~ s</br>	
- 		 									<input type="checkbox" name="Feature" >g</br>	
- 		 									<input type="checkbox" name="Feature" >INSPECT string REPLACING ALL</br>	
- 		 									<input type="checkbox" name="Feature" >LEADING</br>	
- 		 									<input type="checkbox" name="Feature" >FIRST find BY replace</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['[string stringByReplacingOccurrencesOfString:find withString:replace]','string.replace(find, replace), or
+string -replace find_regex, replace','strings.Replace(string, find, replace, -1)','re:replace(string, find, replace, «{return, list}»)','Replace(string, find, replace)','string.replace(find, replace)','string.replace(find, replace, "g")  or
+ string.replace(/find_regex/g, replace)','str_replace(find, replace, string)','string.gsub(find, replace)','echo "string"  sed 's/find_regex/replace/g'','StringReplace[string, find -> replace]','string.stringByReplacingOccurrencesOfString(find, withString:replace)','string.replaceAll(find_regex, replace)','string map {find replace} string','string =~ s/find_regex/replace/g','INSPECT string REPLACING ALL/LEADING/FIRST find BY replace','changestr(find, string, replace)','std.string.replace(string, find, replace)','Str.global_replace (Str.regexp_string find) replace string','string copyReplaceAll: find with: replace','string.Replace(find, replace)','replace(string, find, replace)','string.gsub(string, find, replace) 
+ (string):gsub(find, replace)','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['Unix','PHP','Erlang','Smalltalk (Squeak, Pharo)','Ruby','Mathematica','VB','JavaScript','D','OCaml','Lua','Objective-C (NSString * only)','Windows PowerShell','Java','COBOL','Go','Perl','Seed7','REXX','Cobra, Python, Java (1.5+)','VB .NET, C#, F#','Swift (Foundation)','Tcl','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

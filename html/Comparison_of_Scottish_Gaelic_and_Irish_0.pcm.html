@@ -29,44 +29,30 @@
 							<label>English : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Scottish Gaelic :</label></br>
+							<label>Scottish Gaelic : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >latha</br>	
- 		 									<input type="checkbox" name="Feature" > là</br>	
- 		 									<input type="checkbox" name="Feature" >pàiste</br>	
- 		 									<input type="checkbox" name="Feature" >leanabh</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Notes :</label></br>
+							<label>Notes : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Pre 1950s réalt(a)</br>	
- 		 									<input type="checkbox" name="Feature" > reult(a) in Irish</br>	
- 		 									<input type="checkbox" name="Feature" >Pre 1950s sgoil</br>	
- 		 									<input type="checkbox" name="Feature" >scoil in Irish</br>	
- 		 									<input type="checkbox" name="Feature" >Pre 1950s óstán</br>	
- 		 									<input type="checkbox" name="Feature" >ósdán</br>	
- 		 									<input type="checkbox" name="Feature" > teach</br>	
- 		 									<input type="checkbox" name="Feature" >tigh ósta</br>	
- 		 									<input type="checkbox" name="Feature" >ósda  in Irish</br>	
- 		 									<input type="checkbox" name="Feature" >Also réidió and rèidio in spoken Irish and Scottish Gaelic</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Irish :</label></br>
+							<label>Irish : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >páiste</br>	
- 		 									<input type="checkbox" name="Feature" >leanbh</br>	
- 		 									<input type="checkbox" name="Feature" >teach (nom-acc)</br>	
- 		 									<input type="checkbox" name="Feature" > tigh (dat); Munster tigh</br>	
- 		 									<input type="checkbox" name="Feature" >nuacht</br>	
- 		 									<input type="checkbox" name="Feature" > Ulster nuaidheacht</br>	
- 		 									<input type="checkbox" name="Feature" >óstán</br>	
- 		 									<input type="checkbox" name="Feature" > teach</br>	
- 		 									<input type="checkbox" name="Feature" >tigh ósta</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['news','day','house','office','government','open','report','Gael','authority','inside','without','parliament','island','child','school','year','night','radio','hotel','star','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['naidheachd','riaghaltas','oifis','Gàidheal','gun','bliadhna','aithris','a-steach','taigh-òsta','fosgail','ùghdarras','oidhche','latha, là','eilean','radio','pàrlamaid','pàiste/leanabh','taigh','sgoil','reul','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['','Pre 1950s oidhche in Irish','Pre 1950s Gaeidheal in Irish','Pre-1950s bliadhain in Irish. The form bliadhna (bliana today) is used as a special plural form following numerals; the regular plural is blianta)','Pre 1950s ughdarás in Irish','Pre 1950s réalt(a), reult(a) in Irish','Pre 1950s sgoil/scoil in Irish','Also foscail in Ulster Irish','Pre 1950s óstán/ósdán, teach/tigh ósta/ósda  in Irish','In biblical Gaelic tigh','Pre-1950s riaghaltas in Irish','Also réidió and rèidio in spoken Irish and Scottish Gaelic','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['aithris','réalt(a)','páiste/leanbh','teach (nom-acc), tigh (dat); Munster tigh','oifig','nuacht, Ulster nuaidheacht','oscail','oileán','bliain','raidió','scoil','lá','Gael','rialtas','údarás','gan','parlaimint','óstán, teach/tigh ósta','oíche','isteach','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

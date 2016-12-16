@@ -26,11 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Developer/Manufacturer :</label></br>
+							<label>Developer/Manufacturer : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >CryptX2 </br>	
- 		 									<input type="checkbox" name="Feature" > Open Source</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Release Year : </label></br> <input id="2" type="number" name="Feature"></br>
 							
@@ -44,6 +41,10 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['Kingston Technology','Kanguru Solutions','SanDisk','IronKey','Verbatim','Lexar','BlockMaster','Lockheed Martin','CryptX2 / Open Source','']
+          });
+          $("#2").typeahead({
+            name:"list2",
             local : ['SafeStick','DataTraveler Locker+','DataTraveler Vault','IronClad','IronKey S100','DataTraveler Vault – Privacy Edition','IronKey S200','IronKey D200','Cruzer Enterprise','Kanguru Defender 2000','JumpDrive SecureII Plus','CryptX2','Store 'n' Go Corporate','DataTraveler 5000','SafeStick SuperSonic','']
           });
     </script>

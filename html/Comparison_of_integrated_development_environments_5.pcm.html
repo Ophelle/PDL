@@ -38,12 +38,8 @@
  		 					 <input type="radio" name="FeatureMac OS X" value="oui">oui <input type="radio" name="FeatureMac OS X" value = "non">non </br>
 									
 						</br>	
-							<label>License :</label></br>
+							<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >portions in GPL v2</br>	
- 		 									<input type="checkbox" name="Feature" > LGPL</br>	
- 		 									<input type="checkbox" name="Feature" > BSD and public domain</br>	
-								
 						</br>	
  		 					<label>Stepper :</label></br>
  		 					 <input type="radio" name="FeatureStepper" value="oui">oui <input type="radio" name="FeatureStepper" value = "non">non </br>
@@ -100,6 +96,10 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['Proprietary','portions in GPL v2, LGPL, BSD and public domain','']
+          });
+          $("#2").typeahead({
+            name:"list2",
             local : ['SLIME (Emacs)','LispWorks','Allegro Common Lisp','']
           });
     </script>

@@ -26,8 +26,9 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>ImgBurn : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>ImgBurn :</label></br>
+ 		 					 <input type="radio" name="FeatureImgBurn" value="oui">oui <input type="radio" name="FeatureImgBurn" value = "non">non </br>
+									
 						</br>	
 							<label>InfraRecorder : </label></br> <input id="2" type="text" name="Feature"></br>
 							
@@ -38,42 +39,44 @@
  		 					<label>CDBurnerXP :</label></br>
  		 					 <input type="radio" name="FeatureCDBurnerXP" value="oui">oui <input type="radio" name="FeatureCDBurnerXP" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>cdrtools : </label></br> <input id="5" type="text" name="Feature"></br>
-							
+						</br>	
+ 		 					<label>cdrtools :</label></br>
+ 		 					 <input type="radio" name="Featurecdrtools" value="oui">oui <input type="radio" name="Featurecdrtools" value = "non">non </br>
+									
 						</br>	
  		 					<label>DeepBurner :</label></br>
  		 					 <input type="radio" name="FeatureDeepBurner" value="oui">oui <input type="radio" name="FeatureDeepBurner" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
  		 					<label>X-CD-Roast :</label></br>
  		 					 <input type="radio" name="FeatureX-CD-Roast" value="oui">oui <input type="radio" name="FeatureX-CD-Roast" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>UltraISO : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
  		 					<label>Alcohol 120% :</label></br>
  		 					 <input type="radio" name="FeatureAlcohol 120%" value="oui">oui <input type="radio" name="FeatureAlcohol 120%" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>K3b : </label></br> <input id="10" type="text" name="Feature"></br>
-							
+						</br>	
+ 		 					<label>K3b :</label></br>
+ 		 					 <input type="radio" name="FeatureK3b" value="oui">oui <input type="radio" name="FeatureK3b" value = "non">non </br>
+									
 						</br>	
  		 					<label>Nero Burning ROM :</label></br>
  		 					 <input type="radio" name="FeatureNero Burning ROM" value="oui">oui <input type="radio" name="FeatureNero Burning ROM" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Application : </label></br> <input id="12" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','?','']
+            local : ['Yes','?','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','?','']
+            local : ['?','Yes','']
           });
           $("#3").typeahead({
             name:"list3",
@@ -81,18 +84,6 @@
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['?','Yes','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes','?','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['?','No','Yes','']
-          });
-          $("#7").typeahead({
-            name:"list7",
             local : ['White (VCD/SVCD)','Blue (E-CD)','Green (CD-I)','Beige (PCD)','Purple (DDCD)','Yellow (CD-ROM)','Scarlet (SACD)','Orange (CD-R/CD-RW)','Red (CD-DA)','']
           });
     </script>

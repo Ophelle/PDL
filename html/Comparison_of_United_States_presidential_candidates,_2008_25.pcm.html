@@ -26,10 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>John McCain has said that what is most critical now is to avoid further confrontation between Russian and Georgian forces.  McCain wants to work with the EU and the OSCE to pressure Russia to withdraw from all sovereign Georgian territory. :</label></br>
+							<label>John McCain has said that what is most critical now is to avoid further confrontation between Russian and Georgian forces.  McCain wants to work with the EU and the OSCE to pressure Russia to withdraw from all sovereign Georgian territory. : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >John McCain has said that what is most critical now is to avoid further confrontation between Russian and Georgian forces.  McCain wants to work with the EU and the OSCE to pressure Russia to withdraw from all sovereign Georgian territory.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Chuck Baldwin : </label></br> <input id="2" type="text" name="Feature"></br>
 							
@@ -42,15 +40,19 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Bob Barr','Ralph Nader','Cynthia McKinney','']
+            local : ['John McCain','Barack Obama','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['','']
+            local : ['','John McCain has said that what is most critical now is to avoid further confrontation between Russian and Georgian forces.  McCain wants to work with the EU and the OSCE to pressure Russia to withdraw from all sovereign Georgian territory.','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['John McCain','Barack Obama','']
+            local : ['Bob Barr','Ralph Nader','Cynthia McKinney','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

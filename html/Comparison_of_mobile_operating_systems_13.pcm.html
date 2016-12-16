@@ -26,12 +26,14 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Custom ringtones : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Custom SMS/MMS tones : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Custom ringtones :</label></br>
+ 		 					 <input type="radio" name="FeatureCustom ringtones" value="oui">oui <input type="radio" name="FeatureCustom ringtones" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Custom SMS/MMS tones :</label></br>
+ 		 					 <input type="radio" name="FeatureCustom SMS/MMS tones" value="oui">oui <input type="radio" name="FeatureCustom SMS/MMS tones" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Ringtones and Alerts :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >Ringtones and Alerts</br>	
@@ -40,24 +42,16 @@
 							<label>Feature : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Custom vibrate alert patterns :</label></br>
+							<label>Custom vibrate alert patterns : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >No</br>	
- 		 									<input type="checkbox" name="Feature" > possible on some Samsung devices such as Galaxy S III</br>	
- 		 									<input type="checkbox" name="Feature" > but limited</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','7.10.7720.0+','?','1.2+','']
+            local : ['Windows Phone','Sailfish OS','Android','BlackBerry 10','iOS','Ubuntu Touch','Tizen','Firefox OS','Mer','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['?','Yes','8 GDR3+','5+','No','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Windows Phone','Sailfish OS','Android','BlackBerry 10','iOS','Ubuntu Touch','Tizen','Firefox OS','Mer','']
+            local : ['No','?','Yes','5+','No, possible on some Samsung devices such as Galaxy S III, but limited','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

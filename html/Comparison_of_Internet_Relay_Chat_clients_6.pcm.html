@@ -26,56 +26,20 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>irc:// URI scheme :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >irc:</br>	
- 		 									<input type="checkbox" name="Feature" ></br>	
- 		 									<input type="checkbox" name="Feature" > URI scheme</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+ 		 					<label>irc:// URI scheme :</label></br>
+ 		 					 <input type="radio" name="Featureirc:// URI scheme" value="oui">oui <input type="radio" name="Featureirc:// URI scheme" value = "non">non </br>
+									
 						</br>	
-							<label>UTF-8 : </label></br> <input id="2" type="text" name="Feature"></br>
+ 		 					<label>UTF-8 :</label></br>
+ 		 					 <input type="radio" name="FeatureUTF-8" value="oui">oui <input type="radio" name="FeatureUTF-8" value = "non">non </br>
+									
+						</br>	
+							<label>Scripting language : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Scripting language :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >AppleScript</br>	
- 		 									<input type="checkbox" name="Feature" > Perl</br>	
- 		 									<input type="checkbox" name="Feature" > PHP</br>	
- 		 									<input type="checkbox" name="Feature" > Python</br>	
- 		 									<input type="checkbox" name="Feature" > Ruby</br>	
- 		 									<input type="checkbox" name="Feature" > Objective-C</br>	
- 		 									<input type="checkbox" name="Feature" > shell script</br>	
- 		 									<input type="checkbox" name="Feature" > IrcII script</br>	
- 		 									<input type="checkbox" name="Feature" > Cocoa</br>	
- 		 									<input type="checkbox" name="Feature" > F-Script</br>	
- 		 									<input type="checkbox" name="Feature" > JavaScript</br>	
- 		 									<input type="checkbox" name="Feature" >C</br>	
- 		 									<input type="checkbox" name="Feature" > Lua</br>	
- 		 									<input type="checkbox" name="Feature" > Tcl</br>	
- 		 									<input type="checkbox" name="Feature" > Scheme (Guile)</br>	
- 		 									<input type="checkbox" name="Feature" >Perl</br>	
- 		 									<input type="checkbox" name="Feature" > C++</br>	
- 		 									<input type="checkbox" name="Feature" > ECMAScript</br>	
- 		 									<input type="checkbox" name="Feature" >Javascript</br>	
- 		 									<input type="checkbox" name="Feature" > Node.js</br>	
- 		 									<input type="checkbox" name="Feature" >Shell script</br>	
- 		 									<input type="checkbox" name="Feature" > Java</br>	
- 		 									<input type="checkbox" name="Feature" > C#</br>	
- 		 									<input type="checkbox" name="Feature" >VBScript</br>	
- 		 									<input type="checkbox" name="Feature" > custom</br>	
- 		 									<input type="checkbox" name="Feature" >Custom Actions system</br>	
- 		 									<input type="checkbox" name="Feature" > Java plugins</br>	
- 		 									<input type="checkbox" name="Feature" >KVS (custom)</br>	
- 		 									<input type="checkbox" name="Feature" >C#</br>	
- 		 									<input type="checkbox" name="Feature" > mIRC script</br>	
- 		 									<input type="checkbox" name="Feature" >Partial</br>	
- 		 									<input type="checkbox" name="Feature" > Javascript</br>	
- 		 									<input type="checkbox" name="Feature" > C</br>	
- 		 									<input type="checkbox" name="Feature" > and via D-Bus.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Automatic updates : </label></br> <input id="4" type="text" name="Feature"></br>
-							
+ 		 					<label>Automatic updates :</label></br>
+ 		 					 <input type="radio" name="FeatureAutomatic updates" value="oui">oui <input type="radio" name="FeatureAutomatic updates" value = "non">non </br>
+									
 						</br>	
 							<label>Proxy server : </label></br> <input id="5" type="text" name="Feature"></br>
 							
@@ -83,28 +47,21 @@
 							<label>Client : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Multi-server : </label></br> <input id="7" type="text" name="Feature"></br>
-							
+ 		 					<label>Multi-server :</label></br>
+ 		 					 <input type="radio" name="FeatureMulti-server" value="oui">oui <input type="radio" name="FeatureMulti-server" value = "non">non </br>
+									
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','Partial','UTF-8','?','']
+            local : ['AppleScript','AppleScript, Perl, PHP, Python, Ruby, Objective-C, shell script','Perl','AppleScript, IrcII script','Sleep','No','AppleScript, Cocoa, F-Script, JavaScript, Python','?','C, Perl, Python, Ruby, Lua, Tcl, Scheme (Guile)','JavaScript','Yes (language agnostic)','Perl, Python, Tcl, Ruby, C++, ECMAScript, Scheme (Guile)','N/A','Versus','VBScript','AppleScript, Cocoa','IrcII script','Scripting language','Shell script','Javascript, Node.js','Shell script, Ruby, Python, Perl, Java, C++, C#, JavaScript','VBScript, custom','mIRC script','Enhanced IrcII script','Yes','Emacs Lisp','Custom Actions system, Java plugins','KVS (custom), Perl, Python, C++','C#, mIRC script','ARexx','Partial, JavaScript','Perl, Python, Tcl, Lua, Javascript, C, C++, and via D-Bus.','Java','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['?','No','N/A','Yes','Automatic updates','']
+            local : ['Yes','?','Proxy server','SOCKS','No','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes','?','Proxy server','SOCKS','No','']
-          });
-          $("#4").typeahead({
-            name:"list4",
             local : ['KVIrc','AmIRC','ircII','LeetIRC','PJIRC','Konversation','Snak','Colloquy','Visual IRC','Client','mIRC','ii (IRC IT)','Irssi','Bersirc','qwebirc','f-irc','KiwiIRC','Quassel','Neebly','ChatZilla','ERC','jIRCii','Nettalk','IceChat','Linkinus','Mibbit','LeafChat','XChat','DMDirc','Smuxi','rcirc','AdiIRC','BitchX','HydraIRC','PIRCH','LimeChat','IRCjr','WeeChat','Ircle','Textual','HexChat','Opera','Convos','Lingo','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes','?','No','Multi-server','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

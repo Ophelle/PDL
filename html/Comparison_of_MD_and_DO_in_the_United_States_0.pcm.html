@@ -32,24 +32,22 @@
 							<label>MLE, Step 2 : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Board Certification :</label></br>
+							<label>Board Certification : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Either M.D. or D.O. medical specialty boards</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Medical School Application service :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >AMCAS</br>	
  		 									<input type="checkbox" name="Feature" >TMDSAS</br>	
  		 									<input type="checkbox" name="Feature" >AACOMAS</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+								
 						</br>	
 							<label>Medical Licensing Exam (MLE)  Step 1 : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>Years of medical school : </label></br> <input id="6" type="number" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>		<script>
+		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['','M.D. (ACGME)','']
@@ -60,6 +58,10 @@
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['Medical specialty boards','Either M.D. or D.O. medical specialty boards','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['','USMLE required','']
           });
     </script>

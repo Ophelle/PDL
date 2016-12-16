@@ -26,17 +26,15 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Fedora : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Fedora :</label></br>
+ 		 					 <input type="radio" name="FeatureFedora" value="oui">oui <input type="radio" name="FeatureFedora" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Tor-ramdisk : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Debian/Ubuntu :</label></br>
+							<label>Debian/Ubuntu : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >SELinux</br>	
- 		 									<input type="checkbox" name="Feature" > AppArmor</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Trisquel : </label></br> <input id="4" type="text" name="Feature"></br>
 							
@@ -56,11 +54,10 @@
 							<label>Distribution : </label></br> <input id="9" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>SUSE Linux :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Hardware NX and other methods in mainline kernel and toolchain</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
+ 		 					<label>SUSE Linux :</label></br>
+ 		 					 <input type="radio" name="FeatureSUSE Linux" value="oui">oui <input type="radio" name="FeatureSUSE Linux" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Parabola GNU/Linux-libre : </label></br> <input id="11" type="text" name="Feature"></br>
 							
 						</br>	
@@ -81,11 +78,11 @@
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['Exec Shield','No','Yes','SELinux','']
+            local : ['No','Yes','Unknown','PaX','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['No','Yes','Unknown','PaX','']
+            local : ['Yes','PaX optional','Optional','SELinux, AppArmor','']
           });
           $("#6").typeahead({
             name:"list6",

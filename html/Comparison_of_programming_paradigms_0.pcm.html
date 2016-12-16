@@ -82,21 +82,11 @@
  		 									<input type="checkbox" name="Feature" > state transition table</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Critics :</label></br>
+							<label>Critics : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Edsger W. Dijkstra</br>	
- 		 									<input type="checkbox" name="Feature" > Michael A. Jackson</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Related paradigm(s) :</label></br>
+							<label>Related paradigm(s) : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Procedural</br>	
- 		 									<input type="checkbox" name="Feature" > dataflow</br>	
- 		 									<input type="checkbox" name="Feature" >Imperative</br>	
- 		 									<input type="checkbox" name="Feature" > event-driven</br>	
- 		 									<input type="checkbox" name="Feature" >Structured</br>	
- 		 									<input type="checkbox" name="Feature" > imperative</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Examples :</label></br>
 							
@@ -128,6 +118,14 @@
           $("#1").typeahead({
             name:"list1",
             local : ['Structured','Procedural','Imperative','Automata-based programming','Event-driven including time driven','Object-oriented','Functional','Declarative','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['Edsger W. Dijkstra, Michael A. Jackson','','See here and','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['','Procedural, dataflow','Imperative','Declarative','Imperative, event-driven','Structured, imperative','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

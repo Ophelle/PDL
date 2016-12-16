@@ -29,98 +29,67 @@
 							<label>Disk copy created : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Stores file owner : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Stores file owner :</label></br>
+ 		 					 <input type="radio" name="FeatureStores file owner" value="oui">oui <input type="radio" name="FeatureStores file owner" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Max Timestamp Resolution : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Last access/ read timestamps : </label></br> <input id="4" type="text" name="Feature"></br>
+ 		 					<label>Last access/ read timestamps :</label></br>
+ 		 					 <input type="radio" name="FeatureLast access/ read timestamps" value="oui">oui <input type="radio" name="FeatureLast access/ read timestamps" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Checksum/ ECC :</label></br>
+ 		 					 <input type="radio" name="FeatureChecksum/ ECC" value="oui">oui <input type="radio" name="FeatureChecksum/ ECC" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>POSIX file permissions :</label></br>
+ 		 					 <input type="radio" name="FeaturePOSIX file permissions" value="oui">oui <input type="radio" name="FeaturePOSIX file permissions" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Last content modification timestamps :</label></br>
+ 		 					 <input type="radio" name="FeatureLast content modification timestamps" value="oui">oui <input type="radio" name="FeatureLast content modification timestamps" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Extended attribute/ Alternate data streams/ forks :</label></br>
+ 		 					 <input type="radio" name="FeatureExtended attribute/ Alternate data streams/ forks" value="oui">oui <input type="radio" name="FeatureExtended attribute/ Alternate data streams/ forks" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Creation timestamps :</label></br>
+ 		 					 <input type="radio" name="FeatureCreation timestamps" value="oui">oui <input type="radio" name="FeatureCreation timestamps" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Security/ MAC labels :</label></br>
+ 		 					 <input type="radio" name="FeatureSecurity/ MAC labels" value="oui">oui <input type="radio" name="FeatureSecurity/ MAC labels" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>File system : </label></br> <input id="11" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Checksum/ ECC : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>POSIX file permissions : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Last content modification timestamps : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Extended attribute/ Alternate data streams/ forks :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Extended attribute</br>	
- 		 									<input type="checkbox" name="Feature" > Alternate data streams</br>	
- 		 									<input type="checkbox" name="Feature" > forks</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Creation timestamps : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Security/ MAC labels :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Security</br>	
- 		 									<input type="checkbox" name="Feature" > MAC labels</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>File system :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >CP</br>	
- 		 									<input type="checkbox" name="Feature" >M file system</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Last metadata change timestamps : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Access control list : </label></br> <input id="13" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Last archive timestamps : </label></br> <input id="14" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>Last metadata change timestamps :</label></br>
+ 		 					 <input type="radio" name="FeatureLast metadata change timestamps" value="oui">oui <input type="radio" name="FeatureLast metadata change timestamps" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Access control list :</label></br>
+ 		 					 <input type="radio" name="FeatureAccess control list" value="oui">oui <input type="radio" name="FeatureAccess control list" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Last archive timestamps :</label></br>
+ 		 					 <input type="radio" name="FeatureLast archive timestamps" value="oui">oui <input type="radio" name="FeatureLast archive timestamps" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['Unknown','No','Yes','Disk copy created','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','No','Stores file owner','Linux port','']
+            local : ['Unknown','Max Timestamp Resolution','1 nanosecond','1 second','10 milliseconds','100 nanoseconds','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Unknown','Max Timestamp Resolution','1 nanosecond','1 second','10 milliseconds','100 nanoseconds','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['No','Partial','Yes','Unknown','Last access/read timestamps','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['No','Partial','Yes','Checksum/ ECC','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Yes','No','Unknown','Linux port','POSIX file permissions','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['Yes','Unknown','Last content modification timestamps','No','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['No','Yes','Partial','Creation timestamps','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['Yes','No','Unknown','Last metadata change timestamps','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['No','Yes','Linux port','Planned','Access control list','']
-          });
-          $("#11").typeahead({
-            name:"list11",
-            local : ['No','Yes','Last archive timestamps','Unknown','']
+            local : ['UDF','Reliance','ReiserFS','QFS','V7FS','CP/M file system','GPFS','ext3cow','CBM DOS','Lustre','Reliance Nitro','JFS','GFS','OCFS','ext2','NSS','PramFS','Lanyard Filesystem','V6FS','ZFS','UFS2','FAT32','File system','HFS Plus','NWFS','Be File System','Level-D','FAT12','OS4000','DECtape','Btrfs','ext3','exFAT','VxFS','UFS1','DOS (GEC)','Elektronika BK tape format','OCFS2','Joliet ("CDFS")','Reiser4','Fossil','LFS','HFS','FAT16','ISO 9660:1988','ext4','VMFS2','NILFS','High Sierra','NTFS','VMFS3','XFS','AdvFS','HPFS','ISO 9660:1999','ODS-5','FFS','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

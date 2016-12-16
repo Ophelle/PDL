@@ -30,18 +30,21 @@
  		 					 <input type="radio" name="FeatureDragonFly BSD" value="oui">oui <input type="radio" name="FeatureDragonFly BSD" value = "non">non </br>
 									
 						</br>	
-							<label>Mac OS X : </label></br> <input id="2" type="text" name="Feature"></br>
-							
+ 		 					<label>Mac OS X :</label></br>
+ 		 					 <input type="radio" name="FeatureMac OS X" value="oui">oui <input type="radio" name="FeatureMac OS X" value = "non">non </br>
+									
 						</br>	
-							<label>Linux : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>Linux :</label></br>
+ 		 					 <input type="radio" name="FeatureLinux" value="oui">oui <input type="radio" name="FeatureLinux" value = "non">non </br>
+									
 						</br>	
  		 					<label>OpenBSD :</label></br>
  		 					 <input type="radio" name="FeatureOpenBSD" value="oui">oui <input type="radio" name="FeatureOpenBSD" value = "non">non </br>
 									
 						</br>	
-							<label>Windows NT-based : </label></br> <input id="5" type="text" name="Feature"></br>
-							
+ 		 					<label>Windows NT-based :</label></br>
+ 		 					 <input type="radio" name="FeatureWindows NT-based" value="oui">oui <input type="radio" name="FeatureWindows NT-based" value = "non">non </br>
+									
 						</br>	
  		 					<label>Pre-Windows NT :</label></br>
  		 					 <input type="radio" name="FeaturePre-Windows NT" value="oui">oui <input type="radio" name="FeaturePre-Windows NT" value = "non">non </br>
@@ -62,33 +65,16 @@
  		 					 <input type="radio" name="FeatureWindows Mobile/Pocket PC" value="oui">oui <input type="radio" name="FeatureWindows Mobile/Pocket PC" value = "non">non </br>
 									
 						</br>	
-							<label>Name :</label></br>
+							<label>Name : </label></br> <input id="11" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >svnd </br>	
- 		 									<input type="checkbox" name="Feature" > vnconfig</br>	
- 		 									<input type="checkbox" name="Feature" >softraid </br>	
- 		 									<input type="checkbox" name="Feature" > RAID C</br>	
- 		 									<input type="checkbox" name="Feature" >dm-crypt</br>	
- 		 									<input type="checkbox" name="Feature" >LUKS</br>	
- 		 									<input type="checkbox" name="Feature" >cryptsetup</br>	
- 		 									<input type="checkbox" name="Feature" > dmsetup</br>	
-								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','Partial','']
+            local : ['','No','Yes','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['No','Yes','Partial','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','Yes','Partial','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['','No','Yes','']
+            local : ['CGD','SafeHouse Professional','loop-AES','Trend Micro Endpoint Encryption','BestCrypt Volume Encryption','n-Crypt Pro','DriveSentry GoAnywhere 2','BitArmor DataControl','Knox','McAfee Drive Encryption (SafeBoot)','DISK Protect','FreeOTFE','CenterTools DriveLock','SafeGuard Enterprise','svnd / vnconfig','Private Disk','TrueCrypt','USBCrypt','encryptstick','R-Crypto','softraid / RAID C','FileVault 2','Scramdisk 4 Linux','PGPDisk','EgoSecure HDD Encryption','SafeGuard Easy','Check Point Full Disk Encryption','DriveCrypt','Discryptor','Symantec Endpoint Encryption','GBDE','SecuBox','Bloombase Keyparc','SpyProof!','DiskCryptor','Scramdisk','E4M','ProxyCrypt','Cryptainer','Sentry 2020','CipherShed','BitLocker Drive Encryption','VeraCrypt','FileVault','GELI','eCryptfs','Aloaha Secure Stick','e-Capsule Private Safe','SafeGuard PrivateDisk','SecureDoc','CryptArchiver','CrossCrypt','tcplay','dm-crypt/LUKS','FREE CompuSec','cryptoloop','cryptsetup/ dmsetup','PGP Whole Disk Encryption','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

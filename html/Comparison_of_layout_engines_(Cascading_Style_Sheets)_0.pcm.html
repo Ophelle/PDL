@@ -29,33 +29,48 @@
 							<label>CSS2 : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>1.0 : </label></br> <input id="2" type="number" name="Feature"></br>
+							<label>1.0 : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Yes : </label></br> <input id="3" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>!important :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" ></br>	
- 		 									<input type="checkbox" name="Feature" >*Comment*</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>7.0 : </label></br> <input id="5" type="number" name="Feature"></br>
-							
+ 		 					<label>Yes :</label></br>
+ 		 					 <input type="radio" name="FeatureYes" value="oui">oui <input type="radio" name="FeatureYes" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>						</br>	
-							<label>85 : </label></br> <input id="6" type="number" name="Feature"></br>
+							<label>!important : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Weight increasing :</label></br>
+						</br>	
+							<label>7.0 : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Viewport</br>	
- 		 									<input type="checkbox" name="Feature" > Device Adaptation</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
+							<label>85 : </label></br> <input id="6" type="text" name="Feature"></br>
+							
+						</br>	
+							<label>Weight increasing : </label></br> <input id="7" type="text" name="Feature"></br>
+							
 		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['CSS3','Font','CSS2','Page','ML1','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['1.0','2.12','','No','2.7.62','2.2','Font','Page','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['@namespace','@viewport','/*Comment*/','@top-right','@bottom-left','@document','@font-face','@bottom-center','@left-middle','@top-center','@stylistic','@character-variant','@import','@swash','@media','@bottom-right','@filter','@top-right-corner','@phonetic-alphabet','@left-top','@supports','@left-bottom','Page','@right-bottom','@right-top','@page','@bottom-right-corner','@bottom-left-corner','@charset','@font-feature-values','@ornaments','@styleset','Font','@right-middle','@top-left','@annotation','@top-left-corner','@keyframes','@counter-style','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['No','10.0','','3.0','Font','9.0','Page','8.0','12.0','5.5','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['No','Nightly Build','','28.0','Page','Yes','85','Experimental','Font','525','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['Margin boxes','Define font','Define font features','Font feature value block','Conditional Rules','Namespace declaration','Animation key','Phonetic pronunciation','Viewport, Device Adaptation','Import stylesheet','Custom Counter Styles','Media-specific rules','Font','Comments','Filter','Page','Restriction by URLs','Character set','For paged media','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

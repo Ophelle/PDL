@@ -26,8 +26,9 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Copy files over 2 GB limit : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>Copy files over 2 GB limit :</label></br>
+ 		 					 <input type="radio" name="FeatureCopy files over 2 GB limit" value="oui">oui <input type="radio" name="FeatureCopy files over 2 GB limit" value = "non">non </br>
+									
 						</br>	
 							<label>Latest stable version :</label></br>
 							
@@ -44,13 +45,10 @@
  		 									<input type="checkbox" name="Feature" >3.2.5  January 17</br>	
  		 									<input type="checkbox" name="Feature" > 2011; 4 years ago</br>	
  		 									<input type="checkbox" name="Feature" >20130505 May 5</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+								
 						</br>	
-							<label>Software license :</label></br>
+							<label>Software license : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >MPL 1.1</br>	
- 		 									<input type="checkbox" name="Feature" > Charityware</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Creator : </label></br> <input id="4" type="text" name="Feature"></br>
 							
@@ -60,15 +58,13 @@
 						</br>	
 							<label>First public release date : </label></br> <input id="6" type="number" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Interface :</label></br>
+						</br>	
+							<label>Interface : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >GUI and CLI</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','?','Yes (since version 2.0.5)','']
+            local : ['GPL','BSD','MPL 1.1, Charityware','Clarified Artistic License','MIT','']
           });
           $("#2").typeahead({
             name:"list2",
@@ -77,6 +73,10 @@
           $("#3").typeahead({
             name:"list3",
             local : ['NcFTP','FireFTP','Fugu','Yafc','FileZilla','WinSCP','Cyberduck','tnftp','gFTP','Swish','cURL','lftp','Macfusion','net2ftp','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['GUI and CLI','Windows Explorer shell extension','GUI','CLI','Firefox addon','GTK+','Web application','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

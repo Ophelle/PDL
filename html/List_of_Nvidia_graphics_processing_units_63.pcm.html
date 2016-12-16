@@ -78,11 +78,8 @@
 							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="17" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Notes :</label></br>
+							<label>Notes : </label></br> <input id="18" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >based on G210M</br>	
- 		 									<input type="checkbox" name="Feature" >310M</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Fillrate - Pixel (GP/s) : </label></br> <input id="19" type="number" name="Feature"></br>
 							
@@ -106,6 +103,10 @@
           $("#5").typeahead({
             name:"list5",
             local : ['NVS 5200M','NVS 5400M','NVS 3100M','NVS 2100M','NVS 4200M','NVS 5100M','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['based on G210M/310M','','based on GT 520M','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

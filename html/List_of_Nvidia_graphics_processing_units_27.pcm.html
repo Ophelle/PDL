@@ -29,9 +29,9 @@
 							<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Memory clock (MHz) : </label></br> <input id="2" type="number" name="Feature"></br>
+							<label>Memory clock (MHz) : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Memory - Bus width (bit) : </label></br> <input id="3" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -47,13 +47,8 @@
 							<label>Fillrate - MTextels/s : </label></br> <input id="7" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Launch :</label></br>
+							<label>Launch : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >November 8</br>	
- 		 									<input type="checkbox" name="Feature" > 2004</br>	
- 		 									<input type="checkbox" name="Feature" >February 24</br>	
- 		 									<input type="checkbox" name="Feature" > 2005</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Fillrate - MPixels/s : </label></br> <input id="9" type="number" name="Feature"></br>
 							
@@ -67,16 +62,15 @@
 							<label>Model : </label></br> <input id="12" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Memory - Bus type :</label></br>
+							<label>Memory - Bus type : </label></br> <input id="13" type="text" name="Feature"></br>
 							
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Fab (nm) : </label></br> <input id="14" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="15" type="number" name="Feature"></br>
+							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="15" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Fillrate - MVertices/s : </label></br> <input id="16" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>		<script>
@@ -86,14 +80,23 @@
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['8:3:8:4','4:3:4:2','12:5:12::12','2:1:2:1','']
+            local : ['700','700
+1100','600','System Memory','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['NV44M','NV43M','NV41M','C51M','']
+            local : ['8:3:8:4','4:3:4:2','12:5:12::12','2:1:2:1','']
           });
           $("#4").typeahead({
             name:"list4",
+            local : ['November 8, 2004','Unknown','February 24, 2005','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['NV44M','NV43M','NV41M','C51M','']
+          });
+          $("#6").typeahead({
+            name:"list6",
             local : ['GeForce Go 6200','GeForce Go 6400','GeForce Go 6800','GeForce Go 6100 + nForce Go 430','GeForce Go 6150 + nForce Go 430','GeForce Go 6800 Ultra','GeForce Go 6600','']
           });
     </script>

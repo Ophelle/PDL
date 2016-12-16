@@ -26,81 +26,48 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Unix : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Freeware : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>BSD : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Mac OS X : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Libre Software / Open source : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Linux : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Web :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Java & DHTML</br>	
- 		 									<input type="checkbox" name="Feature" >Ajax</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
+ 		 					<label>Unix :</label></br>
+ 		 					 <input type="radio" name="FeatureUnix" value="oui">oui <input type="radio" name="FeatureUnix" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Freeware :</label></br>
+ 		 					 <input type="radio" name="FeatureFreeware" value="oui">oui <input type="radio" name="FeatureFreeware" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>BSD :</label></br>
+ 		 					 <input type="radio" name="FeatureBSD" value="oui">oui <input type="radio" name="FeatureBSD" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Mac OS X :</label></br>
+ 		 					 <input type="radio" name="FeatureMac OS X" value="oui">oui <input type="radio" name="FeatureMac OS X" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Libre Software / Open source :</label></br>
+ 		 					 <input type="radio" name="FeatureLibre Software / Open source" value="oui">oui <input type="radio" name="FeatureLibre Software / Open source" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Linux :</label></br>
+ 		 					 <input type="radio" name="FeatureLinux" value="oui">oui <input type="radio" name="FeatureLinux" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Web :</label></br>
+ 		 					 <input type="radio" name="FeatureWeb" value="oui">oui <input type="radio" name="FeatureWeb" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>GIS software : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Windows : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Other :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Java-based rules engine for spatial and temporal data.</br>	
- 		 									<input type="checkbox" name="Feature" >Traffic</br>	
- 		 									<input type="checkbox" name="Feature" >WMS</br>	
- 		 									<input type="checkbox" name="Feature" >ADAS</br>	
- 		 									<input type="checkbox" name="Feature" >Routing</br>	
- 		 									<input type="checkbox" name="Feature" >Google Earth Plugin</br>	
- 		 									<input type="checkbox" name="Feature" >KML</br>	
- 		 									<input type="checkbox" name="Feature" > WMS</br>	
- 		 									<input type="checkbox" name="Feature" >Geocoding and Routing plugins also available.</br>	
- 		 									<input type="checkbox" name="Feature" >Java-based mapping and imagery toolkit</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-		<script>
+ 		 					<label>Windows :</label></br>
+ 		 					 <input type="radio" name="FeatureWindows" value="oui">oui <input type="radio" name="FeatureWindows" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Other :</label></br>
+ 		 					 <input type="radio" name="FeatureOther" value="oui">oui <input type="radio" name="FeatureOther" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','Java','CLIX','Solaris','Unix','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['No','Yes','Viewer(s)','Free Trial','Trial','Discontinued','Viewers & Plug-ins','Free (Gratis)','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','Java','Yes','?','BSD','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','Java','No','Mac OS X','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes','No','Open source','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['No','Yes','Java','"GIS Panorama"','Linux','']
-          });
-          $("#7").typeahead({
-            name:"list7",
             local : ['Panorama','GRASS','QGIS','Spatial Manager for AutoCAD','MapDotNet','gvSIG','IDRISI','Ortelius Mapdiva','CAPAWARE','Oracle Spatial','Spatial Manager Desktop','Microsoft MapPoint','RegioGraph','Kosmo Saig','MapWindow GIS','Zulu','Geomajas','ITC ILWIS','Pitney Bowes MapInfo','Deegree','GeoNetwork','Erdas Imagine','Smallworld','UMN MapServer','GIS software','Chameleon','GeoServer','ThinkGeo Map Suite','SpatialFX | ObjectFX','PostGIS','TerraLib TerraView','Caliper TransModeler','Intergraph','Cadcorp','Caliper Maptitude','MicroImages TNTmips','GeoTools','RemoteView','(Vivid) Open JUMP GIS','Autodesk','uDIG','SpatialRules | ObjectFX','GeoBase','AvisMap GIS Engine','Caliper TransCAD','Manifold System','ArcGIS','LandSerf','SPRING','ILOG JViews Maps','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['Yes','Java','Windows','"GIS Map 2005"','No','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

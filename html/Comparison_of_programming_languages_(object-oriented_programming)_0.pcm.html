@@ -26,22 +26,20 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>construction :</label></br>
+							<label>construction : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >"The class is an Object.
-Just send a message to a class</br>	
- 		 									<input type="checkbox" name="Feature" > usually  or </br>	
- 		 									<input type="checkbox" name="Feature" > and many others</br>	
- 		 									<input type="checkbox" name="Feature" > for example:"</br>	
- 		 									<input type="checkbox" name="Feature" >INVOKE class "NEW" RETURNING variable or 
- MOVE class::"NEW" TO variable</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>destruction : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['"The class is an Object.
+Just send a message to a class, usually  or , and many others, for example:"','','INVOKE class "NEW" RETURNING variable or 
+ MOVE class::"NEW" TO variable','']
+          });
+          $("#2").typeahead({
+            name:"list2",
             local : ['','']
           });
     </script>

@@ -26,89 +26,56 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>JPEG 2000 : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>PSD : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>JPEG 2000 :</label></br>
+ 		 					 <input type="radio" name="FeatureJPEG 2000" value="oui">oui <input type="radio" name="FeatureJPEG 2000" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>PSD :</label></br>
+ 		 					 <input type="radio" name="FeaturePSD" value="oui">oui <input type="radio" name="FeaturePSD" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>HD Photo : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>BMP : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>PCX : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>GIF : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>PNG : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>JPEG : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>PSP : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>RAW imports : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>TIFF : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>XCF : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>BMP :</label></br>
+ 		 					 <input type="radio" name="FeatureBMP" value="oui">oui <input type="radio" name="FeatureBMP" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>PCX :</label></br>
+ 		 					 <input type="radio" name="FeaturePCX" value="oui">oui <input type="radio" name="FeaturePCX" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>GIF :</label></br>
+ 		 					 <input type="radio" name="FeatureGIF" value="oui">oui <input type="radio" name="FeatureGIF" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>PNG :</label></br>
+ 		 					 <input type="radio" name="FeaturePNG" value="oui">oui <input type="radio" name="FeaturePNG" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>JPEG :</label></br>
+ 		 					 <input type="radio" name="FeatureJPEG" value="oui">oui <input type="radio" name="FeatureJPEG" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>PSP :</label></br>
+ 		 					 <input type="radio" name="FeaturePSP" value="oui">oui <input type="radio" name="FeaturePSP" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>RAW imports :</label></br>
+ 		 					 <input type="radio" name="FeatureRAW imports" value="oui">oui <input type="radio" name="FeatureRAW imports" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>TIFF :</label></br>
+ 		 					 <input type="radio" name="FeatureTIFF" value="oui">oui <input type="radio" name="FeatureTIFF" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>XCF :</label></br>
+ 		 					 <input type="radio" name="FeatureXCF" value="oui">oui <input type="radio" name="FeatureXCF" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','Import','JPEG','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['No','Import only','Yes','Via plug-in','JPEG 2000','Partial','?','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Import only','Partial','Yes','No','No layer support','Import','?','PSD','']
-          });
-          $("#4").typeahead({
-            name:"list4",
             local : ['','No','Yes','Import only','HD Photo','Via plug-in','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes','No','Import','Single page only','TIFF','First page only','Via plug-ins','Import only','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Yes','No','Import','Partial','BMP','?','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['No','Yes','?','Import','','Import only','PCX','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['No','Via plug-in','Yes','Partial','Import','Import only','?','GIF','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['Yes','No','?','PNG','Partial','Via plug-in','Import','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['Yes','No','Import','Import only','?','XCF','']
-          });
-          $("#11").typeahead({
-            name:"list11",
-            local : ['No','?','Yes','PSP','Import only','Import','']
-          });
-          $("#12").typeahead({
-            name:"list12",
-            local : ['?','No','Yes','RAW imports','Partial','Via plug-in','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

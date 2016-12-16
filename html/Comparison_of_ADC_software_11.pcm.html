@@ -32,30 +32,20 @@
 							<label>IPv6 : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>ADC support :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Any clients</br>	
- 		 									<input type="checkbox" name="Feature" > hubs</br>	
- 		 									<input type="checkbox" name="Feature" >TIGR</br>	
- 		 									<input type="checkbox" name="Feature" > ADCS</br>	
- 		 									<input type="checkbox" name="Feature" >ADCS</br>	
- 		 									<input type="checkbox" name="Feature" > OSNR</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Encryption : </label></br> <input id="4" type="text" name="Feature"></br>
+							<label>ADC support : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
+ 		 					<label>Encryption :</label></br>
+ 		 					 <input type="radio" name="FeatureEncryption" value="oui">oui <input type="radio" name="FeatureEncryption" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Other software : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Plugin, extendable :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Plugin</br>	
- 		 									<input type="checkbox" name="Feature" > extendable</br>	
- 		 									<input type="checkbox" name="Feature" >Java</br>	
- 		 									<input type="checkbox" name="Feature" > Lua</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
+ 		 					<label>Plugin, extendable :</label></br>
+ 		 					 <input type="radio" name="FeaturePlugin, extendable" value="oui">oui <input type="radio" name="FeaturePlugin, extendable" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Other : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 		<script>
@@ -69,7 +59,7 @@
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes','No','Encryption','']
+            local : ['TIGR','Any clients, hubs','TIGR, ADCS','ADC support','ADCS, OSNR','']
           });
           $("#4").typeahead({
             name:"list4",

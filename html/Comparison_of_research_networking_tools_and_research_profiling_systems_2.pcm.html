@@ -26,12 +26,9 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Regional, National, International or Federated Connectivity? :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >The Canadian research funding councils as well as knowledge mobilization networks across the country (governments and universities) are working to develop a model to share what Yaffle has built</br>	
- 		 									<input type="checkbox" name="Feature" >The system is voluntary</br>	
- 		 									<input type="checkbox" name="Feature" > so national and international by active inclusion</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+ 		 					<label>Regional, National, International or Federated Connectivity? :</label></br>
+ 		 					 <input type="radio" name="FeatureRegional, National, International or Federated Connectivity?" value="oui">oui <input type="radio" name="FeatureRegional, National, International or Federated Connectivity?" value = "non">non </br>
+									
 						</br>	
 							<label>Interoperability with External Systems : </label></br> <input id="2" type="text" name="Feature"></br>
 							
@@ -39,16 +36,12 @@
 							<label>Integration with Add-on Components or Products : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Research Networking Tool :</label></br>
+							<label>Research Networking Tool : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Collaborative Partnership </br>	
- 		 									<input type="checkbox" name="Feature" > Profile System</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Interoperability with Institutional Enterprise Systems :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Discontinued. Work on this system ceased; moved on to developing Digital Vita</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+ 		 					<label>Interoperability with Institutional Enterprise Systems :</label></br>
+ 		 					 <input type="radio" name="FeatureInteroperability with Institutional Enterprise Systems" value="oui">oui <input type="radio" name="FeatureInteroperability with Institutional Enterprise Systems" value = "non">non </br>
+									
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -57,6 +50,10 @@
           $("#2").typeahead({
             name:"list2",
             local : ['Possibly','Unknown','Yes (Web of Science, ResearcherID)','Yes (Integrates with Pentaho Research Analytics module and InCites)','Yes (Scopus & ScienceDirect)','No','N/A','Yes (EndNote, Mendeley, Zotero, tools which generate BiBTeX, CSV or XML files)','Yes','Yes VIVO collaborates with eagle-I on research resources.  Future plans include adding many additional data types which are meaningful in the academic research setting.  VIVO data are structured using a comprehensive ontology designed for local extension and major ontology "plugins" such as BIBO and eagle-i.','Yes (Possible)','Yes the Funding Discovery module within Pure integrates with SciVal Funding, automatically recommending funding opportunities and suggested collaborators to profiled researchers with no manual effort. Pure also integrates with SciVal to allow easy analysis of your researcher impact with the benchmark capabilities of SciVal.','Yes Elements can be linked to all major open repository technologies and an open source VIVO Harvester extension is also available.','unknown','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Elsevier's SciVal','Life Science Network','EUREKA! Enhancing Student Research','Curvita Profile Manager','Pivot','Collaborative Partnership / Profile System','ERIM Member Profile System (ERIM MIS)','InCites','McCormick Collaboration Visualization Tool','iAMscientist','Converis','Faculty Research Information Profile (FRIP)','Google','Profiles Research Networking Software','Expertise @ Maryland','Community Academic Profiles - CAP','Loki','Yaffle','SciENcv','INDURE (Indiana Database for University Research Expertise)','LatticeGrid','HUBzero','OSU:pro','ResearcherID','Elsevier's Pure (now integrated with SciVal Experts)','Lattes Database','REACH NC Life Science Experts Visualization Tool','MizzouLinks','GENIUS','i2iConnect','Digital Vita','Epernicus Solutions & Epernicus Network','Faculty Scholarly Productivity Index','LinkedIn','CUSP - Columbia University Scientific Profiles','Faculty Profile System','iamResearcher','Academic Room','C-IKNOW','Activity Insight','VIVO','Research Accelerator','MyScienceWork','Symplectic Elements','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

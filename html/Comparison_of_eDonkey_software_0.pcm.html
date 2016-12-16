@@ -47,10 +47,8 @@
  		 					 <input type="radio" name="FeatureRuns on - Windows" value="oui">oui <input type="radio" name="FeatureRuns on - Windows" value = "non">non </br>
 									
 						</br>	
-							<label>Client :</label></br>
+							<label>Client : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >eMule and its Mods</br>	
-								
 						</br>	
  		 					<label>Runs on - Mac OS X :</label></br>
  		 					 <input type="radio" name="FeatureRuns on - Mac OS X" value="oui">oui <input type="radio" name="FeatureRuns on - Mac OS X" value = "non">non </br>
@@ -74,6 +72,10 @@
           $("#3").typeahead({
             name:"list3",
             local : ['Active','Abandoned','Discontinued','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['eMule Plus','Shareaza','eMule and its Mods','xMule','eDonkey2000','MLDonkey','aMule','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

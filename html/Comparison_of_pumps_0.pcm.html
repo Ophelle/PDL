@@ -51,11 +51,8 @@
 							<label>Difficulty of production : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Maximum lift height :</label></br>
+							<label>Maximum lift height : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >1m-1</br>	
- 		 									<input type="checkbox" name="Feature" >5m</br>	
-								
 						</br>	
 							<label>Output : </label></br> <input id="10" type="text" name="Feature"></br>
 							
@@ -63,14 +60,8 @@
 							<label>Production cost : </label></br> <input id="11" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Pump type :</label></br>
+							<label>Pump type : </label></br> <input id="12" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Counterpoise lift or Shadoof</br>	
- 		 									<input type="checkbox" name="Feature" >Scoops and bailers</br>	
- 		 									<input type="checkbox" name="Feature" >Rope & bucket and windlass</br>	
- 		 									<input type="checkbox" name="Feature" >Waterwheel or noria</br>	
- 		 									<input type="checkbox" name="Feature" >Pivoting gutters and "dhones"</br>	
-								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -90,22 +81,30 @@
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['low-medium','medium-high','medium','very low','']
+            local : ['>3m','>1m','100m-500m','3m-8m','1m-1,5m','5m-50m','3m-10m','1m-4m','3m-15m','>2m','>5m','']
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['very low','low-medium','medium-high','medium','']
+            local : ['low-medium','medium-high','medium','very low','']
           });
           $("#7").typeahead({
             name:"list7",
-            local : ['?','']
+            local : ['very low','low-medium','medium-high','medium','']
           });
           $("#8").typeahead({
             name:"list8",
-            local : ['?','']
+            local : ['Counterpoise lift or Shadoof','Scoops and bailers','Persian wheel "Tablia"','Swing basket','Continuous bucket pump','Reciprocating bucket hoist','Watering car','Scoop wheel "Sakia"','Rope & bucket and windlass','Waterwheel or noria','Mohte','Persian wheel "Zawaffa"','Pivoting gutters and "dhones"','']
           });
           $("#9").typeahead({
             name:"list9",
+            local : ['?','']
+          });
+          $("#10").typeahead({
+            name:"list10",
+            local : ['?','']
+          });
+          $("#11").typeahead({
+            name:"list11",
             local : ['?','']
           });
     </script>

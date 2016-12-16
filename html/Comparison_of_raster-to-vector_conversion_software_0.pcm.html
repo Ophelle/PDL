@@ -26,29 +26,14 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Supported OS (without emulation) :</label></br>
+							<label>Supported OS (without emulation) : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 									<input type="checkbox" name="Feature" > Mac OSX</br>	
- 		 									<input type="checkbox" name="Feature" > Linux</br>	
- 		 									<input type="checkbox" name="Feature" > BSD</br>	
- 		 									<input type="checkbox" name="Feature" > AmigaOS</br>	
- 		 									<input type="checkbox" name="Feature" >AROS</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Released : </label></br> <input id="2" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>List price (USD) :</label></br>
+							<label>List price (USD) : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >$449</br>	
- 		 									<input type="checkbox" name="Feature" > $169 upgrade</br>	
- 		 									<input type="checkbox" name="Feature" >1500 Euro</br>	
- 		 									<input type="checkbox" name="Feature" > 750 Euro upgrade</br>	
- 		 									<input type="checkbox" name="Feature" >$499</br>	
- 		 									<input type="checkbox" name="Feature" >$399</br>	
- 		 									<input type="checkbox" name="Feature" > $99 upgrade</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
 							
@@ -56,16 +41,28 @@
 							<label>Creator : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Latest version : </label></br> <input id="6" type="number" name="Feature"></br>
+							<label>Latest version : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>		<script>
+		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['GPL','Proprietary','License','']
+            local : ['Windows, Mac OSX','Windows','','Windows, Mac OSX, Linux, BSD, AmigaOS/AROS','Supported OS (without emulation)','Windows, Mac OSX, Linux','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['discontinued','$449, $169 upgrade','1500 Euro, 750 Euro upgrade','$89.99','$499, $169 upgrade','List price (USD)','$399, $99 upgrade','free','$249 – $399','$59','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['GPL','Proprietary','License','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['Corel','Easy Trace Group','Inkscape.org','Peter Selinger','Macromedia','Elgorithms','Creator','Adobe Systems','Xara Group Ltd.','Avia Systems','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['11.0.2 discontinued (MX)','4.0','Version 8','9.0 build 1856','2.0.012','1.11','2014 (v10)','0.91','X7','Latest version','16.0.0 (CS6)','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

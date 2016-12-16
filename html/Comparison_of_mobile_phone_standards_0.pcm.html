@@ -29,21 +29,14 @@
 							<label>Handoff : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Common Interference :</label></br>
+							<label>Common Interference : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Some electronics</br>	
- 		 									<input type="checkbox" name="Feature" > e.g. amplifiers</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Encoding : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Roaming :</label></br>
+							<label>Roaming : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Nordics and several other European countries</br>	
- 		 									<input type="checkbox" name="Feature" >Worldwide</br>	
- 		 									<input type="checkbox" name="Feature" > all countries except Japan and South Korea</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Feature : </label></br> <input id="5" type="text" name="Feature"></br>
 							
@@ -57,30 +50,16 @@
 							<label>Handset interoperability : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Technology :</label></br>
+							<label>Technology : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >TDMA and FDMA</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Frequency utilization/Call density :</label></br>
+							<label>Frequency utilization/Call density : </label></br> <input id="10" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >1.228  MHz = 3Mbit</br>	
- 		 									<input type="checkbox" name="Feature" >s</br>	
- 		 									<input type="checkbox" name="Feature" >5 MHz = 2 Mbit</br>	
- 		 									<input type="checkbox" name="Feature" >s. 42Mbit</br>	
- 		 									<input type="checkbox" name="Feature" >s for HSPA+. Each call uses 1.8-12 kbit</br>	
- 		 									<input type="checkbox" name="Feature" >s depending on chosen quality and audio complexity.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Voice and Data at the same time :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >No (data only)
-Voice possible though VoLTE or fallback to 2G</br>	
- 		 									<input type="checkbox" name="Feature" >3G</br>	
- 		 									<input type="checkbox" name="Feature" >No EVDO </br>	
- 		 									<input type="checkbox" name="Feature" > Yes SVDO</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
+ 		 					<label>Voice and Data at the same time :</label></br>
+ 		 					 <input type="radio" name="FeatureVoice and Data at the same time" value="oui">oui <input type="radio" name="FeatureVoice and Data at the same time" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Signal quality/coverage area :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >Good coverage indoors on 850</br>	
@@ -105,10 +84,26 @@ Voice possible though VoLTE or fallback to 2G</br>
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['Digital','Analog','']
+            local : ['W-CDMA','CDMA','OFDMA','TDMA and FDMA','FDMA','']
           });
           $("#5").typeahead({
             name:"list5",
+            local : ['Lower than CDMA-2000?','1.228  MHz = 3Mbit/s','5 MHz = 2 Mbit/s. 42Mbit/s for HSPA+. Each call uses 1.8-12 kbit/s depending on chosen quality and audio complexity.','Very low density','','0.2 MHz = 8 timeslots. Each timeslot can hold up to 2 calls (4 calls with VAMOS) through interleaving.','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['None','Some electronics, e.g. amplifiers','']
+          });
+          $("#7").typeahead({
+            name:"list7",
+            local : ['Digital','Analog','']
+          });
+          $("#8").typeahead({
+            name:"list8",
+            local : ['Nordics and several other European countries','Worldwide, all countries except Japan and South Korea','Limited','Worldwide','']
+          });
+          $("#9").typeahead({
+            name:"list9",
             local : ['IS-95 (CDMA one)','UMTS (3GSM)','NMT','LTE','IS-2000 (CDMA 2000)','GSM','']
           });
     </script>

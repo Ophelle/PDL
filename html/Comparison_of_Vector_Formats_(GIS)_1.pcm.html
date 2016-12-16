@@ -26,24 +26,18 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Shapefile : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>Shapefile :</label></br>
+ 		 					 <input type="radio" name="FeatureShapefile" value="oui">oui <input type="radio" name="FeatureShapefile" value = "non">non </br>
+									
 						</br>	
-							<label>GeoJSON : </label></br> <input id="2" type="text" name="Feature"></br>
-							
+ 		 					<label>GeoJSON :</label></br>
+ 		 					 <input type="radio" name="FeatureGeoJSON" value="oui">oui <input type="radio" name="FeatureGeoJSON" value = "non">non </br>
+									
 						</br>	
  		 					<label>Personal Geodatabase :</label></br>
  		 					 <input type="radio" name="FeaturePersonal Geodatabase" value="oui">oui <input type="radio" name="FeaturePersonal Geodatabase" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Yes','Yes (as Polygon with multiple outer rings or as MultiPatch)','?','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Yes','?','']
-          });
+		<script>
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

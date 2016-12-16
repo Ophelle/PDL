@@ -26,26 +26,23 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Linux : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>Linux :</label></br>
+ 		 					 <input type="radio" name="FeatureLinux" value="oui">oui <input type="radio" name="FeatureLinux" value = "non">non </br>
+									
 						</br>	
  		 					<label>Windows NT kernel :</label></br>
  		 					 <input type="radio" name="FeatureWindows NT kernel" value="oui">oui <input type="radio" name="FeatureWindows NT kernel" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Kernel name : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
  		 					<label>FreeBSD kernel :</label></br>
  		 					 <input type="radio" name="FeatureFreeBSD kernel" value="oui">oui <input type="radio" name="FeatureFreeBSD kernel" value = "non">non </br>
 									
- 		 								 		<input type="text"/></br>		<script>
+		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','?','']
-          });
-          $("#2").typeahead({
-            name:"list2",
             local : ['CAST-128','RC4','Camellia','Twofish','Triple DES','DES','Salsa20','TEA','DES-X','XTEA','FCrypt','KHAZAD','AES','CAST-256','Serpent','RC5','Blowfish','IDEA','Anubis','SEED','RC2','Skipjack','']
           });
     </script>

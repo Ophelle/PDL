@@ -26,82 +26,61 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>MP4 : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>QuickTime : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>MP4 :</label></br>
+ 		 					 <input type="radio" name="FeatureMP4" value="oui">oui <input type="radio" name="FeatureMP4" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>QuickTime :</label></br>
+ 		 					 <input type="radio" name="FeatureQuickTime" value="oui">oui <input type="radio" name="FeatureQuickTime" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Audio player : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>FLV : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>OGM : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>AVI : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>ASF : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>OGM :</label></br>
+ 		 					 <input type="radio" name="FeatureOGM" value="oui">oui <input type="radio" name="FeatureOGM" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>AVI :</label></br>
+ 		 					 <input type="radio" name="FeatureAVI" value="oui">oui <input type="radio" name="FeatureAVI" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>ASF :</label></br>
+ 		 					 <input type="radio" name="FeatureASF" value="oui">oui <input type="radio" name="FeatureASF" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>MPEG-21 : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>NUT : </label></br> <input id="9" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Ogg : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Matroska : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>Ogg :</label></br>
+ 		 					 <input type="radio" name="FeatureOgg" value="oui">oui <input type="radio" name="FeatureOgg" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Matroska :</label></br>
+ 		 					 <input type="radio" name="FeatureMatroska" value="oui">oui <input type="radio" name="FeatureMatroska" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','Partial','No','MP4','?','AAC only','']
+            local : ['foobar2000','Sonique','AIMP','Audacious','Rhapsody','XMMS','MediaMonkey','Media Jukebox','MPXPLAY','Amarok','JuK','Cog','Rhythmbox','Musicmatch Jukebox','musikCube','Zinf','Audion','MusicBee','cmus','Audio player','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['No','QuickTime','Yes','?','']
+            local : ['?','No','Yes','FLV','Audio only','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['foobar2000','Sonique','AIMP','Audacious','Rhapsody','XMMS','MediaMonkey','Media Jukebox','MPXPLAY','Amarok','JuK','Cog','Rhythmbox','Musicmatch Jukebox','musikCube','Zinf','Audion','MusicBee','cmus','Audio player','']
+            local : ['?','No','MPEG-21','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['?','No','Yes','FLV','Audio only','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['No','?','Basic','OGM','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['No','Yes','AVI','Partial','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['No','Yes','ASF','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['?','No','MPEG-21','']
-          });
-          $("#9").typeahead({
-            name:"list9",
             local : ['?','No','NUT','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['Vorbis only','Yes','No','Ogg','']
-          });
-          $("#11").typeahead({
-            name:"list11",
-            local : ['Yes','No','?','Basic','Matroska','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

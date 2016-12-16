@@ -30,9 +30,9 @@
 							
  		 								 		<input type="text"/></br>						</br>	
 							<label>GFLOPS/W
-Single Precision : </label></br> <input id="2" type="number" name="Feature"></br>
+Single Precision : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Die Size (mm) : </label></br> <input id="3" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -42,9 +42,9 @@ Single Precision : </label></br> <input id="2" type="number" name="Feature"></br
 							<label>Clock rate - Core (MHz) : </label></br> <input id="5" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Clock rate - Boost (MHz) : </label></br> <input id="6" type="number" name="Feature"></br>
+							<label>Clock rate - Boost (MHz) : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>API support (version) - Mantle : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
@@ -58,12 +58,12 @@ GFLOPS - Double Precision : </label></br> <input id="8" type="text" name="Featur
 							<label>Fab (nm) : </label></br> <input id="10" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="11" type="number" name="Feature"></br>
+							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="11" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Clock rate - Memory (MHz) : </label></br> <input id="12" type="number" name="Feature"></br>
+						</br>	
+							<label>Clock rate - Memory (MHz) : </label></br> <input id="12" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Fillrate - Pixel (GP/s) : </label></br> <input id="13" type="text" name="Feature"></br>
 							
 						</br>	
@@ -76,58 +76,63 @@ GFLOPS - Double Precision : </label></br> <input id="8" type="text" name="Featur
 							<label>Config core : </label></br> <input id="16" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Memory - Bus width (bit) : </label></br> <input id="17" type="number" name="Feature"></br>
+							<label>Memory - Bus width (bit) : </label></br> <input id="17" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Launch : </label></br> <input id="18" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>TDP (W) - Max. : </label></br> <input id="19" type="number" name="Feature"></br>
+							<label>TDP (W) - Max. : </label></br> <input id="19" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>API support (version) - OpenCL : </label></br> <input id="20" type="number" name="Feature"></br>
+						</br>	
+							<label>API support (version) - OpenCL : </label></br> <input id="20" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Code name : </label></br> <input id="21" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>API support (version) - DirectX : </label></br> <input id="22" type="number" name="Feature"></br>
+							<label>API support (version) - DirectX : </label></br> <input id="22" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Processing Power
 GFLOPS - Single Precision : </label></br> <input id="23" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>API support (version) - OpenGL : </label></br> <input id="24" type="number" name="Feature"></br>
+							<label>API support (version) - OpenGL : </label></br> <input id="24" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Model : </label></br> <input id="25" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>Memory - Bus type : </label></br> <input id="26" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>TDP (W) - Idle : </label></br> <input id="27" type="number" name="Feature"></br>
+							<label>TDP (W) - Idle : </label></br> <input id="27" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>		<script>
+		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['','Release Price (USD)','']
+            local : ['','GFLOPS/W
+Single Precision','17.2','21.86','14.734','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['PCIe 3.0 ×16','PCIe 3.0 x16','PCIe 2.1 ×16','Bus interface','PCIe 3.0 ×8','','']
+            local : ['','Release Price (USD)','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['','1792:112:32','2048:128:32','2048:128:32 x2','Config core','']
+            local : ['PCIe 3.0 ×16','PCIe 3.0 x16','PCIe 2.1 ×16','Bus interface','PCIe 3.0 ×8','','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['Code name','Malta','Caicos','Tahiti XT2','Cedar','Bonaire XT','Pitcairn XT','Cape Verde XT','','Oland','Tahiti Pro','Cape Verde LE','']
+            local : ['','1792:112:32','2048:128:32','2048:128:32 x2','Config core','']
           });
           $("#5").typeahead({
             name:"list5",
+            local : ['Code name','Malta','Caicos','Tahiti XT2','Cedar','Bonaire XT','Pitcairn XT','Cape Verde XT','','Oland','Tahiti Pro','Cape Verde LE','']
+          });
+          $("#6").typeahead({
+            name:"list6",
             local : ['Radeon HD 8770','Radeon HD 8490 (OEM)','Radeon HD 8450 (OEM)','Radeon HD 8670 (OEM)','Radeon HD 8470 (OEM)','Radeon HD 8570 (OEM)','Radeon HD 8970 (OEM)','Radeon HD 8730','Radeon HD 8950 (OEM)','Radeon HD 8350 (OEM)','','Radeon HD 8760 (OEM)','Model','Radeon HD 8990 (OEM)','Radeon HD 8870 (OEM)','']
           });
     </script>

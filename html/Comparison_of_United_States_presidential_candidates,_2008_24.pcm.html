@@ -26,18 +26,11 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Baldwin believes that the U.S. is not the world's policeman, and would end all foreign aid and interventionist policies. :</label></br>
+							<label>Baldwin believes that the U.S. is not the world's policeman, and would end all foreign aid and interventionist policies. : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >"[F]oreign aid has proved to be a drain on the U.S. economy while doing little good for the recipients. Aid is routinely used by corrupt foreign governments to oppress their people and enrich powerful elites. Foreign aid almost always discourages economic and political reform</br>	
- 		 									<input type="checkbox" name="Feature" > while subsidizing nations which often work against U.S. interests."</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Though John McCain plans to expand foreign aid, specifically targeting malaria in Africa, he has expressed concern that too much American aid money is embezzled or outright stolen by corrupt foreign governments. :</label></br>
+							<label>Though John McCain plans to expand foreign aid, specifically targeting malaria in Africa, he has expressed concern that too much American aid money is embezzled or outright stolen by corrupt foreign governments. : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Though John McCain plans to expand foreign aid</br>	
- 		 									<input type="checkbox" name="Feature" > specifically targeting malaria in Africa</br>	
- 		 									<input type="checkbox" name="Feature" > he has expressed concern that too much American aid money is embezzled or outright stolen by corrupt foreign governments.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Chuck Baldwin : </label></br> <input id="3" type="text" name="Feature"></br>
 							
@@ -47,11 +40,19 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Cynthia McKinney','Ralph Nader','Bob Barr','']
+            local : ['','"[F]oreign aid has proved to be a drain on the U.S. economy while doing little good for the recipients. Aid is routinely used by corrupt foreign governments to oppress their people and enrich powerful elites. Foreign aid almost always discourages economic and political reform, while subsidizing nations which often work against U.S. interests."','']
           });
           $("#2").typeahead({
             name:"list2",
             local : ['Barack Obama','John McCain','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Obama would double foreign aid to $50 billion by 2012.','Though John McCain plans to expand foreign aid, specifically targeting malaria in Africa, he has expressed concern that too much American aid money is embezzled or outright stolen by corrupt foreign governments.','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Cynthia McKinney','Ralph Nader','Bob Barr','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

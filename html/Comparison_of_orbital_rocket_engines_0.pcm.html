@@ -46,9 +46,9 @@
  		 									<input type="checkbox" name="Feature" >MMH</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Thrust-to-weight ratio : </label></br> <input id="4" type="number" name="Feature"></br>
+							<label>Thrust-to-weight ratio : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Combustion chamber pressure (bar) : </label></br> <input id="5" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -129,23 +129,52 @@
 							<label>Specific impulse, vac. (s) : </label></br> <input id="8" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Manufacturer :</label></br>
+							<label>Manufacturer : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Airbus Defence and Space</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Stage :</label></br>
+							<label>Stage : </label></br> <input id="10" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >2nd</br>	
- 		 									<input type="checkbox" name="Feature" >3rd</br>	
- 		 									<input type="checkbox" name="Feature" >1</br>	
+						</br>	
+							<label>Mass (kg) :</label></br>
+							
  		 									<input type="checkbox" name="Feature" >2</br>	
- 		 									<input type="checkbox" name="Feature" > 3rd</br>	
+ 		 									<input type="checkbox" name="Feature" >200</br>	
+ 		 									<input type="checkbox" name="Feature" >1</br>	
+ 		 									<input type="checkbox" name="Feature" >155</br>	
+ 		 									<input type="checkbox" name="Feature" >714</br>	
+ 		 									<input type="checkbox" name="Feature" >156</br>	
+ 		 									<input type="checkbox" name="Feature" >800</br>	
+ 		 									<input type="checkbox" name="Feature" >151</br>	
+ 		 									<input type="checkbox" name="Feature" >900</br>	
+ 		 									<input type="checkbox" name="Feature" >3</br>	
+ 		 									<input type="checkbox" name="Feature" >526</br>	
+ 		 									<input type="checkbox" name="Feature" >9</br>	
+ 		 									<input type="checkbox" name="Feature" >300</br>	
+ 		 									<input type="checkbox" name="Feature" >250</br>	
+ 		 									<input type="checkbox" name="Feature" >600</br>	
+ 		 									<input type="checkbox" name="Feature" >268</br>	
+ 		 									<input type="checkbox" name="Feature" >000 with fuel</br>	
+ 		 									<input type="checkbox" name="Feature" >160</br>	
+ 		 									<input type="checkbox" name="Feature" >8</br>	
+ 		 									<input type="checkbox" name="Feature" >391</br>	
+ 		 									<input type="checkbox" name="Feature" >10</br>	
+ 		 									<input type="checkbox" name="Feature" >590</br>	
+ 		 									<input type="checkbox" name="Feature" >000
+with fuel</br>	
+ 		 									<input type="checkbox" name="Feature" >5</br>	
+ 		 									<input type="checkbox" name="Feature" >480</br>	
+ 		 									<input type="checkbox" name="Feature" >430</br>	
+ 		 									<input type="checkbox" name="Feature" >450</br>	
+ 		 									<input type="checkbox" name="Feature" >438</br>	
+ 		 									<input type="checkbox" name="Feature" >71</br>	
+ 		 									<input type="checkbox" name="Feature" >800 with fuel</br>	
+ 		 									<input type="checkbox" name="Feature" >6</br>	
+ 		 									<input type="checkbox" name="Feature" >40</br>	
+ 		 									<input type="checkbox" name="Feature" >824 with fuel</br>	
+ 		 									<input type="checkbox" name="Feature" >260</br>	
+ 		 									<input type="checkbox" name="Feature" >222</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Mass (kg) : </label></br> <input id="11" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
 							<label>Engine : </label></br> <input id="12" type="text" name="Feature"></br>
 							
 		<script>
@@ -179,6 +208,24 @@ Delta IV','']
           });
           $("#4").typeahead({
             name:"list4",
+            local : ['NPO Energomash','Snecma','Rocketdyne','Boeing','Mitsubishi Heavy Industries
+NASDA','Pratt & Whitney Rocketdyne','SpaceX','Mitsubishi Heavy Industries
+JAXA','ISRO','Blue Origin','Bristol Aerojet','KBKhM','Hughes Electron Dynamics
+Boeing','NASA','OKB Fakel','TsSKB Progress','Aerojet','Kuznetsov Design Bureau
+Aerojet','Societe Nationale des Poudres et Explosifs(SNPE)','IHI Aerospace
+JAXA','KBKhA','Thiokol','Ad Astra Rocket Company','Airbus Defence and Space','OKB Fakel
+Snecma','Bristol Siddeley','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['2nd,3rd','1/2','1st','Upper','Electro-magnetic thruster','2nd','Ion thruster','Booster','2nd, 3rd','Hall thruster','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['27.6?','49.1?','150','','81.04?','64.13','112?','51.2','16.85?','40.22','78.44','148?','54.97?','40.9?','65.9','82.27?','0.0017?','59','96','73.18','40.05?','136.8','84.318','70.01','86.6','128?','96.9?','25.17','65.91?','41','0.0024?','62.5?','57.80','']
+          });
+          $("#7").typeahead({
+            name:"list7",
             local : ['SPT-100','RD-107A','CE-7.5','RD-264','Aestus','RD-0124','HM7B','RD-171M','Raptor','J-2X','Vulcain','LE-7','F-1','VASIMR','PSLV-1','Boeing 601HP','Merlin 1C','NEXT','Space Shuttle Solid Rocket Booster','Gamma 8','RS-25','RD-0120','BE-4','RD-193','RD-276','RD-108A','LE-7A','BE-3','HiPEP','Aestus II','RD-180','RS-68A','Gamma 2','RD-191','NSTAR','P230','Vinci','LE-5B','Atlas V SRB','J-2','Merlin 1D','SLV-1','RD-118','RL-10A-4-2','LE-5','Boeing 702','RD-117','Vulcain 2','NK-33-1 (AJ26-58)','LE-5A','PPS-1350','Waxwing','RL-10B-2','KVD-1','SRB-A','']
           });
     </script>

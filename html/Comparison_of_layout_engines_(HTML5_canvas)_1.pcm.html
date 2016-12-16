@@ -32,9 +32,9 @@
 							<label>Trident : </label></br> <input id="2" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Presto : </label></br> <input id="3" type="number" name="Feature"></br>
+							<label>Presto : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Gecko : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 		<script>
@@ -44,6 +44,10 @@
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['2.6','2.9.220','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['Depends','1.9.1','']
           });
     </script>

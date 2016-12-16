@@ -26,14 +26,17 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Solaris kernel : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>Solaris kernel :</label></br>
+ 		 					 <input type="radio" name="FeatureSolaris kernel" value="oui">oui <input type="radio" name="FeatureSolaris kernel" value = "non">non </br>
+									
 						</br>	
-							<label>Linux : </label></br> <input id="2" type="text" name="Feature"></br>
-							
+ 		 					<label>Linux :</label></br>
+ 		 					 <input type="radio" name="FeatureLinux" value="oui">oui <input type="radio" name="FeatureLinux" value = "non">non </br>
+									
 						</br>	
-							<label>Windows NT kernel : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>Windows NT kernel :</label></br>
+ 		 					 <input type="radio" name="FeatureWindows NT kernel" value="oui">oui <input type="radio" name="FeatureWindows NT kernel" value = "non">non </br>
+									
 						</br>	
 							<label>Kernel name : </label></br> <input id="4" type="text" name="Feature"></br>
 							
@@ -43,23 +46,11 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','?','']
+            local : ['CRC32c','RIPEMD-320','HMAC','RIPEMD-128','RIPEMD-160','MDC2','LASH-256','RIPEMD-256','CRC-32 (IEEE)','Whirlpool','Tiger','MD2','Michael MIC','MD5','SHA-1','SHA-256','GOST','LASH-384','LASH-160','MD4','SHA-384','LASH-512','SHA-512','']
           });
           $("#2").typeahead({
             name:"list2",
             local : ['Yes','?','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['CRC32c','RIPEMD-320','HMAC','RIPEMD-128','RIPEMD-160','MDC2','LASH-256','RIPEMD-256','CRC-32 (IEEE)','Whirlpool','Tiger','MD2','Michael MIC','MD5','SHA-1','SHA-256','GOST','LASH-384','LASH-160','MD4','SHA-384','LASH-512','SHA-512','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','?','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes','No','?','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

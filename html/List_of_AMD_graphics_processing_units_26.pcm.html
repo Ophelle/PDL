@@ -29,9 +29,9 @@
 							<label>Transistors (Million) : </label></br> <input id="1" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Products : </label></br> <input id="2" type="text" name="Feature"></br>
+							<label>Products : </label></br> <input id="2" type="aaaa" name="Feature"></br>
 							
-						</br>	
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Clock rate - Memory (MT/s) : </label></br> <input id="3" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -44,16 +44,17 @@
 							<label>Clock rate - Core (MHz) : </label></br> <input id="6" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Clock rate - Boost (MHz) : </label></br> <input id="7" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>API support (version) - Mantle : </label></br> <input id="8" type="text" name="Feature"></br>
+							<label>Clock rate - Boost (MHz) : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Processing Power
-GFLOPS - Double Precision : </label></br> <input id="9" type="number" name="Feature"></br>
-							
+ 		 					<label>API support (version) - Mantle :</label></br>
+ 		 					 <input type="radio" name="FeatureAPI support (version) - Mantle" value="oui">oui <input type="radio" name="FeatureAPI support (version) - Mantle" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>						</br>	
+							<label>Processing Power
+GFLOPS - Double Precision : </label></br> <input id="9" type="text" name="Feature"></br>
+							
+						</br>	
 							<label>Fab (nm) : </label></br> <input id="10" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -66,9 +67,10 @@ GFLOPS - Double Precision : </label></br> <input id="9" type="number" name="Feat
 							<label>Fillrate - Pixel (GP/s) : </label></br> <input id="13" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>TrueAudio : </label></br> <input id="14" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>TrueAudio :</label></br>
+ 		 					 <input type="radio" name="FeatureTrueAudio" value="oui">oui <input type="radio" name="FeatureTrueAudio" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Bus interface : </label></br> <input id="15" type="text" name="Feature"></br>
 							
 						</br>	
@@ -114,9 +116,9 @@ GFLOPS - Double Precision : </label></br> <input id="9" type="number" name="Feat
 							
  		 								 		<input type="text"/></br>						</br>	
 							<label>Processing Power
-GFLOPS - Single Precision : </label></br> <input id="25" type="number" name="Feature"></br>
+GFLOPS - Single Precision : </label></br> <input id="25" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>API support (version) - OpenGL : </label></br> <input id="26" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -134,35 +136,27 @@ GFLOPS - Single Precision : </label></br> <input id="25" type="number" name="Fea
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['P8','P11','P9','P2','P10','P22','P17','P7','P1','P3','P12','P18','P6','P14','P21','P4','P15','P16','P20','P19','P5','P13','']
+            local : ['Unknown','Release Price (USD)','$299','$1499','$99','$109','$249','$179','$199','$549','$69','$139','$89','$149','$399','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Unknown','Release Price (USD)','$299','$1499','$99','$109','$249','$179','$199','$549','$69','$139','$89','$149','$399','']
+            local : ['PCIe 2.0 ×16','PCIe 2.1 ×16','PCIe 3.0 ×16','Bus interface','PCIe 3.0 ×8','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['No','Yes','True Audio','']
+            local : ['GCN 1.2','GCN 1.0','Terascale 2','Architecture','GCN 1.1','Terascale 2','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['PCIe 2.0 ×16','PCIe 2.1 ×16','PCIe 3.0 ×16','Bus interface','PCIe 3.0 ×8','']
+            local : ['160:8:4','1280:80:32','384:24:8','80:8:4','2560:160:64','640:40:16','320:20:8','2816:176:64','Config core','1792:112:32','768:48:16','896:56:16','2× 2816:176:64','1024:64:32','2048:128:32','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['GCN 1.2','GCN 1.0','Terascale 2','Architecture','GCN 1.1','Terascale 2','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['160:8:4','1280:80:32','384:24:8','80:8:4','2560:160:64','640:40:16','320:20:8','2816:176:64','Config core','1792:112:32','768:48:16','896:56:16','2× 2816:176:64','1024:64:32','2048:128:32','']
-          });
-          $("#7").typeahead({
-            name:"list7",
             local : ['Curaçao XT','Oland PRO','Hawaii PRO','Bonaire XTX','Caicos PRO-L','Oland','Caicos XT','Tonga PRO','Vesuvius','Tahiti XT2
 Tahiti XTL','Cape Verde XT','Bonaire','Hawaii XT','Oland XT','Codename','Curaçao PRO','Cedar','Caicos','Tahiti PRO','']
           });
-          $("#8").typeahead({
-            name:"list8",
+          $("#6").typeahead({
+            name:"list6",
             local : ['Radeon R9 285','Radeon R9 295X2','Radeon R7 265','Radeon R7 260X','Radeon R5 240','Model','Radeon R9 290X','Radeon R5 235X','Radeon R7 250','Radeon R5 230','Radeon R9 270X','Radeon R7 240','Radeon R5 220','Radeon R5 210','Radeon R9 290','Radeon R5 235','Radeon R7 260','Radeon R9 270','Radeon R9 280','Radeon R9 280X','Radeon R7 250X','']
           });
     </script>

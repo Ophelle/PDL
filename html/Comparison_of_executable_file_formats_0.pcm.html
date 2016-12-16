@@ -26,48 +26,40 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Can contain icon : </label></br> <input id="1" type="text" name="Feature"></br>
+ 		 					<label>Can contain icon :</label></br>
+ 		 					 <input type="radio" name="FeatureCan contain icon" value="oui">oui <input type="radio" name="FeatureCan contain icon" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Filename extension : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Filename extension :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >.APP</br>	
- 		 									<input type="checkbox" name="Feature" >.ACC</br>	
- 		 									<input type="checkbox" name="Feature" >.PIM</br>	
- 		 									<input type="checkbox" name="Feature" >.XIP</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>64-bit : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Metadata : </label></br> <input id="4" type="text" name="Feature"></br>
+ 		 					<label>64-bit :</label></br>
+ 		 					 <input type="radio" name="Feature64-bit" value="oui">oui <input type="radio" name="Feature64-bit" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Metadata :</label></br>
+ 		 					 <input type="radio" name="FeatureMetadata" value="oui">oui <input type="radio" name="FeatureMetadata" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Format name : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Format name :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >LE</br>	
- 		 									<input type="checkbox" name="Feature" > (W3</br>	
- 		 									<input type="checkbox" name="Feature" > W4)</br>	
- 		 									<input type="checkbox" name="Feature" >CP</br>	
- 		 									<input type="checkbox" name="Feature" >M-68K</br>	
- 		 									<input type="checkbox" name="Feature" >PIM</br>	
- 		 									<input type="checkbox" name="Feature" >XIP</br>	
- 		 									<input type="checkbox" name="Feature" >OS</br>	
- 		 									<input type="checkbox" name="Feature" >360</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Symbol table : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>String table : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Fat binaries : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Arbitrary sections : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Symbol table :</label></br>
+ 		 					 <input type="radio" name="FeatureSymbol table" value="oui">oui <input type="radio" name="FeatureSymbol table" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>String table :</label></br>
+ 		 					 <input type="radio" name="FeatureString table" value="oui">oui <input type="radio" name="FeatureString table" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Fat binaries :</label></br>
+ 		 					 <input type="radio" name="FeatureFat binaries" value="oui">oui <input type="radio" name="FeatureFat binaries" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Arbitrary sections :</label></br>
+ 		 					 <input type="radio" name="FeatureArbitrary sections" value="oui">oui <input type="radio" name="FeatureArbitrary sections" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Explicit processor declarations : </label></br> <input id="10" type="text" name="Feature"></br>
 							
 						</br>	
@@ -145,35 +137,15 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Unknown','Extension','No','Yes','']
+            local : ['none','.COM','.EXE','.68K','?','.286','.APP/.ACC','.EXP','.GEO','.186','.PIM/.XIP','.CMD','.EXM','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Unknown','No','Yes','Extension','']
+            local : ['No (x86 only)','Yes by file','Yes by file (286 and higher only)','No','Unknown','No (68000 and higher only)','Unknown (x86 only)','No (186/188 and higher only)','Unknown (286 and higher only)','Unknown (386 and higher only)','Yes by section','No (8080/Z80 only)','No (286 and higher only)','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['No','Unknown','Yes','Extension','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['No','Yes','Extension','Unknown','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Extension (BDOS 3 and higher only)','Yes','Unknown','Some (limited to max. 256 sections)','No','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['No (x86 only)','Yes by file','Yes by file (286 and higher only)','No','Unknown','No (68000 and higher only)','Unknown (x86 only)','No (186/188 and higher only)','Unknown (286 and higher only)','Unknown (386 and higher only)','Yes by section','No (8080/Z80 only)','No (286 and higher only)','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['No','Yes','Extension','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['No','Yes','Unknown','Extension(Novell/Caldera VERSION etc.)','Extension (Novell/Caldera VERSION etc.)','']
+            local : ['MZ (DOS)','a.out','COM (DOS)','Amiga Hunk','LE, (W3, W4)','P3','PEF','CP/M-68K','PE32+','NE','GEOS','PIM/XIP','ECOFF','LX','COFF','MP','P2','OS/360','SOM','MZ (GEM)','PE','ELF','CMD','DL','COM (CP/M)','XCOFF','Mach-O','FlexOS 186','FlexOS 286','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

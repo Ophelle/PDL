@@ -32,8 +32,9 @@
 							<label>RELAX NG : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>DTD : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>DTD :</label></br>
+ 		 					 <input type="radio" name="FeatureDTD" value="oui">oui <input type="radio" name="FeatureDTD" value = "non">non </br>
+									
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -42,10 +43,6 @@
           $("#2").typeahead({
             name:"list2",
             local : ['?','No','','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','Partial','3.0','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

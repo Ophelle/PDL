@@ -26,11 +26,13 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Text Recognition (OCR) : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>Text Recognition (OCR) :</label></br>
+ 		 					 <input type="radio" name="FeatureText Recognition (OCR)" value="oui">oui <input type="radio" name="FeatureText Recognition (OCR)" value = "non">non </br>
+									
 						</br>	
-							<label>Scripting support : </label></br> <input id="2" type="text" name="Feature"></br>
-							
+ 		 					<label>Scripting support :</label></br>
+ 		 					 <input type="radio" name="FeatureScripting support" value="oui">oui <input type="radio" name="FeatureScripting support" value = "non">non </br>
+									
 						</br>	
 							<label>Maximum zoom : </label></br> <input id="3" type="text" name="Feature"></br>
 							
@@ -44,8 +46,9 @@
 							<label>Object limit per document : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Color management for print : </label></br> <input id="7" type="text" name="Feature"></br>
-							
+ 		 					<label>Color management for print :</label></br>
+ 		 					 <input type="radio" name="FeatureColor management for print" value="oui">oui <input type="radio" name="FeatureColor management for print" value = "non">non </br>
+									
 						</br>	
 							<label>Raster 2 Vector : </label></br> <input id="8" type="text" name="Feature"></br>
 							
@@ -58,42 +61,30 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Text Recognition (OCR)','Yes','']
+            local : ['64x','N/A','Maximum zoom','64K','12800x','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','No','Scripting support','']
+            local : ['?','Thumbnails','Yes','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['64x','N/A','Maximum zoom','64K','12800x','']
+            local : ['?','Control point limit','No limit','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['?','Thumbnails','Yes','']
+            local : ['Object limit per document','No Limit','?','No limit','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['?','Control point limit','No limit','']
+            local : ['Raster 2 Vector','','Yes','']
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['Object limit per document','No Limit','?','No limit','']
+            local : ['Illustrator','','Potrace','Freehand','Easy Trace','Scan2CAD','']
           });
           $("#7").typeahead({
             name:"list7",
-            local : ['Yes','No','Color management for print','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['Raster 2 Vector','','Yes','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['Illustrator','','Potrace','Freehand','Easy Trace','Scan2CAD','']
-          });
-          $("#10").typeahead({
-            name:"list10",
             local : ['?','adjust image (functions)','Yes','']
           });
     </script>

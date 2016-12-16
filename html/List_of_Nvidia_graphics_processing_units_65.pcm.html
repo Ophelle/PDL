@@ -35,18 +35,18 @@
 							<label>Memory - Bus width (bit) : </label></br> <input id="3" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>API support - DirectX : </label></br> <input id="4" type="number" name="Feature"></br>
+							<label>API support - DirectX : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Core clock (MHz) : </label></br> <input id="5" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
 							<label>Core config : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Memory (MB) : </label></br> <input id="7" type="number" name="Feature"></br>
+							<label>Memory (MB) : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Fillrate - MTextels/s : </label></br> <input id="8" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -64,9 +64,10 @@
 							<label>Code name : </label></br> <input id="11" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>API support - OpenGL : </label></br> <input id="12" type="number" name="Feature"></br>
+							<label>API support - OpenGL :</label></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+ 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
 							<label>Fillrate - MOperations/s : </label></br> <input id="13" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -76,15 +77,19 @@
 							<label>Memory - Bus type : </label></br> <input id="15" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Fab (nm) : </label></br> <input id="16" type="number" name="Feature"></br>
+							<label>Fab (nm) :</label></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+ 		 									<input type="checkbox" name="Feature" >90</br>	
+ 		 									<input type="checkbox" name="Feature" > 65</br>	
+ 		 									<input type="checkbox" name="Feature" > 40</br>	
+ 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
 							<label>Fillrate - MVertices/s : </label></br> <input id="17" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="18" type="number" name="Feature"></br>
+							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="18" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>		<script>
+		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['FlexIO','Integrated','']
@@ -95,10 +100,15 @@
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['G70','NV2A','']
+            local : ['64','256
+256','']
           });
           $("#4").typeahead({
             name:"list4",
+            local : ['G70','NV2A','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['RSX(PS3)','XGPU(Xbox)','']
           });
     </script>

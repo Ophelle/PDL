@@ -26,36 +26,43 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>dropzone : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Datasets (data-*) : </label></br> <input id="2" type="number" name="Feature"></br>
-							
+ 		 					<label>dropzone :</label></br>
+ 		 					 <input type="radio" name="Featuredropzone" value="oui">oui <input type="radio" name="Featuredropzone" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Datasets (data-*) :</label></br>
+ 		 					 <input type="radio" name="FeatureDatasets (data-*)" value="oui">oui <input type="radio" name="FeatureDatasets (data-*)" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>						</br>	
 							<label>contenteditable : </label></br> <input id="3" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>draggable : </label></br> <input id="4" type="number" name="Feature"></br>
+							<label>draggable : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>hidden : </label></br> <input id="5" type="number" name="Feature"></br>
+						</br>	
+							<label>hidden : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>spellcheck : </label></br> <input id="6" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>contextmenu : </label></br> <input id="7" type="number" name="Feature"></br>
-							
+ 		 					<label>contextmenu :</label></br>
+ 		 					 <input type="radio" name="Featurecontextmenu" value="oui">oui <input type="radio" name="Featurecontextmenu" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>						</br>	
 							<label>translate : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','2.10.270','No','']
+            local : ['533','6.0','2.10.270','1.9.1','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['Yes','','2.0','2.7.70','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['','No','']
           });
     </script>

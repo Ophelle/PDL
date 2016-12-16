@@ -26,40 +26,28 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>/dev/crypto :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" ></br>	
- 		 									<input type="checkbox" name="Feature" >dev</br>	
- 		 									<input type="checkbox" name="Feature" >crypto</br>	
-								
+ 		 					<label>/dev/crypto :</label></br>
+ 		 					 <input type="radio" name="Feature/dev/crypto" value="oui">oui <input type="radio" name="Feature/dev/crypto" value = "non">non </br>
+									
 						</br>	
 							<label>Implementation : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Windows CSP : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>Windows CSP :</label></br>
+ 		 					 <input type="radio" name="FeatureWindows CSP" value="oui">oui <input type="radio" name="FeatureWindows CSP" value = "non">non </br>
+									
 						</br>	
-							<label>OpenSSL engine : </label></br> <input id="4" type="text" name="Feature"></br>
-							
+ 		 					<label>OpenSSL engine :</label></br>
+ 		 					 <input type="radio" name="FeatureOpenSSL engine" value="oui">oui <input type="radio" name="FeatureOpenSSL engine" value = "non">non </br>
+									
 						</br>	
-							<label>CommonCrypto : </label></br> <input id="5" type="text" name="Feature"></br>
-							
+ 		 					<label>CommonCrypto :</label></br>
+ 		 					 <input type="radio" name="FeatureCommonCrypto" value="oui">oui <input type="radio" name="FeatureCommonCrypto" value = "non">non </br>
+									
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','OpenSSL engine','']
-          });
-          $("#2").typeahead({
-            name:"list2",
             local : ['Implementation','LibreSSL','Secure Transport','cryptlib','SChannel','RSA BSAFE','NSS','SharkSSL','mbed TLS','JSSE','GnuTLS','Botan','MatrixSSL','wolfSSL','OpenSSL','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','Windows CSP','Yes','Partial','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','No','CommonCrypto','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

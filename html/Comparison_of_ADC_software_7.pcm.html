@@ -26,36 +26,44 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Magnet URI : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>IPv6 : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Encryption : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>NMDC compatible : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>DHT : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Proxy : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Magnet URI :</label></br>
+ 		 					 <input type="radio" name="FeatureMagnet URI" value="oui">oui <input type="radio" name="FeatureMagnet URI" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>IPv6 :</label></br>
+ 		 					 <input type="radio" name="FeatureIPv6" value="oui">oui <input type="radio" name="FeatureIPv6" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Encryption :</label></br>
+ 		 					 <input type="radio" name="FeatureEncryption" value="oui">oui <input type="radio" name="FeatureEncryption" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>NMDC compatible :</label></br>
+ 		 					 <input type="radio" name="FeatureNMDC compatible" value="oui">oui <input type="radio" name="FeatureNMDC compatible" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>DHT :</label></br>
+ 		 					 <input type="radio" name="FeatureDHT" value="oui">oui <input type="radio" name="FeatureDHT" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Proxy :</label></br>
+ 		 					 <input type="radio" name="FeatureProxy" value="oui">oui <input type="radio" name="FeatureProxy" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Hash algorithms : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>ADC client : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>NAT traversal : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>UPnP : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>NAT traversal :</label></br>
+ 		 					 <input type="radio" name="FeatureNAT traversal" value="oui">oui <input type="radio" name="FeatureNAT traversal" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>UPnP :</label></br>
+ 		 					 <input type="radio" name="FeatureUPnP" value="oui">oui <input type="radio" name="FeatureUPnP" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Protocol support :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >TIGR</br>	
@@ -78,60 +86,23 @@
  		 									<input type="checkbox" name="Feature" > ASCH</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Plugin :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >C++</br>	
- 		 									<input type="checkbox" name="Feature" > Lua</br>	
- 		 									<input type="checkbox" name="Feature" >Lua</br>	
- 		 									<input type="checkbox" name="Feature" > QtScript</br>	
- 		 									<input type="checkbox" name="Feature" > QML</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
+ 		 					<label>Plugin :</label></br>
+ 		 					 <input type="radio" name="FeaturePlugin" value="oui">oui <input type="radio" name="FeaturePlugin" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Other : </label></br> <input id="13" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','Magnet URI','']
+            local : ['Tiger tree hash','Hash algorithms','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','No','IPv6','']
+            local : ['ADC client','ApexDC++','jucy','RSX++','EiskaltDC++','TKDC++','ncdc','DC++','FlylinkDC++','LinuxDC++','StrongDC++','AirDC++','AirDC++ nano','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes','Encryption','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','NMDC compatible','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['No','Yes','DHT','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Yes','No','Proxy','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['Tiger tree hash','Hash algorithms','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['ADC client','ApexDC++','jucy','RSX++','EiskaltDC++','TKDC++','ncdc','DC++','FlylinkDC++','LinuxDC++','StrongDC++','AirDC++','AirDC++ nano','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['Yes','NAT traversal','No','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['Yes','UPnP','No','']
-          });
-          $("#11").typeahead({
-            name:"list11",
             local : ['','Other','']
           });
     </script>

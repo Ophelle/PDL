@@ -26,9 +26,9 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>0 : </label></br> <input id="1" type="number" name="Feature"></br>
+							<label>0 : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label> (255, 128, 0)  :</label></br>
 							
  		 									<input type="checkbox" name="Feature" > (0</br>	
@@ -42,6 +42,10 @@
  		 									<input type="checkbox" name="Feature" > 96</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['.5','.75','.25','1.0','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

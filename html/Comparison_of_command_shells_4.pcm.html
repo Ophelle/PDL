@@ -26,46 +26,34 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Subshells : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>Subshells :</label></br>
+ 		 					 <input type="radio" name="FeatureSubshells" value="oui">oui <input type="radio" name="FeatureSubshells" value = "non">non </br>
+									
 						</br>	
 							<label>Keystroke stacking : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>TCP/UDP connections as streams : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>TCP/UDP connections as streams :</label></br>
+ 		 					 <input type="radio" name="FeatureTCP/UDP connections as streams" value="oui">oui <input type="radio" name="FeatureTCP/UDP connections as streams" value = "non">non </br>
+									
 						</br>	
-							<label>Command substitution : </label></br> <input id="4" type="text" name="Feature"></br>
-							
+ 		 					<label>Command substitution :</label></br>
+ 		 					 <input type="radio" name="FeatureCommand substitution" value="oui">oui <input type="radio" name="FeatureCommand substitution" value = "non">non </br>
+									
 						</br>	
-							<label>Process substitution : </label></br> <input id="5" type="text" name="Feature"></br>
-							
+ 		 					<label>Process substitution :</label></br>
+ 		 					 <input type="radio" name="FeatureProcess substitution" value="oui">oui <input type="radio" name="FeatureProcess substitution" value = "non">non </br>
+									
 						</br>	
 							<label>Pipes : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','Partial (via  and , or via ,  and  and )','?','No','Yes (spawn)','Partial (only under DR-DOS multitasker via )','Partial (via  and )','Yes (Backtick:  in )','']
+            local : ['N/A','No','Yes (via )','?','Yes (via  and )','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['N/A','No','Yes (via )','?','Yes (via  and )','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','Yes (via , , , , ,  and , client only)','Yes (and SCTP support, client only)','Yes (server TCP only)','Yes','Yes (client and server, but only TCP)','Yes (client only)','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['','Yes (via  command)','?','Yes ()','No','Yes','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['No','','?','Yes (  )','Yes','']
-          });
-          $("#6").typeahead({
-            name:"list6",
             local : ['bytes concurrent','text sequential temporary files','text (via  command)','text concurrent','not supported','text','No','objects concurrent','bytes (may contain serialized objects if  is used) concurrent','']
           });
     </script>

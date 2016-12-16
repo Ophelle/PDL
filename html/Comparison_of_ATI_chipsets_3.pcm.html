@@ -43,16 +43,11 @@
 							<label>SATA Ports : </label></br> <input id="2" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Year : </label></br> <input id="3" type="number" name="Feature"></br>
+							<label>Year : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Model :</label></br>
+						</br>	
+							<label>Model : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >AMD 480</br>	
- 		 									<input type="checkbox" name="Feature" >570</br>	
- 		 									<input type="checkbox" name="Feature" >580 
-CrossFire Chipset</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>USB Ports : </label></br> <input id="5" type="number" name="Feature"></br>
 							
@@ -61,13 +56,13 @@ CrossFire Chipset</br>
 							
 						</br>	
 							<label>IDE Channels
-(2 Devices/Channel) : </label></br> <input id="7" type="number" name="Feature"></br>
+(2 Devices/Channel) : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Fabrication
-process (nm) : </label></br> <input id="8" type="number" name="Feature"></br>
+process (nm) : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Notes :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >3Com 10</br>	
@@ -90,7 +85,26 @@ eSATA</br>
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['2004','2006','','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['AMD 480/570/580 
+CrossFire Chipset','Radeon Xpress 200
+Radeon Xpress 1150','Radeon Xpress 1600
+Radeon Xpress 1150','','Radeon 330 IGP','Radeon 9100 IGP','Radeon 340 IGP','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['AC'97','HD','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['1 (UDMA 33/66/100/133)','1','2 (UDMA33/66)','1 (ATA 133)','1 (UDMA 100)','2','2 (UDMA 100/133)','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['','130','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

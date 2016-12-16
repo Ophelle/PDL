@@ -37,30 +37,21 @@
 							<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Developer :</label></br>
+							<label>Developer : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Xamarin and the Mono community</br>	
- 		 									<input type="checkbox" name="Feature" >Xojo</br>	
- 		 									<input type="checkbox" name="Feature" > Inc.</br>	
-								
 						</br>	
 							<label>Latest stable release : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Windows : </label></br> <input id="6" type="text" name="Feature"></br>
-							
+ 		 					<label>Windows :</label></br>
+ 		 					 <input type="radio" name="FeatureWindows" value="oui">oui <input type="radio" name="FeatureWindows" value = "non">non </br>
+									
 						</br>	
 							<label>IDE : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Other platforms :</label></br>
+							<label>Other platforms : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >FreeBSD</br>	
- 		 									<input type="checkbox" name="Feature" > OpenBSD</br>	
- 		 									<input type="checkbox" name="Feature" > Solaris</br>	
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 									<input type="checkbox" name="Feature" > FreeBSD</br>	
-								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -68,15 +59,19 @@
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['2 July 2014','3 July 2014','5 November 2012','17 September 2013','17 July 2013','18 November 2012','4 June 2014','2 August 2012','27 January 2014','']
+            local : ['Xamarin and the Mono community','Microsoft','Parallax Inc','?','Fantaisie Software','Anywhere Software','Xojo, Inc.','Benoît Minisini','ICSharpCode Team','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes','?','']
+            local : ['2 July 2014','3 July 2014','5 November 2012','17 September 2013','17 July 2013','18 November 2012','4 June 2014','2 August 2012','27 January 2014','']
           });
           $("#4").typeahead({
             name:"list4",
             local : ['FreeBASIC','Gambas','Basic4android','MonoDevelop','PureBasic','SharpDevelop','PBASIC Stamp Editor','Xojo','Microsoft Visual Studio','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['cross-compile from Windows to Android','FreeBSD','Web','','FreeBSD, OpenBSD, Solaris','AmigaOS','Windows, FreeBSD','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

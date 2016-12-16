@@ -29,14 +29,15 @@
 							<label>Definition : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>find(string,substring) returns integer :</label></br>
+							<label>find(string,substring) returns integer : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Returns the position of the start of the first occurrence of substring in string. If the substring is not found most of these routines return an invalid index value – -1 where indexes are 0-based</br>	
- 		 									<input type="checkbox" name="Feature" > 0 where they are 1-based – or some value to be interpreted as Boolean FALSE.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['Returns the position of the start of the first occurrence of substring in string. If the substring is not found most of these routines return an invalid index value – -1 where indexes are 0-based, 0 where they are 1-based – or some value to be interpreted as Boolean FALSE.','instrrev','']
+          });
+          $("#2").typeahead({
+            name:"list2",
             local : ['Related','Description','']
           });
     </script>

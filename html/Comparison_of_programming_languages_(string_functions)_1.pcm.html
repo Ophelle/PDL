@@ -26,41 +26,24 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Languages :</label></br>
+							<label>Languages : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >OCaml</br>	
- 		 									<input type="checkbox" name="Feature" > F#</br>	
- 		 									<input type="checkbox" name="Feature" >PL</br>	
- 		 									<input type="checkbox" name="Feature" >I</br>	
- 		 									<input type="checkbox" name="Feature" >C</br>	
- 		 									<input type="checkbox" name="Feature" > C++</br>	
- 		 									<input type="checkbox" name="Feature" > C#</br>	
- 		 									<input type="checkbox" name="Feature" > Cobra</br>	
- 		 									<input type="checkbox" name="Feature" > D</br>	
- 		 									<input type="checkbox" name="Feature" > FreeBASIC</br>	
- 		 									<input type="checkbox" name="Feature" > Go</br>	
- 		 									<input type="checkbox" name="Feature" > Python</br>	
- 		 									<input type="checkbox" name="Feature" > PHP</br>	
- 		 									<input type="checkbox" name="Feature" > Ruby</br>	
- 		 									<input type="checkbox" name="Feature" > Windows PowerShell</br>	
- 		 									<input type="checkbox" name="Feature" > JavaScript</br>	
- 		 									<input type="checkbox" name="Feature" > Ya</br>	
- 		 									<input type="checkbox" name="Feature" >ALGOL 68</br>	
- 		 									<input type="checkbox" name="Feature" > Pascal</br>	
- 		 									<input type="checkbox" name="Feature" > Object Pascal (Delphi)</br>	
- 		 									<input type="checkbox" name="Feature" > Seed7</br>	
- 		 									<input type="checkbox" name="Feature" >Java</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Format :</label></br>
+							<label>Format : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >StringTake[string</br>	
- 		 									<input type="checkbox" name="Feature" > {i}]</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Base index : </label></br> <input id="3" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['(get string i)','string.at(i)','lists:nth(i, string)','string index string i','(elt string i)','string[i]','Mid(string,i,1)','string{i}','string at: i','string (i:1)','MID$(string,i,1)','string.Chars(i)','String.sub (string, i)','string(i:i)','(char string i)','StringTake[string, {i}]','(string-ref string i)','string(i)','[string characterAtIndex:i]','string@i','string !! i','substr(string, i, 1)','string.[i]','string.sub(string, i, i) 
+ (string):sub(i, i)','string.charAt(i)','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['VB.NET','VB','Perl','PHP (deprecated in 5.3)','Mathematica','COBOL','Tcl','Erlang','OCaml, F#','PL/I','Standard ML','Ada','C++ (STL) (w/ bounds checking)','C, C++, C#, Cobra, D, FreeBASIC, Go, Python, PHP, Ruby, Windows PowerShell, JavaScript, Ya','Lua','BASIC','Smalltalk (w/ bounds checking)','Scheme','Eiffel','Fortran','Common Lisp','Objective-C (NSString * only)','ALGOL 68, Pascal, Object Pascal (Delphi), Seed7','ISLISP','Java, JavaScript','Haskell','Clojure','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

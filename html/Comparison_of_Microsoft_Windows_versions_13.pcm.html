@@ -26,9 +26,9 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>CPU : </label></br> <input id="1" type="number" name="Feature"></br>
+							<label>CPU : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Free disk space : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
@@ -37,10 +37,14 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['120 MB','300 MB','400 MB','']
+            local : ['386','Pentium 150 MHz','486 DX2 66 MHz','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['120 MB','300 MB','400 MB','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['4 MB','16 MB','32 MB','']
           });
     </script>

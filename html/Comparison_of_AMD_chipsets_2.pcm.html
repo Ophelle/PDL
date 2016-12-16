@@ -43,12 +43,12 @@ or x16 + x8 + x8
 or x8 quad</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Products : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Released : </label></br> <input id="3" type="number" name="Feature"></br>
+							<label>Products : </label></br> <input id="2" type="aaaa" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
+							<label>Released : </label></br> <input id="3" type="text" name="Feature"></br>
+							
+						</br>	
 							<label>CPU support :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >Bulldozer</br>	
@@ -121,16 +121,12 @@ Side-port memory</br>
 OR two PCIe 2.0 x16</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>SLI : </label></br> <input id="7" type="text" name="Feature"></br>
+ 		 					<label>SLI :</label></br>
+ 		 					 <input type="radio" name="FeatureSLI" value="oui">oui <input type="radio" name="FeatureSLI" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>TDP (W) : </label></br> <input id="8" type="text" name="Feature"></br>
 							
-						</br>	
-							<label>TDP (W) :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Two PCIe 2.0 x16</br>	
- 		 									<input type="checkbox" name="Feature" > IOMMU
-AM3+ socket support</br>	
- 		 									<input type="checkbox" name="Feature" >Four PCIe 2.0 x16</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Southbridge :</label></br>
 							
@@ -147,11 +143,8 @@ SB920</br>
 SB950</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>IGP :</label></br>
+							<label>IGP : </label></br> <input id="10" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >x16 + x16
-or x8 quad</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Code name : </label></br> <input id="11" type="text" name="Feature"></br>
 							
@@ -164,7 +157,7 @@ or x8 quad</br>
  		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['P10','P6','P8','P2','P3','P5','P1','P9','P7','P11','P4','']
+            local : ['Q4 2010','Q2 2011','Released','Q2 2010','2010','']
           });
           $("#2").typeahead({
             name:"list2",
@@ -172,14 +165,22 @@ or x8 quad</br>
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['No','14W','19.6 W','SLI','']
+            local : ['13.6W','','22 W','Two PCIe 2.0 x16, IOMMU
+AM3+ socket support','TDP (W)','18 W','Four PCIe 2.0 x16, IOMMU
+AM3+ socket support','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['RX880','RS880P','RS880M','Code name','RS880D','RX980','RD980','RD990','RD890','']
+            local : ['Radeon HD 4250','Radeon HD 4200','x16 + x16
+or x8 quad','Radeon HD 4290','No','x8 + x8','Radeon HD 4225','Radeon HD 4250
+Radeon HD 4270','IGP','']
           });
           $("#5").typeahead({
             name:"list5",
+            local : ['RX880','RS880P','RS880M','Code name','RS880D','RX980','RD980','RD990','RD890','']
+          });
+          $("#6").typeahead({
+            name:"list6",
             local : ['AMD 870 chipset','AMD 880M chipset','AMD 990FX chipset','AMD 880G chipset','AMD 890GX chipset','AMD 890FX chipset','AMD 990X chipset','Model','AMD 970 chipset','']
           });
     </script>

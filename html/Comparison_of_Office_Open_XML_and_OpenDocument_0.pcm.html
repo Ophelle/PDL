@@ -33,11 +33,8 @@
  		 									<input type="checkbox" name="Feature" >IEC IS 26300:2006—Open Document Format for Office Applications (OpenDocument) v1.0</br>	
 								
 						</br>	
-							<label>Latest stable version :</label></br>
+							<label>Latest stable version : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >ISO</br>	
- 		 									<input type="checkbox" name="Feature" >IEC IS 29500-1:2012—Office Open XML File Formats</br>	
-								
 						</br>	
 							<label>Drawing language :</label></br>
 							
@@ -47,11 +44,8 @@
 								
 						</br>	
 							<label>Based on a format
-developed by :</label></br>
+developed by : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >StarDivision </br>	
- 		 									<input type="checkbox" name="Feature" > Sun Microsystems</br>	
-								
 						</br>	
 							<label>Spreadsheet formula language : </label></br> <input id="5" type="text" name="Feature"></br>
 							
@@ -102,14 +96,8 @@ developed by :</label></br>
 							<label>Additional technology patent licensing : </label></br> <input id="18" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Implemented :</label></br>
+							<label>Implemented : </label></br> <input id="19" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Many including LibreOffice</br>	
- 		 									<input type="checkbox" name="Feature" > OpenOffice.org</br>	
- 		 									<input type="checkbox" name="Feature" > KOffice</br>	
- 		 									<input type="checkbox" name="Feature" > AbiWord</br>	
- 		 									<input type="checkbox" name="Feature" > Lotus Notes and Microsoft Office (since 2007 SP2)</br>	
-								
 						</br>	
 							<label>Thumbnails : </label></br> <input id="20" type="text" name="Feature"></br>
 							
@@ -137,10 +125,8 @@ developed by :</label></br>
  		 									<input type="checkbox" name="Feature" >OASIS</br>	
 								
 						</br>	
-							<label>Metadata format :</label></br>
+							<label>Metadata format : </label></br> <input id="27" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >subset of Dublin Core and  elements</br>	
-								
 						</br>	
 							<label>Container structure : </label></br> <input id="28" type="text" name="Feature"></br>
 							
@@ -156,93 +142,109 @@ developed by :</label></br>
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['part of the standard','based on OpenFormula','']
+            local : ['ISO/IEC IS 29500-1:2012—Office Open XML File Formats','OASIS Open Document Format for Office Applications (OpenDocument) v1.2','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['','']
+            local : ['Microsoft','StarDivision / Sun Microsystems','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['application-defined','']
+            local : ['part of the standard','based on OpenFormula','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['Open Font Format (ISO/IEC 14496-22)','','']
+            local : ['','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['supported','']
+            local : ['application-defined','']
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['Microsoft Office XML formats','OpenOffice.org XML','']
+            local : ['Open Font Format (ISO/IEC 14496-22)','','']
           });
           $("#7").typeahead({
             name:"list7",
-            local : ['XML Schema (W3C) (XSD) and RELAX NG (ISO/IEC 19757-2)','RELAX NG (ISO/IEC 19757-2)','']
+            local : ['supported','']
           });
           $("#8").typeahead({
             name:"list8",
-            local : ['NVDL (ISO/IEC 19757-4)','','']
+            local : ['Microsoft Office XML formats','OpenOffice.org XML','']
           });
           $("#9").typeahead({
             name:"list9",
-            local : ['supported','part of the standard','']
+            local : ['XML Schema (W3C) (XSD) and RELAX NG (ISO/IEC 19757-2)','RELAX NG (ISO/IEC 19757-2)','']
           });
           $("#10").typeahead({
             name:"list10",
-            local : ['OpenDocument software','Office Open XML software','']
+            local : ['NVDL (ISO/IEC 19757-4)','','']
           });
           $("#11").typeahead({
             name:"list11",
-            local : ['OASIS OpenDocument Format for Office Applications (OpenDocument) v1.0','Ecma International Standard ECMA-376 Office Open XML File Formats 1st edition','']
+            local : ['supported','part of the standard','']
           });
           $("#12").typeahead({
             name:"list12",
-            local : ['Patent license covers conforming implementations','Patent license covers fully compliant implementations','']
+            local : ['OpenDocument software','Office Open XML software','']
           });
           $("#13").typeahead({
             name:"list13",
+            local : ['OASIS OpenDocument Format for Office Applications (OpenDocument) v1.0','Ecma International Standard ECMA-376 Office Open XML File Formats 1st edition','']
+          });
+          $("#14").typeahead({
+            name:"list14",
+            local : ['Patent license covers conforming implementations','Patent license covers fully compliant implementations','']
+          });
+          $("#15").typeahead({
+            name:"list15",
             local : ['* Sun Microsystems intellectual property covenant
  IBM Interoperability Specifications Pledge','* Reasonable and Non Discriminatory Licensing (RAND-Z)
  Microsoft Open Specification Promise (OSP)
  Microsoft Covenant Not to Sue (CNS)','']
           });
-          $("#14").typeahead({
-            name:"list14",
-            local : ['PNG (ISO/IEC 15948)','JPEG (ISO/IEC 10918)','']
-          });
-          $("#15").typeahead({
-            name:"list15",
-            local : ['','part of the standard','']
-          });
           $("#16").typeahead({
             name:"list16",
-            local : ['MathML','Office MathML (OMML)','']
+            local : ['Microsoft Office 2013','Many including LibreOffice, OpenOffice.org, KOffice, AbiWord, Lotus Notes and Microsoft Office (since 2007 SP2)','']
           });
           $("#17").typeahead({
             name:"list17",
-            local : ['supported','']
+            local : ['PNG (ISO/IEC 15948)','JPEG (ISO/IEC 10918)','']
           });
           $("#18").typeahead({
             name:"list18",
-            local : ['ZIP','']
+            local : ['','part of the standard','']
           });
           $("#19").typeahead({
             name:"list19",
-            local : ['Markup language (XML)','']
+            local : ['MathML','Office MathML (OMML)','']
           });
           $("#20").typeahead({
             name:"list20",
-            local : ['Open Packaging Convention (ISO/IEC 29500-2:2012)','ODF Package','']
+            local : ['supported','']
           });
           $("#21").typeahead({
             name:"list21",
-            local : ['','']
+            local : ['ZIP','']
           });
           $("#22").typeahead({
             name:"list22",
+            local : ['Markup language (XML)','']
+          });
+          $("#23").typeahead({
+            name:"list23",
+            local : ['Dublin Core (ISO 15836)','subset of Dublin Core and  elements','']
+          });
+          $("#24").typeahead({
+            name:"list24",
+            local : ['Open Packaging Convention (ISO/IEC 29500-2:2012)','ODF Package','']
+          });
+          $("#25").typeahead({
+            name:"list25",
+            local : ['','']
+          });
+          $("#26").typeahead({
+            name:"list26",
             local : ['OpenDocument','Office Open XML','']
           });
     </script>

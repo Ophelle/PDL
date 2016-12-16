@@ -29,24 +29,32 @@
 							<label>Manufacturer : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>FlexiPanel Ltd :</label></br>
+							<label>FlexiPanel Ltd : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Mar</br>	
- 		 									<input type="checkbox" name="Feature" > 2008</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Embit : </label></br> <input id="3" type="number" name="Feature"></br>
+							<label>Embit : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Microchip Technology :</label></br>
+						</br>	
+							<label>Microchip Technology : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Jun</br>	
- 		 									<input type="checkbox" name="Feature" > 2008</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['integral','26 mm x 20 mm','Texas Instruments CC2420 datasheet errata','ZigBee stack','0 dBm','Mar, 2008','18 mA','','20 mA','EasyBee summary datasheet','?','']
+          });
+          $("#2").typeahead({
+            name:"list2",
             local : ['Module','Antenna','TX Power','TX','Protocol stacks','Released','PCB Size','Sleep','Sensitivity','RX','Transceiver Chip','Interfacing','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['27 dBm','Wireless M-Bus stack','CC1120 datasheet','27 mA (full sens.)','UART, SPI, JTAG','16 mm x 26 mm','U.FL connector','EMB-TRX169PA, 169 MHz
+webpage','-122 dBm','<1 µA','2013','400  mA @ +27 dBm','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['MRF24J40MA
+datasheet','PCB trace','17.8 mm x 27.9 mm','MRF24J40 datasheet','Microchip ZigBee MiWi MiWi P2P','0 dBm','2 µA','-94 dBm','SPI','19 mA','23 mA','Jun, 2008','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

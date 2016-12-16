@@ -38,27 +38,24 @@
 							<label>API compliance (version) - DirectX : </label></br> <input id="4" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Memory - Bus width (bit) : </label></br> <input id="5" type="number" name="Feature"></br>
+							<label>Memory - Bus width (bit) : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Config core : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>Core clock (MHz) : </label></br> <input id="7" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Memory (MB) : </label></br> <input id="8" type="number" name="Feature"></br>
+							<label>Memory (MB) : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Model Number :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >M10</br>	
- 		 									<input type="checkbox" name="Feature" > M11</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Launch : </label></br> <input id="10" type="number" name="Feature"></br>
+							<label>Model Number : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
+							<label>Launch : </label></br> <input id="10" type="text" name="Feature"></br>
+							
+						</br>	
 							<label>Code name : </label></br> <input id="11" type="text" name="Feature"></br>
 							
 						</br>	
@@ -74,19 +71,14 @@
 							<label>Fab (nm) : </label></br> <input id="15" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="16" type="number" name="Feature"></br>
+							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="16" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Fillrate - Pixel (GP/s) : </label></br> <input id="17" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Notes :</label></br>
+							<label>Notes : </label></br> <input id="18" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >PowerPlay II</br>	
- 		 									<input type="checkbox" name="Feature" > DX7 T&L</br>	
- 		 									<input type="checkbox" name="Feature" >PowerPlay 3.0</br>	
- 		 									<input type="checkbox" name="Feature" > Fullstream</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -98,11 +90,31 @@
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['RV360','RV350','RV200','R420','RV100','RV250','RV280','']
+            local : ['256','32
+64','64
+128','64','8
+16
+32','128','']
           });
           $("#4").typeahead({
             name:"list4",
             local : ['Mobility Radeon 7000','Mobility Radeon 9000','Mobility Radeon 9200','Mobility Radeon 9500','Mobility Radeon 9600','Mobility Radeon 9600 Pro','Mobility Radeon 7500','Mobility Radeon 9550','Mobility Radeon 9700','Mobility Radeon 9800','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['M9+','M12','M7','M9','M6','M18','M11','M10','M10, M11','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['Aug 2002','2004','Feb 2001','2005','Dec 2001','Feb 2004','Sep 2004','2004?','Mar 2003','']
+          });
+          $("#7").typeahead({
+            name:"list7",
+            local : ['RV360','RV350','RV200','R420','RV100','RV250','RV280','']
+          });
+          $("#8").typeahead({
+            name:"list8",
+            local : ['PowerPlay II, DX7 T&L','','PowerPlay 3.0, Fullstream','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

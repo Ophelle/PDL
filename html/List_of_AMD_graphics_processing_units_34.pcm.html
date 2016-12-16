@@ -47,15 +47,11 @@
 							<label>Core clock (MHz) : </label></br> <input id="7" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Memory (MB) : </label></br> <input id="8" type="number" name="Feature"></br>
+							<label>Memory (MB) : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Model Number :</label></br>
+						</br>	
+							<label>Model Number : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >M88-L</br>	
- 		 									<input type="checkbox" name="Feature" >M88-LP</br>	
- 		 									<input type="checkbox" name="Feature" >2x M88-L</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Launch :</label></br>
 							
@@ -87,9 +83,9 @@ GFLOPs : </label></br> <input id="11" type="number" name="Feature"></br>
 							<label>Fab (nm) : </label></br> <input id="16" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="17" type="number" name="Feature"></br>
+							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="17" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Fillrate - Pixel (GP/s) : </label></br> <input id="18" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -112,11 +108,20 @@ GFLOPs : </label></br> <input id="11" type="number" name="Feature"></br>
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['RV620','R680','RV670','RV635','']
+            local : ['256, 512','512
+1024','2x 512','up to 512 from system memory','256','512','']
           });
           $("#4").typeahead({
             name:"list4",
+            local : ['M86-XT','M82-SE','M88-L/M88-LP','2x M88-LXT','M82','M88-LXT','RS780MC','M82-MPE','2x M88-L/M88-LP','M82-XT','M86','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['Mobility Radeon HD 3450','Mobility Radeon HD 3850','Mobility Radeon HD 3670','Mobility Radeon HD 3470','Mobility Radeon HD 3410','Mobility Radeon HD 3430','Mobility Radeon HD 3100','Mobility Radeon HD 3870 X2','Mobility Radeon HD 3650','Mobility Radeon HD 3870','Mobility Radeon HD 3200','Mobility Radeon HD 3850 X2','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['RV620','R680','RV670','RV635','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

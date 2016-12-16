@@ -29,9 +29,9 @@
 							<label>Office suite : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Products : </label></br> <input id="2" type="text" name="Feature"></br>
+							<label>Products : </label></br> <input id="2" type="aaaa" name="Feature"></br>
 							
-						</br>	
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Operating systems :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >Windows</br>	
@@ -43,40 +43,40 @@
  		 									<input type="checkbox" name="Feature" > Windows</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Version : </label></br> <input id="4" type="number" name="Feature"></br>
+							<label>Version : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>License :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >GPL </br>	
- 		 									<input type="checkbox" name="Feature" > LGPL</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Developer :</label></br>
+							<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Patrick Luby and Edward Peterlin</br>	
- 		 									<input type="checkbox" name="Feature" >Team and Concepts</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
+							<label>Developer : </label></br> <input id="6" type="text" name="Feature"></br>
+							
 						</br>	
 							<label>Notes : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>ISO/IEC 26300:2006 :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >ISO</br>	
- 		 									<input type="checkbox" name="Feature" >IEC 26300:2006</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-		<script>
+ 		 					<label>ISO/IEC 26300:2006 :</label></br>
+ 		 					 <input type="radio" name="FeatureISO/IEC 26300:2006" value="oui">oui <input type="radio" name="FeatureISO/IEC 26300:2006" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['Google Docs & Spreadsheets','LibreOffice','','NeoOffice','Microsoft Office','KOffice','OpenOffice.org','Standalone','IBM Lotus Symphony','Office suite','IBM Workplace Collaboration Services','Calligra Suite','StarOffice','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['P13','P11','P14','P10','P8','P3','P12','P6','P7','P9','P4','P5','P1','P15','P2','']
+            local : ['1.2','1.4+','2.0+','2.4+','8','1.12.5+','','1.0+','3.3.0','2007 SP2','2006','2.2.5','Version','2.5+','']
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['LGPL','GPL / LGPL','Proprietary','GPL','License','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['GNOME','Patrick Luby and Edward Peterlin','AdventNet','Sun Microsystems','Microsoft','LibreOffice','Google','Team and Concepts','Developer','IBM','KDE Project','OpenOffice.org','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['','Saves in ODF 1.2','Import only','no longer being actively marketed','Notes','']
           });
     </script>

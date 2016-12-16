@@ -29,14 +29,15 @@
 							<label>Definition : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>join(separator, list_of_strings) returns a list of strings joined with a separator :</label></br>
+							<label>join(separator, list_of_strings) returns a list of strings joined with a separator : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Joins the list of strings into a new string</br>	
- 		 									<input type="checkbox" name="Feature" > with the separator string between each of the substrings. Opposite of split.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['sprintf','Joins the list of strings into a new string, with the separator string between each of the substrings. Opposite of split.','']
+          });
+          $("#2").typeahead({
+            name:"list2",
             local : ['Description','Related','']
           });
     </script>

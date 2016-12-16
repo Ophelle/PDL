@@ -26,32 +26,24 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>MonoTorrent : </label></br> <input id="1" type="text" name="Feature"></br>
+ 		 					<label>MonoTorrent :</label></br>
+ 		 					 <input type="radio" name="FeatureMonoTorrent" value="oui">oui <input type="radio" name="FeatureMonoTorrent" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>BitTorrent library : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>BitTorrent library :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Linux</br>	
- 		 									<input type="checkbox" name="Feature" >Unix</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>rTorrent (libTorrent Rakshasa) : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>libtorrent (Rasterbar) : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>rTorrent (libTorrent Rakshasa) :</label></br>
+ 		 					 <input type="radio" name="FeaturerTorrent (libTorrent Rakshasa)" value="oui">oui <input type="radio" name="FeaturerTorrent (libTorrent Rakshasa)" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>libtorrent (Rasterbar) :</label></br>
+ 		 					 <input type="radio" name="Featurelibtorrent (Rasterbar)" value="oui">oui <input type="radio" name="Featurelibtorrent (Rasterbar)" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','C#','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['C++','Yes','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Yes','C++','No','']
+            local : ['API','Windows','Linux/Unix','OS X','Programming language','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -122,7 +122,7 @@ public class TraitementPcm {
 
 	public String valueToString(Value kValue) {
 		if (kValue == null) {
-			return "string";
+			return "";
 		} else if (kValue instanceof BooleanValue) {
 			return "boolean";
 		} else if (kValue instanceof IntegerValue) {
@@ -134,9 +134,9 @@ public class TraitementPcm {
 		} else if (kValue instanceof Multiple) {
 			return "multiple";
 		} else if (kValue instanceof NotApplicable) {
-			return "string";
+			return "notapplicable";
 		} else if (kValue instanceof NotAvailable) {
-			return "string";
+			return "notavailable";
 		} else if (kValue instanceof Conditional) {
 			return "conditional";
 		} else if (kValue instanceof DateValue) {
@@ -293,8 +293,17 @@ public class TraitementPcm {
 		case "multiple":
 			str = "checkbox";
 			break;
-		default:
+		case "notavailable":
 			str = "text";
+			break;
+		case "notapplicable":
+			str = "text";
+			break;
+		case "partial":
+			str = "a";
+			break;
+		default:
+			str = "aaaa";
 		}
 		return str;
 	}
@@ -303,7 +312,7 @@ public class TraitementPcm {
 
 		Map<String, Integer> nbOccurrence = new HashMap<String, Integer>();
 		Map<String, String> bestTypes = new HashMap<String, String>();
-
+		Integer max = 0;
 		for (Entry<String, List<String>> entry1 : allTypes.entrySet()) {
 			// Clé : feature
 			String feat = entry1.getKey();
@@ -322,34 +331,30 @@ public class TraitementPcm {
 					// a sa cle
 					Integer cpt = nbOccurrence.get(value) + 1;
 					nbOccurrence.put(value, cpt);
-					// System.out.println(key1 + " : " + str + " : " + cpt);
 				}
 			}
-
+			
 			// Cherche le type dominant dans la map nbOccurrence en fonction de
 			// sa valeur, cad son nombre d'occurrence
 			String bestType = "";
-
 			for (Entry<String, Integer> entry2 : nbOccurrence.entrySet()) {
 				String currentFeat = entry2.getKey();
 				Integer currentNb = entry2.getValue();
-				Integer max = 0;
+				
 
 				if (max < currentNb) {
 					max = currentNb;
 					bestType = currentFeat;
-					if(bestType.contains("partial")) {
-						System.out.println(this.file.getName() + " : " + feat);
-					}
+					
 					// attribut le type Html en fonction du type dominant trouvé
-					bestType = setTypeForHtml(bestType);
+					//bestType = setTypeForHtml(bestType);
 				}
 			}
-
-			bestTypes.put(feat, bestType);
+			bestTypes.put(feat, setTypeForHtml(bestType));
 			// Reinitialisation du nbOccurence pour les prochains features a
 			// traiter
 			nbOccurrence = new HashMap<String, Integer>();
+			max = 0;
 		}
 		return bestTypes;
 	}

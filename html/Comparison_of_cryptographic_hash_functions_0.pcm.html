@@ -29,10 +29,8 @@
 							<label>Function : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Designer :</label></br>
+							<label>Designer : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >FAPSI and VNIIstandart</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Year : </label></br> <input id="3" type="number" name="Feature"></br>
 							
@@ -40,11 +38,8 @@
 							<label>Derived from : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Reference :</label></br>
+							<label>Reference : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >RFC 5831</br>	
- 		 									<input type="checkbox" name="Feature" > RFC 4357</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -57,8 +52,25 @@ SHA-384','SHA-3 (Keccak)','RIPEMD','MD2','GOST R 34.11-94','MD6','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['Vincent Rijmen
+Paulo Barreto','Ronald Rivest','NSA','Guido Bertoni
+Joan Daemen
+Michaël Peeters
+Gilles Van Assche','Ross Anderson
+Eli Biham','The RIPE Consortium','Hans Dobbertin
+Antoon Bosselaers
+Bart Preneel','Yuliang Zheng
+Josef Pieprzyk
+Jennifer Seberry','FAPSI and VNIIstandart','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['GOST 28147-89','','SHA-0','MD4
 RFC 1321 page 1','RIPEMD','MD4','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['RFC 1321','Website','RFC 5831, RFC 4357','','RFC 1319','SHA-0','RFC 1320','md6_report.pdf','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

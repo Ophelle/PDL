@@ -29,14 +29,19 @@
 							<label>Trident : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Incorrect.groupnote : </label></br> <input id="2" type="number" name="Feature"></br>
+							<label>Incorrect.groupnote : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>3.1 : </label></br> <input id="3" type="number" name="Feature"></br>
-							
+						</br>	
+ 		 					<label>3.1 :</label></br>
+ 		 					 <input type="radio" name="Feature3.1" value="oui">oui <input type="radio" name="Feature3.1" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['1.0','','']
+          });
+          $("#2").typeahead({
+            name:"list2",
             local : ['WebKit','Gecko','Tasman','Presto','KHTML','iCab','']
           });
     </script>

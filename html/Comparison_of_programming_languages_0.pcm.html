@@ -29,11 +29,8 @@
 							<label>Functional : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Language :</label></br>
+							<label>Language : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >PL</br>	
- 		 									<input type="checkbox" name="Feature" >I</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Procedural : </label></br> <input id="3" type="text" name="Feature"></br>
 							
@@ -44,8 +41,9 @@
 							<label>Reflective : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Standardized? : </label></br> <input id="6" type="number" name="Feature"></br>
-							
+ 		 					<label>Standardized? :</label></br>
+ 		 					 <input type="radio" name="FeatureStandardized?" value="oui">oui <input type="radio" name="FeatureStandardized?" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>						</br>	
 							<label>Intended use :</label></br>
 							
@@ -114,85 +112,44 @@
 							<label>Event-driven : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Object-oriented : </label></br> <input id="9" type="text" name="Feature"></br>
+ 		 					<label>Object-oriented :</label></br>
+ 		 					 <input type="radio" name="FeatureObject-oriented" value="oui">oui <input type="radio" name="FeatureObject-oriented" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Other paradigm(s) : </label></br> <input id="10" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Other paradigm(s) :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >discrete event simulation</br>	
- 		 									<input type="checkbox" name="Feature" > multi-threaded (quasi-parallel) program execution</br>	
- 		 									<input type="checkbox" name="Feature" >multiple dispatch</br>	
- 		 									<input type="checkbox" name="Feature" > meta</br>	
- 		 									<input type="checkbox" name="Feature" > scalar and array-oriented</br>	
- 		 									<input type="checkbox" name="Feature" > parallel</br>	
- 		 									<input type="checkbox" name="Feature" > concurrent</br>	
- 		 									<input type="checkbox" name="Feature" > distributed ("cloud")</br>	
- 		 									<input type="checkbox" name="Feature" >concurrent</br>	
- 		 									<input type="checkbox" name="Feature" > logic</br>	
- 		 									<input type="checkbox" name="Feature" >array-oriented</br>	
- 		 									<input type="checkbox" name="Feature" > function-level</br>	
- 		 									<input type="checkbox" name="Feature" > tacit</br>	
- 		 									<input type="checkbox" name="Feature" >multi-paradigm</br>	
- 		 									<input type="checkbox" name="Feature" > extensible</br>	
- 		 									<input type="checkbox" name="Feature" > structured</br>	
- 		 									<input type="checkbox" name="Feature" >structured</br>	
- 		 									<input type="checkbox" name="Feature" > Concurrent</br>	
- 		 									<input type="checkbox" name="Feature" >logic</br>	
- 		 									<input type="checkbox" name="Feature" > distributed</br>	
- 		 									<input type="checkbox" name="Feature" > process-oriented</br>	
- 		 									<input type="checkbox" name="Feature" >declarative</br>	
- 		 									<input type="checkbox" name="Feature" > imperative object-oriented</br>	
- 		 									<input type="checkbox" name="Feature" >generative</br>	
- 		 									<input type="checkbox" name="Feature" >dataflow</br>	
- 		 									<input type="checkbox" name="Feature" > visual</br>	
- 		 									<input type="checkbox" name="Feature" > declarative</br>	
- 		 									<input type="checkbox" name="Feature" >modular</br>	
- 		 									<input type="checkbox" name="Feature" >data-centric</br>	
- 		 									<input type="checkbox" name="Feature" >common graphical development and runtime environment</br>	
- 		 									<input type="checkbox" name="Feature" >any</br>	
- 		 									<input type="checkbox" name="Feature" > syntax is usually highly specific</br>	
- 		 									<input type="checkbox" name="Feature" > related to the target processor</br>	
- 		 									<input type="checkbox" name="Feature" >extensible syntax</br>	
- 		 									<input type="checkbox" name="Feature" > syntactic macros</br>	
- 		 									<input type="checkbox" name="Feature" > multiple dispatch</br>	
- 		 									<input type="checkbox" name="Feature" > multi-user</br>	
- 		 									<input type="checkbox" name="Feature" > NoSQL</br>	
- 		 									<input type="checkbox" name="Feature" > transaction processing</br>	
- 		 									<input type="checkbox" name="Feature" >prototype OOP</br>	
- 		 									<input type="checkbox" name="Feature" > message oriented</br>	
- 		 									<input type="checkbox" name="Feature" > tabular programming</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Imperative : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>Imperative :</label></br>
+ 		 					 <input type="radio" name="FeatureImperative" value="oui">oui <input type="radio" name="FeatureImperative" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['','Yes','can be viewed as','Functional','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['','Yes','Procedural','']
+            local : ['Cython','ActionScript 3.0','Haxe','Seed7','APL','PL/I','FreeBASIC','SNOBOL','C','CLU','Visual FoxPro','Livecode','Opa','Perl','RPG','Bro','Factor','G2','J','Dart','Prolog','BlitzMax','ColdFusion (CFML)','Euphoria','Maple','Tcl','COMAL 80','Bash','BASIC','Visual Basic','OCaml','Oz','Dylan','HyperTalk','Small Basic','Clojure','PHP','Oberon','Plus','REBOL','S-Lang','Windows PowerShell','Cobra','ALGOL 58','JADE','BitC','MATLAB','Oxygene','Clarion','Swift','Xojo','Kotlin','XL','JavaScript','Gambas','Ruby','Scheme','Ateji PX','Language','COBOL','Objective-C','Erlang','Object Pascal (Delphi)','PureBasic','C#','Clean','Eiffel','Harbour','FP','Nim','Simula','Forth','AutoHotkey','Falcon','ALGOL 60','Go','AutoIt','Gosu','REALbasic','Game Maker Language','Mathematica','ALGOL 68','Modula-3','Joy','Lisp','Pascal','Ada','Racket','Logtalk','Io','BLISS','Assembly language','K','Scala','Elixir','Smalltalk','Fortran','BBj','Haskell','ISLISP','Rust','Occam','GraphTalk','D','Python','LabVIEW (G)','Boo','Java','Common Lisp','GLBasic','C++','MUMPS (M)','Visual Basic .NET','BeanShell','Aldor','Groovy','Julia','Lua','S','Standard ML','Visual Prolog','HyperNext','Modula-2','Crystal 1.0.0','F#','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['','Yes','Generic','']
+            local : ['','Yes','Procedural','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['','Yes','Reflective','']
+            local : ['','Yes','Generic','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['','Yes','Event-driven','']
+            local : ['','Yes','Reflective','']
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['Yes','','Object-oriented','']
+            local : ['','Yes','Event-driven','']
           });
           $("#7").typeahead({
             name:"list7",
-            local : ['Imperative','Yes','','']
+            local : ['Other paradigm(s)','','discrete event simulation, multi-threaded (quasi-parallel) program execution','multiple dispatch, meta, scalar and array-oriented, parallel, concurrent, distributed ("cloud")','concurrent, logic','array-oriented, function-level, tacit','multi-paradigm, extensible, structured','array-oriented, tacit','structured, concurrent','multiple dispatch, Concurrent, meta','dialected','aspect-oriented','stack-oriented','concurrent','logic, distributed','distributed','component-oriented','concurrent, distributed','concurrent, process-oriented','declarative, logic','concept programming','structured','weakly typed','pipeline','logic','concurrent, distributed, imperative object-oriented','generative, concurrent','lazy evaluation','dataflow, visual','pi calculus','concurrent, declarative','modular, logic, meta','data-centric, logic','declarative','common graphical development and runtime environment','simple object-oriented','prototype-based','any, syntax is usually highly specific, related to the target processor','extensible syntax, syntactic macros, multiple dispatch','concurrent, multi-user, NoSQL, transaction processing','prototype OOP, message oriented, tabular programming','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

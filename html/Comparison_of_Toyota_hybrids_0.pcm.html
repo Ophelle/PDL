@@ -29,7 +29,7 @@
 							<label>Maximum seating : </label></br> <input id="1" type="number" name="Feature"></br>
 							
 						</br>	
-							<label>Release date : </label></br> <input id="2" type="number" name="Feature"></br>
+							<label>Release date : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>US model year : </label></br> <input id="3" type="text" name="Feature"></br>
@@ -73,8 +73,9 @@
  		 									<input type="checkbox" name="Feature" >SULEV</br>	
 								
 						</br>	
-							<label>Requires premium fuel (91 octane (R+M)/2 ) : </label></br> <input id="12" type="text" name="Feature"></br>
-							
+ 		 					<label>Requires premium fuel (91 octane (R+M)/2 ) :</label></br>
+ 		 					 <input type="radio" name="FeatureRequires premium fuel (91 octane (R+M)/2 )" value="oui">oui <input type="radio" name="FeatureRequires premium fuel (91 octane (R+M)/2 )" value = "non">non </br>
+									
 						</br>	
 							<label>Features : </label></br> <input id="13" type="text" name="Feature"></br>
 							
@@ -93,37 +94,39 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['2010-','2004–2009','2001–2003','2007-','2008-','2005–2007','']
+            local : ['mid-May 2009 (Japan)
+early June (US)','1997 (Japan)
+2000 (worldwide)','July 2005','2004','May 2006','September 2007','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['21 kW (28 hp)','45 kW (60 hp)','30 kW (40 hp)','27 kW (36 hp)','33 kW (44 hp)','']
+            local : ['2010-','2004–2009','2001–2003','2007-','2008-','2005–2007','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['27 mpg (8.7 L/100 km; 32 mpg)','42 mpg (5.6 L/100 km; 50 mpg)','48 mpg (4.9 L/100 km; 58 mpg)','33 mpg (7.1 L/100 km; 40 mpg)','28 mpg (8.4 L/100 km; 34 mpg) (2WD)
-27 mpg (8.7 L/100 km; 32 mpg) (4WD-i)','51 mpg (4.6 L/100 km; 61 mpg)','']
+            local : ['21 kW (28 hp)','45 kW (60 hp)','30 kW (40 hp)','27 kW (36 hp)','33 kW (44 hp)','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['12.6 s','10.0 s','6.6  s (Motor Trend)','10.8 s','7.3 s (R&T, 5/06)','n/a','']
+            local : ['27 mpg (8.7 L/100 km; 32 mpg)','42 mpg (5.6 L/100 km; 50 mpg)','48 mpg (4.9 L/100 km; 58 mpg)','33 mpg (7.1 L/100 km; 40 mpg)','28 mpg (8.4 L/100 km; 34 mpg) (2WD)
+27 mpg (8.7 L/100 km; 32 mpg) (4WD-i)','51 mpg (4.6 L/100 km; 61 mpg)','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['80% less','75% less','']
+            local : ['12.6 s','10.0 s','6.6  s (Motor Trend)','10.8 s','7.3 s (R&T, 5/06)','n/a','']
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['47.5 mpg (4.95 L/100 km; 57.0 mpg)','45 mpg (5.2 L/100 km; 54 mpg)','36.6 mpg (6.43 L/100 km; 44.0 mpg)','48.7 mpg (4.83 L/100 km; 58.5 mpg)','24.5 mpg (9.6 L/100 km; 29.4 mpg)','','']
+            local : ['80% less','75% less','']
           });
           $("#7").typeahead({
             name:"list7",
-            local : ['25 mpg (9.4 L/100 km; 30 mpg)','45 mpg (5.2 L/100 km; 54 mpg)','34 mpg (6.9 L/100 km; 41 mpg)','41 mpg (5.7 L/100 km; 49 mpg)','48 mpg (4.9 L/100 km; 58 mpg)','25 mpg (9.4 L/100 km; 30 mpg) (2WD)
-25 mpg (9.4 L/100 km; 30 mpg) (4WD-i)','']
+            local : ['47.5 mpg (4.95 L/100 km; 57.0 mpg)','45 mpg (5.2 L/100 km; 54 mpg)','36.6 mpg (6.43 L/100 km; 44.0 mpg)','48.7 mpg (4.83 L/100 km; 58.5 mpg)','24.5 mpg (9.6 L/100 km; 29.4 mpg)','','']
           });
           $("#8").typeahead({
             name:"list8",
-            local : ['No','No (however, premium recommended)','']
+            local : ['25 mpg (9.4 L/100 km; 30 mpg)','45 mpg (5.2 L/100 km; 54 mpg)','34 mpg (6.9 L/100 km; 41 mpg)','41 mpg (5.7 L/100 km; 49 mpg)','48 mpg (4.9 L/100 km; 58 mpg)','25 mpg (9.4 L/100 km; 30 mpg) (2WD)
+25 mpg (9.4 L/100 km; 30 mpg) (4WD-i)','']
           });
           $("#9").typeahead({
             name:"list9",

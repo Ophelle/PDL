@@ -36,10 +36,10 @@ Single Precision : </label></br> <input id="2" type="number" name="Feature"></br
 							<label>Die Size (mm) : </label></br> <input id="3" type="number" name="Feature"></br>
 							
 						</br>	
-							<label>Memory (MB) : </label></br> <input id="4" type="number" name="Feature"></br>
+							<label>Memory (MB) : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Clock rate - Core (MHz) : </label></br> <input id="5" type="number" name="Feature"></br>
+							<label>Clock rate - Core (MHz) : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
  		 					<label>Processing Power
@@ -55,10 +55,10 @@ GFLOPS - Double Precision" value = "non">non </br>
 							<label>Fab (nm) : </label></br> <input id="8" type="number" name="Feature"></br>
 							
 						</br>	
-							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="9" type="number" name="Feature"></br>
+							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="9" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Clock rate - Memory (MHz) : </label></br> <input id="10" type="number" name="Feature"></br>
+							<label>Clock rate - Memory (MHz) : </label></br> <input id="10" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>Fillrate - Pixel (GP/s) : </label></br> <input id="11" type="number" name="Feature"></br>
@@ -116,25 +116,33 @@ GFLOPS - Single Precision : </label></br> <input id="21" type="number" name="Fea
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['?','']
+            local : ['256
+512','256','128
+256
+512','512
+1024','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['?','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['PCIe 1.0 ×16
 AGP
 PCI','PCIe 1.0 ×16','PCIe 1.0 ×16
 AGP','']
           });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['40:4:4','320:16:16','240:12:12','120:8:4','']
-          });
           $("#4").typeahead({
             name:"list4",
-            local : ['RV610','RV630','R600 XT','R600 PRO','R600 GT','']
+            local : ['40:4:4','320:16:16','240:12:12','120:8:4','']
           });
           $("#5").typeahead({
             name:"list5",
+            local : ['RV610','RV630','R600 XT','R600 PRO','R600 GT','']
+          });
+          $("#6").typeahead({
+            name:"list6",
             local : ['Radeon HD 2900 XT','Radeon HD 2400 XT','Radeon HD 2400 PRO','Radeon HD 2600 XT','Radeon HD 2900 GT','Radeon HD 2900 PRO','Radeon HD 2350','Radeon HD 2600 PRO','']
           });
     </script>

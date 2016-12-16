@@ -26,37 +26,21 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Supported guest OS drivers : </label></br> <input id="1" type="text" name="Feature"></br>
+ 		 					<label>Supported guest OS drivers :</label></br>
+ 		 					 <input type="radio" name="FeatureSupported guest OS drivers" value="oui">oui <input type="radio" name="FeatureSupported guest OS drivers" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Method of operation : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Method of operation :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Paravirtualization (VMI) and virtualization</br>	
- 		 									<input type="checkbox" name="Feature" >Paravirtualization and porting or hardware virtualization.</br>	
- 		 									<input type="checkbox" name="Feature" >AMD-V and Intel-VT-x</br>	
- 		 									<input type="checkbox" name="Feature" >Paravirtualization and hardware virtualization</br>	
- 		 									<input type="checkbox" name="Feature" >Paravirtualization</br>	
- 		 									<input type="checkbox" name="Feature" > hardware assisted virtualization</br>	
- 		 									<input type="checkbox" name="Feature" >Virtualization</br>	
- 		 									<input type="checkbox" name="Feature" > guest calls trapping where supported</br>	
- 		 									<input type="checkbox" name="Feature" >Paravirtualization and porting or hardware virtualization</br>	
- 		 									<input type="checkbox" name="Feature" >Full system simulation of processors</br>	
- 		 									<input type="checkbox" name="Feature" > MMUs</br>	
- 		 									<input type="checkbox" name="Feature" > devices</br>	
- 		 									<input type="checkbox" name="Feature" > disks</br>	
- 		 									<input type="checkbox" name="Feature" > memories</br>	
- 		 									<input type="checkbox" name="Feature" > networks</br>	
- 		 									<input type="checkbox" name="Feature" > etc.</br>	
- 		 									<input type="checkbox" name="Feature" >Microcode and hardware hypervisor</br>	
- 		 									<input type="checkbox" name="Feature" > Hardware assisted virtualization</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Guest OS SMP available : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Commercial support available : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Guest OS SMP available :</label></br>
+ 		 					 <input type="radio" name="FeatureGuest OS SMP available" value="oui">oui <input type="radio" name="FeatureGuest OS SMP available" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Commercial support available :</label></br>
+ 		 					 <input type="radio" name="FeatureCommercial support available" value="oui">oui <input type="radio" name="FeatureCommercial support available" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Typical use :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >Embedded</br>	
@@ -132,42 +116,27 @@
  		 									<input type="checkbox" name="Feature" > Cloud computing</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Runs arbitrary OS : </label></br> <input id="6" type="text" name="Feature"></br>
+ 		 					<label>Runs arbitrary OS :</label></br>
+ 		 					 <input type="radio" name="FeatureRuns arbitrary OS" value="oui">oui <input type="radio" name="FeatureRuns arbitrary OS" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Speed relative to host OS : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Speed relative to host OS :</label></br>
+							<label>Name : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Depending on the system characteristics and the software itself</br>	
- 		 									<input type="checkbox" name="Feature" > ranges from faster than real time to slow.</br>	
- 		 									<input type="checkbox" name="Feature" >Depends on host machine and target architecture. Runs at near-native speeds for x86-on-x86 using VT-x</br>	
- 		 									<input type="checkbox" name="Feature" > cross-simulation of other architectures can be faster or slower than real-time depending on how fast the target is and how big the target is (number of processors</br>	
- 		 									<input type="checkbox" name="Feature" > number of target machines</br>	
- 		 									<input type="checkbox" name="Feature" > and how much the simulation can be parallelized)</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Name :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Containers</br>	
- 		 									<input type="checkbox" name="Feature" > or Zones</br>	
- 		 									<input type="checkbox" name="Feature" >z</br>	
- 		 									<input type="checkbox" name="Feature" >VM</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Uses native device drivers','Yes, but not required','Yes','Yes ( Same compiled Software image as for the real device)','Compatible','?','special guest kernel+modules required','']
+            local : ['Paravirtualization (VMI) and virtualization','Hardware virtualization','Paravirtualization and porting or hardware virtualization.','Operating system-level virtualization','AMD-V and Intel-VT-x','Virtualization','Full-system virtualization (Processor Core ISA + Hardware + External connections)','Paravirtualization and hardware virtualization','Full system simulation with optional component virtualization','Paravirtualization, hardware assisted virtualization','dynamic recompilation (guest calls trapping where supported)','Virtualization, guest calls trapping where supported','Paravirtualization','Paravirtualization and porting or hardware virtualization','Full system simulation of processors, MMUs, devices, disks, memories, networks, etc.','Porting','Microcode and hardware hypervisor','?','Virtualization (among first systems to provide hardware assists)','Paravirtualization, Hardware assisted virtualization','Native virtualization','Virtualization (guest calls trapping where supported)','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes, over 500-way on current systems','No','Yes (2-way)','Yes','Yes, up to 4 VCPUs per VM','Yes, both real and virtual (guest perceives more CPUs than installed), incl. dynamic CPU provisioning and reassignment; up to 64 real cores','Yes, up to 8,192 CPUs and 64 TB per VM','Yes, up to 8 way','Yes, both real and virtual (guest perceives more CPUs than installed), incl. dynamic CPU provisioning and reassignment','Yes, add-on, up to 64 way','Yes, v4.0.0: up to 128 VCPUs per VM','Yes, add-on, 2 way','Yes, add-on, up to 4 way','Yes, add-on, up to 8 way','?','']
+            local : ['Near native','?','Up to near native with virtual machine additions but slower than with hypervisor due to proxied calls','Near Native','Slow','Up to near native','Up to near native with virtual machine additions','Depending on the system characteristics and the software itself, ranges from faster than real time to slow.','Non-significantly slower than native  (all calls to kernel are proxied)','Up to native','Native: System z machines always run with at least one LPAR','Depends on target architecture (full and slow hardware emulation for guests incompatible with host)','Depends on host machine and target architecture. Runs at near-native speeds for x86-on-x86 using VT-x, cross-simulation of other architectures can be faster or slower than real-time depending on how fast the target is and how big the target is (number of processors, number of target machines, and how much the simulation can be parallelized)','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes','Yes, with commercial license from Imperas','Yes (with commercial license)','?','No','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','Yes, but needs porting','No','?','Yes, (either with para-virtualization or HW virtualization)','Yes, but modifications required as paravirtualization is used','']
+            local : ['VMware Player','VMware ESX Server 2.5.3','Hyper-V Server 2008 R2','OVPsim','CoWare Virtual Platform','XtratuM','Simics','TRANGO','Virtual Iron 3.1','SVISTA 2004','Xen','User Mode Linux','z LPAR','VMware ESX Server 3.0','Oracle VM Server for x86','Wind River hypervisor','VMware Fusion','Sun xVM Server','Windows Virtual PC','Linux-VServer','VMware ESXi Server 5.5 (vSphere)','ScaleMP vSMP Foundation','KVM','Containers, or Zones','OKL4 Microvisor','Virtual Server 2005 R2','Guest PC','PikeOS','XenServer','VMware ESX Server 4.0 (vSphere)','Wind River VxWorks MILS Platform','VMware Workstation','OpenVZ','Oracle VirtualBox','Oracle VM Server for SPARC','z/VM','Virtual PC 7 for Mac','Virtuozzo','Virtual PC 2007','VMware Server','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -26,15 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Languages :</label></br>
+							<label>Languages : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Java</br>	
- 		 									<input type="checkbox" name="Feature" > JavaScript</br>	
- 		 									<input type="checkbox" name="Feature" >VB .NET</br>	
- 		 									<input type="checkbox" name="Feature" > C#</br>	
- 		 									<input type="checkbox" name="Feature" > Windows PowerShell</br>	
- 		 									<input type="checkbox" name="Feature" > F#</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Format : </label></br> <input id="2" type="text" name="Feature"></br>
 							
@@ -50,6 +43,10 @@
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['Perl','Go','Java, JavaScript','D','Python','Ruby','Objective-C (NSString * only)','C++ (STL)','FreeBASIC','PHP','Ada','OCaml','Common Lisp','Seed7','Lua','VB','VB .NET, C#, Windows PowerShell, F#','Cobra','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['returns nil','returns std::string::npos','returns -1','returns NIL','returns 0','returns NSNotFound','returns FALSE','raises Not_found','']
           });
     </script>

@@ -29,12 +29,14 @@
 							<label>Hash algorithms : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>IPv6 : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Bloom filter : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>IPv6 :</label></br>
+ 		 					 <input type="radio" name="FeatureIPv6" value="oui">oui <input type="radio" name="FeatureIPv6" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Bloom filter :</label></br>
+ 		 					 <input type="radio" name="FeatureBloom filter" value="oui">oui <input type="radio" name="FeatureBloom filter" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>ADC support :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >TIGR</br>	
@@ -48,16 +50,12 @@
 							<label>ADC hub : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Encryption : </label></br> <input id="6" type="text" name="Feature"></br>
+ 		 					<label>Encryption :</label></br>
+ 		 					 <input type="radio" name="FeatureEncryption" value="oui">oui <input type="radio" name="FeatureEncryption" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Plugin : </label></br> <input id="7" type="text" name="Feature"></br>
 							
-						</br>	
-							<label>Plugin :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Java</br>	
- 		 									<input type="checkbox" name="Feature" > Python</br>	
- 		 									<input type="checkbox" name="Feature" >Lua</br>	
- 		 									<input type="checkbox" name="Feature" > Ruby</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Other : </label></br> <input id="8" type="text" name="Feature"></br>
 							
@@ -68,22 +66,14 @@
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['?','No','Yes','IPv6','']
+            local : ['Nexthub','Qhub','uhub','RusHub','DSHub','ADCH++','Starlet ADC Hub','Starhub','ADCH++ GUI','Luadch','ADC hub','FLexHub','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['No','Yes','Bloom filter','']
+            local : ['Java, Python','No','Plugin','C#','?','Lua','C','Lua, Python, Ruby','Python','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['Nexthub','Qhub','uhub','RusHub','DSHub','ADCH++','Starlet ADC Hub','Starhub','ADCH++ GUI','Luadch','ADC hub','FLexHub','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes','No','Linux only','?','Encryption','']
-          });
-          $("#6").typeahead({
-            name:"list6",
             local : ['','Other','']
           });
     </script>

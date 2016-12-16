@@ -36,15 +36,18 @@ Single Precision : </label></br> <input id="2" type="number" name="Feature"></br
 							<label>Die Size (mm) : </label></br> <input id="3" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Memory (MB) : </label></br> <input id="4" type="number" name="Feature"></br>
+							<label>Memory (MB) : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Clock rate - Core (MHz) : </label></br> <input id="5" type="number" name="Feature"></br>
+						</br>	
+							<label>Clock rate - Core (MHz) : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Processing Power
-GFLOPS - Double Precision : </label></br> <input id="6" type="number" name="Feature"></br>
-							
+						</br>	
+ 		 					<label>Processing Power
+GFLOPS - Double Precision :</label></br>
+ 		 					 <input type="radio" name="FeatureProcessing Power
+GFLOPS - Double Precision" value="oui">oui <input type="radio" name="FeatureProcessing Power
+GFLOPS - Double Precision" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>						</br>	
 							<label>Fab (nm) : </label></br> <input id="7" type="number" name="Feature"></br>
 							
@@ -55,9 +58,9 @@ GFLOPS - Double Precision : </label></br> <input id="6" type="number" name="Feat
 							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="9" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Clock rate - Memory (MHz) : </label></br> <input id="10" type="number" name="Feature"></br>
+							<label>Clock rate - Memory (MHz) : </label></br> <input id="10" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Fillrate - Pixel (GP/s) : </label></br> <input id="11" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
@@ -120,20 +123,29 @@ GFLOPS - Single Precision : </label></br> <input id="21" type="number" name="Fea
  		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['512
+1024
+2048','512
+1024','1024×2
+2048×2','1024
+2048','1024','2048','']
+          });
+          $("#2").typeahead({
+            name:"list2",
             local : ['PCIe 2.1 x16','PCIe 2.1 x16
 PCI-classic
 PCIe 2.1 x1','','']
           });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['80:8:4','1600:80:32','1600:80:32×2','400:20:8','1120:56:16','800:40:16','320:16:8','720:36:16','1440:72:32','']
-          });
           $("#3").typeahead({
             name:"list3",
-            local : ['Redwood XT','Redwood PRO','Hemlock XT','Cypress LE','Redwood LE','Juniper XT','Cypress XT','Cedar PRO','Cypress PRO','Juniper PRO','']
+            local : ['80:8:4','1600:80:32','1600:80:32×2','400:20:8','1120:56:16','800:40:16','320:16:8','720:36:16','1440:72:32','']
           });
           $("#4").typeahead({
             name:"list4",
+            local : ['Redwood XT','Redwood PRO','Hemlock XT','Cypress LE','Redwood LE','Juniper XT','Cypress XT','Cedar PRO','Cypress PRO','Juniper PRO','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['Radeon HD 5850','Radeon HD 5610','Radeon HD 5770','Radeon HD 5830','Radeon HD 5550','Radeon HD 5670','Radeon HD 5750','Radeon HD 5970','Radeon HD 5450','Radeon HD 5570','Radeon HD 5870
 Eyefinity Edition','Radeon HD 5870','']
           });

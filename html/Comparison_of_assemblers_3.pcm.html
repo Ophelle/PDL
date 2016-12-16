@@ -29,11 +29,8 @@
 							<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Assembler :</label></br>
+							<label>Assembler : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Dignus Systems</br>	
- 		 									<input type="checkbox" name="Feature" >ASM</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Host platform :</label></br>
 							
@@ -59,6 +56,10 @@
           $("#1").typeahead({
             name:"list1",
             local : ['Proprietary','Free','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['IBM Assembler D','IBM Assembler F','BAL','PL360','IBM Assembler XF','HLASM','IBM Assembler H','Dignus Systems/ASM','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -34,16 +34,14 @@ date : </label></br> <input id="1" type="text" name="Feature"></br>
 dispersal : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Amount (TBq) : </label></br> <input id="3" type="number" name="Feature"></br>
+							<label>Amount (TBq) : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Place : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Source :</label></br>
+							<label>Source : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >NISA and published over press.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -51,11 +49,19 @@ dispersal : </label></br> <input id="2" type="text" name="Feature"></br>
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['12 March - 5 April 2011','3–16 August 2011','24 April 2011','25 April – June 1986','11 – 17 March 2011','11 March – 5 April 2011','4 April 2011','']
+            local : ['630.000','24','840 000','0.07','5 200 000','630 000','770 000','370 000','154','']
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['12 March - 5 April 2011','3–16 August 2011','24 April 2011','25 April – June 1986','11 – 17 March 2011','11 March – 5 April 2011','4 April 2011','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['Fukushima','Chernobyl','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['NISA','NISA>','Government','NSC','NISA and published over press.','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

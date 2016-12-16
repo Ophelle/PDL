@@ -32,62 +32,66 @@
 							<label>Perfect-use failure rate (%) : </label></br> <input id="2" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>User action required :</label></br>
+							<label>User action required : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Throughout day or daily</br>	
- 		 									<input type="checkbox" name="Feature" >In place 3 weeks </br>	
- 		 									<input type="checkbox" name="Feature" > 1 week break</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Birth control method :</label></br>
+							<label>Birth control method : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >FemCap and spermicide</br>	
- 		 									<input type="checkbox" name="Feature" >Diaphragm and spermicide</br>	
- 		 									<input type="checkbox" name="Feature" >Spermicidal gel</br>	
- 		 									<input type="checkbox" name="Feature" > foam</br>	
- 		 									<input type="checkbox" name="Feature" > suppository</br>	
- 		 									<input type="checkbox" name="Feature" > or film</br>	
- 		 									<input type="checkbox" name="Feature" >LAM for 6 months only; not applicable if menstruation resumes</br>	
- 		 									<input type="checkbox" name="Feature" >Lea's Shield and spermicide used by parous</br>	
- 		 									<input type="checkbox" name="Feature" >Lea's Shield and spermicide used by nulliparous</br>	
- 		 									<input type="checkbox" name="Feature" >Prentif cervical cap and spermicide used by nulliparous</br>	
- 		 									<input type="checkbox" name="Feature" >Prentif cervical cap and spermicide used by parous</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Typical-use failure rate (%) : </label></br> <input id="5" type="number" name="Feature"></br>
+							<label>Typical-use failure rate (%) : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Implementation :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Observation and charting</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Brand/common name :</label></br>
+							<label>Implementation : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Lunelle</br>	
- 		 									<input type="checkbox" name="Feature" > Cyclofem</br>	
- 		 									<input type="checkbox" name="Feature" >CycleBeads</br>	
- 		 									<input type="checkbox" name="Feature" > iCycleBeads</br>	
- 		 									<input type="checkbox" name="Feature" >Ortho Evra</br>	
- 		 									<input type="checkbox" name="Feature" > the patch</br>	
- 		 									<input type="checkbox" name="Feature" >withdrawal method</br>	
- 		 									<input type="checkbox" name="Feature" > pulling out</br>	
- 		 									<input type="checkbox" name="Feature" >Paragard</br>	
- 		 									<input type="checkbox" name="Feature" > Copper T</br>	
- 		 									<input type="checkbox" name="Feature" > the coil</br>	
- 		 									<input type="checkbox" name="Feature" >basal body temperature</br>	
- 		 									<input type="checkbox" name="Feature" > cervical mucus</br>	
- 		 									<input type="checkbox" name="Feature" >POP</br>	
- 		 									<input type="checkbox" name="Feature" > minipill</br>	
- 		 									<input type="checkbox" name="Feature" >Saheli</br>	
- 		 									<input type="checkbox" name="Feature" > Centron</br>	
- 		 									<input type="checkbox" name="Feature" >Brand</br>	
- 		 									<input type="checkbox" name="Feature" >common name</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
+							<label>Brand/common name : </label></br> <input id="7" type="text" name="Feature"></br>
+							
 		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['n/a','Progestogen','Barrier & spermicide','Behavioral','Estrogen & progestogen','Barrier + spermicide','Barrier','Sterilization','emergency contraception pill','Type','Testosterone','Spermicide','Estrogen + progestogen','SERM','Intrauterine & copper','Intrauterine & progestogen','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['Every act of intercourse','12 weeks','Throughout day or daily','Daily','Monthly','5 years','n/a','Weekly','Every 4 weeks','Once','3 to 12+ years','Every few hours','3 years (4 years off-label)','In place 3 weeks / 1 week break','User action required','5-7 years','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Today contraceptive sponge used by parous','Coitus interruptus','FemCap and spermicide','Depo Provera','Diaphragm and spermicide','IUD with progestogen','Essure','None (unprotected intercourse)','Tubal ligation','Contraceptive patch','NuvaRing','Spermicidal gel, foam, suppository, or film','Male latex condom','LAM for 6 months only; not applicable if menstruation resumes','Jadelle (lower-dose)','Implanon','Knaus-Ogino method','Today contraceptive sponge used by nulliparous','Lea's Shield and spermicide used by parous','Lea's Shield and spermicide used by nulliparous','Vasectomy','Testosterone injection','Birth control method','Combined oral contraceptive pill','Prentif cervical cap and spermicide used by nulliparous','Prentif cervical cap and spermicide used by parous','Symptoms-based fertility awareness','Ormeloxifene','Plan B One-Step®','Combined injectable','Standard Days Method','Female condom','Progestogen only pill','IUD with copper','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['8 
+(1 of 12)','32 
+(1 of 3)','0.15 
+(1 of 666)','9 
+(1 of 11)','16','7.6 (estimated) 
+(1 of 13)','3 
+(1 of 33)','0.2 
+(1 of 500)','29 
+(1 of 3)','32','5 
+(1 of 20)','2 
+(1 of 50)','6.1 
+(1 of 16)','25','18 
+(1 of 5)','0.2','15 
+(1 of 6)','85 
+(6 of 7)','1.8  
+(1 of 55)','0.05','16 
+(1 of 6)','21 
+(1 of 4.7)','Typical-use failure rate (%)','9','0.05 
+(1 of 2000 women)','no data','25 
+(1 of 4)','0.8 
+(1 of 125)','0.26 
+(1 of 384)','0.5 
+(1 of 200)','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['Withdrawal','Vaginal insertion','n/a','Injection','Calendar-based','Surgical procedure','Intrauterine','Transdermal patch','Subdermal implant','Oral medication','Delivery','Observation and charting','Placed on erect penis','Intramuscular Injection','mouth','Breastfeeding','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['the  implant','Lunelle, Cyclofem','','female sterilization','CycleBeads, iCycleBeads','Ortho Evra, the patch','the sponge','the rhythm method','the Pill','the implant','cervical cap','male sterilization','the shot','the ring','withdrawal method, pulling out','Testosterone Undecanoate','Mirena','Paragard, Copper T, the coil','basal body temperature, cervical mucus','POP, minipill','Condom','ecological breastfeeding','levonorgestrel','Saheli, Centron','Brand/common name','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

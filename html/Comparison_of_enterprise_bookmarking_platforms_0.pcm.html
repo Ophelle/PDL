@@ -43,7 +43,7 @@
 							<label>Developed by : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Latest stable release : </label></br> <input id="6" type="number" name="Feature"></br>
+							<label>Latest stable release : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>Software : </label></br> <input id="7" type="text" name="Feature"></br>
@@ -53,30 +53,15 @@
  		 					 <input type="radio" name="FeatureMultilingual" value="oui">oui <input type="radio" name="FeatureMultilingual" value = "non">non </br>
 									
 						</br>	
-							<label>Open source : </label></br> <input id="9" type="text" name="Feature"></br>
+ 		 					<label>Open source :</label></br>
+ 		 					 <input type="radio" name="FeatureOpen source" value="oui">oui <input type="radio" name="FeatureOpen source" value = "non">non </br>
+									
+						</br>	
+							<label>Cost (USD) : </label></br> <input id="10" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Cost (USD) :</label></br>
+							<label>Notes : </label></br> <input id="11" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >free trial</br>	
- 		 									<input type="checkbox" name="Feature" > starts at €35</br>	
- 		 									<input type="checkbox" name="Feature" >month</br>	
- 		 									<input type="checkbox" name="Feature" >instance</br>	
- 		 									<input type="checkbox" name="Feature" >$5 month</br>	
- 		 									<input type="checkbox" name="Feature" >user if used as Software-as-a-Service</br>	
- 		 									<input type="checkbox" name="Feature" > $4000 per server if installed (non expiring license)</br>	
-								
-						</br>	
-							<label>Notes :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Software-as-a-Service and installed option</br>	
- 		 									<input type="checkbox" name="Feature" > full Java sources are provided in the installed version</br>	
- 		 									<input type="checkbox" name="Feature" >runs on mySQL database for storing tag profiles. Can also be configured to run on Oracle Database 10g or Microsoft SQL Server 2005 Enterprise Edition</br>	
- 		 									<input type="checkbox" name="Feature" >does not run on mySQL</br>	
- 		 									<input type="checkbox" name="Feature" > requires IBM DB2 9.1 FP5</br>	
- 		 									<input type="checkbox" name="Feature" > Oracle Database 10g 10.2.0.3</br>	
- 		 									<input type="checkbox" name="Feature" > Microsoft SQL Server 2005 Enterprise Edition</br>	
-								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -92,11 +77,19 @@
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['Dogear','Knowledge Plaza','Jumper 2.0','Connectbeam','Licorize','Scuttle','']
+            local : ['Spotlight 3.1 (2008-6)','2.0','0.9.0 (2013-04)','2.0.1.7 (2010-7)','2.0.1 (2009-3)','2.3.18','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['No','Yes - GPL','']
+            local : ['Dogear','Knowledge Plaza','Jumper 2.0','Connectbeam','Licorize','Scuttle','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['Free','free trial, starts at €35/month/instance','per instance','$5 month/user if used as Software-as-a-Service, $4000 per server if installed (non expiring license)','']
+          });
+          $("#7").typeahead({
+            name:"list7",
+            local : ['still in alpha stage','Software-as-a-Service and installed option, full Java sources are provided in the installed version','Software-as-a-Service','runs on mySQL database for storing tag profiles. Can also be configured to run on Oracle Database 10g or Microsoft SQL Server 2005 Enterprise Edition','does not run on mySQL, requires IBM DB2 9.1 FP5, Oracle Database 10g 10.2.0.3, Microsoft SQL Server 2005 Enterprise Edition','none','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -26,16 +26,11 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Code review :</label></br>
+							<label>Code review : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Bugfix</br>	
- 		 									<input type="checkbox" name="Feature" >Feature branches reviewed by R&D on GitHub</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Date representation :</label></br>
+							<label>Date representation : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Uses datetime.datetime and datetime.date</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Accounting : </label></br> <input id="3" type="text" name="Feature"></br>
 							
@@ -50,18 +45,28 @@
 							<label>Subject : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>float/integer representation :</label></br>
+							<label>float/integer representation : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Limited to float or long because using gtk.Entry without limit</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Uses floats','Uses decimal','']
+            local : ['All commits through Rietveld','Bugfix/Feature branches reviewed by R&D on GitHub','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['Uses strings to represent dates','Uses datetime.datetime and datetime.date','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Uses floats','Uses decimal','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['Odoo','Tryton','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['Limited to float or long because using gtk.Entry without limit','Limited to sys.maxint of Python because using gtk.SpinButton','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

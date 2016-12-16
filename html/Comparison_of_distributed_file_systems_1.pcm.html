@@ -29,12 +29,8 @@
 							<label>Access API : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Run by :</label></br>
+							<label>Run by : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Rackspace</br>	
- 		 									<input type="checkbox" name="Feature" > Hewlett-Packard</br>	
- 		 									<input type="checkbox" name="Feature" > others</br>	
-								
 						</br>	
 							<label>Name : </label></br> <input id="3" type="text" name="Feature"></br>
 							
@@ -45,6 +41,10 @@
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['Microsoft','Cleversafe','Google','Amazon.com','Rackspace, Hewlett-Packard, others','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['Google Cloud Storage','Microsoft Azure','Amazon S3','SWIFT (part of OpenStack)','Cleversafe','']
           });
     </script>

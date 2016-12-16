@@ -26,17 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Language :</label></br>
+							<label>Language : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >C++</br>	
- 		 									<input type="checkbox" name="Feature" > Java</br>	
- 		 									<input type="checkbox" name="Feature" >C</br>	
- 		 									<input type="checkbox" name="Feature" > Fortran</br>	
- 		 									<input type="checkbox" name="Feature" > C#</br>	
- 		 									<input type="checkbox" name="Feature" > FreePascal</br>	
- 		 									<input type="checkbox" name="Feature" > VBA</br>	
- 		 									<input type="checkbox" name="Feature" > Python</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
  		 					<label>Can be used in
 proprietary aps :</label></br>
@@ -93,6 +84,10 @@ according to RSO principles
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['C#','Python','C','C++, Java','C, Fortran','C++, Fortran','Java','C++, C#, FreePascal, VBA','C, Java, C#, Fortran, Python','']
+          });
+          $("#2").typeahead({
+            name:"list2",
             local : ['Proprietary','Dual (Commercial, academic)','GPL','BSD','Dual (Commercial, GPL)','ASL','']
           });
     </script>

@@ -26,39 +26,40 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>License :</label></br>
+							<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >IDE:Proprietary</br>	
- 		 									<input type="checkbox" name="Feature" > Edit:GPL</br>	
- 		 									<input type="checkbox" name="Feature" > LGPL</br>	
- 		 									<input type="checkbox" name="Feature" > MPL</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Developer : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Latest stable release : </label></br> <input id="3" type="number" name="Feature"></br>
+							<label>Latest stable release : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>IDE :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Komodo IDE </br>	
- 		 									<input type="checkbox" name="Feature" > Edit</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Platform :</label></br>
+							<label>IDE : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 									<input type="checkbox" name="Feature" > Linux</br>	
- 		 									<input type="checkbox" name="Feature" > Mac OS X</br>	
- 		 									<input type="checkbox" name="Feature" > FreeBSD</br>	
- 		 									<input type="checkbox" name="Feature" > JVM</br>	
- 		 									<input type="checkbox" name="Feature" > Solaris</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
+							<label>Platform : </label></br> <input id="5" type="text" name="Feature"></br>
+							
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['Windows, Linux, Mac OS X, FreeBSD, JVM, Solaris','Cross-platform','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['IDE:Proprietary, Edit:GPL, LGPL, MPL','EPL','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['ActiveState','','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['5.0','8.5.3','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['Eclipse DLTK','Komodo IDE / Edit','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

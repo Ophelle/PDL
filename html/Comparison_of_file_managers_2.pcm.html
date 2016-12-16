@@ -26,99 +26,66 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>List view : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>List view :</label></br>
+ 		 					 <input type="radio" name="FeatureList view" value="oui">oui <input type="radio" name="FeatureList view" value = "non">non </br>
+									
 						</br>	
 							<label>File manager : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Panel tabs : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>Panel tabs :</label></br>
+ 		 					 <input type="radio" name="FeaturePanel tabs" value="oui">oui <input type="radio" name="FeaturePanel tabs" value = "non">non </br>
+									
 						</br>	
-							<label>Twin panel : </label></br> <input id="4" type="text" name="Feature"></br>
-							
+ 		 					<label>Twin panel :</label></br>
+ 		 					 <input type="radio" name="FeatureTwin panel" value="oui">oui <input type="radio" name="FeatureTwin panel" value = "non">non </br>
+									
 						</br>	
-							<label>Thumbnails : </label></br> <input id="5" type="text" name="Feature"></br>
-							
+ 		 					<label>Thumbnails :</label></br>
+ 		 					 <input type="radio" name="FeatureThumbnails" value="oui">oui <input type="radio" name="FeatureThumbnails" value = "non">non </br>
+									
 						</br>	
-							<label>Details + Thumbs : </label></br> <input id="6" type="text" name="Feature"></br>
-							
+ 		 					<label>Details + Thumbs :</label></br>
+ 		 					 <input type="radio" name="FeatureDetails + Thumbs" value="oui">oui <input type="radio" name="FeatureDetails + Thumbs" value = "non">non </br>
+									
 						</br>	
-							<label>Grouping : </label></br> <input id="7" type="text" name="Feature"></br>
-							
+ 		 					<label>Grouping :</label></br>
+ 		 					 <input type="radio" name="FeatureGrouping" value="oui">oui <input type="radio" name="FeatureGrouping" value = "non">non </br>
+									
 						</br>	
-							<label>Content dependent : </label></br> <input id="8" type="text" name="Feature"></br>
-							
+ 		 					<label>Content dependent :</label></br>
+ 		 					 <input type="radio" name="FeatureContent dependent" value="oui">oui <input type="radio" name="FeatureContent dependent" value = "non">non </br>
+									
 						</br>	
 							<label>UI : </label></br> <input id="9" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Icon view : </label></br> <input id="10" type="text" name="Feature"></br>
+ 		 					<label>Icon view :</label></br>
+ 		 					 <input type="radio" name="FeatureIcon view" value="oui">oui <input type="radio" name="FeatureIcon view" value = "non">non </br>
+									
+						</br>	
+ 		 					<label>Favorites / Bookmark :</label></br>
+ 		 					 <input type="radio" name="FeatureFavorites / Bookmark" value="oui">oui <input type="radio" name="FeatureFavorites / Bookmark" value = "non">non </br>
+									
+						</br>	
+							<label>Family : </label></br> <input id="12" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Favorites / Bookmark : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Family :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Navigational </br>	
- 		 									<input type="checkbox" name="Feature" > Spatial</br>	
- 		 									<input type="checkbox" name="Feature" > Orthodox</br>	
- 		 									<input type="checkbox" name="Feature" >Hybrid Navigational </br>	
- 		 									<input type="checkbox" name="Feature" >Spatial </br>	
- 		 									<input type="checkbox" name="Feature" > Miller Columns</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Column view : </label></br> <input id="13" type="text" name="Feature"></br>
-							
+ 		 					<label>Column view :</label></br>
+ 		 					 <input type="radio" name="FeatureColumn view" value="oui">oui <input type="radio" name="FeatureColumn view" value = "non">non </br>
+									
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','?','']
+            local : ['Dired','File Commander','Xandros File Manager','Xfe','Midnight Commander','Konqueror','xplorer²','Demos Commander','DOS Navigator','gentoo','Disk Order','Directory Opus','Volkov Commander','Xfm','ROX-Filer','Finder','Path Finder','PCManFM','Dolphin','Thunar','Windows Explorer','XYplorer','Total Commander','File Manager','Double Commander','Krusader','STDU Explorer','GNOME Commander','FAR Manager','emelFM2','ZTreeWin','Altap Salamander','Nautilus','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Dired','File Commander','Xandros File Manager','Xfe','Midnight Commander','Konqueror','xplorer²','Demos Commander','DOS Navigator','gentoo','Disk Order','Directory Opus','Volkov Commander','Xfm','ROX-Filer','Finder','Path Finder','PCManFM','Dolphin','Thunar','Windows Explorer','XYplorer','Total Commander','File Manager','Double Commander','Krusader','STDU Explorer','GNOME Commander','FAR Manager','emelFM2','ZTreeWin','Altap Salamander','Nautilus','']
+            local : ['Text','GUI','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['?','No','Yes','Partial','Yes (show tab-bar optional)','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','No','Yes, one or more','?','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['?','Yes','No','Yes, on GUI','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['?','No','Yes','Partial','Yes, on GUI','Yes, with Cover Flow','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['No','?','Yes','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['No','Yes In viewing','?','Yes','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['Text','GUI','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['Yes','No','?','Partial','']
-          });
-          $("#11").typeahead({
-            name:"list11",
-            local : ['Yes','?','No','Partial','Partial (bookmarks)','']
-          });
-          $("#12").typeahead({
-            name:"list12",
-            local : ['Yes','No','?','']
+            local : ['Orthodox','Spatial','Navigational / Spatial','Navigational / Orthodox','Navigational','Hybrid Navigational / Orthodox','Spatial / Miller Columns','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

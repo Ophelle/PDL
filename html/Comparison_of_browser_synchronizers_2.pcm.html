@@ -26,37 +26,27 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>BookmarkSync : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Firefox Sync : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Opera Link :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Opera Mini</br>	
- 		 									<input type="checkbox" name="Feature" > Opera Mobile</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
+ 		 					<label>BookmarkSync :</label></br>
+ 		 					 <input type="radio" name="FeatureBookmarkSync" value="oui">oui <input type="radio" name="FeatureBookmarkSync" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Firefox Sync :</label></br>
+ 		 					 <input type="radio" name="FeatureFirefox Sync" value="oui">oui <input type="radio" name="FeatureFirefox Sync" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Opera Link :</label></br>
+ 		 					 <input type="radio" name="FeatureOpera Link" value="oui">oui <input type="radio" name="FeatureOpera Link" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Client : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Xmarks :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >No</br>	
- 		 									<input type="checkbox" name="Feature" > but there is a sync viewer in a menu</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-		<script>
+ 		 					<label>Xmarks :</label></br>
+ 		 					 <input type="radio" name="FeatureXmarks" value="oui">oui <input type="radio" name="FeatureXmarks" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','Firefox for MobileSeaMonkey','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Yes','No','SeaMonkey','Yes (Mac Only)','']
-          });
-          $("#3").typeahead({
-            name:"list3",
             local : ['Internet Explorer','other','Safari','Google Chrome','Opera','Mozilla Firefox','']
           });
     </script>

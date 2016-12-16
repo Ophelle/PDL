@@ -41,9 +41,10 @@
 							<label>SYN flood protection : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Kernel ASLR : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Kernel ASLR :</label></br>
+ 		 					 <input type="radio" name="FeatureKernel ASLR" value="oui">oui <input type="radio" name="FeatureKernel ASLR" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>File access control :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >Traditional Unix permissions</br>	
@@ -53,12 +54,8 @@
  		 									<input type="checkbox" name="Feature" > NFSv4 ACL</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Sandbox :</label></br>
+							<label>Sandbox : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >SELinux Sandbox</br>	
- 		 									<input type="checkbox" name="Feature" > seccomp</br>	
- 		 									<input type="checkbox" name="Feature" > KVM</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>UDP flood protection : </label></br> <input id="9" type="text" name="Feature"></br>
 							
@@ -69,9 +66,10 @@
 							<label>Kernel Name : </label></br> <input id="11" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Disable memory execution support : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Disable memory execution support :</label></br>
+ 		 					 <input type="radio" name="FeatureDisable memory execution support" value="oui">oui <input type="radio" name="FeatureDisable memory execution support" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Mandatory access control : </label></br> <input id="13" type="text" name="Feature"></br>
 							
 						</br>	
@@ -100,7 +98,7 @@
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['?','Yes','']
+            local : ['?','Apple XNU Sandbox','SELinux Sandbox, seccomp, KVM','Capsicum','']
           });
           $("#7").typeahead({
             name:"list7",
@@ -116,14 +114,10 @@
           });
           $("#10").typeahead({
             name:"list10",
-            local : ['DEP','Yes','Default','']
+            local : ['TrustedBSD MAC','Mandatory Integrity Control','Solaris Trusted Extensions','LSM(SELinux, SMACK, TOMOYO Linux, AppArmor)','']
           });
           $("#11").typeahead({
             name:"list11",
-            local : ['TrustedBSD MAC','Mandatory Integrity Control','Solaris Trusted Extensions','LSM(SELinux, SMACK, TOMOYO Linux, AppArmor)','']
-          });
-          $("#12").typeahead({
-            name:"list12",
             local : ['No?','?','']
           });
     </script>

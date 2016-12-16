@@ -26,25 +26,39 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>flat
+ 		 					<label>flat
 binaries
-(superH) : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+(superH) :</label></br>
+ 		 					 <input type="radio" name="Featureflat
+binaries
+(superH)" value="oui">oui <input type="radio" name="Featureflat
+binaries
+(superH)" value = "non">non </br>
+									
 						</br>	
-							<label>HUNK : </label></br> <input id="2" type="text" name="Feature"></br>
-							
+ 		 					<label>HUNK :</label></br>
+ 		 					 <input type="radio" name="FeatureHUNK" value="oui">oui <input type="radio" name="FeatureHUNK" value = "non">non </br>
+									
 						</br>	
-							<label>FDPIC
+ 		 					<label>FDPIC
 ELF
 binaries
-(mmu less) : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+(mmu less) :</label></br>
+ 		 					 <input type="radio" name="FeatureFDPIC
+ELF
+binaries
+(mmu less)" value="oui">oui <input type="radio" name="FeatureFDPIC
+ELF
+binaries
+(mmu less)" value = "non">non </br>
+									
 						</br>	
 							<label>LX : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>a.out : </label></br> <input id="5" type="text" name="Feature"></br>
-							
+ 		 					<label>a.out :</label></br>
+ 		 					 <input type="radio" name="Featurea.out" value="oui">oui <input type="radio" name="Featurea.out" value = "non">non </br>
+									
 						</br>	
 							<label>MZ : </label></br> <input id="6" type="text" name="Feature"></br>
 							
@@ -52,22 +66,30 @@ binaries
 							<label>NLM : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>PEF : </label></br> <input id="8" type="text" name="Feature"></br>
-							
+ 		 					<label>PEF :</label></br>
+ 		 					 <input type="radio" name="FeaturePEF" value="oui">oui <input type="radio" name="FeaturePEF" value = "non">non </br>
+									
 						</br>	
-							<label>Mach-O : </label></br> <input id="9" type="text" name="Feature"></br>
-							
+ 		 					<label>Mach-O :</label></br>
+ 		 					 <input type="radio" name="FeatureMach-O" value="oui">oui <input type="radio" name="FeatureMach-O" value = "non">non </br>
+									
 						</br>	
 							<label>Kernel Name : </label></br> <input id="10" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>SOM
+ 		 					<label>SOM
 (PA-RISC,
-HP-UX) : </label></br> <input id="11" type="text" name="Feature"></br>
-							
+HP-UX) :</label></br>
+ 		 					 <input type="radio" name="FeatureSOM
+(PA-RISC,
+HP-UX)" value="oui">oui <input type="radio" name="FeatureSOM
+(PA-RISC,
+HP-UX)" value = "non">non </br>
+									
 						</br>	
-							<label>PE : </label></br> <input id="12" type="text" name="Feature"></br>
-							
+ 		 					<label>PE :</label></br>
+ 		 					 <input type="radio" name="FeaturePE" value="oui">oui <input type="radio" name="FeaturePE" value = "non">non </br>
+									
 						</br>	
 							<label>NE : </label></br> <input id="13" type="text" name="Feature"></br>
 							
@@ -75,37 +97,48 @@ HP-UX) : </label></br> <input id="11" type="text" name="Feature"></br>
 							<label>LE : </label></br> <input id="14" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>ECOFF : </label></br> <input id="15" type="text" name="Feature"></br>
-							
+ 		 					<label>ECOFF :</label></br>
+ 		 					 <input type="radio" name="FeatureECOFF" value="oui">oui <input type="radio" name="FeatureECOFF" value = "non">non </br>
+									
 						</br>	
-							<label>Misc
+ 		 					<label>Misc
 (wrapper
 based,
 like
-interpreters) : </label></br> <input id="16" type="text" name="Feature"></br>
-							
+interpreters) :</label></br>
+ 		 					 <input type="radio" name="FeatureMisc
+(wrapper
+based,
+like
+interpreters)" value="oui">oui <input type="radio" name="FeatureMisc
+(wrapper
+based,
+like
+interpreters)" value = "non">non </br>
+									
 						</br>	
 							<label>DOS COM : </label></br> <input id="17" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>ELF : </label></br> <input id="18" type="text" name="Feature"></br>
-							
+ 		 					<label>ELF :</label></br>
+ 		 					 <input type="radio" name="FeatureELF" value="oui">oui <input type="radio" name="FeatureELF" value = "non">non </br>
+									
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','?','Yes','']
+            local : ['?','No','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['No','Yes','?','']
+            local : ['No','?','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['?','No','Yes','']
+            local : ['No','?','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['Yes','No','?','']
+            local : ['ReactOS kernel','MINIX 3 kernel','Linux kernel','NetBSD kernel','DragonFly BSD kernel','Windows NT kernel','HP-UX kernel','XNU','Amiga Exec','Solaris kernel','']
           });
           $("#5").typeahead({
             name:"list5",
@@ -113,54 +146,10 @@ interpreters) : </label></br> <input id="16" type="text" name="Feature"></br>
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['No','?','Some','Yes','']
+            local : ['?','No','']
           });
           $("#7").typeahead({
             name:"list7",
-            local : ['No','?','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['No','?','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['?','No','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['Yes','No','Some','']
-          });
-          $("#11").typeahead({
-            name:"list11",
-            local : ['No','Yes','?','']
-          });
-          $("#12").typeahead({
-            name:"list12",
-            local : ['ReactOS kernel','MINIX 3 kernel','Linux kernel','NetBSD kernel','DragonFly BSD kernel','Windows NT kernel','HP-UX kernel','XNU','Amiga Exec','Solaris kernel','']
-          });
-          $("#13").typeahead({
-            name:"list13",
-            local : ['No','Yes','?','']
-          });
-          $("#14").typeahead({
-            name:"list14",
-            local : ['?','No','']
-          });
-          $("#15").typeahead({
-            name:"list15",
-            local : ['?','No','']
-          });
-          $("#16").typeahead({
-            name:"list16",
-            local : ['No','Yes','?','']
-          });
-          $("#17").typeahead({
-            name:"list17",
-            local : ['No','Yes','?','']
-          });
-          $("#18").typeahead({
-            name:"list18",
             local : ['?','No','']
           });
     </script>

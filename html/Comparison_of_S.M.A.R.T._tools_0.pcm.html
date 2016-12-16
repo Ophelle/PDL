@@ -44,11 +44,8 @@
 							<label>RAID support : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>License :</label></br>
+							<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >License</br>	
- 		 									<input type="checkbox" name="Feature" > price</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>USB, eSATA and
 removable drives :</label></br>
@@ -61,38 +58,24 @@ removable drives</br>
  		 									<input type="checkbox" name="Feature" >See list of supported devices; SAT driver required on OS X only</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Shows S.M.A.R.T. attributes : </label></br> <input id="6" type="text" name="Feature"></br>
+ 		 					<label>Shows S.M.A.R.T. attributes :</label></br>
+ 		 					 <input type="radio" name="FeatureShows S.M.A.R.T. attributes" value="oui">oui <input type="radio" name="FeatureShows S.M.A.R.T. attributes" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Operating system : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Operating system :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >DOS</br>	
- 		 									<input type="checkbox" name="Feature" > FreeDOS</br>	
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 									<input type="checkbox" name="Feature" > Unix-like (Linux</br>	
- 		 									<input type="checkbox" name="Feature" > OS X</br>	
- 		 									<input type="checkbox" name="Feature" > BSD</br>	
- 		 									<input type="checkbox" name="Feature" > etc.)</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Hard drive
-self-testing : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Notification :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >By window</br>	
- 		 									<input type="checkbox" name="Feature" > sound</br>	
- 		 									<input type="checkbox" name="Feature" > email</br>	
- 		 									<input type="checkbox" name="Feature" > program execution at choosable parameter changes</br>	
- 		 									<input type="checkbox" name="Feature" > threshold</br>	
- 		 									<input type="checkbox" name="Feature" >Window</br>	
- 		 									<input type="checkbox" name="Feature" > e-mail</br>	
- 		 									<input type="checkbox" name="Feature" > running a command; at parameter changes</br>	
- 		 									<input type="checkbox" name="Feature" > temperature</br>	
- 		 									<input type="checkbox" name="Feature" >window</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
+ 		 					<label>Hard drive
+self-testing :</label></br>
+ 		 					 <input type="radio" name="FeatureHard drive
+self-testing" value="oui">oui <input type="radio" name="FeatureHard drive
+self-testing" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Notification :</label></br>
+ 		 					 <input type="radio" name="FeatureNotification" value="oui">oui <input type="radio" name="FeatureNotification" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Notes :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >Also shows temperature of CPU</br>	
@@ -123,12 +106,11 @@ self-testing : </label></br> <input id="8" type="text" name="Feature"></br>
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes','No','Shows S.M.A.R.T. attributes','']
+            local : ['Freeware','LGPL v2+','Commercial proprietary','Trialware','GNU GPL v2','License, price','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['Yes','No','Hard drive
-self-testing','?','']
+            local : ['Linux','Windows','Operating system','DOS, FreeDOS','OS X','Windows, Unix-like (Linux, OS X, BSD, etc.)','']
           });
           $("#5").typeahead({
             name:"list5",

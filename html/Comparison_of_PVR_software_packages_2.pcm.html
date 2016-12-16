@@ -26,41 +26,48 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>QuickTime : </label></br> <input id="1" type="text" name="Feature"></br>
+ 		 					<label>QuickTime :</label></br>
+ 		 					 <input type="radio" name="FeatureQuickTime" value="oui">oui <input type="radio" name="FeatureQuickTime" value = "non">non </br>
+									
+						</br>	
+							<label>DVR : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>DVR :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >MediaPhoenix</br>	
- 		 									<input type="checkbox" name="Feature" >ShowShifter</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+ 		 					<label>WMV :</label></br>
+ 		 					 <input type="radio" name="FeatureWMV" value="oui">oui <input type="radio" name="FeatureWMV" value = "non">non </br>
+									
 						</br>	
-							<label>WMV : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>MPEG-1 :</label></br>
+ 		 					 <input type="radio" name="FeatureMPEG-1" value="oui">oui <input type="radio" name="FeatureMPEG-1" value = "non">non </br>
+									
 						</br>	
-							<label>MPEG-1 : </label></br> <input id="4" type="text" name="Feature"></br>
-							
+ 		 					<label>MPEG-2 :</label></br>
+ 		 					 <input type="radio" name="FeatureMPEG-2" value="oui">oui <input type="radio" name="FeatureMPEG-2" value = "non">non </br>
+									
 						</br>	
-							<label>MPEG-2 : </label></br> <input id="5" type="text" name="Feature"></br>
-							
+ 		 					<label>H.264/MPEG-4 AVC (MPEG-4 Part 10) :</label></br>
+ 		 					 <input type="radio" name="FeatureH.264/MPEG-4 AVC (MPEG-4 Part 10)" value="oui">oui <input type="radio" name="FeatureH.264/MPEG-4 AVC (MPEG-4 Part 10)" value = "non">non </br>
+									
 						</br>	
-							<label>H.264/MPEG-4 AVC (MPEG-4 Part 10) : </label></br> <input id="6" type="text" name="Feature"></br>
-							
+ 		 					<label>RealVideo :</label></br>
+ 		 					 <input type="radio" name="FeatureRealVideo" value="oui">oui <input type="radio" name="FeatureRealVideo" value = "non">non </br>
+									
 						</br>	
-							<label>RealVideo : </label></br> <input id="7" type="text" name="Feature"></br>
-							
+ 		 					<label>MP4 :</label></br>
+ 		 					 <input type="radio" name="FeatureMP4" value="oui">oui <input type="radio" name="FeatureMP4" value = "non">non </br>
+									
 						</br>	
-							<label>MP4 : </label></br> <input id="8" type="text" name="Feature"></br>
-							
+ 		 					<label>AVI :</label></br>
+ 		 					 <input type="radio" name="FeatureAVI" value="oui">oui <input type="radio" name="FeatureAVI" value = "non">non </br>
+									
 						</br>	
-							<label>AVI : </label></br> <input id="9" type="text" name="Feature"></br>
-							
+ 		 					<label>ASF :</label></br>
+ 		 					 <input type="radio" name="FeatureASF" value="oui">oui <input type="radio" name="FeatureASF" value = "non">non </br>
+									
 						</br>	
-							<label>ASF : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>MPEG-4 ASP (MPEG-4 Part 2), i.e. DivX, XviD : </label></br> <input id="11" type="text" name="Feature"></br>
-							
+ 		 					<label>MPEG-4 ASP (MPEG-4 Part 2), i.e. DivX, XviD :</label></br>
+ 		 					 <input type="radio" name="FeatureMPEG-4 ASP (MPEG-4 Part 2), i.e. DivX, XviD" value="oui">oui <input type="radio" name="FeatureMPEG-4 ASP (MPEG-4 Part 2), i.e. DivX, XviD" value = "non">non </br>
+									
 						</br>	
 							<label>MKV : </label></br> <input id="12" type="text" name="Feature"></br>
 							
@@ -76,58 +83,22 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','Unknown','']
+            local : ['MediaPhoenix/ShowShifter','GB-PVR','Windows Media Center','SageTV','Kodi (formerly XBMC)','VBox@TV','EyeTV','MediaPortal','MythTV','Beyond TV','Arcsoft TotalMedia Theatre','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','Unknown','']
+            local : ['Unknown','Yes','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes','Unknown','']
+            local : ['Unknown','Yes','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['Yes','Unknown','']
+            local : ['Unknown','Yes','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['Yes','Unknown','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Unknown','Yes','No','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['Unknown','Yes','No','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['Yes','Unknown','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['Yes','Unknown','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['Unknown','Yes','']
-          });
-          $("#11").typeahead({
-            name:"list11",
-            local : ['Unknown','Yes','']
-          });
-          $("#12").typeahead({
-            name:"list12",
-            local : ['Unknown','Yes','']
-          });
-          $("#13").typeahead({
-            name:"list13",
-            local : ['Unknown','Yes','']
-          });
-          $("#14").typeahead({
-            name:"list14",
             local : ['Unknown','Yes','No','']
           });
     </script>

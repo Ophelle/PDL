@@ -30,51 +30,20 @@
  		 					 <input type="radio" name="FeatureLinux" value="oui">oui <input type="radio" name="FeatureLinux" value = "non">non </br>
 									
 						</br>	
-							<label>Language :</label></br>
+							<label>Language : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >English</br>	
- 		 									<input type="checkbox" name="Feature" > French</br>	
-								
 						</br>	
-							<label>Modules :</label></br>
+							<label>Modules : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Charting</br>	
- 		 									<input type="checkbox" name="Feature" > Scheduling</br>	
- 		 									<input type="checkbox" name="Feature" > Billing</br>	
- 		 									<input type="checkbox" name="Feature" > Imaging</br>	
- 		 									<input type="checkbox" name="Feature" > Insurance Management</br>	
- 		 									<input type="checkbox" name="Feature" > Perio Charting</br>	
- 		 									<input type="checkbox" name="Feature" > Document Management</br>	
- 		 									<input type="checkbox" name="Feature" > Reporting & Additional e-Services Modules Are Available</br>	
- 		 									<input type="checkbox" name="Feature" >Calendar </br>	
- 		 									<input type="checkbox" name="Feature" > Appointments</br>	
- 		 									<input type="checkbox" name="Feature" > Account</br>	
- 		 									<input type="checkbox" name="Feature" > Treatment Plan</br>	
- 		 									<input type="checkbox" name="Feature" > Patient Chart</br>	
- 		 									<input type="checkbox" name="Feature" > Documents</br>	
- 		 									<input type="checkbox" name="Feature" > Management</br>	
- 		 									<input type="checkbox" name="Feature" > Multiple language packs.</br>	
-								
 						</br>	
-							<label>Database :</label></br>
+							<label>Database : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >MySQL</br>	
- 		 									<input type="checkbox" name="Feature" > C# .Net</br>	
-								
 						</br>	
 							<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Country :</label></br>
+							<label>Country : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Canada</br>	
- 		 									<input type="checkbox" name="Feature" > USA</br>	
- 		 									<input type="checkbox" name="Feature" > Netherlands</br>	
- 		 									<input type="checkbox" name="Feature" >Australia</br>	
- 		 									<input type="checkbox" name="Feature" > UK</br>	
- 		 									<input type="checkbox" name="Feature" >USA</br>	
- 		 									<input type="checkbox" name="Feature" > Canada</br>	
-								
 						</br>	
 							<label>Package : </label></br> <input id="7" type="text" name="Feature"></br>
 							
@@ -92,14 +61,30 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Proprietary','GPL','']
+            local : ['English','','English, French','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Open Dental','Dentrix','SoftDent','Power Practice Px','PracticeWorks','axiUm','']
+            local : ['','Charting, Scheduling, Billing, Imaging, Insurance Management, Perio Charting, Document Management, Reporting & Additional e-Services Modules Are Available','Calendar / Appointments, Account, Treatment Plan, Patient Chart, Documents, Management, Multiple language packs.','']
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['Oracle','C-tree','MySQL, C# .Net','c-treeACE','','MySQL','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Proprietary','GPL','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['Canada, USA, Netherlands','Australia, Netherlands, UK, USA','Canada','USA, Canada','USA','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['Open Dental','Dentrix','SoftDent','Power Practice Px','PracticeWorks','axiUm','']
+          });
+          $("#7").typeahead({
+            name:"list7",
             local : ['Stand-alone','Stand-Alone','']
           });
     </script>

@@ -26,56 +26,52 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>WebKit : </label></br> <input id="1" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Function :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Used to create multiple layers of text and images which lay on top of each other in a given order</br>	
- 		 									<input type="checkbox" name="Feature" >Used to display a scrolling</br>	
- 		 									<input type="checkbox" name="Feature" > marquee-like text.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+ 		 					<label>WebKit :</label></br>
+ 		 					 <input type="radio" name="FeatureWebKit" value="oui">oui <input type="radio" name="FeatureWebKit" value = "non">non </br>
+									
 						</br>	
-							<label>Presto : </label></br> <input id="3" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>KHTML : </label></br> <input id="4" type="text" name="Feature"></br>
+							<label>Function : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Alternative solution :</label></br>
+ 		 					<label>Presto :</label></br>
+ 		 					 <input type="radio" name="FeaturePresto" value="oui">oui <input type="radio" name="FeaturePresto" value = "non">non </br>
+									
+						</br>	
+ 		 					<label>KHTML :</label></br>
+ 		 					 <input type="radio" name="FeatureKHTML" value="oui">oui <input type="radio" name="FeatureKHTML" value = "non">non </br>
+									
+						</br>	
+							<label>Alternative solution : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Javascript</br>	
- 		 									<input type="checkbox" name="Feature" > CSS</br>	
- 		 									<input type="checkbox" name="Feature" >JavaScript</br>	
- 		 									<input type="checkbox" name="Feature" > CSS3</br>	
- 		 									<input type="checkbox" name="Feature" >CSS</br>	
- 		 									<input type="checkbox" name="Feature" > AJAX</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Trident : </label></br> <input id="6" type="number" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Tag : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Introduced by :</label></br>
+							<label>Introduced by : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Internet Explorer</br>	
- 		 									<input type="checkbox" name="Feature" > WebTV</br>	
- 		 									<input type="checkbox" name="Feature" >WebTV</br>	
- 		 									<input type="checkbox" name="Feature" > HTML 3.0</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Gecko : </label></br> <input id="9" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>		<script>
+ 		 					<label>Gecko :</label></br>
+ 		 					 <input type="radio" name="FeatureGecko" value="oui">oui <input type="radio" name="FeatureGecko" value = "non">non </br>
+									
+		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Partial','','Yes','3.1','3.3','']
+            local : ['Placed inside a nobr element to add a line break','Used to create multiple layers of text and images which lay on top of each other in a given order','Adds whitespace in a layout','Used to display a scrolling, marquee-like text.','Inline layers','Prevents any line breaks from occurring within the flow of a text','Used to display a blockquote','Used to allow the addition of comments to HTML documents','Used to add sound to the background of a website','Delimits an XML data island inside an HTML page','Displays an alternative text for browsers which do not recognize the embed tag','Used to display a blinking text','Synonym of img','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['Javascript, CSS','Unicode character zero-width space (U+200B)','JavaScript, CSS3','CSS','!-- ... --','?','CSS, AJAX','Child elements of object used as fallback','audio','img','blockquote','iframe','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['marquee','noembed','bgsound','bq','wbr','comment','nobr','ilayer','xml','spacer','layer','blink','image','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Internet Explorer, WebTV','Netscape','Internet Explorer','Netscape (4 only)','WebTV, HTML 3.0','?','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

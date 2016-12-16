@@ -26,9 +26,13 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>NIC : </label></br> <input id="1" type="number" name="Feature"></br>
+							<label>NIC :</label></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+ 		 									<input type="checkbox" name="Feature" >10</br>	
+ 		 									<input type="checkbox" name="Feature" >100</br>	
+ 		 									<input type="checkbox" name="Feature" >1000</br>	
+ 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
 							<label>RAID :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >0</br>	
@@ -37,27 +41,19 @@
  		 									<input type="checkbox" name="Feature" >5</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Features / notes :</label></br>
+							<label>Features / notes : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Features </br>	
- 		 									<input type="checkbox" name="Feature" > notes</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>UMI :</label></br>
+							<label>UMI : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >1-</br>	
- 		 									<input type="checkbox" name="Feature" > 2-</br>	
- 		 									<input type="checkbox" name="Feature" > or 4-lane
-2 or 5 GB</br>	
- 		 									<input type="checkbox" name="Feature" >s</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>SD : </label></br> <input id="5" type="number" name="Feature"></br>
-							
+ 		 					<label>SD :</label></br>
+ 		 					 <input type="radio" name="FeatureSD" value="oui">oui <input type="radio" name="FeatureSD" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>						</br>	
-							<label>TDP (W) : </label></br> <input id="6" type="number" name="Feature"></br>
+							<label>TDP (W) : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Codename : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
@@ -65,8 +61,9 @@
 3.0+2.0+1.1 : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>VGA DAC : </label></br> <input id="9" type="number" name="Feature"></br>
-							
+ 		 					<label>VGA DAC :</label></br>
+ 		 					 <input type="radio" name="FeatureVGA DAC" value="oui">oui <input type="radio" name="FeatureVGA DAC" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>						</br>	
 							<label>Model : </label></br> <input id="10" type="text" name="Feature"></br>
 							
@@ -97,23 +94,36 @@ AHCI 1.1</br>
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Hudson-D1','Bolton-D2H','Hudson-M2','Bolton-D2','Hudson-M2T','Codename','Hudson-M3','Hudson-E1','Bolton-E4','Bolton-M3','Hudson-M1','Hudson-D2','Hudson-D3','Hudson-M3L','Bolton-D3','Hudson-D4','Bolton-D4','']
+            local : ['','4-lane PCIe 2.0','Features / notes','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['4 + 10 + 2','0 + 14 + 2','0 + 8 + 0','2 + 8 + 0','USB
-3.0+2.0+1.1','2 + 10 + 2','','']
+            local : ['×4 Gen. 2 +DP','1-, 2-, or 4-lane
+2 or 5 GB/s','×4 Gen. 1 +DP','','×4 Gen 2','×4 Gen. 1','×4 Gen. 2','UMI','×2 Gen. 1','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['A58','A50M','A68M','A45','A55E','A55','A78','A85X','A55T','A76M','A75','A70M','A88X','A77E','A68H','A60M','Model','']
+            local : ['','TDP (W)','7.6','218-0844014','218-0844016','5.9','100-CG2386','218-0844029-00','100-CG2389','218-0844023','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['No','Up to 3 slots','Up to 4 slots','33 MHz PCI','~920 mW idle','Yes','','']
+            local : ['Hudson-D1','Bolton-D2H','Hudson-M2','Bolton-D2','Hudson-M2T','Codename','Hudson-M3','Hudson-E1','Bolton-E4','Bolton-M3','Hudson-M1','Hudson-D2','Hudson-D3','Hudson-M3L','Bolton-D3','Hudson-D4','Bolton-D4','']
           });
           $("#5").typeahead({
             name:"list5",
+            local : ['4 + 10 + 2','0 + 14 + 2','0 + 8 + 0','2 + 8 + 0','USB
+3.0+2.0+1.1','2 + 10 + 2','','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['A58','A50M','A68M','A45','A55E','A55','A78','A85X','A55T','A76M','A75','A70M','A88X','A77E','A68H','A60M','Model','']
+          });
+          $("#7").typeahead({
+            name:"list7",
+            local : ['No','Up to 3 slots','Up to 4 slots','33 MHz PCI','~920 mW idle','Yes','','']
+          });
+          $("#8").typeahead({
+            name:"list8",
             local : ['','218-0844020-00','Part number','100-CG2293','']
           });
     </script>

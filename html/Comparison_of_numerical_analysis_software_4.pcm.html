@@ -29,38 +29,33 @@
 							<label>First public release : </label></br> <input id="1" type="number" name="Feature"></br>
 							
 						</br>	
-							<label>Language :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >C</br>	
- 		 									<input type="checkbox" name="Feature" > Fortran</br>	
- 		 									<input type="checkbox" name="Feature" >C++</br>	
- 		 									<input type="checkbox" name="Feature" > C#</br>	
- 		 									<input type="checkbox" name="Feature" > FreePascal</br>	
- 		 									<input type="checkbox" name="Feature" > VBA</br>	
- 		 									<input type="checkbox" name="Feature" >C#</br>	
- 		 									<input type="checkbox" name="Feature" > F#</br>	
- 		 									<input type="checkbox" name="Feature" > C</br>	
- 		 									<input type="checkbox" name="Feature" >Java</br>	
- 		 									<input type="checkbox" name="Feature" > Android</br>	
- 		 									<input type="checkbox" name="Feature" > Java</br>	
- 		 									<input type="checkbox" name="Feature" > Python</br>	
-								
-						</br>	
-							<label>License :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >MIT</br>	
- 		 									<input type="checkbox" name="Feature" >X11</br>	
-								
-						</br>	
-							<label>Latest stable version : </label></br> <input id="4" type="number" name="Feature"></br>
+							<label>Language : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Creator :</label></br>
+							<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >C. Rüegg</br>	
- 		 									<input type="checkbox" name="Feature" > M. Cuda</br>	
- 		 									<input type="checkbox" name="Feature" > et al.</br>	
+						</br>	
+							<label>Latest stable version :</label></br>
+							
+ 		 									<input type="checkbox" name="Feature" >1.3.14 </br>	
+ 		 									<input type="checkbox" name="Feature" > 08.2008</br>	
+ 		 									<input type="checkbox" name="Feature" >2.6.0 </br>	
+ 		 									<input type="checkbox" name="Feature" > 06.2010</br>	
+ 		 									<input type="checkbox" name="Feature" >1.14 </br>	
+ 		 									<input type="checkbox" name="Feature" > 03.2010</br>	
+ 		 									<input type="checkbox" name="Feature" >3.900 </br>	
+ 		 									<input type="checkbox" name="Feature" > 2013</br>	
+ 		 									<input type="checkbox" name="Feature" >5.0 </br>	
+ 		 									<input type="checkbox" name="Feature" > February 2011</br>	
+ 		 									<input type="checkbox" name="Feature" >3.0 </br>	
+ 		 									<input type="checkbox" name="Feature" > 06.2014</br>	
+ 		 									<input type="checkbox" name="Feature" >0.14.0 </br>	
+ 		 									<input type="checkbox" name="Feature" > May 3</br>	
+ 		 									<input type="checkbox" name="Feature" > 2014</br>	
 								
+						</br>	
+							<label>Creator : </label></br> <input id="5" type="text" name="Feature"></br>
+							
 						</br>	
 							<label>Cost (USD) : </label></br> <input id="6" type="text" name="Feature"></br>
 							
@@ -87,6 +82,18 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['C, Fortran','C++, C#, FreePascal, VBA','C#, F#, C','Python','C#','Java, Android','C++','C','C, Java, C#, Fortran, Python','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['Proprietary','MPL','Free for non-commercial use','GPL','MIT/X11','BSD','LGPL','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['CenterSpace Software','Rogue Wave Software','jwork.org (S.Chekanov)','C. Rüegg, M. Cuda, et al.','GNU Project','scipy.org community','The Numerical Algorithms Group','H. Kutschbach','Sergey Bochkanov','NICTA','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['Free','Not free','$995','']
           });
     </script>

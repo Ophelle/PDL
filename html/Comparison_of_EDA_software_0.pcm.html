@@ -49,35 +49,29 @@
  		 									<input type="checkbox" name="Feature" >VLSI circuit design tool with connectivity at all levels. Can also be used for schematic entry and PCB design.</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Architecture :</label></br>
+							<label>Architecture : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >*BSD</br>	
- 		 									<input type="checkbox" name="Feature" > Java</br>	
- 		 									<input type="checkbox" name="Feature" > Linux</br>	
- 		 									<input type="checkbox" name="Feature" > Mac</br>	
- 		 									<input type="checkbox" name="Feature" > Windows</br>	
- 		 									<input type="checkbox" name="Feature" >Linux</br>	
- 		 									<input type="checkbox" name="Feature" > Solaris</br>	
- 		 									<input type="checkbox" name="Feature" > NetBSD</br>	
- 		 									<input type="checkbox" name="Feature" > FreeBSD</br>	
- 		 									<input type="checkbox" name="Feature" > w32</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Autorouter :</label></br>
+							<label>Autorouter : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Built-in</br>	
- 		 									<input type="checkbox" name="Feature" > or FreeRouting</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Name : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['GPL','GNU GPL','BSD license','']
+            local : ['w32','*BSD, Java','*BSD, Linux, Mac','Linux','*BSD, Windows, Linux, Mac','Posix','Linux, Solaris, Mac, NetBSD, FreeBSD, w32','','Unix','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['GPL','GNU GPL','BSD license','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Yes','','Built-in, or FreeRouting','no','n/a','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['Oregano','Icarus Verilog','Quite Universal Circuit Simulator','KTechLab','Verilator','gEDA','Electric','KiCad','XCircuit','FreePCB','Magic','']
           });
     </script>

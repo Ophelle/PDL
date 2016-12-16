@@ -26,21 +26,11 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Plasma :</label></br>
+							<label>Plasma : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >60 fps typically</br>	
- 		 									<input type="checkbox" name="Feature" > some can do 120 fps;
-internally</br>	
- 		 									<input type="checkbox" name="Feature" > display refreshed at e.g. 480 or 600 Hz</br>	
- 		 									<input type="checkbox" name="Feature" >Screen-door effects are more noticeable than LCD when up close</br>	
- 		 									<input type="checkbox" name="Feature" > or on larger sizes;</br>	
- 		 									<input type="checkbox" name="Feature" >High altitude pressure difference may cause poor function or buzzing noises</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Parameter :</label></br>
+							<label>Parameter : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Energy consumption and heat generation</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>CRT :</label></br>
 							
@@ -62,16 +52,22 @@ internally</br>
 requires skilled convergence calibration and adjustments for geographic location changes</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>LCD :</label></br>
+							<label>LCD : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >1–8 ms typical (according to manufacturer data)</br>	
- 		 									<input type="checkbox" name="Feature" > older units could be as slow as 35 ms</br>	
- 		 									<input type="checkbox" name="Feature" >Depends; as of 2013</br>	
- 		 									<input type="checkbox" name="Feature" > most LCDs use PWM (strobing) to dim the backlight</br>	
- 		 									<input type="checkbox" name="Feature" >The LCD grid can mask effects of spatial and grayscale quantization</br>	
- 		 									<input type="checkbox" name="Feature" > creating the illusion of higher image quality.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['60 fps typically, some can do 120 fps;
+internally, display refreshed at e.g. 480 or 600 Hz','','Up to 150"(3.8m)','Screen-door effects are more noticeable than LCD when up close, or on larger sizes;','Emits strong radio-frequency electromagnetic radiation','High altitude pressure difference may cause poor function or buzzing noises','Varies with brightness but usually higher than LCD','68 × 10','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['Response time','Color depth','Size','Environmental influences','Frame rate','Maintenance','Energy consumption and heat generation','Other','Electro-magnetic radiation emission','Flicker','Contrast','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['','1–8 ms typical (according to manufacturer data), older units could be as slow as 35 ms','Depends; as of 2013, most LCDs use PWM (strobing) to dim the backlight','Low','The LCD grid can mask effects of spatial and grayscale quantization, creating the illusion of higher image quality.','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

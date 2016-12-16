@@ -29,20 +29,23 @@
 							<label>C++ : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Intent :</label></br>
+							<label>Intent : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Name a procedure or function</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>ALGOL 68 :</label></br>
+							<label>ALGOL 68 : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >op ↑ = (real x</br>	
- 		 									<input type="checkbox" name="Feature" >y) real: x**y;</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['','N/A','}','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['','or simply:','prio ↑ = 9;','op ↑ = (real x,y) real: x**y;','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Duplication by assignment','Assign a value 888 to a variable x','Name a new union type','Prefix "substr" to a variable str','Compare value referenced by two pointers','Allocate a variable from the heap','Compare two values','Name a new operator','Name a new type','Procedure default parameters','Displacement operator - ALGOL 68C only','Compare address of two pointers','Name a new record type','Set priority on a new operator','Initialise a variable','Name a procedure or function','Append "substr" to a variable str','Define a constant','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

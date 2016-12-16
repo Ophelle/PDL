@@ -32,15 +32,10 @@
 							<label>WebKit : </label></br> <input id="2" type="number" name="Feature"></br>
 							
 						</br>	
-							<label>Function :</label></br>
+							<label>Function : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Designates that all HTML be ignored</br>	
- 		 									<input type="checkbox" name="Feature" > and to display the page as is</br>	
- 		 									<input type="checkbox" name="Feature" >Similar to pre and plaintext</br>	
- 		 									<input type="checkbox" name="Feature" > but ignores all HTML within and displays as is</br>	
-								
 						</br>	
-							<label>Presto : </label></br> <input id="4" type="number" name="Feature"></br>
+							<label>Presto : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>KHTML : </label></br> <input id="5" type="text" name="Feature"></br>
@@ -75,14 +70,22 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','Partial','','125','3.3','']
+            local : ['Sets font styles','Menu list','Strike-through','Displays preformatted text','Applies font styles','Centers contents','Designates that all HTML be ignored, and to display the page as is','Underline','Similar to pre and plaintext, but ignores all HTML within and displays as is','Directory list','Insert an applet','Adds a search field','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['xmp','basefont','listing','center','menu','s','applet','font','strike','u','plaintext','dir','isindex','']
+            local : ['','Yes','1.0','3.3','']
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['Yes','Partial','','125','3.3','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['xmp','basefont','listing','center','menu','s','applet','font','strike','u','plaintext','dir','isindex','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['?','Internet Explorer','HotJava','Netscape','IETF','']
           });
     </script>

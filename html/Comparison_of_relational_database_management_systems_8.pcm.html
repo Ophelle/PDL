@@ -26,48 +26,30 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Trigger : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Function  : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>External routine  : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Cursor : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Data Domain : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Procedure  : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Yes','No','Yes ','?','Trigger','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Yes','No','Yes?','Yes ','Function ','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Yes','Yes ','Yes  ','External routine ','No','?','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['No','Yes','Cursor','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes (2000 and beyond)','No','Yes','Yes via CHECK CONSTRAINT','Yes via RANGE CHECK','Data Domain','No  ','Yes via CHECK','?','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Yes','Yes ','No','Yes, But single DML/DDL Operation','Yes?','Procedure ','']
-          });
+ 		 					<label>Trigger :</label></br>
+ 		 					 <input type="radio" name="FeatureTrigger" value="oui">oui <input type="radio" name="FeatureTrigger" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Function  :</label></br>
+ 		 					 <input type="radio" name="FeatureFunction " value="oui">oui <input type="radio" name="FeatureFunction " value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>External routine  :</label></br>
+ 		 					 <input type="radio" name="FeatureExternal routine " value="oui">oui <input type="radio" name="FeatureExternal routine " value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Cursor :</label></br>
+ 		 					 <input type="radio" name="FeatureCursor" value="oui">oui <input type="radio" name="FeatureCursor" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Data Domain :</label></br>
+ 		 					 <input type="radio" name="FeatureData Domain" value="oui">oui <input type="radio" name="FeatureData Domain" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Procedure  :</label></br>
+ 		 					 <input type="radio" name="FeatureProcedure " value="oui">oui <input type="radio" name="FeatureProcedure " value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

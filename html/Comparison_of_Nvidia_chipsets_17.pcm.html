@@ -51,12 +51,10 @@
 							<label>Sound : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>AGP :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >AGP 3.0 533 MT</br>	
- 		 									<input type="checkbox" name="Feature" >s</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
+ 		 					<label>AGP :</label></br>
+ 		 					 <input type="radio" name="FeatureAGP" value="oui">oui <input type="radio" name="FeatureAGP" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Fabrication
 process (nm) : </label></br> <input id="6" type="text" name="Feature"></br>
 							
@@ -78,13 +76,8 @@ Frequency (MHz) :</label></br>
 							<label>PCI : </label></br> <input id="10" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Model :</label></br>
+							<label>Model : </label></br> <input id="11" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >nForce Professional 2200 and 2050</br>	
- 		 									<input type="checkbox" name="Feature" >nForce3 Professional 150</br>	
- 		 									<input type="checkbox" name="Feature" >250</br>	
- 		 									<input type="checkbox" name="Feature" >nForce Professional 3600 and 3050</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>LAN :</label></br>
 							
@@ -119,9 +112,14 @@ RAID 0</br>
 							<label>Notes : </label></br> <input id="16" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Release Date : </label></br> <input id="17" type="number" name="Feature"></br>
+							<label>Release Date :</label></br>
 							
- 		 								 		<input type="text"/></br>		<script>
+ 		 									<input type="checkbox" name="Feature" >01</br>	
+ 		 									<input type="checkbox" name="Feature" >2005</br>	
+ 		 									<input type="checkbox" name="Feature" >08</br>	
+ 		 									<input type="checkbox" name="Feature" >2003</br>	
+ 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['8 Ports Rev 2.0','10 Ports Rev 2.0','']
@@ -152,10 +150,14 @@ RAID 0</br>
           });
           $("#8").typeahead({
             name:"list8",
-            local : ['2 Ports UDMA 133','1 Ports UDMA 133','']
+            local : ['nForce Professional 3400 MCP','nForce Professional 2200 and 2050','nForce Professional 2200 MCP','nForce Professional 3600 MCP','nForce3 Professional 150/250','nForce Professional 3600 and 3050','']
           });
           $("#9").typeahead({
             name:"list9",
+            local : ['2 Ports UDMA 133','1 Ports UDMA 133','']
+          });
+          $("#10").typeahead({
+            name:"list10",
             local : ['','']
           });
     </script>

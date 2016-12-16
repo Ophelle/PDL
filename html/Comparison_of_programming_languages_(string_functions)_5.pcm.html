@@ -26,32 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Languages :</label></br>
+							<label>Languages : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >C++ (STL)</br>	
- 		 									<input type="checkbox" name="Feature" > C#</br>	
- 		 									<input type="checkbox" name="Feature" > D</br>	
- 		 									<input type="checkbox" name="Feature" > Go</br>	
- 		 									<input type="checkbox" name="Feature" > JavaScript</br>	
- 		 									<input type="checkbox" name="Feature" > Python</br>	
- 		 									<input type="checkbox" name="Feature" > PHP</br>	
- 		 									<input type="checkbox" name="Feature" > Ruby</br>	
- 		 									<input type="checkbox" name="Feature" > Swift</br>	
- 		 									<input type="checkbox" name="Feature" > Ya</br>	
- 		 									<input type="checkbox" name="Feature" >PL</br>	
- 		 									<input type="checkbox" name="Feature" >I</br>	
- 		 									<input type="checkbox" name="Feature" >Pascal</br>	
- 		 									<input type="checkbox" name="Feature" > Object Pascal (Delphi)</br>	
- 		 									<input type="checkbox" name="Feature" > OCaml</br>	
- 		 									<input type="checkbox" name="Feature" > Seed7</br>	
- 		 									<input type="checkbox" name="Feature" > Standard ML</br>	
- 		 									<input type="checkbox" name="Feature" > BASIC</br>	
- 		 									<input type="checkbox" name="Feature" > VB</br>	
- 		 									<input type="checkbox" name="Feature" > VB .NET</br>	
- 		 									<input type="checkbox" name="Feature" > F#</br>	
- 		 									<input type="checkbox" name="Feature" >C</br>	
- 		 									<input type="checkbox" name="Feature" > Java</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Format :</label></br>
 							
@@ -124,6 +100,10 @@
  		 									<input type="checkbox" name="Feature" > >= as well as worded equivalents</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['REXX','Scheme','Smalltalk','Erlang','Cobra','Scheme (SRFI 13)','Fortran.','Common Lisp','Ada','ISLISP','Perl','Lua','C++ (STL), C#, D, Go, JavaScript, Python, PHP, Ruby, Swift, Ya','ALGOL 68','COBOL','PL/I','Pascal, Object Pascal (Delphi), OCaml, Seed7, Standard ML, BASIC, VB, VB .NET, F#','C, Java','Haskell','Windows PowerShell','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

@@ -26,35 +26,17 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Sample Rate :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >32</br>	
- 		 									<input type="checkbox" name="Feature" > 44.1</br>	
- 		 									<input type="checkbox" name="Feature" > 48 kHz</br>	
- 		 									<input type="checkbox" name="Feature" >8</br>	
- 		 									<input type="checkbox" name="Feature" > 11.025</br>	
- 		 									<input type="checkbox" name="Feature" > 16</br>	
- 		 									<input type="checkbox" name="Feature" > 22.05</br>	
- 		 									<input type="checkbox" name="Feature" > 32</br>	
- 		 									<input type="checkbox" name="Feature" > (48) kHz</br>	
- 		 									<input type="checkbox" name="Feature" >16</br>	
- 		 									<input type="checkbox" name="Feature" > 24 kHz</br>	
- 		 									<input type="checkbox" name="Feature" > 48</br>	
- 		 									<input type="checkbox" name="Feature" > 88.2</br>	
- 		 									<input type="checkbox" name="Feature" > 96 kHz</br>	
- 		 									<input type="checkbox" name="Feature" > 16 kHz</br>	
- 		 									<input type="checkbox" name="Feature" > 12</br>	
- 		 									<input type="checkbox" name="Feature" > 24</br>	
- 		 									<input type="checkbox" name="Feature" > 32 kHz</br>	
- 		 									<input type="checkbox" name="Feature" > 37.8</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>CBR : </label></br> <input id="2" type="text" name="Feature"></br>
+							<label>Sample Rate : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Multichannel : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>CBR :</label></br>
+ 		 					 <input type="radio" name="FeatureCBR" value="oui">oui <input type="radio" name="FeatureCBR" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Multichannel :</label></br>
+ 		 					 <input type="radio" name="FeatureMultichannel" value="oui">oui <input type="radio" name="FeatureMultichannel" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Bit rate :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >292 kbit</br>	
@@ -157,56 +139,40 @@
  		 									<input type="checkbox" name="Feature" >s and up in lossy mode (for CD audio)</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>VBR : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>VBR :</label></br>
+ 		 					 <input type="radio" name="FeatureVBR" value="oui">oui <input type="radio" name="FeatureVBR" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Audio compression format : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Stereo : </label></br> <input id="7" type="text" name="Feature"></br>
+ 		 					<label>Stereo :</label></br>
+ 		 					 <input type="radio" name="FeatureStereo" value="oui">oui <input type="radio" name="FeatureStereo" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Algorithm : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Algorithm :</label></br>
+							<label>Latency : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Prediction</br>	
- 		 									<input type="checkbox" name="Feature" > Quantization</br>	
- 		 									<input type="checkbox" name="Feature" >MDCT</br>	
- 		 									<input type="checkbox" name="Feature" > Hybrid Subband</br>	
- 		 									<input type="checkbox" name="Feature" >LP</br>	
- 		 									<input type="checkbox" name="Feature" > MDCT</br>	
- 		 									<input type="checkbox" name="Feature" > Hybrid Subband (AAC-HE)</br>	
- 		 									<input type="checkbox" name="Feature" >Derived from PT716plus</br>	
- 		 									<input type="checkbox" name="Feature" > MLT</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Latency :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >25</br>	
- 		 									<input type="checkbox" name="Feature" > 40 ms</br>	
- 		 									<input type="checkbox" name="Feature" >33</br>	
- 		 									<input type="checkbox" name="Feature" > 63 ms</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','?','Yes/ABR','Yes (4:1)','']
+            local : ['44.1 kHz','8 kHz','16 kHz','32, 44.1, 48 kHz','8, 11.025, 16, 22.05, 32, 44.1, 48 kHz','8, 16, 32, (48) kHz','Varies (see article)','32 kHz','16, 22.05, 24 kHz','8–48 kHz','8–192 kHz','8, 11.025, 16, 22.05, 32, 44.1, 48, 88.2, 96 kHz','48 kHz','1 Hz to 16.777216 MHz','24–48 kHz (stereo)','8, 16 kHz','8, 11.025, 12, 16, 22.05, 24, 32, 44.1, 48 kHz','16, 32 kHz','1 Hz to 200 kHz','8, 12, 16, 24 kHz','32, 37.8, 44.1, 48 kHz','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes: Up to 255 channels','No','Yes: Up to 6 channels','?','Yes: Up to 256 channels','Yes: Up to 48 channels','Yes','Yes: Up to 8 channels','Yes: up to 5 full range audio channels and an LFE-channel with MPEG Multichannel','Yes: At least 8 channels, expandable','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','Yes','Yes: but decoders are not required to support it','?','']
-          });
-          $("#4").typeahead({
-            name:"list4",
             local : ['AMR-WB+','ATRAC1','Windows Media Audio Standard','Siren 14','WavPack Lossy','apt-X','RealAudio','AMR','iLBC','GSM-HR','Vorbis (Ogg)','MP3 (MPEG-1, 2, 2.5 Audio Layer III)','AC3','GSM-FR','HVXC','Windows Media Audio Pro','iSAC','AMBE','AAC','Opus','BroadVoice (BV16, BV32)','VMR-WB','ATRAC3plus','Siren 7','Speex','AMR-WB
 (G.722.2)','Codec2','MPEG-2 Audio Layer II (MP2)','Siren 22','MPEG-1 Audio Layer II (MP2)','Musepack','SILK','ATRAC3','GSM-EFR','']
           });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes','Yes: Intensity','Yes: Dual, Mid/Side, Intensity','?','No','Yes: Dual, Lossless, Phase, Point (Intensity)','Yes: Dual, Intensity','Yes: Dual (LP2), Mid/Side (LP4)','Yes: Dual, Mid/Side, Intensity, Parametric','Yes: Dual Only','Yes: only in MPEG-4 Part 12 container','']
+          $("#3").typeahead({
+            name:"list3",
+            local : ['?','MDCT','Subband','LTP','Transform coding','ACELP','MLT','Prediction, Quantization','MDCT-Hybrid Subband','MDCT, Hybrid Subband','LP, MDCT','Speech','RPE-LTP','VSELP','Two-Stage Noise Feedback Coding (TSNFC)','Block Independent LPC','MDCT, Hybrid Subband (AAC-HE)','Derived from PT716plus, MLT','CELP','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['20–30 ms','5–66.5 ms','>100 ms','20–40 ms','5 ms','?','','60–90 ms','40 ms','25 ms','Varies','40.6 ms','36 ms','30 ms (NB)
+34 ms (WB)','20–405 ms','33.75 ms','25, 40 ms','33, 63 ms','2 ms','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

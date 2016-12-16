@@ -26,76 +26,51 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Maximum volume size :</label></br>
+							<label>Maximum volume size : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >2 GB or 4 GB</br>	
- 		 									<input type="checkbox" name="Feature" >512 MB or 4 GB</br>	
- 		 									<input type="checkbox" name="Feature" >64 ZB</br>	
- 		 									<input type="checkbox" name="Feature" > 512 TB recommended</br>	
- 		 									<input type="checkbox" name="Feature" >140 kB DOS 3.3 (assuming standard 35 tracks)
-113.75 kB DOS 3.1</br>	
- 		 									<input type="checkbox" name="Feature" > 3.2</br>	
- 		 									<input type="checkbox" name="Feature" >1 GB</br>	
- 		 									<input type="checkbox" name="Feature" > then 2 TB</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>File system :</label></br>
+							<label>File system : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >CP</br>	
- 		 									<input type="checkbox" name="Feature" >M file system</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Maximum filename length : </label></br> <input id="3" type="number" name="Feature"></br>
+							<label>Maximum filename length : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Maximum pathname length :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >64 B</br>	
- 		 									<input type="checkbox" name="Feature" > including slashes</br>	
- 		 									<input type="checkbox" name="Feature" >30 B</br>	
- 		 									<input type="checkbox" name="Feature" > no subdirectories (105 files per disk)</br>	
- 		 									<input type="checkbox" name="Feature" >32</br>	
- 		 									<input type="checkbox" name="Feature" >767 Unicode characters in each path component</br>	
- 		 									<input type="checkbox" name="Feature" >DEVICE:FILNAM.EXT[PROJECT</br>	
- 		 									<input type="checkbox" name="Feature" >PROGRM] = 7 + 10 + 15 = 32; + 5*7 for SFDs = 67</br>	
- 		 									<input type="checkbox" name="Feature" >1</br>	
- 		 									<input type="checkbox" name="Feature" >023 bytes</br>	
- 		 									<input type="checkbox" name="Feature" >767 Unicode characters with each path component (directory or filename) commonly up to 255 characters long</br>	
- 		 									<input type="checkbox" name="Feature" >4</br>	
- 		 									<input type="checkbox" name="Feature" >096 bytes</br>	
- 		 									<input type="checkbox" name="Feature" >2</br>	
- 		 									<input type="checkbox" name="Feature" >048</br>	
- 		 									<input type="checkbox" name="Feature" >16 "user areas"</br>	
- 		 									<input type="checkbox" name="Feature" > no subdirectories</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Maximum file size :</label></br>
+							<label>Maximum pathname length : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >512 MB or 4 GB</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Allowable characters in directory entries :</label></br>
+							<label>Maximum file size : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >A–Z</br>	
- 		 									<input type="checkbox" name="Feature" > 0–9</br>	
- 		 									<input type="checkbox" name="Feature" >Any byte except NUL and </br>	
- 		 									<input type="checkbox" name="Feature" >Any byte except NUL</br>	
- 		 									<input type="checkbox" name="Feature" > </br>	
- 		 									<input type="checkbox" name="Feature" > and @</br>	
- 		 									<input type="checkbox" name="Feature" > 0–9
-Period is directory separator</br>	
- 		 									<input type="checkbox" name="Feature" >Any byte except for values 0-31</br>	
- 		 									<input type="checkbox" name="Feature" > 127 (DEL) and:  (lowcase a-z are stored as A-Z). With VFAT LFN any Unicode except NUL</br>	
- 		 									<input type="checkbox" name="Feature" >case sensitive</br>	
- 		 									<input type="checkbox" name="Feature" > in UTF-8 (any Unicode codepoint)</br>	
- 		 									<input type="checkbox" name="Feature" >Any byte except  and NUL</br>	
- 		 									<input type="checkbox" name="Feature" >A-Z</br>	
- 		 									<input type="checkbox" name="Feature" > a-z</br>	
- 		 									<input type="checkbox" name="Feature" > 0-9</br>	
- 		 									<input type="checkbox" name="Feature" > and period</br>	
- 		 									<input type="checkbox" name="Feature" > $</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
+							<label>Allowable characters in directory entries : </label></br> <input id="6" type="text" name="Feature"></br>
+							
 		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['226 MB','16 TB','32 TB','2 GB or 4 GB','2 TB','Unknown|-','32 MB','8 EB','64 MB','8 MB to 512 MB','2 TB (16 TB)','64 TB','512 MB or 4 GB','8 TB','256 TB','226 TB','12 GB (approx; 64 * 178 MB)','8 TB (same as ISO 9660:1988)','500 GB Tested','Maximum volume size','128 kB to 64 ZB','1 YB','16 EB','256 ZB','1 EB','16 MB','1 YB with 64 kB cluster size (2 × 64 × 2). Windows stack addressing allows 16 EB','8 ZB','64 ZB, 512 TB recommended','Unknown','2 TB (hard disk), 8 TB (optical disc)','32 PB','4 PB','140 kB DOS 3.3 (assuming standard 35 tracks)
+113.75 kB DOS 3.1, 3.2','1 YB (55 PB tested)','1 TB','2 EB','2 GB','1 GB, then 2 TB','369920 B (578 * 640)','800 kB (approx) per side for 90 min cassette (limited only by tape length)','1 GB (at least)','32 MB (256 MB with 4K sectors and 64 KB clusters)','8 YB (18 PB tested)','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['RT-11','CBM DOS','UFS1','GFS','NILFS','NWFS','ISO 9660:1988','VMFS3','HPFS','High Sierra','UFS2','OCFS','exFAT','ext3','QFS','F2FS','MINIX V1 FS','ODS-5','JFS1','ReFS','V6FS','FAT32','AdvFS','ISO 9660:1999','File system','CP/M file system','NTFS','ReiserFS','Apple ProDOS','FAT12','Joliet ("CDFS")','MINIX V2 FS','PramFS','Elektronika BK tape format','MINIX V3 FS','MicroDOS file system','Lanyard Filesystem','Fossil','ext4','UDF','HFS Plus','FFS','Level-D','BFS','Apple DOS 3.x','ext3cow','Reliance','TexFAT','ext2','IBM Spectrum Scale','Reliance Nitro','HFS','LEAN','FAT16','IBM SFS','MFS','VxFS','XFS','HAMMER','V7FS','JFS','NSS','OCFS2','ZFS','OS4000','DOS (GEC)','FATX','LTFS','Btrfs','Reiser4','VMFS2','Lustre','Acorn ADFS','DECtape','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['255 bytes','128','6.3','4,068 bytes','247 characters','60 bytes','8.8','style="background: #E4E4E4; color: black; vertical-align: middle; text-align: center; " class="unknown table-unknown"|Unknown (207?)','255 characters','3,976 bytes','226 characters','Level 1: 8.3,
+Level 2 & 3: ~ 180','Maximum filename length','64 Unicode characters','Unknown','31 bytes','32,767 Unicode characters (255 Unicode characters in Windows 8/8.1)','42 bytes','4,032 bytes/226 characters','80 bytes','30 bytes','8.3 (255 UCS-2 code units with VFAT LFN)','65535 bytes of UTF-8 characters','16 bytes','14 bytes','255','10 bytes','255 UTF-16 code units','8 bytes','260 bytes','14 or 30 bytes, set at filesystem creation time','15 bytes','8.3','236 bytes','1,024 bytes','255 UTF-8 codepoint','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['No limit defined','64 B, including slashes','Unlimited','DTxN:FILNAM.EXT = 15','Unknown','1024 bytes','30 B, no subdirectories (105 files per disk)','Non-hierarchical','32,767 Unicode characters in each path component','~ 180 bytes?','Maximum pathname length','Only limited by client','DEVICE:FILNAM.EXT[PROJECT,PROGRM] = 7 + 10 + 15 = 32; + 5*7 for SFDs = 67','No path (flat filesystem)','1,023 bytes','32,767 Unicode characters with each path component (directory or filename) commonly up to 255 characters long','260 B','4,096 bytes','2,048','16 "user areas", no subdirectories','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['4 PB','369280 B (577 * 640)','226 TB','4 GB','2 GB (4 GB with LFS','2 GB','3.94 TB','8 TB','64 MB','8 TB (v3.6), 2 GB (v3.5)','2 TB','260 GB','4 GB (Level 1 & 2) to 8 TB (Level 3)','Unknown','64 ZB','8 EB','8 MB','127 PB','32 MB (65536 * 512)','4 GB (same as ISO 9660:1988)','16 EB','64 kB','16 MB','4 TB','8 EB','Maximum file size','2 GB (4 GB with LFS)','16 TB','256 TB','8 TB on x86','32 PB','8 ZB','32 TB','1 GB','512 MB or 4 GB','32 PB (on ext4)','226 MB','32 MB (256 MB)','24 GB (34,359,738,368 words (2-1); 206,158,430,208 SIXBIT bytes)','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['Any byte except NUL','Any byte except NUL and','A–Z, 0–9','Any Unicode except NUL','Any byte except NUL and /','Unknown','Depends on namespace used','Any byte except','Any byte except NUL, / and @','A–Z, 0–9
+Period is directory separator','Any valid Unicode','any byte except:','Any byte except for values 0-31, 127 (DEL) and:  (lowcase a-z are stored as A-Z). With VFAT LFN any Unicode except NUL','Any ISO 8859-1 character except:','All UCS-2 code except','case sensitive, in UTF-8 (any Unicode codepoint)','Allowable characters in directory entries','OS specific','Any byte except  and NUL','ASCII.  Unicode not permitted.','Any Unicode except 0-31','A-Z, a-z, 0-9, and period','Depends on Level','A–Z, 0–9, $','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

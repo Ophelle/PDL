@@ -26,30 +26,18 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Solaris kernel :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Solaris Containers </br>	
- 		 									<input type="checkbox" name="Feature" > Zones</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
+ 		 					<label>Solaris kernel :</label></br>
+ 		 					 <input type="radio" name="FeatureSolaris kernel" value="oui">oui <input type="radio" name="FeatureSolaris kernel" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Kernel Name : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Linux :</label></br>
+							<label>Linux : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Virtio</br>	
- 		 									<input type="checkbox" name="Feature" > Hyper-V (guest only)</br>	
- 		 									<input type="checkbox" name="Feature" > Xen (guest only)</br>	
- 		 									<input type="checkbox" name="Feature" > VMI (guest only)</br>	
- 		 									<input type="checkbox" name="Feature" > kvm-lite</br>	
- 		 									<input type="checkbox" name="Feature" > lguest</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>FreeBSD kernel :</label></br>
+							<label>FreeBSD kernel : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Virtio</br>	
- 		 									<input type="checkbox" name="Feature" > Xen (guest only)</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>DragonFly BSD kernel : </label></br> <input id="5" type="text" name="Feature"></br>
 							
@@ -66,14 +54,22 @@
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['jail','No','vkernel','chroot','']
+            local : ['KVM','UML','chroot','LXC','Virtio, Hyper-V (guest only), Xen (guest only), VMI (guest only), kvm-lite, lguest','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['AppContainers','?','Hyper-V','']
+            local : ['BHyVe (KVM)','jail','chroot','Virtio, Xen (guest only)','?','']
           });
           $("#4").typeahead({
             name:"list4",
+            local : ['jail','No','vkernel','chroot','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['AppContainers','?','Hyper-V','']
+          });
+          $("#6").typeahead({
+            name:"list6",
             local : ['?','chroot','']
           });
     </script>

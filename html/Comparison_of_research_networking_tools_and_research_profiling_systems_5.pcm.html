@@ -32,7 +32,7 @@
 							<label>Comment : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Products : </label></br> <input id="3" type="text" name="Feature"></br>
+							<label>Products : </label></br> <input id="3" type="aaaa" name="Feature"></br>
 							
 						</br>	
 							<label>Journal Impact Factor* : </label></br> <input id="4" type="text" name="Feature"></br>
@@ -41,11 +41,8 @@
 							<label>SNIP and SJR : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Research Networking Tool :</label></br>
+							<label>Research Networking Tool : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Collaborative Partnership </br>	
- 		 									<input type="checkbox" name="Feature" > Profile System</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Citation count : </label></br> <input id="7" type="text" name="Feature"></br>
 							
@@ -53,16 +50,8 @@
 							<label>Altmetrics : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Other :</label></br>
+							<label>Other : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Field-weighted Citation Impact</br>	
- 		 									<input type="checkbox" name="Feature" > Number of Authors</br>	
- 		 									<input type="checkbox" name="Feature" >15+ indicators ranging from h</br>	
- 		 									<input type="checkbox" name="Feature" > g & m indicies</br>	
- 		 									<input type="checkbox" name="Feature" > to Publications in Top Journal Percentiles</br>	
- 		 									<input type="checkbox" name="Feature" > Field-Weighted Citation Impact</br>	
- 		 									<input type="checkbox" name="Feature" > Academic-Corporate Collaboration Impact & Views per Publication</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -74,15 +63,15 @@
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['P28','P17','P36','P3','P9','P40','P38','P2','P37','P22','P25','P32','P39','P42','P33','P8','P23','P13','P5','P41','P12','P1','P35','P24','P20','P4','P19','P27','P15','P11','P29','P16','P14','P43','P18','P34','P21','P6','P10','P30','P26','P31','P44','P7','']
+            local : ['Yes','','No','No (but journals can be entered into the database and their IF indicated)','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['Yes','','No','No (but journals can be entered into the database and their IF indicated)','']
+            local : ['','Yes','No','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['','Yes','No','']
+            local : ['MizzouLinks','CUSP - Columbia University Scientific Profiles','VIVO','Community Academic Profiles - CAP','iAMscientist','Elsevier's Pure (integrated with SciVal Experts)','iamResearcher','EUREKA! Enhancing Student Research','Google Scholar','ERIM Member Profile System (ERIM MIS)','ResearcherID','Faculty Research Information Profile (FRIP)','Digital Vita','MyScienceWork','ReachNC','Symplectic Elements','Collaborative Partnership / Profile System','Epernicus Solutions & Epernicus Network','Lattes Database','Expertise @ Maryland','LinkedIn','Curvita Profile Manager','OSU:pro','Yaffle','Academic Room','Elsevier's SciVal','InCites','McCormick Collaboration Visualization Tool','Pivot','i2iConnect','Profiles','Activity Insight','SciENcv','Loki','GENIUS','C-IKNOW','Life Science Network','HUBzero','Research Accelerator','INDURE','Faculty Scholarly Productivity Index','Faculty Profile System','LatticeGrid','']
           });
           $("#6").typeahead({
             name:"list6",
@@ -91,6 +80,10 @@
           $("#7").typeahead({
             name:"list7",
             local : ['','Yes Can integrate with altmetric data feed','Yes','Yes Is integrated with Altmetric data feed','Yes Recorded Future partnership provides customized newsfeed and instition activity from web content','Yes Views data from ScienceDirect and Scopus','None','Yes (views counts, recommendations, rating scores calculated from anonymous and non-anonymous contributions)','']
+          });
+          $("#8").typeahead({
+            name:"list8",
+            local : ['','Field-weighted Citation Impact, Number of Authors,','15+ indicators ranging from h, g & m indicies, to Publications in Top Journal Percentiles, Field-Weighted Citation Impact, Academic-Corporate Collaboration Impact & Views per Publication','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

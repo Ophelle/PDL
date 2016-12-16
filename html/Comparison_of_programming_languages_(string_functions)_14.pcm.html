@@ -26,32 +26,14 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Languages :</label></br>
+							<label>Languages : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >VB .NET</br>	
- 		 									<input type="checkbox" name="Feature" > C#</br>	
- 		 									<input type="checkbox" name="Feature" > Windows PowerShell</br>	
- 		 									<input type="checkbox" name="Feature" > F#</br>	
- 		 									<input type="checkbox" name="Feature" >C</br>	
- 		 									<input type="checkbox" name="Feature" > C++ (char * only</br>	
- 		 									<input type="checkbox" name="Feature" > returns pointer to character)</br>	
- 		 									<input type="checkbox" name="Feature" >Java</br>	
- 		 									<input type="checkbox" name="Feature" > JavaScript</br>	
- 		 									<input type="checkbox" name="Feature" >PL</br>	
- 		 									<input type="checkbox" name="Feature" >I</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Format : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>If not found :</label></br>
+							<label>If not found : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >returns BOOL: TRUE or FALSE</br>	
- 		 									<input type="checkbox" name="Feature" > and position in REF INT pos.</br>	
- 		 									<input type="checkbox" name="Feature" >evaluate aBlock which is a BlockClosure (or any object understanding value) 
- returns 0 
- returns true or false</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -59,6 +41,16 @@
  position = VERIFY (string, set «, back» «, kind»)','string indexOf: char ifAbsent: aBlock 
  string indexOf: char 
  string includes: char','pos(string, char«, startpos»)','string.indexOf(char«,startpos»)','string.find(char«,startpos»)','(position char string)','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['Seed7','VB .NET, C#, Windows PowerShell, F#','Ruby','Go','Haskell (returns Just index)','ALGOL 68','C, C++ (char * only, returns pointer to character)','Cobra','ISLISP','Smalltalk','D','FreeBASIC','Java, JavaScript','Common Lisp','Fortran','PL/I','OCaml','PHP','C++ (STL)','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['returns nil','raises Not_found','returns -1','returns BOOL: TRUE or FALSE, and position in REF INT pos.','returns 0','returns NIL','evaluate aBlock which is a BlockClosure (or any object understanding value) 
+ returns 0 
+ returns true or false','returns NULL','returns std::string::npos','returns Nothing','returns 0 (positions start at 1)','returns zero','returns false','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

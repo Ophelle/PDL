@@ -26,10 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>John McCain voted for the Family and Medical Leave Act of 1993 which granted workers the right to take 12 weeks of unpaid leave for family medical reasons without being penalized by their employer.  McCain sponsored the Family Friendly Workplace Act which sought to allow employers to provide more flexible work schedules to help balance work and family. :</label></br>
+							<label>John McCain voted for the Family and Medical Leave Act of 1993 which granted workers the right to take 12 weeks of unpaid leave for family medical reasons without being penalized by their employer.  McCain sponsored the Family Friendly Workplace Act which sought to allow employers to provide more flexible work schedules to help balance work and family. : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >John McCain voted for the Family and Medical Leave Act of 1993 which granted workers the right to take 12 weeks of unpaid leave for family medical reasons without being penalized by their employer.  McCain sponsored the Family Friendly Workplace Act which sought to allow employers to provide more flexible work schedules to help balance work and family.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Chuck Baldwin : </label></br> <input id="2" type="text" name="Feature"></br>
 							
@@ -52,18 +50,22 @@
  		 									<input type="checkbox" name="Feature" >Nader promises to repeal the Taft-Hartley Act. He supports an increase in the minimum wage to $10 an hour to give low-wage workers "a fair return for their work". Nader supports family farms and opposes large agribusiness. He is credited with helping pass the Mine Health and Safety Act (1977)</br>	
  		 									<input type="checkbox" name="Feature" > Whistleblower Protection Act (1989)</br>	
  		 									<input type="checkbox" name="Feature" > and OSHA (1970) – all three are fundamental to modern labor protection.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+								
 						</br>	
 							<label>John McCain : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Ralph Nader','Bob Barr e','Cynthia McKinney','']
+            local : ['Barack Obama','John McCain','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Barack Obama','John McCain','']
+            local : ['','John McCain voted for the Family and Medical Leave Act of 1993 which granted workers the right to take 12 weeks of unpaid leave for family medical reasons without being penalized by their employer.  McCain sponsored the Family Friendly Workplace Act which sought to allow employers to provide more flexible work schedules to help balance work and family.','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Ralph Nader','Bob Barr e','Cynthia McKinney','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

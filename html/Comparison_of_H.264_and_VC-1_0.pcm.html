@@ -29,16 +29,15 @@
 							<label>VC-1 : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>H.264 :</label></br>
+							<label>H.264 : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Not free.  Reference decoder</br>	
- 		 									<input type="checkbox" name="Feature" > comes with external documentation.</br>	
- 		 									<input type="checkbox" name="Feature" >Supports 4:2:0 compression </br>	
- 		 									<input type="checkbox" name="Feature" > color space</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['Not free.  Reference decoder, comes with external documentation.','Similar','Supports 4:2:0 compression / color space','Designed to offer very high image quality with excellent compression efficiency','']
+          });
+          $("#2").typeahead({
+            name:"list2",
             local : ['Licensing costs','Documentation','Goals','Example industry use','']
           });
     </script>

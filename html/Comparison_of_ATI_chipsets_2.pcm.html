@@ -40,33 +40,22 @@
 							<label>Codename : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Processors Supported :</label></br>
+							<label>Processors Supported : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Pentium 4-M HT</br>	
- 		 									<input type="checkbox" name="Feature" > Pentium 4</br>	
- 		 									<input type="checkbox" name="Feature" > Pentium M</br>	
- 		 									<input type="checkbox" name="Feature" >Pentium 4</br>	
- 		 									<input type="checkbox" name="Feature" > Core 2</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Year : </label></br> <input id="4" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>NB-SB Interface :</label></br>
+							<label>NB-SB Interface : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >A-Link</br>	
- 		 									<input type="checkbox" name="Feature" >PCI</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Fabrication process (nm) : </label></br> <input id="6" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Crossfire Enabled :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >No</br>	
- 		 									<input type="checkbox" name="Feature" > AGP 8x</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
+ 		 					<label>Crossfire Enabled :</label></br>
+ 		 					 <input type="radio" name="FeatureCrossfire Enabled" value="oui">oui <input type="radio" name="FeatureCrossfire Enabled" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Model : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
@@ -110,6 +99,14 @@ RC410','RS200M+','RS200M revA','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['Processors Supported','Pentium 4-M HT, Pentium 4, Pentium M','Pentium 4 (Northwood, Prescott)','','Pentium 4-M','Pentium M','Pentium 4, Core 2','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['','NB-SB Interface','A-Link/PCI','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['ATI Radeon 9100 PRO IGP','','ATI Radeon 9000 PRO IGP','IGP 7000 (IGP 360)','IGP 330','ATI Radeon Xpress 1150 (originally named ATI Radeon Xpress 200 for Intel)
 Intel Essential Series D101GCC/D102GCC (Grand Country)','ATI Radeon Xpress 1250','IGP 340M','IGP 345M','ATI Radeon CrossFire Xpress 3200','IGP 340','IGP 350M','Model','']
           });

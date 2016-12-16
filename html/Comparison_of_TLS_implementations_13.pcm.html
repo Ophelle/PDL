@@ -26,19 +26,18 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>DEFLATE
-(insecure) : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>DEFLATE
+(insecure) :</label></br>
+ 		 					 <input type="radio" name="FeatureDEFLATE
+(insecure)" value="oui">oui <input type="radio" name="FeatureDEFLATE
+(insecure)" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Implementation : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Disabled by default','DEFLATE','Yes','']
-          });
-          $("#2").typeahead({
-            name:"list2",
             local : ['Secure Transport','GnuTLS','RSA BSAFE','NSS','MatrixSSL','Botan','LibreSSL','mbed TLS','SChannel','OpenSSL','wolfSSL','cryptlib','SharkSSL','JSSE','Implementation','']
           });
     </script>

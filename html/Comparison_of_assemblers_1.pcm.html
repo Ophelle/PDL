@@ -26,11 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Host platform :</label></br>
+							<label>Host platform : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Commodore Amiga</br>	
- 		 									<input type="checkbox" name="Feature" > Atari ST</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Instruction set : </label></br> <input id="2" type="text" name="Feature"></br>
 							
@@ -51,14 +48,18 @@
  		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Motorola 680x0','']
+            local : ['Commodore Amiga','Commodore Amiga, Atari ST','Atari ST','Apple Macintosh','various','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Proprietary','Free','']
+            local : ['Motorola 680x0','']
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['Proprietary','Free','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['ASM-One Macro Assembler','TurboAss','Mac Assembler','GFA-Assembler','Digital Research Assembler','Fantasm','Seka Assembler','GST Macro Assembler','MaxonASM','vasm','A68K','PhxAss','HiSoft DevPac Assembler','Pure Assembler','Metacomco Macro Assembler','OMA','Data Becker Profimat','MPW Assembler','']
           });
     </script>

@@ -26,9 +26,9 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Device id. : </label></br> <input id="1" type="number" name="Feature"></br>
+							<label>Device id. : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Chipset : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
@@ -87,25 +87,41 @@ clock (MHz) : </label></br> <input id="12" type="number" name="Feature"></br>
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['2E5B','0BE0
+0BE1
+0BE2
+0BE3','08C7
+08C8
+08C9
+08CA
+08CB
+08CC
+08CD
+08CE
+08CF','8108
+8109','?','4102','']
+          });
+          $("#2").typeahead({
+            name:"list2",
             local : ['US15W','Atom D2700
 Atom N2800','Atom Z2760','Atom CE4100','Atom CE4150','Atom Z6xx','Atom CE4200','Atom CE4110','CE3100','Atom D2500
 Atom N2600','Atom CE4130','Atom CE4170','UL11L','US15L','Atom Z2460','']
           });
-          $("#2").typeahead({
-            name:"list2",
+          $("#3").typeahead({
+            name:"list3",
             local : ['Nettop
 Netbook','MID','CE','Smartphone','Tablet','']
           });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['GMA 500','GMA 3600','GMA 3650','GMA','GMA 600','']
-          });
           $("#4").typeahead({
             name:"list4",
-            local : ['SGX545','SGX535','SGX540','']
+            local : ['GMA 500','GMA 3600','GMA 3650','GMA','GMA 600','']
           });
           $("#5").typeahead({
             name:"list5",
+            local : ['SGX545','SGX535','SGX540','']
+          });
+          $("#6").typeahead({
+            name:"list6",
             local : ['Poulsbo (Menlow)','Sodaville','Canmore','Penwell (Medfield)','Lincroft (Moorestown)','Cedarview (Cedar Trail)','Cloverview (Clover Trail)','Groveland','']
           });
     </script>

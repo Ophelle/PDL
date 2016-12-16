@@ -26,19 +26,11 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Frequency :</label></br>
+							<label>Frequency : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Monthly or one-time donations</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Focus :</label></br>
+							<label>Focus : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Musicians</br>	
- 		 									<input type="checkbox" name="Feature" > Podcasts</br>	
- 		 									<input type="checkbox" name="Feature" > Vloggers</br>	
- 		 									<input type="checkbox" name="Feature" > Youtubers</br>	
- 		 									<input type="checkbox" name="Feature" > Webcomics</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Notes :</label></br>
 							
@@ -51,6 +43,14 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
+            local : ['Musicians, Podcasts, Vloggers, Youtubers, Webcomics','Web series (both entertainment- and education-oriented)','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['Every time new content is released','Monthly or one-time donations','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['Subbable','Patreon','']
           });
     </script>

@@ -26,11 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Bus interface :</label></br>
+							<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >HT</br>	
- 		 									<input type="checkbox" name="Feature" > FSB</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Memory clock (MHz) : </label></br> <input id="2" type="text" name="Feature"></br>
 							
@@ -51,20 +48,21 @@
 							<label>Memory (MB) : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Launch : </label></br> <input id="8" type="number" name="Feature"></br>
+							<label>Launch :</label></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+ 		 									<input type="checkbox" name="Feature" >March 11</br>	
+ 		 									<input type="checkbox" name="Feature" > 2005 (Intel)</br>	
+ 		 									<input type="checkbox" name="Feature" > May 23</br>	
+ 		 									<input type="checkbox" name="Feature" > 2006 (AMD)</br>	
+ 		 									<input type="checkbox" name="Feature" >Nov. 8</br>	
+ 		 									<input type="checkbox" name="Feature" > 2004</br>	
+ 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
 							<label>Fillrate - MPixels/s : </label></br> <input id="9" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Code name :</label></br>
+							<label>Code name : </label></br> <input id="10" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >RC400</br>	
- 		 									<input type="checkbox" name="Feature" > RC410</br>	
- 		 									<input type="checkbox" name="Feature" > RS400</br>	
- 		 									<input type="checkbox" name="Feature" > RS415</br>	
- 		 									<input type="checkbox" name="Feature" > RS485</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Fillrate - MOperations/s : </label></br> <input id="11" type="number" name="Feature"></br>
 							
@@ -87,18 +85,26 @@
  		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['200-400 (DDR), 400-800 (DDR2)','200-400 (DDR), 200 (sideport)','']
+            local : ['HT','HT, FSB','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['4:2:2:2','']
+            local : ['200-400 (DDR), 400-800 (DDR2)','200-400 (DDR), 200 (sideport)','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['16-128 system + 16 sideport','16-128 system','']
+            local : ['4:2:2:2','']
           });
           $("#4").typeahead({
             name:"list4",
+            local : ['16-128 system + 16 sideport','16-128 system','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['RS480 (metallo)','RS482 (grayskull)','RC400, RC410, RS400, RS415, RS485','']
+          });
+          $("#6").typeahead({
+            name:"list6",
             local : ['Radeon Xpress 1150 (originally Xpress 200 for Intel)','Radeon Xpress 1100 (originally Xpress 200)','Radeon Xpress X200','']
           });
     </script>

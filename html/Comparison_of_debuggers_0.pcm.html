@@ -26,33 +26,29 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Most recent release : </label></br> <input id="1" type="number" name="Feature"></br>
+							<label>Most recent release :</label></br>
 							
-						</br>	
-							<label>Description :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >tool suite for debugging and profiling Linux programs</br>	
- 		 									<input type="checkbox" name="Feature" >mainframe debugger and development tool</br>	
+ 		 									<input type="checkbox" name="Feature" >3.10.1</br>	
+ 		 									<input type="checkbox" name="Feature" > Nov 2014</br>	
+ 		 									<input type="checkbox" name="Feature" >13.0.1</br>	
+ 		 									<input type="checkbox" name="Feature" > 2013</br>	
+ 		 									<input type="checkbox" name="Feature" >3.5.0</br>	
+ 		 									<input type="checkbox" name="Feature" > Sep 2014</br>	
+ 		 									<input type="checkbox" name="Feature" >z2.1</br>	
+ 		 									<input type="checkbox" name="Feature" > Oct 2014</br>	
+ 		 									<input type="checkbox" name="Feature" >November 12</br>	
+ 		 									<input type="checkbox" name="Feature" > 2014</br>	
+ 		 									<input type="checkbox" name="Feature" >7.8.1</br>	
+ 		 									<input type="checkbox" name="Feature" >5.0</br>	
+ 		 									<input type="checkbox" name="Feature" > Feb 2015</br>	
+ 		 									<input type="checkbox" name="Feature" >3.4.2</br>	
 								
 						</br>	
-							<label>Language :</label></br>
+							<label>Description : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >COBOL</br>	
- 		 									<input type="checkbox" name="Feature" >PL</br>	
- 		 									<input type="checkbox" name="Feature" >1 & Assembler</br>	
- 		 									<input type="checkbox" name="Feature" >1 & Assembler </br>	
- 		 									<input type="checkbox" name="Feature" > Any compiled to machine code</br>	
- 		 									<input type="checkbox" name="Feature" >C</br>	
- 		 									<input type="checkbox" name="Feature" > C++</br>	
- 		 									<input type="checkbox" name="Feature" > Java</br>	
- 		 									<input type="checkbox" name="Feature" > Perl</br>	
- 		 									<input type="checkbox" name="Feature" > Python</br>	
- 		 									<input type="checkbox" name="Feature" > assembly code</br>	
- 		 									<input type="checkbox" name="Feature" > Fortran</br>	
- 		 									<input type="checkbox" name="Feature" > Ada</br>	
- 		 									<input type="checkbox" name="Feature" > ...</br>	
- 		 									<input type="checkbox" name="Feature" >  Any compiled to machine code</br>	
-								
+						</br>	
+							<label>Language : </label></br> <input id="3" type="text" name="Feature"></br>
+							
 						</br>	
 							<label>OS :</label></br>
 							
@@ -93,26 +89,32 @@
 							<label>Program animation? : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Memory protection? : </label></br> <input id="8" type="text" name="Feature"></br>
-							
+ 		 					<label>Memory protection? :</label></br>
+ 		 					 <input type="radio" name="FeatureMemory protection?" value="oui">oui <input type="radio" name="FeatureMemory protection?" value = "non">non </br>
+									
 						</br>	
-							<label>Name :</label></br>
+							<label>Name : </label></br> <input id="9" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >z</br>	
- 		 									<input type="checkbox" name="Feature" >XDC</br>	
-								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['GPL','BSD-Style','Proprietary','Python Software Foundation License','']
+            local : ['LLVM Debugger','tool suite for debugging and profiling Linux programs','Intel Debugger','Python debugger','GNU Debugger','family of mainframe debuggers','mainframe debugger','Debugger in Microsoft Visual Studio','mainframe debugger and development tool','Allinea DDT Debugger','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['?','Yes','']
+            local : ['COBOL,PL/1 & Assembler','Any compiled to machine code','Python','Assembler','COBOL,PL/1 & Assembler , Any compiled to machine code','C, C++, Java, Perl, Python, assembly code, Fortran, Ada, ...','COBOL,PL/1 & Assembler ,  Any compiled to machine code','.net languages','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['No','Yes','Yes (CICS)','Yes,(Managed)','']
+            local : ['GPL','BSD-Style','Proprietary','Python Software Foundation License','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['?','Yes','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['OLIVER','LLDB','XPEDITER','pdb','Visual Studio Debugger','z/XDC','SIMON','IDB','Allinea DDT','GDB','Valgrind','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

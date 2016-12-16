@@ -66,15 +66,8 @@
  		 									<input type="checkbox" name="Feature" > NTFS</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Update management :</label></br>
+							<label>Update management : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >CVSup</br>	
- 		 									<input type="checkbox" name="Feature" > Portsnap</br>	
- 		 									<input type="checkbox" name="Feature" > network binary update (Online Update)</br>	
- 		 									<input type="checkbox" name="Feature" >source (CVS</br>	
- 		 									<input type="checkbox" name="Feature" > CVSync</br>	
- 		 									<input type="checkbox" name="Feature" > rsync) or binary upgrade</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Kernel type : </label></br> <input id="3" type="text" name="Feature"></br>
 							
@@ -136,10 +129,14 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Hybrid','Monolithic','Monolithic with modules','']
+            local : ['Git','CVSup, Portsnap, network binary update (Online Update)','?','source CVSup','source (CVS, CVSync, rsync) or binary upgrade','source (CVS, CVSup, rsync) or binary (using sysinst)','dupatch','source (svn, portsnap), network binary update (freebsd-update, pkg)','Software Update','source (CVSup, portsnap), network binary update (freebsd-update)','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['Hybrid','Monolithic','Monolithic with modules','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['Yes (MATE)','Yes (Aqua)','No (X.Org available)','No (X.Org included)','No (X11 included)','Yes (CDE)','Yes (KDE)','No (X.Org or XFree86 included)','']
           });
     </script>

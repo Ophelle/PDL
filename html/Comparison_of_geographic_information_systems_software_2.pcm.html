@@ -53,11 +53,13 @@
  		 									<input type="checkbox" name="Feature" > Virtual Earth</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Name :</label></br>
+							<label>Name : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >GeoMedia WebMap and SDI Pro</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['GeoWebCache','MapProxy','MapDotNet','Erdas Apollo','GeoMedia WebMap and SDI Pro','ArcGIS Server','TileCache','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

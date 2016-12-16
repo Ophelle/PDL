@@ -71,8 +71,9 @@
  		 									<input type="checkbox" name="Feature" >145 × 111 × 71</br>	
 								
 						</br>	
-							<label>Live view : </label></br> <input id="5" type="text" name="Feature"></br>
-							
+ 		 					<label>Live view :</label></br>
+ 		 					 <input type="radio" name="FeatureLive view" value="oui">oui <input type="radio" name="FeatureLive view" value = "non">non </br>
+									
 						</br>	
 							<label>Image processor : </label></br> <input id="6" type="text" name="Feature"></br>
 							
@@ -80,17 +81,8 @@
 							<label>Sensor format : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Storage :</label></br>
+							<label>Storage : </label></br> <input id="8" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >CF</br>	
- 		 									<input type="checkbox" name="Feature" > SD</br>	
- 		 									<input type="checkbox" name="Feature" > SDXC</br>	
- 		 									<input type="checkbox" name="Feature" >SD</br>	
- 		 									<input type="checkbox" name="Feature" > SDHC or SDXC</br>	
- 		 									<input type="checkbox" name="Feature" > SDXC (UHS-I)</br>	
- 		 									<input type="checkbox" name="Feature" >CFast</br>	
- 		 									<input type="checkbox" name="Feature" > CF</br>	
-								
 						</br>	
 							<label>Megapixels : </label></br> <input id="9" type="number" name="Feature"></br>
 							
@@ -133,24 +125,25 @@
  		 									<input type="checkbox" name="Feature" > 1080p120</br>	
 								
 						</br>	
-							<label>Model :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >5Ds </br>	
- 		 									<input type="checkbox" name="Feature" > 5Ds R</br>	
-								
-						</br>	
-							<label>Max ISO : </label></br> <input id="13" type="number" name="Feature"></br>
+							<label>Model : </label></br> <input id="12" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Main Battery :</label></br>
+							<label>Max ISO :</label></br>
 							
- 		 									<input type="checkbox" name="Feature" >BP-511A</br>	
- 		 									<input type="checkbox" name="Feature" > BP-514</br>	
- 		 									<input type="checkbox" name="Feature" > BP-511</br>	
- 		 									<input type="checkbox" name="Feature" > BP-512</br>	
- 		 									<input type="checkbox" name="Feature" >BP-511</br>	
- 		 									<input type="checkbox" name="Feature" >512</br>	
+ 		 									<input type="checkbox" name="Feature" >204</br>	
+ 		 									<input type="checkbox" name="Feature" >800</br>	
+ 		 									<input type="checkbox" name="Feature" >51</br>	
+ 		 									<input type="checkbox" name="Feature" >200</br>	
+ 		 									<input type="checkbox" name="Feature" >102</br>	
+ 		 									<input type="checkbox" name="Feature" >400</br>	
+ 		 									<input type="checkbox" name="Feature" >25</br>	
+ 		 									<input type="checkbox" name="Feature" >600</br>	
+ 		 									<input type="checkbox" name="Feature" >12</br>	
+ 		 									<input type="checkbox" name="Feature" >409</br>	
 								
+						</br>	
+							<label>Main Battery : </label></br> <input id="14" type="text" name="Feature"></br>
+							
 						</br>	
 							<label>Min ISO : </label></br> <input id="15" type="number" name="Feature"></br>
 							
@@ -189,15 +182,39 @@
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','No','Yes (only)','']
+            local : ['DIGIC III','DIGIC 4+','DIGIC 6','DIGIC II','DIGIC 4','Dual DIGIC 6+','DIGIC','Dual DIGIC 6','Dual DIGIC 5+','DIGIC 5+','Dual DIGIC 4','Dual DIGIC III','DIGIC 5','','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['DIGIC III','DIGIC 4+','DIGIC 6','DIGIC II','DIGIC 4','Dual DIGIC 6+','DIGIC','Dual DIGIC 6','Dual DIGIC 5+','DIGIC 5+','Dual DIGIC 4','Dual DIGIC III','DIGIC 5','','']
+            local : ['APS-C CMOS','Full-frame CMOS','APS-H CMOS','APS-H CCD','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['APS-C CMOS','Full-frame CMOS','APS-H CMOS','APS-H CCD','']
+            local : ['SDXC','SDXC (UHS-I)','CF, SD','CF','CF, SDXC','SDHC','SD, SDHC or SDXC','CF, SDXC (UHS-I)','CFast, CF','CF (×2)','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['60D','500D
+Rebel T1i','7D','5D','1D Mk II','1100D
+Rebel T3','550D
+Rebel T2i','50D','1Ds','5D Mk II','1D Mk II N','1Ds Mk II','D60','1300D
+Rebel T6','D30','80D','1D X','20D','5D Mk III','7D Mk II','650D
+Rebel T4i','750D
+Rebel T6i','M10','100D
+Rebel SL1','M3','6D','5Ds / 5Ds R','450D
+Rebel XSi','M','1D','1D C','1Ds Mk III','30D','1000D
+Rebel XS','60Da','40D','600D
+Rebel T3i','1D Mk IV','1D Mk III','350D
+Rebel XT','1200D
+Rebel T5','10D','20Da','300D
+Digital Rebel','70D','700D
+Rebel T5i','760D
+Rebel T6s','1D X Mk II','400D
+Rebel XTi','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['NP-E3','LP-E10','BP-511A, BP-514, BP-511, BP-512','LP-E8','NB-2LH','LP-E6','BP-511A, BP-511, BP-512','LP-E6N','LP-E17','BP-511, BP-512','BP-511,BP-511A','LP-E4','LP-E5','LP-E4N','LP-E12','BP-511/512','LP-E19','BP-511A','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

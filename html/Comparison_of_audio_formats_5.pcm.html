@@ -26,19 +26,17 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Sample Rate :</label></br>
+							<label>Sample Rate : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >8</br>	
- 		 									<input type="checkbox" name="Feature" > 16 kHz</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
  		 					<label>CBR :</label></br>
  		 					 <input type="radio" name="FeatureCBR" value="oui">oui <input type="radio" name="FeatureCBR" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Multichannel : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Multichannel :</label></br>
+ 		 					 <input type="radio" name="FeatureMultichannel" value="oui">oui <input type="radio" name="FeatureMultichannel" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Bit rate :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >16</br>	
@@ -100,9 +98,10 @@
 							<label>Audio compression format : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Stereo : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Stereo :</label></br>
+ 		 					 <input type="radio" name="FeatureStereo" value="oui">oui <input type="radio" name="FeatureStereo" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Algorithm :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >sub-band ADPCM</br>	
@@ -134,7 +133,7 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes: only in MPEG-4 Part 12 container','']
+            local : ['8 kHz','48 kHz','32 kHz','8, 16 kHz','16 kHz','']
           });
           $("#2").typeahead({
             name:"list2",
@@ -146,10 +145,6 @@
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['No','Yes: only in MPEG-4 Part 12 container','']
-          });
-          $("#5").typeahead({
-            name:"list5",
             local : ['','15 ms','125 µs (typical)','11.875 ms','4 ms','49.625 ms','125 µs','40 ms','37.5 ms','5–40 ms','0.625 ms','42.875–43.875 ms','48.9375 ms','25 ms','']
           });
     </script>

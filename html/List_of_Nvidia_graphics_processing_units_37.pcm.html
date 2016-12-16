@@ -53,11 +53,8 @@
 							<label>Clock speed - Memory (MT/s) : </label></br> <input id="9" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Launch :</label></br>
+							<label>Launch : </label></br> <input id="10" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >April 1</br>	
- 		 									<input type="checkbox" name="Feature" > 2013</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Processing Power
  (GFLOPS) : </label></br> <input id="11" type="number" name="Feature"></br>
@@ -75,9 +72,8 @@
 							<label>Model : </label></br> <input id="15" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Memory - Bus type :</label></br>
+							<label>Memory - Bus type : </label></br> <input id="16" type="text" name="Feature"></br>
 							
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Fab (nm) : </label></br> <input id="17" type="number" name="Feature"></br>
 							
@@ -88,14 +84,8 @@
 							<label>Fillrate - Pixel (GP/s) : </label></br> <input id="19" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Notes :</label></br>
+							<label>Notes : </label></br> <input id="20" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >OEM. About 130% of Mobile 625</br>	
- 		 									<input type="checkbox" name="Feature" >630 & Desktop 620</br>	
- 		 									<input type="checkbox" name="Feature" >Kepler</br>	
- 		 									<input type="checkbox" name="Feature" > similar to Desktop GT640</br>	
- 		 									<input type="checkbox" name="Feature" >Similar or slightly slower than GK 107.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -112,11 +102,19 @@
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['GK106','GK107','GK104','GK208','GF117','']
+            local : ['?','May 2013','April 1, 2013','Jan 2013','']
           });
           $("#4").typeahead({
             name:"list4",
+            local : ['GK106','GK107','GK104','GK208','GF117','']
+          });
+          $("#5").typeahead({
+            name:"list5",
             local : ['GeForce GT 740M','GeForce GT 750M','GeForce GT 735M','GeForce 710M','GeForce GT 730M','GeForce GTX 765M','GeForce GT 755M','GeForce GTX 780M','GeForce GTX 760M','GeForce GTX 770M','GeForce GT 720M','GeForce GT 745M','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['OEM. About 130% of Mobile 625/630 & Desktop 620','about 92% of Desktop GTX 650Ti','Kepler, similar to Desktop GT640','about 78% of Desktop GTX770','OEM. About 115% of Mobile 620 & Desktop 530','about 79% of Desktop GTX650','about 71% of Desktop GTX 650Ti','Similar or slightly slower than GK 107.','about 91% of Desktop GTX650','about 76% of Desktop GTX650','about 83% of Desktop GTX660','about 93% of Desktop GTX650','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

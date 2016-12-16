@@ -29,27 +29,28 @@
 							<label>Transistors (Million) : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Products : </label></br> <input id="2" type="text" name="Feature"></br>
+							<label>Products : </label></br> <input id="2" type="aaaa" name="Feature"></br>
+							
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Clock rate - Memory (MT/s) : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Clock rate - Memory (MT/s) : </label></br> <input id="3" type="number" name="Feature"></br>
+							<label>Die Size (mm) : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Die Size (mm) : </label></br> <input id="4" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Memory (MB) : </label></br> <input id="5" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Clock rate - Core (MHz) : </label></br> <input id="6" type="number" name="Feature"></br>
+							<label>Clock rate - Core (MHz) : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Clock rate - Boost (MHz) : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>API support (version) - Mantle : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>API support (version) - Mantle :</label></br>
+ 		 					 <input type="radio" name="FeatureAPI support (version) - Mantle" value="oui">oui <input type="radio" name="FeatureAPI support (version) - Mantle" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Processing Power
 GFLOPS - Double Precision : </label></br> <input id="9" type="text" name="Feature"></br>
 							
@@ -60,21 +61,22 @@ GFLOPS - Double Precision : </label></br> <input id="9" type="text" name="Featur
 							<label>Fab (nm) : </label></br> <input id="11" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="12" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Fillrate - Pixel (GP/s) : </label></br> <input id="13" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>TrueAudio : </label></br> <input id="14" type="text" name="Feature"></br>
+							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="12" type="text" name="Feature"></br>
 							
 						</br>	
+							<label>Fillrate - Pixel (GP/s) : </label></br> <input id="13" type="text" name="Feature"></br>
+							
+						</br>	
+ 		 					<label>TrueAudio :</label></br>
+ 		 					 <input type="radio" name="FeatureTrueAudio" value="oui">oui <input type="radio" name="FeatureTrueAudio" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Bus interface : </label></br> <input id="15" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Fillrate - Texture (GT/s) : </label></br> <input id="16" type="number" name="Feature"></br>
+							<label>Fillrate - Texture (GT/s) : </label></br> <input id="16" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Architecture : </label></br> <input id="17" type="text" name="Feature"></br>
 							
 						</br>	
@@ -100,20 +102,17 @@ GFLOPS - Double Precision : </label></br> <input id="9" type="text" name="Featur
 							
  		 								 		<input type="text"/></br>						</br>	
 							<label>Processing Power
-GFLOPS - Single Precision : </label></br> <input id="25" type="number" name="Feature"></br>
+GFLOPS - Single Precision : </label></br> <input id="25" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>API support (version) - OpenGL : </label></br> <input id="26" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>Model : </label></br> <input id="27" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>GFLOPS/W Single Precision :</label></br>
+							<label>GFLOPS/W Single Precision : </label></br> <input id="28" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >GFLOPS</br>	
- 		 									<input type="checkbox" name="Feature" >W Single Precision</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Memory - Bus type : </label></br> <input id="29" type="text" name="Feature"></br>
 							
@@ -127,7 +126,7 @@ GFLOPS - Single Precision : </label></br> <input id="25" type="number" name="Fea
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['P3','P5','P10','P1','P9','P2','P8','P4','P11','P6','P7','']
+            local : ['438?','359','TBA','Die Size (mm)','']
           });
           $("#3").typeahead({
             name:"list3",
@@ -135,31 +134,31 @@ GFLOPS - Single Precision : </label></br> <input id="25" type="number" name="Fea
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['Yes','True Audio','']
+            local : ['PCIe 3.0 ×16','Bus interface','']
           });
           $("#5").typeahead({
             name:"list5",
-            local : ['PCIe 3.0 ×16','Bus interface','']
+            local : ['GCN 1.2','GCN 1.0','Architecture','GCN 1.1','']
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['GCN 1.2','GCN 1.0','Architecture','GCN 1.1','']
+            local : ['4096:256:128','2 x 4096:256:128','TBA','2816:176:64','Config core','1536:96:32','3584:224:128','2560:160:64','2048:128:32','']
           });
           $("#7").typeahead({
             name:"list7",
-            local : ['4096:256:128','2 x 4096:256:128','TBA','2816:176:64','Config core','1536:96:32','3584:224:128','2560:160:64','2048:128:32','']
+            local : ['2H 2015','Launch','']
           });
           $("#8").typeahead({
             name:"list8",
-            local : ['2H 2015','Launch','']
+            local : ['Trinidad','Fiji PRO','Tobago','Grenada PRO','Codename','Fiji XT','Grenada XT','Bermuda','']
           });
           $("#9").typeahead({
             name:"list9",
-            local : ['Trinidad','Fiji PRO','Tobago','Grenada PRO','Codename','Fiji XT','Grenada XT','Bermuda','']
+            local : ['Radeon R9 460X','Radeon R9 490','Radeon R9 460','Radeon R9 480','Model','Radeon R9 470X','Radeon R9 480X','Radeon R9 470','Radeon R9 490X','Radeon R9 495X2','']
           });
           $("#10").typeahead({
             name:"list10",
-            local : ['Radeon R9 460X','Radeon R9 490','Radeon R9 460','Radeon R9 480','Model','Radeon R9 470X','Radeon R9 480X','Radeon R9 470','Radeon R9 490X','Radeon R9 495X2','']
+            local : ['TBA','GFLOPS/W Single Precision','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -26,19 +26,16 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>NetBSD kernel : </label></br> <input id="1" type="text" name="Feature"></br>
+ 		 					<label>NetBSD kernel :</label></br>
+ 		 					 <input type="radio" name="FeatureNetBSD kernel" value="oui">oui <input type="radio" name="FeatureNetBSD kernel" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>OpenBSD kernel :</label></br>
+ 		 					 <input type="radio" name="FeatureOpenBSD kernel" value="oui">oui <input type="radio" name="FeatureOpenBSD kernel" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Kernel name : </label></br> <input id="3" type="text" name="Feature"></br>
 							
-						</br>	
-							<label>OpenBSD kernel : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Kernel name :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >BSD</br>	
- 		 									<input type="checkbox" name="Feature" >OS</br>	
- 		 									<input type="checkbox" name="Feature" >OSF</br>	
- 		 									<input type="checkbox" name="Feature" >1</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
  		 					<label>FreeBSD kernel :</label></br>
  		 					 <input type="radio" name="FeatureFreeBSD kernel" value="oui">oui <input type="radio" name="FeatureFreeBSD kernel" value = "non">non </br>
@@ -62,11 +59,7 @@
  		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No? ?','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['?','Yes','No','']
+            local : ['IBCS2 systems','BSD/OS','NetBSD','SunOS','Windows NT','NDIS','Amiga Unix','Linux','IRIX','Darwin','Solaris','FreeBSD','Ultrix','OSF/1','SVR4','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

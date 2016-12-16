@@ -29,9 +29,10 @@
 							<label>Name/Website : </label></br> <input id="1" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Social Security Number required? : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Social Security Number required? :</label></br>
+ 		 					 <input type="radio" name="FeatureSocial Security Number required?" value="oui">oui <input type="radio" name="FeatureSocial Security Number required?" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Cost of credit score :</label></br>
 							
  		 									<input type="checkbox" name="Feature" >Free; once weekly</br>	
@@ -44,28 +45,14 @@
  		 					 <input type="radio" name="FeatureCredit card required?" value="oui">oui <input type="radio" name="FeatureCredit card required?" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Report type :</label></br>
+							<label>Report type : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Transunion</br>	
- 		 									<input type="checkbox" name="Feature" > Equifax</br>	
- 		 									<input type="checkbox" name="Feature" >Equifax</br>	
- 		 									<input type="checkbox" name="Feature" > Experian & Transunion</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Score type :</label></br>
+							<label>Score type : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Experian's National Equivalency Score</br>	
- 		 									<input type="checkbox" name="Feature" > VantageScore 3.0</br>	
- 		 									<input type="checkbox" name="Feature" >VantageScore 3.0</br>	
- 		 									<input type="checkbox" name="Feature" >
-Transunion's TransRisk New Account score.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Cost of credit report :</label></br>
+							<label>Cost of credit report : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Free; once every 6 months</br>	
- 		 									<input type="checkbox" name="Feature" >Free; one from each agency every 12 months</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -73,7 +60,16 @@ Transunion's TransRisk New Account score.</br>
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','Last 4 digits only','']
+            local : ['TransUnion','Experian (bare)','Transunion, Equifax','Transunion','Equifax','Equifax, Experian & Transunion','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['','VantageScore 3.0','Experian's National Equivalency Score, VantageScore 3.0','VantageScore 3.0,
+Transunion's TransRisk New Account score.','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Free proprietary credit report summary','Free; once every 6 months','Free; one from each agency every 12 months','Free TransUnion credit report summary','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

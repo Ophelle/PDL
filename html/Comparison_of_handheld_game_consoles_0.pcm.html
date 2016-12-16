@@ -26,61 +26,41 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Launch price (USD) :</label></br>
+							<label>Launch price (USD) : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >$299.99 Wi-fi+3G</br>	
- 		 									<input type="checkbox" name="Feature" > $249.99 Wi-fi Only</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Manufacturer :</label></br>
+							<label>Manufacturer : </label></br> <input id="2" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Creatonic</br>	
- 		 									<input type="checkbox" name="Feature" > Videojet</br>	
- 		 									<input type="checkbox" name="Feature" > and Timlex</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Units sold :</label></br>
+							<label>Units sold : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >43</br>	
- 		 									<input type="checkbox" name="Feature" >020</br>	
- 		 									<input type="checkbox" name="Feature" >000</br>	
- 		 									<input type="checkbox" name="Feature" >18</br>	
- 		 									<input type="checkbox" name="Feature" >820</br>	
- 		 									<input type="checkbox" name="Feature" >6</br>	
- 		 									<input type="checkbox" name="Feature" >30</br>	
- 		 									<input type="checkbox" name="Feature" >300</br>	
- 		 									<input type="checkbox" name="Feature" >1</br>	
- 		 									<input type="checkbox" name="Feature" >200</br>	
- 		 									<input type="checkbox" name="Feature" >84</br>	
- 		 									<input type="checkbox" name="Feature" >490</br>	
- 		 									<input type="checkbox" name="Feature" >48</br>	
- 		 									<input type="checkbox" name="Feature" >600</br>	
- 		 									<input type="checkbox" name="Feature" >500</br>	
- 		 									<input type="checkbox" name="Feature" >70</br>	
- 		 									<input type="checkbox" name="Feature" >60</br>	
- 		 									<input type="checkbox" name="Feature" >000 (inc. original GP2X sales)</br>	
- 		 									<input type="checkbox" name="Feature" >51</br>	
- 		 									<input type="checkbox" name="Feature" >260</br>	
- 		 									<input type="checkbox" name="Feature" >000 (inc. GP2X F200 sales)</br>	
- 		 									<input type="checkbox" name="Feature" >16</br>	
- 		 									<input type="checkbox" name="Feature" >430</br>	
- 		 									<input type="checkbox" name="Feature" >11</br>	
- 		 									<input type="checkbox" name="Feature" >2</br>	
- 		 									<input type="checkbox" name="Feature" >37</br>	
- 		 									<input type="checkbox" name="Feature" >700</br>	
- 		 									<input type="checkbox" name="Feature" >3</br>	
- 		 									<input type="checkbox" name="Feature" >25</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Product line :</label></br>
+							<label>Product line : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Mega Duck</br>	
- 		 									<input type="checkbox" name="Feature" >Cougar Boy</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>First public release date : </label></br> <input id="5" type="number" name="Feature"></br>
+							<label>First public release date : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>		<script>
+		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['$50','$59','$185','$169','','$59–69','$69','$49.99','$80','$129.99','$179','$349','$239','$299.99 Wi-fi+3G, $249.99 Wi-fi Only','$109','$99.99','$10–20 (depending on retailer's subsidies and special offers)','$229–400 (depending on advertising subsidies)','$100','$349  (1st and 2nd batch) / Rebirth edition: €370 (€440 incl. VAT)','$150','$82.80','$15–30 (depending on retailer's subsidies and special offers)','$79','$99','$300–400 (depending on configuration)','$180','$299','$0–245 (depending on cell provider subsidies)','$249.99','€70','$199.99','$149.99','$65','$39.99','$189','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['Nintendo','Pelican Accessories','Game Park','Milton Bradley Company','Bit Corporation','GameTech','Sony Computer Entertainment','SNK Playmore','Bandai','Game Consoles Worldwide','Atari','NEC','Planet interactive','Epoch Co.','Tapwave','Nokia','GamePark Holdings','Sega','Timetop','Watara','Tiger Electronics','Tiger Telematics','OpenPandora','Creatonic, Videojet, and Timlex','Dingoo Digital Technology','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['43,020,000','18,820,000','','6,000','30,000','300,000','1,000,000','200,000','84,490,000','48,600,000','1,500,000','70,000,000','60,000 (inc. original GP2X sales)','51,260,000','60,000 (inc. GP2X F200 sales)','16,430,000','11,000,000','2,500,000','37,700,000','3,000,000','25,000','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['Game Boy line','WonderSwan','VG Pocket','PlayStation','PocketFami','GP32','Neo Geo','Tapwave Zodiac','Nintendo DS','Microvision','GP2X','Pocket Dream Console','GCW','Gizmondo','Supervision','GameKing','Gamate','Sega Nomad','N-Gage','TurboExpress','Epoch Game Pocket Computer','Mega Duck/Cougar Boy','Atari Lynx','Pandora','Sega Game Gear','Nintendo 3DS','Dingoo','Game.com','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['1999-03-04','2003-11-01','2006-03-02','2011-12-17','19901990','2000-12-30','1979 1979','2009-05-13','2004-07-27','1992 1992','2003-10-07','2009 2009','2007-09-05','1996 1996','2004-12-12','1999-03-16','2001-11-23','2005-09-13','','2003 2003','2004','2001-03-21','2011-02-26','1990-10-06','2006 2006','2010-08-16','20052005','1991 1991','1993 1993','19951995','1989-04-21','2002-11-16','2007-10-30','1989-10-11','2010-05-22','19981998','2004 2004','2004-11-21','1984 1984','1997 (Japan only)','2008-11-01','2009','1998-10-21','1990 1990','2003-02-14','2005-11-09','September 1997','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

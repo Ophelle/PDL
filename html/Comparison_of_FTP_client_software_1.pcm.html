@@ -26,44 +26,47 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Latest stable version : </label></br> <input id="1" type="number" name="Feature"></br>
+							<label>Latest stable version : </label></br> <input id="1" type="text" name="Feature"></br>
 							
+						</br>	
+							<label>Software license : </label></br> <input id="2" type="text" name="Feature"></br>
+							
+						</br>	
+							<label>Creator : </label></br> <input id="3" type="text" name="Feature"></br>
+							
+						</br>	
+ 		 					<label>Copy files over 2 GB :</label></br>
+ 		 					 <input type="radio" name="FeatureCopy files over 2 GB" value="oui">oui <input type="radio" name="FeatureCopy files over 2 GB" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Software license :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >No license mentioned</br>	
- 		 									<input type="checkbox" name="Feature" > but source is available</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Creator :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Barad-Dur</br>	
- 		 									<input type="checkbox" name="Feature" > LLC.</br>	
- 		 									<input type="checkbox" name="Feature" >Rhino Software</br>	
- 		 									<input type="checkbox" name="Feature" > Inc</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Copy files over 2 GB : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
 							<label>Client : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>First public release date : </label></br> <input id="6" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Interface :</label></br>
+							<label>Interface : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Web Interface and GUI</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['?','Yes','No','']
+            local : ['16.1.0.0 (August 20, 2013; 8 months ago)','1.0.6.26  January 14, 2014; 16 months ago','2.1.8','2.0','2013.01.20.01 (January 20, 2013; 2 years ago)','2.52','2015.05.01.01 (May 1, 2015; 41 days ago)','1.0.7','1.3 (Discontinued)','6.1','3.2.2 July 11, 2010; 4 years ago','3.0 (Discontinued)','4.1 January 14, 2012; 3 years ago','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['Proprietary','Freeware','No license mentioned, but source is available','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['Brightek Software','syncplify.me','JSCAPE','ARPAplus','Barad-Dur, LLC.','Rhino Software, Inc','Wing FTP Software','NCSA','Jan Debis','Level5Software','NCH Software','S. Ali Tokmen','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['pbFtpClient','Ali's FTP Interface','Admin Hands','FTP Rush','Fling FTP (free version contains adware)','AnyClient','Mosaic','FTP Voyager','Classic FTP','BitKinex','FTP!','LeechFTP','UploadFTP Free','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['Windows Explorer shell extension','GUI','?','Web application','Windows GUI','Android','GUI + command line','Web Interface and GUI','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

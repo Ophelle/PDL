@@ -26,22 +26,14 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Primary developers :</label></br>
+							<label>Primary developers : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Mediaware</br>	
- 		 									<input type="checkbox" name="Feature" > Pavel Kanzelsberger</br>	
- 		 									<input type="checkbox" name="Feature" >Shin Ise</br>	
- 		 									<input type="checkbox" name="Feature" > Nobuhiro Ito</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Programming language : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>User interface :</label></br>
+							<label>User interface : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >TUI</br>	
- 		 									<input type="checkbox" name="Feature" > GUI</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Software license : </label></br> <input id="4" type="text" name="Feature"></br>
 							
@@ -49,12 +41,8 @@
 							<label>Website : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Computing platform :</label></br>
+							<label>Computing platform : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >iOS</br>	
- 		 									<input type="checkbox" name="Feature" > Windows Mobile</br>	
- 		 									<input type="checkbox" name="Feature" > Android</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Client : </label></br> <input id="7" type="text" name="Feature"></br>
 							
@@ -64,22 +52,34 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Java','C#','?','Objective-C','C++','Programming language','C & JavaScript','C ?','C','']
+            local : ['Mark Marszal','','Sebastian Kaspari','Gyresoft Limited','Primary developers','Mediaware, Pavel Kanzelsberger','Armond Avanes','Laurence Muller','Juho Vähä-Herttua','Kyle Fuller','Symbiatch','Ludovic Jacomme','Shin Ise, Nobuhiro Ito','Babylon999','Kiji Roshi','Gargaj','IRCCloud Ltd.','Sverre Kristian Valskrå','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['BSD License','3-clause BSD','GNU GPL','Software license','Proprietary software','?','Freeware','GNU LGPL','']
+            local : ['Java','C#','?','Objective-C','C++','Programming language','C & JavaScript','C ?','C','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['','(archive)','Website','']
+            local : ['GUI','User interface','TUI, GUI','TUI','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['Mobile Colloquy','Client','zsIRC','CoolIRC','WirelessIRC','PSPIRC','AndroidChat','Dump Chat','EbIRC','MtvIRC','wIRC','Palaver','Mango IRC','mirggi','jmIrc','k-IRC','fIRC','WLIrc','Virca','Relay IRC','JedIrc','Foo IRC','IRC7','IRC999','microirc','AndChat','IRCCloud','Yaaic','upIRC','']
+            local : ['BSD License','3-clause BSD','GNU GPL','Software license','Proprietary software','?','Freeware','GNU LGPL','']
           });
           $("#5").typeahead({
             name:"list5",
+            local : ['','(archive)','Website','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['Java ME','iOS','Symbian','iOS, Windows Mobile','WebOS','Palm OS','Android','Windows Mobile 5 (and above)','Windows Phone','Computing platform','iOS, Android','Windows Mobile','PlayStation Portable','']
+          });
+          $("#7").typeahead({
+            name:"list7",
+            local : ['Mobile Colloquy','Client','zsIRC','CoolIRC','WirelessIRC','PSPIRC','AndroidChat','Dump Chat','EbIRC','MtvIRC','wIRC','Palaver','Mango IRC','mirggi','jmIrc','k-IRC','fIRC','WLIrc','Virca','Relay IRC','JedIrc','Foo IRC','IRC7','IRC999','microirc','AndChat','IRCCloud','Yaaic','upIRC','']
+          });
+          $("#8").typeahead({
+            name:"list8",
             local : ['Free software','iPhone: US$0.99
 iPad: US$1.99
 Universal: US$2.99

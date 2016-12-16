@@ -26,87 +26,35 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>CiteSeer : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>CiteSeer :</label></br>
+ 		 					 <input type="radio" name="FeatureCiteSeer" value="oui">oui <input type="radio" name="FeatureCiteSeer" value = "non">non </br>
+									
 						</br>	
-							<label>IEEE Xplore : </label></br> <input id="2" type="text" name="Feature"></br>
-							
+ 		 					<label>IEEE Xplore :</label></br>
+ 		 					 <input type="radio" name="FeatureIEEE Xplore" value="oui">oui <input type="radio" name="FeatureIEEE Xplore" value = "non">non </br>
+									
 						</br>	
 							<label>Software : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>PubMed : </label></br> <input id="4" type="text" name="Feature"></br>
-							
+ 		 					<label>PubMed :</label></br>
+ 		 					 <input type="radio" name="FeaturePubMed" value="oui">oui <input type="radio" name="FeaturePubMed" value = "non">non </br>
+									
 						</br>	
-							<label>ArXiv : </label></br> <input id="5" type="text" name="Feature"></br>
-							
+ 		 					<label>ArXiv :</label></br>
+ 		 					 <input type="radio" name="FeatureArXiv" value="oui">oui <input type="radio" name="FeatureArXiv" value = "non">non </br>
+									
 						</br>	
-							<label>Other :</label></br>
+							<label>Other : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >DBLP</br>	
- 		 									<input type="checkbox" name="Feature" > Zotero</br>	
- 		 									<input type="checkbox" name="Feature" > BibSonomy</br>	
- 		 									<input type="checkbox" name="Feature" > Mendeley</br>	
- 		 									<input type="checkbox" name="Feature" >ACM</br>	
- 		 									<input type="checkbox" name="Feature" > ADS</br>	
- 		 									<input type="checkbox" name="Feature" > Google Books</br>	
- 		 									<input type="checkbox" name="Feature" > Google Scholar</br>	
- 		 									<input type="checkbox" name="Feature" > JSTOR</br>	
- 		 									<input type="checkbox" name="Feature" > MathSciNet</br>	
- 		 									<input type="checkbox" name="Feature" > Project Muse</br>	
- 		 									<input type="checkbox" name="Feature" > Scopus</br>	
- 		 									<input type="checkbox" name="Feature" > Web of Science</br>	
- 		 									<input type="checkbox" name="Feature" >Over 30 repositories</br>	
- 		 									<input type="checkbox" name="Feature" > Import from integrated web browser</br>	
- 		 									<input type="checkbox" name="Feature" >BibSonomy</br>	
- 		 									<input type="checkbox" name="Feature" > CiteBase</br>	
- 		 									<input type="checkbox" name="Feature" > CSB</br>	
- 		 									<input type="checkbox" name="Feature" > DBLP</br>	
- 		 									<input type="checkbox" name="Feature" > ScienceDirect</br>	
- 		 									<input type="checkbox" name="Feature" > INSPIRE-HEP</br>	
- 		 									<input type="checkbox" name="Feature" > Z MATH</br>	
- 		 									<input type="checkbox" name="Feature" > Z39.50</br>	
- 		 									<input type="checkbox" name="Feature" >GoogleScholar</br>	
- 		 									<input type="checkbox" name="Feature" >ACM portal</br>	
- 		 									<input type="checkbox" name="Feature" > Jstor</br>	
- 		 									<input type="checkbox" name="Feature" > any Z39.50 or Entrez</br>	
- 		 									<input type="checkbox" name="Feature" > and others</br>	
- 		 									<input type="checkbox" name="Feature" >WorldCat</br>	
- 		 									<input type="checkbox" name="Feature" >OCLC</br>	
- 		 									<input type="checkbox" name="Feature" > Ovid</br>	
- 		 									<input type="checkbox" name="Feature" > EBSCO</br>	
- 		 									<input type="checkbox" name="Feature" > ProQuest</br>	
- 		 									<input type="checkbox" name="Feature" > Z39.50 (4700+ online resources)</br>	
- 		 									<input type="checkbox" name="Feature" > SRU</br>	
- 		 									<input type="checkbox" name="Feature" > DOI lookup</br>	
- 		 									<input type="checkbox" name="Feature" > ISBN lookup</br>	
- 		 									<input type="checkbox" name="Feature" > PubmedID lookup</br>	
- 		 									<input type="checkbox" name="Feature" >Web of Science</br>	
- 		 									<input type="checkbox" name="Feature" > Amazon</br>	
- 		 									<input type="checkbox" name="Feature" >Microsoft Academic</br>	
- 		 									<input type="checkbox" name="Feature" >Z39.50</br>	
- 		 									<input type="checkbox" name="Feature" > Web of Knowledge</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','Yes','?','']
+            local : ['CiteULike','Wikindx','Qiqqa','refbase','JabRef','Reference Manager','Mendeley','Aigaion','Biblioscape','KBibTeX','SciRef','colwiz','Papers','EndNote','RefWorks','Zotero','Bibus','Bookends','ReadCube','WizFolio','BibSonomy','Referencer','Bebop','BibBase','Sente','BibDesk','Docear','Citavi','RefDB','Paperpile','Pybliographer','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','No','?','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['CiteULike','Wikindx','Qiqqa','refbase','JabRef','Reference Manager','Mendeley','Aigaion','Biblioscape','KBibTeX','SciRef','colwiz','Papers','EndNote','RefWorks','Zotero','Bibus','Bookends','ReadCube','WizFolio','BibSonomy','Referencer','Bebop','BibBase','Sente','BibDesk','Docear','Citavi','RefDB','Paperpile','Pybliographer','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['?','Yes','No','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes','No','?','']
+            local : ['various','No','?','DBLP, Zotero, BibSonomy, Mendeley','any Z39.50','none','ACM, ADS, Google Books, Google Scholar, JSTOR, MathSciNet, Project Muse, Scopus, Web of Science','various any Z39.50','Over 30 repositories, Import from integrated web browser','Import from integrated web browser','BibSonomy, CiteBase, CSB, DBLP, Google Scholar, ScienceDirect, INSPIRE-HEP, Z MATH, Z39.50','GoogleScholar, JSTOR','ACM portal, Jstor, DBLP, Google Scholar, Web of Science, any Z39.50 or Entrez, and others','WorldCat/OCLC, Ovid, EBSCO, ProQuest, Web of Science, Z39.50 (4700+ online resources), SRU, DOI lookup, ISBN lookup, PubmedID lookup','Google Scholar','DOI lookup','ACM portal, Jstor, INSPIRE-HEP','Web of Science, Amazon, Google Scholar, Z39.50','Microsoft Academic, Google Scholar','Z39.50, SRU, Web of Knowledge','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

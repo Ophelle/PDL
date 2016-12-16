@@ -26,8 +26,9 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Jingle - Voice calls : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>Jingle - Voice calls :</label></br>
+ 		 					 <input type="radio" name="FeatureJingle - Voice calls" value="oui">oui <input type="radio" name="FeatureJingle - Voice calls" value = "non">non </br>
+									
 						</br>	
  		 					<label>Jingle - File transfer :</label></br>
  		 					 <input type="radio" name="FeatureJingle - File transfer" value="oui">oui <input type="radio" name="FeatureJingle - File transfer" value = "non">non </br>
@@ -37,8 +38,9 @@
  		 					 <input type="radio" name="FeatureTransports" value="oui">oui <input type="radio" name="FeatureTransports" value = "non">non </br>
 									
 						</br>	
-							<label>Jingle - Video calls : </label></br> <input id="4" type="text" name="Feature"></br>
-							
+ 		 					<label>Jingle - Video calls :</label></br>
+ 		 					 <input type="radio" name="FeatureJingle - Video calls" value="oui">oui <input type="radio" name="FeatureJingle - Video calls" value = "non">non </br>
+									
 						</br>	
  		 					<label>File transfer
 (XEP-0096) :</label></br>
@@ -50,25 +52,23 @@
 							<label>Client : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Multi-user
-chat : </label></br> <input id="7" type="text" name="Feature"></br>
-							
+ 		 					<label>Multi-user
+chat :</label></br>
+ 		 					 <input type="radio" name="FeatureMulti-user
+chat" value="oui">oui <input type="radio" name="FeatureMulti-user
+chat" value = "non">non </br>
+									
 						</br>	
-							<label>Link-local
-(XEP-0174) : </label></br> <input id="8" type="text" name="Feature"></br>
-							
+ 		 					<label>Link-local
+(XEP-0174) :</label></br>
+ 		 					 <input type="radio" name="FeatureLink-local
+(XEP-0174)" value="oui">oui <input type="radio" name="FeatureLink-local
+(XEP-0174)" value = "non">non </br>
+									
 		<script>
           $("#1").typeahead({
             name:"list1",
             local : ['Psi','Kadu','Bombus','Gajim','Pidgin','BitlBee','MCabber','Trillian','Messages','InTouch Messenger','Jitsi','Nimbuzz','Kopete','Telepathy-based','Adium','Coccinella','climm','Tkabber','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['No','Yes','Partial','Yes/No','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','Yes','Yes/No','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

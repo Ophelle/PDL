@@ -82,30 +82,26 @@
  		 									<input type="checkbox" name="Feature" > find duplicates</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>search (criteria) : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>search (criteria) :</label></br>
+ 		 					 <input type="radio" name="Featuresearch (criteria)" value="oui">oui <input type="radio" name="Featuresearch (criteria)" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>metadata : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Program :</label></br>
+							<label>Program : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Windows Picture and Fax Viewer</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>selection (styles) :</label></br>
+							<label>selection (styles) : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Partial
- individual</br>	
- 		 									<input type="checkbox" name="Feature" > all</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Unicode support : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>hotkeys : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>hotkeys :</label></br>
+ 		 					 <input type="radio" name="Featurehotkeys" value="oui">oui <input type="radio" name="Featurehotkeys" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>color management (ICC) : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
@@ -117,21 +113,6 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['No','','Yes
- keywords, comments, title, any field from Exif metadata','Yes
- name, date, file size, image size, meta data, ...','Yes','Yes
- name, comment, date, category, folder, recursive-folder','Yes
- name, date, rating, faces','Yes 
-file name, comments, most Exif and meta data','Yes
- name, date, rating, file size, and many more.','Yes
- name, date, metadata','Yes
- collections, keywords, filename, location, size, date, dimensions, comments, previous results','Yes
-Filter the view by rating, file name...','Yes
- name, date, file size, meta data','Yes
- tags','']
-          });
-          $("#2").typeahead({
-            name:"list2",
             local : ['Yes','Yes
  Exif and IPTC','Partial','No','Yes
  IPTC, Exif, XMP, JPEG comment','Yes
@@ -147,19 +128,27 @@ Write XMP Rating/Label, IPTC metadata, Windows Rating, embedded or in sidecar fi
 Exif, IPTC, user defined','Yes
  JPEG comment, IPTC, Exif','']
           });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['CDisplay','STDU Viewer','Gwenview','F-Spot','XnView','FastStone Image Viewer','Geeqie','Comix','gThumb','digiKam','Shotwell','ACDSee','KPhotoAlbum','Zoner Photo Studio','Phase One Media Pro','Eye of gnome','Windows Picture and Fax Viewer','Simple Comic','Picasa','xv','ResourceSpace','Photos','ImageAXS','FastPictureViewer','IrfanView','']
+          });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes','No
-Supported in XnViewMP','Yes, native','','Yes
-(with plugin)','No','']
+            local : ['Partial
+ individual, all','Yes
+Copy, move, delete, rate, label','','No','Yes
+ individual, linear','Yes','Yes
+ linear, block, complex','Yes
+ linear, complex','Yes
+ individual, linear, hide','Yes
+ block, linear, complex','Yes
+ individual, linear, block','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['Yes','','Yes
- configurable','Yes
-configurable','No','Yes 
-configurable','Yes
-unconfigurable','']
+            local : ['Yes','No
+Supported in XnViewMP','Yes, native','','Yes
+(with plugin)','No','']
           });
           $("#5").typeahead({
             name:"list5",

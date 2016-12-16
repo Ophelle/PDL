@@ -26,9 +26,9 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>First public release : </label></br> <input id="1" type="number" name="Feature"></br>
+							<label>First public release : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
+						</br>	
 							<label>Producer : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
@@ -38,12 +38,8 @@
 							<label>Base distribution : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Purpose :</label></br>
+							<label>Purpose : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >"to become the defacto OpenSolaris distribution installed on production servers where security and bug fixes are required free of charge"</br>	
- 		 									<input type="checkbox" name="Feature" >"to deliver a OpenSolaris based distribution that is compatible with the previous Sun Solaris SXCE versions</br>	
- 		 									<input type="checkbox" name="Feature" > that is as POSIX compatible as possible and that tries to stay compatible with SVr4 interfaces."</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Creator : </label></br> <input id="6" type="text" name="Feature"></br>
 							
@@ -61,22 +57,30 @@
  		 									<input type="checkbox" name="Feature" >0.5 </br>	
  		 									<input type="checkbox" name="Feature" > February 15</br>	
  		 									<input type="checkbox" name="Feature" > 2010</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['?','']
+            local : ['June 17, 2005','2005','?','2010','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['BeleniX','Nexenta OS','SchilliX','MilaX','OpenIndiana','']
+            local : ['?','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['OpenSolaris','']
+            local : ['BeleniX','Nexenta OS','SchilliX','MilaX','OpenIndiana','']
           });
           $("#4").typeahead({
             name:"list4",
+            local : ['OpenSolaris','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['"to become the defacto OpenSolaris distribution installed on production servers where security and bug fixes are required free of charge"','"to deliver a OpenSolaris based distribution that is compatible with the previous Sun Solaris SXCE versions, that is as POSIX compatible as possible and that tries to stay compatible with SVr4 interfaces."','?','']
+          });
+          $("#6").typeahead({
+            name:"list6",
             local : ['?','']
           });
     </script>

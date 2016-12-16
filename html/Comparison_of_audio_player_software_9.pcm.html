@@ -26,61 +26,49 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Vorbis comment : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Vorbis comment :</label></br>
+ 		 					 <input type="radio" name="FeatureVorbis comment" value="oui">oui <input type="radio" name="FeatureVorbis comment" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Audio player : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>APEv2 tag : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>APEv2 tag :</label></br>
+ 		 					 <input type="radio" name="FeatureAPEv2 tag" value="oui">oui <input type="radio" name="FeatureAPEv2 tag" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>CD-Text : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>ID32 : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>ID32 :</label></br>
+ 		 					 <input type="radio" name="FeatureID32" value="oui">oui <input type="radio" name="FeatureID32" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>WAVE chunks : </label></br> <input id="6" type="text" name="Feature"></br>
 							
 						</br>	
 							<label>Cue sheet : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>ID31 : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>ID31 :</label></br>
+ 		 					 <input type="radio" name="FeatureID31" value="oui">oui <input type="radio" name="FeatureID31" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','?','Vorbis comment','']
+            local : ['Cog','Audacious','Rhapsody','cmus','MediaMonkey','XMMS','Audion','foobar2000','Media Jukebox','AIMP','Amarok','Rhythmbox','Audio player','musikCube','Musicmatch Jukebox','Sonique','MusicBee','Quod Libet','Zinf','MPXPLAY','JuK','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Cog','Audacious','Rhapsody','cmus','MediaMonkey','XMMS','Audion','foobar2000','Media Jukebox','AIMP','Amarok','Rhythmbox','Audio player','musikCube','Musicmatch Jukebox','Sonique','MusicBee','Quod Libet','Zinf','MPXPLAY','JuK','']
+            local : ['?','No','Yes','CD-Text','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes','No','?','APEv2 tag','']
+            local : ['?','WAVE chunks','Yes','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['?','No','Yes','CD-Text','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes','No','ID3v2','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['?','WAVE chunks','Yes','']
-          });
-          $("#7").typeahead({
-            name:"list7",
             local : ['Yes','?','No','Cue sheet','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['Yes','ID3v1','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

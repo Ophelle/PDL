@@ -161,56 +161,17 @@
  		 									<input type="checkbox" name="Feature" >Institution's directory</br>	
  		 									<input type="checkbox" name="Feature" > news releases</br>	
  		 									<input type="checkbox" name="Feature" > and other institutional websites</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+								
 						</br>	
-							<label>Data Export Types :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >RSI</br>	
- 		 									<input type="checkbox" name="Feature" > CSV</br>	
- 		 									<input type="checkbox" name="Feature" > Web-service API</br>	
- 		 									<input type="checkbox" name="Feature" >XML</br>	
- 		 									<input type="checkbox" name="Feature" > .mbb</br>	
- 		 									<input type="checkbox" name="Feature" > XLS</br>	
- 		 									<input type="checkbox" name="Feature" >PDF</br>	
- 		 									<input type="checkbox" name="Feature" > RTF</br>	
- 		 									<input type="checkbox" name="Feature" >Microsoft Word</br>	
- 		 									<input type="checkbox" name="Feature" > Excel</br>	
- 		 									<input type="checkbox" name="Feature" > PDF</br>	
- 		 									<input type="checkbox" name="Feature" >RDF</br>	
- 		 									<input type="checkbox" name="Feature" > XML</br>	
- 		 									<input type="checkbox" name="Feature" >RTF</br>	
- 		 									<input type="checkbox" name="Feature" > HTML</br>	
- 		 									<input type="checkbox" name="Feature" >Many types</br>	
- 		 									<input type="checkbox" name="Feature" > depending on the format of the file retrieved.</br>	
- 		 									<input type="checkbox" name="Feature" > GraphXML</br>	
- 		 									<input type="checkbox" name="Feature" > CSV file</br>	
- 		 									<input type="checkbox" name="Feature" >CSV</br>	
- 		 									<input type="checkbox" name="Feature" > PNG</br>	
- 		 									<input type="checkbox" name="Feature" > JPEG</br>	
- 		 									<input type="checkbox" name="Feature" > CERIF XML</br>	
- 		 									<input type="checkbox" name="Feature" > MS Word</br>	
- 		 									<input type="checkbox" name="Feature" > PDF (APA6)</br>	
- 		 									<input type="checkbox" name="Feature" > ATOM</br>	
- 		 									<input type="checkbox" name="Feature" >XML web services</br>	
- 		 									<input type="checkbox" name="Feature" > EndNote</br>	
- 		 									<input type="checkbox" name="Feature" >Reference Manager</br>	
- 		 									<input type="checkbox" name="Feature" > BibTex</br>	
- 		 									<input type="checkbox" name="Feature" > RDF (Linked Data)</br>	
- 		 									<input type="checkbox" name="Feature" >
-various government assessment submission formats</br>	
- 		 									<input type="checkbox" name="Feature" > RDF</br>	
- 		 									<input type="checkbox" name="Feature" > SPARQL</br>	
- 		 									<input type="checkbox" name="Feature" > various government assessment submission formats</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Auto Ingest? : </label></br> <input id="4" type="text" name="Feature"></br>
+							<label>Data Export Types : </label></br> <input id="3" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Research Networking Tool :</label></br>
+ 		 					<label>Auto Ingest? :</label></br>
+ 		 					 <input type="radio" name="FeatureAuto Ingest?" value="oui">oui <input type="radio" name="FeatureAuto Ingest?" value = "non">non </br>
+									
+						</br>	
+							<label>Research Networking Tool : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Collaborative Partnership </br>	
- 		 									<input type="checkbox" name="Feature" > Profile System</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -218,7 +179,12 @@ various government assessment submission formats</br>
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes (for all citation data from sources listed in DataSource. Profiles editorially created, but user-generated profiles also included)','Yes','No','Yes? (Partial?)','Yes (needs to be set up by each university/ institution)','N/A','Yes(for defined data)','Unknown','Yes (Partial; profiles created by administrators are pre-populated for individuals to review.)','Yes (Partial)','Yes (But only of InfoEd database data. Faculty profile information must be entered manually.)','Yes Through integrated portals like VIVO and Profiles RNS','No (Faculty status verified by comparison with UC Irvine HR's Academic Personnel system)','Yes -- can be pre-populated and alerts recommend new data','Yes (Some)','Yes (manual data entry possible, too)','']
+            local : ['RSI, CSV, Web-service API','Unknown','Uses open data exchange standards','XML, .mbb, XLS','PDF, RTF','Microsoft Word, Excel, PDF','RDF, XML/RDF','RTF, XLS, CSV, PDF, HTML, XML','None','Many types, depending on the format of the file retrieved.','RDF, GraphXML, CSV file','CSV (for some modules).','N/A','CSV, PDF, PNG, JPEG','CSV, CERIF XML, MS Word, Excel, PDF (APA6), ATOM/XML web services, EndNote/Reference Manager, BibTex, RDF (Linked Data),
+various government assessment submission formats','XML, RDF, SPARQL','XML, RDF, SPARQL, CSV, CERIF XML, MS Word, Excel, PDF, ATOM/XML web services, EndNote/Reference Manager, BibTex, various government assessment submission formats','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['INDURE (Indiana Database for University Research Expertise)','Activity Insight','Collaborative Partnership / Profile System','Converis','Profiles Research Networking Software','C-IKNOW','Faculty Scholarly Productivity Index','iAMscientist','iamResearcher','Academic Room','Pivot','Loki','Elsevier's Pure (now integrated with SciVal Experts)','Faculty Research Information Profile (FRIP)','REACH NC Life Science Experts Visualization Tool','Faculty Profile System','Curvita Profile Manager','MizzouLinks','GENIUS','OSU:pro','McCormick Collaboration Visualization Tool','ERIM Member Profile System (ERIM MIS)','Google','Elsevier's SciVal','Expertise @ Maryland','CUSP - Columbia University Scientific Profiles','ResearcherID','SciENcv','Epernicus Solutions & Epernicus Network','InCites','Life Science Network','Community Academic Profiles - CAP','Digital Vita','Yaffle','Lattes Database','Symplectic Elements','EUREKA! Enhancing Student Research','LinkedIn','VIVO','HUBzero','LatticeGrid','Research Accelerator','MyScienceWork','i2iConnect','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

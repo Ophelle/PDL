@@ -26,11 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Bus interface :</label></br>
+							<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >HyperTransport</br>	
- 		 									<input type="checkbox" name="Feature" >FSB</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Memory clock (MHz) : </label></br> <input id="2" type="number" name="Feature"></br>
 							
@@ -89,11 +86,8 @@ November 14</br>
 							<label>Fillrate - MOperations/s : </label></br> <input id="11" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Model :</label></br>
+							<label>Model : </label></br> <input id="12" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >GeForce 7050 + nForce 610i</br>	
- 		 									<input type="checkbox" name="Feature" >630i</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Memory - Bus type : </label></br> <input id="13" type="text" name="Feature"></br>
 							
@@ -109,11 +103,20 @@ November 14</br>
  		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['4:3:4:2','2:1:2:2','8:5:8:4','24:8:24:16','12:5:12:8','16:8:16:8','2:2:4:2','20:7:20:16','24:8:24:16 x2','']
+            local : ['AGP 8x
+PCI-E x16','PCI-E x16','AGP 8x','HyperTransport','FSB','HyperTransport/FSB','']
           });
           $("#2").typeahead({
             name:"list2",
+            local : ['4:3:4:2','2:1:2:2','8:5:8:4','24:8:24:16','12:5:12:8','16:8:16:8','2:2:4:2','20:7:20:16','24:8:24:16 x2','']
+          });
+          $("#3").typeahead({
+            name:"list3",
             local : ['G73','G71','G71 x2','NV44','G72','G70','MCP76','MCP68S','G73-B1','MCP67QV','MCP73','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['GeForce 7900 GS','GeForce 7900 GT','GeForce 7150 + nForce 630i','GeForce 7300 SE','GeForce 7050PV + nForce 630a','GeForce 7600 GT 80 nm','GeForce 7050 + nForce 610i/630i','GeForce 7950 GX2','GeForce 7200 GS','GeForce 7025 + nForce 630a','GeForce 7300 GT','GeForce 7300 GS','GeForce 7500 LE','GeForce 7600 GS','GeForce 7300 LE','GeForce 7900 GTX','GeForce 7100 + nForce 630i','GeForce 7800 GS','GeForce 7100 GS','GeForce 7900 GTO','GeForce 7950 GT','GeForce 7800 GTX','GeForce 7600 GT','GeForce 7900 GX2','GeForce 7800 GT','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

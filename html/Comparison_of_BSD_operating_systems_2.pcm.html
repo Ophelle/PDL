@@ -65,17 +65,17 @@
  		 					 <input type="radio" name="FeatureEncrypted file systems" value="oui">oui <input type="radio" name="FeatureEncrypted file systems" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Security logging :</label></br>
+							<label>Security logging : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >syslog</br>	
- 		 									<input type="checkbox" name="Feature" > CAPP event auditing</br>	
- 		 									<input type="checkbox" name="Feature" > OpenBSM</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
  		 					<label>Data execution prevention - hardware :</label></br>
  		 					 <input type="radio" name="FeatureData execution prevention - hardware" value="oui">oui <input type="radio" name="FeatureData execution prevention - hardware" value = "non">non </br>
 									
  		 								 		<input type="text"/></br>		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['syslog, CAPP event auditing, OpenBSM','syslog','?','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

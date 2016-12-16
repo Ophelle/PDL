@@ -44,11 +44,8 @@
  		 					 <input type="radio" name="Featuresmall-sized content" value="oui">oui <input type="radio" name="Featuresmall-sized content" value = "non">non </br>
 									
 						</br>	
-							<label>Applications :</label></br>
+							<label>Applications : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >gedit</br>	
- 		 									<input type="checkbox" name="Feature" > Firefox</br>	
-								
 						</br>	
  		 					<label>multiple type document :</label></br>
  		 					 <input type="radio" name="Featuremultiple type document" value="oui">oui <input type="radio" name="Featuremultiple type document" value = "non">non </br>
@@ -61,6 +58,10 @@
           $("#2").typeahead({
             name:"list2",
             local : ['depends on Window System','depends on Application','Yes','No','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['','Opera','Eclipse','Inkscape','GIMP','gedit, Firefox','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

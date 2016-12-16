@@ -116,58 +116,41 @@
  		 									<input type="checkbox" name="Feature" > Xamarin</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>SQL support :</label></br>
+							<label>SQL support : </label></br> <input id="3" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >SQL subset</br>	
- 		 									<input type="checkbox" name="Feature" > DQL</br>	
- 		 									<input type="checkbox" name="Feature" >SQL 9x</br>	
- 		 									<input type="checkbox" name="Feature" >200x</br>	
- 		 									<input type="checkbox" name="Feature" >SQL subset. Object notation allowed. Supports embedded SQL</br>	
- 		 									<input type="checkbox" name="Feature" > dynamic SQL and xDBC access.</br>	
- 		 									<input type="checkbox" name="Feature" >No support. Object indexing and searching is done through ZCatalog facility.</br>	
- 		 									<input type="checkbox" name="Feature" >None</br>	
- 		 									<input type="checkbox" name="Feature" > uses JPA or JDO</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Current Stable Version : </label></br> <input id="4" type="number" name="Feature"></br>
+							<label>Current Stable Version : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>License :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >GPL</br>	
- 		 									<input type="checkbox" name="Feature" > Proprietary</br>	
- 		 									<input type="checkbox" name="Feature" >GPL or proprietary</br>	
- 		 									<input type="checkbox" name="Feature" >open source</br>	
- 		 									<input type="checkbox" name="Feature" > FreeBSD-style license</br>	
- 		 									<input type="checkbox" name="Feature" > custom</br>	
- 		 									<input type="checkbox" name="Feature" > proprietary</br>	
- 		 									<input type="checkbox" name="Feature" >Proprietary</br>	
- 		 									<input type="checkbox" name="Feature" > free version available</br>	
- 		 									<input type="checkbox" name="Feature" >AGPL</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Datatypes :</label></br>
+							<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >JavaScript and 4D data types</br>	
- 		 									<input type="checkbox" name="Feature" >.NET and Java data types</br>	
- 		 									<input type="checkbox" name="Feature" >Java and .NET data types</br>	
- 		 									<input type="checkbox" name="Feature" >Objects and code</br>	
- 		 									<input type="checkbox" name="Feature" >.NET data types</br>	
- 		 									<input type="checkbox" name="Feature" > classes</br>	
- 		 									<input type="checkbox" name="Feature" >Basic Types</br>	
- 		 									<input type="checkbox" name="Feature" > Classes</br>	
- 		 									<input type="checkbox" name="Feature" > Multiple inheritance</br>	
- 		 									<input type="checkbox" name="Feature" > Weak Typed</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Name :</label></br>
+							<label>Datatypes : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Objectivity</br>	
- 		 									<input type="checkbox" name="Feature" >DB</br>	
- 		 									<input type="checkbox" name="Feature" >GemStone</br>	
- 		 									<input type="checkbox" name="Feature" >S</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
+							<label>Name : </label></br> <input id="7" type="text" name="Feature"></br>
+							
 		<script>
+          $("#1").typeahead({
+            name:"list1",
+            local : ['SQL subset, DQL','LINQ','SQL 9x/200x','CBQL (based on Datalog)','db4o-sql','','no','SQL subset. Object notation allowed. Supports embedded SQL, dynamic SQL and xDBC access.','None','No support. Use REST & SSJS instead','No support. Object indexing and searching is done through ZCatalog facility.','None, uses JPA or JDO','SQL subset (also has own object query language)','JSQL - object-oriented subset of SQL','SQL superset','']
+          });
+          $("#2").typeahead({
+            name:"list2",
+            local : ['2.4.6','','2014.2','3.2.2','4.x','3.4','8.0','3.1.1','4.2','2.2','7.2 (July 2011)','5.0.11','10.2.1','4.0','4','12.3.0 (August 2013)','']
+          });
+          $("#3").typeahead({
+            name:"list3",
+            local : ['GPL, Proprietary','Commercial','Proprietary','LGPL','MIT License','GPL or proprietary','Zope Public License','open source, FreeBSD-style license','GPL, custom, proprietary','Proprietary, free version available','Apache license 2.0','AGPL, proprietary','GPL','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['','JavaScript and 4D data types','.NET and Java data types','Java and .NET data types','no types but classes','Objects and code','.NET data types, classes','.NET data types','Basic Types, Classes, Multiple inheritance, Weak Typed','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['ObjectDB','WakandaDB','Perst','Versant Object Database','Objectivity/DB','GemStone/S','OpenAccess','Twig','siaqodb','ConceptBase','Zope Object Database','ObjectDatabase++','Caché','ODABA','ObjectStore','Picolisp','Db4o','OpenLink Virtuoso','NeoDatis ODB','VelocityDB','']
+          });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />
 		</form></fieldset>

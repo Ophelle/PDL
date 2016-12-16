@@ -26,44 +26,41 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Scripting language : </label></br> <input id="1" type="text" name="Feature"></br>
-							
+ 		 					<label>Scripting language :</label></br>
+ 		 					 <input type="radio" name="FeatureScripting language" value="oui">oui <input type="radio" name="FeatureScripting language" value = "non">non </br>
+									
 						</br>	
 							<label>License type : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>GUI : </label></br> <input id="3" type="text" name="Feature"></br>
-							
+ 		 					<label>GUI :</label></br>
+ 		 					 <input type="radio" name="FeatureGUI" value="oui">oui <input type="radio" name="FeatureGUI" value = "non">non </br>
+									
 						</br>	
 							<label>Operating System : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Library :</label></br>
+							<label>Library : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >C</br>	
- 		 									<input type="checkbox" name="Feature" >C++</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Name :</label></br>
+							<label>Name : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >DMDX  and Visual DMDX</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','N/A','']
+            local : ['Free Software','Proprietary Software','Unknown','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Free Software','Proprietary Software','Unknown','']
+            local : ['Linux Mac Microsoft Windows','Mac','Microsoft Windows','Web-based','Mac Microsoft Windows','Microsoft Windows Web-based','Microsoft Windows Linux','Microsoft Windows iOS','Linux','Linux Mac','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['Yes','No','Unknown','']
+            local : ['No','C/C++','Open-source software','Python','C','MATLAB','PHP','JavaScript','Java','HTML','Unknown','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['Linux Mac Microsoft Windows','Mac','Microsoft Windows','Web-based','Mac Microsoft Windows','Microsoft Windows Web-based','Microsoft Windows Linux','Microsoft Windows iOS','Linux','Linux Mac','']
+            local : ['Expo','PsyScope X','Inquisit','DirectRT','Tatool Java','DMDX  and Visual DMDX','Vision egg','PsychoPy','PEBL','E-Prime','EventIDE','QRTEngine','Paradigm','Webexp2','Tatool Web','OpenSesame','Presentation','Psychtoolbox for MATLAB','Psykinematix','Superlab','Tscope','PsychJava','z-Tree','PsyToolkit','PyEPL','Expyriment','jsPsych','Experimental Run-Time System','SoPHIE','SPIC Software','Visual DMDX  is a GUI to DMDX','WEXTOR','Cogent for MATLAB','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

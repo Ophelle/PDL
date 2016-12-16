@@ -26,28 +26,22 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Write protection switch :</label></br>
+ 		 					<label>Write protection switch :</label></br>
+ 		 					 <input type="radio" name="FeatureWrite protection switch" value="oui">oui <input type="radio" name="FeatureWrite protection switch" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>DRM :</label></br>
 							
- 		 									<input type="checkbox" name="Feature" >Partial</br>	
- 		 									<input type="checkbox" name="Feature" > sticker</br>	
+ 		 									<input type="checkbox" name="Feature" >Optional</br>	
+ 		 									<input type="checkbox" name="Feature" > MagicGate</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>DRM : </label></br> <input id="2" type="text" name="Feature"></br>
+							<label>Card : </label></br> <input id="3" type="text" name="Feature"></br>
 							
-						</br>	
-							<label>Card :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Memory Stick Duo</br>	
- 		 									<input type="checkbox" name="Feature" > PRO Duo</br>	
- 		 									<input type="checkbox" name="Feature" >MMC</br>	
- 		 									<input type="checkbox" name="Feature" > RS-MMC</br>	
- 		 									<input type="checkbox" name="Feature" >Memory Stick Standard</br>	
- 		 									<input type="checkbox" name="Feature" > PRO</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes, CPRM','Optional, MagicGate','Partial','','No','Partial (optional)','']
+            local : ['MMCMobile','Memory Stick Micro (M2)','miniSD','xD','Memory Stick Duo, PRO Duo','MMC, RS-MMC','SmartMedia','Memory Stick PRO-HG Duo','microSD','USB','CompactFlash','SD','Memory Stick Standard, PRO','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

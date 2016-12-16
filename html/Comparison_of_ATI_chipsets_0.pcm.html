@@ -81,21 +81,19 @@ Sempron
  Turion 64</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Year : </label></br> <input id="4" type="number" name="Feature"></br>
+							<label>Year : </label></br> <input id="4" type="text" name="Feature"></br>
 							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>NB-SB Interface :</label></br>
+						</br>	
+							<label>NB-SB Interface : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >A-Link</br>	
- 		 									<input type="checkbox" name="Feature" >PCI</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Fabrication process (nm) : </label></br> <input id="6" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Crossfire Enabled : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>Crossfire Enabled :</label></br>
+ 		 					 <input type="radio" name="FeatureCrossfire Enabled" value="oui">oui <input type="radio" name="FeatureCrossfire Enabled" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Model : </label></br> <input id="8" type="text" name="Feature"></br>
 							
 						</br>	
@@ -112,20 +110,11 @@ IGP</br>
  		 									<input type="checkbox" name="Feature" > 400 MHz</br>	
  		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>FSB/HT Frequency (MHz) :</label></br>
+							<label>FSB/HT Frequency (MHz) : </label></br> <input id="10" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >266</br>	
- 		 									<input type="checkbox" name="Feature" >200 (FSB)</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Notes :</label></br>
+							<label>Notes : </label></br> <input id="11" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >HydraVision</br>	
- 		 									<input type="checkbox" name="Feature" > Video Immersion</br>	
- 		 									<input type="checkbox" name="Feature" > TV-out</br>	
- 		 									<input type="checkbox" name="Feature" >ATI PowerPlay</br>	
- 		 									<input type="checkbox" name="Feature" > HydraVision</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -133,17 +122,29 @@ IGP</br>
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['No','Yes, 
-x16','Yes, 
-x8','']
+            local : ['2002','May 23, 2006','Sep 27 2005','Nov 8 2004','','March 1, 2006','2005','']
           });
           $("#3").typeahead({
             name:"list3",
+            local : ['A-Link Express II','','A-Link/PCI','A-Link Express','']
+          });
+          $("#4").typeahead({
+            name:"list4",
             local : ['ATI Radeon  Xpress 200','ATI Radeon  Xpress 200M
 (1100/1150)','IGP 320M','IGP 320','ATI Radeon Xpress 1150
 (ATI Radeon Xpress 200)','ATI CrossFire Xpress 1600
 (ATI Radeon  Xpress 200 Crossfire Edition)','ATI Radeon Xpress 3200','ATI Radeon  Xpress 200P','','ATI Radeon 380M IGP','ATI Radeon Xpress 1100
 (ATI Radeon Xpress 200)','ATI Radeon 380 IGP','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['266/200 (FSB)','1000 BI-DIRECTIONAL','800? BI-DIRECTIONAL','800 BI-DIRECTIONAL','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['','HydraVision, Video Immersion, TV-out','Mobile chipset 
+powerplay 5.0','Mobile chipset 
+ powerplay 4.0','ATI PowerPlay, HydraVision, Video Immersion, TV-out','No sideport memory','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

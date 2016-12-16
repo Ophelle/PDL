@@ -26,46 +26,32 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Verdiem Surveyor : </label></br> <input id="1" type="text" name="Feature"></br>
+ 		 					<label>Verdiem Surveyor :</label></br>
+ 		 					 <input type="radio" name="FeatureVerdiem Surveyor" value="oui">oui <input type="radio" name="FeatureVerdiem Surveyor" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Faronics Power Save :</label></br>
+ 		 					 <input type="radio" name="FeatureFaronics Power Save" value="oui">oui <input type="radio" name="FeatureFaronics Power Save" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Data Synergy PowerMAN :</label></br>
+ 		 					 <input type="radio" name="FeatureData Synergy PowerMAN" value="oui">oui <input type="radio" name="FeatureData Synergy PowerMAN" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Software : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Faronics Power Save : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Data Synergy PowerMAN : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Software :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Scheduled Sleep</br>	
- 		 									<input type="checkbox" name="Feature" >Hibernate</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>EMCO Software Remote Shutdown : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Energy Star EZ GPO : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-		<script>
+ 		 					<label>EMCO Software Remote Shutdown :</label></br>
+ 		 					 <input type="radio" name="FeatureEMCO Software Remote Shutdown" value="oui">oui <input type="radio" name="FeatureEMCO Software Remote Shutdown" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+ 		 					<label>Energy Star EZ GPO :</label></br>
+ 		 					 <input type="radio" name="FeatureEnergy Star EZ GPO" value="oui">oui <input type="radio" name="FeatureEnergy Star EZ GPO" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['Yes','No','Proprietary','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Yes','No','Proprietary','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Yes','Proprietary','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['No','Yes','Proprietary','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['No','Yes','Free','']
+            local : ['Scheduled wake-up (without WoL)','Sleep on idle','Anti-insomnia','Standby display on idle','Scheduled Reboot','Group Policy Configuration Support','Per-user Policy','Power-off on idle','Active Directory Integration','Logout on idle','Scheduled power-off','Hibernate on idle','Remote wake-up (with WoL)','License','Scheduled Sleep/Hibernate','Per-machine Policy','64-bit Support','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

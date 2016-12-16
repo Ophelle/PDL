@@ -75,24 +75,11 @@
 							<label>Screen type : </label></br> <input id="5" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Name :</label></br>
+							<label>Name : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >PSP Slim</br>	
- 		 									<input type="checkbox" name="Feature" >Lite</br>	
- 		 									<input type="checkbox" name="Feature" >Archos 605 WiFi</br>	
- 		 									<input type="checkbox" name="Feature" >GPS</br>	
- 		 									<input type="checkbox" name="Feature" >Zune 80</br>	
- 		 									<input type="checkbox" name="Feature" >120</br>	
- 		 									<input type="checkbox" name="Feature" >Zune 4</br>	
- 		 									<input type="checkbox" name="Feature" >8</br>	
- 		 									<input type="checkbox" name="Feature" >16</br>	
-								
 						</br>	
-							<label>Audio out :</label></br>
+							<label>Audio out : </label></br> <input id="7" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Headphone jack</br>	
- 		 									<input type="checkbox" name="Feature" > dock connector</br>	
-								
 						</br>	
 							<label>Resolution (px) : </label></br> <input id="8" type="text" name="Feature"></br>
 							
@@ -103,23 +90,28 @@
 							<label>Frame rate (Hz) : </label></br> <input id="10" type="number" name="Feature"></br>
 							
 						</br>	
-							<label>Speaker : </label></br> <input id="11" type="text" name="Feature"></br>
-							
+ 		 					<label>Speaker :</label></br>
+ 		 					 <input type="radio" name="FeatureSpeaker" value="oui">oui <input type="radio" name="FeatureSpeaker" value = "non">non </br>
+									
 						</br>	
 							<label>Color depth (bpp) : </label></br> <input id="12" type="number" name="Feature"></br>
 							
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['320 × 240','800 × 480','240 × 240','480 × 320 (4th gen. 960 × 640)','224 × 176','480 × 272','234 × 160','160 × 128','']
+            local : ['Headphone jack','Headphone jack, dock connector','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['TFT LCD','AMOLED','OLED','AM TFT LCD','']
+            local : ['320 × 240','800 × 480','240 × 240','480 × 320 (4th gen. 960 × 640)','224 × 176','480 × 272','234 × 160','160 × 128','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['No','Yes (ex. 1st gen.)','Yes','Clicker only','']
+            local : ['TFT LCD','AMOLED','OLED','AM TFT LCD','']
+          });
+          $("#4").typeahead({
+            name:"list4",
+            local : ['iPod classic','ZEN','Samsung Galaxy Player 4.0 & 5.0','Archos 105','Archos 705 WiFi','GP2X F-200','iPod nano 5G','Cowon D2','iriver clix 2G','ZEN Vision W','Zune HD','ZVUE 260','Archos 5','PSP Slim/Lite','Sansa Fuze+','Sansa View','Archos 605 WiFi/GPS','Zune 80/120','Archos 405','iPod touch','Samsung T10','Samsung P2','Zune 4/8/16','iPod nano 6G','Cowon Q5W','Cowon A3','Sansa Fuze','Walkman NWZ-A810 series','Gigabeat T-Series','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

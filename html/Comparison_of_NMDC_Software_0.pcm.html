@@ -32,44 +32,36 @@
 							<label>Based on : </label></br> <input id="2" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>FOSS : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Active : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Latest version (release date) : </label></br> <input id="5" type="number" name="Feature"></br>
-							
+ 		 					<label>FOSS :</label></br>
+ 		 					 <input type="radio" name="FeatureFOSS" value="oui">oui <input type="radio" name="FeatureFOSS" value = "non">non </br>
+									
  		 								 		<input type="text"/></br>						</br>	
-							<label>Programming language :</label></br>
+ 		 					<label>Active :</label></br>
+ 		 					 <input type="radio" name="FeatureActive" value="oui">oui <input type="radio" name="FeatureActive" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Latest version (release date) : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >C#</br>	
- 		 									<input type="checkbox" name="Feature" > Lua</br>	
- 		 									<input type="checkbox" name="Feature" >Visual Basic</br>	
- 		 									<input type="checkbox" name="Feature" > Jscript</br>	
- 		 									<input type="checkbox" name="Feature" > VBscript</br>	
- 		 									<input type="checkbox" name="Feature" >C++</br>	
- 		 									<input type="checkbox" name="Feature" >C</br>	
- 		 									<input type="checkbox" name="Feature" > Perl</br>	
- 		 									<input type="checkbox" name="Feature" > Python</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
+						</br>	
+							<label>Programming language : </label></br> <input id="6" type="text" name="Feature"></br>
+							
 						</br>	
 							<label>NMDC hub : </label></br> <input id="7" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>IPv6 support : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
+ 		 					<label>IPv6 support :</label></br>
+ 		 					 <input type="radio" name="FeatureIPv6 support" value="oui">oui <input type="radio" name="FeatureIPv6 support" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
 							<label>Software license : </label></br> <input id="9" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>GUI : </label></br> <input id="10" type="text" name="Feature"></br>
+ 		 					<label>GUI :</label></br>
+ 		 					 <input type="radio" name="FeatureGUI" value="oui">oui <input type="radio" name="FeatureGUI" value = "non">non </br>
+									
+ 		 								 		<input type="text"/></br>						</br>	
+							<label>Notes : </label></br> <input id="11" type="text" name="Feature"></br>
 							
-						</br>	
-							<label>Notes :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Available in Debian and OpenWrt</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Other : </label></br> <input id="12" type="text" name="Feature"></br>
 							
@@ -80,15 +72,15 @@
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['Yes','No','Active','']
+            local : ['','0.8.3 (2014-08-14)','2.3.10 (2012-06-10)','Beta0.2svn1469 (2013-10-22)','5.07 (2011-05-29)','0.2.4 (2006-02-13)','0.0.6.3 (2010-04-25)','3.0.4 beta (2004-09-06)','Never released since 2008','8.15.6 (2015-May-29)','1.0363 (2014-02-20)','1.0.0-RC4 (2015-02-28)','2008','0.5.0.3 (2015-02-50)','2012','1.2.7 (2012-08-15)','2007','2002','Latest version (release date)','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['NMDC hub','PTDCH','YnHub','DC Sharp Hub','VerliHub','openDCd','py-dchub','UFOHub','HeXHub','Open Direct Connect Hub','Eximius','DDCH DevDirect Connect Hub','PtokaX','RusHub','Aquila','Dtella','LamaHub','Flexhub','DB Hub','']
+            local : ['Assembly','Unknown','C#','C','Delphi','Programming language','C#, Lua','Visual Basic, Jscript, VBscript','C++, Lua','Lua','Python','C, Perl','C++, Lua, Python, Perl','Visual Basic, Jscript','']
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['No','Yes','IPv6 support','']
+            local : ['NMDC hub','PTDCH','YnHub','DC Sharp Hub','VerliHub','openDCd','py-dchub','UFOHub','HeXHub','Open Direct Connect Hub','Eximius','DDCH DevDirect Connect Hub','PtokaX','RusHub','Aquila','Dtella','LamaHub','Flexhub','DB Hub','']
           });
           $("#5").typeahead({
             name:"list5",
@@ -96,19 +88,15 @@
           });
           $("#6").typeahead({
             name:"list6",
-            local : ['Yes','No','Unknown','FOSS','']
-          });
-          $("#7").typeahead({
-            name:"list7",
             local : ['Software license','GNU GPL','Proprietary
 Freeware','Unknown','Open Software License','MIT License','GNU AGPL','']
           });
+          $("#7").typeahead({
+            name:"list7",
+            local : ['','Available in Debian and OpenWrt','Available','']
+          });
           $("#8").typeahead({
             name:"list8",
-            local : ['Yes','GUI','Unknown','No','Pending','']
-          });
-          $("#9").typeahead({
-            name:"list9",
             local : ['No','Unknown','Yes','Other','']
           });
     </script>

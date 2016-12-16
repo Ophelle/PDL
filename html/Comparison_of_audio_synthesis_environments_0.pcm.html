@@ -38,16 +38,11 @@
 							<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Creator :</label></br>
+							<label>Creator : </label></br> <input id="5" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Ge Wang and Perry Cook</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
-							<label>Main user interface type :</label></br>
+							<label>Main user interface type : </label></br> <input id="6" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Document</br>	
- 		 									<input type="checkbox" name="Feature" > graphical</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Primary Purpose(s) :</label></br>
 							
@@ -74,11 +69,8 @@
 							<label>Development status : </label></br> <input id="9" type="text" name="Feature"></br>
 							
 						</br>	
-							<label>Name :</label></br>
+							<label>Name : </label></br> <input id="10" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >Max</br>	
- 		 									<input type="checkbox" name="Feature" >MSP</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 		<script>
           $("#1").typeahead({
             name:"list1",
@@ -94,11 +86,23 @@
           });
           $("#4").typeahead({
             name:"list4",
-            local : ['Non-free','Free','']
+            local : ['James McCartney','Ge Wang and Perry Cook','Barry Vercoe','Native Instruments','Andrew Sorensen','Miller Puckette','']
           });
           $("#5").typeahead({
             name:"list5",
+            local : ['Document','Graphical','Document, graphical','']
+          });
+          $("#6").typeahead({
+            name:"list6",
+            local : ['Non-free','Free','']
+          });
+          $("#7").typeahead({
+            name:"list7",
             local : ['Mature','Stable','Immature','']
+          });
+          $("#8").typeahead({
+            name:"list8",
+            local : ['Impromptu','Pure Data','Max/MSP','Reaktor','ChucK','Csound','SuperCollider','']
           });
     </script>
     <input type="submit" class="btn btn-info" value="Ajouter un produit" />

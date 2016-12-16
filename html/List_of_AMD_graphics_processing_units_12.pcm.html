@@ -26,11 +26,8 @@
 		<form action="" method="post">
    			<legend style="color:red" >Formulaire</legend>
 						</br>	
-							<label>Bus interface :</label></br>
+							<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >FSB</br>	
- 		 									<input type="checkbox" name="Feature" > HT 2.0</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Memory clock (MHz) : </label></br> <input id="2" type="text" name="Feature"></br>
 							
@@ -63,11 +60,8 @@
 							<label>Fillrate - MPixels/s : </label></br> <input id="9" type="number" name="Feature"></br>
 							
  		 								 		<input type="text"/></br>						</br>	
-							<label>Code name :</label></br>
+							<label>Code name : </label></br> <input id="10" type="text" name="Feature"></br>
 							
- 		 									<input type="checkbox" name="Feature" >RS600</br>	
- 		 									<input type="checkbox" name="Feature" > RS690 (zeus)</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
 						</br>	
 							<label>Fillrate - MOperations/s : </label></br> <input id="11" type="number" name="Feature"></br>
 							
@@ -89,18 +83,26 @@
 		<script>
           $("#1").typeahead({
             name:"list1",
-            local : ['400 - 800','']
+            local : ['FSB, HT 2.0','HT 2.0','']
           });
           $("#2").typeahead({
             name:"list2",
-            local : ['4:2:4:4','']
+            local : ['400 - 800','']
           });
           $("#3").typeahead({
             name:"list3",
-            local : ['256 - 512','']
+            local : ['4:2:4:4','']
           });
           $("#4").typeahead({
             name:"list4",
+            local : ['256 - 512','']
+          });
+          $("#5").typeahead({
+            name:"list5",
+            local : ['RS740 (titan)','RS600, RS690 (zeus)','RS690C (zeus)','']
+          });
+          $("#6").typeahead({
+            name:"list6",
             local : ['Radeon Xpress X1200','Radeon Xpress X1250','Radeon Xpress 2100','']
           });
     </script>
