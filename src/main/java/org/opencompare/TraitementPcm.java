@@ -45,9 +45,9 @@ public class TraitementPcm {
 	}
 	
 	public void loadPcm(File file) {
-		this.file = file;
-		PCMLoader loader = new KMFJSONLoader();
 		try {
+			this.file = file;
+			PCMLoader loader = new KMFJSONLoader();
 			this.pcm = loader.load(file).get(0).getPcm();
 			this.namePcm = this.pcm.getName().replaceAll("_", " ");
 			this.listFeatures = this.pcm.getConcreteFeatures();
@@ -55,8 +55,8 @@ public class TraitementPcm {
 			this.bestTypeForEachFeature = getBestTypeForEachFeature(this.allTypesOfFeature);
 			this.contentsTypeMultiple = contentsTypeMultiple(this.listFeatures);
 			this.allContentsOfEachCell = getAllContentsOfEachCell(this.listFeatures);
-		} catch (IOException e) {
-			System.out.println("Chargement du pcm incomplet ou échoué : " + e);
+		} catch(IOException e) {
+			System.out.println("Chargement du pcm échoué : " + e);
 		}
 	}
 
@@ -175,6 +175,7 @@ public class TraitementPcm {
 					}
 					// Obtenir le type de la case courante
 					currentType = valueToString(cell.getInterpretation());
+					
 					// Ajout dans la liste le type de la case courante
 					listTypes.add(currentType);
 				}
@@ -337,6 +338,9 @@ public class TraitementPcm {
 				if (max < currentNb) {
 					max = currentNb;
 					bestType = currentFeat;
+					if(bestType.contains("partial")) {
+						System.out.println(this.file.getName() + " : " + feat);
+					}
 					// attribut le type Html en fonction du type dominant trouvé
 					bestType = setTypeForHtml(bestType);
 				}

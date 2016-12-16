@@ -31,7 +31,7 @@ public class GenerationHtml {
 		try {
 			temp = config.getTemplate(this.input);
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("Le chargement du template a échoué : " + e);
 		}
 		// Attribution des variables au code html source
 		Map<String, Object> ajoutVar = new HashMap<String, Object>();
@@ -41,24 +41,20 @@ public class GenerationHtml {
 		ajoutVar.put("allContentsCell", this.traitPcm.getAllContentsOfEachCell());
 		ajoutVar.put("ListMultiple",this.traitPcm.getContentsTypeMultiple());
 		ajoutVar.put("getAllTypesValue", this.traitPcm.getAllTypesOfFeature());
+		
 		// Création html
-		File file = new File(this.output);
-		FileWriter writer = null;
+		//FileWriter writer;
 		try {
-			writer = new FileWriter(file);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		try {
-			temp.process(ajoutVar, writer);
-		} catch (TemplateException | IOException e) {
-			System.out.println("fssffs " + e);;
-		}
-		System.out.println("HTML CREE au dossier : " + this.output);
-		try {
+			FileWriter writer = new FileWriter(new File(this.output));
+			try {
+				temp.process(ajoutVar, writer);
+			} catch (TemplateException e) {
+				System.out.println("La génération du HTML a échoué : " + e);
+			}
+			System.out.println("HTML CREE au dossier : " + this.output);
 			writer.close();
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("Le fichier n'existe pas : " + e);
 		}
 	}
 	
@@ -71,7 +67,7 @@ public class GenerationHtml {
 		try {
 			temp = config.getTemplate(this.input);
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("Le chargement du template a échoué : " + e);
 		}
 		
 		// Création html
@@ -90,24 +86,19 @@ public class GenerationHtml {
 			ajoutVar.put("getAllTypesValue", this.traitPcm.getAllTypesOfFeature());
 			
 			setOutput("html/" + filesPcm[i].getName() + ".html");
-			File file = new File(this.output);
-			FileWriter writer = null;
+			FileWriter writer;
 			try {
-				writer = new FileWriter(file);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			try {
-				temp.process(ajoutVar, writer);
-			} catch (TemplateException | IOException e) {
-				e.printStackTrace();
-			}
-			System.out.println("HTML CREE au dossier : " + this.output);
-			try {
+				writer = new FileWriter(new File(this.output));
+				try {
+					temp.process(ajoutVar, writer);
+				} catch (TemplateException e) {
+					System.out.println("La génération du HTML a échoué : " + e);
+				}
 				writer.close();
 			} catch (IOException e) {
-				e.printStackTrace();
+				System.out.println("Le fichier n'existe pas : " + e);
 			}
+			System.out.println("HTML CREE au dossier : " + this.output);
 			ajoutVar = new HashMap<String, Object>();
 		}
 	}
