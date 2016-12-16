@@ -49,15 +49,15 @@ public class TraitementPcm {
 		PCMLoader loader = new KMFJSONLoader();
 		try {
 			this.pcm = loader.load(file).get(0).getPcm();
+			this.namePcm = this.pcm.getName().replaceAll("_", " ");
+			this.listFeatures = this.pcm.getConcreteFeatures();
+			this.allTypesOfFeature = getAllTypesOfFeature(this.listFeatures);
+			this.bestTypeForEachFeature = getBestTypeForEachFeature(this.allTypesOfFeature);
+			this.contentsTypeMultiple = contentsTypeMultiple(this.listFeatures);
+			this.allContentsOfEachCell = getAllContentsOfEachCell(this.listFeatures);
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("Chargement du pcm incomplet ou échoué : " + e);
 		}
-		this.namePcm = this.pcm.getName();
-		this.listFeatures = this.pcm.getConcreteFeatures();
-		this.allTypesOfFeature = getAllTypesOfFeature(this.listFeatures);
-		this.bestTypeForEachFeature = getBestTypeForEachFeature(this.allTypesOfFeature);
-		this.contentsTypeMultiple = contentsTypeMultiple(this.listFeatures);
-		this.allContentsOfEachCell = getAllContentsOfEachCell(this.listFeatures);
 	}
 
 	public PCM getPcm() {
@@ -77,7 +77,7 @@ public class TraitementPcm {
 	}
 
 	public String getNamePcm() {
-		return this.namePcm.replaceAll("_", " ");
+		return this.namePcm;
 	}
 
 	public void setNamePcm(String name) {

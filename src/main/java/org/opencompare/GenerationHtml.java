@@ -52,7 +52,7 @@ public class GenerationHtml {
 		try {
 			temp.process(ajoutVar, writer);
 		} catch (TemplateException | IOException e) {
-			e.printStackTrace();
+			System.out.println("fssffs " + e);;
 		}
 		System.out.println("HTML CREE au dossier : " + this.output);
 		try {

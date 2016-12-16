@@ -11,7 +11,7 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		Scanner sc2 = new Scanner(System.in);
 		while(nb != 1 && nb != 2) {
-			System.out.println("Voulez-vous générer tous les formulaires ou un formulaire à partir du pcm de votre choix ?\n 1:Pour tous les formulaires 2:Pour un formulaire");
+			System.out.println("Voulez-vous générer tous les formulaires ou un formulaire à partir du pcm de votre choix ? \nTapez 1 : Pour tous les formulaires \nTapez 2 : Pour un formulaire");
 			nb = sc.nextInt();
 			if(nb == 1) {
 				TraitementPcm trait = new TraitementPcm(new File("testPrototype/example0.pcm"));
@@ -19,7 +19,7 @@ public class Main {
 				generator.generatAllHtml();
 			} else if(nb == 2) {
 				while(!str.equals("q")) {
-					System.out.println("Tapez le nom de votre pcm ou q pour quitter:");
+					System.out.println("Tapez le chemin de votre fichier pcm ou q pour quitter:");
 					str = sc2.nextLine();
 					if(!str.equals("q")) {
 						TraitementPcm trait = new TraitementPcm(new File(str));
