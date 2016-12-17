@@ -27,7 +27,7 @@
 				<div class="col-md-2">&nbsp;</div>
 				<div class="col-md-8">
 					<form action="" method="post">
-						<legend style="color:red" >Formulaire</legend>
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 						<#assign i=0>
 						<#list bestType as key, value>
 							<#if value == "radio">

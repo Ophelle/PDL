@@ -114,6 +114,7 @@ public class GenerationHtml {
 				ajoutVar = new HashMap<String, Object>();
 			}
 		}
+		System.out.println("------Fin de la génération de tous les fichiers html-------");
 	}
 
 	public TraitementPcm getTraitPcm() {
