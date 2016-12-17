@@ -208,9 +208,15 @@ public class TraitementPcm {
 						if (currentType == "multiple") {
 							currentContent = cell.getContent().split("[,/]");
 							for (String contenu : currentContent) {
-								contenu = contenu.replaceAll(" ", "");
-								if(!listMultiple.contains(contenu)) {
-									listMultiple.add(contenu);
+								if(contenu.charAt(0) == ' ') {
+									contenu = contenu.substring(1);
+									if(!listMultiple.contains(contenu)) {
+										listMultiple.add(contenu);
+									}
+								} else {
+									if(!listMultiple.contains(contenu)) {
+										listMultiple.add(contenu);
+									}
 								}
 							}
 						}
