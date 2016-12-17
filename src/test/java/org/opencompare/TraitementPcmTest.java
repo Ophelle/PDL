@@ -287,10 +287,9 @@ public class TraitementPcmTest {
 		listFeatures = pcm.getConcreteFeatures();
 		List<String> listMultiple = new ArrayList<String>();
 		listMultiple.add("COMMAND.COM");
-		listMultiple.add(" CMD.EXE");
+		listMultiple.add("CMD.EXE");
 		listMultiple.add("\nPowerShell (optional)");
 		listMultiple.add("\nPowerShell v3.0");
-		listMultiple.add("CMD.EXE");
 		listMultiple.add("\nPowerShell v2.0");
 		listMultiple.add("\nPowerShell v4.0");
 
