@@ -48,18 +48,22 @@ public class GenerationHtml {
 		ajoutVar.put("getAllTypesValue", this.traitPcm.getAllTypesOfFeature());
 		
 		// Création html
-		setOutput(this.traitPcm.getFile().getPath() + ".html");
-		try {
-			FileWriter writer = new FileWriter(new File(this.output));
+		if(this.traitPcm.getFile() != null) {
+			setOutput(this.traitPcm.getFile().getPath() + ".html");
 			try {
-				temp.process(ajoutVar, writer);
-			} catch (TemplateException e) {
-				System.out.println("La génération du HTML a échoué : " + e);
+				FileWriter writer = new FileWriter(new File(this.output));
+				try {
+					temp.process(ajoutVar, writer);
+				} catch (TemplateException e) {
+					System.out.println("La génération du HTML a échoué : " + e);
+				}
+				System.out.println("HTML CREE au dossier : " + this.output);
+				writer.close();
+			} catch (IOException e) {
+				System.out.println("Le fichier n'a pas été chargé : " + e);
 			}
-			System.out.println("HTML CREE au dossier : " + this.output);
-			writer.close();
-		} catch (IOException e) {
-			System.out.println("Le fichier n'existe pas : " + e);
+		} else {
+			System.out.println("Le fichier n'existe pas");
 		}
 	}
 	

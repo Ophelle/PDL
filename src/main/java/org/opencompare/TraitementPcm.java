@@ -56,10 +56,10 @@ public class TraitementPcm {
 				this.contentsTypeMultiple = contentsTypeMultiple(this.listFeatures);
 				this.allContentsOfEachCell = getAllContentsOfEachCell(this.listFeatures);
 			} catch(IOException e) {
-				System.out.println("Chargement du pcm échoué : " + e);
+				System.out.println("Le chargement du pcm a échoué");
 			}
 		} else {
-			throw new UnsupportedOperationException("Le fichier n'existe pas ou le chemin est mal défini");
+			System.out.println("Le fichier n'existe pas ou le chemin est mal défini");
 		}
 	}
 
