@@ -207,8 +207,8 @@ public class TraitementPcm {
 
 						if (currentType == "multiple") {
 							currentContent = cell.getContent().split("[,/]");
-							
 							for (String contenu : currentContent) {
+								contenu = contenu.replaceAll(" ", "");
 								if(!listMultiple.contains(contenu)) {
 									listMultiple.add(contenu);
 								}
