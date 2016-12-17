@@ -2,8 +2,7 @@ package org.opencompare;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -158,10 +157,10 @@ public class TraitementPcm {
 
 		String currentType = "";
 		// Map qui contient tous les types pour chaque feature de la matrice
-		Map<String, List<String>> feat_type = new HashMap<String, List<String>>();
+		Map<String, List<String>> feat_type = new LinkedHashMap<String, List<String>>();
 
 		for (Feature feat : listFeatures) {
-			List<String> listTypes = new ArrayList<String>();
+			List<String> listTypes = new LinkedList<String>();
 			String abstractFeature = "";
 			// Si le feature existe ou n'est pas vide
 			if (feat.getName() != null && !feat.getName().equals("")) {
@@ -192,8 +191,8 @@ public class TraitementPcm {
 		// chaque feature
 		// Map qui contient tous les choix possible pour chaque feature du type
 		// multiple
-		List<String> listMultiple = new ArrayList<String>();
-		Map<String, List<String>> feat_contentMultiple = new HashMap<String, List<String>>();
+		List<String> listMultiple = new LinkedList<String>();
+		Map<String, List<String>> feat_contentMultiple = new LinkedHashMap<String, List<String>>();
 		for (Feature feat : listFeatures) {
 			if (!feat_contentMultiple.containsKey(feat)) {
 				
@@ -225,7 +224,7 @@ public class TraitementPcm {
 					}
 					if(!listMultiple.isEmpty()) {
 						feat_contentMultiple.put(feat.getName(), listMultiple);
-						listMultiple = new ArrayList<>();
+						listMultiple = new LinkedList<>();
 					}
 				}
 			}
@@ -243,7 +242,7 @@ public class TraitementPcm {
 			if (bestTypeForEachFeature.get(type) == "text") {
 				for (Feature feat : listFeatures) {
 					if (type.contains(feat.getName())) {
-						List<String> listContents = new ArrayList<String>();
+						List<String> listContents = new LinkedList<String>();
 
 						// Si le feature existe ou n'est pas vide
 						if (feat.getName() != null && !feat.getName().equals("")
@@ -251,6 +250,7 @@ public class TraitementPcm {
 							for (Cell cell : feat.getCells()) {
 								// Obtenir le contenu de la case
 								currentContent = cell.getContent();
+								currentContent = currentContent.replaceAll("\n", "");
 								if (!listContents.contains(currentContent)) {
 									// Ajout dans la liste le contenu de la case
 									// courante
@@ -266,6 +266,7 @@ public class TraitementPcm {
 
 			}
 		}
+		System.out.println(feat_content);
 		return feat_content;
 	}
 	
@@ -318,8 +319,8 @@ public class TraitementPcm {
 
 	public Map<String, String> getBestTypeForEachFeature(Map<String, List<String>> allTypes) {
 
-		Map<String, Integer> nbOccurrence = new HashMap<String, Integer>();
-		Map<String, String> bestTypes = new HashMap<String, String>();
+		Map<String, Integer> nbOccurrence = new LinkedHashMap<String, Integer>();
+		Map<String, String> bestTypes = new LinkedHashMap<String, String>();
 		Integer max = 0;
 		for (Entry<String, List<String>> entry1 : allTypes.entrySet()) {
 			// Clé : feature
@@ -361,7 +362,7 @@ public class TraitementPcm {
 			bestTypes.put(feat, setTypeForHtml(bestType));
 			// Reinitialisation du nbOccurence pour les prochains features a
 			// traiter
-			nbOccurrence = new HashMap<String, Integer>();
+			nbOccurrence = new LinkedHashMap<String, Integer>();
 			max = 0;
 		}
 		return bestTypes;

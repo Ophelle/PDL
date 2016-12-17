@@ -30,7 +30,6 @@
 						<legend style="color:red" >Formulaire</legend>
 						<#assign i=0>
 						<#list bestType as key, value>
-							<#assign i++>
 							<#if value == "radio">
 								</br>	
 								<label>${key} :</label></br>
@@ -66,10 +65,14 @@
 									</#list>
 									<#break>
 								</#list>
-									
-							<#else>
+							
+							<#elseif value == "text">
 								</br>	
 								<label>${key} : </label></br> <input id="${i}" type="${value}" name="Feature"></br>
+								<#assign i++>				
+							<#else>
+								</br>	
+								<label>${key} : </label></br> <input type="${value}" name="Feature"></br>
 								<#list getAllTypesValue as keys, valueAll>
 									<#list valueAll as valueAll>
 										<#if value != "text">
@@ -86,10 +89,11 @@
 						<script>
 							<#assign j=0>
 							<#list allContentsCell as key, value>
-								$("#<#assign j++>${j}").typeahead({
+								$("#${j}").typeahead({
 									name:"list${j}",
 									local : [<#list value as  values>'${values}',</#list>'']
 								});
+								<#assign j++>
 							</#list>
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
