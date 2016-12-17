@@ -1,83 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of Adobe Flex charts - Flex Chart features</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Rotate, zoom chart in 3D :</label></br>
+								<input type="radio" name="FeatureRotate, zoom chart in 3D" value="oui">Yes <input type="radio" name="FeatureRotate, zoom chart in 3D" value = "non">No <input type="radio" name="FeatureRotate, zoom chart in 3D" value = "non">Partial </br>
+								
+								</br>	
+								<label>Combined charts :</label></br>
+								<input type="radio" name="FeatureCombined charts" value="oui">Yes <input type="radio" name="FeatureCombined charts" value = "non">No <input type="radio" name="FeatureCombined charts" value = "non">Partial </br>
+								
+								</br>	
+								<label>Feature / Framework : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Show-up & other animation effects :</label></br>
+								<input type="radio" name="FeatureShow-up & other animation effects" value="oui">Yes <input type="radio" name="FeatureShow-up & other animation effects" value = "non">No <input type="radio" name="FeatureShow-up & other animation effects" value = "non">Partial </br>
+								
+								</br>	
+								<label>3D charts :</label></br>
+								<input type="radio" name="Feature3D charts" value="oui">Yes <input type="radio" name="Feature3D charts" value = "non">No <input type="radio" name="Feature3D charts" value = "non">Partial </br>
+								
+								</br>	
+								<label>Show total values over the bars :</label></br>
+								<input type="radio" name="FeatureShow total values over the bars" value="oui">Yes <input type="radio" name="FeatureShow total values over the bars" value = "non">No <input type="radio" name="FeatureShow total values over the bars" value = "non">Partial </br>
+								
+								</br>	
+								<label>String formater for labels :</label></br>
+								<input type="radio" name="FeatureString formater for labels" value="oui">Yes <input type="radio" name="FeatureString formater for labels" value = "non">No <input type="radio" name="FeatureString formater for labels" value = "non">Partial </br>
+								
+								</br>	
+								<label>Ability to define custom color for each bar (chart item) : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Interactive legend :</label></br>
+								<input type="radio" name="FeatureInteractive legend" value="oui">Yes <input type="radio" name="FeatureInteractive legend" value = "non">No <input type="radio" name="FeatureInteractive legend" value = "non">Partial </br>
+								
+								</br>	
+								<label>Multiple axis :</label></br>
+								<input type="radio" name="FeatureMultiple axis" value="oui">Yes <input type="radio" name="FeatureMultiple axis" value = "non">No <input type="radio" name="FeatureMultiple axis" value = "non">Partial </br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Adobe Flex built-in charts','Flare','Axiis','yFiles','Flexmonster','Kap IT Labs','amCharts','IBM ILOG Elixir','BirdEye','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Yes','?','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Rotate, zoom chart in 3D :</label></br>
- 		 					 <input type="radio" name="FeatureRotate, zoom chart in 3D" value="oui">oui <input type="radio" name="FeatureRotate, zoom chart in 3D" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Combined charts :</label></br>
- 		 					 <input type="radio" name="FeatureCombined charts" value="oui">oui <input type="radio" name="FeatureCombined charts" value = "non">non </br>
-									
-						</br>	
-							<label>Feature / Framework : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Show-up & other animation effects :</label></br>
- 		 					 <input type="radio" name="FeatureShow-up & other animation effects" value="oui">oui <input type="radio" name="FeatureShow-up & other animation effects" value = "non">non </br>
-									
-						</br>	
- 		 					<label>3D charts :</label></br>
- 		 					 <input type="radio" name="Feature3D charts" value="oui">oui <input type="radio" name="Feature3D charts" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Show total values over the bars :</label></br>
- 		 					 <input type="radio" name="FeatureShow total values over the bars" value="oui">oui <input type="radio" name="FeatureShow total values over the bars" value = "non">non </br>
-									
-						</br>	
- 		 					<label>String formater for labels :</label></br>
- 		 					 <input type="radio" name="FeatureString formater for labels" value="oui">oui <input type="radio" name="FeatureString formater for labels" value = "non">non </br>
-									
-						</br>	
-							<label>Ability to define custom color for each bar (chart item) : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Interactive legend :</label></br>
- 		 					 <input type="radio" name="FeatureInteractive legend" value="oui">oui <input type="radio" name="FeatureInteractive legend" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Multiple axis :</label></br>
- 		 					 <input type="radio" name="FeatureMultiple axis" value="oui">oui <input type="radio" name="FeatureMultiple axis" value = "non">non </br>
-									
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Adobe Flex built-in charts','Flare','Axiis','yFiles','Flexmonster','Kap IT Labs','amCharts','IBM ILOG Elixir','BirdEye','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Yes','?','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

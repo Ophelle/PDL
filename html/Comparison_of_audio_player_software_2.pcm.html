@@ -1,76 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of audio player software - Features</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Remote controllable :</label></br>
+								<input type="radio" name="FeatureRemote controllable" value="oui">Yes <input type="radio" name="FeatureRemote controllable" value = "non">No <input type="radio" name="FeatureRemote controllable" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Outbound streaming :</label></br>
+								<input type="radio" name="FeatureOutbound streaming" value="oui">Yes <input type="radio" name="FeatureOutbound streaming" value = "non">No <input type="radio" name="FeatureOutbound streaming" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Audio player : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Gapless audio decoding :</label></br>
+								<input type="radio" name="FeatureGapless audio decoding" value="oui">Yes <input type="radio" name="FeatureGapless audio decoding" value = "non">No <input type="radio" name="FeatureGapless audio decoding" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Media database :</label></br>
+								<input type="radio" name="FeatureMedia database" value="oui">Yes <input type="radio" name="FeatureMedia database" value = "non">No <input type="radio" name="FeatureMedia database" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Video playback :</label></br>
+								<input type="radio" name="FeatureVideo playback" value="oui">Yes <input type="radio" name="FeatureVideo playback" value = "non">No <input type="radio" name="FeatureVideo playback" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Skinnable :</label></br>
+								<input type="radio" name="FeatureSkinnable" value="oui">Yes <input type="radio" name="FeatureSkinnable" value = "non">No <input type="radio" name="FeatureSkinnable" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Visualizer :</label></br>
+								<input type="radio" name="FeatureVisualizer" value="oui">Yes <input type="radio" name="FeatureVisualizer" value = "non">No <input type="radio" name="FeatureVisualizer" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Intelligent playlists from database (based on criteria) :</label></br>
+								<input type="radio" name="FeatureIntelligent playlists from database (based on criteria)" value="oui">Yes <input type="radio" name="FeatureIntelligent playlists from database (based on criteria)" value = "non">No <input type="radio" name="FeatureIntelligent playlists from database (based on criteria)" value = "non">Partial </br>
+											<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['MPXPLAY','XMMS','Audacious','Musicmatch Jukebox','JuK','MediaMonkey','Sonique','Audion','Cog','Quod Libet','Music Player Daemon','Zinf','Amarok','cmus','MusicBee','Rhythmbox','Exaile','AIMP','XMPlay','Clementine','Audio player','foobar2000','Rhapsody','Winamp','Spotify','musikCube','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Remote controllable :</label></br>
- 		 					 <input type="radio" name="FeatureRemote controllable" value="oui">oui <input type="radio" name="FeatureRemote controllable" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Outbound streaming :</label></br>
- 		 					 <input type="radio" name="FeatureOutbound streaming" value="oui">oui <input type="radio" name="FeatureOutbound streaming" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Audio player : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Gapless audio decoding :</label></br>
- 		 					 <input type="radio" name="FeatureGapless audio decoding" value="oui">oui <input type="radio" name="FeatureGapless audio decoding" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Media database :</label></br>
- 		 					 <input type="radio" name="FeatureMedia database" value="oui">oui <input type="radio" name="FeatureMedia database" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Video playback :</label></br>
- 		 					 <input type="radio" name="FeatureVideo playback" value="oui">oui <input type="radio" name="FeatureVideo playback" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Skinnable :</label></br>
- 		 					 <input type="radio" name="FeatureSkinnable" value="oui">oui <input type="radio" name="FeatureSkinnable" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Visualizer :</label></br>
- 		 					 <input type="radio" name="FeatureVisualizer" value="oui">oui <input type="radio" name="FeatureVisualizer" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Intelligent playlists from database (based on criteria) :</label></br>
- 		 					 <input type="radio" name="FeatureIntelligent playlists from database (based on criteria)" value="oui">oui <input type="radio" name="FeatureIntelligent playlists from database (based on criteria)" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['MPXPLAY','XMMS','Audacious','Musicmatch Jukebox','JuK','MediaMonkey','Sonique','Audion','Cog','Quod Libet','Music Player Daemon','Zinf','Amarok','cmus','MusicBee','Rhythmbox','Exaile','AIMP','XMPlay','Clementine','Audio player','foobar2000','Rhapsody','Winamp','Spotify','musikCube','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

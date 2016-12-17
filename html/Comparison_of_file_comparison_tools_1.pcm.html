@@ -1,85 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of file comparison tools - Compare features</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Moved lines : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>3-way comparison :</label></br>
+								<input type="radio" name="Feature3-way comparison" value="oui">Yes <input type="radio" name="Feature3-way comparison" value = "non">No <input type="radio" name="Feature3-way comparison" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Merge :</label></br>
+								<input type="radio" name="FeatureMerge" value="oui">Yes <input type="radio" name="FeatureMerge" value = "non">No <input type="radio" name="FeatureMerge" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Manual compare aligment : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Directory comparison :</label></br>
+								<input type="radio" name="FeatureDirectory comparison" value="oui">Yes <input type="radio" name="FeatureDirectory comparison" value = "non">No <input type="radio" name="FeatureDirectory comparison" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Show in-line changes :</label></br>
+								<input type="radio" name="FeatureShow in-line changes" value="oui">Yes <input type="radio" name="FeatureShow in-line changes" value = "non">No <input type="radio" name="FeatureShow in-line changes" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Binary comparison :</label></br>
+								<input type="radio" name="FeatureBinary comparison" value="oui">Yes <input type="radio" name="FeatureBinary comparison" value = "non">No <input type="radio" name="FeatureBinary comparison" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Structured comparison : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['No','','Yes','Moved lines','Yes (Via plugin)','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['alignment marker, split/join','','manual synchronization','No','line alignment, isolate','line alignment marker','line alignment, unlink scroll','resync comparasion','Yes','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['No','Yes (C/C++,C#,Java,Javascript,CSS3)','','Structured comparison','Yes','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['SG DiffMerge','Perforce P4Merge','Name','Lazarus Diff','Guiffy SureMerge','IntelliJ IDEA (compare)','Eclipse (compare)','Meld','Araxis Merge','Beyond Compare','vimdiff','UCC','KDiff3','diff','Pretty Diff','WinDiff','WinMerge','ExamDiff Pro','Far Manager (compare)','DiffTool','Diffuse','diff3','Compare++','FileMerge','Tkdiff','jEdit JDiff plugin','Kompare','fc','Notepad++ (compare)','Ediff','Total Commander (compare)','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Moved lines : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>3-way comparison :</label></br>
- 		 					 <input type="radio" name="Feature3-way comparison" value="oui">oui <input type="radio" name="Feature3-way comparison" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Merge :</label></br>
- 		 					 <input type="radio" name="FeatureMerge" value="oui">oui <input type="radio" name="FeatureMerge" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Manual compare aligment : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Directory comparison :</label></br>
- 		 					 <input type="radio" name="FeatureDirectory comparison" value="oui">oui <input type="radio" name="FeatureDirectory comparison" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Show in-line changes :</label></br>
- 		 					 <input type="radio" name="FeatureShow in-line changes" value="oui">oui <input type="radio" name="FeatureShow in-line changes" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Binary comparison :</label></br>
- 		 					 <input type="radio" name="FeatureBinary comparison" value="oui">oui <input type="radio" name="FeatureBinary comparison" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Structured comparison : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Name : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['No','','Yes','Moved lines','Yes (Via plugin)','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['alignment marker, split/join','','manual synchronization','No','line alignment, isolate','line alignment marker','line alignment, unlink scroll','resync comparasion','Yes','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','Yes (C/C++,C#,Java,Javascript,CSS3)','','Structured comparison','Yes','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['SG DiffMerge','Perforce P4Merge','Name','Lazarus Diff','Guiffy SureMerge','IntelliJ IDEA (compare)','Eclipse (compare)','Meld','Araxis Merge','Beyond Compare','vimdiff','UCC','KDiff3','diff','Pretty Diff','WinDiff','WinMerge','ExamDiff Pro','Far Manager (compare)','DiffTool','Diffuse','diff3','Compare++','FileMerge','Tkdiff','jEdit JDiff plugin','Kompare','fc','Notepad++ (compare)','Ediff','Total Commander (compare)','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

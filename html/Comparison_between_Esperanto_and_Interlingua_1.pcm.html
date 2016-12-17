@@ -1,127 +1,129 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison between Esperanto and Interlingua -  Sample text: the  </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Venu via regno, : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>via nomo estu sanktigita. : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>plenumi�?u via volo, : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Kaj ne konduku nin en tenton, : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Kaj pardonu al ni niajn �?uldojn, : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>kiel en la ĉielo, tiel ankaŭ sur la tero. :</label></br>
+											<input type="checkbox" name="Feature" >sicut in cælo</br>	
+											<input type="checkbox" name="Feature" >et in terra.</br>	
+											<input type="checkbox" name="Feature" >on earth</br>	
+											<input type="checkbox" name="Feature" >as it is in heaven.</br>	
+											<input type="checkbox" name="Feature" >como in le celo</br>	
+											<input type="checkbox" name="Feature" >etiam super le terra.</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Esperanto : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Patro Nia, kiu estas en la ĉielo, :</label></br>
+											<input type="checkbox" name="Feature" >Pater noster</br>	
+											<input type="checkbox" name="Feature" >qui es in cælis</br>	
+											<input type="checkbox" name="Feature" >Patre nostre</br>	
+											<input type="checkbox" name="Feature" >qui es in le celos</br>	
+											<input type="checkbox" name="Feature" >Our Father</br>	
+											<input type="checkbox" name="Feature" >who art in heaven</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Nian panon ĉiutagan donu al ni hodiaŭ. : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>sed liberigu nin de la malbono. : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>kiel ankaŭ ni pardonas al niaj �?uldantoj. : </label></br> <input id="11" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Amen. : </label></br> <input id="12" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['et dimitte nobis debita nostra,','e pardona a nos nostre debitas','and forgive us our debts','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['que tu regno veni;','thy kingdom come,','Adveniat regnum tuum.','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['que tu nomine sia sanctificate;','hallowed be thy name;','sanctificetur nomen tuum.','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['que tu voluntate sia facite','thy will be done','Fiat voluntas tua,','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['Interlingua','Latin','English (traditional)','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['Da nos hodie nostre pan quotidian,','Give us this day our daily bread;','Panem nostrum quotidianum da nobis hodie,','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['sed libera nos del mal.','but deliver us from evil.','sed libera nos a malo.','']
+								});
+								$("#8").typeahead({
+									name:"list8",
+									local : ['E non induce nos in tentation,','Et ne nos inducas in tentationem,','And lead us not into temptation,','']
+								});
+								$("#9").typeahead({
+									name:"list9",
+									local : ['as we have forgiven our debtors.','sicut et nos dimittimus debitoribus nostris.','como etiam nos los pardona a nostre debitores.','']
+								});
+								$("#10").typeahead({
+									name:"list10",
+									local : ['Amen.','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Venu via regno, : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>via nomo estu sanktigita. : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>plenumi�?u via volo, : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Kaj ne konduku nin en tenton, : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Kaj pardonu al ni niajn �?uldojn, : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>kiel en la ĉielo, tiel ankaŭ sur la tero. :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >sicut in cælo</br>	
- 		 									<input type="checkbox" name="Feature" > et in terra.</br>	
- 		 									<input type="checkbox" name="Feature" >on earth</br>	
- 		 									<input type="checkbox" name="Feature" > as it is in heaven.</br>	
- 		 									<input type="checkbox" name="Feature" >como in le celo</br>	
- 		 									<input type="checkbox" name="Feature" > etiam super le terra.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Esperanto : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Patro Nia, kiu estas en la ĉielo, :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Pater noster</br>	
- 		 									<input type="checkbox" name="Feature" > qui es in cælis</br>	
- 		 									<input type="checkbox" name="Feature" >Patre nostre</br>	
- 		 									<input type="checkbox" name="Feature" > qui es in le celos</br>	
- 		 									<input type="checkbox" name="Feature" >Our Father</br>	
- 		 									<input type="checkbox" name="Feature" > who art in heaven</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Nian panon ĉiutagan donu al ni hodiaŭ. : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>sed liberigu nin de la malbono. : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>kiel ankaŭ ni pardonas al niaj �?uldantoj. : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Amen. : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['et dimitte nobis debita nostra,','e pardona a nos nostre debitas','and forgive us our debts','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['que tu regno veni;','thy kingdom come,','Adveniat regnum tuum.','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['que tu nomine sia sanctificate;','hallowed be thy name;','sanctificetur nomen tuum.','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['que tu voluntate sia facite','thy will be done','Fiat voluntas tua,','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Interlingua','Latin','English (traditional)','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Da nos hodie nostre pan quotidian,','Give us this day our daily bread;','Panem nostrum quotidianum da nobis hodie,','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['sed libera nos del mal.','but deliver us from evil.','sed libera nos a malo.','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['E non induce nos in tentation,','Et ne nos inducas in tentationem,','And lead us not into temptation,','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['as we have forgiven our debtors.','sicut et nos dimittimus debitoribus nostris.','como etiam nos los pardona a nostre debitores.','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['Amen.','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

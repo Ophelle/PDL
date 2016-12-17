@@ -1,65 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of assemblers - 6502 assemblers</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Assembler : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Host platform : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Instruction set : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['various','Apple II series','Apple II series, Commodore 64, Commodore 128','Atari 8-bit family','Commodore 64','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['MOS Technology 6502','MOS Technology 6502, WDC 65C02, WDC 65816/65802','MOS Technology 6502, WDC 65816/65802','MOS Technology 6502, others','MOS Technology 6502, WDC 65C02, MOS Technology 4502/4510 (experimental)','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['GPL','Proprietary','Public domain','MIT License','Free','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Kick Assembler','Merlin','ACME','MOSASM','ASM6','dreamass','XA65','Atari Assembler Editor','Lisa','CA65','MAC/65','ATASM','dasm','MADS','XASM','64tass','WLA DX','Ophis','TMPx','vasm','French Silk','AS65','C64List','VISUAL6502','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Assembler : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Host platform : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Instruction set : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['various','Apple II series','Apple II series, Commodore 64, Commodore 128','Atari 8-bit family','Commodore 64','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['MOS Technology 6502','MOS Technology 6502, WDC 65C02, WDC 65816/65802','MOS Technology 6502, WDC 65816/65802','MOS Technology 6502, others','MOS Technology 6502, WDC 65C02, MOS Technology 4502/4510 (experimental)','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['GPL','Proprietary','Public domain','MIT License','Free','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Kick Assembler','Merlin','ACME','MOSASM','ASM6','dreamass','XA65','Atari Assembler Editor','Lisa','CA65','MAC/65','ATASM','dasm','MADS','XASM','64tass','WLA DX','Ophis','TMPx','vasm','French Silk','AS65','C64List','VISUAL6502','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

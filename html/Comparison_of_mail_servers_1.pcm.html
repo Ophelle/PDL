@@ -1,166 +1,162 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of mail servers -  Authentication </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>LDAP :</label></br>
- 		 					 <input type="radio" name="FeatureLDAP" value="oui">oui <input type="radio" name="FeatureLDAP" value = "non">non </br>
-									
-						</br>	
- 		 					<label>POP before SMTP :</label></br>
- 		 					 <input type="radio" name="FeaturePOP before SMTP" value="oui">oui <input type="radio" name="FeaturePOP before SMTP" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Database :</label></br>
- 		 					 <input type="radio" name="FeatureDatabase" value="oui">oui <input type="radio" name="FeatureDatabase" value = "non">non </br>
-									
-						</br>	
- 		 					<label>SMTP AUTH :</label></br>
- 		 					 <input type="radio" name="FeatureSMTP AUTH" value="oui">oui <input type="radio" name="FeatureSMTP AUTH" value = "non">non </br>
-									
-						</br>	
-							<label>Mail server : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Filesystem :</label></br>
- 		 					 <input type="radio" name="FeatureFilesystem" value="oui">oui <input type="radio" name="FeatureFilesystem" value = "non">non </br>
-									
-						</br>	
- 		 					<label>APOP :</label></br>
- 		 					 <input type="radio" name="FeatureAPOP" value="oui">oui <input type="radio" name="FeatureAPOP" value = "non">non </br>
-									
-						</br>	
-							<label>Other :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Proxy to other server</br>	
- 		 									<input type="checkbox" name="Feature" > any other mechanism via AUTH plugins.</br>	
- 		 									<input type="checkbox" name="Feature" >PLAIN</br>	
- 		 									<input type="checkbox" name="Feature" > LOGIN</br>	
- 		 									<input type="checkbox" name="Feature" >Active Directory</br>	
- 		 									<input type="checkbox" name="Feature" > NTLM</br>	
- 		 									<input type="checkbox" name="Feature" >Active Directory (LDAP)</br>	
- 		 									<input type="checkbox" name="Feature" > CLRTXT</br>	
- 		 									<input type="checkbox" name="Feature" > CRAM-MD5</br>	
- 		 									<input type="checkbox" name="Feature" > DIGEST-MD5</br>	
- 		 									<input type="checkbox" name="Feature" > APOP</br>	
- 		 									<input type="checkbox" name="Feature" > GSSAPI</br>	
- 		 									<input type="checkbox" name="Feature" > MSN</br>	
- 		 									<input type="checkbox" name="Feature" > SESSIONID</br>	
- 		 									<input type="checkbox" name="Feature" > External Authentication Plug-in. Also supports X.509 PKI auth via STARTTLS</br>	
- 		 									<input type="checkbox" name="Feature" >SSL</br>	
- 		 									<input type="checkbox" name="Feature" >NT Domain</br>	
- 		 									<input type="checkbox" name="Feature" > Active Directory</br>	
- 		 									<input type="checkbox" name="Feature" > SASL PLAIN</br>	
- 		 									<input type="checkbox" name="Feature" > SASL LOGIN</br>	
- 		 									<input type="checkbox" name="Feature" >GSSAPI</br>	
- 		 									<input type="checkbox" name="Feature" > PLAIN</br>	
- 		 									<input type="checkbox" name="Feature" > LDAP</br>	
- 		 									<input type="checkbox" name="Feature" > Internal</br>	
- 		 									<input type="checkbox" name="Feature" >Pluggable Authentication Modules</br>	
- 		 									<input type="checkbox" name="Feature" > CMU SASL library</br>	
- 		 									<input type="checkbox" name="Feature" > Kerberos</br>	
- 		 									<input type="checkbox" name="Feature" >Internal</br>	
- 		 									<input type="checkbox" name="Feature" > any LDAP-compatible source</br>	
- 		 									<input type="checkbox" name="Feature" > Unix</br>	
- 		 									<input type="checkbox" name="Feature" > Netware</br>	
- 		 									<input type="checkbox" name="Feature" > LDAP?</br>	
- 		 									<input type="checkbox" name="Feature" > partial NT Domain</br>	
- 		 									<input type="checkbox" name="Feature" >By default PLAIN and LOGIN over SSL only</br>	
- 		 									<input type="checkbox" name="Feature" > Certificates</br>	
- 		 									<input type="checkbox" name="Feature" > bsd_auth and PAM. Supports adding new authentication mechanisms through custom backends.</br>	
- 		 									<input type="checkbox" name="Feature" >Not an SMTP server</br>	
- 		 									<input type="checkbox" name="Feature" > but offers SASL to MTAs.  . POP-before-SMTP via DRAC plugin. PAM</br>	
- 		 									<input type="checkbox" name="Feature" > MySQL</br>	
- 		 									<input type="checkbox" name="Feature" > PostgreSQL</br>	
- 		 									<input type="checkbox" name="Feature" > SQLite</br>	
- 		 									<input type="checkbox" name="Feature" > Active Directory(LDAP)</br>	
- 		 									<input type="checkbox" name="Feature" > Kerberos 5</br>	
- 		 									<input type="checkbox" name="Feature" > proxied IMAP auth</br>	
- 		 									<input type="checkbox" name="Feature" > getpwent</br>	
- 		 									<input type="checkbox" name="Feature" > shadow</br>	
- 		 									<input type="checkbox" name="Feature" > SIA</br>	
- 		 									<input type="checkbox" name="Feature" > BSDauth</br>	
- 		 									<input type="checkbox" name="Feature" > Vpopmail. APOP and SASL mechanisms: ANONYMOUS</br>	
- 		 									<input type="checkbox" name="Feature" > SCRAM-SHA1</br>	
- 		 									<input type="checkbox" name="Feature" > EXTERNAL</br>	
- 		 									<input type="checkbox" name="Feature" > OTP</br>	
- 		 									<input type="checkbox" name="Feature" > SKEY</br>	
- 		 									<input type="checkbox" name="Feature" > RPA.</br>	
- 		 									<input type="checkbox" name="Feature" >Cyrus SASL</br>	
- 		 									<input type="checkbox" name="Feature" > Dovecot SASL</br>	
- 		 									<input type="checkbox" name="Feature" > GNU SASL</br>	
- 		 									<input type="checkbox" name="Feature" > Heimdal GSSAPI</br>	
- 		 									<input type="checkbox" name="Feature" > SPA</br>	
- 		 									<input type="checkbox" name="Feature" > SCRAM-MD5</br>	
- 		 									<input type="checkbox" name="Feature" >Managed by Courier authentication library which can use PAM</br>	
- 		 									<input type="checkbox" name="Feature" > Userdb</br>	
- 		 									<input type="checkbox" name="Feature" > PostgreSQL(beta)</br>	
- 		 									<input type="checkbox" name="Feature" > and EXTERNAL.</br>	
- 		 									<input type="checkbox" name="Feature" > ODBC</br>	
- 		 									<input type="checkbox" name="Feature" > NT Domain</br>	
- 		 									<input type="checkbox" name="Feature" >Kolab employs Cyrus and Postfix and thus supports all Cyrus SASL authentication methods and X.509 PKI auth via STARTTLS and EXTERNAL.</br>	
- 		 									<input type="checkbox" name="Feature" >Works with any checkpassword utility. The original supports only LOGIN and PLAIN. Alternate checkpassword utilities support authentication against PAM</br>	
- 		 									<input type="checkbox" name="Feature" > and databases.</br>	
- 		 									<input type="checkbox" name="Feature" > Windows authentication</br>	
- 		 									<input type="checkbox" name="Feature" >CRAM-MD5</br>	
- 		 									<input type="checkbox" name="Feature" > Apple Open Directory</br>	
- 		 									<input type="checkbox" name="Feature" > ActiveSync</br>	
- 		 									<input type="checkbox" name="Feature" > Pluggable Authentication Modules</br>	
- 		 									<input type="checkbox" name="Feature" >Supports all Cyrus SASL authentication methods except for APOP. Also supports X.509 PKI auth via STARTTLS and EXTERNAL.</br>	
- 		 									<input type="checkbox" name="Feature" > Open LDAP</br>	
- 		 									<input type="checkbox" name="Feature" >Supports X.509 PKI auth via STARTTLS and EXTERNAL. Uses Cyrus SASL authentication library for support for other mechanisms: Berkeley DB</br>	
- 		 									<input type="checkbox" name="Feature" > GDBM</br>	
- 		 									<input type="checkbox" name="Feature" > or NDBM (sasldb)</br>	
- 		 									<input type="checkbox" name="Feature" > PAM</br>	
- 		 									<input type="checkbox" name="Feature" > DCE</br>	
- 		 									<input type="checkbox" name="Feature" > Kerberos 4 and 5</br>	
- 		 									<input type="checkbox" name="Feature" > Courier Authdaemon</br>	
- 		 									<input type="checkbox" name="Feature" > httpform</br>	
- 		 									<input type="checkbox" name="Feature" > APOP and SASL mechanisms: ANONYMOUS</br>	
- 		 									<input type="checkbox" name="Feature" > PASSDSS</br>	
- 		 									<input type="checkbox" name="Feature" > SRP</br>	
- 		 									<input type="checkbox" name="Feature" >eDirectory</br>	
- 		 									<input type="checkbox" name="Feature" >Plain</br>	
- 		 									<input type="checkbox" name="Feature" > Login</br>	
- 		 									<input type="checkbox" name="Feature" > Digest-MD5</br>	
- 		 									<input type="checkbox" name="Feature" > Certificate</br>	
- 		 									<input type="checkbox" name="Feature" > Any LDAPv3-compliant source</br>	
- 		 									<input type="checkbox" name="Feature" > Local Directory</br>	
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>LDAP :</label></br>
+								<input type="radio" name="FeatureLDAP" value="oui">Yes <input type="radio" name="FeatureLDAP" value = "non">No <input type="radio" name="FeatureLDAP" value = "non">Partial </br>
 								
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Zimbra','Oracle Communications Messaging Server','Zarafa','Apache James','Mailtraq','Mercury Mail Transport System','Eudora Internet Mail Server','FirstClass','Mailsite','Qpopper','MDaemon Mail Server','Courier Mail Server','WinGate','Postfix','MagicMail','Kolab','CommuniGate Pro','Atmail','qmail','Cyrus IMAP','Haraka','Axigen','Kerio Connect','IceWarp Mail Server','Momentum','OpenSMTPD','Ipswitch IMail Server','NetMail','agorum core','GroupWise','Dovecot','Exim','Sendmail','Microsoft Exchange Server','Gordano Messaging Suite','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								</br>	
+								<label>POP before SMTP :</label></br>
+								<input type="radio" name="FeaturePOP before SMTP" value="oui">Yes <input type="radio" name="FeaturePOP before SMTP" value = "non">No <input type="radio" name="FeaturePOP before SMTP" value = "non">Partial </br>
+								
+								</br>	
+								<label>Database :</label></br>
+								<input type="radio" name="FeatureDatabase" value="oui">Yes <input type="radio" name="FeatureDatabase" value = "non">No <input type="radio" name="FeatureDatabase" value = "non">Partial </br>
+								
+								</br>	
+								<label>SMTP AUTH :</label></br>
+								<input type="radio" name="FeatureSMTP AUTH" value="oui">Yes <input type="radio" name="FeatureSMTP AUTH" value = "non">No <input type="radio" name="FeatureSMTP AUTH" value = "non">Partial </br>
+								
+								</br>	
+								<label>Mail server : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Filesystem :</label></br>
+								<input type="radio" name="FeatureFilesystem" value="oui">Yes <input type="radio" name="FeatureFilesystem" value = "non">No <input type="radio" name="FeatureFilesystem" value = "non">Partial </br>
+								
+								</br>	
+								<label>APOP :</label></br>
+								<input type="radio" name="FeatureAPOP" value="oui">Yes <input type="radio" name="FeatureAPOP" value = "non">No <input type="radio" name="FeatureAPOP" value = "non">Partial </br>
+								
+								</br>	
+								<label>Other :</label></br>
+											<input type="checkbox" name="Feature" >Proxy to other server</br>	
+											<input type="checkbox" name="Feature" >any other mechanism via AUTH plugins.</br>	
+											<input type="checkbox" name="Feature" >PLAIN</br>	
+											<input type="checkbox" name="Feature" >LOGIN</br>	
+											<input type="checkbox" name="Feature" >Active Directory</br>	
+											<input type="checkbox" name="Feature" >NTLM</br>	
+											<input type="checkbox" name="Feature" >Active Directory (LDAP)</br>	
+											<input type="checkbox" name="Feature" >CLRTXT</br>	
+											<input type="checkbox" name="Feature" >CRAM-MD5</br>	
+											<input type="checkbox" name="Feature" >DIGEST-MD5</br>	
+											<input type="checkbox" name="Feature" >APOP</br>	
+											<input type="checkbox" name="Feature" >GSSAPI</br>	
+											<input type="checkbox" name="Feature" >MSN</br>	
+											<input type="checkbox" name="Feature" >SESSIONID</br>	
+											<input type="checkbox" name="Feature" >External Authentication Plug-in. Also supports X.509 PKI auth via STARTTLS</br>	
+											<input type="checkbox" name="Feature" >SSL</br>	
+											<input type="checkbox" name="Feature" >NT Domain</br>	
+											<input type="checkbox" name="Feature" >SASL PLAIN</br>	
+											<input type="checkbox" name="Feature" >SASL LOGIN</br>	
+											<input type="checkbox" name="Feature" >LDAP</br>	
+											<input type="checkbox" name="Feature" >Internal</br>	
+											<input type="checkbox" name="Feature" >Pluggable Authentication Modules</br>	
+											<input type="checkbox" name="Feature" >CMU SASL library</br>	
+											<input type="checkbox" name="Feature" >Kerberos</br>	
+											<input type="checkbox" name="Feature" >any LDAP-compatible source</br>	
+											<input type="checkbox" name="Feature" >Unix</br>	
+											<input type="checkbox" name="Feature" >Netware</br>	
+											<input type="checkbox" name="Feature" >LDAP?</br>	
+											<input type="checkbox" name="Feature" >partial NT Domain</br>	
+											<input type="checkbox" name="Feature" >By default PLAIN and LOGIN over SSL only</br>	
+											<input type="checkbox" name="Feature" >Certificates</br>	
+											<input type="checkbox" name="Feature" >bsd_auth and PAM. Supports adding new authentication mechanisms through custom backends.</br>	
+											<input type="checkbox" name="Feature" >Not an SMTP server</br>	
+											<input type="checkbox" name="Feature" >but offers SASL to MTAs.  . POP-before-SMTP via DRAC plugin. PAM</br>	
+											<input type="checkbox" name="Feature" >MySQL</br>	
+											<input type="checkbox" name="Feature" >PostgreSQL</br>	
+											<input type="checkbox" name="Feature" >SQLite</br>	
+											<input type="checkbox" name="Feature" >Active Directory(LDAP)</br>	
+											<input type="checkbox" name="Feature" >Kerberos 5</br>	
+											<input type="checkbox" name="Feature" >proxied IMAP auth</br>	
+											<input type="checkbox" name="Feature" >getpwent</br>	
+											<input type="checkbox" name="Feature" >shadow</br>	
+											<input type="checkbox" name="Feature" >SIA</br>	
+											<input type="checkbox" name="Feature" >BSDauth</br>	
+											<input type="checkbox" name="Feature" >Vpopmail. APOP and SASL mechanisms: ANONYMOUS</br>	
+											<input type="checkbox" name="Feature" >SCRAM-SHA1</br>	
+											<input type="checkbox" name="Feature" >EXTERNAL</br>	
+											<input type="checkbox" name="Feature" >OTP</br>	
+											<input type="checkbox" name="Feature" >SKEY</br>	
+											<input type="checkbox" name="Feature" >RPA.</br>	
+											<input type="checkbox" name="Feature" >Cyrus SASL</br>	
+											<input type="checkbox" name="Feature" >Dovecot SASL</br>	
+											<input type="checkbox" name="Feature" >GNU SASL</br>	
+											<input type="checkbox" name="Feature" >Heimdal GSSAPI</br>	
+											<input type="checkbox" name="Feature" >SPA</br>	
+											<input type="checkbox" name="Feature" >SCRAM-MD5</br>	
+											<input type="checkbox" name="Feature" >Managed by Courier authentication library which can use PAM</br>	
+											<input type="checkbox" name="Feature" >Userdb</br>	
+											<input type="checkbox" name="Feature" >PostgreSQL(beta)</br>	
+											<input type="checkbox" name="Feature" >and EXTERNAL.</br>	
+											<input type="checkbox" name="Feature" >ODBC</br>	
+											<input type="checkbox" name="Feature" >Kolab employs Cyrus and Postfix and thus supports all Cyrus SASL authentication methods and X.509 PKI auth via STARTTLS and EXTERNAL.</br>	
+											<input type="checkbox" name="Feature" >Works with any checkpassword utility. The original supports only LOGIN and PLAIN. Alternate checkpassword utilities support authentication against PAM</br>	
+											<input type="checkbox" name="Feature" >and databases.</br>	
+											<input type="checkbox" name="Feature" >Windows authentication</br>	
+											<input type="checkbox" name="Feature" >Apple Open Directory</br>	
+											<input type="checkbox" name="Feature" >ActiveSync</br>	
+											<input type="checkbox" name="Feature" >Supports all Cyrus SASL authentication methods except for APOP. Also supports X.509 PKI auth via STARTTLS and EXTERNAL.</br>	
+											<input type="checkbox" name="Feature" >Open LDAP</br>	
+											<input type="checkbox" name="Feature" >Supports X.509 PKI auth via STARTTLS and EXTERNAL. Uses Cyrus SASL authentication library for support for other mechanisms: Berkeley DB</br>	
+											<input type="checkbox" name="Feature" >GDBM</br>	
+											<input type="checkbox" name="Feature" >or NDBM (sasldb)</br>	
+											<input type="checkbox" name="Feature" >PAM</br>	
+											<input type="checkbox" name="Feature" >DCE</br>	
+											<input type="checkbox" name="Feature" >Kerberos 4 and 5</br>	
+											<input type="checkbox" name="Feature" >Courier Authdaemon</br>	
+											<input type="checkbox" name="Feature" >httpform</br>	
+											<input type="checkbox" name="Feature" >APOP and SASL mechanisms: ANONYMOUS</br>	
+											<input type="checkbox" name="Feature" >PASSDSS</br>	
+											<input type="checkbox" name="Feature" >SRP</br>	
+											<input type="checkbox" name="Feature" >eDirectory</br>	
+											<input type="checkbox" name="Feature" >Plain</br>	
+											<input type="checkbox" name="Feature" >Login</br>	
+											<input type="checkbox" name="Feature" >Digest-MD5</br>	
+											<input type="checkbox" name="Feature" >Certificate</br>	
+											<input type="checkbox" name="Feature" >Any LDAPv3-compliant source</br>	
+											<input type="checkbox" name="Feature" >Local Directory</br>	
+									
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Zimbra','Oracle Communications Messaging Server','Zarafa','Apache James','Mailtraq','Mercury Mail Transport System','Eudora Internet Mail Server','FirstClass','Mailsite','Qpopper','MDaemon Mail Server','Courier Mail Server','WinGate','Postfix','MagicMail','Kolab','CommuniGate Pro','Atmail','qmail','Cyrus IMAP','Haraka','Axigen','Kerio Connect','IceWarp Mail Server','Momentum','OpenSMTPD','Ipswitch IMail Server','NetMail','agorum core','GroupWise','Dovecot','Exim','Sendmail','Microsoft Exchange Server','Gordano Messaging Suite','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

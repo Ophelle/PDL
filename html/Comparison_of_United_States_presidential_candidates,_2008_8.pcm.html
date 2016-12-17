@@ -1,62 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of United States presidential candidates, 2008 - Network neutrality</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Chuck Baldwin : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>McCain is against government regulation of network neutrality unless evidence of abuse exists. He is quoted in May 2007 as saying, "let's see how this thing all turns out, rather than anticipate a problem that so far has not arisen in any significant way," and, "When you control the pipe you should be able to get profit from your investment." :</label></br>
+											<input type="checkbox" name="Feature" >McCain is against government regulation of network neutrality unless evidence of abuse exists. He is quoted in May 2007 as saying</br>	
+											<input type="checkbox" name="Feature" >"let's see how this thing all turns out</br>	
+											<input type="checkbox" name="Feature" >rather than anticipate a problem that so far has not arisen in any significant way</br>	
+											<input type="checkbox" name="Feature" >" and</br>	
+											<input type="checkbox" name="Feature" >"When you control the pipe you should be able to get profit from your investment."</br>	
+											<input type="checkbox" name="Feature" >Obama is "a strong supporter of Net neutrality</br>	
+											<input type="checkbox" name="Feature" >" saying that regulations are required to prevent the telecom companies from changing "the internet as we know it." Promoting net neutrality would be a priority in his first year as president.</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>John McCain : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Cynthia McKinney','Ralph Nader','Bob Barr','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['John McCain','Barack Obama','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Chuck Baldwin : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>McCain is against government regulation of network neutrality unless evidence of abuse exists. He is quoted in May 2007 as saying, "let's see how this thing all turns out, rather than anticipate a problem that so far has not arisen in any significant way," and, "When you control the pipe you should be able to get profit from your investment." :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >McCain is against government regulation of network neutrality unless evidence of abuse exists. He is quoted in May 2007 as saying</br>	
- 		 									<input type="checkbox" name="Feature" > "let's see how this thing all turns out</br>	
- 		 									<input type="checkbox" name="Feature" > rather than anticipate a problem that so far has not arisen in any significant way</br>	
- 		 									<input type="checkbox" name="Feature" >" and</br>	
- 		 									<input type="checkbox" name="Feature" > "When you control the pipe you should be able to get profit from your investment."</br>	
- 		 									<input type="checkbox" name="Feature" >Obama is "a strong supporter of Net neutrality</br>	
- 		 									<input type="checkbox" name="Feature" >" saying that regulations are required to prevent the telecom companies from changing "the internet as we know it." Promoting net neutrality would be a priority in his first year as president.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>John McCain : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Cynthia McKinney','Ralph Nader','Bob Barr','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['John McCain','Barack Obama','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

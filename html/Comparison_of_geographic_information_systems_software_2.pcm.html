@@ -1,71 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of geographic information systems software - Map caches</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Language :</label></br>
+											<input type="checkbox" name="Feature" >.NET</br>	
+											<input type="checkbox" name="Feature" >C++</br>	
+											<input type="checkbox" name="Feature" >Java</br>	
+											<input type="checkbox" name="Feature" >C#</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>WMS-C :</label></br>
+								<input type="radio" name="FeatureWMS-C" value="oui">Yes <input type="radio" name="FeatureWMS-C" value = "non">No <input type="radio" name="FeatureWMS-C" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Other :</label></br>
+											<input type="checkbox" name="Feature" >Including WMTS</br>	
+											<input type="checkbox" name="Feature" >WMS</br>	
+											<input type="checkbox" name="Feature" >Open source</br>	
+											<input type="checkbox" name="Feature" >Full WMS support</br>	
+											<input type="checkbox" name="Feature" >Offers WMS and WMTS based on a cache of tiles</br>	
+											<input type="checkbox" name="Feature" >but tiling schema is different from WMS-C</br>	
+											<input type="checkbox" name="Feature" >File-based and SQL Server</br>	
+											<input type="checkbox" name="Feature" >WMTS</br>	
+											<input type="checkbox" name="Feature" >TMS</br>	
+											<input type="checkbox" name="Feature" >KML</br>	
+											<input type="checkbox" name="Feature" >Virtual Earth</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Name : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['GeoWebCache','MapProxy','MapDotNet','Erdas Apollo','GeoMedia WebMap and SDI Pro','ArcGIS Server','TileCache','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Language :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >.NET</br>	
- 		 									<input type="checkbox" name="Feature" >C++</br>	
- 		 									<input type="checkbox" name="Feature" >Java</br>	
- 		 									<input type="checkbox" name="Feature" >C#</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
- 		 					<label>WMS-C :</label></br>
- 		 					 <input type="radio" name="FeatureWMS-C" value="oui">oui <input type="radio" name="FeatureWMS-C" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Other :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Including WMTS</br>	
- 		 									<input type="checkbox" name="Feature" > WMS</br>	
- 		 									<input type="checkbox" name="Feature" >Open source</br>	
- 		 									<input type="checkbox" name="Feature" > Full WMS support</br>	
- 		 									<input type="checkbox" name="Feature" >Offers WMS and WMTS based on a cache of tiles</br>	
- 		 									<input type="checkbox" name="Feature" > but tiling schema is different from WMS-C</br>	
- 		 									<input type="checkbox" name="Feature" >File-based and SQL Server</br>	
- 		 									<input type="checkbox" name="Feature" > WMTS</br>	
- 		 									<input type="checkbox" name="Feature" > TMS</br>	
- 		 									<input type="checkbox" name="Feature" > KML</br>	
- 		 									<input type="checkbox" name="Feature" > Virtual Earth</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Name : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['GeoWebCache','MapProxy','MapDotNet','Erdas Apollo','GeoMedia WebMap and SDI Pro','ArcGIS Server','TileCache','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

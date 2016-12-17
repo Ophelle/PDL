@@ -1,126 +1,133 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of relational database management systems - Limits</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Max DB size : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Max Blob/Clob size : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Max columns per row :</label></br>
+											<input type="checkbox" name="Feature" >32</br>	
+											<input type="checkbox" name="Feature" >767</br>	
+											<input type="checkbox" name="Feature" >30</br>	
+											<input type="checkbox" name="Feature" >000</br>	
+											<input type="checkbox" name="Feature" >1</br>	
+											<input type="checkbox" name="Feature" >012 (5</br>	
+											<input type="checkbox" name="Feature" >000 in views)</br>	
+											<input type="checkbox" name="Feature" >536</br>	
+											<input type="checkbox" name="Feature" >65</br>	
+											<input type="checkbox" name="Feature" >024</br>	
+											<input type="checkbox" name="Feature" >135 </br>	
+											<input type="checkbox" name="Feature" >(10+ AvgFieldNameLength)</br>	
+											<input type="checkbox" name="Feature" >4</br>	
+											<input type="checkbox" name="Feature" >096</br>	
+											<input type="checkbox" name="Feature" >768</br>	
+											<input type="checkbox" name="Feature" >012</br>	
+											<input type="checkbox" name="Feature" >45</br>	
+											<input type="checkbox" name="Feature" >256</br>	
+											<input type="checkbox" name="Feature" >135</br>	
+											<input type="checkbox" name="Feature" >2</br>	
+											<input type="checkbox" name="Feature" >048</br>	
+											<input type="checkbox" name="Feature" >765</br>	
+											<input type="checkbox" name="Feature" >10</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Products : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Min DATE value : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Max row size : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Max DATE value : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Max column name size : </label></br> <input id="8" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Max CHAR size : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Max NUMBER size : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Max table size : </label></br> <input id="11" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Unlimited','524,272 TB (32 767 files * 16 TB max file size)','2 GB','4 GB','4 billion objects','~128 PB','Limited','Unlimited (4 GB * block size per tablespace)','32 TB per instance (Unlimited via elastic cluster)','64 TB','2 EB','128 TB (2 pages * 64 KB max page size)','8 TB','Max DB size','Limited by available RAM, address space','104 TB (13 files, each file up to 8 TB (32 KB pages))','256 TB','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['4 GB (longtext, longblob)','2 GB','Unlimited','4 GB','2 GB','64 TB','4 GB','128 TB','1 GB (text, bytea) - stored inline or 4 TB (stored in pg_largeobject)','64 KB (memo field), 1 GB ("OLE Object" field)','2,147,483,647 chars','2 GB','4 GB','4 GB (subject to RAM)','N/A','200 GB (2 GiB Unicode)','4 GiB','Max Blob/Clob size','64 MB','16 TB','4 TB','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['P20','P5','P25','P36','P37','P9','P21','P19','P28','P16','P23','P31','P24','P14','P6','P12','P26','P1','P18','P3','P7','P17','P29','P10','P8','P35','P13','P11','P33','P38','P4','P22','P27','P2','P15','P30','P32','P34','P39','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Unlimited','0001-01-01','-32768-01-01','0001','?','0000-01-01','No DATE type','Min DATE value','100','01/01/0001','1000','0','01-01-0001','0100','-99999999','−4712','−4,713','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['8 KB','8 TB','64 KB','Max row size','Limited by file size','64 KB wo/lobs (64 GB w/lobs)','32,677 B','65,536 B','16 MB','Unlimited','32 KB','32,765 bytes (exclusive of large objects)','8,060 bytes (Unlimited)','8,060 bytes','4 KB','1.6 TB','2 GB','64 KB (w/o BLOBs), 4 GB (BLOB)','8,050 B','65,530 B','64 MB on Appliance, 4 MB on AWS','2 GB','65,500 B','?','256 KB','32 KB + BLOB data','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['9999','9999-12-31','32767-12-31','99999999','?','5,874,897','32768','4000-12-31','Max DATE value','11758978-12-31','No DATE type','12/31/9999','9999-12-31  Select 80991231 (date);','Unlimited','8000-12-31','12-31-9999','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['Max CHAR size','16 MB','8,000 bytes','200 GB (2 GiB Unicode)','4 KB','8,000 B','Unlimited','1 GB','32,767 B','32 KiB)','2 GB','4 GB (subject to RAM)','64 MB','64 KB (text)','10,000','32 000 B','32,765','2 GB','4 GB','2 MB','10^9 characters','?','32 KB','255 B (text field)','254 (VARCHAR: 32,672)','char: 256, varchar: 4 KB','4000','1 GB','']
+								});
+								$("#8").typeahead({
+									name:"list8",
+									local : ['126 bits','64 bits','64 bits','10^9 numbers w/ range 10^-400 to 10^400','128 bits','64 MB','32 bits','154 bits','Unlimited','10','Max NUMBER size','2','']
+								});
+								$("#9").typeahead({
+									name:"list9",
+									local : ['4 GB * block size (with BIGFILE tablespace)','256 GB','Unlimited','Max table size','16 EiB','~32 TB','2 EB','2-1 rows','2-1 bytes','2 rows','?','16 EB','DB size (or 32 TB)','2 GB','2 ZB','MyISAM storage limits: 256 TB; Innodb storage limits: 64 TB; Aria storage limits: ???','Limited by file size','~128 PB','64 TB','524,272 TB','4 GB','MyISAM storage limits: 256 TB; Innodb storage limits: 64 TB','8 TB','256 TB','32 TB','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Max DB size : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Max Blob/Clob size : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Max columns per row :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >32</br>	
- 		 									<input type="checkbox" name="Feature" >767</br>	
- 		 									<input type="checkbox" name="Feature" >30</br>	
- 		 									<input type="checkbox" name="Feature" >000</br>	
- 		 									<input type="checkbox" name="Feature" >1</br>	
- 		 									<input type="checkbox" name="Feature" >012 (5</br>	
- 		 									<input type="checkbox" name="Feature" >000 in views)</br>	
- 		 									<input type="checkbox" name="Feature" >536</br>	
- 		 									<input type="checkbox" name="Feature" >65</br>	
- 		 									<input type="checkbox" name="Feature" >024</br>	
- 		 									<input type="checkbox" name="Feature" >135 </br>	
- 		 									<input type="checkbox" name="Feature" > (10+ AvgFieldNameLength)</br>	
- 		 									<input type="checkbox" name="Feature" >4</br>	
- 		 									<input type="checkbox" name="Feature" >096</br>	
- 		 									<input type="checkbox" name="Feature" >768</br>	
- 		 									<input type="checkbox" name="Feature" >012</br>	
- 		 									<input type="checkbox" name="Feature" >45</br>	
- 		 									<input type="checkbox" name="Feature" >256</br>	
- 		 									<input type="checkbox" name="Feature" >135</br>	
- 		 									<input type="checkbox" name="Feature" >2</br>	
- 		 									<input type="checkbox" name="Feature" >048</br>	
- 		 									<input type="checkbox" name="Feature" >765</br>	
- 		 									<input type="checkbox" name="Feature" >10</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Products : </label></br> <input id="4" type="aaaa" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Min DATE value : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Max row size : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Max DATE value : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Max column name size : </label></br> <input id="8" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Max CHAR size : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Max NUMBER size : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Max table size : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Unlimited','524,272 TB (32 767 files * 16 TB max file size)','2 GB','4 GB','4 billion objects','~128 PB','Limited','Unlimited (4 GB * block size per tablespace)','32 TB per instance (Unlimited via elastic cluster)','64 TB','2 EB','128 TB (2 pages * 64 KB max page size)','8 TB','Max DB size','Limited by available RAM, address space','104 TB (13 files, each file up to 8 TB (32 KB pages))','256 TB','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['4 GB (longtext, longblob)','2 GB','Unlimited','4 GB','2 GB','64 TB','4 GB','128 TB','1 GB (text, bytea) - stored inline or 4 TB (stored in pg_largeobject)','64 KB (memo field), 1 GB ("OLE Object" field)','2,147,483,647 chars','2 GB','4 GB','4 GB (subject to RAM)','N/A','200 GB (2 GiB Unicode)','4 GiB','Max Blob/Clob size','64 MB','16 TB','4 TB','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Unlimited','0001-01-01','-32768-01-01','0001','?','0000-01-01','No DATE type','Min DATE value','100','01/01/0001','1000','0','01-01-0001','0100','-99999999','−4712','−4,713','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['8 KB','8 TB','64 KB','Max row size','Limited by file size','64 KB wo/lobs (64 GB w/lobs)','32,677 B','65,536 B','16 MB','Unlimited','32 KB','32,765 bytes (exclusive of large objects)','8,060 bytes (Unlimited)','8,060 bytes','4 KB','1.6 TB','2 GB','64 KB (w/o BLOBs), 4 GB (BLOB)','8,050 B','65,530 B','64 MB on Appliance, 4 MB on AWS','2 GB','65,500 B','?','256 KB','32 KB + BLOB data','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['9999','9999-12-31','32767-12-31','99999999','?','5,874,897','32768','4000-12-31','Max DATE value','11758978-12-31','No DATE type','12/31/9999','9999-12-31  Select 80991231 (date);','Unlimited','8000-12-31','12-31-9999','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Max CHAR size','16 MB','8,000 bytes','200 GB (2 GiB Unicode)','4 KB','8,000 B','Unlimited','1 GB','32,767 B','32 KiB)','2 GB','4 GB (subject to RAM)','64 MB','64 KB (text)','10,000','32 000 B','32,765','2 GB','4 GB','2 MB','10^9 characters','?','32 KB','255 B (text field)','254 (VARCHAR: 32,672)','char: 256, varchar: 4 KB','4000','1 GB','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['126 bits','64 bits','64 bits','10^9 numbers w/ range 10^-400 to 10^400','128 bits','64 MB','32 bits','154 bits','Unlimited','10','Max NUMBER size','2','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['4 GB * block size (with BIGFILE tablespace)','256 GB','Unlimited','Max table size','16 EiB','~32 TB','2 EB','2-1 rows','2-1 bytes','2 rows','?','16 EB','DB size (or 32 TB)','2 GB','2 ZB','MyISAM storage limits: 256 TB; Innodb storage limits: 64 TB; Aria storage limits: ???','Limited by file size','~128 PB','64 TB','524,272 TB','4 GB','MyISAM storage limits: 256 TB; Innodb storage limits: 64 TB','8 TB','256 TB','32 TB','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

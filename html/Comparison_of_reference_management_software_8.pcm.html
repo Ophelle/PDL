@@ -1,56 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of reference management software - Password "protection" and network versions</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Software : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Passworded :</label></br>
+								<input type="radio" name="FeaturePassworded" value="oui">Yes <input type="radio" name="FeaturePassworded" value = "non">No <input type="radio" name="FeaturePassworded" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Networking - User-specific permissions :</label></br>
+								<input type="radio" name="FeatureNetworking - User-specific permissions" value="oui">Yes <input type="radio" name="FeatureNetworking - User-specific permissions" value = "non">No <input type="radio" name="FeatureNetworking - User-specific permissions" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Networking - Simultaneous write access :</label></br>
+								<input type="radio" name="FeatureNetworking - Simultaneous write access" value="oui">Yes <input type="radio" name="FeatureNetworking - Simultaneous write access" value = "non">No <input type="radio" name="FeatureNetworking - Simultaneous write access" value = "non">Partial </br>
+											<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['JabRef','Referencer','RefDB','WizFolio','BibBase','Paperpile','Reference Manager','Bookends','Wikindx','BibDesk','EndNote x7','Citavi','Mendeley','Biblioscape','CiteULike','Qiqqa','ReadCube','refbase','Pybliographer','Docear','colwiz','Papers','Bibus','KBibTeX','Aigaion','Bebop','Sente','BibSonomy','RefWorks','Zotero','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Software : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Passworded :</label></br>
- 		 					 <input type="radio" name="FeaturePassworded" value="oui">oui <input type="radio" name="FeaturePassworded" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Networking - User-specific permissions :</label></br>
- 		 					 <input type="radio" name="FeatureNetworking - User-specific permissions" value="oui">oui <input type="radio" name="FeatureNetworking - User-specific permissions" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Networking - Simultaneous write access :</label></br>
- 		 					 <input type="radio" name="FeatureNetworking - Simultaneous write access" value="oui">oui <input type="radio" name="FeatureNetworking - Simultaneous write access" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['JabRef','Referencer','RefDB','WizFolio','BibBase','Paperpile','Reference Manager','Bookends','Wikindx','BibDesk','EndNote x7','Citavi','Mendeley','Biblioscape','CiteULike','Qiqqa','ReadCube','refbase','Pybliographer','Docear','colwiz','Papers','Bibus','KBibTeX','Aigaion','Bebop','Sente','BibSonomy','RefWorks','Zotero','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

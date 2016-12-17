@@ -1,93 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of X window managers</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Type : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Themeable :</label></br>
+								<input type="radio" name="FeatureThemeable" value="oui">Yes <input type="radio" name="FeatureThemeable" value = "non">No <input type="radio" name="FeatureThemeable" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Panel for window switching :</label></br>
+								<input type="radio" name="FeaturePanel for window switching" value="oui">Yes <input type="radio" name="FeaturePanel for window switching" value = "non">No <input type="radio" name="FeaturePanel for window switching" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Language : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Configurable titlebar buttons :</label></br>
+								<input type="radio" name="FeatureConfigurable titlebar buttons" value="oui">Yes <input type="radio" name="FeatureConfigurable titlebar buttons" value = "non">No <input type="radio" name="FeatureConfigurable titlebar buttons" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Graphical configuration :</label></br>
+								<input type="radio" name="FeatureGraphical configuration" value="oui">Yes <input type="radio" name="FeatureGraphical configuration" value = "non">No <input type="radio" name="FeatureGraphical configuration" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Tabbed windows :</label></br>
+								<input type="radio" name="FeatureTabbed windows" value="oui">Yes <input type="radio" name="FeatureTabbed windows" value = "non">No <input type="radio" name="FeatureTabbed windows" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>ICCCM/EWMH compliant :</label></br>
+								<input type="radio" name="FeatureICCCM/EWMH compliant" value="oui">Yes <input type="radio" name="FeatureICCCM/EWMH compliant" value = "non">No <input type="radio" name="FeatureICCCM/EWMH compliant" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Hotkey :</label></br>
+								<input type="radio" name="FeatureHotkey" value="oui">Yes <input type="radio" name="FeatureHotkey" value = "non">No <input type="radio" name="FeatureHotkey" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Name : </label></br> <input id="11" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Stacking','Tiling and stacking','Dynamic','Compositing','Tiling','re-parenting','Compositing or Stacking','stacking','Tiling and Stacking','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['C (Clutter)','C (OpenGL)','C++','Common Lisp','C, C++ (GTK+)','C','Haskell','Lisp, C','Go','C, Lua','C++ (Qt)','C (FLTK)','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['GPL','MIT License','WTFPL','MIT','BSD','Artistic','ISC','The Open Group Public License','LGPL with naming restrictions on modified versions','GPL, LGPL','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['PekWM','Enlightenment','twm','9wm','evilwm','Blackbox','Fluxbox','i3','Xfwm (Xfce)','Wingo','mwm (Motif Window Manager)','Mutter (GNOME/MeeGo)','Matchbox','Ion','Compiz','KWin (KDE)','Ratpoison','Metacity (GNOME)','Sawfish','WMFS','wmii','aewm','cwm','FLWM','IceWM','FVWM','awesome','JWM','xmonad','StumpWM','dwm','PlayWM','spectrwm','Openbox','sithWM','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Type : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Themeable :</label></br>
- 		 					 <input type="radio" name="FeatureThemeable" value="oui">oui <input type="radio" name="FeatureThemeable" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Panel for window switching :</label></br>
- 		 					 <input type="radio" name="FeaturePanel for window switching" value="oui">oui <input type="radio" name="FeaturePanel for window switching" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Language : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Configurable titlebar buttons :</label></br>
- 		 					 <input type="radio" name="FeatureConfigurable titlebar buttons" value="oui">oui <input type="radio" name="FeatureConfigurable titlebar buttons" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Graphical configuration :</label></br>
- 		 					 <input type="radio" name="FeatureGraphical configuration" value="oui">oui <input type="radio" name="FeatureGraphical configuration" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Tabbed windows :</label></br>
- 		 					 <input type="radio" name="FeatureTabbed windows" value="oui">oui <input type="radio" name="FeatureTabbed windows" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>ICCCM/EWMH compliant :</label></br>
- 		 					 <input type="radio" name="FeatureICCCM/EWMH compliant" value="oui">oui <input type="radio" name="FeatureICCCM/EWMH compliant" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Hotkey :</label></br>
- 		 					 <input type="radio" name="FeatureHotkey" value="oui">oui <input type="radio" name="FeatureHotkey" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Name : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Stacking','Tiling and stacking','Dynamic','Compositing','Tiling','re-parenting','Compositing or Stacking','stacking','Tiling and Stacking','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['C (Clutter)','C (OpenGL)','C++','Common Lisp','C, C++ (GTK+)','C','Haskell','Lisp, C','Go','C, Lua','C++ (Qt)','C (FLTK)','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['GPL','MIT License','WTFPL','MIT','BSD','Artistic','ISC','The Open Group Public License','LGPL with naming restrictions on modified versions','GPL, LGPL','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['PekWM','Enlightenment','twm','9wm','evilwm','Blackbox','Fluxbox','i3','Xfwm (Xfce)','Wingo','mwm (Motif Window Manager)','Mutter (GNOME/MeeGo)','Matchbox','Ion','Compiz','KWin (KDE)','Ratpoison','Metacity (GNOME)','Sawfish','WMFS','wmii','aewm','cwm','FLWM','IceWM','FVWM','awesome','JWM','xmonad','StumpWM','dwm','PlayWM','spectrwm','Openbox','sithWM','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

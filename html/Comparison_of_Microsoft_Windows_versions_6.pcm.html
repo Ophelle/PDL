@@ -1,86 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of Microsoft Windows versions - {{anchor|TI-DOS}}DOS shells</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>SMP support :</label></br>
+								<input type="radio" name="FeatureSMP support" value="oui">Yes <input type="radio" name="FeatureSMP support" value = "non">No <input type="radio" name="FeatureSMP support" value = "non">Partial </br>
+								
+								</br>	
+								<label>Update management :</label></br>
+								<input type="radio" name="FeatureUpdate management" value="oui">Yes <input type="radio" name="FeatureUpdate management" value = "non">No <input type="radio" name="FeatureUpdate management" value = "non">Partial </br>
+								
+								</br>	
+								<label>Architecture : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Integrated firewall :</label></br>
+								<input type="radio" name="FeatureIntegrated firewall" value="oui">Yes <input type="radio" name="FeatureIntegrated firewall" value = "non">No <input type="radio" name="FeatureIntegrated firewall" value = "non">Partial </br>
+								
+								</br>	
+								<label>APIs : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>UDMA support :</label></br>
+								<input type="radio" name="FeatureUDMA support" value="oui">Yes <input type="radio" name="FeatureUDMA support" value = "non">No <input type="radio" name="FeatureUDMA support" value = "non">Partial </br>
+								
+								</br>	
+								<label>LFN support :</label></br>
+								<input type="radio" name="FeatureLFN support" value="oui">Yes <input type="radio" name="FeatureLFN support" value = "non">No <input type="radio" name="FeatureLFN support" value = "non">Partial </br>
+								
+								</br>	
+								<label>Safe Mode :</label></br>
+								<input type="radio" name="FeatureSafe Mode" value="oui">Yes <input type="radio" name="FeatureSafe Mode" value = "non">No <input type="radio" name="FeatureSafe Mode" value = "non">Partial </br>
+								
+								</br>	
+								<label>USB support :</label></br>
+								<input type="radio" name="FeatureUSB support" value="oui">Yes <input type="radio" name="FeatureUSB support" value = "non">No <input type="radio" name="FeatureUSB support" value = "non">Partial </br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['x86 16-bit','x86 16-bit (partial 32-bit compatibility through Win32s)','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Win16','Win16, Win32s','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Windows 2.0','Windows 3.1x','Windows 3.0','Windows 1.0','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>SMP support :</label></br>
- 		 					 <input type="radio" name="FeatureSMP support" value="oui">oui <input type="radio" name="FeatureSMP support" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Update management :</label></br>
- 		 					 <input type="radio" name="FeatureUpdate management" value="oui">oui <input type="radio" name="FeatureUpdate management" value = "non">non </br>
-									
-						</br>	
-							<label>Architecture : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Integrated firewall :</label></br>
- 		 					 <input type="radio" name="FeatureIntegrated firewall" value="oui">oui <input type="radio" name="FeatureIntegrated firewall" value = "non">non </br>
-									
-						</br>	
-							<label>APIs : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>UDMA support :</label></br>
- 		 					 <input type="radio" name="FeatureUDMA support" value="oui">oui <input type="radio" name="FeatureUDMA support" value = "non">non </br>
-									
-						</br>	
- 		 					<label>LFN support :</label></br>
- 		 					 <input type="radio" name="FeatureLFN support" value="oui">oui <input type="radio" name="FeatureLFN support" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Safe Mode :</label></br>
- 		 					 <input type="radio" name="FeatureSafe Mode" value="oui">oui <input type="radio" name="FeatureSafe Mode" value = "non">non </br>
-									
-						</br>	
- 		 					<label>USB support :</label></br>
- 		 					 <input type="radio" name="FeatureUSB support" value="oui">oui <input type="radio" name="FeatureUSB support" value = "non">non </br>
-									
-						</br>	
-							<label>Name : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['x86 16-bit','x86 16-bit (partial 32-bit compatibility through Win32s)','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Win16','Win16, Win32s','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Windows 2.0','Windows 3.1x','Windows 3.0','Windows 1.0','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

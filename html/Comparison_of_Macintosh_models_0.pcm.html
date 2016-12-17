@@ -1,105 +1,108 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of Macintosh models - Desktops</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>MSRP : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Graphics : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>VRAM : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Storage : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Processor : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>FSB :</label></br>
+											<input type="checkbox" name="Feature" >2.5GT</br>	
+											<input type="checkbox" name="Feature" >s</br>	
+											<input type="checkbox" name="Feature" >5.86 GT</br>	
+											<input type="checkbox" name="Feature" >6.4 GT</br>	
+											<input type="checkbox" name="Feature" >4.8 GT</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Memory : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Model : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Display resolution : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>RPM : </label></br> <input id="10" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['$1799','$2499','$3499','$1099','$499','$4999','$1999','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['NVIDIA GeForce GT 755M','AMD Radeon M9 290','Intel HD Graphics 5000','ATI Radeon HD 5770','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['2 GB','1 GB','288 MB Shared','512 MB','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['1 TB HDD','500 GB HDD','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['1.4 GHz dual-core Intel Core i5','2.8 GHz Quad-core Xeon 3500','3.2 GHz quad-core Intel Core i5','3.3 GHz quad-core Intel Core i5','Two 2.66 GHz 6-core Xeon 5600','Two 2.4 GHz Quad-core Xeon 5600','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['3 GB','8 GB','6 GB','4 GB','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['iMac 27 inch','Mac Mini','Mac Pro 12-Core','Mac Pro 8-Core','Mac Pro Quad-Core','iMac 27 inch with 5K Retina Display','iMac 21.5 inch','']
+								});
+								$("#8").typeahead({
+									name:"list8",
+									local : ['N/A','2560 × 1440','1920 × 1080','5120 × 2880','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>MSRP : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Graphics : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>VRAM : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Storage : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Processor : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>FSB :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >2.5GT</br>	
- 		 									<input type="checkbox" name="Feature" >s</br>	
- 		 									<input type="checkbox" name="Feature" >5.86 GT</br>	
- 		 									<input type="checkbox" name="Feature" >6.4 GT</br>	
- 		 									<input type="checkbox" name="Feature" >4.8 GT</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Memory : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Model : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Display resolution : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>RPM : </label></br> <input id="10" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['$1799','$2499','$3499','$1099','$499','$4999','$1999','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['NVIDIA GeForce GT 755M','AMD Radeon M9 290','Intel HD Graphics 5000','ATI Radeon HD 5770','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['2 GB','1 GB','288 MB Shared','512 MB','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['1 TB HDD','500 GB HDD','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['1.4 GHz dual-core Intel Core i5','2.8 GHz Quad-core Xeon 3500','3.2 GHz quad-core Intel Core i5','3.3 GHz quad-core Intel Core i5','Two 2.66 GHz 6-core Xeon 5600','Two 2.4 GHz Quad-core Xeon 5600','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['3 GB','8 GB','6 GB','4 GB','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['iMac 27 inch','Mac Mini','Mac Pro 12-Core','Mac Pro 8-Core','Mac Pro Quad-Core','iMac 27 inch with 5K Retina Display','iMac 21.5 inch','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['N/A','2560 × 1440','1920 × 1080','5120 × 2880','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

@@ -1,78 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of display technology -  General characteristics </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Usable in bright room :</label></br>
- 		 					 <input type="radio" name="FeatureUsable in bright room" value="oui">oui <input type="radio" name="FeatureUsable in bright room" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Display technology : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Largest known diagonal - (cm) : </label></br> <input id="3" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Typical use :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Computer monitor</br>	
- 		 									<input type="checkbox" name="Feature" > TV</br>	
- 		 									<input type="checkbox" name="Feature" >TV or presentation</br>	
- 		 									<input type="checkbox" name="Feature" > Mobile phone</br>	
- 		 									<input type="checkbox" name="Feature" >Billboard</br>	
- 		 									<input type="checkbox" name="Feature" >
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Usable in bright room :</label></br>
+								<input type="radio" name="FeatureUsable in bright room" value="oui">Yes <input type="radio" name="FeatureUsable in bright room" value = "non">No <input type="radio" name="FeatureUsable in bright room" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Display technology : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Largest known diagonal - (cm) : </label></br> <input id="3" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Typical use :</label></br>
+											<input type="checkbox" name="Feature" >Computer monitor</br>	
+											<input type="checkbox" name="Feature" >TV</br>	
+											<input type="checkbox" name="Feature" >TV or presentation</br>	
+											<input type="checkbox" name="Feature" >Mobile phone</br>	
+											<input type="checkbox" name="Feature" >Billboard</br>	
+											<input type="checkbox" name="Feature" >
 Radar display</br>	
- 		 									<input type="checkbox" name="Feature" >Experimental</br>	
- 		 									<input type="checkbox" name="Feature" > possibly
+											<input type="checkbox" name="Feature" >Experimental</br>	
+											<input type="checkbox" name="Feature" >possibly
 virtual reality</br>	
- 		 									<input type="checkbox" name="Feature" > 
-Radar display</br>	
- 		 									<input type="checkbox" name="Feature" > Oscilloscope</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Largest known diagonal - (in) : </label></br> <input id="5" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Screen shape : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Laser Phosphor Display (LPD)','LCoS self-contained rear-projection','EPD (e-paper)','CRT self-contained rear-projection','LCD front-projection','FED','OLED','Virtual retinal display','LCD self-contained rear-projection','LCoS front-projection','Plasma display panel (PDP)','Direct view LCD','QDLED','Direct view Charactron CRT','DLP front-projection','Laser self-contained rear projection','LED','SED','Monochrome CRT','DLP self-contained rear-projection','IMOD','Shadow mask CRT','CRT front projection','Aperture grille CRT','Eidophor front projection','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Spherical curve or Flat','Flat','Flat lenticular','N/A','Curved or Flat (flexible)','Cylindrical curve or Flat','Flat (flexible)','Spherical curve','Any shape','Flat / Box','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+											<input type="checkbox" name="Feature" >Oscilloscope</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Largest known diagonal - (in) : </label></br> <input id="5" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Screen shape : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Laser Phosphor Display (LPD)','LCoS self-contained rear-projection','EPD (e-paper)','CRT self-contained rear-projection','LCD front-projection','FED','OLED','Virtual retinal display','LCD self-contained rear-projection','LCoS front-projection','Plasma display panel (PDP)','Direct view LCD','QDLED','Direct view Charactron CRT','DLP front-projection','Laser self-contained rear projection','LED','SED','Monochrome CRT','DLP self-contained rear-projection','IMOD','Shadow mask CRT','CRT front projection','Aperture grille CRT','Eidophor front projection','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Spherical curve or Flat','Flat','Flat lenticular','N/A','Curved or Flat (flexible)','Cylindrical curve or Flat','Flat (flexible)','Spherical curve','Any shape','Flat / Box','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

@@ -1,68 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of Portuguese and Spanish - Clitic personal pronouns</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Spanish : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Portuguese : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Meaning : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Diz-me onde estiveste.
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Spanish : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Portuguese : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Meaning : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Diz-me onde estiveste.
 Diga-me por onde você esteve.','Queria ver-te.
 Queria te ver.','Não consegui ver-te.
 Não consegui te ver.','Tira-me uma foto. 
  Me tira uma foto.','Ela deu-lhe um livro.
 Ela lhe deu um livro.','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Ella le dio un libro.','Tómame una foto. 
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Ella le dio un libro.','Tómame una foto. 
  Sácame una foto.','Dígame dónde ha estado. 
  Dime dónde has estado.','Quería verte.
 Te quería ver.','No te he conseguido ver.
 No he conseguido verte.
 No conseguí verte.','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : [''She gave him a book.'',''I didn't manage to see you.'',''Take a picture for me.'',''I wanted to see you.'',''Tell me where you've been.'','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : [''She gave him a book.'',''I didn't manage to see you.'',''Take a picture for me.'',''I wanted to see you.'',''Tell me where you've been.'','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

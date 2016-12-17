@@ -1,98 +1,102 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of raster-to-vector conversion software -  Basic features </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Text Recognition (OCR) :</label></br>
+								<input type="radio" name="FeatureText Recognition (OCR)" value="oui">Yes <input type="radio" name="FeatureText Recognition (OCR)" value = "non">No <input type="radio" name="FeatureText Recognition (OCR)" value = "non">Partial </br>
+								
+								</br>	
+								<label>Scripting support :</label></br>
+								<input type="radio" name="FeatureScripting support" value="oui">Yes <input type="radio" name="FeatureScripting support" value = "non">No <input type="radio" name="FeatureScripting support" value = "non">Partial </br>
+								
+								</br>	
+								<label>Maximum zoom : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Thumbnails : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Control point limit : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Object limit per document : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Color management for print :</label></br>
+								<input type="radio" name="FeatureColor management for print" value="oui">Yes <input type="radio" name="FeatureColor management for print" value = "non">No <input type="radio" name="FeatureColor management for print" value = "non">Partial </br>
+								
+								</br>	
+								<label>Raster 2 Vector : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>NAME : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Adjust Image (functions) : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['64x','N/A','Maximum zoom','64K','12800x','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['?','Thumbnails','Yes','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['?','Control point limit','No limit','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Object limit per document','No Limit','?','No limit','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['Raster 2 Vector','','Yes','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['Illustrator','','Potrace','Freehand','Easy Trace','Scan2CAD','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['?','adjust image (functions)','Yes','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Text Recognition (OCR) :</label></br>
- 		 					 <input type="radio" name="FeatureText Recognition (OCR)" value="oui">oui <input type="radio" name="FeatureText Recognition (OCR)" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Scripting support :</label></br>
- 		 					 <input type="radio" name="FeatureScripting support" value="oui">oui <input type="radio" name="FeatureScripting support" value = "non">non </br>
-									
-						</br>	
-							<label>Maximum zoom : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Thumbnails : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Control point limit : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Object limit per document : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Color management for print :</label></br>
- 		 					 <input type="radio" name="FeatureColor management for print" value="oui">oui <input type="radio" name="FeatureColor management for print" value = "non">non </br>
-									
-						</br>	
-							<label>Raster 2 Vector : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>NAME : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Adjust Image (functions) : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['64x','N/A','Maximum zoom','64K','12800x','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['?','Thumbnails','Yes','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['?','Control point limit','No limit','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Object limit per document','No Limit','?','No limit','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Raster 2 Vector','','Yes','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Illustrator','','Potrace','Freehand','Easy Trace','Scan2CAD','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['?','adjust image (functions)','Yes','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

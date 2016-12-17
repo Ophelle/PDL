@@ -1,114 +1,118 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of antivirus software -   </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Company : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>On-demand scan :</label></br>
+								<input type="radio" name="FeatureOn-demand scan" value="oui">Yes <input type="radio" name="FeatureOn-demand scan" value = "non">No <input type="radio" name="FeatureOn-demand scan" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Support :</label></br>
+								<input type="radio" name="FeatureSupport" value="oui">Yes <input type="radio" name="FeatureSupport" value = "non">No <input type="radio" name="FeatureSupport" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Live-Update :</label></br>
+								<input type="radio" name="FeatureLive-Update" value="oui">Yes <input type="radio" name="FeatureLive-Update" value = "non">No <input type="radio" name="FeatureLive-Update" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Email security :</label></br>
+								<input type="radio" name="FeatureEmail security" value="oui">Yes <input type="radio" name="FeatureEmail security" value = "non">No <input type="radio" name="FeatureEmail security" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Firewall :</label></br>
+								<input type="radio" name="FeatureFirewall" value="oui">Yes <input type="radio" name="FeatureFirewall" value = "non">No <input type="radio" name="FeatureFirewall" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>AntiSpam :</label></br>
+								<input type="radio" name="FeatureAntiSpam" value="oui">Yes <input type="radio" name="FeatureAntiSpam" value = "non">No <input type="radio" name="FeatureAntiSpam" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Country of origin : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Price : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>First release : </label></br> <input id="11" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Software : </label></br> <input id="12" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>On-access scan :</label></br>
+								<input type="radio" name="FeatureOn-access scan" value="oui">Yes <input type="radio" name="FeatureOn-access scan" value = "non">No <input type="radio" name="FeatureOn-access scan" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Notes : </label></br> <input id="14" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Web protection :</label></br>
+								<input type="radio" name="FeatureWeb protection" value="oui">Yes <input type="radio" name="FeatureWeb protection" value = "non">No <input type="radio" name="FeatureWeb protection" value = "non">Partial </br>
+											<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['FRISK Software International','Cisco','Panda Security','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Proprietary','GNU GPL','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Spain','United States','Iceland','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Trialware','?','Free','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['Clam AntiVirus','F-PROT Antivirus','Panda DesktopSecure for Linux','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Company : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>On-demand scan :</label></br>
- 		 					 <input type="radio" name="FeatureOn-demand scan" value="oui">oui <input type="radio" name="FeatureOn-demand scan" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Support :</label></br>
- 		 					 <input type="radio" name="FeatureSupport" value="oui">oui <input type="radio" name="FeatureSupport" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Live-Update :</label></br>
- 		 					 <input type="radio" name="FeatureLive-Update" value="oui">oui <input type="radio" name="FeatureLive-Update" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Email security :</label></br>
- 		 					 <input type="radio" name="FeatureEmail security" value="oui">oui <input type="radio" name="FeatureEmail security" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Firewall :</label></br>
- 		 					 <input type="radio" name="FeatureFirewall" value="oui">oui <input type="radio" name="FeatureFirewall" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>AntiSpam :</label></br>
- 		 					 <input type="radio" name="FeatureAntiSpam" value="oui">oui <input type="radio" name="FeatureAntiSpam" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Country of origin : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Price : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>First release : </label></br> <input id="11" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Software : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>On-access scan :</label></br>
- 		 					 <input type="radio" name="FeatureOn-access scan" value="oui">oui <input type="radio" name="FeatureOn-access scan" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Notes : </label></br> <input id="14" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Web protection :</label></br>
- 		 					 <input type="radio" name="FeatureWeb protection" value="oui">oui <input type="radio" name="FeatureWeb protection" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['FRISK Software International','Cisco','Panda Security','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Proprietary','GNU GPL','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Spain','United States','Iceland','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Trialware','?','Free','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Clam AntiVirus','F-PROT Antivirus','Panda DesktopSecure for Linux','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

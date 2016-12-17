@@ -1,83 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of YouTube downloaders -  Inbuilt conversion to formats and devices </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>MP3 Rocket :</label></br>
+								<input type="radio" name="FeatureMP3 Rocket" value="oui">Yes <input type="radio" name="FeatureMP3 Rocket" value = "non">No <input type="radio" name="FeatureMP3 Rocket" value = "non">Partial </br>
+								
+								</br>	
+								<label>4KDownload :</label></br>
+								<input type="radio" name="Feature4KDownload" value="oui">Yes <input type="radio" name="Feature4KDownload" value = "non">No <input type="radio" name="Feature4KDownload" value = "non">Partial </br>
+								
+								</br>	
+								<label>Orbit Downloader :</label></br>
+								<input type="radio" name="FeatureOrbit Downloader" value="oui">Yes <input type="radio" name="FeatureOrbit Downloader" value = "non">No <input type="radio" name="FeatureOrbit Downloader" value = "non">Partial </br>
+								
+								</br>	
+								<label>ClipGrab :</label></br>
+								<input type="radio" name="FeatureClipGrab" value="oui">Yes <input type="radio" name="FeatureClipGrab" value = "non">No <input type="radio" name="FeatureClipGrab" value = "non">Partial </br>
+								
+								</br>	
+								<label>FLVTO :</label></br>
+								<input type="radio" name="FeatureFLVTO" value="oui">Yes <input type="radio" name="FeatureFLVTO" value = "non">No <input type="radio" name="FeatureFLVTO" value = "non">Partial </br>
+								
+								</br>	
+								<label>YouTube Downloader : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>JDownloader :</label></br>
+								<input type="radio" name="FeatureJDownloader" value="oui">Yes <input type="radio" name="FeatureJDownloader" value = "non">No <input type="radio" name="FeatureJDownloader" value = "non">Partial </br>
+								
+								</br>	
+								<label>Freemake Video Downloader :</label></br>
+								<input type="radio" name="FeatureFreemake Video Downloader" value="oui">Yes <input type="radio" name="FeatureFreemake Video Downloader" value = "non">No <input type="radio" name="FeatureFreemake Video Downloader" value = "non">Partial </br>
+								
+								</br>	
+								<label>Free Studio :</label></br>
+								<input type="radio" name="FeatureFree Studio" value="oui">Yes <input type="radio" name="FeatureFree Studio" value = "non">No <input type="radio" name="FeatureFree Studio" value = "non">Partial </br>
+								
+								</br>	
+								<label>Video DownloadHelper : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['MPEG4','MP3','WMV','AVI','FLV','SWF','OGG Theora','Special device profiles (e.g. iPhone)','3GP','OGG Vorbis','Matroska','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['?','Yes','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>MP3 Rocket :</label></br>
- 		 					 <input type="radio" name="FeatureMP3 Rocket" value="oui">oui <input type="radio" name="FeatureMP3 Rocket" value = "non">non </br>
-									
-						</br>	
- 		 					<label>4KDownload :</label></br>
- 		 					 <input type="radio" name="Feature4KDownload" value="oui">oui <input type="radio" name="Feature4KDownload" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Orbit Downloader :</label></br>
- 		 					 <input type="radio" name="FeatureOrbit Downloader" value="oui">oui <input type="radio" name="FeatureOrbit Downloader" value = "non">non </br>
-									
-						</br>	
- 		 					<label>ClipGrab :</label></br>
- 		 					 <input type="radio" name="FeatureClipGrab" value="oui">oui <input type="radio" name="FeatureClipGrab" value = "non">non </br>
-									
-						</br>	
- 		 					<label>FLVTO :</label></br>
- 		 					 <input type="radio" name="FeatureFLVTO" value="oui">oui <input type="radio" name="FeatureFLVTO" value = "non">non </br>
-									
-						</br>	
-							<label>YouTube Downloader : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>JDownloader :</label></br>
- 		 					 <input type="radio" name="FeatureJDownloader" value="oui">oui <input type="radio" name="FeatureJDownloader" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Freemake Video Downloader :</label></br>
- 		 					 <input type="radio" name="FeatureFreemake Video Downloader" value="oui">oui <input type="radio" name="FeatureFreemake Video Downloader" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Free Studio :</label></br>
- 		 					 <input type="radio" name="FeatureFree Studio" value="oui">oui <input type="radio" name="FeatureFree Studio" value = "non">non </br>
-									
-						</br>	
-							<label>Video DownloadHelper : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['MPEG4','MP3','WMV','AVI','FLV','SWF','OGG Theora','Special device profiles (e.g. iPhone)','3GP','OGG Vorbis','Matroska','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['?','Yes','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

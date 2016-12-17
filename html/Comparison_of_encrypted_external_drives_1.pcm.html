@@ -1,109 +1,113 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of encrypted external drives - Operating systems</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>IronClad :</label></br>
+								<input type="radio" name="FeatureIronClad" value="oui">Yes <input type="radio" name="FeatureIronClad" value = "non">No <input type="radio" name="FeatureIronClad" value = "non">Partial </br>
+								
+								</br>	
+								<label>Cruzer Enterprise : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Store n' Go Corporate : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>DataTraveler 5000 :</label></br>
+								<input type="radio" name="FeatureDataTraveler 5000" value="oui">Yes <input type="radio" name="FeatureDataTraveler 5000" value = "non">No <input type="radio" name="FeatureDataTraveler 5000" value = "non">Partial </br>
+								
+								</br>	
+								<label>JumpDrive SecureII Plus : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>DataTraveler Vault – Privacy Edition :</label></br>
+								<input type="radio" name="FeatureDataTraveler Vault – Privacy Edition" value="oui">Yes <input type="radio" name="FeatureDataTraveler Vault – Privacy Edition" value = "non">No <input type="radio" name="FeatureDataTraveler Vault – Privacy Edition" value = "non">Partial </br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>DataTraveler Vault :</label></br>
+								<input type="radio" name="FeatureDataTraveler Vault" value="oui">Yes <input type="radio" name="FeatureDataTraveler Vault" value = "non">No <input type="radio" name="FeatureDataTraveler Vault" value = "non">Partial </br>
+								
+								</br>	
+								<label>CryptX2 :</label></br>
+								<input type="radio" name="FeatureCryptX2" value="oui">Yes <input type="radio" name="FeatureCryptX2" value = "non">No <input type="radio" name="FeatureCryptX2" value = "non">Partial </br>
+								
+								</br>	
+								<label>DataTraveler Locker+ :</label></br>
+								<input type="radio" name="FeatureDataTraveler Locker+" value="oui">Yes <input type="radio" name="FeatureDataTraveler Locker+" value = "non">No <input type="radio" name="FeatureDataTraveler Locker+" value = "non">Partial </br>
+								
+								</br>	
+								<label>SafeStick SuperSonic :</label></br>
+								<input type="radio" name="FeatureSafeStick SuperSonic" value="oui">Yes <input type="radio" name="FeatureSafeStick SuperSonic" value = "non">No <input type="radio" name="FeatureSafeStick SuperSonic" value = "non">Partial </br>
+								
+								</br>	
+								<label>IronKey S100 :</label></br>
+								<input type="radio" name="FeatureIronKey S100" value="oui">Yes <input type="radio" name="FeatureIronKey S100" value = "non">No <input type="radio" name="FeatureIronKey S100" value = "non">Partial </br>
+								
+								</br>	
+								<label>IronKey S200 :</label></br>
+								<input type="radio" name="FeatureIronKey S200" value="oui">Yes <input type="radio" name="FeatureIronKey S200" value = "non">No <input type="radio" name="FeatureIronKey S200" value = "non">Partial </br>
+								
+								</br>	
+								<label>SafeStick :</label></br>
+								<input type="radio" name="FeatureSafeStick" value="oui">Yes <input type="radio" name="FeatureSafeStick" value = "non">No <input type="radio" name="FeatureSafeStick" value = "non">Partial </br>
+								
+								</br>	
+								<label>IronKey D200 :</label></br>
+								<input type="radio" name="FeatureIronKey D200" value="oui">Yes <input type="radio" name="FeatureIronKey D200" value = "non">No <input type="radio" name="FeatureIronKey D200" value = "non">Partial </br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Yes','Unknown','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Unknown','Yes','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Unknown','Yes','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['FreeBSD','OpenBSD','Mac OS','Linux','Windows','NetBSD','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>IronClad :</label></br>
- 		 					 <input type="radio" name="FeatureIronClad" value="oui">oui <input type="radio" name="FeatureIronClad" value = "non">non </br>
-									
-						</br>	
-							<label>Cruzer Enterprise : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Store n' Go Corporate : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>DataTraveler 5000 :</label></br>
- 		 					 <input type="radio" name="FeatureDataTraveler 5000" value="oui">oui <input type="radio" name="FeatureDataTraveler 5000" value = "non">non </br>
-									
-						</br>	
-							<label>JumpDrive SecureII Plus : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>DataTraveler Vault – Privacy Edition :</label></br>
- 		 					 <input type="radio" name="FeatureDataTraveler Vault – Privacy Edition" value="oui">oui <input type="radio" name="FeatureDataTraveler Vault – Privacy Edition" value = "non">non </br>
-									
-						</br>	
-							<label>Name : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>DataTraveler Vault :</label></br>
- 		 					 <input type="radio" name="FeatureDataTraveler Vault" value="oui">oui <input type="radio" name="FeatureDataTraveler Vault" value = "non">non </br>
-									
-						</br>	
- 		 					<label>CryptX2 :</label></br>
- 		 					 <input type="radio" name="FeatureCryptX2" value="oui">oui <input type="radio" name="FeatureCryptX2" value = "non">non </br>
-									
-						</br>	
- 		 					<label>DataTraveler Locker+ :</label></br>
- 		 					 <input type="radio" name="FeatureDataTraveler Locker+" value="oui">oui <input type="radio" name="FeatureDataTraveler Locker+" value = "non">non </br>
-									
-						</br>	
- 		 					<label>SafeStick SuperSonic :</label></br>
- 		 					 <input type="radio" name="FeatureSafeStick SuperSonic" value="oui">oui <input type="radio" name="FeatureSafeStick SuperSonic" value = "non">non </br>
-									
-						</br>	
- 		 					<label>IronKey S100 :</label></br>
- 		 					 <input type="radio" name="FeatureIronKey S100" value="oui">oui <input type="radio" name="FeatureIronKey S100" value = "non">non </br>
-									
-						</br>	
- 		 					<label>IronKey S200 :</label></br>
- 		 					 <input type="radio" name="FeatureIronKey S200" value="oui">oui <input type="radio" name="FeatureIronKey S200" value = "non">non </br>
-									
-						</br>	
- 		 					<label>SafeStick :</label></br>
- 		 					 <input type="radio" name="FeatureSafeStick" value="oui">oui <input type="radio" name="FeatureSafeStick" value = "non">non </br>
-									
-						</br>	
- 		 					<label>IronKey D200 :</label></br>
- 		 					 <input type="radio" name="FeatureIronKey D200" value="oui">oui <input type="radio" name="FeatureIronKey D200" value = "non">non </br>
-									
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Yes','Unknown','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Unknown','Yes','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Unknown','Yes','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['FreeBSD','OpenBSD','Mac OS','Linux','Windows','NetBSD','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

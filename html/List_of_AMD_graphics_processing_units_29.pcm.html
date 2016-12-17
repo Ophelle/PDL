@@ -1,114 +1,115 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>List of AMD graphics processing units -  Rage Mobility Series </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Bus interface :</label></br>
+											<input type="checkbox" name="Feature" >AGP</br>	
+											<input type="checkbox" name="Feature" >PCI</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Fillrate - Texture (GT/s) : </label></br> <input id="2" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Memory clock (MHz) : </label></br> <input id="3" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>API compliance (version) - DirectX : </label></br> <input id="4" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Memory - Bus width (bit) : </label></br> <input id="5" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Config core : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Core clock (MHz) : </label></br> <input id="7" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Memory (MB) : </label></br> <input id="8" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Launch : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>API compliance (version) - OpenGL : </label></br> <input id="10" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Model : </label></br> <input id="11" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Memory - Bus type : </label></br> <input id="12" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Fab (nm) : </label></br> <input id="13" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="14" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Fillrate - Pixel (GP/s) : </label></br> <input id="15" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Notes :</label></br>
+											<input type="checkbox" name="Feature" >M1 had 8 MB of integrated SDRAM</br>	
+											<input type="checkbox" name="Feature" >P had none. IDCT</br>	
+											<input type="checkbox" name="Feature" >Motion Compensation.</br>	
+											<input type="checkbox" name="Feature" >M3 had 8 MB of integrated SDRAM</br>	
+											<input type="checkbox" name="Feature" >IDCT</br>	
+											<input type="checkbox" name="Feature" >M had 4 MB of integrated SDRAM</br>	
+											<input type="checkbox" name="Feature" >Motion Compensation</br>	
+											<input type="checkbox" name="Feature" >M4 had 16 MB of integrated SDRAM</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Hardware T&L :</label></br>
+								<input type="radio" name="FeatureHardware T&L" value="oui">Yes <input type="radio" name="FeatureHardware T&L" value = "non">No <input type="radio" name="FeatureHardware T&L" value = "non">Partial </br>
+											<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['0:1:1:1','0:2:2:2','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Oct 1999','Nov 1996','Nov 1998','Nov 1997','Feb 1999','Aug 1998','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Rage 128 GL','Rage LT Pro (Rage Pro)','Rage Mobility 128 (Rage 128 Pro)','Rage Mobility M1 (Rage 128)','Rage Mobility M/P (Rage 128)','Rage Mobility M4 (AGP 4x) (Rage 128 Pro)','Rage Mobility M3 (AGP 4x) (Rage 128 Pro)','Rage LT (Rage II)','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Bus interface :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >AGP</br>	
- 		 									<input type="checkbox" name="Feature" > PCI</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Fillrate - Texture (GT/s) : </label></br> <input id="2" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Memory clock (MHz) : </label></br> <input id="3" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>API compliance (version) - DirectX : </label></br> <input id="4" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Memory - Bus width (bit) : </label></br> <input id="5" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Config core : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Core clock (MHz) : </label></br> <input id="7" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Memory (MB) : </label></br> <input id="8" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Launch : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>API compliance (version) - OpenGL : </label></br> <input id="10" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Model : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Memory - Bus type : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Fab (nm) : </label></br> <input id="13" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="14" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Fillrate - Pixel (GP/s) : </label></br> <input id="15" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Notes :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >M1 had 8 MB of integrated SDRAM</br>	
- 		 									<input type="checkbox" name="Feature" > P had none. IDCT</br>	
- 		 									<input type="checkbox" name="Feature" > Motion Compensation.</br>	
- 		 									<input type="checkbox" name="Feature" >M3 had 8 MB of integrated SDRAM</br>	
- 		 									<input type="checkbox" name="Feature" > IDCT</br>	
- 		 									<input type="checkbox" name="Feature" >M had 4 MB of integrated SDRAM</br>	
- 		 									<input type="checkbox" name="Feature" >IDCT</br>	
- 		 									<input type="checkbox" name="Feature" > Motion Compensation</br>	
- 		 									<input type="checkbox" name="Feature" >M4 had 16 MB of integrated SDRAM</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
- 		 					<label>Hardware T&L :</label></br>
- 		 					 <input type="radio" name="FeatureHardware T&L" value="oui">oui <input type="radio" name="FeatureHardware T&L" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['0:1:1:1','0:2:2:2','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Oct 1999','Nov 1996','Nov 1998','Nov 1997','Feb 1999','Aug 1998','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Rage 128 GL','Rage LT Pro (Rage Pro)','Rage Mobility 128 (Rage 128 Pro)','Rage Mobility M1 (Rage 128)','Rage Mobility M/P (Rage 128)','Rage Mobility M4 (AGP 4x) (Rage 128 Pro)','Rage Mobility M3 (AGP 4x) (Rage 128 Pro)','Rage LT (Rage II)','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

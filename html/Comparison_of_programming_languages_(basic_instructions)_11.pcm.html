@@ -1,74 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of programming languages (basic instructions) -   </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>basic/void function : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>value-returning function : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Products : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>required main function : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>calling a function : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['P22','P10','P28','P8','P36','P14','P6','P12','P39','P19','P20','P25','P30','P11','P33','P15','P26','P37','P21','P31','P17','P18','P5','P2','P16','P9','P34','P35','P24','P27','P13','P4','P3','P1','P23','P32','P29','P38','P7','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['N/A','','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['','N/A','parameters  ($1, $2, $3, ...)
+  (all parameters)
+  (the number of parameters)
+  (this function name)','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['','parameters  ($1, $2, $3, ...)
+  (all parameters)
+  (the number of parameters)
+  (this function name)','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>basic/void function : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>value-returning function : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Products : </label></br> <input id="3" type="aaaa" name="Feature"></br>
-							
-						</br>	
-							<label>required main function : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>calling a function : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['N/A','','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['','N/A','parameters  ($1, $2, $3, ...)
-  (all parameters)
-  (the number of parameters)
-  (this function name)','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['','parameters  ($1, $2, $3, ...)
-  (all parameters)
-  (the number of parameters)
-  (this function name)','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

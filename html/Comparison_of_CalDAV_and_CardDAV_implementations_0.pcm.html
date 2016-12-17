@@ -1,70 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of CalDAV and CardDAV implementations - Client implementations</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Platform : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Client name : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>CalDAV Tasks :</label></br>
+								<input type="radio" name="FeatureCalDAV Tasks" value="oui">Yes <input type="radio" name="FeatureCalDAV Tasks" value = "non">No <input type="radio" name="FeatureCalDAV Tasks" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>CardDAV :</label></br>
+								<input type="radio" name="FeatureCardDAV" value="oui">Yes <input type="radio" name="FeatureCardDAV" value = "non">No <input type="radio" name="FeatureCardDAV" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>CalDAV Events :</label></br>
+								<input type="radio" name="FeatureCalDAV Events" value="oui">Yes <input type="radio" name="FeatureCalDAV Events" value = "non">No <input type="radio" name="FeatureCalDAV Events" value = "non">Partial </br>
+											<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Cross-platform JavaScript Web application','Microsoft Windows','Android App','Cross-platform','Mac OS X','MS Outlook add-in, Microsoft Windows','Cross-platform Thunderbird Add-on','Cross-platform Python','iOS and Mac OS X','Command-line','Cross-platform Kontact add-on','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['OpenProtocols Connector for Outlook','KCardDAV (discontinued)','CalDAV Tasksync free','Chandler Desktop','CardDavMATE','Evolution','AndroidCaldavSyncAdapater','Lightning','aCal','Mulberry','CardDAV-Sync','AgenDAV','CalendarSync','SurGATE Outlook Sync Client','pyCardDAV','Fantastical','iCal Import/Export CalDAV','CalDAV-Sync','Calendars/Reminders/Contacts/Mail','cadaver','Inverse SOGo Connector/Integrator','cFos Outlook DAV','ContactSync','InfCloud (CalDavZAP+CardDavMATE)','CalDavZAP','eM Client','BusyCal','Daylite','Contacts CardDAV Sync 2 Cloud','DAVdroid','jqCalDAV','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Proprietary','?','GPL','MPL/GPL/LGPL','AGPL','MIT','Apache','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Platform : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Client name : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>CalDAV Tasks :</label></br>
- 		 					 <input type="radio" name="FeatureCalDAV Tasks" value="oui">oui <input type="radio" name="FeatureCalDAV Tasks" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>CardDAV :</label></br>
- 		 					 <input type="radio" name="FeatureCardDAV" value="oui">oui <input type="radio" name="FeatureCardDAV" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>CalDAV Events :</label></br>
- 		 					 <input type="radio" name="FeatureCalDAV Events" value="oui">oui <input type="radio" name="FeatureCalDAV Events" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Cross-platform JavaScript Web application','Microsoft Windows','Android App','Cross-platform','Mac OS X','MS Outlook add-in, Microsoft Windows','Cross-platform Thunderbird Add-on','Cross-platform Python','iOS and Mac OS X','Command-line','Cross-platform Kontact add-on','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['OpenProtocols Connector for Outlook','KCardDAV (discontinued)','CalDAV Tasksync free','Chandler Desktop','CardDavMATE','Evolution','AndroidCaldavSyncAdapater','Lightning','aCal','Mulberry','CardDAV-Sync','AgenDAV','CalendarSync','SurGATE Outlook Sync Client','pyCardDAV','Fantastical','iCal Import/Export CalDAV','CalDAV-Sync','Calendars/Reminders/Contacts/Mail','cadaver','Inverse SOGo Connector/Integrator','cFos Outlook DAV','ContactSync','InfCloud (CalDavZAP+CardDavMATE)','CalDavZAP','eM Client','BusyCal','Daylite','Contacts CardDAV Sync 2 Cloud','DAVdroid','jqCalDAV','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Proprietary','?','GPL','MPL/GPL/LGPL','AGPL','MIT','Apache','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

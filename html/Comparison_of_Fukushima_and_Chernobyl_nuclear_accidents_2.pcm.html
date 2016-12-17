@@ -1,74 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of Fukushima and Chernobyl nuclear accidents - Radioactive contamination</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Report-
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Report-
 date : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Period of
+								
+								</br>	
+								<label>Period of
 dispersal : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Amount (TBq) : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Place : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Source : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['12 April 2011','25 April 2011','17 August 2011','6–7 June 2011','April 2011','23 August 2011','7 June 2011','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['630.000','24','840 000','0.07','5 200 000','630 000','770 000','370 000','154','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['12 March - 5 April 2011','3–16 August 2011','24 April 2011','25 April – June 1986','11 – 17 March 2011','11 March – 5 April 2011','4 April 2011','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Fukushima','Chernobyl','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['NISA','NISA>','Government','NSC','NISA and published over press.','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								
+								</br>	
+								<label>Amount (TBq) : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Place : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Source : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['12 April 2011','25 April 2011','17 August 2011','6–7 June 2011','April 2011','23 August 2011','7 June 2011','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['630.000','24','840 000','0.07','5 200 000','630 000','770 000','370 000','154','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['12 March - 5 April 2011','3–16 August 2011','24 April 2011','25 April – June 1986','11 – 17 March 2011','11 March – 5 April 2011','4 April 2011','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Fukushima','Chernobyl','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['NISA','NISA>','Government','NSC','NISA and published over press.','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

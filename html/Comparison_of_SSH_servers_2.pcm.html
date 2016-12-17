@@ -1,83 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of SSH servers - Features</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Supports IPv6 :</label></br>
+								<input type="radio" name="FeatureSupports IPv6" value="oui">Yes <input type="radio" name="FeatureSupports IPv6" value = "non">No <input type="radio" name="FeatureSupports IPv6" value = "non">Partial </br>
+								
+								</br>	
+								<label>SCP :</label></br>
+								<input type="radio" name="FeatureSCP" value="oui">Yes <input type="radio" name="FeatureSCP" value = "non">No <input type="radio" name="FeatureSCP" value = "non">Partial </br>
+								
+								</br>	
+								<label>Supports OpenSSH authorized keys :</label></br>
+								<input type="radio" name="FeatureSupports OpenSSH authorized keys" value="oui">Yes <input type="radio" name="FeatureSupports OpenSSH authorized keys" value = "non">No <input type="radio" name="FeatureSupports OpenSSH authorized keys" value = "non">Partial </br>
+								
+								</br>	
+								<label>Privilege separation :</label></br>
+								<input type="radio" name="FeaturePrivilege separation" value="oui">Yes <input type="radio" name="FeaturePrivilege separation" value = "non">No <input type="radio" name="FeaturePrivilege separation" value = "non">Partial </br>
+								
+								</br>	
+								<label>FIPS 140-2 certified : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>SFTP :</label></br>
+								<input type="radio" name="FeatureSFTP" value="oui">Yes <input type="radio" name="FeatureSFTP" value = "non">No <input type="radio" name="FeatureSFTP" value = "non">Partial </br>
+								
+								</br>	
+								<label>Port forwarding :</label></br>
+								<input type="radio" name="FeaturePort forwarding" value="oui">Yes <input type="radio" name="FeaturePort forwarding" value = "non">No <input type="radio" name="FeaturePort forwarding" value = "non">Partial </br>
+								
+								</br>	
+								<label>SSH2 :</label></br>
+								<input type="radio" name="FeatureSSH2" value="oui">Yes <input type="radio" name="FeatureSSH2" value = "non">No <input type="radio" name="FeatureSSH2" value = "non">Partial </br>
+								
+								</br>	
+								<label>SSH1 :</label></br>
+								<input type="radio" name="FeatureSSH1" value="oui">Yes <input type="radio" name="FeatureSSH1" value = "non">No <input type="radio" name="FeatureSSH1" value = "non">Partial </br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Yes','?','Partial','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Bitvise SSH Server','Copssh','CrushFTP Server','GoAnywhere Services','MobaSSH SSH Server','Apache MINA SSHD','Syncplify.me Server','Attachmate Reflection for Secure IT','Maverick SSHD','TinySSH','OpenSSH','Pragma Fortress SSH Server','Tectia SSH Server','SilverSHielD','KpyM SSH Server','Georgia SoftWorks SSH Server','Dropbear','Lsh','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Supports IPv6 :</label></br>
- 		 					 <input type="radio" name="FeatureSupports IPv6" value="oui">oui <input type="radio" name="FeatureSupports IPv6" value = "non">non </br>
-									
-						</br>	
- 		 					<label>SCP :</label></br>
- 		 					 <input type="radio" name="FeatureSCP" value="oui">oui <input type="radio" name="FeatureSCP" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Supports OpenSSH authorized keys :</label></br>
- 		 					 <input type="radio" name="FeatureSupports OpenSSH authorized keys" value="oui">oui <input type="radio" name="FeatureSupports OpenSSH authorized keys" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Privilege separation :</label></br>
- 		 					 <input type="radio" name="FeaturePrivilege separation" value="oui">oui <input type="radio" name="FeaturePrivilege separation" value = "non">non </br>
-									
-						</br>	
-							<label>FIPS 140-2 certified : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>SFTP :</label></br>
- 		 					 <input type="radio" name="FeatureSFTP" value="oui">oui <input type="radio" name="FeatureSFTP" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Port forwarding :</label></br>
- 		 					 <input type="radio" name="FeaturePort forwarding" value="oui">oui <input type="radio" name="FeaturePort forwarding" value = "non">non </br>
-									
-						</br>	
- 		 					<label>SSH2 :</label></br>
- 		 					 <input type="radio" name="FeatureSSH2" value="oui">oui <input type="radio" name="FeatureSSH2" value = "non">non </br>
-									
-						</br>	
- 		 					<label>SSH1 :</label></br>
- 		 					 <input type="radio" name="FeatureSSH1" value="oui">oui <input type="radio" name="FeatureSSH1" value = "non">non </br>
-									
-						</br>	
-							<label>Name : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Yes','?','Partial','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Bitvise SSH Server','Copssh','CrushFTP Server','GoAnywhere Services','MobaSSH SSH Server','Apache MINA SSHD','Syncplify.me Server','Attachmate Reflection for Secure IT','Maverick SSHD','TinySSH','OpenSSH','Pragma Fortress SSH Server','Tectia SSH Server','SilverSHielD','KpyM SSH Server','Georgia SoftWorks SSH Server','Dropbear','Lsh','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

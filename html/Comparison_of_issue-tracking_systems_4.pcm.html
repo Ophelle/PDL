@@ -1,88 +1,92 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of issue-tracking systems -  Revision control system integration </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Monotone :</label></br>
+								<input type="radio" name="FeatureMonotone" value="oui">Yes <input type="radio" name="FeatureMonotone" value = "non">No <input type="radio" name="FeatureMonotone" value = "non">Partial </br>
+								
+								</br>	
+								<label>AccuRev :</label></br>
+								<input type="radio" name="FeatureAccuRev" value="oui">Yes <input type="radio" name="FeatureAccuRev" value = "non">No <input type="radio" name="FeatureAccuRev" value = "non">Partial </br>
+								
+								</br>	
+								<label>CVS :</label></br>
+								<input type="radio" name="FeatureCVS" value="oui">Yes <input type="radio" name="FeatureCVS" value = "non">No <input type="radio" name="FeatureCVS" value = "non">Partial </br>
+								
+								</br>	
+								<label>Others :</label></br>
+								<input type="radio" name="FeatureOthers" value="oui">Yes <input type="radio" name="FeatureOthers" value = "non">No <input type="radio" name="FeatureOthers" value = "non">Partial </br>
+								
+								</br>	
+								<label>Perforce :</label></br>
+								<input type="radio" name="FeaturePerforce" value="oui">Yes <input type="radio" name="FeaturePerforce" value = "non">No <input type="radio" name="FeaturePerforce" value = "non">Partial </br>
+								
+								</br>	
+								<label>Mercurial :</label></br>
+								<input type="radio" name="FeatureMercurial" value="oui">Yes <input type="radio" name="FeatureMercurial" value = "non">No <input type="radio" name="FeatureMercurial" value = "non">Partial </br>
+								
+								</br>	
+								<label>Subversion :</label></br>
+								<input type="radio" name="FeatureSubversion" value="oui">Yes <input type="radio" name="FeatureSubversion" value = "non">No <input type="radio" name="FeatureSubversion" value = "non">Partial </br>
+								
+								</br>	
+								<label>Darcs :</label></br>
+								<input type="radio" name="FeatureDarcs" value="oui">Yes <input type="radio" name="FeatureDarcs" value = "non">No <input type="radio" name="FeatureDarcs" value = "non">Partial </br>
+								
+								</br>	
+								<label>System : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Git :</label></br>
+								<input type="radio" name="FeatureGit" value="oui">Yes <input type="radio" name="FeatureGit" value = "non">No <input type="radio" name="FeatureGit" value = "non">Partial </br>
+								
+								</br>	
+								<label>ClearCase :</label></br>
+								<input type="radio" name="FeatureClearCase" value="oui">Yes <input type="radio" name="FeatureClearCase" value = "non">No <input type="radio" name="FeatureClearCase" value = "non">Partial </br>
+								
+								</br>	
+								<label>Bazaar :</label></br>
+								<input type="radio" name="FeatureBazaar" value="oui">Yes <input type="radio" name="FeatureBazaar" value = "non">No <input type="radio" name="FeatureBazaar" value = "non">Partial </br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Kayako SupportSuite','The Bug Genie','GNATS','Liberum Help Desk','org-mode','IBM Rational ClearQuest','Team Foundation Server','Brimir','Roundup','Debbugs','Wrike','MantisBT','Remedy Action Request System','StarTeam','Apache Bloodhound','LibreSource','Google Code Hosting','Request Tracker','SysAid','Bugzilla','Redmine','Trac','Microsoft Dynamics CRM','Usersnap','JIRA','Supportworks','Fossil','Plain Ticket','Bontq','OTRS','Pivotal Tracker','TestTrack','Assembla Tickets','YouTrack','Axosoft','Planbox','Web Help Desk','TechExcel's DevTrack','TrackerSuite.Net','Teamwork','FogBugz','FusionForge','HP Application Lifecycle Management','Zoho BugTracker','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Monotone :</label></br>
- 		 					 <input type="radio" name="FeatureMonotone" value="oui">oui <input type="radio" name="FeatureMonotone" value = "non">non </br>
-									
-						</br>	
- 		 					<label>AccuRev :</label></br>
- 		 					 <input type="radio" name="FeatureAccuRev" value="oui">oui <input type="radio" name="FeatureAccuRev" value = "non">non </br>
-									
-						</br>	
- 		 					<label>CVS :</label></br>
- 		 					 <input type="radio" name="FeatureCVS" value="oui">oui <input type="radio" name="FeatureCVS" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Others :</label></br>
- 		 					 <input type="radio" name="FeatureOthers" value="oui">oui <input type="radio" name="FeatureOthers" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Perforce :</label></br>
- 		 					 <input type="radio" name="FeaturePerforce" value="oui">oui <input type="radio" name="FeaturePerforce" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Mercurial :</label></br>
- 		 					 <input type="radio" name="FeatureMercurial" value="oui">oui <input type="radio" name="FeatureMercurial" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Subversion :</label></br>
- 		 					 <input type="radio" name="FeatureSubversion" value="oui">oui <input type="radio" name="FeatureSubversion" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Darcs :</label></br>
- 		 					 <input type="radio" name="FeatureDarcs" value="oui">oui <input type="radio" name="FeatureDarcs" value = "non">non </br>
-									
-						</br>	
-							<label>System : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Git :</label></br>
- 		 					 <input type="radio" name="FeatureGit" value="oui">oui <input type="radio" name="FeatureGit" value = "non">non </br>
-									
-						</br>	
- 		 					<label>ClearCase :</label></br>
- 		 					 <input type="radio" name="FeatureClearCase" value="oui">oui <input type="radio" name="FeatureClearCase" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Bazaar :</label></br>
- 		 					 <input type="radio" name="FeatureBazaar" value="oui">oui <input type="radio" name="FeatureBazaar" value = "non">non </br>
-									
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Kayako SupportSuite','The Bug Genie','GNATS','Liberum Help Desk','org-mode','IBM Rational ClearQuest','Team Foundation Server','Brimir','Roundup','Debbugs','Wrike','MantisBT','Remedy Action Request System','StarTeam','Apache Bloodhound','LibreSource','Google Code Hosting','Request Tracker','SysAid','Bugzilla','Redmine','Trac','Microsoft Dynamics CRM','Usersnap','JIRA','Supportworks','Fossil','Plain Ticket','Bontq','OTRS','Pivotal Tracker','TestTrack','Assembla Tickets','YouTrack','Axosoft','Planbox','Web Help Desk','TechExcel's DevTrack','TrackerSuite.Net','Teamwork','FogBugz','FusionForge','HP Application Lifecycle Management','Zoho BugTracker','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

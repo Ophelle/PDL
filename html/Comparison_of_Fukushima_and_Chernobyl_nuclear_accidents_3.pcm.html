@@ -1,64 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of Fukushima and Chernobyl nuclear accidents - Radioactive contamination</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>entry into sea (TBq) - direct : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>source : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>report date : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>entry into sea (TBq) - indirect : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>period of dispersal : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['End August 2011','8 September 2011','21 May 2011','29 October 2011','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['March – August 2011','March – April 2011','21 March – 15 July 2011','1 – 6 April 2011','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['JMA','Scientist Group','Tepco','IRSN','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>entry into sea (TBq) - direct : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>source : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>report date : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>entry into sea (TBq) - indirect : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>period of dispersal : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['End August 2011','8 September 2011','21 May 2011','29 October 2011','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['March – August 2011','March – April 2011','21 March – 15 July 2011','1 – 6 April 2011','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['JMA','Scientist Group','Tepco','IRSN','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

@@ -1,67 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of command shells - String processing and filename matching</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Recursive globbing (generating files from any level of subdirectories) :</label></br>
+								<input type="radio" name="FeatureRecursive globbing (generating files from any level of subdirectories)" value="oui">Yes <input type="radio" name="FeatureRecursive globbing (generating files from any level of subdirectories)" value = "non">No <input type="radio" name="FeatureRecursive globbing (generating files from any level of subdirectories)" value = "non">Partial </br>
+								
+								</br>	
+								<label>Pattern matching (filename globbing) : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Pattern matching (regular expression built-in) :</label></br>
+								<input type="radio" name="FeaturePattern matching (regular expression built-in)" value="oui">Yes <input type="radio" name="FeaturePattern matching (regular expression built-in)" value = "non">No <input type="radio" name="FeaturePattern matching (regular expression built-in)" value = "non">Partial </br>
+								
+								</br>	
+								<label>Globbing qualifiers (filename generation based on file attributes) :</label></br>
+								<input type="radio" name="FeatureGlobbing qualifiers (filename generation based on file attributes)" value="oui">Yes <input type="radio" name="FeatureGlobbing qualifiers (filename generation based on file attributes)" value = "non">No <input type="radio" name="FeatureGlobbing qualifiers (filename generation based on file attributes)" value = "non">Partial </br>
+								
+								</br>	
+								<label>String processing : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Alternation (Brace expansion) :</label></br>
+								<input type="radio" name="FeatureAlternation (Brace expansion)" value="oui">Yes <input type="radio" name="FeatureAlternation (Brace expansion)" value = "non">No <input type="radio" name="FeatureAlternation (Brace expansion)" value = "non">Partial </br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Yes','?','Yes (, , )','Yes (, , , extended wildcards,  popup command)','Yes (, )','Yes (, , , )','Yes (, , , extended globbing)','No','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Yes (Concat/Substring/Insert/Remove/Replace, ToLower/ToUpper, Trim/TrimStart/TrimEnd, Compare, Contains/StartsWith/EndWith, Format, IndexOf/LastIndexOf, Pad/PadLeft/PadRight, Split/Join, regular expression functions and other .NET string functions)','?','Yes (through variable functions , extended environment variable processing, various string commands and  and )','No','Yes (:s and other editing operators)','Yes (through variable processing: e.g. substring extraction, various transformations via parameter expansion)','Partial (only through  and )','Yes (:s and other editing operators + substr, strlen, strindex, printf, reverse, upper, lower, concat and other builtin functions)','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Recursive globbing (generating files from any level of subdirectories) :</label></br>
- 		 					 <input type="radio" name="FeatureRecursive globbing (generating files from any level of subdirectories)" value="oui">oui <input type="radio" name="FeatureRecursive globbing (generating files from any level of subdirectories)" value = "non">non </br>
-									
-						</br>	
-							<label>Pattern matching (filename globbing) : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Pattern matching (regular expression built-in) :</label></br>
- 		 					 <input type="radio" name="FeaturePattern matching (regular expression built-in)" value="oui">oui <input type="radio" name="FeaturePattern matching (regular expression built-in)" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Globbing qualifiers (filename generation based on file attributes) :</label></br>
- 		 					 <input type="radio" name="FeatureGlobbing qualifiers (filename generation based on file attributes)" value="oui">oui <input type="radio" name="FeatureGlobbing qualifiers (filename generation based on file attributes)" value = "non">non </br>
-									
-						</br>	
-							<label>String processing : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Alternation (Brace expansion) :</label></br>
- 		 					 <input type="radio" name="FeatureAlternation (Brace expansion)" value="oui">oui <input type="radio" name="FeatureAlternation (Brace expansion)" value = "non">non </br>
-									
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Yes','?','Yes (, , )','Yes (, , , extended wildcards,  popup command)','Yes (, )','Yes (, , , )','Yes (, , , extended globbing)','No','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Yes (Concat/Substring/Insert/Remove/Replace, ToLower/ToUpper, Trim/TrimStart/TrimEnd, Compare, Contains/StartsWith/EndWith, Format, IndexOf/LastIndexOf, Pad/PadLeft/PadRight, Split/Join, regular expression functions and other .NET string functions)','?','Yes (through variable functions , extended environment variable processing, various string commands and  and )','No','Yes (:s and other editing operators)','Yes (through variable processing: e.g. substring extraction, various transformations via parameter expansion)','Partial (only through  and )','Yes (:s and other editing operators + substr, strlen, strindex, printf, reverse, upper, lower, concat and other builtin functions)','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

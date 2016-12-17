@@ -1,90 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of OpenDocument software - Spreadsheet documents</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Office suite : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Products : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Operating systems :</label></br>
+											<input type="checkbox" name="Feature" >Windows</br>	
+											<input type="checkbox" name="Feature" >Linux</br>	
+											<input type="checkbox" name="Feature" >Unix-based systems</br>	
+											<input type="checkbox" name="Feature" >Mac OS X</br>	
+											<input type="checkbox" name="Feature" >Solaris</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Version : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Developer : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Notes : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>ISO/IEC 26300:2006 :</label></br>
+								<input type="radio" name="FeatureISO/IEC 26300:2006" value="oui">Yes <input type="radio" name="FeatureISO/IEC 26300:2006" value = "non">No <input type="radio" name="FeatureISO/IEC 26300:2006" value = "non">Partial </br>
+											<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Google Docs & Spreadsheets','LibreOffice','','NeoOffice','Microsoft Office','KOffice','OpenOffice.org','Standalone','IBM Lotus Symphony','Office suite','IBM Workplace Collaboration Services','Calligra Suite','StarOffice','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['P13','P11','P14','P10','P8','P3','P12','P6','P7','P9','P4','P5','P1','P15','P2','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['1.2','1.4+','2.0+','2.4+','8','1.12.5+','','1.0+','3.3.0','2007 SP2','2006','2.2.5','Version','2.5+','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['LGPL','GPL / LGPL','Proprietary','GPL','License','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['GNOME','Patrick Luby and Edward Peterlin','AdventNet','Sun Microsystems','Microsoft','LibreOffice','Google','Team and Concepts','Developer','IBM','KDE Project','OpenOffice.org','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['','Saves in ODF 1.2','Import only','no longer being actively marketed','Notes','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Office suite : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Products : </label></br> <input id="2" type="aaaa" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Operating systems :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 									<input type="checkbox" name="Feature" > Linux</br>	
- 		 									<input type="checkbox" name="Feature" > Unix-based systems</br>	
- 		 									<input type="checkbox" name="Feature" > Mac OS X</br>	
- 		 									<input type="checkbox" name="Feature" > Solaris</br>	
- 		 									<input type="checkbox" name="Feature" >Linux</br>	
- 		 									<input type="checkbox" name="Feature" > Windows</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Version : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Developer : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Notes : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>ISO/IEC 26300:2006 :</label></br>
- 		 					 <input type="radio" name="FeatureISO/IEC 26300:2006" value="oui">oui <input type="radio" name="FeatureISO/IEC 26300:2006" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Google Docs & Spreadsheets','LibreOffice','','NeoOffice','Microsoft Office','KOffice','OpenOffice.org','Standalone','IBM Lotus Symphony','Office suite','IBM Workplace Collaboration Services','Calligra Suite','StarOffice','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['1.2','1.4+','2.0+','2.4+','8','1.12.5+','','1.0+','3.3.0','2007 SP2','2006','2.2.5','Version','2.5+','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['LGPL','GPL / LGPL','Proprietary','GPL','License','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['GNOME','Patrick Luby and Edward Peterlin','AdventNet','Sun Microsystems','Microsoft','LibreOffice','Google','Team and Concepts','Developer','IBM','KDE Project','OpenOffice.org','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['','Saves in ODF 1.2','Import only','no longer being actively marketed','Notes','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

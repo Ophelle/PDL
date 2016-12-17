@@ -1,67 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of 802.15.4 radio modules -  Transceiver-only modules </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Manufacturer : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>FlexiPanel Ltd : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Embit : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Microchip Technology : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['integral','26 mm x 20 mm','Texas Instruments CC2420 datasheet errata','ZigBee stack','0 dBm','Mar, 2008','18 mA','','20 mA','EasyBee summary datasheet','?','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Module','Antenna','TX Power','TX','Protocol stacks','Released','PCB Size','Sleep','Sensitivity','RX','Transceiver Chip','Interfacing','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['27 dBm','Wireless M-Bus stack','CC1120 datasheet','27 mA (full sens.)','UART, SPI, JTAG','16 mm x 26 mm','U.FL connector','EMB-TRX169PA, 169 MHz
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Manufacturer : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>FlexiPanel Ltd : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Embit : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Microchip Technology : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['integral','26 mm x 20 mm','Texas Instruments CC2420 datasheet errata','ZigBee stack','0 dBm','Mar, 2008','18 mA','','20 mA','EasyBee summary datasheet','?','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Module','Antenna','TX Power','TX','Protocol stacks','Released','PCB Size','Sleep','Sensitivity','RX','Transceiver Chip','Interfacing','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['27 dBm','Wireless M-Bus stack','CC1120 datasheet','27 mA (full sens.)','UART, SPI, JTAG','16 mm x 26 mm','U.FL connector','EMB-TRX169PA, 169 MHz
 webpage','-122 dBm','<1 µA','2013','400  mA @ +27 dBm','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['MRF24J40MA
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['MRF24J40MA
 datasheet','PCB trace','17.8 mm x 27.9 mm','MRF24J40 datasheet','Microchip ZigBee MiWi MiWi P2P','0 dBm','2 µA','-94 dBm','SPI','19 mA','23 mA','Jun, 2008','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

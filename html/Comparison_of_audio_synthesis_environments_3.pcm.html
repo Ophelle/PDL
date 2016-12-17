@@ -1,99 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of audio synthesis environments - Technical</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Programming (plugin) API language(s) :</label></br>
+											<input type="checkbox" name="Feature" >C; also Python</br>	
+											<input type="checkbox" name="Feature" >Java</br>	
+											<input type="checkbox" name="Feature" >Lisp</br>	
+											<input type="checkbox" name="Feature" >Lua</br>	
+											<input type="checkbox" name="Feature" >Tcl</br>	
+											<input type="checkbox" name="Feature" >C++</br>	
+											<input type="checkbox" name="Feature" >C</br>	
+											<input type="checkbox" name="Feature" >FAUST</br>	
+											<input type="checkbox" name="Feature" >Haskell</br>	
+											<input type="checkbox" name="Feature" >Python</br>	
+											<input type="checkbox" name="Feature" >Q</br>	
+											<input type="checkbox" name="Feature" >Ruby</br>	
+											<input type="checkbox" name="Feature" >Scheme</br>	
+											<input type="checkbox" name="Feature" >others</br>	
+											<input type="checkbox" name="Feature" >JavaScript</br>	
+											<input type="checkbox" name="Feature" >also Python and Ruby via externals</br>	
+											<input type="checkbox" name="Feature" > Objective-C</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Operating system(s) :</label></br>
+											<input type="checkbox" name="Feature" >Mac OS X</br>	
+											<input type="checkbox" name="Feature" >Linux</br>	
+											<input type="checkbox" name="Feature" >Windows</br>	
+											<input type="checkbox" name="Feature" >iPod</br>	
+											<input type="checkbox" name="Feature" >Android</br>	
+											<input type="checkbox" name="Feature" >FreeBSD</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Other technical features :</label></br>
+											<input type="checkbox" name="Feature" >Unified timing mechanism (no separation between audio-rate and control-rate)</br>	
+											<input type="checkbox" name="Feature" >command-line access</br>	
+											<input type="checkbox" name="Feature" >Client-server architecture; client and server can be used independently</br>	
+											<input type="checkbox" name="Feature" >Native access to most OS X APIs including Core Image</br>	
+											<input type="checkbox" name="Feature" >Quartz</br>	
+											<input type="checkbox" name="Feature" >QuickTime and OpenGL.  Impromptu also includes its own statically typed (inferencing) systems language for heavy numeric processing - OpenGL</br>	
+											<input type="checkbox" name="Feature" >RT AudioDSP etc..</br>	
+											<input type="checkbox" name="Feature" >IDE (QuteCsound)</br>	
+											<input type="checkbox" name="Feature" >multitrack interface (blue); several analysis</br>	
+											<input type="checkbox" name="Feature" >resynthesis facilities; can compute double-precision audio; Python and LuaJIT algorithmic composition library; multi-threaded processing</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Source code language(s) :</label></br>
+											<input type="checkbox" name="Feature" >C</br>	
+											<input type="checkbox" name="Feature" >Objective-C</br>	
+											<input type="checkbox" name="Feature" >Lisp</br>	
+											<input type="checkbox" name="Feature" > Objective-C</br>	
+											<input type="checkbox" name="Feature" >Scheme</br>	
+											<input type="checkbox" name="Feature" >C++</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Name : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Impromptu','SuperCollider','Max/MSP','ChucK','Csound','Pure Data','Reaktor','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Programming (plugin) API language(s) :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >C; also Python</br>	
- 		 									<input type="checkbox" name="Feature" > Java</br>	
- 		 									<input type="checkbox" name="Feature" > Lisp</br>	
- 		 									<input type="checkbox" name="Feature" > Lua</br>	
- 		 									<input type="checkbox" name="Feature" > Tcl</br>	
- 		 									<input type="checkbox" name="Feature" > C++</br>	
- 		 									<input type="checkbox" name="Feature" >C</br>	
- 		 									<input type="checkbox" name="Feature" > FAUST</br>	
- 		 									<input type="checkbox" name="Feature" > Haskell</br>	
- 		 									<input type="checkbox" name="Feature" > Python</br>	
- 		 									<input type="checkbox" name="Feature" > Q</br>	
- 		 									<input type="checkbox" name="Feature" > Ruby</br>	
- 		 									<input type="checkbox" name="Feature" > Scheme</br>	
- 		 									<input type="checkbox" name="Feature" > others</br>	
- 		 									<input type="checkbox" name="Feature" > JavaScript</br>	
- 		 									<input type="checkbox" name="Feature" > also Python and Ruby via externals</br>	
- 		 									<input type="checkbox" name="Feature" >  Objective-C</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Operating system(s) :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Mac OS X</br>	
- 		 									<input type="checkbox" name="Feature" > Linux</br>	
- 		 									<input type="checkbox" name="Feature" > Windows</br>	
- 		 									<input type="checkbox" name="Feature" > iPod</br>	
- 		 									<input type="checkbox" name="Feature" > Android</br>	
- 		 									<input type="checkbox" name="Feature" > FreeBSD</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Other technical features :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Unified timing mechanism (no separation between audio-rate and control-rate)</br>	
- 		 									<input type="checkbox" name="Feature" > command-line access</br>	
- 		 									<input type="checkbox" name="Feature" >Client-server architecture; client and server can be used independently</br>	
- 		 									<input type="checkbox" name="Feature" >Native access to most OS X APIs including Core Image</br>	
- 		 									<input type="checkbox" name="Feature" > Quartz</br>	
- 		 									<input type="checkbox" name="Feature" > QuickTime and OpenGL.  Impromptu also includes its own statically typed (inferencing) systems language for heavy numeric processing - OpenGL</br>	
- 		 									<input type="checkbox" name="Feature" > RT AudioDSP etc..</br>	
- 		 									<input type="checkbox" name="Feature" >IDE (QuteCsound)</br>	
- 		 									<input type="checkbox" name="Feature" > multitrack interface (blue); several analysis</br>	
- 		 									<input type="checkbox" name="Feature" >resynthesis facilities; can compute double-precision audio; Python and LuaJIT algorithmic composition library; multi-threaded processing</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Source code language(s) :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >C</br>	
- 		 									<input type="checkbox" name="Feature" > Objective-C</br>	
- 		 									<input type="checkbox" name="Feature" >Lisp</br>	
- 		 									<input type="checkbox" name="Feature" >  Objective-C</br>	
- 		 									<input type="checkbox" name="Feature" > Scheme</br>	
- 		 									<input type="checkbox" name="Feature" > C++</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Name : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Impromptu','SuperCollider','Max/MSP','ChucK','Csound','Pure Data','Reaktor','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

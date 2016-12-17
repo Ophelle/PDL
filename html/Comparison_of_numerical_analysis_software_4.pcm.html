@@ -1,107 +1,109 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of numerical analysis software -  General </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>First public release : </label></br> <input id="1" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Language : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Latest stable version :</label></br>
+											<input type="checkbox" name="Feature" >1.3.14 </br>	
+											<input type="checkbox" name="Feature" >08.2008</br>	
+											<input type="checkbox" name="Feature" >2.6.0 </br>	
+											<input type="checkbox" name="Feature" >06.2010</br>	
+											<input type="checkbox" name="Feature" >1.14 </br>	
+											<input type="checkbox" name="Feature" >03.2010</br>	
+											<input type="checkbox" name="Feature" >3.900 </br>	
+											<input type="checkbox" name="Feature" >2013</br>	
+											<input type="checkbox" name="Feature" >5.0 </br>	
+											<input type="checkbox" name="Feature" >February 2011</br>	
+											<input type="checkbox" name="Feature" >3.0 </br>	
+											<input type="checkbox" name="Feature" >06.2014</br>	
+											<input type="checkbox" name="Feature" >0.14.0 </br>	
+											<input type="checkbox" name="Feature" >May 3</br>	
+											<input type="checkbox" name="Feature" >2014</br>	
+									
+								</br>	
+								<label>Creator : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Cost (USD) : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Notes :</label></br>
+											<input type="checkbox" name="Feature" >General purpose numerical analysis library. Targets GNU</br>	
+											<input type="checkbox" name="Feature" >Linux</br>	
+											<input type="checkbox" name="Feature" >can be built on almost any *nix OS with Ansi C compiler.</br>	
+											<input type="checkbox" name="Feature" >General numerical calculations</br>	
+											<input type="checkbox" name="Feature" >statistics and interactive 2D</br>	
+											<input type="checkbox" name="Feature" >3D graphics for data and function presentation</br>	
+											<input type="checkbox" name="Feature" >aims .Net</br>	
+											<input type="checkbox" name="Feature" >mono</br>	
+											<input type="checkbox" name="Feature" >2D</br>	
+											<input type="checkbox" name="Feature" >3D plottings (beta)</br>	
+											<input type="checkbox" name="Feature" >General purpose numerical analysis and statistics library for the .NET Framework and Mono</br>	
+											<input type="checkbox" name="Feature" >with optional support for native providers.</br>	
+											<input type="checkbox" name="Feature" >Adds numerical programming capabilities to the Python programming language. Related to Numpy</br>	
+											<input type="checkbox" name="Feature" >and therefore connected to the previous Numeric and Numarray packages for Python</br>	
+											<input type="checkbox" name="Feature" >C++ template library for linear algebra; includes various decompositions and factorisations; syntax (API) is similar to MATLAB.</br>	
+											<input type="checkbox" name="Feature" >Math and statistical libraries for the .NET Framework</br>	
+									
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['C, Fortran','C++, C#, FreePascal, VBA','C#, F#, C','Python','C#','Java, Android','C++','C','C, Java, C#, Fortran, Python','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Proprietary','MPL','Free for non-commercial use','GPL','MIT/X11','BSD','LGPL','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['CenterSpace Software','Rogue Wave Software','jwork.org (S.Chekanov)','C. Rüegg, M. Cuda, et al.','GNU Project','scipy.org community','The Numerical Algorithms Group','H. Kutschbach','Sergey Bochkanov','NICTA','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Free','Not free','$995','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>First public release : </label></br> <input id="1" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Language : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Latest stable version :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >1.3.14 </br>	
- 		 									<input type="checkbox" name="Feature" > 08.2008</br>	
- 		 									<input type="checkbox" name="Feature" >2.6.0 </br>	
- 		 									<input type="checkbox" name="Feature" > 06.2010</br>	
- 		 									<input type="checkbox" name="Feature" >1.14 </br>	
- 		 									<input type="checkbox" name="Feature" > 03.2010</br>	
- 		 									<input type="checkbox" name="Feature" >3.900 </br>	
- 		 									<input type="checkbox" name="Feature" > 2013</br>	
- 		 									<input type="checkbox" name="Feature" >5.0 </br>	
- 		 									<input type="checkbox" name="Feature" > February 2011</br>	
- 		 									<input type="checkbox" name="Feature" >3.0 </br>	
- 		 									<input type="checkbox" name="Feature" > 06.2014</br>	
- 		 									<input type="checkbox" name="Feature" >0.14.0 </br>	
- 		 									<input type="checkbox" name="Feature" > May 3</br>	
- 		 									<input type="checkbox" name="Feature" > 2014</br>	
-								
-						</br>	
-							<label>Creator : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Cost (USD) : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Notes :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >General purpose numerical analysis library. Targets GNU</br>	
- 		 									<input type="checkbox" name="Feature" >Linux</br>	
- 		 									<input type="checkbox" name="Feature" > can be built on almost any *nix OS with Ansi C compiler.</br>	
- 		 									<input type="checkbox" name="Feature" >General numerical calculations</br>	
- 		 									<input type="checkbox" name="Feature" > statistics and interactive 2D</br>	
- 		 									<input type="checkbox" name="Feature" >3D graphics for data and function presentation</br>	
- 		 									<input type="checkbox" name="Feature" >aims .Net</br>	
- 		 									<input type="checkbox" name="Feature" >mono</br>	
- 		 									<input type="checkbox" name="Feature" > 2D</br>	
- 		 									<input type="checkbox" name="Feature" >3D plottings (beta)</br>	
- 		 									<input type="checkbox" name="Feature" >General purpose numerical analysis and statistics library for the .NET Framework and Mono</br>	
- 		 									<input type="checkbox" name="Feature" > with optional support for native providers.</br>	
- 		 									<input type="checkbox" name="Feature" >Adds numerical programming capabilities to the Python programming language. Related to Numpy</br>	
- 		 									<input type="checkbox" name="Feature" > and therefore connected to the previous Numeric and Numarray packages for Python</br>	
- 		 									<input type="checkbox" name="Feature" >C++ template library for linear algebra; includes various decompositions and factorisations; syntax (API) is similar to MATLAB.</br>	
- 		 									<input type="checkbox" name="Feature" >Math and statistical libraries for the .NET Framework</br>	
-								
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['C, Fortran','C++, C#, FreePascal, VBA','C#, F#, C','Python','C#','Java, Android','C++','C','C, Java, C#, Fortran, Python','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Proprietary','MPL','Free for non-commercial use','GPL','MIT/X11','BSD','LGPL','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['CenterSpace Software','Rogue Wave Software','jwork.org (S.Chekanov)','C. Rüegg, M. Cuda, et al.','GNU Project','scipy.org community','The Numerical Algorithms Group','H. Kutschbach','Sergey Bochkanov','NICTA','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Free','Not free','$995','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

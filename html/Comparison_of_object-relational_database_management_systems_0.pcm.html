@@ -1,72 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of object-relational database management systems -  Basic data </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Vendor : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>OS : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Notes : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Cross-platform','Linux, Windows','','Windows','Linux, Windows, Unix','?','Windows, Linux, Mac OS X','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Zope Public License','Proprietary','Postgres','GPL/BSD','AGPL3 or proprietary','GPL2 or proprietary','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['OpenLink Software','PostgreSQL Global Development Group','Microsoft Corporation','Progress Software Corporation','Greenplum division of EMC Corporation','NHN Corporation','IBM','InterSystems','Zope Corporation','SAP','Oracle Corporation','GE Energy, a division of General Electric','4th Dimension','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['For Python, also included in Zope web application server','','Supports data objects in .NET languages','Based on REST and Server-Side JavaScript','Uses PostgreSQL codebase','GIS for public utilities; can be stored inside Oracle Database','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['Caché','Oracle Database','CUBRID','PostgreSQL','OpenEdge Advanced Business Language (formerly Progress 4GL)','VMDS (Version Managed Data Store)','Adaptive Server Enterprise','DB2','Greenplum Database','Zope Object Database','Microsoft SQL Server','WakandaDB','Informix','Virtuoso Universal Server','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Vendor : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>OS : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Notes : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Name : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Cross-platform','Linux, Windows','','Windows','Linux, Windows, Unix','?','Windows, Linux, Mac OS X','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Zope Public License','Proprietary','Postgres','GPL/BSD','AGPL3 or proprietary','GPL2 or proprietary','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['OpenLink Software','PostgreSQL Global Development Group','Microsoft Corporation','Progress Software Corporation','Greenplum division of EMC Corporation','NHN Corporation','IBM','InterSystems','Zope Corporation','SAP','Oracle Corporation','GE Energy, a division of General Electric','4th Dimension','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['For Python, also included in Zope web application server','','Supports data objects in .NET languages','Based on REST and Server-Side JavaScript','Uses PostgreSQL codebase','GIS for public utilities; can be stored inside Oracle Database','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Caché','Oracle Database','CUBRID','PostgreSQL','OpenEdge Advanced Business Language (formerly Progress 4GL)','VMDS (Version Managed Data Store)','Adaptive Server Enterprise','DB2','Greenplum Database','Zope Object Database','Microsoft SQL Server','WakandaDB','Informix','Virtuoso Universal Server','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

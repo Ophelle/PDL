@@ -1,105 +1,108 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of movie cameras - Shutter</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Design : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Camera model : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Adjustment : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Angles :</label></br>
+											<input type="checkbox" name="Feature" >stops every 15° between 30° and 135°</br>	
+											<input type="checkbox" name="Feature" >also stops at 11.2°</br>	
+											<input type="checkbox" name="Feature" >22.5°</br>	
+											<input type="checkbox" name="Feature" >144°</br>	
+											<input type="checkbox" name="Feature" >172.8°</br>	
+											<input type="checkbox" name="Feature" >and 180°</br>	
+											<input type="checkbox" name="Feature" >between 50° and 200°</br>	
+											<input type="checkbox" name="Feature" >continuously adjustable</br>	
+											<input type="checkbox" name="Feature" >stops at 45°</br>	
+											<input type="checkbox" name="Feature" >90°</br>	
+											<input type="checkbox" name="Feature" >120°</br>	
+											<input type="checkbox" name="Feature" >and 180°.</br>	
+											<input type="checkbox" name="Feature" >between 11.2° and 180°</br>	
+											<input type="checkbox" name="Feature" >in 0.1° stops</br>	
+											<input type="checkbox" name="Feature" >and 180°. 22.5° available on newer models.</br>	
+											<input type="checkbox" name="Feature" >stops at 144°</br>	
+											<input type="checkbox" name="Feature" >150°</br>	
+											<input type="checkbox" name="Feature" >between 11.2° to 180°</br>	
+											<input type="checkbox" name="Feature" >between 45° and 180°</br>	
+											<input type="checkbox" name="Feature" >stops every 15° between 15° and 180°</br>	
+											<input type="checkbox" name="Feature" >also stops at 144° and 172.8°</br>	
+											<input type="checkbox" name="Feature" >between 0° and 180°</br>	
+											<input type="checkbox" name="Feature" >180°</br>	
+											<input type="checkbox" name="Feature" >although the V</br>	
+											<input type="checkbox" name="Feature" >B variant is adjustable from 0° to 165°</br>	
+											<input type="checkbox" name="Feature" >stops at 22.5°</br>	
+											<input type="checkbox" name="Feature" >45°</br>	
+											<input type="checkbox" name="Feature" >between 11° to 180°</br>	
+											<input type="checkbox" name="Feature" >in 0.01° stops</br>	
+											<input type="checkbox" name="Feature" >stops every 15° between 45° and 150°</br>	
+											<input type="checkbox" name="Feature" >also stops at 144°</br>	
+											<input type="checkbox" name="Feature" >160°; many conversions for different angles</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Reflex? :</label></br>
+								<input type="radio" name="FeatureReflex?" value="oui">Yes <input type="radio" name="FeatureReflex?" value = "non">No <input type="radio" name="FeatureReflex?" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Location : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Half-moon','Butterfly','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Arriflex 435 Advanced','Moviecam SuperAmerica','Panaflex Platinum','Moviecam Compact','Arriflex 35BL-1','Arriflex 35BL-3','Arriflex 35-2C','Panaflex Gold II','Aaton 35-3P','Panaflex Millennium XL','Arriflex 435','Arricam ST','Arriflex 435ES','Aaton 35-III','Arriflex 35-3C','Arriflex 235','Panaflex-X','Panaflex Panastar II','Arricam LT','Arriflex 535B','Moviecam SL','Arriflex 35BL-4s','Panaflex Millennium','Arriflex 435 Xtreme','Arriflex 35BL-2','Arriflex 535','Eyemo 71K','Arriflex 35BL-4','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['manual','electronic','manually while running or in standby','fixed','electronic or manually while running or in standby','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Underneath gate','Beside gate','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Design : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Camera model : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Adjustment : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Angles :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >stops every 15° between 30° and 135°</br>	
- 		 									<input type="checkbox" name="Feature" > also stops at 11.2°</br>	
- 		 									<input type="checkbox" name="Feature" > 22.5°</br>	
- 		 									<input type="checkbox" name="Feature" > 144°</br>	
- 		 									<input type="checkbox" name="Feature" > 172.8°</br>	
- 		 									<input type="checkbox" name="Feature" > and 180°</br>	
- 		 									<input type="checkbox" name="Feature" >between 50° and 200°</br>	
- 		 									<input type="checkbox" name="Feature" > continuously adjustable</br>	
- 		 									<input type="checkbox" name="Feature" >stops at 45°</br>	
- 		 									<input type="checkbox" name="Feature" > 90°</br>	
- 		 									<input type="checkbox" name="Feature" > 120°</br>	
- 		 									<input type="checkbox" name="Feature" > and 180°.</br>	
- 		 									<input type="checkbox" name="Feature" >between 11.2° and 180°</br>	
- 		 									<input type="checkbox" name="Feature" > in 0.1° stops</br>	
- 		 									<input type="checkbox" name="Feature" > and 180°. 22.5° available on newer models.</br>	
- 		 									<input type="checkbox" name="Feature" >stops at 144°</br>	
- 		 									<input type="checkbox" name="Feature" > 150°</br>	
- 		 									<input type="checkbox" name="Feature" >between 11.2° to 180°</br>	
- 		 									<input type="checkbox" name="Feature" >between 45° and 180°</br>	
- 		 									<input type="checkbox" name="Feature" >stops every 15° between 15° and 180°</br>	
- 		 									<input type="checkbox" name="Feature" > also stops at 144° and 172.8°</br>	
- 		 									<input type="checkbox" name="Feature" >between 0° and 180°</br>	
- 		 									<input type="checkbox" name="Feature" >180°</br>	
- 		 									<input type="checkbox" name="Feature" > although the V</br>	
- 		 									<input type="checkbox" name="Feature" >B variant is adjustable from 0° to 165°</br>	
- 		 									<input type="checkbox" name="Feature" >stops at 22.5°</br>	
- 		 									<input type="checkbox" name="Feature" > 45°</br>	
- 		 									<input type="checkbox" name="Feature" >between 11° to 180°</br>	
- 		 									<input type="checkbox" name="Feature" > in 0.01° stops</br>	
- 		 									<input type="checkbox" name="Feature" >stops every 15° between 45° and 150°</br>	
- 		 									<input type="checkbox" name="Feature" > also stops at 144°</br>	
- 		 									<input type="checkbox" name="Feature" >160°; many conversions for different angles</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
- 		 					<label>Reflex? :</label></br>
- 		 					 <input type="radio" name="FeatureReflex?" value="oui">oui <input type="radio" name="FeatureReflex?" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Location : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Half-moon','Butterfly','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Arriflex 435 Advanced','Moviecam SuperAmerica','Panaflex Platinum','Moviecam Compact','Arriflex 35BL-1','Arriflex 35BL-3','Arriflex 35-2C','Panaflex Gold II','Aaton 35-3P','Panaflex Millennium XL','Arriflex 435','Arricam ST','Arriflex 435ES','Aaton 35-III','Arriflex 35-3C','Arriflex 235','Panaflex-X','Panaflex Panastar II','Arricam LT','Arriflex 535B','Moviecam SL','Arriflex 35BL-4s','Panaflex Millennium','Arriflex 435 Xtreme','Arriflex 35BL-2','Arriflex 535','Eyemo 71K','Arriflex 35BL-4','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['manual','electronic','manually while running or in standby','fixed','electronic or manually while running or in standby','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Underneath gate','Beside gate','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

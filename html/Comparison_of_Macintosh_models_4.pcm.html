@@ -1,94 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of Macintosh models - History</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Model : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Released :</label></br>
+											<input type="checkbox" name="Feature" >August 7</br>	
+											<input type="checkbox" name="Feature" > 2006</br>	
+											<input type="checkbox" name="Feature" >January 29</br>	
+											<input type="checkbox" name="Feature" > 2008</br>	
+											<input type="checkbox" name="Feature" >June 11</br>	
+											<input type="checkbox" name="Feature" > 2012</br>	
+											<input type="checkbox" name="Feature" >August 15</br>	
+											<input type="checkbox" name="Feature" > 1998</br>	
+											<input type="checkbox" name="Feature" >October 20</br>	
+											<input type="checkbox" name="Feature" > 2010</br>	
+											<input type="checkbox" name="Feature" >June 8</br>	
+											<input type="checkbox" name="Feature" > 2009</br>	
+											<input type="checkbox" name="Feature" >October 23</br>	
+											<input type="checkbox" name="Feature" >February 14</br>	
+											<input type="checkbox" name="Feature" > 2005</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Announced :</label></br>
+											<input type="checkbox" name="Feature" >October 20</br>	
+											<input type="checkbox" name="Feature" > 2010</br>	
+											<input type="checkbox" name="Feature" >January 10</br>	
+											<input type="checkbox" name="Feature" > 2006</br>	
+											<input type="checkbox" name="Feature" >May 6</br>	
+											<input type="checkbox" name="Feature" > 1998</br>	
+											<input type="checkbox" name="Feature" >June 11</br>	
+											<input type="checkbox" name="Feature" > 2012</br>	
+											<input type="checkbox" name="Feature" >January 15</br>	
+											<input type="checkbox" name="Feature" > 2008</br>	
+											<input type="checkbox" name="Feature" >August 7</br>	
+											<input type="checkbox" name="Feature" >January 11</br>	
+											<input type="checkbox" name="Feature" > 2005</br>	
+											<input type="checkbox" name="Feature" >June 8</br>	
+											<input type="checkbox" name="Feature" > 2009</br>	
+											<input type="checkbox" name="Feature" >October 23</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Last revision :</label></br>
+											<input type="checkbox" name="Feature" >June 10</br>	
+											<input type="checkbox" name="Feature" > 2013</br>	
+											<input type="checkbox" name="Feature" >October 23</br>	
+											<input type="checkbox" name="Feature" > 2012</br>	
+											<input type="checkbox" name="Feature" >June 11</br>	
+											<input type="checkbox" name="Feature" >November 30</br>	
+											<input type="checkbox" name="Feature" >February 13</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['MacBook Air 11.6 in','MacBook Pro 15.4 in with Retina Display','Mac Mini','iMac','MacBook Air 13.3 in','Mac Pro','MacBook Pro 13.3 in with Retina Display','MacBook Pro 13.3 in','MacBook Pro 15.4 in','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Model : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Released :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >August 7</br>	
- 		 									<input type="checkbox" name="Feature" > 2006</br>	
- 		 									<input type="checkbox" name="Feature" >January 29</br>	
- 		 									<input type="checkbox" name="Feature" > 2008</br>	
- 		 									<input type="checkbox" name="Feature" >June 11</br>	
- 		 									<input type="checkbox" name="Feature" > 2012</br>	
- 		 									<input type="checkbox" name="Feature" >August 15</br>	
- 		 									<input type="checkbox" name="Feature" > 1998</br>	
- 		 									<input type="checkbox" name="Feature" >October 20</br>	
- 		 									<input type="checkbox" name="Feature" > 2010</br>	
- 		 									<input type="checkbox" name="Feature" >June 8</br>	
- 		 									<input type="checkbox" name="Feature" > 2009</br>	
- 		 									<input type="checkbox" name="Feature" >October 23</br>	
- 		 									<input type="checkbox" name="Feature" >February 14</br>	
- 		 									<input type="checkbox" name="Feature" > 2005</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Announced :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >October 20</br>	
- 		 									<input type="checkbox" name="Feature" > 2010</br>	
- 		 									<input type="checkbox" name="Feature" >January 10</br>	
- 		 									<input type="checkbox" name="Feature" > 2006</br>	
- 		 									<input type="checkbox" name="Feature" >May 6</br>	
- 		 									<input type="checkbox" name="Feature" > 1998</br>	
- 		 									<input type="checkbox" name="Feature" >June 11</br>	
- 		 									<input type="checkbox" name="Feature" > 2012</br>	
- 		 									<input type="checkbox" name="Feature" >January 15</br>	
- 		 									<input type="checkbox" name="Feature" > 2008</br>	
- 		 									<input type="checkbox" name="Feature" >August 7</br>	
- 		 									<input type="checkbox" name="Feature" >January 11</br>	
- 		 									<input type="checkbox" name="Feature" > 2005</br>	
- 		 									<input type="checkbox" name="Feature" >June 8</br>	
- 		 									<input type="checkbox" name="Feature" > 2009</br>	
- 		 									<input type="checkbox" name="Feature" >October 23</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Last revision :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >June 10</br>	
- 		 									<input type="checkbox" name="Feature" > 2013</br>	
- 		 									<input type="checkbox" name="Feature" >October 23</br>	
- 		 									<input type="checkbox" name="Feature" > 2012</br>	
- 		 									<input type="checkbox" name="Feature" >June 11</br>	
- 		 									<input type="checkbox" name="Feature" >November 30</br>	
- 		 									<input type="checkbox" name="Feature" >February 13</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['MacBook Air 11.6 in','MacBook Pro 15.4 in with Retina Display','Mac Mini','iMac','MacBook Air 13.3 in','Mac Pro','MacBook Pro 13.3 in with Retina Display','MacBook Pro 13.3 in','MacBook Pro 15.4 in','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

@@ -1,98 +1,102 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of open-source software hosting facilities - General information</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Ad-free :</label></br>
+								<input type="radio" name="FeatureAd-free" value="oui">Yes <input type="radio" name="FeatureAd-free" value = "non">No <input type="radio" name="FeatureAd-free" value = "non">Partial </br>
+								
+								</br>	
+								<label>Countries blocked : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Developed and/or used CDE : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Established : </label></br> <input id="4" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Manager : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Cost : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Require free software on registration :</label></br>
+								<input type="radio" name="FeatureRequire free software on registration" value="oui">Yes <input type="radio" name="FeatureRequire free software on registration" value = "non">No <input type="radio" name="FeatureRequire free software on registration" value = "non">Partial </br>
+								
+								</br>	
+								<label>Notes : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Client side: non-free JS code :</label></br>
+								<input type="radio" name="FeatureClient side: non-free JS code" value="oui">Yes <input type="radio" name="FeatureClient side: non-free JS code" value = "non">No <input type="radio" name="FeatureClient side: non-free JS code" value = "non">Partial </br>
+								
+								</br>	
+								<label>Server side: all free software :</label></br>
+								<input type="radio" name="FeatureServer side: all free software" value="oui">Yes <input type="radio" name="FeatureServer side: all free software" value = "non">No <input type="radio" name="FeatureServer side: all free software" value = "non">Partial </br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="11" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','Cuba, Iran, North Korea, Sudan, Syria','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['FusionForge','?','Savane','Launchpad','Cgit','GitLab Community Edition (CE) free software, GitLab Enterprise Edition (EE) proprietary','BerliOS','Apache Allura','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['(community)','Gogs Team','Wildbit','Atlassian','Comunes Collective','Powow AS','Intland Software','Google','Canonical Ltd.','Microsoft','Fedora Project','Savannah Administration','Debian Project','GitHub, Inc','Vodafone','Collabnet','GitLab B.V.','GNOME Foundation','The Gna! people','OW2 Consortium','Assembla, Inc','FOKUS','?','Dice Holdings','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Gratis accounts have web access only.','?','Gratis','Gratis, but limited to a set of pre-approved developers, see Notes.','Gratis, commercial services are offered as well','Free private repositories are limited to 5 users','Unlimited public and private repos, unlimited public and private collaborators','Gratis for public, paid for private.','15-day free trial. Commercial projects with customizable sets of tools and features.','Gratis for one repository','No','Free','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['Abandoned in April 2014','Acquired by GitLab. gitorious.org will shut down end of May 2015','Preference for Debian related projects','','For free software, free culture and free knowledge projects.','Project by the Free Software Foundation and projects with a GPL compatible license. Code access review','oriented on middleware technology.','Closing (new project creation disabled March 12, 2015).','For open-source projects only.','Supports Bazaar for version-controlled repository hosting.  Git support is in beta.','Accessing this resource is only granted to developers requesting explicit permission to existing GNOME module maintainers.','Restricted to collaborative software development tools. Tigris.org is no longer accepting new project proposals.','Only for free software projects. Code access review','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['GNU Savannah','Beanstalk','Fedora Hosted','Alioth','GitLab','Google Code','JavaForge','Betavine','CodePlex','Freepository','Assembla','Gna!','Tigris.org','SourceForge','Bitbucket','Gitorious','Gogs','GitHub','CloudForge','OW2 Consortium','SEUL','BerliOS','Ourproject.org','GNOME Git Repositories','Launchpad','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Ad-free :</label></br>
- 		 					 <input type="radio" name="FeatureAd-free" value="oui">oui <input type="radio" name="FeatureAd-free" value = "non">non </br>
-									
-						</br>	
-							<label>Countries blocked : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Developed and/or used CDE : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Established : </label></br> <input id="4" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Manager : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Cost : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Require free software on registration :</label></br>
- 		 					 <input type="radio" name="FeatureRequire free software on registration" value="oui">oui <input type="radio" name="FeatureRequire free software on registration" value = "non">non </br>
-									
-						</br>	
-							<label>Notes : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Client side: non-free JS code :</label></br>
- 		 					 <input type="radio" name="FeatureClient side: non-free JS code" value="oui">oui <input type="radio" name="FeatureClient side: non-free JS code" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Server side: all free software :</label></br>
- 		 					 <input type="radio" name="FeatureServer side: all free software" value="oui">oui <input type="radio" name="FeatureServer side: all free software" value = "non">non </br>
-									
-						</br>	
-							<label>Name : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['','Cuba, Iran, North Korea, Sudan, Syria','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['FusionForge','?','Savane','Launchpad','Cgit','GitLab Community Edition (CE) free software, GitLab Enterprise Edition (EE) proprietary','BerliOS','Apache Allura','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['(community)','Gogs Team','Wildbit','Atlassian','Comunes Collective','Powow AS','Intland Software','Google','Canonical Ltd.','Microsoft','Fedora Project','Savannah Administration','Debian Project','GitHub, Inc','Vodafone','Collabnet','GitLab B.V.','GNOME Foundation','The Gna! people','OW2 Consortium','Assembla, Inc','FOKUS','?','Dice Holdings','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Gratis accounts have web access only.','?','Gratis','Gratis, but limited to a set of pre-approved developers, see Notes.','Gratis, commercial services are offered as well','Free private repositories are limited to 5 users','Unlimited public and private repos, unlimited public and private collaborators','Gratis for public, paid for private.','15-day free trial. Commercial projects with customizable sets of tools and features.','Gratis for one repository','No','Free','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Abandoned in April 2014','Acquired by GitLab. gitorious.org will shut down end of May 2015','Preference for Debian related projects','','For free software, free culture and free knowledge projects.','Project by the Free Software Foundation and projects with a GPL compatible license. Code access review','oriented on middleware technology.','Closing (new project creation disabled March 12, 2015).','For open-source projects only.','Supports Bazaar for version-controlled repository hosting.  Git support is in beta.','Accessing this resource is only granted to developers requesting explicit permission to existing GNOME module maintainers.','Restricted to collaborative software development tools. Tigris.org is no longer accepting new project proposals.','Only for free software projects. Code access review','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['GNU Savannah','Beanstalk','Fedora Hosted','Alioth','GitLab','Google Code','JavaForge','Betavine','CodePlex','Freepository','Assembla','Gna!','Tigris.org','SourceForge','Bitbucket','Gitorious','Gogs','GitHub','CloudForge','OW2 Consortium','SEUL','BerliOS','Ourproject.org','GNOME Git Repositories','Launchpad','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

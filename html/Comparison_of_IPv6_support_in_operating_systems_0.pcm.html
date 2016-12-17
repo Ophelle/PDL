@@ -1,70 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of IPv6 support in operating systems</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>ND RDNSS :</label></br>
+								<input type="radio" name="FeatureND RDNSS" value="oui">Yes <input type="radio" name="FeatureND RDNSS" value = "non">No <input type="radio" name="FeatureND RDNSS" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>OS : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Version : </label></br> <input id="3" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Installed by Default :</label></br>
+								<input type="radio" name="FeatureInstalled by Default" value="oui">Yes <input type="radio" name="FeatureInstalled by Default" value = "non">No <input type="radio" name="FeatureInstalled by Default" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Claimed IPv6-ready :</label></br>
+								<input type="radio" name="FeatureClaimed IPv6-ready" value="oui">Yes <input type="radio" name="FeatureClaimed IPv6-ready" value = "non">No <input type="radio" name="FeatureClaimed IPv6-ready" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>DHCPv6 :</label></br>
+								<input type="radio" name="FeatureDHCPv6" value="oui">Yes <input type="radio" name="FeatureDHCPv6" value = "non">No <input type="radio" name="FeatureDHCPv6" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Notes : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['IBM i','MeeGo','Solaris','Windows NT','z/VSE','Windows Phone','HP-UX','Android','SUSE Linux Enterprise Server','Juniper JUNOS','OpenBSD','AlliedWare Plus','Fedora','Windows Mobile','z/OS','NetBSD','Red Hat Enterprise Linux','Cisco IOS','Mac OS X','webOS','FreeBSD','z/VM','OpenVMS','Ubuntu','iOS','Symbian','AIX','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['','iOS supports stateless DHCPv6 since version 4 and stateful DHCPv6 since 4.3.1.','RDNSS support available so long as NetworkManager uses IPv6 "Automatic" setting, otherwise "rdnssd" package required.','8 might have some support.','Via a third party TCP/IP stack, IP6/VSE from Barnard Software, Inc.','Supports ND-RDNSS in Android 5.0 and above. Does not support DHCPv6. Suffers from intermittent loss of its unicast address on some phones.','Private lab research. No privacy extensions (RFC4941).','RDNSS is only supported for rtadvd so far.','Versions 10.7 and later often prefer IPv4 even when working IPv6 connectivity is available.','Support for RDNSS option as of 15.4(1)T, 15.3(2)S.','If the OEM explicitly unsets the SYSGEN_TCPIP6 pre-processor symbol, the built image will not have any IPv6 capabilities.','rdnssd-win32 provides an open source implementation of ND RDNSS','RDNSS support introduced in JUNOS 14.1','Windows XP users can use Dibbler, an open source DHCPv6 implementation','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>ND RDNSS :</label></br>
- 		 					 <input type="radio" name="FeatureND RDNSS" value="oui">oui <input type="radio" name="FeatureND RDNSS" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>OS : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Version : </label></br> <input id="3" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Installed by Default :</label></br>
- 		 					 <input type="radio" name="FeatureInstalled by Default" value="oui">oui <input type="radio" name="FeatureInstalled by Default" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Claimed IPv6-ready :</label></br>
- 		 					 <input type="radio" name="FeatureClaimed IPv6-ready" value="oui">oui <input type="radio" name="FeatureClaimed IPv6-ready" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>DHCPv6 :</label></br>
- 		 					 <input type="radio" name="FeatureDHCPv6" value="oui">oui <input type="radio" name="FeatureDHCPv6" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Notes : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['IBM i','MeeGo','Solaris','Windows NT','z/VSE','Windows Phone','HP-UX','Android','SUSE Linux Enterprise Server','Juniper JUNOS','OpenBSD','AlliedWare Plus','Fedora','Windows Mobile','z/OS','NetBSD','Red Hat Enterprise Linux','Cisco IOS','Mac OS X','webOS','FreeBSD','z/VM','OpenVMS','Ubuntu','iOS','Symbian','AIX','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['','iOS supports stateless DHCPv6 since version 4 and stateful DHCPv6 since 4.3.1.','RDNSS support available so long as NetworkManager uses IPv6 "Automatic" setting, otherwise "rdnssd" package required.','8 might have some support.','Via a third party TCP/IP stack, IP6/VSE from Barnard Software, Inc.','Supports ND-RDNSS in Android 5.0 and above. Does not support DHCPv6. Suffers from intermittent loss of its unicast address on some phones.','Private lab research. No privacy extensions (RFC4941).','RDNSS is only supported for rtadvd so far.','Versions 10.7 and later often prefer IPv4 even when working IPv6 connectivity is available.','Support for RDNSS option as of 15.4(1)T, 15.3(2)S.','If the OEM explicitly unsets the SYSGEN_TCPIP6 pre-processor symbol, the built image will not have any IPv6 capabilities.','rdnssd-win32 provides an open source implementation of ND RDNSS','RDNSS support introduced in JUNOS 14.1','Windows XP users can use Dibbler, an open source DHCPv6 implementation','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

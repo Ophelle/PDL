@@ -1,86 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of OLAP Servers - APIs and query languages</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>MDX :</label></br>
+								<input type="radio" name="FeatureMDX" value="oui">Yes <input type="radio" name="FeatureMDX" value = "non">No <input type="radio" name="FeatureMDX" value = "non">Partial </br>
+								
+								</br>	
+								<label>Visualization : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>LINQ :</label></br>
+								<input type="radio" name="FeatureLINQ" value="oui">Yes <input type="radio" name="FeatureLINQ" value = "non">No <input type="radio" name="FeatureLINQ" value = "non">Partial </br>
+								
+								</br>	
+								<label>Custom functions :</label></br>
+								<input type="radio" name="FeatureCustom functions" value="oui">Yes <input type="radio" name="FeatureCustom functions" value = "non">No <input type="radio" name="FeatureCustom functions" value = "non">Partial </br>
+								
+								</br>	
+								<label>XML for Analysis :</label></br>
+								<input type="radio" name="FeatureXML for Analysis" value="oui">Yes <input type="radio" name="FeatureXML for Analysis" value = "non">No <input type="radio" name="FeatureXML for Analysis" value = "non">Partial </br>
+								
+								</br>	
+								<label>OLE DB for OLAP :</label></br>
+								<input type="radio" name="FeatureOLE DB for OLAP" value="oui">Yes <input type="radio" name="FeatureOLE DB for OLAP" value = "non">No <input type="radio" name="FeatureOLE DB for OLAP" value = "non">Partial </br>
+								
+								</br>	
+								<label>OLAP Server : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>JSON : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Stored procedures :</label></br>
+								<input type="radio" name="FeatureStored procedures" value="oui">Yes <input type="radio" name="FeatureStored procedures" value = "non">No <input type="radio" name="FeatureStored procedures" value = "non">Partial </br>
+								
+								</br>	
+								<label>SQL :</label></br>
+								<input type="radio" name="FeatureSQL" value="oui">Yes <input type="radio" name="FeatureSQL" value = "non">No <input type="radio" name="FeatureSQL" value = "non">Partial </br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['TM1 Web/TM1 Contributor, IBM Cognos Insight, IBM Cognos Cafe for Excel','?','SmartView (Excel-AddIn), WebAnalysis, Financial Reports','Java, Javascript','Application Studio','Yes','Web Report Studio','Cubes Viewer','Microsoft Excel, Microsoft Power BI','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['SAP NetWeaver BW','SAS OLAP Server','Oracle Database OLAP Option','icCube','Infor BI OLAP Server','Cubes','Mondrian OLAP server','Essbase','Jedox OLAP Server','Microsoft Analysis Services','MicroStrategy Intelligence Server','Cognos TM1','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Yes','','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>MDX :</label></br>
- 		 					 <input type="radio" name="FeatureMDX" value="oui">oui <input type="radio" name="FeatureMDX" value = "non">non </br>
-									
-						</br>	
-							<label>Visualization : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>LINQ :</label></br>
- 		 					 <input type="radio" name="FeatureLINQ" value="oui">oui <input type="radio" name="FeatureLINQ" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Custom functions :</label></br>
- 		 					 <input type="radio" name="FeatureCustom functions" value="oui">oui <input type="radio" name="FeatureCustom functions" value = "non">non </br>
-									
-						</br>	
- 		 					<label>XML for Analysis :</label></br>
- 		 					 <input type="radio" name="FeatureXML for Analysis" value="oui">oui <input type="radio" name="FeatureXML for Analysis" value = "non">non </br>
-									
-						</br>	
- 		 					<label>OLE DB for OLAP :</label></br>
- 		 					 <input type="radio" name="FeatureOLE DB for OLAP" value="oui">oui <input type="radio" name="FeatureOLE DB for OLAP" value = "non">non </br>
-									
-						</br>	
-							<label>OLAP Server : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>JSON : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Stored procedures :</label></br>
- 		 					 <input type="radio" name="FeatureStored procedures" value="oui">oui <input type="radio" name="FeatureStored procedures" value = "non">non </br>
-									
-						</br>	
- 		 					<label>SQL :</label></br>
- 		 					 <input type="radio" name="FeatureSQL" value="oui">oui <input type="radio" name="FeatureSQL" value = "non">non </br>
-									
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['TM1 Web/TM1 Contributor, IBM Cognos Insight, IBM Cognos Cafe for Excel','?','SmartView (Excel-AddIn), WebAnalysis, Financial Reports','Java, Javascript','Application Studio','Yes','Web Report Studio','Cubes Viewer','Microsoft Excel, Microsoft Power BI','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['SAP NetWeaver BW','SAS OLAP Server','Oracle Database OLAP Option','icCube','Infor BI OLAP Server','Cubes','Mondrian OLAP server','Essbase','Jedox OLAP Server','Microsoft Analysis Services','MicroStrategy Intelligence Server','Cognos TM1','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Yes','','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

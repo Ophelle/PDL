@@ -1,192 +1,192 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of programming languages (string functions) - join</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>join(separator, list_of_strings) :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Perl</br>	
- 		 									<input type="checkbox" name="Feature" > PHP</br>	
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>join(separator, list_of_strings) :</label></br>
+											<input type="checkbox" name="Feature" >Perl</br>	
+											<input type="checkbox" name="Feature" >PHP</br>	
+									
+								</br>	
+								<label>string:join(list_of_strings, separator) : </label></br> <input id="2" type="text" name="Feature"></br>
 								
-						</br>	
-							<label>string:join(list_of_strings, separator) : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>[array_of_strings componentsJoinedByString:separator] : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>(format nil "~{~a~^separator~}" array_of_strings) : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>array_of_strings.join(separator) :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Ruby</br>	
- 		 									<input type="checkbox" name="Feature" > JavaScript</br>	
+								</br>	
+								<label>[array_of_strings componentsJoinedByString:separator] : </label></br> <input id="3" type="text" name="Feature"></br>
 								
-						</br>	
-							<label>String.concatWith separator list_of_strings : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>String.concat separator list_of_strings : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>collectionOfAnything asStringOn: stream delimiter: separator  
+								</br>	
+								<label>(format nil "~{~a~^separator~}" array_of_strings) : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>array_of_strings.join(separator) :</label></br>
+											<input type="checkbox" name="Feature" >Ruby</br>	
+											<input type="checkbox" name="Feature" >JavaScript</br>	
+									
+								</br>	
+								<label>String.concatWith separator list_of_strings : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>String.concat separator list_of_strings : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>collectionOfAnything asStringOn: stream delimiter: separator  
 
 collectionOfAnything joinUsing: separator : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>join(array_of_strings, separator) : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>array_of_strings.join(separator«, final_separator») : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Data.List.intercalate separator list_of_strings : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Format : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>(clojure.string/join separator list_of_strings)
+								
+								</br>	
+								<label>join(array_of_strings, separator) : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>array_of_strings.join(separator«, final_separator») : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Data.List.intercalate separator list_of_strings : </label></br> <input id="11" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Format : </label></br> <input id="12" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>(clojure.string/join separator list_of_strings)
 (apply str (interpose separator list_of_strings)) : </label></br> <input id="13" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>String.Join(separator, array_of_strings) :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >VB .NET</br>	
- 		 									<input type="checkbox" name="Feature" > C#</br>	
- 		 									<input type="checkbox" name="Feature" > F#</br>	
 								
-						</br>	
-							<label>Join(array_of_strings, separator) : </label></br> <input id="15" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>&{$OFS=$separator; "$array_of_strings"}, or 
+								</br>	
+								<label>String.Join(separator, array_of_strings) :</label></br>
+											<input type="checkbox" name="Feature" >VB .NET</br>	
+											<input type="checkbox" name="Feature" >C#</br>	
+											<input type="checkbox" name="Feature" >F#</br>	
+									
+								</br>	
+								<label>Join(array_of_strings, separator) : </label></br> <input id="15" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>&{$OFS=$separator; "$array_of_strings"}, or 
 array_of_strings -join separator : </label></br> <input id="16" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>separator.join(sequence_of_strings) :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Python</br>	
- 		 									<input type="checkbox" name="Feature" > Swift</br>	
 								
-						</br>	
-							<label>implode(separator, array_of_strings) : </label></br> <input id="18" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>(string-join array_of_strings separator) : </label></br> <input id="19" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>std.string.join(array_of_strings, separator) : </label></br> <input id="20" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>table.concat(table_of_strings, separator) : </label></br> <input id="21" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>strings.Join(array_of_strings, separator) : </label></br> <input id="22" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Erlang','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Objective-C (NSString * only)','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Common Lisp','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Standard ML','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['OCaml','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Smalltalk (Squeak, Pharo)','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['Seed7','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['Cobra','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['Haskell (GHC 6.8+)','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['Languages','']
-          });
-          $("#11").typeahead({
-            name:"list11",
-            local : ['Clojure','']
-          });
-          $("#12").typeahead({
-            name:"list12",
-            local : ['VB','']
-          });
-          $("#13").typeahead({
-            name:"list13",
-            local : ['Windows PowerShell','']
-          });
-          $("#14").typeahead({
-            name:"list14",
-            local : ['PHP','']
-          });
-          $("#15").typeahead({
-            name:"list15",
-            local : ['Scheme (SRFI 13)','']
-          });
-          $("#16").typeahead({
-            name:"list16",
-            local : ['D','']
-          });
-          $("#17").typeahead({
-            name:"list17",
-            local : ['Lua','']
-          });
-          $("#18").typeahead({
-            name:"list18",
-            local : ['Go','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								</br>	
+								<label>separator.join(sequence_of_strings) :</label></br>
+											<input type="checkbox" name="Feature" >Python</br>	
+											<input type="checkbox" name="Feature" >Swift</br>	
+									
+								</br>	
+								<label>implode(separator, array_of_strings) : </label></br> <input id="18" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>(string-join array_of_strings separator) : </label></br> <input id="19" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>std.string.join(array_of_strings, separator) : </label></br> <input id="20" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>table.concat(table_of_strings, separator) : </label></br> <input id="21" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>strings.Join(array_of_strings, separator) : </label></br> <input id="22" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Erlang','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Objective-C (NSString * only)','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Common Lisp','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Standard ML','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['OCaml','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['Smalltalk (Squeak, Pharo)','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['Seed7','']
+								});
+								$("#8").typeahead({
+									name:"list8",
+									local : ['Cobra','']
+								});
+								$("#9").typeahead({
+									name:"list9",
+									local : ['Haskell (GHC 6.8+)','']
+								});
+								$("#10").typeahead({
+									name:"list10",
+									local : ['Languages','']
+								});
+								$("#11").typeahead({
+									name:"list11",
+									local : ['Clojure','']
+								});
+								$("#12").typeahead({
+									name:"list12",
+									local : ['VB','']
+								});
+								$("#13").typeahead({
+									name:"list13",
+									local : ['Windows PowerShell','']
+								});
+								$("#14").typeahead({
+									name:"list14",
+									local : ['PHP','']
+								});
+								$("#15").typeahead({
+									name:"list15",
+									local : ['Scheme (SRFI 13)','']
+								});
+								$("#16").typeahead({
+									name:"list16",
+									local : ['D','']
+								});
+								$("#17").typeahead({
+									name:"list17",
+									local : ['Lua','']
+								});
+								$("#18").typeahead({
+									name:"list18",
+									local : ['Go','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

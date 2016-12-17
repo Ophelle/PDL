@@ -1,123 +1,121 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of CAD, CAM and CAE file viewers -  Comparison of CAD/CAM/CAE file viewers </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Supported format(s) :</label></br>
+											<input type="checkbox" name="Feature" >DWG</br>	
+											<input type="checkbox" name="Feature" >DXF</br>	
+											<input type="checkbox" name="Feature" >IGES</br>	
+											<input type="checkbox" name="Feature" >STEP</br>	
+											<input type="checkbox" name="Feature" >STL</br>	
+											<input type="checkbox" name="Feature" >UNISURF</br>	
+											<input type="checkbox" name="Feature" >3D WorkNC</br>	
+											<input type="checkbox" name="Feature" >XDW</br>	
+											<input type="checkbox" name="Feature" >Parasolid</br>	
+											<input type="checkbox" name="Feature" >SolidWorks</br>	
+											<input type="checkbox" name="Feature" >Pro</br>	
+											<input type="checkbox" name="Feature" >E</br>	
+											<input type="checkbox" name="Feature" >Catia V4</br>	
+											<input type="checkbox" name="Feature" >Catia V5</br>	
+											<input type="checkbox" name="Feature" >UGS</br>	
+											<input type="checkbox" name="Feature" >ISO toolpaths</br>	
+											<input type="checkbox" name="Feature" >CADDS</br>	
+											<input type="checkbox" name="Feature" >Solid Edge</br>	
+											<input type="checkbox" name="Feature" >DRW</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>3D support? :</label></br>
+								<input type="radio" name="Feature3D support?" value="oui">Yes <input type="radio" name="Feature3D support?" value = "non">No <input type="radio" name="Feature3D support?" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Runs on POSIX style systems? :</label></br>
+								<input type="radio" name="FeatureRuns on POSIX style systems?" value="oui">Yes <input type="radio" name="FeatureRuns on POSIX style systems?" value = "non">No <input type="radio" name="FeatureRuns on POSIX style systems?" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Runs on Windows? :</label></br>
+								<input type="radio" name="FeatureRuns on Windows?" value="oui">Yes <input type="radio" name="FeatureRuns on Windows?" value = "non">No <input type="radio" name="FeatureRuns on Windows?" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Developer : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Latest stable release : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Other platforms? :</label></br>
+								<input type="radio" name="FeatureOther platforms?" value="oui">Yes <input type="radio" name="FeatureOther platforms?" value = "non">No <input type="radio" name="FeatureOther platforms?" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Application : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Open source? : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>User Interface Language(s) :</label></br>
+											<input type="checkbox" name="Feature" >CN</br>	
+											<input type="checkbox" name="Feature" >EN</br>	
+											<input type="checkbox" name="Feature" >ES</br>	
+											<input type="checkbox" name="Feature" >FR</br>	
+											<input type="checkbox" name="Feature" >DE</br>	
+											<input type="checkbox" name="Feature" >HU</br>	
+											<input type="checkbox" name="Feature" >IT</br>	
+											<input type="checkbox" name="Feature" >JP</br>	
+											<input type="checkbox" name="Feature" >RU</br>	
+											<input type="checkbox" name="Feature" >other</br>	
+											<input type="checkbox" name="Feature" >PT</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['VariCAD','Advanced Computer Solutions','LibreCAD','progeCAD','Sescoi','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['14','1.7 (2009)','2014 v2','2009','2.0.6 (10/2014)','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Caddie','VariCAD Viewer','WorkXPlore 3D','LibreCAD','progeCAD Viewer DWG (based on IntelliCAD) (incomplete entry)','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Yes (GPLv2)','No(Free download)','No','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Supported format(s) :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >DWG</br>	
- 		 									<input type="checkbox" name="Feature" > DXF</br>	
- 		 									<input type="checkbox" name="Feature" > IGES</br>	
- 		 									<input type="checkbox" name="Feature" > STEP</br>	
- 		 									<input type="checkbox" name="Feature" > STL</br>	
- 		 									<input type="checkbox" name="Feature" > UNISURF</br>	
- 		 									<input type="checkbox" name="Feature" > 3D WorkNC</br>	
- 		 									<input type="checkbox" name="Feature" > XDW</br>	
- 		 									<input type="checkbox" name="Feature" > Parasolid</br>	
- 		 									<input type="checkbox" name="Feature" > SolidWorks</br>	
- 		 									<input type="checkbox" name="Feature" > Pro</br>	
- 		 									<input type="checkbox" name="Feature" >E</br>	
- 		 									<input type="checkbox" name="Feature" > Catia V4</br>	
- 		 									<input type="checkbox" name="Feature" > Catia V5</br>	
- 		 									<input type="checkbox" name="Feature" > UGS</br>	
- 		 									<input type="checkbox" name="Feature" > ISO toolpaths</br>	
- 		 									<input type="checkbox" name="Feature" > CADDS</br>	
- 		 									<input type="checkbox" name="Feature" > Solid Edge</br>	
- 		 									<input type="checkbox" name="Feature" >DXF</br>	
- 		 									<input type="checkbox" name="Feature" > DWG</br>	
- 		 									<input type="checkbox" name="Feature" > DRW</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
- 		 					<label>3D support? :</label></br>
- 		 					 <input type="radio" name="Feature3D support?" value="oui">oui <input type="radio" name="Feature3D support?" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Runs on POSIX style systems? :</label></br>
- 		 					 <input type="radio" name="FeatureRuns on POSIX style systems?" value="oui">oui <input type="radio" name="FeatureRuns on POSIX style systems?" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Runs on Windows? :</label></br>
- 		 					 <input type="radio" name="FeatureRuns on Windows?" value="oui">oui <input type="radio" name="FeatureRuns on Windows?" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Developer : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Latest stable release : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Other platforms? :</label></br>
- 		 					 <input type="radio" name="FeatureOther platforms?" value="oui">oui <input type="radio" name="FeatureOther platforms?" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Application : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Open source? : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>User Interface Language(s) :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >CN</br>	
- 		 									<input type="checkbox" name="Feature" > EN</br>	
- 		 									<input type="checkbox" name="Feature" > ES</br>	
- 		 									<input type="checkbox" name="Feature" > FR</br>	
- 		 									<input type="checkbox" name="Feature" > DE</br>	
- 		 									<input type="checkbox" name="Feature" > HU</br>	
- 		 									<input type="checkbox" name="Feature" > IT</br>	
- 		 									<input type="checkbox" name="Feature" > JP</br>	
- 		 									<input type="checkbox" name="Feature" > RU</br>	
- 		 									<input type="checkbox" name="Feature" > other</br>	
- 		 									<input type="checkbox" name="Feature" >EN</br>	
- 		 									<input type="checkbox" name="Feature" > PT</br>	
- 		 									<input type="checkbox" name="Feature" > CN</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['VariCAD','Advanced Computer Solutions','LibreCAD','progeCAD','Sescoi','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['14','1.7 (2009)','2014 v2','2009','2.0.6 (10/2014)','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Caddie','VariCAD Viewer','WorkXPlore 3D','LibreCAD','progeCAD Viewer DWG (based on IntelliCAD) (incomplete entry)','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes (GPLv2)','No(Free download)','No','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

@@ -1,64 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of issue-tracking systems -  Notification interfaces </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Email :</label></br>
+								<input type="radio" name="FeatureEmail" value="oui">Yes <input type="radio" name="FeatureEmail" value = "non">No <input type="radio" name="FeatureEmail" value = "non">Partial </br>
+								
+								</br>	
+								<label>RSS :</label></br>
+								<input type="radio" name="FeatureRSS" value="oui">Yes <input type="radio" name="FeatureRSS" value = "non">No <input type="radio" name="FeatureRSS" value = "non">Partial </br>
+								
+								</br>	
+								<label>Twitter :</label></br>
+								<input type="radio" name="FeatureTwitter" value="oui">Yes <input type="radio" name="FeatureTwitter" value = "non">No <input type="radio" name="FeatureTwitter" value = "non">Partial </br>
+								
+								</br>	
+								<label>XMPP :</label></br>
+								<input type="radio" name="FeatureXMPP" value="oui">Yes <input type="radio" name="FeatureXMPP" value = "non">No <input type="radio" name="FeatureXMPP" value = "non">Partial </br>
+								
+								</br>	
+								<label>Atom :</label></br>
+								<input type="radio" name="FeatureAtom" value="oui">Yes <input type="radio" name="FeatureAtom" value = "non">No <input type="radio" name="FeatureAtom" value = "non">Partial </br>
+								
+								</br>	
+								<label>System : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['FusionForge','TechExcel's DevTrack','Pivotal Tracker','Apache Bloodhound','Supportworks','The Bug Genie','YouTrack','HP Quality Center','Team Foundation Server','Request Tracker','Debbugs','org-mode','Trac','OTRS','Assembla Tickets','Microsoft Dynamics CRM','FogBugz','Kayako SupportSuite','LibreSource','GNATS','Fossil','Wrike','Teamwork','Google Code Hosting','Roundup','Brimir','Axosoft','Bugzilla','TestTrack','Web Help Desk','Redmine','SysAid','IBM Rational ClearQuest','StarTeam','MantisBT','Zoho BugTracker','Liberum Help Desk','JIRA','TrackerSuite.Net','Planbox','Remedy Action Request System','Plain Ticket','Usersnap','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Email :</label></br>
- 		 					 <input type="radio" name="FeatureEmail" value="oui">oui <input type="radio" name="FeatureEmail" value = "non">non </br>
-									
-						</br>	
- 		 					<label>RSS :</label></br>
- 		 					 <input type="radio" name="FeatureRSS" value="oui">oui <input type="radio" name="FeatureRSS" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Twitter :</label></br>
- 		 					 <input type="radio" name="FeatureTwitter" value="oui">oui <input type="radio" name="FeatureTwitter" value = "non">non </br>
-									
-						</br>	
- 		 					<label>XMPP :</label></br>
- 		 					 <input type="radio" name="FeatureXMPP" value="oui">oui <input type="radio" name="FeatureXMPP" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Atom :</label></br>
- 		 					 <input type="radio" name="FeatureAtom" value="oui">oui <input type="radio" name="FeatureAtom" value = "non">non </br>
-									
-						</br>	
-							<label>System : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['FusionForge','TechExcel's DevTrack','Pivotal Tracker','Apache Bloodhound','Supportworks','The Bug Genie','YouTrack','HP Quality Center','Team Foundation Server','Request Tracker','Debbugs','org-mode','Trac','OTRS','Assembla Tickets','Microsoft Dynamics CRM','FogBugz','Kayako SupportSuite','LibreSource','GNATS','Fossil','Wrike','Teamwork','Google Code Hosting','Roundup','Brimir','Axosoft','Bugzilla','TestTrack','Web Help Desk','Redmine','SysAid','IBM Rational ClearQuest','StarTeam','MantisBT','Zoho BugTracker','Liberum Help Desk','JIRA','TrackerSuite.Net','Planbox','Remedy Action Request System','Plain Ticket','Usersnap','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

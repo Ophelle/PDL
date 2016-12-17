@@ -1,102 +1,107 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of HTML editors - Early HTML comparisons</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Forms :</label></br>
- 		 					 <input type="radio" name="FeatureForms" value="oui">oui <input type="radio" name="FeatureForms" value = "non">non </br>
-									
-						</br>	
-							<label>Program : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Version : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Author : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Tables :</label></br>
- 		 					 <input type="radio" name="FeatureTables" value="oui">oui <input type="radio" name="FeatureTables" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Integrated 
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Forms :</label></br>
+								<input type="radio" name="FeatureForms" value="oui">Yes <input type="radio" name="FeatureForms" value = "non">No <input type="radio" name="FeatureForms" value = "non">Partial </br>
+								
+								</br>	
+								<label>Program : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Version : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Author : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Tables :</label></br>
+								<input type="radio" name="FeatureTables" value="oui">Yes <input type="radio" name="FeatureTables" value = "non">No <input type="radio" name="FeatureTables" value = "non">Partial </br>
+								
+								</br>	
+								<label>Integrated 
 Browser :</label></br>
- 		 					 <input type="radio" name="FeatureIntegrated 
-Browser" value="oui">oui <input type="radio" name="FeatureIntegrated 
-Browser" value = "non">non </br>
-									
-						</br>	
-							<label>HTML 
+								<input type="radio" name="FeatureIntegrated 
+Browser" value="oui">Yes <input type="radio" name="FeatureIntegrated 
+Browser" value = "non">No <input type="radio" name="FeatureIntegrated 
+Browser" value = "non">Partial </br>
+								
+								</br>	
+								<label>HTML 
 Compliant : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Cost : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>System : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Display : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['WebMagic','Live Markup','Symposia','asWedit','Phoenix','HoTMetaL','HoTMetaL pro','Webtor','Tkhtml','WebPages','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['0.1.7','1.7','1','1.1','.91prealpha2','1.0+','0.8','2.3','16b4a','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Andrzej Stochniol','MediaTech','SoftQuad','Liem Bahenmann','SiliconGraphics','University of Chicago','Jochen Schales','GRIF','DART Software','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['No','HTML 2','HTML 3','HTML 1','HTML2','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['commercial','freeware','beta','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Unix','NextStep','Windows','Unix,Windows','Irix','Unix, Windows, Macintosh','Macintosh','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['WYSIWYG','source','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								
+								</br>	
+								<label>Cost : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>System : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Display : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['WebMagic','Live Markup','Symposia','asWedit','Phoenix','HoTMetaL','HoTMetaL pro','Webtor','Tkhtml','WebPages','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['0.1.7','1.7','1','1.1','.91prealpha2','1.0+','0.8','2.3','16b4a','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Andrzej Stochniol','MediaTech','SoftQuad','Liem Bahenmann','SiliconGraphics','University of Chicago','Jochen Schales','GRIF','DART Software','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['No','HTML 2','HTML 3','HTML 1','HTML2','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['commercial','freeware','beta','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['Unix','NextStep','Windows','Unix,Windows','Irix','Unix, Windows, Macintosh','Macintosh','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['WYSIWYG','source','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

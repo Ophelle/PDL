@@ -1,60 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of programming languages (string functions) - rfind</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Languages : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Format : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>If not found : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['string.lastIndexOf(substring«,startpos«, charcount»»)','std.string.rfind(string, substring)','Str.search_backward (Str.regexp_string substring) string (Str.length string - 1)','Ada.Strings.Unbounded.Index(Source => string, Pattern => substring, 
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Languages : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Format : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>If not found : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['string.lastIndexOf(substring«,startpos«, charcount»»)','std.string.rfind(string, substring)','Str.search_backward (Str.regexp_string substring) string (Str.length string - 1)','Ada.Strings.Unbounded.Index(Source => string, Pattern => substring, 
  Going => Ada.Strings.Backward)','string.rfind(substring«,startpos»)','instrrev(«startpos,» string,substring)','rindex(string,substring«,startpos»)','strrpos(string,substring«,startpos»)','string.rfind(substring«,startpos«, endpos»»)','string.lastIndexOf(substring«,startpos»)','(search substring string :from-end t)','InStrRev(«startpos,» string,substring)','string.rindex(substring«,startpos»)','string.match(string, '.*()'..substring) 
  string:match('.*()'..substring)','string.LastIndexOf(substring«,startpos«, charcount»»)','[string rangeOfString:substring options:NSBackwardsSearch].location','strings.LastIndex(string, substring)','rpos(string, substring«,startpos»)','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Perl','Go','Java, JavaScript','D','Python','Ruby','Objective-C (NSString * only)','C++ (STL)','FreeBASIC','PHP','Ada','OCaml','Common Lisp','Seed7','Lua','VB','VB .NET, C#, Windows PowerShell, F#','Cobra','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['returns nil','returns std::string::npos','returns -1','returns NIL','returns 0','returns NSNotFound','returns FALSE','raises Not_found','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Perl','Go','Java, JavaScript','D','Python','Ruby','Objective-C (NSString * only)','C++ (STL)','FreeBASIC','PHP','Ada','OCaml','Common Lisp','Seed7','Lua','VB','VB .NET, C#, Windows PowerShell, F#','Cobra','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['returns nil','returns std::string::npos','returns -1','returns NIL','returns 0','returns NSNotFound','returns FALSE','raises Not_found','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

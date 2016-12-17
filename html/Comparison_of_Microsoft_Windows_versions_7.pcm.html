@@ -1,102 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of Microsoft Windows versions - {{Anchor|TI-9x}}Windows 9x</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Update management : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Architecture :</label></br>
+											<input type="checkbox" name="Feature" >x86</br>	
+											<input type="checkbox" name="Feature" >hybrid 16</br>	
+											<input type="checkbox" name="Feature" >32-bit</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Integrated firewall :</label></br>
+								<input type="radio" name="FeatureIntegrated firewall" value="oui">Yes <input type="radio" name="FeatureIntegrated firewall" value = "non">No <input type="radio" name="FeatureIntegrated firewall" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>APIs :</label></br>
+											<input type="checkbox" name="Feature" >Win16</br>	
+											<input type="checkbox" name="Feature" >Win32</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>LFN support :</label></br>
+								<input type="radio" name="FeatureLFN support" value="oui">Yes <input type="radio" name="FeatureLFN support" value = "non">No <input type="radio" name="FeatureLFN support" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>USB support :</label></br>
+								<input type="radio" name="FeatureUSB support" value="oui">Yes <input type="radio" name="FeatureUSB support" value = "non">No <input type="radio" name="FeatureUSB support" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Safe Mode :</label></br>
+								<input type="radio" name="FeatureSafe Mode" value="oui">Yes <input type="radio" name="FeatureSafe Mode" value = "non">No <input type="radio" name="FeatureSafe Mode" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Name : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>SMP support :</label></br>
+								<input type="radio" name="FeatureSMP support" value="oui">Yes <input type="radio" name="FeatureSMP support" value = "non">No <input type="radio" name="FeatureSMP support" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Kernel type : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>UDMA support :</label></br>
+								<input type="radio" name="FeatureUDMA support" value="oui">Yes <input type="radio" name="FeatureUDMA support" value = "non">No <input type="radio" name="FeatureUDMA support" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Kernel : </label></br> <input id="12" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Windows Update','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['MS-DOS 7.0 (Win95, Win95A), MS-DOS 7.1 (Win95B, Win95C)','MS-DOS 8.0','MS-DOS 7.1','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Monolithic kernel','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Windows 95','Windows Me','Windows 98','Windows 98 Second Edition','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Update management : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Architecture :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >x86</br>	
- 		 									<input type="checkbox" name="Feature" > hybrid 16</br>	
- 		 									<input type="checkbox" name="Feature" >32-bit</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
- 		 					<label>Integrated firewall :</label></br>
- 		 					 <input type="radio" name="FeatureIntegrated firewall" value="oui">oui <input type="radio" name="FeatureIntegrated firewall" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>APIs :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Win16</br>	
- 		 									<input type="checkbox" name="Feature" > Win32</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
- 		 					<label>LFN support :</label></br>
- 		 					 <input type="radio" name="FeatureLFN support" value="oui">oui <input type="radio" name="FeatureLFN support" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>USB support :</label></br>
- 		 					 <input type="radio" name="FeatureUSB support" value="oui">oui <input type="radio" name="FeatureUSB support" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Safe Mode :</label></br>
- 		 					 <input type="radio" name="FeatureSafe Mode" value="oui">oui <input type="radio" name="FeatureSafe Mode" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Name : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>SMP support :</label></br>
- 		 					 <input type="radio" name="FeatureSMP support" value="oui">oui <input type="radio" name="FeatureSMP support" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Kernel type : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>UDMA support :</label></br>
- 		 					 <input type="radio" name="FeatureUDMA support" value="oui">oui <input type="radio" name="FeatureUDMA support" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Kernel : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Windows Update','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['MS-DOS 7.0 (Win95, Win95A), MS-DOS 7.1 (Win95B, Win95C)','MS-DOS 8.0','MS-DOS 7.1','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Monolithic kernel','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Windows 95','Windows Me','Windows 98','Windows 98 Second Edition','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

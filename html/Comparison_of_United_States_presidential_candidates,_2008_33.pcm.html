@@ -1,70 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of United States presidential candidates, 2008 -  Death penalty </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Chuck Baldwin : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>McCain has indicated that he supports the use of the death penalty, mandatory prison terms for selling illegal drugs, and stronger restrictions on the purchase and possession of guns.  McCain is a proponent of mandatory sentencing in general. :</label></br>
+											<input type="checkbox" name="Feature" >Obama favors the death penalty for cases in which "the community is justified in expressing the full measure of its outrage." On June 25</br>	
+											<input type="checkbox" name="Feature" >2008</br>	
+											<input type="checkbox" name="Feature" >Obama condemned United States Supreme Court decision Kennedy v. Louisiana</br>	
+											<input type="checkbox" name="Feature" >which outlawed the death penalty for a child rapist when the victim was not killed. He said that states have the right to consider capital punishment</br>	
+											<input type="checkbox" name="Feature" >but cited concern about the possibility of unfairness in some sentences.</br>	
+											<input type="checkbox" name="Feature" >McCain has indicated that he supports the use of the death penalty</br>	
+											<input type="checkbox" name="Feature" >mandatory prison terms for selling illegal drugs</br>	
+											<input type="checkbox" name="Feature" >and stronger restrictions on the purchase and possession of guns.  McCain is a proponent of mandatory sentencing in general.</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>  : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>John McCain : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Ralph Nader','Bob Barr','Cynthia McKinney','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['','It is the main focus of McKinney's stance on crime that capital punishment should be replaced with life imprisonment. She has voted against bills that would make death penalty appeals harder and the prosecution and sentencing of juvenile delinquency. She has voted in favor of bills that would keep habeas corpus rights in death penalty appeals, as well as in favor of bills to replace the death penalty and finding alternative sentences to capital punishment. She also supports stronger sentencing for hate crimes.','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Barack Obama','John McCain','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Chuck Baldwin : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>McCain has indicated that he supports the use of the death penalty, mandatory prison terms for selling illegal drugs, and stronger restrictions on the purchase and possession of guns.  McCain is a proponent of mandatory sentencing in general. :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Obama favors the death penalty for cases in which "the community is justified in expressing the full measure of its outrage." On June 25</br>	
- 		 									<input type="checkbox" name="Feature" > 2008</br>	
- 		 									<input type="checkbox" name="Feature" > Obama condemned United States Supreme Court decision Kennedy v. Louisiana</br>	
- 		 									<input type="checkbox" name="Feature" > which outlawed the death penalty for a child rapist when the victim was not killed. He said that states have the right to consider capital punishment</br>	
- 		 									<input type="checkbox" name="Feature" > but cited concern about the possibility of unfairness in some sentences.</br>	
- 		 									<input type="checkbox" name="Feature" >McCain has indicated that he supports the use of the death penalty</br>	
- 		 									<input type="checkbox" name="Feature" > mandatory prison terms for selling illegal drugs</br>	
- 		 									<input type="checkbox" name="Feature" > and stronger restrictions on the purchase and possession of guns.  McCain is a proponent of mandatory sentencing in general.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>  : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>John McCain : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Ralph Nader','Bob Barr','Cynthia McKinney','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['','It is the main focus of McKinney's stance on crime that capital punishment should be replaced with life imprisonment. She has voted against bills that would make death penalty appeals harder and the prosecution and sentencing of juvenile delinquency. She has voted in favor of bills that would keep habeas corpus rights in death penalty appeals, as well as in favor of bills to replace the death penalty and finding alternative sentences to capital punishment. She also supports stronger sentencing for hate crimes.','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Barack Obama','John McCain','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

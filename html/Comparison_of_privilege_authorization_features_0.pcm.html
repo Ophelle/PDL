@@ -1,56 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of privilege authorization features -  Introduction to implementations </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>User Account Control (UAC):
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>User Account Control (UAC):
 Included with Windows Vista and later Microsoft Windows operating systems, UAC prompts the user for authorization when an application tries to perform an administrator task. :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Runas:
+											<input type="checkbox" name="Feature" >Runas:
 A command-line tool introduced with Windows 2000 that allows running a program</br>	
- 		 									<input type="checkbox" name="Feature" > control panel applet</br>	
- 		 									<input type="checkbox" name="Feature" > or a MMC snap-in as a different user. Runas makes use of the "Secondary Login" Windows service</br>	
- 		 									<input type="checkbox" name="Feature" > also introduced with Windows 2000. This service provides the capability to allow applications running as a separate user to interact with the logged-in user's desktop. This is necessary to support drag-and-drop</br>	
- 		 									<input type="checkbox" name="Feature" > clipboard sharing</br>	
- 		 									<input type="checkbox" name="Feature" > and other interactive login features.</br>	
+											<input type="checkbox" name="Feature" >control panel applet</br>	
+											<input type="checkbox" name="Feature" >or a MMC snap-in as a different user. Runas makes use of the "Secondary Login" Windows service</br>	
+											<input type="checkbox" name="Feature" >also introduced with Windows 2000. This service provides the capability to allow applications running as a separate user to interact with the logged-in user's desktop. This is necessary to support drag-and-drop</br>	
+											<input type="checkbox" name="Feature" >clipboard sharing</br>	
+											<input type="checkbox" name="Feature" >and other interactive login features.</br>	
+									
+								</br>	
+								<label>User Account Control prompt dialog box : </label></br> <input id="2" type="text" name="Feature"></br>
 								
-						</br>	
-							<label>User Account Control prompt dialog box : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['User Account Control prompt dialog box','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['User Account Control prompt dialog box','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

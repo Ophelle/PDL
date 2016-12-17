@@ -1,76 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of portable media players -  Video formats </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>MPEG-4 :</label></br>
+								<input type="radio" name="FeatureMPEG-4" value="oui">Yes <input type="radio" name="FeatureMPEG-4" value = "non">No <input type="radio" name="FeatureMPEG-4" value = "non">Partial </br>
+								
+								</br>	
+								<label>QuickTime :</label></br>
+								<input type="radio" name="FeatureQuickTime" value="oui">Yes <input type="radio" name="FeatureQuickTime" value = "non">No <input type="radio" name="FeatureQuickTime" value = "non">Partial </br>
+								
+								</br>	
+								<label>WMV :</label></br>
+								<input type="radio" name="FeatureWMV" value="oui">Yes <input type="radio" name="FeatureWMV" value = "non">No <input type="radio" name="FeatureWMV" value = "non">Partial </br>
+								
+								</br>	
+								<label>Other formats :</label></br>
+								<input type="radio" name="FeatureOther formats" value="oui">Yes <input type="radio" name="FeatureOther formats" value = "non">No <input type="radio" name="FeatureOther formats" value = "non">Partial </br>
+								
+								</br>	
+								<label>AVI :</label></br>
+								<input type="radio" name="FeatureAVI" value="oui">Yes <input type="radio" name="FeatureAVI" value = "non">No <input type="radio" name="FeatureAVI" value = "non">Partial </br>
+								
+								</br>	
+								<label>ASF :</label></br>
+								<input type="radio" name="FeatureASF" value="oui">Yes <input type="radio" name="FeatureASF" value = "non">No <input type="radio" name="FeatureASF" value = "non">Partial </br>
+								
+								</br>	
+								<label>DivX / Xvid :</label></br>
+								<input type="radio" name="FeatureDivX / Xvid" value="oui">Yes <input type="radio" name="FeatureDivX / Xvid" value = "non">No <input type="radio" name="FeatureDivX / Xvid" value = "non">Partial </br>
+								
+								</br>	
+								<label>H.264 :</label></br>
+								<input type="radio" name="FeatureH.264" value="oui">Yes <input type="radio" name="FeatureH.264" value = "non">No <input type="radio" name="FeatureH.264" value = "non">Partial </br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Walkman NWZ-A810 series','Sansa Fuze+','Gigabeat T-Series','iPod (before Nano 6G; iPod 6G does)','ZVUE 260','ZEN Vision W','Samsung Galaxy Player','Archos 705 WiFi','Archos 405','Cowon A3','Cowon Q5W','Archos 605 WiFi / GPS','PSP Slim & Lite','GP2X F-200','Archos 5','ZEN','Zune','iriver clix 2G','Samsung T10','Archos 105','Cowon D2','Samsung P2','Sansa Fuze','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>MPEG-4 :</label></br>
- 		 					 <input type="radio" name="FeatureMPEG-4" value="oui">oui <input type="radio" name="FeatureMPEG-4" value = "non">non </br>
-									
-						</br>	
- 		 					<label>QuickTime :</label></br>
- 		 					 <input type="radio" name="FeatureQuickTime" value="oui">oui <input type="radio" name="FeatureQuickTime" value = "non">non </br>
-									
-						</br>	
- 		 					<label>WMV :</label></br>
- 		 					 <input type="radio" name="FeatureWMV" value="oui">oui <input type="radio" name="FeatureWMV" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Other formats :</label></br>
- 		 					 <input type="radio" name="FeatureOther formats" value="oui">oui <input type="radio" name="FeatureOther formats" value = "non">non </br>
-									
-						</br>	
- 		 					<label>AVI :</label></br>
- 		 					 <input type="radio" name="FeatureAVI" value="oui">oui <input type="radio" name="FeatureAVI" value = "non">non </br>
-									
-						</br>	
- 		 					<label>ASF :</label></br>
- 		 					 <input type="radio" name="FeatureASF" value="oui">oui <input type="radio" name="FeatureASF" value = "non">non </br>
-									
-						</br>	
- 		 					<label>DivX / Xvid :</label></br>
- 		 					 <input type="radio" name="FeatureDivX / Xvid" value="oui">oui <input type="radio" name="FeatureDivX / Xvid" value = "non">non </br>
-									
-						</br>	
- 		 					<label>H.264 :</label></br>
- 		 					 <input type="radio" name="FeatureH.264" value="oui">oui <input type="radio" name="FeatureH.264" value = "non">non </br>
-									
-						</br>	
-							<label>Name : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Walkman NWZ-A810 series','Sansa Fuze+','Gigabeat T-Series','iPod (before Nano 6G; iPod 6G does)','ZVUE 260','ZEN Vision W','Samsung Galaxy Player','Archos 705 WiFi','Archos 405','Cowon A3','Cowon Q5W','Archos 605 WiFi / GPS','PSP Slim & Lite','GP2X F-200','Archos 5','ZEN','Zune','iriver clix 2G','Samsung T10','Archos 105','Cowon D2','Samsung P2','Sansa Fuze','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

@@ -1,56 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of antivirus software - </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Company : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>BullGuard :</label></br>
+								<input type="radio" name="FeatureBullGuard" value="oui">Yes <input type="radio" name="FeatureBullGuard" value = "non">No <input type="radio" name="FeatureBullGuard" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Kaspersky Lab :</label></br>
+								<input type="radio" name="FeatureKaspersky Lab" value="oui">Yes <input type="radio" name="FeatureKaspersky Lab" value = "non">No <input type="radio" name="FeatureKaspersky Lab" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>McAfee :</label></br>
+								<input type="radio" name="FeatureMcAfee" value="oui">Yes <input type="radio" name="FeatureMcAfee" value = "non">No <input type="radio" name="FeatureMcAfee" value = "non">Partial </br>
+											<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['License','On-demand scan','Backup','Notes','Software','On-access scan','AntiSpam','First release','Support','Price','Country of origin','AntiTheft','Web protection','Parental Control','Firewall','Call/SMS Filtering','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Company : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>BullGuard :</label></br>
- 		 					 <input type="radio" name="FeatureBullGuard" value="oui">oui <input type="radio" name="FeatureBullGuard" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Kaspersky Lab :</label></br>
- 		 					 <input type="radio" name="FeatureKaspersky Lab" value="oui">oui <input type="radio" name="FeatureKaspersky Lab" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>McAfee :</label></br>
- 		 					 <input type="radio" name="FeatureMcAfee" value="oui">oui <input type="radio" name="FeatureMcAfee" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['License','On-demand scan','Backup','Notes','Software','On-access scan','AntiSpam','First release','Support','Price','Country of origin','AntiTheft','Web protection','Parental Control','Firewall','Call/SMS Filtering','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

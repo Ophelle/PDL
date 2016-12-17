@@ -1,72 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of United States presidential candidates, 2008 - Same-sex marriage</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>In 2004, McCain voted against the Federal Marriage Amendment, arguing that each state should be able to choose whether to recognize same-sex marriage. He supported the 2006 Arizona initiative to ban same-sex marriage. :</label></br>
+											<input type="checkbox" name="Feature" >In 2004</br>	
+											<input type="checkbox" name="Feature" >McCain voted against the Federal Marriage Amendment</br>	
+											<input type="checkbox" name="Feature" >arguing that each state should be able to choose whether to recognize same-sex marriage. He supported the 2006 Arizona initiative to ban same-sex marriage.</br>	
+											<input type="checkbox" name="Feature" >Obama voted against the Federal Marriage Amendment which would have defined marriage as between one man and one woman</br>	
+											<input type="checkbox" name="Feature" >but personally believes that marriage is a religious bond between a man and a woman. He supports civil union for same-sex couples which would be same-sex marriage in all but name</br>	
+											<input type="checkbox" name="Feature" >but believes that decisions about the name marriage should be left to the states.</br>	
+									
+								</br>	
+								<label>Chuck Baldwin : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Baldwin believes marriage is between a man and a woman and supports the DOMA. :</label></br>
+											<input type="checkbox" name="Feature" >Supports homosexual adoption and has a HRC 80 rating on gay rights issues.</br>	
+											<input type="checkbox" name="Feature" >Barr opposes any federal definition of marriage</br>	
+											<input type="checkbox" name="Feature" >whether by statute or constitutional amendment. He believes the states should be free to determine what constitutes marriage.</br>	
+											<input type="checkbox" name="Feature" >Nader opposes DOMA and the military's Don't Ask Don't Tell policy. He says</br>	
+											<input type="checkbox" name="Feature" >"We've got to get rid of this discrimination</br>	
+											<input type="checkbox" name="Feature" >this chilling</br>	
+											<input type="checkbox" name="Feature" >this bigotry toward gays and lesbians that are reflected in literally hundreds and hundreds of statutes and regulations in this country."</br>	
+									
+								</br>	
+								<label>John McCain : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Ralph Nader','Cynthia McKinney','Bob Barr','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Barack Obama','John McCain','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>In 2004, McCain voted against the Federal Marriage Amendment, arguing that each state should be able to choose whether to recognize same-sex marriage. He supported the 2006 Arizona initiative to ban same-sex marriage. :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >In 2004</br>	
- 		 									<input type="checkbox" name="Feature" > McCain voted against the Federal Marriage Amendment</br>	
- 		 									<input type="checkbox" name="Feature" > arguing that each state should be able to choose whether to recognize same-sex marriage. He supported the 2006 Arizona initiative to ban same-sex marriage.</br>	
- 		 									<input type="checkbox" name="Feature" >Obama voted against the Federal Marriage Amendment which would have defined marriage as between one man and one woman</br>	
- 		 									<input type="checkbox" name="Feature" > but personally believes that marriage is a religious bond between a man and a woman. He supports civil union for same-sex couples which would be same-sex marriage in all but name</br>	
- 		 									<input type="checkbox" name="Feature" > but believes that decisions about the name marriage should be left to the states.</br>	
-								
-						</br>	
-							<label>Chuck Baldwin : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Baldwin believes marriage is between a man and a woman and supports the DOMA. :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Supports homosexual adoption and has a HRC 80 rating on gay rights issues.</br>	
- 		 									<input type="checkbox" name="Feature" >Barr opposes any federal definition of marriage</br>	
- 		 									<input type="checkbox" name="Feature" > whether by statute or constitutional amendment. He believes the states should be free to determine what constitutes marriage.</br>	
- 		 									<input type="checkbox" name="Feature" >Nader opposes DOMA and the military's Don't Ask Don't Tell policy. He says</br>	
- 		 									<input type="checkbox" name="Feature" > "We've got to get rid of this discrimination</br>	
- 		 									<input type="checkbox" name="Feature" > this chilling</br>	
- 		 									<input type="checkbox" name="Feature" > this bigotry toward gays and lesbians that are reflected in literally hundreds and hundreds of statutes and regulations in this country."</br>	
-								
-						</br>	
-							<label>John McCain : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Ralph Nader','Cynthia McKinney','Bob Barr','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Barack Obama','John McCain','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

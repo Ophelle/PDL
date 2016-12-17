@@ -1,74 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of reference management software -  Citation styles </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Chicago/Turabian :</label></br>
+								<input type="radio" name="FeatureChicago/Turabian" value="oui">Yes <input type="radio" name="FeatureChicago/Turabian" value = "non">No <input type="radio" name="FeatureChicago/Turabian" value = "non">Partial </br>
+								
+								</br>	
+								<label>Harvard :</label></br>
+								<input type="radio" name="FeatureHarvard" value="oui">Yes <input type="radio" name="FeatureHarvard" value = "non">No <input type="radio" name="FeatureHarvard" value = "non">Partial </br>
+								
+								</br>	
+								<label>APA :</label></br>
+								<input type="radio" name="FeatureAPA" value="oui">Yes <input type="radio" name="FeatureAPA" value = "non">No <input type="radio" name="FeatureAPA" value = "non">Partial </br>
+								
+								</br>	
+								<label>MLA :</label></br>
+								<input type="radio" name="FeatureMLA" value="oui">Yes <input type="radio" name="FeatureMLA" value = "non">No <input type="radio" name="FeatureMLA" value = "non">Partial </br>
+								
+								</br>	
+								<label>Extension method : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Software : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Other : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['CSL','none','BibTeX and CSL','BibDesk export templates','OSBIB','EndNote format (through GUI)','RefWorks format through GUI','bibus format (through GUI)','Sente format through GUI','Citavi format, conditions and programmable components supported (through GUI)','XML (citestylex.dtd), interactive script','SciRef format through GUI','BibTeX','Pybliographer XML','WizFolio format (through GUI)','PHP','?',':Template:GUI style editor','GUI style editor','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['BibSonomy','RefWorks','WizFolio','Biblioscape','ReadCube','RefDB','Reference Manager','Docear','SciRef','Paperpile','Bebop','Bookends','refbase','EndNote','Papers','JabRef','BibDesk','colwiz','Aigaion','Mendeley','Citavi','Bibus','KBibTeX','Sente','BibBase','CiteULike','Referencer','Zotero','Pybliographer','Wikindx','Qiqqa','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['6506','various','any BibTeX style','6781 styles','6390+ styles','6750+ styles','style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes"|Yes','none','?','BMJ, IEEE','BMJ, IEEE, Editor supplied','6837+ styles','user-contributed','various polar & marine journals','Various biomedical & law journals','Any BibTeX style, plus 3500+ Citavi styles. Styles for journals are created upon request and centrally corrected','6770+ styles','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Chicago/Turabian :</label></br>
- 		 					 <input type="radio" name="FeatureChicago/Turabian" value="oui">oui <input type="radio" name="FeatureChicago/Turabian" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Harvard :</label></br>
- 		 					 <input type="radio" name="FeatureHarvard" value="oui">oui <input type="radio" name="FeatureHarvard" value = "non">non </br>
-									
-						</br>	
- 		 					<label>APA :</label></br>
- 		 					 <input type="radio" name="FeatureAPA" value="oui">oui <input type="radio" name="FeatureAPA" value = "non">non </br>
-									
-						</br>	
- 		 					<label>MLA :</label></br>
- 		 					 <input type="radio" name="FeatureMLA" value="oui">oui <input type="radio" name="FeatureMLA" value = "non">non </br>
-									
-						</br>	
-							<label>Extension method : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Software : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Other : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['CSL','none','BibTeX and CSL','BibDesk export templates','OSBIB','EndNote format (through GUI)','RefWorks format through GUI','bibus format (through GUI)','Sente format through GUI','Citavi format, conditions and programmable components supported (through GUI)','XML (citestylex.dtd), interactive script','SciRef format through GUI','BibTeX','Pybliographer XML','WizFolio format (through GUI)','PHP','?',':Template:GUI style editor','GUI style editor','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['BibSonomy','RefWorks','WizFolio','Biblioscape','ReadCube','RefDB','Reference Manager','Docear','SciRef','Paperpile','Bebop','Bookends','refbase','EndNote','Papers','JabRef','BibDesk','colwiz','Aigaion','Mendeley','Citavi','Bibus','KBibTeX','Sente','BibBase','CiteULike','Referencer','Zotero','Pybliographer','Wikindx','Qiqqa','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['6506','various','any BibTeX style','6781 styles','6390+ styles','6750+ styles','style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes"|Yes','none','?','BMJ, IEEE','BMJ, IEEE, Editor supplied','6837+ styles','user-contributed','various polar & marine journals','Various biomedical & law journals','Any BibTeX style, plus 3500+ Citavi styles. Styles for journals are created upon request and centrally corrected','6770+ styles','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

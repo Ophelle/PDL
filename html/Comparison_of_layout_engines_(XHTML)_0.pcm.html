@@ -1,110 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of layout engines (XHTML) - Media types</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>application/mathml+xml :</label></br>
- 		 					 <input type="radio" name="Featureapplication/mathml+xml" value="oui">oui <input type="radio" name="Featureapplication/mathml+xml" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>application/xml : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>text/html : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>application/atom+xml : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>text/xml : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>image/svg+xml : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>application/rss+xml : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>application/xslt+xml : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Internet media type : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>application/xhtml+xml : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['XHTML','XHTML
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>application/mathml+xml :</label></br>
+								<input type="radio" name="Featureapplication/mathml+xml" value="oui">Yes <input type="radio" name="Featureapplication/mathml+xml" value = "non">No <input type="radio" name="Featureapplication/mathml+xml" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>application/xml : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>text/html : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>application/atom+xml : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>text/xml : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>image/svg+xml : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>application/rss+xml : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>application/xslt+xml : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Internet media type : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>application/xhtml+xml : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['XHTML','XHTML
 1.0','XHTML
 125','Crash','?','XHTML 5.0','XML','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['HTML','?','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['?','8.00 beta 2','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['?','XHTML
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['HTML','?','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['?','8.00 beta 2','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['?','XHTML
 1.0','XHTML
 125','XHTML','XHTML 5.0','XML','Crash','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['9.50','?','1.0','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['?','7.50 beta 1','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['9.00 beta 1','?','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['Presto','Trident','Gecko','WebKit','KHTML','Prince XML','Tasman','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['Prompt for download','XHTML
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['9.50','?','1.0','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['?','7.50 beta 1','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['9.00 beta 1','?','']
+								});
+								$("#8").typeahead({
+									name:"list8",
+									local : ['Presto','Trident','Gecko','WebKit','KHTML','Prince XML','Tasman','']
+								});
+								$("#9").typeahead({
+									name:"list9",
+									local : ['Prompt for download','XHTML
 125','XHTML 5.0','HTML','XHTML
 1.0','XHTML','?','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

@@ -1,83 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of operating system kernels -  In-kernel virtualization </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Solaris kernel :</label></br>
+								<input type="radio" name="FeatureSolaris kernel" value="oui">Yes <input type="radio" name="FeatureSolaris kernel" value = "non">No <input type="radio" name="FeatureSolaris kernel" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Kernel Name : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Linux : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>FreeBSD kernel : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>DragonFly BSD kernel : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Windows NT kernel : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>XNU : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Container (resource management)','User-space execution','Container (no resource management)','Paravirtualization','Full virtualization','Container (no resource management, no security)','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['KVM','UML','chroot','LXC','Virtio, Hyper-V (guest only), Xen (guest only), VMI (guest only), kvm-lite, lguest','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['BHyVe (KVM)','jail','chroot','Virtio, Xen (guest only)','?','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['jail','No','vkernel','chroot','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['AppContainers','?','Hyper-V','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['?','chroot','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Solaris kernel :</label></br>
- 		 					 <input type="radio" name="FeatureSolaris kernel" value="oui">oui <input type="radio" name="FeatureSolaris kernel" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Kernel Name : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Linux : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>FreeBSD kernel : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>DragonFly BSD kernel : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Windows NT kernel : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>XNU : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Container (resource management)','User-space execution','Container (no resource management)','Paravirtualization','Full virtualization','Container (no resource management, no security)','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['KVM','UML','chroot','LXC','Virtio, Hyper-V (guest only), Xen (guest only), VMI (guest only), kvm-lite, lguest','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['BHyVe (KVM)','jail','chroot','Virtio, Xen (guest only)','?','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['jail','No','vkernel','chroot','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['AppContainers','?','Hyper-V','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['?','chroot','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

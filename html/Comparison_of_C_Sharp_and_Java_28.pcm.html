@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of C Sharp and Java -  Fibonacci sequence </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Notes for the Java version:
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Notes for the Java version:
  The infinite Fibonacci sequence is represented by the  class (as opposed to a method). 
  The  class implements the  interface, which allows client code to request the Fibonacci numbers one at a time.
  The class implements the  method as always returning  since the Fibonacci sequence is infinite
@@ -34,30 +37,30 @@
  The  interface formally also allows the client to request removal of numbers. As the Fibonacci sequence is a mathematically defined sequence, the  method is implemented as unsupported.
  The  annotation is necessary to avoid compiler warnings about possible unintentional overriding of base class methods.
  Because  is a primitive type and  is a generic interface, the Java compiler generates a boxing conversion for each number. :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Notes for the C# version:
+											<input type="checkbox" name="Feature" >Notes for the C# version:
  The infinite Fibonacci sequence is represented by the static  method (as opposed to a class).
  The method is defined as returning instances of the interface </br>	
- 		 									<input type="checkbox" name="Feature" > which allows client code to repeatedly request the next number of a sequence
+											<input type="checkbox" name="Feature" >which allows client code to repeatedly request the next number of a sequence
  The  keyword converts the method into a generator method. 
  The method body calculates and returns Fibonacci numbers.
  The  statement returns the next number of the sequence and creates a continuation so that subsequent invocations of the  interface's  method will continue execution from the following statement with all local variables intact.
  The implementation uses two  statements to alternate calculations instead of using a temporary tmp variable.</br>	
+									
+								</br>	
+								<label>Java : </label></br> <input id="2" type="text" name="Feature"></br>
 								
-						</br>	
-							<label>Java : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['C#','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['C#','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

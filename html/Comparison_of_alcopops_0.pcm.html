@@ -1,87 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of alcopops -  Beer-based </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Sold mixed with - Milk :</label></br>
+								<input type="radio" name="FeatureSold mixed with - Milk" value="oui">Yes <input type="radio" name="FeatureSold mixed with - Milk" value = "non">No <input type="radio" name="FeatureSold mixed with - Milk" value = "non">Partial </br>
+								
+								</br>	
+								<label>Sold in - UK :</label></br>
+								<input type="radio" name="FeatureSold in - UK" value="oui">Yes <input type="radio" name="FeatureSold in - UK" value = "non">No <input type="radio" name="FeatureSold in - UK" value = "non">Partial </br>
+								
+								</br>	
+								<label>Sold mixed with - Citrus :</label></br>
+								<input type="radio" name="FeatureSold mixed with - Citrus" value="oui">Yes <input type="radio" name="FeatureSold mixed with - Citrus" value = "non">No <input type="radio" name="FeatureSold mixed with - Citrus" value = "non">Partial </br>
+								
+								</br>	
+								<label>Sold in - Australia :</label></br>
+								<input type="radio" name="FeatureSold in - Australia" value="oui">Yes <input type="radio" name="FeatureSold in - Australia" value = "non">No <input type="radio" name="FeatureSold in - Australia" value = "non">Partial </br>
+								
+								</br>	
+								<label>Sold in - US :</label></br>
+								<input type="radio" name="FeatureSold in - US" value="oui">Yes <input type="radio" name="FeatureSold in - US" value = "non">No <input type="radio" name="FeatureSold in - US" value = "non">Partial </br>
+								
+								</br>	
+								<label>Creator : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Sold mixed with - Stimulant :</label></br>
+								<input type="radio" name="FeatureSold mixed with - Stimulant" value="oui">Yes <input type="radio" name="FeatureSold mixed with - Stimulant" value = "non">No <input type="radio" name="FeatureSold mixed with - Stimulant" value = "non">Partial </br>
+								
+								</br>	
+								<label>D/C* :</label></br>
+								<input type="radio" name="FeatureD/C*" value="oui">Yes <input type="radio" name="FeatureD/C*" value = "non">No <input type="radio" name="FeatureD/C*" value = "non">Partial </br>
+								
+								</br>	
+								<label>Sold mixed with - Lemonade :</label></br>
+								<input type="radio" name="FeatureSold mixed with - Lemonade" value="oui">Yes <input type="radio" name="FeatureSold mixed with - Lemonade" value = "non">No <input type="radio" name="FeatureSold mixed with - Lemonade" value = "non">Partial </br>
+								
+								</br>	
+								<label>Sold mixed with - Cola :</label></br>
+								<input type="radio" name="FeatureSold mixed with - Cola" value="oui">Yes <input type="radio" name="FeatureSold mixed with - Cola" value = "non">No <input type="radio" name="FeatureSold mixed with - Cola" value = "non">Partial </br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="11" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Diageo','United Brands Company','Coors Brewing Company','Jack Daniels (Brown-Forman)','Stroh Brewery Company','Anheuser-Busch','Phusion Projects Inc.','Miller Brewing','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Four','Sparks','3sum','White Mountain Cooler','Zima XXX','Country Coolers','Jeremiah Weed','Tilt','Joose','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Sold mixed with - Milk :</label></br>
- 		 					 <input type="radio" name="FeatureSold mixed with - Milk" value="oui">oui <input type="radio" name="FeatureSold mixed with - Milk" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Sold in - UK :</label></br>
- 		 					 <input type="radio" name="FeatureSold in - UK" value="oui">oui <input type="radio" name="FeatureSold in - UK" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Sold mixed with - Citrus :</label></br>
- 		 					 <input type="radio" name="FeatureSold mixed with - Citrus" value="oui">oui <input type="radio" name="FeatureSold mixed with - Citrus" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Sold in - Australia :</label></br>
- 		 					 <input type="radio" name="FeatureSold in - Australia" value="oui">oui <input type="radio" name="FeatureSold in - Australia" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Sold in - US :</label></br>
- 		 					 <input type="radio" name="FeatureSold in - US" value="oui">oui <input type="radio" name="FeatureSold in - US" value = "non">non </br>
-									
-						</br>	
-							<label>Creator : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Sold mixed with - Stimulant :</label></br>
- 		 					 <input type="radio" name="FeatureSold mixed with - Stimulant" value="oui">oui <input type="radio" name="FeatureSold mixed with - Stimulant" value = "non">non </br>
-									
-						</br>	
- 		 					<label>D/C* :</label></br>
- 		 					 <input type="radio" name="FeatureD/C*" value="oui">oui <input type="radio" name="FeatureD/C*" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Sold mixed with - Lemonade :</label></br>
- 		 					 <input type="radio" name="FeatureSold mixed with - Lemonade" value="oui">oui <input type="radio" name="FeatureSold mixed with - Lemonade" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Sold mixed with - Cola :</label></br>
- 		 					 <input type="radio" name="FeatureSold mixed with - Cola" value="oui">oui <input type="radio" name="FeatureSold mixed with - Cola" value = "non">non </br>
-									
-						</br>	
-							<label>Name : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Diageo','United Brands Company','Coors Brewing Company','Jack Daniels (Brown-Forman)','Stroh Brewery Company','Anheuser-Busch','Phusion Projects Inc.','Miller Brewing','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Four','Sparks','3sum','White Mountain Cooler','Zima XXX','Country Coolers','Jeremiah Weed','Tilt','Joose','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

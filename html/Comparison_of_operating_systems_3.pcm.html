@@ -1,205 +1,209 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of operating systems -  Commands </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>create directory : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>rename file(s) : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>clear console : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>run shell script with new shell : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>description : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>kill processes : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>create file system : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>copy file(s) : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>change current directory : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>mount file as block device : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>trace network route with pings : </label></br> <input id="11" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>file system check and recovery : </label></br> <input id="12" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>trace network route : </label></br> <input id="13" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>show network route : </label></br> <input id="14" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>list directory : </label></br> <input id="15" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>move file(s) : </label></br> <input id="16" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>show network configuration : </label></br> <input id="17" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>delete directory : </label></br> <input id="18" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>create software raid : </label></br> <input id="19" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>change io priority : </label></br> <input id="20" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>delete file(s) : </label></br> <input id="21" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>unmount device : </label></br> <input id="22" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>mount device : </label></br> <input id="23" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>change process priority : </label></br> <input id="24" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['ls','dir','list, dir','dir & ls & Get-ChildItem','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['mkdir','create/dir','makedir','md (mkdir)','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['mv','ren, rename','ren','mv, rename','ren, mv','rename','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['clear','','cls','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['sh file.sh','@ file.com','cmd /c file.cmd','?','shell file.shell','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['mv & Move-Item','','mv','move','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['ipconfig','ifconfig','ip addr, ifconfig','ifconfig, lanadmin','','?','tcpip sh net (sh net)','']
+								});
+								$("#8").typeahead({
+									name:"list8",
+									local : ['Windows (cmd)','Solaris','AROS','Linux','OS X','OpenVMS','FreeBSD','HP-UX','Windows (powershell)','Windows (cygwin, SFU or MKS)','']
+								});
+								$("#9").typeahead({
+									name:"list9",
+									local : ['del','rmdir','delete','rd (rmdir)','']
+								});
+								$("#10").typeahead({
+									name:"list10",
+									local : ['killall, pkill, kill, skill','taskkill','','stop','kill, killall','kill','kill, pkill','']
+								});
+								$("#11").typeahead({
+									name:"list11",
+									local : ['format','','mkfs','newfs','?','init','newfs,zpool / zfs create','']
+								});
+								$("#12").typeahead({
+									name:"list12",
+									local : ['cp','copy','cp & Copy-Item','']
+								});
+								$("#13").typeahead({
+									name:"list13",
+									local : ['cd','set def','cd & Set-Location','cd (chdir)','']
+								});
+								$("#14").typeahead({
+									name:"list14",
+									local : ['','mdconfig + mount','hdid','lofiadm + mount','?','mount -o loop','']
+								});
+								$("#15").typeahead({
+									name:"list15",
+									local : ['traceroute -I','?','traceroute -I & mtr','','pathping','tcptrace','']
+								});
+								$("#16").typeahead({
+									name:"list16",
+									local : ['?','traceroute','tcptrace','tracert','','']
+								});
+								$("#17").typeahead({
+									name:"list17",
+									local : ['chkdsk','fsck','?','','analyze/disk','fsck,n/a','']
+								});
+								$("#18").typeahead({
+									name:"list18",
+									local : ['','diskutil appleRAID','(mdadm—create)','diskpart (mirror only)','?','metainit, zpool create','atacontrol, gmirror, zfs create','']
+								});
+								$("#19").typeahead({
+									name:"list19",
+									local : ['','nice','?','set proc/prio','ionice','']
+								});
+								$("#20").typeahead({
+									name:"list20",
+									local : ['del','rm','delete','del (erase)','rm & Remove-Item','']
+								});
+								$("#21").typeahead({
+									name:"list21",
+									local : ['mount','mount, diskutil mount','?','mountvol','mount & New-PSDrive','']
+								});
+								$("#22").typeahead({
+									name:"list22",
+									local : ['dismount','mountvol /d','umount','?','umount, diskutil unmount(disk)','Remove-PSDrive','','']
+								});
+								$("#23").typeahead({
+									name:"list23",
+									local : ['nice','nice, chrt','','?','set proc/prio','start /low, start /normal, start /high, start /realtime','']
+								});
+								$("#24").typeahead({
+									name:"list24",
+									local : ['?','tcpip sh route','route','','netstat -r','ip route, route','netstat -r, route get, route monitor','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>create directory : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>rename file(s) : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>clear console : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>run shell script with new shell : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>description : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>kill processes : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>create file system : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>copy file(s) : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>change current directory : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>mount file as block device : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>trace network route with pings : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>file system check and recovery : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>trace network route : </label></br> <input id="13" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>show network route : </label></br> <input id="14" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>list directory : </label></br> <input id="15" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>move file(s) : </label></br> <input id="16" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>show network configuration : </label></br> <input id="17" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>delete directory : </label></br> <input id="18" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>create software raid : </label></br> <input id="19" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>change io priority : </label></br> <input id="20" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>delete file(s) : </label></br> <input id="21" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>unmount device : </label></br> <input id="22" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>mount device : </label></br> <input id="23" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>change process priority : </label></br> <input id="24" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['ls','dir','list, dir','dir & ls & Get-ChildItem','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['mkdir','create/dir','makedir','md (mkdir)','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['mv','ren, rename','ren','mv, rename','ren, mv','rename','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['clear','','cls','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['sh file.sh','@ file.com','cmd /c file.cmd','?','shell file.shell','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['mv & Move-Item','','mv','move','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['ipconfig','ifconfig','ip addr, ifconfig','ifconfig, lanadmin','','?','tcpip sh net (sh net)','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['Windows (cmd)','Solaris','AROS','Linux','OS X','OpenVMS','FreeBSD','HP-UX','Windows (powershell)','Windows (cygwin, SFU or MKS)','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['del','rmdir','delete','rd (rmdir)','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['killall, pkill, kill, skill','taskkill','','stop','kill, killall','kill','kill, pkill','']
-          });
-          $("#11").typeahead({
-            name:"list11",
-            local : ['format','','mkfs','newfs','?','init','newfs,zpool / zfs create','']
-          });
-          $("#12").typeahead({
-            name:"list12",
-            local : ['cp','copy','cp & Copy-Item','']
-          });
-          $("#13").typeahead({
-            name:"list13",
-            local : ['cd','set def','cd & Set-Location','cd (chdir)','']
-          });
-          $("#14").typeahead({
-            name:"list14",
-            local : ['','mdconfig + mount','hdid','lofiadm + mount','?','mount -o loop','']
-          });
-          $("#15").typeahead({
-            name:"list15",
-            local : ['traceroute -I','?','traceroute -I & mtr','','pathping','tcptrace','']
-          });
-          $("#16").typeahead({
-            name:"list16",
-            local : ['?','traceroute','tcptrace','tracert','','']
-          });
-          $("#17").typeahead({
-            name:"list17",
-            local : ['chkdsk','fsck','?','','analyze/disk','fsck,n/a','']
-          });
-          $("#18").typeahead({
-            name:"list18",
-            local : ['','diskutil appleRAID','(mdadm—create)','diskpart (mirror only)','?','metainit, zpool create','atacontrol, gmirror, zfs create','']
-          });
-          $("#19").typeahead({
-            name:"list19",
-            local : ['','nice','?','set proc/prio','ionice','']
-          });
-          $("#20").typeahead({
-            name:"list20",
-            local : ['del','rm','delete','del (erase)','rm & Remove-Item','']
-          });
-          $("#21").typeahead({
-            name:"list21",
-            local : ['mount','mount, diskutil mount','?','mountvol','mount & New-PSDrive','']
-          });
-          $("#22").typeahead({
-            name:"list22",
-            local : ['dismount','mountvol /d','umount','?','umount, diskutil unmount(disk)','Remove-PSDrive','','']
-          });
-          $("#23").typeahead({
-            name:"list23",
-            local : ['nice','nice, chrt','','?','set proc/prio','start /low, start /normal, start /high, start /realtime','']
-          });
-          $("#24").typeahead({
-            name:"list24",
-            local : ['?','tcpip sh route','route','','netstat -r','ip route, route','netstat -r, route get, route monitor','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

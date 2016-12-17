@@ -1,139 +1,141 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of integrated development environments -  JavaScript </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Servoy : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Nodeclipse NTS : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Aptana Studio :</label></br>
+											<input type="checkbox" name="Feature" >GPL</br>	
+											<input type="checkbox" name="Feature" >proprietary</br>	
+											<input type="checkbox" name="Feature" >Java</br>	
+											<input type="checkbox" name="Feature" >JavaScript</br>	
+											<input type="checkbox" name="Feature" >Aptana</br>	
+											<input type="checkbox" name="Feature" >Inc.</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>NuSphere PhpED : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Visual Studio : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>WebStorm : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>IDE : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Anjuta : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>NetBeans : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Brackets : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Komodo IDE / Edit :</label></br>
+											<input type="checkbox" name="Feature" >IDE:Proprietary</br>	
+											<input type="checkbox" name="Feature" >Edit:MPL 1.1</br>	
+											<input type="checkbox" name="Feature" >November 19</br>	
+											<input type="checkbox" name="Feature" >2013</br>	
+											<input type="checkbox" name="Feature" >C++</br>	
+											<input type="checkbox" name="Feature" >C</br>	
+											<input type="checkbox" name="Feature" >XUL</br>	
+											<input type="checkbox" name="Feature" >Perl</br>	
+											<input type="checkbox" name="Feature" >Python</br>	
+											<input type="checkbox" name="Feature" >JavaScript</br>	
+											<input type="checkbox" name="Feature" >Tcl</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Eclipse Web Tools : </label></br> <input id="12" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Oracle JDeveloper : </label></br> <input id="13" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Java','Cross-platform','June 2011','Servoy License','Servoy Developer Team','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['EPL','Java','Windows, Linux, Mac OS X, FreeBSD, JVM, Solaris','Nodeclipse','March 31, 2014','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['June 2011','N/A','Windows','NuSphere','Proprietary','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['October 2013','C++, C#','Windows','Proprietary','Microsoft','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['April 2015','Cross-platform','JetBrains','Java','Proprietary','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['Latest stable release','Platform','Written In','License','Developer','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['C','June 2013','Unix-like','Anjuta Team','GPL','']
+								});
+								$("#8").typeahead({
+									name:"list8",
+									local : ['Cross-platform','CDDL, GPL2','November 28, 2014','Java','Oracle','']
+								});
+								$("#9").typeahead({
+									name:"list9",
+									local : ['JavaScript, HTML, CSS','Adobe','April 2015','MIT License','Cross-platform','']
+								});
+								$("#10").typeahead({
+									name:"list10",
+									local : ['','Windows, Linux, Mac OS X, FreeBSD, JVM, Solaris','IBM','EPL','Java','']
+								});
+								$("#11").typeahead({
+									name:"list11",
+									local : ['Proprietary - free','Oracle Corporation','Windows, Linux, Mac OS X','Java','July 2013','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Servoy : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Nodeclipse NTS : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Aptana Studio :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >GPL</br>	
- 		 									<input type="checkbox" name="Feature" > proprietary</br>	
- 		 									<input type="checkbox" name="Feature" >Java</br>	
- 		 									<input type="checkbox" name="Feature" > JavaScript</br>	
- 		 									<input type="checkbox" name="Feature" >Aptana</br>	
- 		 									<input type="checkbox" name="Feature" > Inc.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>NuSphere PhpED : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Visual Studio : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>WebStorm : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>IDE : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Anjuta : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>NetBeans : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Brackets : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Komodo IDE / Edit :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >IDE:Proprietary</br>	
- 		 									<input type="checkbox" name="Feature" > Edit:MPL 1.1</br>	
- 		 									<input type="checkbox" name="Feature" >November 19</br>	
- 		 									<input type="checkbox" name="Feature" > 2013</br>	
- 		 									<input type="checkbox" name="Feature" >C++</br>	
- 		 									<input type="checkbox" name="Feature" > C</br>	
- 		 									<input type="checkbox" name="Feature" > XUL</br>	
- 		 									<input type="checkbox" name="Feature" > Perl</br>	
- 		 									<input type="checkbox" name="Feature" > Python</br>	
- 		 									<input type="checkbox" name="Feature" > JavaScript</br>	
- 		 									<input type="checkbox" name="Feature" > Tcl</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Eclipse Web Tools : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Oracle JDeveloper : </label></br> <input id="13" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Java','Cross-platform','June 2011','Servoy License','Servoy Developer Team','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['EPL','Java','Windows, Linux, Mac OS X, FreeBSD, JVM, Solaris','Nodeclipse','March 31, 2014','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['June 2011','N/A','Windows','NuSphere','Proprietary','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['October 2013','C++, C#','Windows','Proprietary','Microsoft','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['April 2015','Cross-platform','JetBrains','Java','Proprietary','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Latest stable release','Platform','Written In','License','Developer','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['C','June 2013','Unix-like','Anjuta Team','GPL','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['Cross-platform','CDDL, GPL2','November 28, 2014','Java','Oracle','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['JavaScript, HTML, CSS','Adobe','April 2015','MIT License','Cross-platform','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['','Windows, Linux, Mac OS X, FreeBSD, JVM, Solaris','IBM','EPL','Java','']
-          });
-          $("#11").typeahead({
-            name:"list11",
-            local : ['Proprietary - free','Oracle Corporation','Windows, Linux, Mac OS X','Java','July 2013','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

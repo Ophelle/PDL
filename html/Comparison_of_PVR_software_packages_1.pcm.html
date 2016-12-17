@@ -1,98 +1,102 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of PVR software packages - Digital/Personal Video Recorder (DVR/PVR) features</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Beyond TV :</label></br>
+								<input type="radio" name="FeatureBeyond TV" value="oui">Yes <input type="radio" name="FeatureBeyond TV" value = "non">No <input type="radio" name="FeatureBeyond TV" value = "non">Partial </br>
+								
+								</br>	
+								<label>DVR : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>CenterStage : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>MythTV :</label></br>
+								<input type="radio" name="FeatureMythTV" value="oui">Yes <input type="radio" name="FeatureMythTV" value = "non">No <input type="radio" name="FeatureMythTV" value = "non">Partial </br>
+								
+								</br>	
+								<label>VBox@TV :</label></br>
+								<input type="radio" name="FeatureVBox@TV" value="oui">Yes <input type="radio" name="FeatureVBox@TV" value = "non">No <input type="radio" name="FeatureVBox@TV" value = "non">Partial </br>
+								
+								</br>	
+								<label>SageTV :</label></br>
+								<input type="radio" name="FeatureSageTV" value="oui">Yes <input type="radio" name="FeatureSageTV" value = "non">No <input type="radio" name="FeatureSageTV" value = "non">Partial </br>
+								
+								</br>	
+								<label>Video Disk Recorder :</label></br>
+								<input type="radio" name="FeatureVideo Disk Recorder" value="oui">Yes <input type="radio" name="FeatureVideo Disk Recorder" value = "non">No <input type="radio" name="FeatureVideo Disk Recorder" value = "non">Partial </br>
+								
+								</br>	
+								<label>Windows Media Center :</label></br>
+								<input type="radio" name="FeatureWindows Media Center" value="oui">Yes <input type="radio" name="FeatureWindows Media Center" value = "non">No <input type="radio" name="FeatureWindows Media Center" value = "non">Partial </br>
+								
+								</br>	
+								<label>NextPVR :</label></br>
+								<input type="radio" name="FeatureNextPVR" value="oui">Yes <input type="radio" name="FeatureNextPVR" value = "non">No <input type="radio" name="FeatureNextPVR" value = "non">Partial </br>
+								
+								</br>	
+								<label>Kodi (formerly XBMC) : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>MediaPhoenix/ShowShifter :</label></br>
+								<input type="radio" name="FeatureMediaPhoenix/ShowShifter" value="oui">Yes <input type="radio" name="FeatureMediaPhoenix/ShowShifter" value = "non">No <input type="radio" name="FeatureMediaPhoenix/ShowShifter" value = "non">Partial </br>
+								
+								</br>	
+								<label>EyeTV :</label></br>
+								<input type="radio" name="FeatureEyeTV" value="oui">Yes <input type="radio" name="FeatureEyeTV" value = "non">No <input type="radio" name="FeatureEyeTV" value = "non">Partial </br>
+								
+								</br>	
+								<label>MediaPortal :</label></br>
+								<input type="radio" name="FeatureMediaPortal" value="oui">Yes <input type="radio" name="FeatureMediaPortal" value = "non">No <input type="radio" name="FeatureMediaPortal" value = "non">Partial </br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Multiple TV tuner card support','CAM support','CableCARD support','Personalized intelligent recording and scheduling','Smartphone/Tablet syncing','Subscription free electronic program guide (EPG)','Automated commercial skipping','ATSC tuner support','Teletext','DRM support','Smartphone/Tablet remote control','DVB (T/T2, S/S2, C) tuner support','Smartphone/Tablet playback','Schedule timed recordings','power management','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['?','Unknown','No','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Using Plugin','Yes','Using Apps','External add-on','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Beyond TV :</label></br>
- 		 					 <input type="radio" name="FeatureBeyond TV" value="oui">oui <input type="radio" name="FeatureBeyond TV" value = "non">non </br>
-									
-						</br>	
-							<label>DVR : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>CenterStage : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>MythTV :</label></br>
- 		 					 <input type="radio" name="FeatureMythTV" value="oui">oui <input type="radio" name="FeatureMythTV" value = "non">non </br>
-									
-						</br>	
- 		 					<label>VBox@TV :</label></br>
- 		 					 <input type="radio" name="FeatureVBox@TV" value="oui">oui <input type="radio" name="FeatureVBox@TV" value = "non">non </br>
-									
-						</br>	
- 		 					<label>SageTV :</label></br>
- 		 					 <input type="radio" name="FeatureSageTV" value="oui">oui <input type="radio" name="FeatureSageTV" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Video Disk Recorder :</label></br>
- 		 					 <input type="radio" name="FeatureVideo Disk Recorder" value="oui">oui <input type="radio" name="FeatureVideo Disk Recorder" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Windows Media Center :</label></br>
- 		 					 <input type="radio" name="FeatureWindows Media Center" value="oui">oui <input type="radio" name="FeatureWindows Media Center" value = "non">non </br>
-									
-						</br>	
- 		 					<label>NextPVR :</label></br>
- 		 					 <input type="radio" name="FeatureNextPVR" value="oui">oui <input type="radio" name="FeatureNextPVR" value = "non">non </br>
-									
-						</br>	
-							<label>Kodi (formerly XBMC) : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>MediaPhoenix/ShowShifter :</label></br>
- 		 					 <input type="radio" name="FeatureMediaPhoenix/ShowShifter" value="oui">oui <input type="radio" name="FeatureMediaPhoenix/ShowShifter" value = "non">non </br>
-									
-						</br>	
- 		 					<label>EyeTV :</label></br>
- 		 					 <input type="radio" name="FeatureEyeTV" value="oui">oui <input type="radio" name="FeatureEyeTV" value = "non">non </br>
-									
-						</br>	
- 		 					<label>MediaPortal :</label></br>
- 		 					 <input type="radio" name="FeatureMediaPortal" value="oui">oui <input type="radio" name="FeatureMediaPortal" value = "non">non </br>
-									
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Multiple TV tuner card support','CAM support','CableCARD support','Personalized intelligent recording and scheduling','Smartphone/Tablet syncing','Subscription free electronic program guide (EPG)','Automated commercial skipping','ATSC tuner support','Teletext','DRM support','Smartphone/Tablet remote control','DVB (T/T2, S/S2, C) tuner support','Smartphone/Tablet playback','Schedule timed recordings','power management','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['?','Unknown','No','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Using Plugin','Yes','Using Apps','External add-on','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

@@ -1,118 +1,120 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of netbooks - Specifications</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Display size : </label></br> <input id="1" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Expected release date : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>CPU : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Weight 
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Display size : </label></br> <input id="1" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Expected release date : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>CPU : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Weight 
 [kg] :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >0.65</br>	
- 		 									<input type="checkbox" name="Feature" >1.29</br>	
-								
-						</br>	
-							<label>RAM
-[MB] :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >128 or 256</br>	
-								
-						</br>	
- 		 					<label>Linux OS choice(s) :</label></br>
- 		 					 <input type="radio" name="FeatureLinux OS choice(s)" value="oui">oui <input type="radio" name="FeatureLinux OS choice(s)" value = "non">non </br>
+											<input type="checkbox" name="Feature" >0.65</br>	
+											<input type="checkbox" name="Feature" >1.29</br>	
 									
-						</br>	
-							<label>Storage type : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Storage size
+								</br>	
+								<label>RAM
+[MB] :</label></br>
+											<input type="checkbox" name="Feature" >128 or 256</br>	
+									
+								</br>	
+								<label>Linux OS choice(s) :</label></br>
+								<input type="radio" name="FeatureLinux OS choice(s)" value="oui">Yes <input type="radio" name="FeatureLinux OS choice(s)" value = "non">No <input type="radio" name="FeatureLinux OS choice(s)" value = "non">Partial </br>
+								
+								</br>	
+								<label>Storage type : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Storage size
 [GB] : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Model : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Manufacturer : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Windows OS choice(s) : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Display : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Speed 
+								
+								</br>	
+								<label>Model : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Manufacturer : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Windows OS choice(s) : </label></br> <input id="11" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Display : </label></br> <input id="12" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Speed 
 [GHz] : </label></br> <input id="13" type="number" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['June/July 2009','November 2009','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Freescale i.MX31','Intel Atom Z530','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['SSD','HDD','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['2 to 8','120','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['GL-750','Nokia Booklet 3G','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Nokia','GNB','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['7','None (not x86 based)','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['800×480 touchscreen','1280×720','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['June/July 2009','November 2009','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Freescale i.MX31','Intel Atom Z530','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['SSD','HDD','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['2 to 8','120','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['GL-750','Nokia Booklet 3G','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['Nokia','GNB','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['7','None (not x86 based)','']
+								});
+								$("#8").typeahead({
+									name:"list8",
+									local : ['800×480 touchscreen','1280×720','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

@@ -1,118 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>List of AMD graphics processing units -  IGP (X2xx, 11xx Series) </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Memory clock (MHz) : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Memory - Bus width (bit) :</label></br>
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Config core : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Fillrate - MTexels/s : </label></br> <input id="5" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Core clock (MHz) : </label></br> <input id="6" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Memory (MB) : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Launch :</label></br>
+											<input type="checkbox" name="Feature" >March 11</br>	
+											<input type="checkbox" name="Feature" >2005 (Intel)</br>	
+											<input type="checkbox" name="Feature" >May 23</br>	
+											<input type="checkbox" name="Feature" >2006 (AMD)</br>	
+											<input type="checkbox" name="Feature" >Nov. 8</br>	
+											<input type="checkbox" name="Feature" >2004</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Fillrate - MPixels/s : </label></br> <input id="9" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Code name : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Fillrate - MOperations/s : </label></br> <input id="11" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Model : </label></br> <input id="12" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Memory - Bus type :</label></br>
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Fab (nm) : </label></br> <input id="14" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="15" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Fillrate - MVertices/s : </label></br> <input id="16" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['HT','HT, FSB','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['200-400 (DDR), 400-800 (DDR2)','200-400 (DDR), 200 (sideport)','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['4:2:2:2','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['16-128 system + 16 sideport','16-128 system','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['RS480 (metallo)','RS482 (grayskull)','RC400, RC410, RS400, RS415, RS485','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['Radeon Xpress 1150 (originally Xpress 200 for Intel)','Radeon Xpress 1100 (originally Xpress 200)','Radeon Xpress X200','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Memory clock (MHz) : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Memory - Bus width (bit) :</label></br>
-							
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Config core : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Fillrate - MTexels/s : </label></br> <input id="5" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Core clock (MHz) : </label></br> <input id="6" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Memory (MB) : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Launch :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >March 11</br>	
- 		 									<input type="checkbox" name="Feature" > 2005 (Intel)</br>	
- 		 									<input type="checkbox" name="Feature" > May 23</br>	
- 		 									<input type="checkbox" name="Feature" > 2006 (AMD)</br>	
- 		 									<input type="checkbox" name="Feature" >Nov. 8</br>	
- 		 									<input type="checkbox" name="Feature" > 2004</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Fillrate - MPixels/s : </label></br> <input id="9" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Code name : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Fillrate - MOperations/s : </label></br> <input id="11" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Model : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Memory - Bus type :</label></br>
-							
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Fab (nm) : </label></br> <input id="14" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="15" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Fillrate - MVertices/s : </label></br> <input id="16" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['HT','HT, FSB','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['200-400 (DDR), 400-800 (DDR2)','200-400 (DDR), 200 (sideport)','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['4:2:2:2','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['16-128 system + 16 sideport','16-128 system','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['RS480 (metallo)','RS482 (grayskull)','RC400, RC410, RS400, RS415, RS485','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Radeon Xpress 1150 (originally Xpress 200 for Intel)','Radeon Xpress 1100 (originally Xpress 200)','Radeon Xpress X200','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

@@ -1,102 +1,110 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of memory cards -  Technical details </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Products : </label></br> <input id="1" type="aaaa" name="Feature"></br>
-							
-						</br>	
-							<label>Max. Write Speed (MB/s) : </label></br> <input id="2" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Varieties : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Max. Read Speed (MB/s) : </label></br> <input id="4" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Card : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Controller chip : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label># of pins : </label></br> <input id="7" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Max. storage capacity (nom. in GiB) : </label></br> <input id="8" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Read/write cycles : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Theoretical max. capacity (nom. in GiB) : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Operating voltage (V) : </label></br> <input id="11" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Low-level access : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['','1,000,000','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['2 TiB
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Products : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Max. Write Speed (MB/s) : </label></br> <input id="2" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Varieties : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Max. Read Speed (MB/s) : </label></br> <input id="4" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Card : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Controller chip : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label># of pins : </label></br> <input id="7" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Max. storage capacity (nom. in GiB) : </label></br> <input id="8" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Read/write cycles : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Theoretical max. capacity (nom. in GiB) : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Operating voltage (V) : </label></br> <input id="11" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Low-level access : </label></br> <input id="12" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['P16','P6','P28','P10','P14','P23','P2','P17','P18','P13','P27','P21','P25','P1','P8','P19','P31','P12','P7','P15','P3','P11','P20','P29','P22','P26','P9','P5','P4','P24','P30','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['','1,000,000','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['2 TiB
 (2048 GiB)','No hardware-limit','128 PiB
 (134217728 GiB)','128','4','512 MiB
 (0.5 GiB)','128 MiB
 (0.125 GiB)','32','8','','2+ TiB
 (2+ GiB)','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['PRO-HG Duo','Standard','xC','MMCmicro','Type H','PRO','Micro (M2)','MMCplus','miniSD','MMCmobile','microSD','eMMC','Type M+','Full speed (USB 1)','SD (SDSC)','miniSDHC','','Type M','I','PRO Duo','SDHC','MMC','II','High speed (USB 2.0)','RS-MMC','SDXC','microSDXC','microSDHC','Super speed (USB 3.0)','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Memory Stick','xD','XQD','Secure Digital','SmartMedia','CompactFlash','MMC','USB','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['13','','Yes','11','8','7','No','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['NAND','','NOR/NAND','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['PRO-HG Duo','Standard','xC','MMCmicro','Type H','PRO','Micro (M2)','MMCplus','miniSD','MMCmobile','microSD','eMMC','Type M+','Full speed (USB 1)','SD (SDSC)','miniSDHC','','Type M','I','PRO Duo','SDHC','MMC','II','High speed (USB 2.0)','RS-MMC','SDXC','microSDXC','microSDHC','Super speed (USB 3.0)','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['Memory Stick','xD','XQD','Secure Digital','SmartMedia','CompactFlash','MMC','USB','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['13','','Yes','11','8','7','No','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['NAND','','NOR/NAND','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

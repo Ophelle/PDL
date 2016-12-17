@@ -1,98 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of OLAP Servers - System limits</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Infor BI OLAP Server : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>TM1 : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Jedox OLAP Server : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>OLAP Server : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Essbase : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>SAS OLAP Server : </label></br> <input id="6" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Microsoft Analysis Services :</label></br>
+											<input type="checkbox" name="Feature" >2</br>	
+											<input type="checkbox" name="Feature" >147</br>	
+											<input type="checkbox" name="Feature" >483</br>	
+											<input type="checkbox" name="Feature" >647</br>	
+									
+								</br>	
+								<label>MicroStrategy Intelligence Server : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>icCube :</label></br>
+											<input type="checkbox" name="Feature" >2</br>	
+											<input type="checkbox" name="Feature" >147</br>	
+											<input type="checkbox" name="Feature" >483</br>	
+											<input type="checkbox" name="Feature" >647</br>	
+									
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['# levels in hierarchy','# dimension members','# hierarchies in dimension','# cubes','# measures','# dimensions','# dimensions in cube','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['10,000,000','?','30','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Unrestricted','?','256','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['2^32','2^32 (32 bits) / 2^64 (64 bits)','250','?','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['?','256','20,000,000 (ASO), 1,000,000 (BSO)','24','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['?','Unrestricted','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Infor BI OLAP Server : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>TM1 : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Jedox OLAP Server : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>OLAP Server : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Essbase : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>SAS OLAP Server : </label></br> <input id="6" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Microsoft Analysis Services :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >2</br>	
- 		 									<input type="checkbox" name="Feature" >147</br>	
- 		 									<input type="checkbox" name="Feature" >483</br>	
- 		 									<input type="checkbox" name="Feature" >647</br>	
-								
-						</br>	
-							<label>MicroStrategy Intelligence Server : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>icCube :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >2</br>	
- 		 									<input type="checkbox" name="Feature" >147</br>	
- 		 									<input type="checkbox" name="Feature" >483</br>	
- 		 									<input type="checkbox" name="Feature" >647</br>	
-								
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['# levels in hierarchy','# dimension members','# hierarchies in dimension','# cubes','# measures','# dimensions','# dimensions in cube','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['10,000,000','?','30','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Unrestricted','?','256','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['2^32','2^32 (32 bits) / 2^64 (64 bits)','250','?','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['?','256','20,000,000 (ASO), 1,000,000 (BSO)','24','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['?','Unrestricted','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

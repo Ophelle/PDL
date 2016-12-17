@@ -1,111 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of consumer brain–computer interfaces - Comparison</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Sensors Interpret: :</label></br>
+											<input type="checkbox" name="Feature" >2 mental states (based on 4 brainwaves)</br>	
+											<input type="checkbox" name="Feature" >eyeblinks</br>	
+											<input type="checkbox" name="Feature" >7 sensors; 5 front (2 active</br>	
+											<input type="checkbox" name="Feature" >2 DRL</br>	
+											<input type="checkbox" name="Feature" >1 reference)</br>	
+											<input type="checkbox" name="Feature" >2 active behind ears</br>	
+											<input type="checkbox" name="Feature" >8 mental states</br>	
+											<input type="checkbox" name="Feature" >facial tension</br>	
+											<input type="checkbox" name="Feature" >eye movement & quiet eye</br>	
+											<input type="checkbox" name="Feature" >9 mental states</br>	
+											<input type="checkbox" name="Feature" >2 brainwaves (Alpha & Beta)</br>	
+											<input type="checkbox" name="Feature" >facial muscle and eye movements</br>	
+											<input type="checkbox" name="Feature" >frontal EEG</br>	
+											<input type="checkbox" name="Feature" >EOG sensor</br>	
+											<input type="checkbox" name="Feature" >open SDK</br>	
+											<input type="checkbox" name="Feature" >embedded 4-stage sleep tracking</br>	
+											<input type="checkbox" name="Feature" >2 LEDs near the eyes</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Electrodes : </label></br> <input id="2" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Released : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Peripheral :</label></br>
+								<input type="radio" name="FeaturePeripheral" value="oui">Yes <input type="radio" name="FeaturePeripheral" value = "non">No <input type="radio" name="FeaturePeripheral" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Producer : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Price : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Device : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>SDK :</label></br>
+								<input type="radio" name="FeatureSDK" value="oui">Yes <input type="radio" name="FeatureSDK" value = "non">No <input type="radio" name="FeatureSDK" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Notes : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Interface : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['21 December 2009; 5 years ago','May 2008; 7 years ago; No longer being manufactured (EOL).','21 June 2009; 5 years ago','1 December 2011; 3 years ago','October 2014','March 2007; 8 years ago','iOS apps available now','Nov 2014','5 January 2011; 4 years ago (Windows and iOS apps available now, Android app available soon)','Expected April 2015','July 2015','Shipped April 2014','SEP 2014','21 March 2003; 12 years ago','Expected mid-October 2014','21 March 2011; 4 years ago','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Melon','HyperNeuro','NeuroSky','Uncle Milton (Neurosky partner','Interactive Productline','iwinks','PLX Devices','OCZ Technology','OpenBCI project','MyndPlay','InteraXon','iFocusBand','Emotiv Lifescience','Emotiv Systems','Mattel (Neurosky partner','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['$399-499','$449 or $799','$45','$199','$20,000','$149','$230','$299','$310','$50','$90','$100','$99.95','$158','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['MyndPlay BrainBand (Uses NeuroSky chips )','XWave headset (uses NeuroSky chips)','Emotiv Insight','Melon Headband','XWave Sonic (uses NeuroSky chips)','Mindball','HiBrain','OpenBCI','Neural Impulse Actuator','MindWave','Star Wars Force Trainer (based on NeuroSky chips)','Emotiv EPOC','MindSet','Aurora Dream Headband','iFocusBand','Mindflex (Uses NeuroSky chips)','Muse','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['','Comes with brain training app designed to reduce stress and improve focus.','A headband and mobile app to measure your focus','Discontinued','Soft headband, uses conductive gel for ear-clip','Open hardware project. Boards can be daisy chained together to increase electrode count.','Healthcare. Golden alloy active electrode.','Consumer Sleep Device','Designed to look like a normal sports headband, no longer available','Soft woven sensors,  audio feedback.','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['','Bluetooth Low Energy','Bluetooth','Bluetooth Low Energy / USB / SD Card','Bluetooth or RF','Bluetooth 4.0','Bluetooth 4.0 LE.','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Sensors Interpret: :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >2 mental states (based on 4 brainwaves)</br>	
- 		 									<input type="checkbox" name="Feature" > eyeblinks</br>	
- 		 									<input type="checkbox" name="Feature" >7 sensors; 5 front (2 active</br>	
- 		 									<input type="checkbox" name="Feature" > 2 DRL</br>	
- 		 									<input type="checkbox" name="Feature" > 1 reference)</br>	
- 		 									<input type="checkbox" name="Feature" > 2 active behind ears</br>	
- 		 									<input type="checkbox" name="Feature" >8 mental states</br>	
- 		 									<input type="checkbox" name="Feature" > facial tension</br>	
- 		 									<input type="checkbox" name="Feature" > eye movement & quiet eye</br>	
- 		 									<input type="checkbox" name="Feature" >9 mental states</br>	
- 		 									<input type="checkbox" name="Feature" >2 brainwaves (Alpha & Beta)</br>	
- 		 									<input type="checkbox" name="Feature" > facial muscle and eye movements</br>	
- 		 									<input type="checkbox" name="Feature" >frontal EEG</br>	
- 		 									<input type="checkbox" name="Feature" >EOG sensor</br>	
- 		 									<input type="checkbox" name="Feature" > open SDK</br>	
- 		 									<input type="checkbox" name="Feature" > embedded 4-stage sleep tracking</br>	
- 		 									<input type="checkbox" name="Feature" > 2 LEDs near the eyes</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Electrodes : </label></br> <input id="2" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Released : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Peripheral :</label></br>
- 		 					 <input type="radio" name="FeaturePeripheral" value="oui">oui <input type="radio" name="FeaturePeripheral" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Producer : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Price : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Device : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>SDK :</label></br>
- 		 					 <input type="radio" name="FeatureSDK" value="oui">oui <input type="radio" name="FeatureSDK" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Notes : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Interface : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['21 December 2009; 5 years ago','May 2008; 7 years ago; No longer being manufactured (EOL).','21 June 2009; 5 years ago','1 December 2011; 3 years ago','October 2014','March 2007; 8 years ago','iOS apps available now','Nov 2014','5 January 2011; 4 years ago (Windows and iOS apps available now, Android app available soon)','Expected April 2015','July 2015','Shipped April 2014','SEP 2014','21 March 2003; 12 years ago','Expected mid-October 2014','21 March 2011; 4 years ago','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Melon','HyperNeuro','NeuroSky','Uncle Milton (Neurosky partner','Interactive Productline','iwinks','PLX Devices','OCZ Technology','OpenBCI project','MyndPlay','InteraXon','iFocusBand','Emotiv Lifescience','Emotiv Systems','Mattel (Neurosky partner','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['$399-499','$449 or $799','$45','$199','$20,000','$149','$230','$299','$310','$50','$90','$100','$99.95','$158','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['MyndPlay BrainBand (Uses NeuroSky chips )','XWave headset (uses NeuroSky chips)','Emotiv Insight','Melon Headband','XWave Sonic (uses NeuroSky chips)','Mindball','HiBrain','OpenBCI','Neural Impulse Actuator','MindWave','Star Wars Force Trainer (based on NeuroSky chips)','Emotiv EPOC','MindSet','Aurora Dream Headband','iFocusBand','Mindflex (Uses NeuroSky chips)','Muse','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['','Comes with brain training app designed to reduce stress and improve focus.','A headband and mobile app to measure your focus','Discontinued','Soft headband, uses conductive gel for ear-clip','Open hardware project. Boards can be daisy chained together to increase electrode count.','Healthcare. Golden alloy active electrode.','Consumer Sleep Device','Designed to look like a normal sports headband, no longer available','Soft woven sensors,  audio feedback.','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['','Bluetooth Low Energy','Bluetooth','Bluetooth Low Energy / USB / SD Card','Bluetooth or RF','Bluetooth 4.0','Bluetooth 4.0 LE.','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

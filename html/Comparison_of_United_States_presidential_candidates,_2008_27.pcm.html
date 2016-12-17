@@ -1,80 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of United States presidential candidates, 2008 - The environment</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Ralph Nader : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Nader is credited with helping the Clean Air Act (1970) and Safe Drinking Water Act (1974). He was one of the first public figures to advocate renewable energy during the 1970s. Nader supports mandatory standards for recycling and precycling, especially in areas of government control. : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Bob Barr : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>McCain's stances on global warming and other environmental issues have often put him at odds with the Bush administration and other Republicans. For example, he has generally opposed drilling in the Arctic National Wildlife Refuge. According to the League of Conservation Voters' 2006 National Environmental Scorecard, McCain took an "anti-environment" stance on four of seven environmental resolutions during the second session of the 109th congress. The four resolutions dealt with issues such as offshore drilling, an Arctic national wildlife refuge, low-income energy assistance, and environmental funding. McCain's measures to lower auto emissions include higher fines for not complying with CAFE standards, calling for a level playing field for all alcohol-based biofuels, issuing a Clean Car Challenge to automakers (a US$5,000 dollar tax credit for each and every customer who buys a zero-emissions car) and awarding a substantial prize to the auto company that develops a next-generation car battery. :</label></br>
+											<input type="checkbox" name="Feature" >Obama has a 'New Energy for America' plan and he has pledged to cut greenhouse gas emissions 80 percent below 1990 levels by 2050 by forcing a market-based cap-and-trade system</br>	
+											<input type="checkbox" name="Feature" >recommitting federal resources to public mass transportation and carbon sequestration (incentives to plant trees</br>	
+											<input type="checkbox" name="Feature" >restore grasslands or undertake farming practices).  Obama also has plans for improving air and water quality through reduced carbon emissions. Obama worked as a member of the US Senate Committee on Environment and Public Works during the 109th Congress. At least 30 percent of federal government's electricity would come from renewable sources by 2020. Also</br>	
+											<input type="checkbox" name="Feature" >he wants to create a 'Global Energy Forum' of the largest energy consuming nations (G8+5). The League of Conservation Voters has given Obama the highest lifetime rating of anyone currently running for president.</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Barr pledges to eliminate restrictions that inhibit energy production, as well as all special privileges for the production of politically favored fuels, such as ethanol; supports the exploration and production of America’s abundant domestic resources, including oil in the Outer Continental Shelf and Arctic National Wildlife Refuge, and alternative sources such as oil shale, which would lower costs to the consumer and assure more adequate and consistent supplies. :</label></br>
+											<input type="checkbox" name="Feature" >McKinney plans to create a cap on production and consumption as well as add organic farming</br>	
+											<input type="checkbox" name="Feature" >sustainability</br>	
+											<input type="checkbox" name="Feature" >and GM to the current Farm Bill. She also plans to assess toxic levels after Hurricane Katrina and Hurricane Rita. She voted yes on further AMTRAK funding and no on changing the Endangered Species Act of 1973. She also voted down a bill that allowed commercial logging on public land.</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>John McCain : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Chuck Baldwin','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Cynthia McKinney','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Barack Obama','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Ralph Nader : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Nader is credited with helping the Clean Air Act (1970) and Safe Drinking Water Act (1974). He was one of the first public figures to advocate renewable energy during the 1970s. Nader supports mandatory standards for recycling and precycling, especially in areas of government control. : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Bob Barr : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>McCain's stances on global warming and other environmental issues have often put him at odds with the Bush administration and other Republicans. For example, he has generally opposed drilling in the Arctic National Wildlife Refuge. According to the League of Conservation Voters' 2006 National Environmental Scorecard, McCain took an "anti-environment" stance on four of seven environmental resolutions during the second session of the 109th congress. The four resolutions dealt with issues such as offshore drilling, an Arctic national wildlife refuge, low-income energy assistance, and environmental funding. McCain's measures to lower auto emissions include higher fines for not complying with CAFE standards, calling for a level playing field for all alcohol-based biofuels, issuing a Clean Car Challenge to automakers (a US$5,000 dollar tax credit for each and every customer who buys a zero-emissions car) and awarding a substantial prize to the auto company that develops a next-generation car battery. :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Obama has a 'New Energy for America' plan and he has pledged to cut greenhouse gas emissions 80 percent below 1990 levels by 2050 by forcing a market-based cap-and-trade system</br>	
- 		 									<input type="checkbox" name="Feature" > recommitting federal resources to public mass transportation and carbon sequestration (incentives to plant trees</br>	
- 		 									<input type="checkbox" name="Feature" > restore grasslands or undertake farming practices).  Obama also has plans for improving air and water quality through reduced carbon emissions. Obama worked as a member of the US Senate Committee on Environment and Public Works during the 109th Congress. At least 30 percent of federal government's electricity would come from renewable sources by 2020. Also</br>	
- 		 									<input type="checkbox" name="Feature" > he wants to create a 'Global Energy Forum' of the largest energy consuming nations (G8+5). The League of Conservation Voters has given Obama the highest lifetime rating of anyone currently running for president.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Barr pledges to eliminate restrictions that inhibit energy production, as well as all special privileges for the production of politically favored fuels, such as ethanol; supports the exploration and production of America’s abundant domestic resources, including oil in the Outer Continental Shelf and Arctic National Wildlife Refuge, and alternative sources such as oil shale, which would lower costs to the consumer and assure more adequate and consistent supplies. :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >McKinney plans to create a cap on production and consumption as well as add organic farming</br>	
- 		 									<input type="checkbox" name="Feature" > sustainability</br>	
- 		 									<input type="checkbox" name="Feature" > and GM to the current Farm Bill. She also plans to assess toxic levels after Hurricane Katrina and Hurricane Rita. She voted yes on further AMTRAK funding and no on changing the Endangered Species Act of 1973. She also voted down a bill that allowed commercial logging on public land.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>John McCain : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Chuck Baldwin','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Cynthia McKinney','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Barack Obama','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

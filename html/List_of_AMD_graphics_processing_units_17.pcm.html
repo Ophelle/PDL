@@ -1,132 +1,135 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>List of AMD graphics processing units -  All-In-Wonder Series </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>API (version) - OpenGL : </label></br> <input id="2" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Memory clock (MHz) : </label></br> <input id="3" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Config core : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Memory - Bus width (bit) : </label></br> <input id="5" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>API (version) - DirectX : </label></br> <input id="6" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Core clock (MHz) : </label></br> <input id="7" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Memory (MB) : </label></br> <input id="8" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Fillrate - MTextels/s : </label></br> <input id="9" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Launch :</label></br>
+											<input type="checkbox" name="Feature" >Apr 7</br>	
+											<input type="checkbox" name="Feature" >2003</br>	
+											<input type="checkbox" name="Feature" >Aug 30</br>	
+											<input type="checkbox" name="Feature" >2001</br>	
+											<input type="checkbox" name="Feature" >Dec 22</br>	
+											<input type="checkbox" name="Feature" >2005</br>	
+											<input type="checkbox" name="Feature" >Mar 31</br>	
+											<input type="checkbox" name="Feature" >Jan 26</br>	
+											<input type="checkbox" name="Feature" >2004</br>	
+											<input type="checkbox" name="Feature" >Jun 28</br>	
+											<input type="checkbox" name="Feature" >2008</br>	
+											<input type="checkbox" name="Feature" >Jan 22</br>	
+											<input type="checkbox" name="Feature" >2002</br>	
+											<input type="checkbox" name="Feature" >Jul 5</br>	
+											<input type="checkbox" name="Feature" >Sept 9</br>	
+											<input type="checkbox" name="Feature" >Dec 2</br>	
+											<input type="checkbox" name="Feature" >Aug 8</br>	
+											<input type="checkbox" name="Feature" >Apr 4</br>	
+											<input type="checkbox" name="Feature" >Nov 21</br>	
+											<input type="checkbox" name="Feature" >Aug 05</br>	
+											<input type="checkbox" name="Feature" >Jul 31</br>	
+											<input type="checkbox" name="Feature" >2000</br>	
+											<input type="checkbox" name="Feature" >Dec 30</br>	
+											<input type="checkbox" name="Feature" >Jan 24</br>	
+											<input type="checkbox" name="Feature" >2006</br>	
+											<input type="checkbox" name="Feature" >Nov 1</br>	
+											<input type="checkbox" name="Feature" >Sept 21</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Fillrate - MPixels/s : </label></br> <input id="11" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Code name : </label></br> <input id="12" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Model : </label></br> <input id="13" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Memory - Bus type : </label></br> <input id="14" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Fab (nm) : </label></br> <input id="15" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="16" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Fillrate - MVertices/s : </label></br> <input id="17" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['AGP 8x','AGP 4x','PCI-E x16','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['4:2:8:4','4:2:4:4','48:8:16:16','4:1:4:4','8:4:8:8','16:8:16:16','2:1:6:2','16:6:16:16','8:6:8:16','2:0:6:2','4:4:4:8','120:8:4','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['R430','RV350','R350','RV635','R100','RV250','RV370','R580','R200','R420','RV200','R300','RV515','RV360','R520','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['All-In-Wonder X1800 XL','All-In-Wonder 9600','All-In-Wonder X1900','All-In-Wonder 9200','All-In-Wonder 9700 Pro','All-In-Wonder 9200 SE','All-In-Wonder 9800 SE','All-In-Wonder 2006','All-In-Wonder X800 XT','All-In-Wonder 9000 Pro','All-In-Wonder HD 3650','All-In-Wonder 8500','All-In-Wonder 9600 XT','All-In-Wonder 9800 Pro','All-In-Wonder VE','All-In-Wonder X800 XL','All-In-Wonder 8500 DV','All-In-Wonder Radeon','All-In-Wonder X600 Pro','All-In-Wonder X800 GT','All-In-Wonder 7500','All-In-Wonder 9600 Pro','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>API (version) - OpenGL : </label></br> <input id="2" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Memory clock (MHz) : </label></br> <input id="3" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Config core : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Memory - Bus width (bit) : </label></br> <input id="5" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>API (version) - DirectX : </label></br> <input id="6" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Core clock (MHz) : </label></br> <input id="7" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Memory (MB) : </label></br> <input id="8" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Fillrate - MTextels/s : </label></br> <input id="9" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Launch :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Apr 7</br>	
- 		 									<input type="checkbox" name="Feature" > 2003</br>	
- 		 									<input type="checkbox" name="Feature" >Aug 30</br>	
- 		 									<input type="checkbox" name="Feature" > 2001</br>	
- 		 									<input type="checkbox" name="Feature" >Dec 22</br>	
- 		 									<input type="checkbox" name="Feature" > 2005</br>	
- 		 									<input type="checkbox" name="Feature" >Mar 31</br>	
- 		 									<input type="checkbox" name="Feature" >Jan 26</br>	
- 		 									<input type="checkbox" name="Feature" > 2004</br>	
- 		 									<input type="checkbox" name="Feature" >Jun 28</br>	
- 		 									<input type="checkbox" name="Feature" > 2008</br>	
- 		 									<input type="checkbox" name="Feature" >Jan 22</br>	
- 		 									<input type="checkbox" name="Feature" > 2002</br>	
- 		 									<input type="checkbox" name="Feature" >Jul 5</br>	
- 		 									<input type="checkbox" name="Feature" >Sept 9</br>	
- 		 									<input type="checkbox" name="Feature" >Dec 2</br>	
- 		 									<input type="checkbox" name="Feature" >Aug 8</br>	
- 		 									<input type="checkbox" name="Feature" >Apr 4</br>	
- 		 									<input type="checkbox" name="Feature" >Nov 21</br>	
- 		 									<input type="checkbox" name="Feature" >Aug 05</br>	
- 		 									<input type="checkbox" name="Feature" >Jul 31</br>	
- 		 									<input type="checkbox" name="Feature" > 2000</br>	
- 		 									<input type="checkbox" name="Feature" >Dec 30</br>	
- 		 									<input type="checkbox" name="Feature" >Jan 24</br>	
- 		 									<input type="checkbox" name="Feature" > 2006</br>	
- 		 									<input type="checkbox" name="Feature" >Nov 1</br>	
- 		 									<input type="checkbox" name="Feature" >Sept 21</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Fillrate - MPixels/s : </label></br> <input id="11" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Code name : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Model : </label></br> <input id="13" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Memory - Bus type : </label></br> <input id="14" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Fab (nm) : </label></br> <input id="15" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="16" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Fillrate - MVertices/s : </label></br> <input id="17" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['AGP 8x','AGP 4x','PCI-E x16','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['4:2:8:4','4:2:4:4','48:8:16:16','4:1:4:4','8:4:8:8','16:8:16:16','2:1:6:2','16:6:16:16','8:6:8:16','2:0:6:2','4:4:4:8','120:8:4','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['R430','RV350','R350','RV635','R100','RV250','RV370','R580','R200','R420','RV200','R300','RV515','RV360','R520','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['All-In-Wonder X1800 XL','All-In-Wonder 9600','All-In-Wonder X1900','All-In-Wonder 9200','All-In-Wonder 9700 Pro','All-In-Wonder 9200 SE','All-In-Wonder 9800 SE','All-In-Wonder 2006','All-In-Wonder X800 XT','All-In-Wonder 9000 Pro','All-In-Wonder HD 3650','All-In-Wonder 8500','All-In-Wonder 9600 XT','All-In-Wonder 9800 Pro','All-In-Wonder VE','All-In-Wonder X800 XL','All-In-Wonder 8500 DV','All-In-Wonder Radeon','All-In-Wonder X600 Pro','All-In-Wonder X800 GT','All-In-Wonder 7500','All-In-Wonder 9600 Pro','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

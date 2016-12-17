@@ -1,71 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of photo stitching software -  Export options </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Flash viewer :</label></br>
+								<input type="radio" name="FeatureFlash viewer" value="oui">Yes <input type="radio" name="FeatureFlash viewer" value = "non">No <input type="radio" name="FeatureFlash viewer" value = "non">Partial </br>
+								
+								</br>	
+								<label>Java viewer :</label></br>
+								<input type="radio" name="FeatureJava viewer" value="oui">Yes <input type="radio" name="FeatureJava viewer" value = "non">No <input type="radio" name="FeatureJava viewer" value = "non">Partial </br>
+								
+								</br>	
+								<label>QTVR :</label></br>
+								<input type="radio" name="FeatureQTVR" value="oui">Yes <input type="radio" name="FeatureQTVR" value = "non">No <input type="radio" name="FeatureQTVR" value = "non">Partial </br>
+								
+								</br>	
+								<label>HTML 5* :</label></br>
+								<input type="radio" name="FeatureHTML 5*" value="oui">Yes <input type="radio" name="FeatureHTML 5*" value = "non">No <input type="radio" name="FeatureHTML 5*" value = "non">Partial </br>
+								
+								</br>	
+								<label>Notes : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Raster image (JPEG, TIFF, etc.) :</label></br>
+								<input type="radio" name="FeatureRaster image (JPEG, TIFF, etc.)" value="oui">Yes <input type="radio" name="FeatureRaster image (JPEG, TIFF, etc.)" value = "non">No <input type="radio" name="FeatureRaster image (JPEG, TIFF, etc.)" value = "non">Partial </br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','Includes ActiveX viewer & export.','Includes free Flash and HTML5 viewer.','Publish to Photosynth website, Silverlight based viewer.','(*) Planar viewer.','3D viewer in stitcher / Publishing to gigapan.org 2D flash viewer / Embeddable flash viewer','Embedding of panoramas into executables () and Microsoft Office files. ActiveX viewer.','VRML export.','IVR export.','Flickr export.','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['PTgui / PTgui Pro','Pixtra PanoStitcher','Panorama Perfect','PanoEdit','Autostitch','PanoramaStudio 2 / pro','PhotoFit Harmony / Premium','PTAssembler','PanoramaMaker','PanaVue ImageAssembler Std. / Pro. / Ent.','SharpStitch','Pixtra OmniStitcher','Panoweaver Standard / Professional','Calico','Panorama Composer 3','Dermandar','Image Composite Editor','The Panorama Factory v5','hugin','COOL 360','PixMaker Lite / Home / Business','Stitcher Unlimited 2009','PanoramaPlus X4','Autopano Pro / Giga / Server','PanoramaBuilder 7.0 / PanoramaBuilder 7.0 Pro','D Joiner','i2Align Quickage Express / Pro','Gigapan Stitch 1.0','Photovista Panorama','360 Panorama Professional','ADG Panorama Tools / Pro','3DVista Stitcher 3.0','VRstitcher Fisheye Pro','AIPR Lite 1','Panorama Maker 6','Photoshop','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Flash viewer :</label></br>
- 		 					 <input type="radio" name="FeatureFlash viewer" value="oui">oui <input type="radio" name="FeatureFlash viewer" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Java viewer :</label></br>
- 		 					 <input type="radio" name="FeatureJava viewer" value="oui">oui <input type="radio" name="FeatureJava viewer" value = "non">non </br>
-									
-						</br>	
- 		 					<label>QTVR :</label></br>
- 		 					 <input type="radio" name="FeatureQTVR" value="oui">oui <input type="radio" name="FeatureQTVR" value = "non">non </br>
-									
-						</br>	
- 		 					<label>HTML 5* :</label></br>
- 		 					 <input type="radio" name="FeatureHTML 5*" value="oui">oui <input type="radio" name="FeatureHTML 5*" value = "non">non </br>
-									
-						</br>	
-							<label>Notes : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Name : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Raster image (JPEG, TIFF, etc.) :</label></br>
- 		 					 <input type="radio" name="FeatureRaster image (JPEG, TIFF, etc.)" value="oui">oui <input type="radio" name="FeatureRaster image (JPEG, TIFF, etc.)" value = "non">non </br>
-									
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['','Includes ActiveX viewer & export.','Includes free Flash and HTML5 viewer.','Publish to Photosynth website, Silverlight based viewer.','(*) Planar viewer.','3D viewer in stitcher / Publishing to gigapan.org 2D flash viewer / Embeddable flash viewer','Embedding of panoramas into executables () and Microsoft Office files. ActiveX viewer.','VRML export.','IVR export.','Flickr export.','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['PTgui / PTgui Pro','Pixtra PanoStitcher','Panorama Perfect','PanoEdit','Autostitch','PanoramaStudio 2 / pro','PhotoFit Harmony / Premium','PTAssembler','PanoramaMaker','PanaVue ImageAssembler Std. / Pro. / Ent.','SharpStitch','Pixtra OmniStitcher','Panoweaver Standard / Professional','Calico','Panorama Composer 3','Dermandar','Image Composite Editor','The Panorama Factory v5','hugin','COOL 360','PixMaker Lite / Home / Business','Stitcher Unlimited 2009','PanoramaPlus X4','Autopano Pro / Giga / Server','PanoramaBuilder 7.0 / PanoramaBuilder 7.0 Pro','D Joiner','i2Align Quickage Express / Pro','Gigapan Stitch 1.0','Photovista Panorama','360 Panorama Professional','ADG Panorama Tools / Pro','3DVista Stitcher 3.0','VRstitcher Fisheye Pro','AIPR Lite 1','Panorama Maker 6','Photoshop','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

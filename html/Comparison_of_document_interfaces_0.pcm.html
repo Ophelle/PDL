@@ -1,74 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of document interfaces</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>use simultaneously different application :</label></br>
+								<input type="radio" name="Featureuse simultaneously different application" value="oui">Yes <input type="radio" name="Featureuse simultaneously different application" value = "non">No <input type="radio" name="Featureuse simultaneously different application" value = "non">Partial </br>
+								
+								</br>	
+								<label>Concept : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>memory efficiency :</label></br>
+								<input type="radio" name="Featurememory efficiency" value="oui">Yes <input type="radio" name="Featurememory efficiency" value = "non">No <input type="radio" name="Featurememory efficiency" value = "non">Partial </br>
+								
+								</br>	
+								<label>easy to view all document labels of same type document : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>small-sized content :</label></br>
+								<input type="radio" name="Featuresmall-sized content" value="oui">Yes <input type="radio" name="Featuresmall-sized content" value = "non">No <input type="radio" name="Featuresmall-sized content" value = "non">Partial </br>
+								
+								</br>	
+								<label>Applications : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>multiple type document :</label></br>
+								<input type="radio" name="Featuremultiple type document" value="oui">Yes <input type="radio" name="Featuremultiple type document" value = "non">No <input type="radio" name="Featuremultiple type document" value = "non">Partial </br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['MDI: Window splitting','MDI: Tabbed document interface','Single document interface','MDI: Overlappable windows','MDI: IDE-style interface','Controlled Single Document Interface','Single document window splitting','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['depends on Window System','depends on Application','Yes','No','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['','Opera','Eclipse','Inkscape','GIMP','gedit, Firefox','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>use simultaneously different application :</label></br>
- 		 					 <input type="radio" name="Featureuse simultaneously different application" value="oui">oui <input type="radio" name="Featureuse simultaneously different application" value = "non">non </br>
-									
-						</br>	
-							<label>Concept : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>memory efficiency :</label></br>
- 		 					 <input type="radio" name="Featurememory efficiency" value="oui">oui <input type="radio" name="Featurememory efficiency" value = "non">non </br>
-									
-						</br>	
-							<label>easy to view all document labels of same type document : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>small-sized content :</label></br>
- 		 					 <input type="radio" name="Featuresmall-sized content" value="oui">oui <input type="radio" name="Featuresmall-sized content" value = "non">non </br>
-									
-						</br>	
-							<label>Applications : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>multiple type document :</label></br>
- 		 					 <input type="radio" name="Featuremultiple type document" value="oui">oui <input type="radio" name="Featuremultiple type document" value = "non">non </br>
-									
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['MDI: Window splitting','MDI: Tabbed document interface','Single document interface','MDI: Overlappable windows','MDI: IDE-style interface','Controlled Single Document Interface','Single document window splitting','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['depends on Window System','depends on Application','Yes','No','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['','Opera','Eclipse','Inkscape','GIMP','gedit, Firefox','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

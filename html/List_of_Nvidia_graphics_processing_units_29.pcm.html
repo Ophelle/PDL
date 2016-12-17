@@ -1,136 +1,136 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>List of Nvidia graphics processing units - GeForce 8M (8xxxM) Series</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Fillrate - Texture (GT/s) : </label></br> <input id="2" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Clock speed - Shader (MHz) : </label></br> <input id="3" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>TDP (watts) : </label></br> <input id="4" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Memory - Bus width (bit) : </label></br> <input id="5" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Clock speed - Core (MHz) : </label></br> <input id="6" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Core config : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Clock speed - Memory (MHz) : </label></br> <input id="8" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Memory (MB) :</label></br>
+											<input type="checkbox" name="Feature" >256 </br>	
+											<input type="checkbox" name="Feature" >512</br>	
+											<input type="checkbox" name="Feature" >128 </br>	
+											<input type="checkbox" name="Feature" >256</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Launch : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Processing Power GFLOPS : </label></br> <input id="11" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Code name : </label></br> <input id="12" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>API support (version) - DirectX : </label></br> <input id="13" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>API support (version) - OpenGL : </label></br> <input id="14" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Model : </label></br> <input id="15" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Memory - Bus type :</label></br>
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Fab (nm) : </label></br> <input id="17" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>GFLOPS/W : </label></br> <input id="18" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="19" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Notes :</label></br>
+											<input type="checkbox" name="Feature" >Scalable Link Interface</br>	
+											<input type="checkbox" name="Feature" >PureVideo HD with VP2</br>	
+											<input type="checkbox" name="Feature" >BSP Engine</br>	
+											<input type="checkbox" name="Feature" >and AES128 Engine</br>	
+											<input type="checkbox" name="Feature" >PureVideo HD with VP3</br>	
+											<input type="checkbox" name="Feature" >Full H.264 </br>	
+											<input type="checkbox" name="Feature" >VC-1 </br>	
+											<input type="checkbox" name="Feature" >MPEG-2 HW Decode</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Fillrate - Pixel (GP/s) : </label></br> <input id="21" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['PCIe 2.0 x16','Integrated (PCIe 2.0 x16)','PCIe x16','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['64:32:16','96:48:16','32:16:8','16:8:4','8:8:4','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['May 2007','June 2008','June 2007','November 2007','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['NB8P(G84)','MCP77MV, MCP79MVL','NB8M(G86)','NB8P(G92)','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['GeForce 8600M GT','GeForce 8400M GS','GeForce 8400M GT','GeForce 8700M GT','GeForce 8800M GTS','GeForce 8600M GS','GeForce 8200M G','GeForce 8400M G','GeForce 8800M GTX','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Fillrate - Texture (GT/s) : </label></br> <input id="2" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Clock speed - Shader (MHz) : </label></br> <input id="3" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>TDP (watts) : </label></br> <input id="4" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Memory - Bus width (bit) : </label></br> <input id="5" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Clock speed - Core (MHz) : </label></br> <input id="6" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Core config : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Clock speed - Memory (MHz) : </label></br> <input id="8" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Memory (MB) :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >256 </br>	
- 		 									<input type="checkbox" name="Feature" > 512</br>	
- 		 									<input type="checkbox" name="Feature" >128 </br>	
- 		 									<input type="checkbox" name="Feature" > 256</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Launch : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Processing Power GFLOPS : </label></br> <input id="11" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Code name : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>API support (version) - DirectX : </label></br> <input id="13" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>API support (version) - OpenGL : </label></br> <input id="14" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Model : </label></br> <input id="15" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Memory - Bus type :</label></br>
-							
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Fab (nm) : </label></br> <input id="17" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>GFLOPS/W : </label></br> <input id="18" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="19" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Notes :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Scalable Link Interface</br>	
- 		 									<input type="checkbox" name="Feature" > PureVideo HD with VP2</br>	
- 		 									<input type="checkbox" name="Feature" > BSP Engine</br>	
- 		 									<input type="checkbox" name="Feature" > and AES128 Engine</br>	
- 		 									<input type="checkbox" name="Feature" >PureVideo HD with VP2</br>	
- 		 									<input type="checkbox" name="Feature" >PureVideo HD with VP3</br>	
- 		 									<input type="checkbox" name="Feature" > Full H.264 </br>	
- 		 									<input type="checkbox" name="Feature" > VC-1 </br>	
- 		 									<input type="checkbox" name="Feature" > MPEG-2 HW Decode</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Fillrate - Pixel (GP/s) : </label></br> <input id="21" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['PCIe 2.0 x16','Integrated (PCIe 2.0 x16)','PCIe x16','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['64:32:16','96:48:16','32:16:8','16:8:4','8:8:4','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['May 2007','June 2008','June 2007','November 2007','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['NB8P(G84)','MCP77MV, MCP79MVL','NB8M(G86)','NB8P(G92)','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['GeForce 8600M GT','GeForce 8400M GS','GeForce 8400M GT','GeForce 8700M GT','GeForce 8800M GTS','GeForce 8600M GS','GeForce 8200M G','GeForce 8400M G','GeForce 8800M GTX','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

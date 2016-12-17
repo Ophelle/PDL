@@ -1,73 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of behavioral experiment software</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Scripting language :</label></br>
+								<input type="radio" name="FeatureScripting language" value="oui">Yes <input type="radio" name="FeatureScripting language" value = "non">No <input type="radio" name="FeatureScripting language" value = "non">Partial </br>
+								
+								</br>	
+								<label>License type : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>GUI :</label></br>
+								<input type="radio" name="FeatureGUI" value="oui">Yes <input type="radio" name="FeatureGUI" value = "non">No <input type="radio" name="FeatureGUI" value = "non">Partial </br>
+								
+								</br>	
+								<label>Operating System : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Library : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Free Software','Proprietary Software','Unknown','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Linux Mac Microsoft Windows','Mac','Microsoft Windows','Web-based','Mac Microsoft Windows','Microsoft Windows Web-based','Microsoft Windows Linux','Microsoft Windows iOS','Linux','Linux Mac','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['No','C/C++','Open-source software','Python','C','MATLAB','PHP','JavaScript','Java','HTML','Unknown','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Expo','PsyScope X','Inquisit','DirectRT','Tatool Java','DMDX  and Visual DMDX','Vision egg','PsychoPy','PEBL','E-Prime','EventIDE','QRTEngine','Paradigm','Webexp2','Tatool Web','OpenSesame','Presentation','Psychtoolbox for MATLAB','Psykinematix','Superlab','Tscope','PsychJava','z-Tree','PsyToolkit','PyEPL','Expyriment','jsPsych','Experimental Run-Time System','SoPHIE','SPIC Software','Visual DMDX  is a GUI to DMDX','WEXTOR','Cogent for MATLAB','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Scripting language :</label></br>
- 		 					 <input type="radio" name="FeatureScripting language" value="oui">oui <input type="radio" name="FeatureScripting language" value = "non">non </br>
-									
-						</br>	
-							<label>License type : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>GUI :</label></br>
- 		 					 <input type="radio" name="FeatureGUI" value="oui">oui <input type="radio" name="FeatureGUI" value = "non">non </br>
-									
-						</br>	
-							<label>Operating System : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Library : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Name : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Free Software','Proprietary Software','Unknown','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Linux Mac Microsoft Windows','Mac','Microsoft Windows','Web-based','Mac Microsoft Windows','Microsoft Windows Web-based','Microsoft Windows Linux','Microsoft Windows iOS','Linux','Linux Mac','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','C/C++','Open-source software','Python','C','MATLAB','PHP','JavaScript','Java','HTML','Unknown','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Expo','PsyScope X','Inquisit','DirectRT','Tatool Java','DMDX  and Visual DMDX','Vision egg','PsychoPy','PEBL','E-Prime','EventIDE','QRTEngine','Paradigm','Webexp2','Tatool Web','OpenSesame','Presentation','Psychtoolbox for MATLAB','Psykinematix','Superlab','Tscope','PsychJava','z-Tree','PsyToolkit','PyEPL','Expyriment','jsPsych','Experimental Run-Time System','SoPHIE','SPIC Software','Visual DMDX  is a GUI to DMDX','WEXTOR','Cogent for MATLAB','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

@@ -1,71 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of enterprise bookmarking platforms -  Content enrichment capabilities </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Descriptions :</label></br>
+								<input type="radio" name="FeatureDescriptions" value="oui">Yes <input type="radio" name="FeatureDescriptions" value = "non">No <input type="radio" name="FeatureDescriptions" value = "non">Partial </br>
+								
+								</br>	
+								<label>Keywords :</label></br>
+								<input type="radio" name="FeatureKeywords" value="oui">Yes <input type="radio" name="FeatureKeywords" value = "non">No <input type="radio" name="FeatureKeywords" value = "non">Partial </br>
+								
+								</br>	
+								<label>Custom Tag Fields :</label></br>
+								<input type="radio" name="FeatureCustom Tag Fields" value="oui">Yes <input type="radio" name="FeatureCustom Tag Fields" value = "non">No <input type="radio" name="FeatureCustom Tag Fields" value = "non">Partial </br>
+								
+								</br>	
+								<label>Knowledge Tags :</label></br>
+								<input type="radio" name="FeatureKnowledge Tags" value="oui">Yes <input type="radio" name="FeatureKnowledge Tags" value = "non">No <input type="radio" name="FeatureKnowledge Tags" value = "non">Partial </br>
+								
+								</br>	
+								<label>Metadata :</label></br>
+								<input type="radio" name="FeatureMetadata" value="oui">Yes <input type="radio" name="FeatureMetadata" value = "non">No <input type="radio" name="FeatureMetadata" value = "non">Partial </br>
+								
+								</br>	
+								<label>Software : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Notes : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Connectbeam','Licorize','Scuttle','Jumper 2.0','Knowledge Plaza','Dogear','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['none','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Descriptions :</label></br>
- 		 					 <input type="radio" name="FeatureDescriptions" value="oui">oui <input type="radio" name="FeatureDescriptions" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Keywords :</label></br>
- 		 					 <input type="radio" name="FeatureKeywords" value="oui">oui <input type="radio" name="FeatureKeywords" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Custom Tag Fields :</label></br>
- 		 					 <input type="radio" name="FeatureCustom Tag Fields" value="oui">oui <input type="radio" name="FeatureCustom Tag Fields" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Knowledge Tags :</label></br>
- 		 					 <input type="radio" name="FeatureKnowledge Tags" value="oui">oui <input type="radio" name="FeatureKnowledge Tags" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Metadata :</label></br>
- 		 					 <input type="radio" name="FeatureMetadata" value="oui">oui <input type="radio" name="FeatureMetadata" value = "non">non </br>
-									
-						</br>	
-							<label>Software : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Notes : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Connectbeam','Licorize','Scuttle','Jumper 2.0','Knowledge Plaza','Dogear','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['none','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

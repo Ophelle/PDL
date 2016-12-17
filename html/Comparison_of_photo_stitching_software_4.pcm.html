@@ -1,75 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of photo stitching software -  Compatible equipment </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Fish eye lenses :</label></br>
+								<input type="radio" name="FeatureFish eye lenses" value="oui">Yes <input type="radio" name="FeatureFish eye lenses" value = "non">No <input type="radio" name="FeatureFish eye lenses" value = "non">Partial </br>
+								
+								</br>	
+								<label>Partial or full (spherical) panoramas or images from panoramic camera :</label></br>
+								<input type="radio" name="FeaturePartial or full (spherical) panoramas or images from panoramic camera" value="oui">Yes <input type="radio" name="FeaturePartial or full (spherical) panoramas or images from panoramic camera" value = "non">No <input type="radio" name="FeaturePartial or full (spherical) panoramas or images from panoramic camera" value = "non">Partial </br>
+								
+								</br>	
+								<label>Different lens types in single panorama :</label></br>
+								<input type="radio" name="FeatureDifferent lens types in single panorama" value="oui">Yes <input type="radio" name="FeatureDifferent lens types in single panorama" value = "non">No <input type="radio" name="FeatureDifferent lens types in single panorama" value = "non">Partial </br>
+								
+								</br>	
+								<label>Other/Notes : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Rectilinear lenses (i.e. normal camera lenses) :</label></br>
+								<input type="radio" name="FeatureRectilinear lenses (i.e. normal camera lenses)" value="oui">Yes <input type="radio" name="FeatureRectilinear lenses (i.e. normal camera lenses)" value = "non">No <input type="radio" name="FeatureRectilinear lenses (i.e. normal camera lenses)" value = "non">Partial </br>
+								
+								</br>	
+								<label>Different focal length in single panorama :</label></br>
+								<input type="radio" name="FeatureDifferent focal length in single panorama" value="oui">Yes <input type="radio" name="FeatureDifferent focal length in single panorama" value = "non">No <input type="radio" name="FeatureDifferent focal length in single panorama" value = "non">Partial </br>
+								
+								</br>	
+								<label>Perspective correction lens :</label></br>
+								<input type="radio" name="FeaturePerspective correction lens" value="oui">Yes <input type="radio" name="FeaturePerspective correction lens" value = "non">No <input type="radio" name="FeaturePerspective correction lens" value = "non">Partial </br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','*) Circular fish eyes not supported, diagonal fish eyes up to 180 degree field of view.','Also supports motorized panoramic heads, in Giga & Pro versions.','*) Cylindrical only','* As of v2010.2 onwards, all known fish eye projections are supported (equisolid, orthographic, stereographic)','(*) homographic model compensates for these type of lenses','"One shot" i.e. panoramic mirror lenses also supported.','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['ADG Panorama Tools / Pro','Pixtra OmniStitcher','3DVista Stitcher 3.0','SharpStitch','hugin','D Joiner','Panoweaver Standard / Professional','PTAssembler','Calico Panorama','PanoramaStudio 2 / Pro','Autostitch','Autopano Pro / Giga / Server','Panorama Maker 6','The Panorama Factory v5','PTgui / PTgui Pro','i2Align Quickage Express / Pro','COOL 360','PixMaker Lite / Home / Business','VRstitcher Fisheye Pro','PanoramaPlus X4','PanoramaMaker','Gigapan Stitch 1.0','Panorama Perfect','Image Composite Editor','AIPR Lite 1','PhotoFit Harmony / Premium','Stitcher Unlimited 2009','360 Panorama Professional','Photoshop','PanoEdit','PanaVue ImageAssembler Std. / Pro. / Ent.','Panorama Composer 3','PanoramaBuilder 7.0 / PanoramaBuilder 7.0 Pro','Pixtra PanoStitcher','Photovista Panorama','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Fish eye lenses :</label></br>
- 		 					 <input type="radio" name="FeatureFish eye lenses" value="oui">oui <input type="radio" name="FeatureFish eye lenses" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Partial or full (spherical) panoramas or images from panoramic camera :</label></br>
- 		 					 <input type="radio" name="FeaturePartial or full (spherical) panoramas or images from panoramic camera" value="oui">oui <input type="radio" name="FeaturePartial or full (spherical) panoramas or images from panoramic camera" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Different lens types in single panorama :</label></br>
- 		 					 <input type="radio" name="FeatureDifferent lens types in single panorama" value="oui">oui <input type="radio" name="FeatureDifferent lens types in single panorama" value = "non">non </br>
-									
-						</br>	
-							<label>Other/Notes : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Rectilinear lenses (i.e. normal camera lenses) :</label></br>
- 		 					 <input type="radio" name="FeatureRectilinear lenses (i.e. normal camera lenses)" value="oui">oui <input type="radio" name="FeatureRectilinear lenses (i.e. normal camera lenses)" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Different focal length in single panorama :</label></br>
- 		 					 <input type="radio" name="FeatureDifferent focal length in single panorama" value="oui">oui <input type="radio" name="FeatureDifferent focal length in single panorama" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Perspective correction lens :</label></br>
- 		 					 <input type="radio" name="FeaturePerspective correction lens" value="oui">oui <input type="radio" name="FeaturePerspective correction lens" value = "non">non </br>
-									
-						</br>	
-							<label>Name : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['','*) Circular fish eyes not supported, diagonal fish eyes up to 180 degree field of view.','Also supports motorized panoramic heads, in Giga & Pro versions.','*) Cylindrical only','* As of v2010.2 onwards, all known fish eye projections are supported (equisolid, orthographic, stereographic)','(*) homographic model compensates for these type of lenses','"One shot" i.e. panoramic mirror lenses also supported.','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['ADG Panorama Tools / Pro','Pixtra OmniStitcher','3DVista Stitcher 3.0','SharpStitch','hugin','D Joiner','Panoweaver Standard / Professional','PTAssembler','Calico Panorama','PanoramaStudio 2 / Pro','Autostitch','Autopano Pro / Giga / Server','Panorama Maker 6','The Panorama Factory v5','PTgui / PTgui Pro','i2Align Quickage Express / Pro','COOL 360','PixMaker Lite / Home / Business','VRstitcher Fisheye Pro','PanoramaPlus X4','PanoramaMaker','Gigapan Stitch 1.0','Panorama Perfect','Image Composite Editor','AIPR Lite 1','PhotoFit Harmony / Premium','Stitcher Unlimited 2009','360 Panorama Professional','Photoshop','PanoEdit','PanaVue ImageAssembler Std. / Pro. / Ent.','Panorama Composer 3','PanoramaBuilder 7.0 / PanoramaBuilder 7.0 Pro','Pixtra PanoStitcher','Photovista Panorama','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

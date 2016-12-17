@@ -1,74 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of programming languages (array) - Array system cross-reference list</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Specifiable base index :</label></br>
+								<input type="radio" name="FeatureSpecifiable base index" value="oui">Yes <input type="radio" name="FeatureSpecifiable base index" value = "non">No <input type="radio" name="FeatureSpecifiable base index" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Dynamically-sized :</label></br>
+								<input type="radio" name="FeatureDynamically-sized" value="oui">Yes <input type="radio" name="FeatureDynamically-sized" value = "non">No <input type="radio" name="FeatureDynamically-sized" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Multidimensional :</label></br>
+								<input type="radio" name="FeatureMultidimensional" value="oui">Yes <input type="radio" name="FeatureMultidimensional" value = "non">No <input type="radio" name="FeatureMultidimensional" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Bound check : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Programming language : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Specifiable index type :</label></br>
+								<input type="radio" name="FeatureSpecifiable index type" value="oui">Yes <input type="radio" name="FeatureSpecifiable index type" value = "non">No <input type="radio" name="FeatureSpecifiable index type" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Vectorized operations :</label></br>
+								<input type="radio" name="FeatureVectorized operations" value="oui">Yes <input type="radio" name="FeatureVectorized operations" value = "non">No <input type="radio" name="FeatureVectorized operations" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Default base index : </label></br> <input id="8" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['checked','checked by default','unchecked','varies','?','Bound check','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Scala','PL/I','Smalltalk','Visual Basic .NET','ALGOL 68','FoxPro','Cobra','Oberon-2','Ch','Pascal, Object Pascal','APL','IDL','Programming language','RPG','XPath','C#','Fortran','Java','MATLAB','COBOL','Lua','BASIC','Perl','Common Lisp','C++','Python','Xojo','D','Haskell','FreeBASIC','PHP','Scheme','Visual Basic','CFML','Julia','Oberon','Windows PowerShell','Swift','Ada','C','ISLISP','J','Perl 6','Ruby','S-Lang','JavaScript','Go','Mathematica','OCaml','Objective-C','F#','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Specifiable base index :</label></br>
- 		 					 <input type="radio" name="FeatureSpecifiable base index" value="oui">oui <input type="radio" name="FeatureSpecifiable base index" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Dynamically-sized :</label></br>
- 		 					 <input type="radio" name="FeatureDynamically-sized" value="oui">oui <input type="radio" name="FeatureDynamically-sized" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Multidimensional :</label></br>
- 		 					 <input type="radio" name="FeatureMultidimensional" value="oui">oui <input type="radio" name="FeatureMultidimensional" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Bound check : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Programming language : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Specifiable index type :</label></br>
- 		 					 <input type="radio" name="FeatureSpecifiable index type" value="oui">oui <input type="radio" name="FeatureSpecifiable index type" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Vectorized operations :</label></br>
- 		 					 <input type="radio" name="FeatureVectorized operations" value="oui">oui <input type="radio" name="FeatureVectorized operations" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Default base index : </label></br> <input id="8" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['checked','checked by default','unchecked','varies','?','Bound check','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Scala','PL/I','Smalltalk','Visual Basic .NET','ALGOL 68','FoxPro','Cobra','Oberon-2','Ch','Pascal, Object Pascal','APL','IDL','Programming language','RPG','XPath','C#','Fortran','Java','MATLAB','COBOL','Lua','BASIC','Perl','Common Lisp','C++','Python','Xojo','D','Haskell','FreeBASIC','PHP','Scheme','Visual Basic','CFML','Julia','Oberon','Windows PowerShell','Swift','Ada','C','ISLISP','J','Perl 6','Ruby','S-Lang','JavaScript','Go','Mathematica','OCaml','Objective-C','F#','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

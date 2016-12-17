@@ -1,90 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>List of AMD graphics processing units -  Mach Series </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Bus interface :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >ISA</br>	
- 		 									<input type="checkbox" name="Feature" > MCA</br>	
- 		 									<input type="checkbox" name="Feature" > EISA</br>	
- 		 									<input type="checkbox" name="Feature" > VLB
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Bus interface :</label></br>
+											<input type="checkbox" name="Feature" >ISA</br>	
+											<input type="checkbox" name="Feature" >MCA</br>	
+											<input type="checkbox" name="Feature" >EISA</br>	
+											<input type="checkbox" name="Feature" >VLB
 PCI</br>	
- 		 									<input type="checkbox" name="Feature" > VLB</br>	
- 		 									<input type="checkbox" name="Feature" > PCI</br>	
+											<input type="checkbox" name="Feature" >VLB</br>	
+											<input type="checkbox" name="Feature" >PCI</br>	
+									
+								</br>	
+								<label>Config core : </label></br> <input id="2" type="text" name="Feature"></br>
 								
-						</br>	
-							<label>Config core : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Memory - Bus width (bit) : </label></br> <input id="3" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Model : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Memory - Bus type : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Memory (KB) : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Fab (µm) : </label></br> <input id="7" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Launch : </label></br> <input id="8" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>API compliance : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['1:1','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Mach 32','Mach 8','Mach 64','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['1024, 2048, 4096, 8192','512
+								</br>	
+								<label>Memory - Bus width (bit) : </label></br> <input id="3" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Model : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Memory - Bus type : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Memory (KB) : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Fab (µm) : </label></br> <input id="7" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Launch : </label></br> <input id="8" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>API compliance : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['1:1','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Mach 32','Mach 8','Mach 64','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['1024, 2048, 4096, 8192','512
 1024','1024
 2048','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['2D','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['2D','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

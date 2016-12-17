@@ -1,71 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of photo stitching software -  HDR, tonemapping and exposure fusion </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>HDR output (EXR, HDR, Logluv, etc.) :</label></br>
+								<input type="radio" name="FeatureHDR output (EXR, HDR, Logluv, etc.)" value="oui">Yes <input type="radio" name="FeatureHDR output (EXR, HDR, Logluv, etc.)" value = "non">No <input type="radio" name="FeatureHDR output (EXR, HDR, Logluv, etc.)" value = "non">Partial </br>
+								
+								</br>	
+								<label>Exposure fusion :</label></br>
+								<input type="radio" name="FeatureExposure fusion" value="oui">Yes <input type="radio" name="FeatureExposure fusion" value = "non">No <input type="radio" name="FeatureExposure fusion" value = "non">Partial </br>
+								
+								</br>	
+								<label>Tonemapping :</label></br>
+								<input type="radio" name="FeatureTonemapping" value="oui">Yes <input type="radio" name="FeatureTonemapping" value = "non">No <input type="radio" name="FeatureTonemapping" value = "non">Partial </br>
+								
+								</br>	
+								<label>HDR input (EXR, HDR, Logluv, etc.) :</label></br>
+								<input type="radio" name="FeatureHDR input (EXR, HDR, Logluv, etc.)" value="oui">Yes <input type="radio" name="FeatureHDR input (EXR, HDR, Logluv, etc.)" value = "non">No <input type="radio" name="FeatureHDR input (EXR, HDR, Logluv, etc.)" value = "non">Partial </br>
+								
+								</br>	
+								<label>Merging to HDR from LDR images :</label></br>
+								<input type="radio" name="FeatureMerging to HDR from LDR images" value="oui">Yes <input type="radio" name="FeatureMerging to HDR from LDR images" value = "non">No <input type="radio" name="FeatureMerging to HDR from LDR images" value = "non">Partial </br>
+								
+								</br>	
+								<label>Notes : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','Exposure fusion with enfuse, automatic detection of image stacks.','*) Pro version only.','Exposure fusion with TuFuse or enfuse. Automatic detection of image stacks.','EXR and 32 bit TIF are supported for export','(*) color mapping around the seams allows to preserve the original photometric properties of the images','Exposure fusion with enfuse or TuFuse. *) Pro version only.','Supports 16-bit camera raw input via WIC plugins','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['PhotoFit Harmony / Premium','ADG Panorama Tools / Pro','PTgui / PTgui Pro','PanoramaBuilder 7.0 / PanoramaBuilder 7.0 Pro','Panoweaver Standard / Professional','3DVista Stitcher 3.0','Pixtra PanoStitcher','VRstitcher Fisheye Pro','COOL 360','Pixtra OmniStitcher','Stitcher Unlimited 2009','PanoramaPlus X4','Image Composite Editor','Panorama Composer 3','Panorama Maker 6','Gigapan Stitch 1.0','PanoramaMaker','PTAssembler','Calico Panorama','PixMaker Lite / Home / Business','Photoshop','Autopano Pro / Giga / Server','Photovista Panorama','PanoEdit','i2Align Quickage Express / Pro','Autostitch','hugin','Panorama Perfect','360 Panorama Professional','SharpStitch','D Joiner','The Panorama Factory v5','PanoramaStudio','AIPR Lite 1','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>HDR output (EXR, HDR, Logluv, etc.) :</label></br>
- 		 					 <input type="radio" name="FeatureHDR output (EXR, HDR, Logluv, etc.)" value="oui">oui <input type="radio" name="FeatureHDR output (EXR, HDR, Logluv, etc.)" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Exposure fusion :</label></br>
- 		 					 <input type="radio" name="FeatureExposure fusion" value="oui">oui <input type="radio" name="FeatureExposure fusion" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Tonemapping :</label></br>
- 		 					 <input type="radio" name="FeatureTonemapping" value="oui">oui <input type="radio" name="FeatureTonemapping" value = "non">non </br>
-									
-						</br>	
- 		 					<label>HDR input (EXR, HDR, Logluv, etc.) :</label></br>
- 		 					 <input type="radio" name="FeatureHDR input (EXR, HDR, Logluv, etc.)" value="oui">oui <input type="radio" name="FeatureHDR input (EXR, HDR, Logluv, etc.)" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Merging to HDR from LDR images :</label></br>
- 		 					 <input type="radio" name="FeatureMerging to HDR from LDR images" value="oui">oui <input type="radio" name="FeatureMerging to HDR from LDR images" value = "non">non </br>
-									
-						</br>	
-							<label>Notes : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Name : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['','Exposure fusion with enfuse, automatic detection of image stacks.','*) Pro version only.','Exposure fusion with TuFuse or enfuse. Automatic detection of image stacks.','EXR and 32 bit TIF are supported for export','(*) color mapping around the seams allows to preserve the original photometric properties of the images','Exposure fusion with enfuse or TuFuse. *) Pro version only.','Supports 16-bit camera raw input via WIC plugins','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['PhotoFit Harmony / Premium','ADG Panorama Tools / Pro','PTgui / PTgui Pro','PanoramaBuilder 7.0 / PanoramaBuilder 7.0 Pro','Panoweaver Standard / Professional','3DVista Stitcher 3.0','Pixtra PanoStitcher','VRstitcher Fisheye Pro','COOL 360','Pixtra OmniStitcher','Stitcher Unlimited 2009','PanoramaPlus X4','Image Composite Editor','Panorama Composer 3','Panorama Maker 6','Gigapan Stitch 1.0','PanoramaMaker','PTAssembler','Calico Panorama','PixMaker Lite / Home / Business','Photoshop','Autopano Pro / Giga / Server','Photovista Panorama','PanoEdit','i2Align Quickage Express / Pro','Autostitch','hugin','Panorama Perfect','360 Panorama Professional','SharpStitch','D Joiner','The Panorama Factory v5','PanoramaStudio','AIPR Lite 1','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

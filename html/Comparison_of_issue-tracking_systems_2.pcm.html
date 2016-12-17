@@ -1,80 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of issue-tracking systems -  Input interfaces </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Mylyn :</label></br>
+								<input type="radio" name="FeatureMylyn" value="oui">Yes <input type="radio" name="FeatureMylyn" value = "non">No <input type="radio" name="FeatureMylyn" value = "non">Partial </br>
+								
+								</br>	
+								<label>Others :</label></br>
+								<input type="radio" name="FeatureOthers" value="oui">Yes <input type="radio" name="FeatureOthers" value = "non">No <input type="radio" name="FeatureOthers" value = "non">Partial </br>
+								
+								</br>	
+								<label>CLI :</label></br>
+								<input type="radio" name="FeatureCLI" value="oui">Yes <input type="radio" name="FeatureCLI" value = "non">No <input type="radio" name="FeatureCLI" value = "non">Partial </br>
+								
+								</br>	
+								<label>REST :</label></br>
+								<input type="radio" name="FeatureREST" value="oui">Yes <input type="radio" name="FeatureREST" value = "non">No <input type="radio" name="FeatureREST" value = "non">Partial </br>
+								
+								</br>	
+								<label>Email :</label></br>
+								<input type="radio" name="FeatureEmail" value="oui">Yes <input type="radio" name="FeatureEmail" value = "non">No <input type="radio" name="FeatureEmail" value = "non">Partial </br>
+								
+								</br>	
+								<label>Web :</label></br>
+								<input type="radio" name="FeatureWeb" value="oui">Yes <input type="radio" name="FeatureWeb" value = "non">No <input type="radio" name="FeatureWeb" value = "non">Partial </br>
+								
+								</br>	
+								<label>GUI :</label></br>
+								<input type="radio" name="FeatureGUI" value="oui">Yes <input type="radio" name="FeatureGUI" value = "non">No <input type="radio" name="FeatureGUI" value = "non">Partial </br>
+								
+								</br>	
+								<label>Visual Studio :</label></br>
+								<input type="radio" name="FeatureVisual Studio" value="oui">Yes <input type="radio" name="FeatureVisual Studio" value = "non">No <input type="radio" name="FeatureVisual Studio" value = "non">Partial </br>
+								
+								</br>	
+								<label>SOAP :</label></br>
+								<input type="radio" name="FeatureSOAP" value="oui">Yes <input type="radio" name="FeatureSOAP" value = "non">No <input type="radio" name="FeatureSOAP" value = "non">Partial </br>
+								
+								</br>	
+								<label>System : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['IBM Rational Team Concert','FusionForge','Brimir','Apache Bloodhound','Redmine','Bugzilla','StarTeam','OTRS','Wrike','YouTrack','The Bug Genie','Roundup','Liberum Help Desk','Planbox','TestTrack','Usersnap','JIRA','Supportworks','TrackerSuite.Net','Fossil','Assembla Tickets','Team Foundation Server','HP Quality Center','Microsoft Dynamics CRM','Kayako SupportSuite','Pivotal Tracker','Remedy Action Request System','SysAid','Request Tracker','FogBugz','Trac','Launchpad','org-mode','Plain Ticket','LibreSource','Zoho BugTracker','Web Help Desk','IBM Rational ClearQuest','Teamwork','TechExcel's DevTrack','Axosoft','Debbugs','GNATS','Google Code Hosting','MantisBT','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Mylyn :</label></br>
- 		 					 <input type="radio" name="FeatureMylyn" value="oui">oui <input type="radio" name="FeatureMylyn" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Others :</label></br>
- 		 					 <input type="radio" name="FeatureOthers" value="oui">oui <input type="radio" name="FeatureOthers" value = "non">non </br>
-									
-						</br>	
- 		 					<label>CLI :</label></br>
- 		 					 <input type="radio" name="FeatureCLI" value="oui">oui <input type="radio" name="FeatureCLI" value = "non">non </br>
-									
-						</br>	
- 		 					<label>REST :</label></br>
- 		 					 <input type="radio" name="FeatureREST" value="oui">oui <input type="radio" name="FeatureREST" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Email :</label></br>
- 		 					 <input type="radio" name="FeatureEmail" value="oui">oui <input type="radio" name="FeatureEmail" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Web :</label></br>
- 		 					 <input type="radio" name="FeatureWeb" value="oui">oui <input type="radio" name="FeatureWeb" value = "non">non </br>
-									
-						</br>	
- 		 					<label>GUI :</label></br>
- 		 					 <input type="radio" name="FeatureGUI" value="oui">oui <input type="radio" name="FeatureGUI" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Visual Studio :</label></br>
- 		 					 <input type="radio" name="FeatureVisual Studio" value="oui">oui <input type="radio" name="FeatureVisual Studio" value = "non">non </br>
-									
-						</br>	
- 		 					<label>SOAP :</label></br>
- 		 					 <input type="radio" name="FeatureSOAP" value="oui">oui <input type="radio" name="FeatureSOAP" value = "non">non </br>
-									
-						</br>	
-							<label>System : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['IBM Rational Team Concert','FusionForge','Brimir','Apache Bloodhound','Redmine','Bugzilla','StarTeam','OTRS','Wrike','YouTrack','The Bug Genie','Roundup','Liberum Help Desk','Planbox','TestTrack','Usersnap','JIRA','Supportworks','TrackerSuite.Net','Fossil','Assembla Tickets','Team Foundation Server','HP Quality Center','Microsoft Dynamics CRM','Kayako SupportSuite','Pivotal Tracker','Remedy Action Request System','SysAid','Request Tracker','FogBugz','Trac','Launchpad','org-mode','Plain Ticket','LibreSource','Zoho BugTracker','Web Help Desk','IBM Rational ClearQuest','Teamwork','TechExcel's DevTrack','Axosoft','Debbugs','GNATS','Google Code Hosting','MantisBT','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

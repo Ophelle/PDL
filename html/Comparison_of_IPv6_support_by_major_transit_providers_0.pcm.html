@@ -1,116 +1,117 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of IPv6 support by major transit providers</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Updated : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Partitioned From : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Network : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Routes Carried :</label></br>
+											<input type="checkbox" name="Feature" >17</br>	
+											<input type="checkbox" name="Feature" >044</br>	
+											<input type="checkbox" name="Feature" >324</br>	
+											<input type="checkbox" name="Feature" >7</br>	
+											<input type="checkbox" name="Feature" >269</br>	
+											<input type="checkbox" name="Feature" >9</br>	
+											<input type="checkbox" name="Feature" >131</br>	
+											<input type="checkbox" name="Feature" >649</br>	
+											<input type="checkbox" name="Feature" >663</br>	
+											<input type="checkbox" name="Feature" >15</br>	
+											<input type="checkbox" name="Feature" >474</br>	
+											<input type="checkbox" name="Feature" >11</br>	
+											<input type="checkbox" name="Feature" >055</br>	
+											<input type="checkbox" name="Feature" >376</br>	
+											<input type="checkbox" name="Feature" >3</br>	
+											<input type="checkbox" name="Feature" >766</br>	
+											<input type="checkbox" name="Feature" >13</br>	
+											<input type="checkbox" name="Feature" >177</br>	
+											<input type="checkbox" name="Feature" >111</br>	
+											<input type="checkbox" name="Feature" >862</br>	
+											<input type="checkbox" name="Feature" >16</br>	
+											<input type="checkbox" name="Feature" >974</br>	
+											<input type="checkbox" name="Feature" >728</br>	
+											<input type="checkbox" name="Feature" >370</br>	
+											<input type="checkbox" name="Feature" >8</br>	
+											<input type="checkbox" name="Feature" >852</br>	
+											<input type="checkbox" name="Feature" >922</br>	
+											<input type="checkbox" name="Feature" >360</br>	
+											<input type="checkbox" name="Feature" >546</br>	
+											<input type="checkbox" name="Feature" >196</br>	
+											<input type="checkbox" name="Feature" >615</br>	
+											<input type="checkbox" name="Feature" >12</br>	
+											<input type="checkbox" name="Feature" >971</br>	
+											<input type="checkbox" name="Feature" >067</br>	
+											<input type="checkbox" name="Feature" >10</br>	
+											<input type="checkbox" name="Feature" >495</br>	
+											<input type="checkbox" name="Feature" >594</br>	
+											<input type="checkbox" name="Feature" >5</br>	
+											<input type="checkbox" name="Feature" >033</br>	
+											<input type="checkbox" name="Feature" >299</br>	
+											<input type="checkbox" name="Feature" >18</br>	
+											<input type="checkbox" name="Feature" >378</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Maximum Prefix Length :</label></br>
+											<input type="checkbox" name="Feature" >48</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>ASN : </label></br> <input id="6" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Customer Routes : </label></br> <input id="7" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['2010-12-22','2012-10-03','2013-01-10','2012-07-10','2011-12-31','2014-04-27','2013-07-29','2012-07-31','2012-10-12','2013-07-27','2014-08-25','2011-10-31','2012-12-29','2011-04-21','2013-01-28','2014-05-01','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['','AS6830, AS6939, AS20825, AS29562, AS30071','AS174','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Cable & Wireless Worldwide','XO Communications','Comcast','TeliaSonera International Carrier','Sprint','nLayer Communications (now Global Telecom & Technology)','Global Crossing','Internet 2','KPN','route-views6','Hurricane Electric','AT&T','IIJ','Tata Communications','Neotelecoms','Inteliquent (formerly Tinet)','Internode','NTT Communications','Cogent Communications','Liberty Global','Telecom Italia Sparkle','PIPE Networks','Init Seven AG','Verizon (USA)','Savvis','Internap','Level 3 Communications','Qwest','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Updated : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Partitioned From : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Network : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Routes Carried :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >17</br>	
- 		 									<input type="checkbox" name="Feature" >044</br>	
- 		 									<input type="checkbox" name="Feature" >324</br>	
- 		 									<input type="checkbox" name="Feature" >7</br>	
- 		 									<input type="checkbox" name="Feature" >269</br>	
- 		 									<input type="checkbox" name="Feature" >9</br>	
- 		 									<input type="checkbox" name="Feature" >131</br>	
- 		 									<input type="checkbox" name="Feature" >649</br>	
- 		 									<input type="checkbox" name="Feature" >663</br>	
- 		 									<input type="checkbox" name="Feature" >15</br>	
- 		 									<input type="checkbox" name="Feature" >474</br>	
- 		 									<input type="checkbox" name="Feature" >11</br>	
- 		 									<input type="checkbox" name="Feature" >055</br>	
- 		 									<input type="checkbox" name="Feature" >376</br>	
- 		 									<input type="checkbox" name="Feature" >3</br>	
- 		 									<input type="checkbox" name="Feature" >766</br>	
- 		 									<input type="checkbox" name="Feature" >13</br>	
- 		 									<input type="checkbox" name="Feature" >177</br>	
- 		 									<input type="checkbox" name="Feature" >111</br>	
- 		 									<input type="checkbox" name="Feature" >862</br>	
- 		 									<input type="checkbox" name="Feature" >16</br>	
- 		 									<input type="checkbox" name="Feature" >974</br>	
- 		 									<input type="checkbox" name="Feature" >728</br>	
- 		 									<input type="checkbox" name="Feature" >370</br>	
- 		 									<input type="checkbox" name="Feature" >8</br>	
- 		 									<input type="checkbox" name="Feature" >852</br>	
- 		 									<input type="checkbox" name="Feature" >922</br>	
- 		 									<input type="checkbox" name="Feature" >360</br>	
- 		 									<input type="checkbox" name="Feature" >546</br>	
- 		 									<input type="checkbox" name="Feature" >196</br>	
- 		 									<input type="checkbox" name="Feature" >615</br>	
- 		 									<input type="checkbox" name="Feature" >12</br>	
- 		 									<input type="checkbox" name="Feature" >971</br>	
- 		 									<input type="checkbox" name="Feature" >067</br>	
- 		 									<input type="checkbox" name="Feature" >10</br>	
- 		 									<input type="checkbox" name="Feature" >495</br>	
- 		 									<input type="checkbox" name="Feature" >594</br>	
- 		 									<input type="checkbox" name="Feature" >5</br>	
- 		 									<input type="checkbox" name="Feature" >033</br>	
- 		 									<input type="checkbox" name="Feature" >299</br>	
- 		 									<input type="checkbox" name="Feature" >18</br>	
- 		 									<input type="checkbox" name="Feature" >378</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Maximum Prefix Length :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" ></br>	
- 		 									<input type="checkbox" name="Feature" >48</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>ASN : </label></br> <input id="6" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Customer Routes : </label></br> <input id="7" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['2010-12-22','2012-10-03','2013-01-10','2012-07-10','2011-12-31','2014-04-27','2013-07-29','2012-07-31','2012-10-12','2013-07-27','2014-08-25','2011-10-31','2012-12-29','2011-04-21','2013-01-28','2014-05-01','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['','AS6830, AS6939, AS20825, AS29562, AS30071','AS174','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Cable & Wireless Worldwide','XO Communications','Comcast','TeliaSonera International Carrier','Sprint','nLayer Communications (now Global Telecom & Technology)','Global Crossing','Internet 2','KPN','route-views6','Hurricane Electric','AT&T','IIJ','Tata Communications','Neotelecoms','Inteliquent (formerly Tinet)','Internode','NTT Communications','Cogent Communications','Liberty Global','Telecom Italia Sparkle','PIPE Networks','Init Seven AG','Verizon (USA)','Savvis','Internap','Level 3 Communications','Qwest','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

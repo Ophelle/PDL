@@ -1,90 +1,94 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of iPod managers -  General </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Downloadable without paying? :</label></br>
- 		 					 <input type="radio" name="FeatureDownloadable without paying?" value="oui">oui <input type="radio" name="FeatureDownloadable without paying?" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Mac OS X :</label></br>
- 		 					 <input type="radio" name="FeatureMac OS X" value="oui">oui <input type="radio" name="FeatureMac OS X" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Linux :</label></br>
- 		 					 <input type="radio" name="FeatureLinux" value="oui">oui <input type="radio" name="FeatureLinux" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Latest stable version : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Software license : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Creator(s) : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Windows :</label></br>
- 		 					 <input type="radio" name="FeatureWindows" value="oui">oui <input type="radio" name="FeatureWindows" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Manager : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>First public release date : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['4.1.5.1719 (October 22, 2014; 7 months ago)','3.5.0 (Dec 30, 2009)','3.2 (March 29, 2015; 2 months ago)','1.1.7 (Oct 6, 2009)','2.1 (Mac) (May 6, 2011; 4 years ago) 
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Downloadable without paying? :</label></br>
+								<input type="radio" name="FeatureDownloadable without paying?" value="oui">Yes <input type="radio" name="FeatureDownloadable without paying?" value = "non">No <input type="radio" name="FeatureDownloadable without paying?" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Mac OS X :</label></br>
+								<input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Linux :</label></br>
+								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Latest stable version : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Software license : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Creator(s) : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Windows :</label></br>
+								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Manager : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>First public release date : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['4.1.5.1719 (October 22, 2014; 7 months ago)','3.5.0 (Dec 30, 2009)','3.2 (March 29, 2015; 2 months ago)','1.1.7 (Oct 6, 2009)','2.1 (Mac) (May 6, 2011; 4 years ago) 
 
 1.0.1.25 (Windows) (8 April 2010; 5 years ago)','2.1.204 (Jun 12, 2013)','1.2.3 (March 8, 2014; 14 months ago)','12.1.2.27 (April 9, 2015; 2 months ago)','2.8 (August 16, 2013; 21 months ago)','2.1.3 (Jan 6, 2013)','19.0.124 (March 27, 2014; 14 months ago)','5.666.3516 (December 12, 2013; 17 months ago)','2.6.2 (February 18, 2014; 15 months ago)','Latest stable version','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Proprietary','MIT','GPL','GPL v3','Software license','BSD','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Mediafour','Mark Kretschmann','Aaron Bockover','Ventis Media Inc.','David Sansome, John Maguire','Jorg Schuler','Creator(s)','FadingRed','Colin Walters','D Rogatkin','Apple Inc.','J. River','Nullsoft','The Little App Factory','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Amarok','Manager','Clementine','JRiver Media Center','iRip','Winamp native','XPlay','Rhythmbox','Senuti','gtkpod','MediaChest','Banshee','iTunes','MediaMonkey','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['?','2003-06-23','1997-06','2003-08-25','2001-01-08','2005-08','February 2010','2006-04-26','2003-07','2002-06-24','2003-09','2004-04','1999-10-10','First public release date','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Proprietary','MIT','GPL','GPL v3','Software license','BSD','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Mediafour','Mark Kretschmann','Aaron Bockover','Ventis Media Inc.','David Sansome, John Maguire','Jorg Schuler','Creator(s)','FadingRed','Colin Walters','D Rogatkin','Apple Inc.','J. River','Nullsoft','The Little App Factory','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Amarok','Manager','Clementine','JRiver Media Center','iRip','Winamp native','XPlay','Rhythmbox','Senuti','gtkpod','MediaChest','Banshee','iTunes','MediaMonkey','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['?','2003-06-23','1997-06','2003-08-25','2001-01-08','2005-08','February 2010','2006-04-26','2003-07','2002-06-24','2003-09','2004-04','1999-10-10','First public release date','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

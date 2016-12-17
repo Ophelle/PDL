@@ -1,74 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of Internet Relay Chat clients -  Features </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>irc:// URI scheme :</label></br>
+								<input type="radio" name="Featureirc:// URI scheme" value="oui">Yes <input type="radio" name="Featureirc:// URI scheme" value = "non">No <input type="radio" name="Featureirc:// URI scheme" value = "non">Partial </br>
+								
+								</br>	
+								<label>UTF-8 :</label></br>
+								<input type="radio" name="FeatureUTF-8" value="oui">Yes <input type="radio" name="FeatureUTF-8" value = "non">No <input type="radio" name="FeatureUTF-8" value = "non">Partial </br>
+								
+								</br>	
+								<label>Scripting language : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Automatic updates :</label></br>
+								<input type="radio" name="FeatureAutomatic updates" value="oui">Yes <input type="radio" name="FeatureAutomatic updates" value = "non">No <input type="radio" name="FeatureAutomatic updates" value = "non">Partial </br>
+								
+								</br>	
+								<label>Proxy server : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Client : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Multi-server :</label></br>
+								<input type="radio" name="FeatureMulti-server" value="oui">Yes <input type="radio" name="FeatureMulti-server" value = "non">No <input type="radio" name="FeatureMulti-server" value = "non">Partial </br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['AppleScript','AppleScript, Perl, PHP, Python, Ruby, Objective-C, shell script','Perl','AppleScript, IrcII script','Sleep','No','AppleScript, Cocoa, F-Script, JavaScript, Python','?','C, Perl, Python, Ruby, Lua, Tcl, Scheme (Guile)','JavaScript','Yes (language agnostic)','Perl, Python, Tcl, Ruby, C++, ECMAScript, Scheme (Guile)','N/A','Versus','VBScript','AppleScript, Cocoa','IrcII script','Scripting language','Shell script','Javascript, Node.js','Shell script, Ruby, Python, Perl, Java, C++, C#, JavaScript','VBScript, custom','mIRC script','Enhanced IrcII script','Yes','Emacs Lisp','Custom Actions system, Java plugins','KVS (custom), Perl, Python, C++','C#, mIRC script','ARexx','Partial, JavaScript','Perl, Python, Tcl, Lua, Javascript, C, C++, and via D-Bus.','Java','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Yes','?','Proxy server','SOCKS','No','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['KVIrc','AmIRC','ircII','LeetIRC','PJIRC','Konversation','Snak','Colloquy','Visual IRC','Client','mIRC','ii (IRC IT)','Irssi','Bersirc','qwebirc','f-irc','KiwiIRC','Quassel','Neebly','ChatZilla','ERC','jIRCii','Nettalk','IceChat','Linkinus','Mibbit','LeafChat','XChat','DMDirc','Smuxi','rcirc','AdiIRC','BitchX','HydraIRC','PIRCH','LimeChat','IRCjr','WeeChat','Ircle','Textual','HexChat','Opera','Convos','Lingo','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>irc:// URI scheme :</label></br>
- 		 					 <input type="radio" name="Featureirc:// URI scheme" value="oui">oui <input type="radio" name="Featureirc:// URI scheme" value = "non">non </br>
-									
-						</br>	
- 		 					<label>UTF-8 :</label></br>
- 		 					 <input type="radio" name="FeatureUTF-8" value="oui">oui <input type="radio" name="FeatureUTF-8" value = "non">non </br>
-									
-						</br>	
-							<label>Scripting language : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Automatic updates :</label></br>
- 		 					 <input type="radio" name="FeatureAutomatic updates" value="oui">oui <input type="radio" name="FeatureAutomatic updates" value = "non">non </br>
-									
-						</br>	
-							<label>Proxy server : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Client : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Multi-server :</label></br>
- 		 					 <input type="radio" name="FeatureMulti-server" value="oui">oui <input type="radio" name="FeatureMulti-server" value = "non">non </br>
-									
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['AppleScript','AppleScript, Perl, PHP, Python, Ruby, Objective-C, shell script','Perl','AppleScript, IrcII script','Sleep','No','AppleScript, Cocoa, F-Script, JavaScript, Python','?','C, Perl, Python, Ruby, Lua, Tcl, Scheme (Guile)','JavaScript','Yes (language agnostic)','Perl, Python, Tcl, Ruby, C++, ECMAScript, Scheme (Guile)','N/A','Versus','VBScript','AppleScript, Cocoa','IrcII script','Scripting language','Shell script','Javascript, Node.js','Shell script, Ruby, Python, Perl, Java, C++, C#, JavaScript','VBScript, custom','mIRC script','Enhanced IrcII script','Yes','Emacs Lisp','Custom Actions system, Java plugins','KVS (custom), Perl, Python, C++','C#, mIRC script','ARexx','Partial, JavaScript','Perl, Python, Tcl, Lua, Javascript, C, C++, and via D-Bus.','Java','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Yes','?','Proxy server','SOCKS','No','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['KVIrc','AmIRC','ircII','LeetIRC','PJIRC','Konversation','Snak','Colloquy','Visual IRC','Client','mIRC','ii (IRC IT)','Irssi','Bersirc','qwebirc','f-irc','KiwiIRC','Quassel','Neebly','ChatZilla','ERC','jIRCii','Nettalk','IceChat','Linkinus','Mibbit','LeafChat','XChat','DMDirc','Smuxi','rcirc','AdiIRC','BitchX','HydraIRC','PIRCH','LimeChat','IRCjr','WeeChat','Ircle','Textual','HexChat','Opera','Convos','Lingo','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

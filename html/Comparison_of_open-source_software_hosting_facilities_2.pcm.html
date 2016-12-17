@@ -1,79 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of open-source software hosting facilities - Available version control systems</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>TFS :</label></br>
+								<input type="radio" name="FeatureTFS" value="oui">Yes <input type="radio" name="FeatureTFS" value = "non">No <input type="radio" name="FeatureTFS" value = "non">Partial </br>
+								
+								</br>	
+								<label>CVS :</label></br>
+								<input type="radio" name="FeatureCVS" value="oui">Yes <input type="radio" name="FeatureCVS" value = "non">No <input type="radio" name="FeatureCVS" value = "non">Partial </br>
+								
+								</br>	
+								<label>Perforce : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Git :</label></br>
+								<input type="radio" name="FeatureGit" value="oui">Yes <input type="radio" name="FeatureGit" value = "non">No <input type="radio" name="FeatureGit" value = "non">Partial </br>
+								
+								</br>	
+								<label>Mercurial :</label></br>
+								<input type="radio" name="FeatureMercurial" value="oui">Yes <input type="radio" name="FeatureMercurial" value = "non">No <input type="radio" name="FeatureMercurial" value = "non">Partial </br>
+								
+								</br>	
+								<label>Arch :</label></br>
+								<input type="radio" name="FeatureArch" value="oui">Yes <input type="radio" name="FeatureArch" value = "non">No <input type="radio" name="FeatureArch" value = "non">Partial </br>
+								
+								</br>	
+								<label>GNU Bazaar :</label></br>
+								<input type="radio" name="FeatureGNU Bazaar" value="oui">Yes <input type="radio" name="FeatureGNU Bazaar" value = "non">No <input type="radio" name="FeatureGNU Bazaar" value = "non">Partial </br>
+								
+								</br>	
+								<label>SVN :</label></br>
+								<input type="radio" name="FeatureSVN" value="oui">Yes <input type="radio" name="FeatureSVN" value = "non">No <input type="radio" name="FeatureSVN" value = "non">Partial </br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['No','?','Yes','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Assembla','JavaForge','GNOME Git Repositories','java.net','SEUL.org','Gna!','Google Code','BerliOS','GitLab','Bitbucket','Alioth','Tigris.org','Beanstalk','Gitorious','OW2 Consortium','SourceForge','CodePlex','Freepository','GitHub','GNU Savannah','Ourproject.org','Launchpad','Betavine','Fedora Hosted','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>TFS :</label></br>
- 		 					 <input type="radio" name="FeatureTFS" value="oui">oui <input type="radio" name="FeatureTFS" value = "non">non </br>
-									
-						</br>	
- 		 					<label>CVS :</label></br>
- 		 					 <input type="radio" name="FeatureCVS" value="oui">oui <input type="radio" name="FeatureCVS" value = "non">non </br>
-									
-						</br>	
-							<label>Perforce : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Git :</label></br>
- 		 					 <input type="radio" name="FeatureGit" value="oui">oui <input type="radio" name="FeatureGit" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Mercurial :</label></br>
- 		 					 <input type="radio" name="FeatureMercurial" value="oui">oui <input type="radio" name="FeatureMercurial" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Arch :</label></br>
- 		 					 <input type="radio" name="FeatureArch" value="oui">oui <input type="radio" name="FeatureArch" value = "non">non </br>
-									
-						</br>	
- 		 					<label>GNU Bazaar :</label></br>
- 		 					 <input type="radio" name="FeatureGNU Bazaar" value="oui">oui <input type="radio" name="FeatureGNU Bazaar" value = "non">non </br>
-									
-						</br>	
- 		 					<label>SVN :</label></br>
- 		 					 <input type="radio" name="FeatureSVN" value="oui">oui <input type="radio" name="FeatureSVN" value = "non">non </br>
-									
-						</br>	
-							<label>Name : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['No','?','Yes','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Assembla','JavaForge','GNOME Git Repositories','java.net','SEUL.org','Gna!','Google Code','BerliOS','GitLab','Bitbucket','Alioth','Tigris.org','Beanstalk','Gitorious','OW2 Consortium','SourceForge','CodePlex','Freepository','GitHub','GNU Savannah','Ourproject.org','Launchpad','Betavine','Fedora Hosted','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

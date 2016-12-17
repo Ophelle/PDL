@@ -1,118 +1,122 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of educational websites for children</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Bitesize by the BBC : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>HyperPhysics : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Archimedes-lab.org : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Starfall.com : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>BrainPop : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>LearnAlberta.ca : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>WatchKnowLearn : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Fact Monster :</label></br>
+								<input type="radio" name="FeatureFact Monster" value="oui">Yes <input type="radio" name="FeatureFact Monster" value = "non">No <input type="radio" name="FeatureFact Monster" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Ask A Biologist : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Cut-the-Knot : </label></br> <input id="11" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Geometry from the Land of the Incas : </label></br> <input id="12" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['None','Free','5-15','Everything (mainly aimed at teachers)','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['None','5-8','Art & Design, Business Studies, Design & Technology, DiDA, Drama, English, English Literature, French, Geography, German, History, ICT, Irish, Maths, Music, Physical Education, Religious Studies, Science, Spanish','Free','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['2-8','None','All','Free','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Biology','None','Free','5-9','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['Free','15-19','None','Physics','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['8-13','Free','Yes - extensive','Maths','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['Mathematics','Yes - limited','Free','10-15','']
+								});
+								$("#8").typeahead({
+									name:"list8",
+									local : ['Free','None','Reading','2-15','']
+								});
+								$("#9").typeahead({
+									name:"list9",
+									local : ['Yes - extensive','Free','12-15','Geometry','']
+								});
+								$("#10").typeahead({
+									name:"list10",
+									local : ['Target age','Topic','Advertising','Cost','']
+								});
+								$("#11").typeahead({
+									name:"list11",
+									local : ['Science, Social studies, English, Maths, Art & Music, Health, Technology','4-15','from US$75/year','None','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Bitesize by the BBC : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>HyperPhysics : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Archimedes-lab.org : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Starfall.com : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Name : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>BrainPop : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>LearnAlberta.ca : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>WatchKnowLearn : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Fact Monster :</label></br>
- 		 					 <input type="radio" name="FeatureFact Monster" value="oui">oui <input type="radio" name="FeatureFact Monster" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Ask A Biologist : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Cut-the-Knot : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Geometry from the Land of the Incas : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['None','Free','5-15','Everything (mainly aimed at teachers)','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['None','5-8','Art & Design, Business Studies, Design & Technology, DiDA, Drama, English, English Literature, French, Geography, German, History, ICT, Irish, Maths, Music, Physical Education, Religious Studies, Science, Spanish','Free','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['2-8','None','All','Free','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Biology','None','Free','5-9','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Free','15-19','None','Physics','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['8-13','Free','Yes - extensive','Maths','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['Mathematics','Yes - limited','Free','10-15','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['Free','None','Reading','2-15','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['Yes - extensive','Free','12-15','Geometry','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['Target age','Topic','Advertising','Cost','']
-          });
-          $("#11").typeahead({
-            name:"list11",
-            local : ['Science, Social studies, English, Maths, Art & Music, Health, Technology','4-15','from US$75/year','None','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

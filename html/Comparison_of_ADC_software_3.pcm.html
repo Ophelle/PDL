@@ -1,87 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of ADC software -  Features </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Hash algorithms : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>IPv6 :</label></br>
+								<input type="radio" name="FeatureIPv6" value="oui">Yes <input type="radio" name="FeatureIPv6" value = "non">No <input type="radio" name="FeatureIPv6" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Bloom filter :</label></br>
+								<input type="radio" name="FeatureBloom filter" value="oui">Yes <input type="radio" name="FeatureBloom filter" value = "non">No <input type="radio" name="FeatureBloom filter" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>ADC support :</label></br>
+											<input type="checkbox" name="Feature" >TIGR</br>	
+											<input type="checkbox" name="Feature" >PING</br>	
+											<input type="checkbox" name="Feature" >ADCS</br>	
+											<input type="checkbox" name="Feature" >KEYP</br>	
+											<input type="checkbox" name="Feature" >ASCH</br>	
+											<input type="checkbox" name="Feature" >SUDP</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>ADC hub : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Encryption :</label></br>
+								<input type="radio" name="FeatureEncryption" value="oui">Yes <input type="radio" name="FeatureEncryption" value = "non">No <input type="radio" name="FeatureEncryption" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Plugin : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Other : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Tiger tree hash','Hash algorithms','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Nexthub','Qhub','uhub','RusHub','DSHub','ADCH++','Starlet ADC Hub','Starhub','ADCH++ GUI','Luadch','ADC hub','FLexHub','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Java, Python','No','Plugin','C#','?','Lua','C','Lua, Python, Ruby','Python','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['','Other','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Hash algorithms : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>IPv6 :</label></br>
- 		 					 <input type="radio" name="FeatureIPv6" value="oui">oui <input type="radio" name="FeatureIPv6" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Bloom filter :</label></br>
- 		 					 <input type="radio" name="FeatureBloom filter" value="oui">oui <input type="radio" name="FeatureBloom filter" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>ADC support :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >TIGR</br>	
- 		 									<input type="checkbox" name="Feature" > PING</br>	
- 		 									<input type="checkbox" name="Feature" > ADCS</br>	
- 		 									<input type="checkbox" name="Feature" > KEYP</br>	
- 		 									<input type="checkbox" name="Feature" > ASCH</br>	
- 		 									<input type="checkbox" name="Feature" > SUDP</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>ADC hub : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Encryption :</label></br>
- 		 					 <input type="radio" name="FeatureEncryption" value="oui">oui <input type="radio" name="FeatureEncryption" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Plugin : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Other : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Tiger tree hash','Hash algorithms','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Nexthub','Qhub','uhub','RusHub','DSHub','ADCH++','Starlet ADC Hub','Starhub','ADCH++ GUI','Luadch','ADC hub','FLexHub','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Java, Python','No','Plugin','C#','?','Lua','C','Lua, Python, Ruby','Python','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['','Other','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

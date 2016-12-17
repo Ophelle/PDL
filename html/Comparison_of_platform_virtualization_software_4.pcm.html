@@ -1,99 +1,101 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of platform virtualization software -  Restrictions </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Maximum number of guest VM running : </label></br> <input id="1" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Maximum number of logical CPU per VM guest : </label></br> <input id="2" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Maximum number of SCSI + IDE disks per VM guest :</label></br>
+											<input type="checkbox" name="Feature" >4 IDE; 60 SCSI</br>	
+											<input type="checkbox" name="Feature" >4 IDE; no limit for SATA</br>	
+											<input type="checkbox" name="Feature" >SCSI</br>	
+											<input type="checkbox" name="Feature" >SAS</br>	
+											<input type="checkbox" name="Feature" >4 IDE; 256 SCSI</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Maximum amount of memory per VM guest : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Maximum disk size per VM guest : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Maximum host memory : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Maximum host disk volume size : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Maximum host cores / CPUs :</label></br>
+											<input type="checkbox" name="Feature" >144 cores </br>	
+											<input type="checkbox" name="Feature" >72 CPUs</br>	
+											<input type="checkbox" name="Feature" >320 cores </br>	
+											<input type="checkbox" name="Feature" >64 CPUs</br>	
+											<input type="checkbox" name="Feature" >16 NUMA Nodes </br>	
+											<input type="checkbox" name="Feature" >320 logical CPUs</br>	
+											<input type="checkbox" name="Feature" >64 cores </br>	
+											<input type="checkbox" name="Feature" >8 CPUs</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Name : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['8 GB','1 TB','64 GB','No limit','255 GB','8 GB (32-bit); 64 GB (64-bit)','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['950 GB','2 TB minus 512 bytes','2 TB','64 TB','No limit','62 TB','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['4 TB','No limit','1 TB','2 TB','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['No limit','N/A','64 TB','Depending on filesystem','2 TB minus 512 bytes','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['Containers, or Zones','Hyper-V Server 2008 R2','VMware vSphere Hypervisor (ESXi 5.5) (free)','VMware Player 4.0','VMware Server 2.0','VMware vSphere Hypervisor (ESXi 5.5)','VMware vSphere Hypervisor (ESXi) 4.1','Hyper-V Server 2012','VMware vSphere ESXi 5.0','VirtualBox 4.1.x','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Maximum number of guest VM running : </label></br> <input id="1" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Maximum number of logical CPU per VM guest : </label></br> <input id="2" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Maximum number of SCSI + IDE disks per VM guest :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >4 IDE; 60 SCSI</br>	
- 		 									<input type="checkbox" name="Feature" >4 IDE; no limit for SATA</br>	
- 		 									<input type="checkbox" name="Feature" > SCSI</br>	
- 		 									<input type="checkbox" name="Feature" > SAS</br>	
- 		 									<input type="checkbox" name="Feature" >4 IDE; 256 SCSI</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Maximum amount of memory per VM guest : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Maximum disk size per VM guest : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Maximum host memory : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Maximum host disk volume size : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Maximum host cores / CPUs :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >144 cores </br>	
- 		 									<input type="checkbox" name="Feature" > 72 CPUs</br>	
- 		 									<input type="checkbox" name="Feature" >320 cores </br>	
- 		 									<input type="checkbox" name="Feature" > 64 CPUs</br>	
- 		 									<input type="checkbox" name="Feature" >16 NUMA Nodes </br>	
- 		 									<input type="checkbox" name="Feature" > 320 logical CPUs</br>	
- 		 									<input type="checkbox" name="Feature" >64 cores </br>	
- 		 									<input type="checkbox" name="Feature" > 8 CPUs</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Name : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['8 GB','1 TB','64 GB','No limit','255 GB','8 GB (32-bit); 64 GB (64-bit)','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['950 GB','2 TB minus 512 bytes','2 TB','64 TB','No limit','62 TB','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['4 TB','No limit','1 TB','2 TB','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['No limit','N/A','64 TB','Depending on filesystem','2 TB minus 512 bytes','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Containers, or Zones','Hyper-V Server 2008 R2','VMware vSphere Hypervisor (ESXi 5.5) (free)','VMware Player 4.0','VMware Server 2.0','VMware vSphere Hypervisor (ESXi 5.5)','VMware vSphere Hypervisor (ESXi) 4.1','Hyper-V Server 2012','VMware vSphere ESXi 5.0','VirtualBox 4.1.x','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

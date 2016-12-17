@@ -1,82 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of Prolog implementations - Optimizations</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>YAP-Prolog :</label></br>
+								<input type="radio" name="FeatureYAP-Prolog" value="oui">Yes <input type="radio" name="FeatureYAP-Prolog" value = "non">No <input type="radio" name="FeatureYAP-Prolog" value = "non">Partial </br>
+								
+								</br>	
+								<label>SWI-Prolog :</label></br>
+								<input type="radio" name="FeatureSWI-Prolog" value="oui">Yes <input type="radio" name="FeatureSWI-Prolog" value = "non">No <input type="radio" name="FeatureSWI-Prolog" value = "non">Partial </br>
+								
+								</br>	
+								<label>Ciao :</label></br>
+								<input type="radio" name="FeatureCiao" value="oui">Yes <input type="radio" name="FeatureCiao" value = "non">No <input type="radio" name="FeatureCiao" value = "non">Partial </br>
+								
+								</br>	
+								<label>Jekejeke Prolog : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>XSB :</label></br>
+								<input type="radio" name="FeatureXSB" value="oui">Yes <input type="radio" name="FeatureXSB" value = "non">No <input type="radio" name="FeatureXSB" value = "non">Partial </br>
+								
+								</br>	
+								<label>Visual Prolog : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>GNU Prolog :</label></br>
+								<input type="radio" name="FeatureGNU Prolog" value="oui">Yes <input type="radio" name="FeatureGNU Prolog" value = "non">No <input type="radio" name="FeatureGNU Prolog" value = "non">Partial </br>
+								
+								</br>	
+								<label>SICStus Prolog :</label></br>
+								<input type="radio" name="FeatureSICStus Prolog" value="oui">Yes <input type="radio" name="FeatureSICStus Prolog" value = "non">No <input type="radio" name="FeatureSICStus Prolog" value = "non">Partial </br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Yes (runtime)','Yes','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['N/A','Yes (compile time)','N/A (compile time)','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Choice Point Elimination','Just-in-Time Indexing','Tail-Call Optimization','Environment Trimming','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>YAP-Prolog :</label></br>
- 		 					 <input type="radio" name="FeatureYAP-Prolog" value="oui">oui <input type="radio" name="FeatureYAP-Prolog" value = "non">non </br>
-									
-						</br>	
- 		 					<label>SWI-Prolog :</label></br>
- 		 					 <input type="radio" name="FeatureSWI-Prolog" value="oui">oui <input type="radio" name="FeatureSWI-Prolog" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Ciao :</label></br>
- 		 					 <input type="radio" name="FeatureCiao" value="oui">oui <input type="radio" name="FeatureCiao" value = "non">non </br>
-									
-						</br>	
-							<label>Jekejeke Prolog : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>XSB :</label></br>
- 		 					 <input type="radio" name="FeatureXSB" value="oui">oui <input type="radio" name="FeatureXSB" value = "non">non </br>
-									
-						</br>	
-							<label>Visual Prolog : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>GNU Prolog :</label></br>
- 		 					 <input type="radio" name="FeatureGNU Prolog" value="oui">oui <input type="radio" name="FeatureGNU Prolog" value = "non">non </br>
-									
-						</br>	
- 		 					<label>SICStus Prolog :</label></br>
- 		 					 <input type="radio" name="FeatureSICStus Prolog" value="oui">oui <input type="radio" name="FeatureSICStus Prolog" value = "non">non </br>
-									
-						</br>	
-							<label>Name : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Yes (runtime)','Yes','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['N/A','Yes (compile time)','N/A (compile time)','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Choice Point Elimination','Just-in-Time Indexing','Tail-Call Optimization','Environment Trimming','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

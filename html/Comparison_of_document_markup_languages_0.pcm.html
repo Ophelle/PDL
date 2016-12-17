@@ -1,108 +1,111 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of document markup languages - General information</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Viewer :</label></br>
+											<input type="checkbox" name="Feature" >Web browser</br>	
+											<input type="checkbox" name="Feature" >Word processor</br>	
+											<input type="checkbox" name="Feature" >Output to XHTML+MathML</br>	
+											<input type="checkbox" name="Feature" >TeX</br>	
+											<input type="checkbox" name="Feature" >others.</br>	
+											<input type="checkbox" name="Feature" >DVI or Portable Document Format (PDF) converter</br>	
+											<input type="checkbox" name="Feature" >groffer</br>	
+											<input type="checkbox" name="Feature" >or output to PostScript</br>	
+											<input type="checkbox" name="Feature" >Output to DVI</br>	
+											<input type="checkbox" name="Feature" >PDF</br>	
+											<input type="checkbox" name="Feature" >PostScript</br>	
+											<input type="checkbox" name="Feature" >PNG</br>	
+											<input type="checkbox" name="Feature" >Web Browser (using XHTML)</br>	
+											<input type="checkbox" name="Feature" >Word Processor (using ODF) or EPUB</br>	
+											<input type="checkbox" name="Feature" >Output to HTML</br>	
+											<input type="checkbox" name="Feature" >CHM</br>	
+											<input type="checkbox" name="Feature" >javadoc</br>	
+											<input type="checkbox" name="Feature" >Output to XHTML</br>	
+											<input type="checkbox" name="Feature" >HTML</br>	
+											<input type="checkbox" name="Feature" >DocBook (which can convert to PDF</br>	
+											<input type="checkbox" name="Feature" >EPUB</br>	
+											<input type="checkbox" name="Feature" >DVI</br>	
+											<input type="checkbox" name="Feature" >LaTeX</br>	
+											<input type="checkbox" name="Feature" >roff</br>	
+											<input type="checkbox" name="Feature" >and Postscript)</br>	
+											<input type="checkbox" name="Feature" >Web browser (XHTML or HTML output)</br>	
+											<input type="checkbox" name="Feature" >preview in gedit-markdown-plugin</br>	
+											<input type="checkbox" name="Feature" >Web browser (HTML)</br>	
+											<input type="checkbox" name="Feature" >brief overview</br>	
+											<input type="checkbox" name="Feature" >online tester</br>	
+											<input type="checkbox" name="Feature" >etc.</br>	
+											<input type="checkbox" name="Feature" >Emacs. Output to HTML</br>	
+											<input type="checkbox" name="Feature" >DocBook</br>	
+											<input type="checkbox" name="Feature" >FreeMind</br>	
+											<input type="checkbox" name="Feature" >OpenDocument Format (ODF)</br>	
+											<input type="checkbox" name="Feature" >Unix man pages</br>	
+											<input type="checkbox" name="Feature" >ODT</br>	
+											<input type="checkbox" name="Feature" >S5 (HTML Slide Shows)</br>	
+											<input type="checkbox" name="Feature" >XML</br>	
+											<input type="checkbox" name="Feature" >output to DVI</br>	
+											<input type="checkbox" name="Feature" >Portable Document Format (PDF)</br>	
+											<input type="checkbox" name="Feature" >GDDM</br>	
+											<input type="checkbox" name="Feature" >AFP viewer</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Creator : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Language : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Editor : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>First public release date : </label></br> <input id="5" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Music Extensible Markup Language (MusicXML)','Script','Markdown','Office Open XML (OOXML)','Math Markup Language (MathML)','Open Mathematical Documents (OMDoc)','Maker Interchange Format (MIF)','OpenDocument Format (ODF)','Rich Text Format (RTF)','DocBook','HyperText Markup Language (HTML)','Textile','Computable Document Format','MakeDoc','Text Encoding Initiative (TEI)','Texinfo','reStructuredText','LilyPond','Language','The Music Encoding Initiative (MEI)','AsciiDoc','Creole','Scalable Vector Graphics (SVG)','TeX','Wireless Markup Language (WML)','Org-mode','Darwin Information Typing Architecture (DITA)','Extensible HyperText Markup Language (XHTML)','troff (typesetter runoff), groff (GNU runoff)','Encoded Archival Description (EAD)','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Dean Allen','Donald Knuth','IBM','Org-mode project','W3C','John Gruber and Aaron Swartz','Text Encoding Initiative Consortium','Richard Stallman','Joe Ossanna','Carl Sassenrath','OASIS, ISO/IEC','Berkeley Project','WAP Forum','Microsoft','Han-Wen Nienhuys, Jan Nieuwenhuizen','Recordare','David_Goodger','','Ecma International, ISO/IEC','Frame Technology acquired by Adobe Systems in 1995','IBM, OASIS','Creator','Michael Kohlhase','Tim Berners-Lee','Wolfram Research','The MEI Community','The Davenport Group, OASIS','Stuart Rackham','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Text editor, HTML editor','XML editor','Text editor','Text/XML editor, TeX converter','Text editor, E-mail client','Text/XML editor','Text/XML editor, HTML editor','Text editor, Scorewriter','Mathematica','Text editor, Word processor','Text editor, FrameMaker','Scorewriter','Office suite','Vector graphics editor','Editor','Emacs, text editor','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Viewer :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Web browser</br>	
- 		 									<input type="checkbox" name="Feature" > Word processor</br>	
- 		 									<input type="checkbox" name="Feature" >Output to XHTML+MathML</br>	
- 		 									<input type="checkbox" name="Feature" > TeX</br>	
- 		 									<input type="checkbox" name="Feature" > others.</br>	
- 		 									<input type="checkbox" name="Feature" >DVI or Portable Document Format (PDF) converter</br>	
- 		 									<input type="checkbox" name="Feature" >groffer</br>	
- 		 									<input type="checkbox" name="Feature" > or output to PostScript</br>	
- 		 									<input type="checkbox" name="Feature" >Output to DVI</br>	
- 		 									<input type="checkbox" name="Feature" > PDF</br>	
- 		 									<input type="checkbox" name="Feature" > PostScript</br>	
- 		 									<input type="checkbox" name="Feature" > PNG</br>	
- 		 									<input type="checkbox" name="Feature" >Web Browser (using XHTML)</br>	
- 		 									<input type="checkbox" name="Feature" > Word Processor (using ODF) or EPUB</br>	
- 		 									<input type="checkbox" name="Feature" >Output to HTML</br>	
- 		 									<input type="checkbox" name="Feature" > CHM</br>	
- 		 									<input type="checkbox" name="Feature" > javadoc</br>	
- 		 									<input type="checkbox" name="Feature" >Output to XHTML</br>	
- 		 									<input type="checkbox" name="Feature" > HTML</br>	
- 		 									<input type="checkbox" name="Feature" > DocBook (which can convert to PDF</br>	
- 		 									<input type="checkbox" name="Feature" > EPUB</br>	
- 		 									<input type="checkbox" name="Feature" > DVI</br>	
- 		 									<input type="checkbox" name="Feature" > LaTeX</br>	
- 		 									<input type="checkbox" name="Feature" > roff</br>	
- 		 									<input type="checkbox" name="Feature" > and Postscript)</br>	
- 		 									<input type="checkbox" name="Feature" >Web browser (XHTML or HTML output)</br>	
- 		 									<input type="checkbox" name="Feature" > preview in gedit-markdown-plugin</br>	
- 		 									<input type="checkbox" name="Feature" >Web browser (HTML)</br>	
- 		 									<input type="checkbox" name="Feature" > brief overview</br>	
- 		 									<input type="checkbox" name="Feature" > online tester</br>	
- 		 									<input type="checkbox" name="Feature" > etc.</br>	
- 		 									<input type="checkbox" name="Feature" >Emacs. Output to HTML</br>	
- 		 									<input type="checkbox" name="Feature" > DocBook</br>	
- 		 									<input type="checkbox" name="Feature" > FreeMind</br>	
- 		 									<input type="checkbox" name="Feature" > OpenDocument Format (ODF)</br>	
- 		 									<input type="checkbox" name="Feature" > Unix man pages</br>	
- 		 									<input type="checkbox" name="Feature" > ODT</br>	
- 		 									<input type="checkbox" name="Feature" > S5 (HTML Slide Shows)</br>	
- 		 									<input type="checkbox" name="Feature" > XML</br>	
- 		 									<input type="checkbox" name="Feature" >output to DVI</br>	
- 		 									<input type="checkbox" name="Feature" > Portable Document Format (PDF)</br>	
- 		 									<input type="checkbox" name="Feature" >GDDM</br>	
- 		 									<input type="checkbox" name="Feature" > AFP viewer</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Creator : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Language : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Editor : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>First public release date : </label></br> <input id="5" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Music Extensible Markup Language (MusicXML)','Script','Markdown','Office Open XML (OOXML)','Math Markup Language (MathML)','Open Mathematical Documents (OMDoc)','Maker Interchange Format (MIF)','OpenDocument Format (ODF)','Rich Text Format (RTF)','DocBook','HyperText Markup Language (HTML)','Textile','Computable Document Format','MakeDoc','Text Encoding Initiative (TEI)','Texinfo','reStructuredText','LilyPond','Language','The Music Encoding Initiative (MEI)','AsciiDoc','Creole','Scalable Vector Graphics (SVG)','TeX','Wireless Markup Language (WML)','Org-mode','Darwin Information Typing Architecture (DITA)','Extensible HyperText Markup Language (XHTML)','troff (typesetter runoff), groff (GNU runoff)','Encoded Archival Description (EAD)','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Dean Allen','Donald Knuth','IBM','Org-mode project','W3C','John Gruber and Aaron Swartz','Text Encoding Initiative Consortium','Richard Stallman','Joe Ossanna','Carl Sassenrath','OASIS, ISO/IEC','Berkeley Project','WAP Forum','Microsoft','Han-Wen Nienhuys, Jan Nieuwenhuizen','Recordare','David_Goodger','','Ecma International, ISO/IEC','Frame Technology acquired by Adobe Systems in 1995','IBM, OASIS','Creator','Michael Kohlhase','Tim Berners-Lee','Wolfram Research','The MEI Community','The Davenport Group, OASIS','Stuart Rackham','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Text editor, HTML editor','XML editor','Text editor','Text/XML editor, TeX converter','Text editor, E-mail client','Text/XML editor','Text/XML editor, HTML editor','Text editor, Scorewriter','Mathematica','Text editor, Word processor','Text editor, FrameMaker','Scorewriter','Office suite','Vector graphics editor','Editor','Emacs, text editor','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

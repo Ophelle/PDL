@@ -1,86 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of application virtualization software - Comparison of virtual machines</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Code security :</label></br>
+								<input type="radio" name="FeatureCode security" value="oui">Yes <input type="radio" name="FeatureCode security" value = "non">No <input type="radio" name="FeatureCode security" value = "non">Partial </br>
+								
+								</br>	
+								<label>Shared libraries :</label></br>
+								<input type="radio" name="FeatureShared libraries" value="oui">Yes <input type="radio" name="FeatureShared libraries" value = "non">No <input type="radio" name="FeatureShared libraries" value = "non">Partial </br>
+								
+								</br>	
+								<label>Interpreter :</label></br>
+								<input type="radio" name="FeatureInterpreter" value="oui">Yes <input type="radio" name="FeatureInterpreter" value = "non">No <input type="radio" name="FeatureInterpreter" value = "non">Partial </br>
+								
+								</br>	
+								<label>JIT :</label></br>
+								<input type="radio" name="FeatureJIT" value="oui">Yes <input type="radio" name="FeatureJIT" value = "non">No <input type="radio" name="FeatureJIT" value = "non">Partial </br>
+								
+								</br>	
+								<label>Precompilation :</label></br>
+								<input type="radio" name="FeaturePrecompilation" value="oui">Yes <input type="radio" name="FeaturePrecompilation" value = "non">No <input type="radio" name="FeaturePrecompilation" value = "non">Partial </br>
+								
+								</br>	
+								<label>Memory management : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Virtual machine : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Machine model : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Common Language Object Model :</label></br>
+								<input type="radio" name="FeatureCommon Language Object Model" value="oui">Yes <input type="radio" name="FeatureCommon Language Object Model" value = "non">No <input type="radio" name="FeatureCommon Language Object Model" value = "non">Partial </br>
+								
+								</br>	
+								<label>Dynamic typing :</label></br>
+								<input type="radio" name="FeatureDynamic typing" value="oui">Yes <input type="radio" name="FeatureDynamic typing" value = "non">No <input type="radio" name="FeatureDynamic typing" value = "non">Partial </br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['automatic','automatic or manual','manual','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['JikesRVM','Dalvik','DotGNU Portable.NET','CLR','Dis (Inferno)','Java Virtual Machine (JVM)','LLVM','Squeak','Parrot','Mono','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['register','stack','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Code security :</label></br>
- 		 					 <input type="radio" name="FeatureCode security" value="oui">oui <input type="radio" name="FeatureCode security" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Shared libraries :</label></br>
- 		 					 <input type="radio" name="FeatureShared libraries" value="oui">oui <input type="radio" name="FeatureShared libraries" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Interpreter :</label></br>
- 		 					 <input type="radio" name="FeatureInterpreter" value="oui">oui <input type="radio" name="FeatureInterpreter" value = "non">non </br>
-									
-						</br>	
- 		 					<label>JIT :</label></br>
- 		 					 <input type="radio" name="FeatureJIT" value="oui">oui <input type="radio" name="FeatureJIT" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Precompilation :</label></br>
- 		 					 <input type="radio" name="FeaturePrecompilation" value="oui">oui <input type="radio" name="FeaturePrecompilation" value = "non">non </br>
-									
-						</br>	
-							<label>Memory management : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Virtual machine : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Machine model : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Common Language Object Model :</label></br>
- 		 					 <input type="radio" name="FeatureCommon Language Object Model" value="oui">oui <input type="radio" name="FeatureCommon Language Object Model" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Dynamic typing :</label></br>
- 		 					 <input type="radio" name="FeatureDynamic typing" value="oui">oui <input type="radio" name="FeatureDynamic typing" value = "non">non </br>
-									
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['automatic','automatic or manual','manual','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['JikesRVM','Dalvik','DotGNU Portable.NET','CLR','Dis (Inferno)','Java Virtual Machine (JVM)','LLVM','Squeak','Parrot','Mono','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['register','stack','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

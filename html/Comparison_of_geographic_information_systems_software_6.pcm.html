@@ -1,70 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of geographic information systems software - Applications</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Language : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>WFS :</label></br>
+								<input type="radio" name="FeatureWFS" value="oui">Yes <input type="radio" name="FeatureWFS" value = "non">No <input type="radio" name="FeatureWFS" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>GeoRSS :</label></br>
+								<input type="radio" name="FeatureGeoRSS" value="oui">Yes <input type="radio" name="FeatureGeoRSS" value = "non">No <input type="radio" name="FeatureGeoRSS" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>WMS :</label></br>
+								<input type="radio" name="FeatureWMS" value="oui">Yes <input type="radio" name="FeatureWMS" value = "non">No <input type="radio" name="FeatureWMS" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Other : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['JavaScript','Flash','.NET, ExtJS JavaScript','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['an Ajax Web GIS client','','Generic web client; Also supports WMTS, WMS Time dimension, WFS-G, WCTS, WPS-CT, CSW 2.0.2 ISO AP 1.0, OpenLS, WMC','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['WorldKit','Mscross','GeoMedia SDI Portal','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Language : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>WFS :</label></br>
- 		 					 <input type="radio" name="FeatureWFS" value="oui">oui <input type="radio" name="FeatureWFS" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>GeoRSS :</label></br>
- 		 					 <input type="radio" name="FeatureGeoRSS" value="oui">oui <input type="radio" name="FeatureGeoRSS" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>WMS :</label></br>
- 		 					 <input type="radio" name="FeatureWMS" value="oui">oui <input type="radio" name="FeatureWMS" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Other : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Name : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['JavaScript','Flash','.NET, ExtJS JavaScript','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['an Ajax Web GIS client','','Generic web client; Also supports WMTS, WMS Time dimension, WFS-G, WCTS, WPS-CT, CSW 2.0.2 ISO AP 1.0, OpenLS, WMC','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['WorldKit','Mscross','GeoMedia SDI Portal','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

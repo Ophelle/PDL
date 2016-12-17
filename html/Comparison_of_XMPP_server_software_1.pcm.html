@@ -1,106 +1,110 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of XMPP server software -  Comparison by XEP implementation status </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Status : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>XEP : </label></br> <input id="2" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Description : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Metronome :</label></br>
+								<input type="radio" name="FeatureMetronome" value="oui">Yes <input type="radio" name="FeatureMetronome" value = "non">No <input type="radio" name="FeatureMetronome" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>jabberd14 : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Isode M-Link :</label></br>
+								<input type="radio" name="FeatureIsode M-Link" value="oui">Yes <input type="radio" name="FeatureIsode M-Link" value = "non">No <input type="radio" name="FeatureIsode M-Link" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Openfire : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Tigase : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>iChat Server : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Prosody :</label></br>
+								<input type="radio" name="FeatureProsody" value="oui">Yes <input type="radio" name="FeatureProsody" value = "non">No <input type="radio" name="FeatureProsody" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>MongooseIM :</label></br>
+								<input type="radio" name="FeatureMongooseIM" value="oui">Yes <input type="radio" name="FeatureMongooseIM" value = "non">No <input type="radio" name="FeatureMongooseIM" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>jabberd2 :</label></br>
+								<input type="radio" name="Featurejabberd2" value="oui">Yes <input type="radio" name="Featurejabberd2" value = "non">No <input type="radio" name="Featurejabberd2" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>ejabberd :</label></br>
+								<input type="radio" name="Featureejabberd" value="oui">Yes <input type="radio" name="Featureejabberd" value = "non">No <input type="radio" name="Featureejabberd" value = "non">Partial </br>
+											<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Final','Experimental','Obsolete','Approved','Draft','Historical Use','Deferred','Deprecated','Rejected','Humorous','Retracted','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Publish-Subscribe','Jabber Component Protocol','XMPP Date and Time Profiles','Legacy Delayed Delivery','HTTP Polling','Message Carbons','Result set management','User profile','Privacy Lists','Statistics Gathering (deferred)','Location Query','File Repository and Sharing','Message Events','Jabber Search','Proposed Stream Feature Improvements','Data forms','Field Standardization for Data Forms','Jingle Relay Nodes','XMPP Basic Server 2008','Stream Management','External Service Discovery','vCard-Based Avatars','Entity Capabilities','SI File Transfer','Language Translation','XMPP Compliance Suites 2010','Proposed Resource Binding Improvements','Out of Band Data','Non-SASL Authentication','Metacontacts','Stream Initiation','User Location','Verifying HTTP Requests via XMPP','Encryption of Archived Messages','Abuse Reporting','XMPP Protocol Flows for Inter-Domain Federation','OAuth Over XMPP','Software Version','User Chatting','Advanced Message Processing','JID escaping','Waiting Lists','User Tune','Persistent Storage of Private Data via PubSub','vcard-temp','Last Activity in Presence','Server IP Check','Best Practices to Discourage Denial of Service Attacks','Legacy Entity Time','User Activity','Application-Specific Error Conditions','PubSub Collection Nodes','User Avatar','Simple Communications Blocking','Invisible Presence','SOCKS5 Bytestreams','Best Practices for Use of SASL ANONYMOUS','PubSub Chaining','Remote Roster Management','Client Certificate Management for SASL EXTERNAL','CAPTCHA Forms','Roster Versioning','Jabber RPC','Data Forms Media Element','Flexible offline message retrieval','BOSH Script Syntax','Last Activity','Dialback Key Generation and Validation','Entity Time','Recommended Order of Stream Feature Negotiation','Publishing SI Requests','In-Band Registration','Service Directories','Message Archive Management','Best Practice for Closing Idle Streams','XMPP over Bosh','User Browsing','User Nickname','Resource Application Priority','PubSub Queueing','Message Expiration','Error Condition Mappings','Contact Addresses for XMPP Services','Service Discovery','Message archiving','Invisibility','Message Mine-ing','Basic IM Protocol Suite','In-Band Bytestreams','Portable Import/Export Format for XMPP-IM Servers (proposed)','Ad-Hoc Commands','Feature negotiation','Instant Messaging Intelligence Quotient','Personal Eventing Protocol','Security Labels in XMPP','Roster Item Exchange','Data Forms Validation','Service Discovery Notifications','Service Discovery Extensions','XMPP Compliance Suites 2012','Jingle ICE-UDP Transport Method','XMPP Intermediate IM Server 2008','Service Administration','Best Practices for Use of SASL EXTERNAL with Certificates','Stanza Headers and Internet Metadata','Best Practices for Handling Offline Messages','XMPP Server Compliance 2009','HTTP-Bosh','Software Information','Delayed Delivery','Server Dialback','Spim-Blocking Control','Component Connections','Bidirectional Server-to-Server Connections','Use of Domain-Based Service Names in XMPP SASL Negotiation','Public Key Publishing','Private XML Storage','Stream Compression','Chat State Notifications','Incident Handling','Extended Stanza Addressing','Nested Roster Groups','Multi User Chat','Federated MUC for Constrained Environments','XMPP Ping','Message Delivery Receipts','User Mood','Stanza Interception and Filtering Technology (SIFT)','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['No','Yes','Unknown','Contrib.','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Yes','Unknown','No','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['Yes','Unknown','No','Partial','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['Unknown','Yes','No','Contrib.','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Status : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>XEP : </label></br> <input id="2" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Description : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Metronome :</label></br>
- 		 					 <input type="radio" name="FeatureMetronome" value="oui">oui <input type="radio" name="FeatureMetronome" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>jabberd14 : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Isode M-Link :</label></br>
- 		 					 <input type="radio" name="FeatureIsode M-Link" value="oui">oui <input type="radio" name="FeatureIsode M-Link" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Openfire : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Tigase : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>iChat Server : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Prosody :</label></br>
- 		 					 <input type="radio" name="FeatureProsody" value="oui">oui <input type="radio" name="FeatureProsody" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>MongooseIM :</label></br>
- 		 					 <input type="radio" name="FeatureMongooseIM" value="oui">oui <input type="radio" name="FeatureMongooseIM" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>jabberd2 :</label></br>
- 		 					 <input type="radio" name="Featurejabberd2" value="oui">oui <input type="radio" name="Featurejabberd2" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>ejabberd :</label></br>
- 		 					 <input type="radio" name="Featureejabberd" value="oui">oui <input type="radio" name="Featureejabberd" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Final','Experimental','Obsolete','Approved','Draft','Historical Use','Deferred','Deprecated','Rejected','Humorous','Retracted','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Publish-Subscribe','Jabber Component Protocol','XMPP Date and Time Profiles','Legacy Delayed Delivery','HTTP Polling','Message Carbons','Result set management','User profile','Privacy Lists','Statistics Gathering (deferred)','Location Query','File Repository and Sharing','Message Events','Jabber Search','Proposed Stream Feature Improvements','Data forms','Field Standardization for Data Forms','Jingle Relay Nodes','XMPP Basic Server 2008','Stream Management','External Service Discovery','vCard-Based Avatars','Entity Capabilities','SI File Transfer','Language Translation','XMPP Compliance Suites 2010','Proposed Resource Binding Improvements','Out of Band Data','Non-SASL Authentication','Metacontacts','Stream Initiation','User Location','Verifying HTTP Requests via XMPP','Encryption of Archived Messages','Abuse Reporting','XMPP Protocol Flows for Inter-Domain Federation','OAuth Over XMPP','Software Version','User Chatting','Advanced Message Processing','JID escaping','Waiting Lists','User Tune','Persistent Storage of Private Data via PubSub','vcard-temp','Last Activity in Presence','Server IP Check','Best Practices to Discourage Denial of Service Attacks','Legacy Entity Time','User Activity','Application-Specific Error Conditions','PubSub Collection Nodes','User Avatar','Simple Communications Blocking','Invisible Presence','SOCKS5 Bytestreams','Best Practices for Use of SASL ANONYMOUS','PubSub Chaining','Remote Roster Management','Client Certificate Management for SASL EXTERNAL','CAPTCHA Forms','Roster Versioning','Jabber RPC','Data Forms Media Element','Flexible offline message retrieval','BOSH Script Syntax','Last Activity','Dialback Key Generation and Validation','Entity Time','Recommended Order of Stream Feature Negotiation','Publishing SI Requests','In-Band Registration','Service Directories','Message Archive Management','Best Practice for Closing Idle Streams','XMPP over Bosh','User Browsing','User Nickname','Resource Application Priority','PubSub Queueing','Message Expiration','Error Condition Mappings','Contact Addresses for XMPP Services','Service Discovery','Message archiving','Invisibility','Message Mine-ing','Basic IM Protocol Suite','In-Band Bytestreams','Portable Import/Export Format for XMPP-IM Servers (proposed)','Ad-Hoc Commands','Feature negotiation','Instant Messaging Intelligence Quotient','Personal Eventing Protocol','Security Labels in XMPP','Roster Item Exchange','Data Forms Validation','Service Discovery Notifications','Service Discovery Extensions','XMPP Compliance Suites 2012','Jingle ICE-UDP Transport Method','XMPP Intermediate IM Server 2008','Service Administration','Best Practices for Use of SASL EXTERNAL with Certificates','Stanza Headers and Internet Metadata','Best Practices for Handling Offline Messages','XMPP Server Compliance 2009','HTTP-Bosh','Software Information','Delayed Delivery','Server Dialback','Spim-Blocking Control','Component Connections','Bidirectional Server-to-Server Connections','Use of Domain-Based Service Names in XMPP SASL Negotiation','Public Key Publishing','Private XML Storage','Stream Compression','Chat State Notifications','Incident Handling','Extended Stanza Addressing','Nested Roster Groups','Multi User Chat','Federated MUC for Constrained Environments','XMPP Ping','Message Delivery Receipts','User Mood','Stanza Interception and Filtering Technology (SIFT)','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','Yes','Unknown','Contrib.','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes','Unknown','No','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Yes','Unknown','No','Partial','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Unknown','Yes','No','Contrib.','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

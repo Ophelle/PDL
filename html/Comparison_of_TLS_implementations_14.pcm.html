@@ -1,120 +1,124 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of TLS implementations -  Extensions </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>GnuTLS :</label></br>
+								<input type="radio" name="FeatureGnuTLS" value="oui">Yes <input type="radio" name="FeatureGnuTLS" value = "non">No <input type="radio" name="FeatureGnuTLS" value = "non">Partial </br>
+								
+								</br>	
+								<label>Botan :</label></br>
+								<input type="radio" name="FeatureBotan" value="oui">Yes <input type="radio" name="FeatureBotan" value = "non">No <input type="radio" name="FeatureBotan" value = "non">Partial </br>
+								
+								</br>	
+								<label>cryptlib :</label></br>
+								<input type="radio" name="Featurecryptlib" value="oui">Yes <input type="radio" name="Featurecryptlib" value = "non">No <input type="radio" name="Featurecryptlib" value = "non">Partial </br>
+								
+								</br>	
+								<label>mbed TLS :</label></br>
+								<input type="radio" name="Featurembed TLS" value="oui">Yes <input type="radio" name="Featurembed TLS" value = "non">No <input type="radio" name="Featurembed TLS" value = "non">Partial </br>
+								
+								</br>	
+								<label>MatrixSSL :</label></br>
+								<input type="radio" name="FeatureMatrixSSL" value="oui">Yes <input type="radio" name="FeatureMatrixSSL" value = "non">No <input type="radio" name="FeatureMatrixSSL" value = "non">Partial </br>
+								
+								</br>	
+								<label>wolfSSL :</label></br>
+								<input type="radio" name="FeaturewolfSSL" value="oui">Yes <input type="radio" name="FeaturewolfSSL" value = "non">No <input type="radio" name="FeaturewolfSSL" value = "non">Partial </br>
+								
+								</br>	
+								<label>SChannel 7/2008R2 :</label></br>
+								<input type="radio" name="FeatureSChannel 7/2008R2" value="oui">Yes <input type="radio" name="FeatureSChannel 7/2008R2" value = "non">No <input type="radio" name="FeatureSChannel 7/2008R2" value = "non">Partial </br>
+								
+								</br>	
+								<label>LibreSSL :</label></br>
+								<input type="radio" name="FeatureLibreSSL" value="oui">Yes <input type="radio" name="FeatureLibreSSL" value = "non">No <input type="radio" name="FeatureLibreSSL" value = "non">Partial </br>
+								
+								</br>	
+								<label>SChannel XP/2003 :</label></br>
+								<input type="radio" name="FeatureSChannel XP/2003" value="oui">Yes <input type="radio" name="FeatureSChannel XP/2003" value = "non">No <input type="radio" name="FeatureSChannel XP/2003" value = "non">Partial </br>
+								
+								</br>	
+								<label>Implementation : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>OpenSSL :</label></br>
+								<input type="radio" name="FeatureOpenSSL" value="oui">Yes <input type="radio" name="FeatureOpenSSL" value = "non">No <input type="radio" name="FeatureOpenSSL" value = "non">Partial </br>
+								
+								</br>	
+								<label>NSS :</label></br>
+								<input type="radio" name="FeatureNSS" value="oui">Yes <input type="radio" name="FeatureNSS" value = "non">No <input type="radio" name="FeatureNSS" value = "non">Partial </br>
+								
+								</br>	
+								<label>SharkSSL :</label></br>
+								<input type="radio" name="FeatureSharkSSL" value="oui">Yes <input type="radio" name="FeatureSharkSSL" value = "non">No <input type="radio" name="FeatureSharkSSL" value = "non">Partial </br>
+								
+								</br>	
+								<label>RSA BSAFE MES :</label></br>
+								<input type="radio" name="FeatureRSA BSAFE MES" value="oui">Yes <input type="radio" name="FeatureRSA BSAFE MES" value = "non">No <input type="radio" name="FeatureRSA BSAFE MES" value = "non">Partial </br>
+								
+								</br>	
+								<label>SChannel Vista/2008 :</label></br>
+								<input type="radio" name="FeatureSChannel Vista/2008" value="oui">Yes <input type="radio" name="FeatureSChannel Vista/2008" value = "non">No <input type="radio" name="FeatureSChannel Vista/2008" value = "non">Partial </br>
+								
+								</br>	
+								<label>SChannel 8/2012 :</label></br>
+								<input type="radio" name="FeatureSChannel 8/2012" value="oui">Yes <input type="radio" name="FeatureSChannel 8/2012" value = "non">No <input type="radio" name="FeatureSChannel 8/2012" value = "non">Partial </br>
+								
+								</br>	
+								<label>SChannel 8.1/2012R2, 10 Technical Preview :</label></br>
+								<input type="radio" name="FeatureSChannel 8.1/2012R2, 10 Technical Preview" value="oui">Yes <input type="radio" name="FeatureSChannel 8.1/2012R2, 10 Technical Preview" value = "non">No <input type="radio" name="FeatureSChannel 8.1/2012R2, 10 Technical Preview" value = "non">Partial </br>
+								
+								</br>	
+								<label>JSSE :</label></br>
+								<input type="radio" name="FeatureJSSE" value="oui">Yes <input type="radio" name="FeatureJSSE" value = "non">No <input type="radio" name="FeatureJSSE" value = "non">Partial </br>
+								
+								</br>	
+								<label>RSA BSAFE SSL-J :</label></br>
+								<input type="radio" name="FeatureRSA BSAFE SSL-J" value="oui">Yes <input type="radio" name="FeatureRSA BSAFE SSL-J" value = "non">No <input type="radio" name="FeatureRSA BSAFE SSL-J" value = "non">Partial </br>
+								
+								</br>	
+								<label>Secure Transport :</label></br>
+								<input type="radio" name="FeatureSecure Transport" value="oui">Yes <input type="radio" name="FeatureSecure Transport" value = "non">No <input type="radio" name="FeatureSecure Transport" value = "non">Partial </br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['TLS Padding','Truncated HMAC','TLS Fallback SCSV','Certificate Status Request','Maximum Fragment Length','Supplemental Data','Server Name Indication','Extended Master Secret','OpenPGP','Session Ticket','Keying Material Exporter','Secure Renegotiation','Encrypt-then-MAC','ALPN','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>GnuTLS :</label></br>
- 		 					 <input type="radio" name="FeatureGnuTLS" value="oui">oui <input type="radio" name="FeatureGnuTLS" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Botan :</label></br>
- 		 					 <input type="radio" name="FeatureBotan" value="oui">oui <input type="radio" name="FeatureBotan" value = "non">non </br>
-									
-						</br>	
- 		 					<label>cryptlib :</label></br>
- 		 					 <input type="radio" name="Featurecryptlib" value="oui">oui <input type="radio" name="Featurecryptlib" value = "non">non </br>
-									
-						</br>	
- 		 					<label>mbed TLS :</label></br>
- 		 					 <input type="radio" name="Featurembed TLS" value="oui">oui <input type="radio" name="Featurembed TLS" value = "non">non </br>
-									
-						</br>	
- 		 					<label>MatrixSSL :</label></br>
- 		 					 <input type="radio" name="FeatureMatrixSSL" value="oui">oui <input type="radio" name="FeatureMatrixSSL" value = "non">non </br>
-									
-						</br>	
- 		 					<label>wolfSSL :</label></br>
- 		 					 <input type="radio" name="FeaturewolfSSL" value="oui">oui <input type="radio" name="FeaturewolfSSL" value = "non">non </br>
-									
-						</br>	
- 		 					<label>SChannel 7/2008R2 :</label></br>
- 		 					 <input type="radio" name="FeatureSChannel 7/2008R2" value="oui">oui <input type="radio" name="FeatureSChannel 7/2008R2" value = "non">non </br>
-									
-						</br>	
- 		 					<label>LibreSSL :</label></br>
- 		 					 <input type="radio" name="FeatureLibreSSL" value="oui">oui <input type="radio" name="FeatureLibreSSL" value = "non">non </br>
-									
-						</br>	
- 		 					<label>SChannel XP/2003 :</label></br>
- 		 					 <input type="radio" name="FeatureSChannel XP/2003" value="oui">oui <input type="radio" name="FeatureSChannel XP/2003" value = "non">non </br>
-									
-						</br>	
-							<label>Implementation : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>OpenSSL :</label></br>
- 		 					 <input type="radio" name="FeatureOpenSSL" value="oui">oui <input type="radio" name="FeatureOpenSSL" value = "non">non </br>
-									
-						</br>	
- 		 					<label>NSS :</label></br>
- 		 					 <input type="radio" name="FeatureNSS" value="oui">oui <input type="radio" name="FeatureNSS" value = "non">non </br>
-									
-						</br>	
- 		 					<label>SharkSSL :</label></br>
- 		 					 <input type="radio" name="FeatureSharkSSL" value="oui">oui <input type="radio" name="FeatureSharkSSL" value = "non">non </br>
-									
-						</br>	
- 		 					<label>RSA BSAFE MES :</label></br>
- 		 					 <input type="radio" name="FeatureRSA BSAFE MES" value="oui">oui <input type="radio" name="FeatureRSA BSAFE MES" value = "non">non </br>
-									
-						</br>	
- 		 					<label>SChannel Vista/2008 :</label></br>
- 		 					 <input type="radio" name="FeatureSChannel Vista/2008" value="oui">oui <input type="radio" name="FeatureSChannel Vista/2008" value = "non">non </br>
-									
-						</br>	
- 		 					<label>SChannel 8/2012 :</label></br>
- 		 					 <input type="radio" name="FeatureSChannel 8/2012" value="oui">oui <input type="radio" name="FeatureSChannel 8/2012" value = "non">non </br>
-									
-						</br>	
- 		 					<label>SChannel 8.1/2012R2, 10 Technical Preview :</label></br>
- 		 					 <input type="radio" name="FeatureSChannel 8.1/2012R2, 10 Technical Preview" value="oui">oui <input type="radio" name="FeatureSChannel 8.1/2012R2, 10 Technical Preview" value = "non">non </br>
-									
-						</br>	
- 		 					<label>JSSE :</label></br>
- 		 					 <input type="radio" name="FeatureJSSE" value="oui">oui <input type="radio" name="FeatureJSSE" value = "non">non </br>
-									
-						</br>	
- 		 					<label>RSA BSAFE SSL-J :</label></br>
- 		 					 <input type="radio" name="FeatureRSA BSAFE SSL-J" value="oui">oui <input type="radio" name="FeatureRSA BSAFE SSL-J" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Secure Transport :</label></br>
- 		 					 <input type="radio" name="FeatureSecure Transport" value="oui">oui <input type="radio" name="FeatureSecure Transport" value = "non">non </br>
-									
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['TLS Padding','Truncated HMAC','TLS Fallback SCSV','Certificate Status Request','Maximum Fragment Length','Supplemental Data','Server Name Indication','Extended Master Secret','OpenPGP','Session Ticket','Keying Material Exporter','Secure Renegotiation','Encrypt-then-MAC','ALPN','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

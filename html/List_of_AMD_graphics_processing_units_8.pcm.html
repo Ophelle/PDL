@@ -1,109 +1,109 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>List of AMD graphics processing units -  PCI-E (X3xx, X5xx, X6xx, X1xxx Series) </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Memory clock (MHz) : </label></br> <input id="1" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Memory - Bus width (bit) : </label></br> <input id="2" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Config core : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Fillrate - MTexels/s : </label></br> <input id="4" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Core clock (MHz) : </label></br> <input id="5" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Memory (MB) :</label></br>
+											<input type="checkbox" name="Feature" >128</br>	
+											<input type="checkbox" name="Feature" >256</br>	
+											<input type="checkbox" name="Feature" >64</br>	
+											<input type="checkbox" name="Feature" >32</br>	
+											<input type="checkbox" name="Feature" >128 onboard + up to 128 system</br>	
+									
+								</br>	
+								<label>Launch :</label></br>
+											<input type="checkbox" name="Feature" >June 21</br>	
+											<input type="checkbox" name="Feature" >2004</br>	
+											<input type="checkbox" name="Feature" >Dec. 7</br>	
+											<input type="checkbox" name="Feature" >2006</br>	
+											<input type="checkbox" name="Feature" >April 4</br>	
+											<input type="checkbox" name="Feature" >2005</br>	
+									
+								</br>	
+								<label>Fillrate - MPixels/s : </label></br> <input id="8" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Code name : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Fillrate - MOperations/s : </label></br> <input id="10" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Model : </label></br> <input id="11" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Memory - Bus type : </label></br> <input id="12" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Fab (nm) : </label></br> <input id="13" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Fillrate - MVertices/s : </label></br> <input id="14" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="15" type="number" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['4:2:4:4','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['RV370 (hari)','RV380 (vishnu)','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Radeon X300','Radeon X600 XT','Radeon X1050','Radeon X300 LE','Radeon X600 Pro','Radeon X300 SE','Radeon X300 SE HyperMemory','Radeon X550','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Memory clock (MHz) : </label></br> <input id="1" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Memory - Bus width (bit) : </label></br> <input id="2" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Config core : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Fillrate - MTexels/s : </label></br> <input id="4" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Core clock (MHz) : </label></br> <input id="5" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Memory (MB) :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >128</br>	
- 		 									<input type="checkbox" name="Feature" > 256</br>	
- 		 									<input type="checkbox" name="Feature" >64</br>	
- 		 									<input type="checkbox" name="Feature" > 128</br>	
- 		 									<input type="checkbox" name="Feature" >32</br>	
- 		 									<input type="checkbox" name="Feature" > 64</br>	
- 		 									<input type="checkbox" name="Feature" > 128 onboard + up to 128 system</br>	
-								
-						</br>	
-							<label>Launch :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >June 21</br>	
- 		 									<input type="checkbox" name="Feature" > 2004</br>	
- 		 									<input type="checkbox" name="Feature" >Dec. 7</br>	
- 		 									<input type="checkbox" name="Feature" > 2006</br>	
- 		 									<input type="checkbox" name="Feature" >April 4</br>	
- 		 									<input type="checkbox" name="Feature" > 2005</br>	
-								
-						</br>	
-							<label>Fillrate - MPixels/s : </label></br> <input id="8" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Code name : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Fillrate - MOperations/s : </label></br> <input id="10" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Model : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Memory - Bus type : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Fab (nm) : </label></br> <input id="13" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Fillrate - MVertices/s : </label></br> <input id="14" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="15" type="number" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['4:2:4:4','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['RV370 (hari)','RV380 (vishnu)','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Radeon X300','Radeon X600 XT','Radeon X1050','Radeon X300 LE','Radeon X600 Pro','Radeon X300 SE','Radeon X300 SE HyperMemory','Radeon X550','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

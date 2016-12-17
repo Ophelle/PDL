@@ -1,98 +1,101 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of Office Open XML software - Presentation documents</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Office suite : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Operating systems :</label></br>
+											<input type="checkbox" name="Feature" >Windows</br>	
+											<input type="checkbox" name="Feature" >OS X</br>	
+											<input type="checkbox" name="Feature" >Linux</br>	
+											<input type="checkbox" name="Feature" >Unix</br>	
+											<input type="checkbox" name="Feature" >Android</br>	
+											<input type="checkbox" name="Feature" >Mac OS X</br>	
+											<input type="checkbox" name="Feature" >Solaris</br>	
+											<input type="checkbox" name="Feature" >Palm OS</br>	
+											<input type="checkbox" name="Feature" >Windows Mobile</br>	
+											<input type="checkbox" name="Feature" >Symbian (UIQ</br>	
+											<input type="checkbox" name="Feature" >S80)</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Version : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>ECMA-376 :</label></br>
+								<input type="radio" name="FeatureECMA-376" value="oui">Yes <input type="radio" name="FeatureECMA-376" value = "non">No <input type="radio" name="FeatureECMA-376" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Developer : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Notes : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>ISO/IEC 29500:2008 : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['IBM Lotus Symphony','Office suite','NeoOffice','Go-oo','Microsoft Office','iWork','EIOffice','','Butler Office Pro X','OpenOffice.org','StarOffice','Thinkfree Office','Microsoft Office Mobile','Documents To Go','WordPerfect Office','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['1.3',''08','2.2.0','11.000','2.2.5','6.1','All versions','2009, 5.0.1272.101','3.0','2013, 2011 for Mac','9','Version','','X4 (2008)','3.0.0','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['GPL','Proprietary','MPL','LGPL','LGPL, CDDL','License','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Microsoft','IBM','Apple Inc.','DataViz','Free software community','ThinkFree Corp','OpenOffice.org','Sun Microsystems','Evermore Software','The Document Foundation','Patrick Luby, Edward Peterlin','Corel','Developer','Butler Software Solutions','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['','Notes','Import only','Full support via email','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['Yes','','ISO/IEC 29500:2008','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Office suite : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Operating systems :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 									<input type="checkbox" name="Feature" > OS X</br>	
- 		 									<input type="checkbox" name="Feature" > Linux</br>	
- 		 									<input type="checkbox" name="Feature" > Unix</br>	
- 		 									<input type="checkbox" name="Feature" > Android</br>	
- 		 									<input type="checkbox" name="Feature" > Mac OS X</br>	
- 		 									<input type="checkbox" name="Feature" > Solaris</br>	
- 		 									<input type="checkbox" name="Feature" >Palm OS</br>	
- 		 									<input type="checkbox" name="Feature" > Windows Mobile</br>	
- 		 									<input type="checkbox" name="Feature" > Symbian (UIQ</br>	
- 		 									<input type="checkbox" name="Feature" > S80)</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Version : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>ECMA-376 :</label></br>
- 		 					 <input type="radio" name="FeatureECMA-376" value="oui">oui <input type="radio" name="FeatureECMA-376" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Developer : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Notes : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>ISO/IEC 29500:2008 : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['IBM Lotus Symphony','Office suite','NeoOffice','Go-oo','Microsoft Office','iWork','EIOffice','','Butler Office Pro X','OpenOffice.org','StarOffice','Thinkfree Office','Microsoft Office Mobile','Documents To Go','WordPerfect Office','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['1.3',''08','2.2.0','11.000','2.2.5','6.1','All versions','2009, 5.0.1272.101','3.0','2013, 2011 for Mac','9','Version','','X4 (2008)','3.0.0','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['GPL','Proprietary','MPL','LGPL','LGPL, CDDL','License','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Microsoft','IBM','Apple Inc.','DataViz','Free software community','ThinkFree Corp','OpenOffice.org','Sun Microsystems','Evermore Software','The Document Foundation','Patrick Luby, Edward Peterlin','Corel','Developer','Butler Software Solutions','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['','Notes','Import only','Full support via email','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Yes','','ISO/IEC 29500:2008','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

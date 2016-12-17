@@ -1,91 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of assemblers - x86 assemblers</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>OS :</label></br>
+											<input type="checkbox" name="Feature" >Windows</br>	
+											<input type="checkbox" name="Feature" >Linux</br>	
+											<input type="checkbox" name="Feature" >Unix-like</br>	
+											<input type="checkbox" name="Feature" >Windows Mobile</br>	
+											<input type="checkbox" name="Feature" >DOS</br>	
+											<input type="checkbox" name="Feature" >OS</br>	
+											<input type="checkbox" name="Feature" >2</br>	
+											<input type="checkbox" name="Feature" >FreeBSD</br>	
+											<input type="checkbox" name="Feature" >Mac OS X</br>	
+											<input type="checkbox" name="Feature" >Minix</br>	
+											<input type="checkbox" name="Feature" >CP</br>	
+											<input type="checkbox" name="Feature" >M-86</br>	
+											<input type="checkbox" name="Feature" >Intel's ISIS and iRMX</br>	
+											<input type="checkbox" name="Feature" >Unix</br>	
+											<input type="checkbox" name="Feature" >PC</br>	
+											<input type="checkbox" name="Feature" >IX</br>	
+											<input type="checkbox" name="Feature" >Minix 1.x</br>	
+											<input type="checkbox" name="Feature" >16-bit part in Linux</br>	
+											<input type="checkbox" name="Feature" >86-DOS</br>	
+											<input type="checkbox" name="Feature" >DOS DEBUG</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>x86-64 :</label></br>
+								<input type="radio" name="Featurex86-64" value="oui">Yes <input type="radio" name="Featurex86-64" value = "non">No <input type="radio" name="Featurex86-64" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Active Development :</label></br>
+								<input type="radio" name="FeatureActive Development" value="oui">Yes <input type="radio" name="FeatureActive Development" value = "non">No <input type="radio" name="FeatureActive Development" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Assembler : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Open source :</label></br>
+								<input type="radio" name="FeatureOpen source" value="oui">Yes <input type="radio" name="FeatureOpen source" value = "non">No <input type="radio" name="FeatureOpen source" value = "non">Partial </br>
+											<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['BSD','BSD with added Copyleft','Sybase Open Watcom Public License','Microsoft EULA','GPL','LGPL','?','Proprietary','Free','Public Domain','Public domain','BSD since 2003','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Tim Paterson's ASM','IBM ALP','WASM','TASM','vasm','SLR's OPTASM','ACK','Arrowsoft Assembler','GAS','AT&T','MASM','Mical a86','POASM','RosAsm','LZASM','TCCASM','A86/A386','Yasm','JWASM','Bruce D. Evans' as86','FASM','GoAsm','Digital Research ASM86','NASM','DevelSoftware Assembler','HLA','Xenix','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>OS :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 									<input type="checkbox" name="Feature" > Linux</br>	
- 		 									<input type="checkbox" name="Feature" > Unix-like</br>	
- 		 									<input type="checkbox" name="Feature" > Windows Mobile</br>	
- 		 									<input type="checkbox" name="Feature" > DOS</br>	
- 		 									<input type="checkbox" name="Feature" > OS</br>	
- 		 									<input type="checkbox" name="Feature" >2</br>	
- 		 									<input type="checkbox" name="Feature" >OS</br>	
- 		 									<input type="checkbox" name="Feature" > FreeBSD</br>	
- 		 									<input type="checkbox" name="Feature" > Mac OS X</br>	
- 		 									<input type="checkbox" name="Feature" >Linux</br>	
- 		 									<input type="checkbox" name="Feature" > Minix</br>	
- 		 									<input type="checkbox" name="Feature" >CP</br>	
- 		 									<input type="checkbox" name="Feature" >M-86</br>	
- 		 									<input type="checkbox" name="Feature" > Intel's ISIS and iRMX</br>	
- 		 									<input type="checkbox" name="Feature" >Unix-like</br>	
- 		 									<input type="checkbox" name="Feature" > Windows</br>	
- 		 									<input type="checkbox" name="Feature" >Unix</br>	
- 		 									<input type="checkbox" name="Feature" > PC</br>	
- 		 									<input type="checkbox" name="Feature" >IX</br>	
- 		 									<input type="checkbox" name="Feature" >Minix 1.x</br>	
- 		 									<input type="checkbox" name="Feature" > 16-bit part in Linux</br>	
- 		 									<input type="checkbox" name="Feature" >86-DOS</br>	
- 		 									<input type="checkbox" name="Feature" > DOS DEBUG</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
- 		 					<label>x86-64 :</label></br>
- 		 					 <input type="radio" name="Featurex86-64" value="oui">oui <input type="radio" name="Featurex86-64" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Active Development :</label></br>
- 		 					 <input type="radio" name="FeatureActive Development" value="oui">oui <input type="radio" name="FeatureActive Development" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Assembler : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Open source :</label></br>
- 		 					 <input type="radio" name="FeatureOpen source" value="oui">oui <input type="radio" name="FeatureOpen source" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['BSD','BSD with added Copyleft','Sybase Open Watcom Public License','Microsoft EULA','GPL','LGPL','?','Proprietary','Free','Public Domain','Public domain','BSD since 2003','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Tim Paterson's ASM','IBM ALP','WASM','TASM','vasm','SLR's OPTASM','ACK','Arrowsoft Assembler','GAS','AT&T','MASM','Mical a86','POASM','RosAsm','LZASM','TCCASM','A86/A386','Yasm','JWASM','Bruce D. Evans' as86','FASM','GoAsm','Digital Research ASM86','NASM','DevelSoftware Assembler','HLA','Xenix','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

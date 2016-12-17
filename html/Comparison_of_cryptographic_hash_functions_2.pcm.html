@@ -1,94 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of cryptographic hash functions -  Compression function </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Endian : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Function : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Size (bit) - Block : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Size (bit) - Chaining 
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Endian : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Function : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Size (bit) - Block : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Size (bit) - Chaining 
 values : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Specification : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Words × 
+								
+								</br>	
+								<label>Specification : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Words × 
 Passes = 
 Rounds : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Size (bit) - Length : </label></br> <input id="7" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Operations : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Size (bit) - Computation
+								
+								</br>	
+								<label>Size (bit) - Length : </label></br> <input id="7" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Operations : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Size (bit) - Computation
 values : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Size (bit) - Word : </label></br> <input id="10" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Size (bit) - Digest : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Little','Not Specified','N/A','Big','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['MD5','SHA-256','SHA-512','HAVAL-4-224','HAVAL-3-224','HAVAL-3-192','HAVAL-5-160','Tiger-128','HAVAL-3-128','HAVAL-3-160','HAVAL-5-256','RIPEMD','HAVAL-5-224','Tiger-192','HAVAL-5-192','MD4','HAVAL-4-160','HAVAL-3-256','SHA-0','HAVAL-4-128','SHA-1','SHA-384','HAVAL-4-192','Tiger-160','HAVAL-5-128','MD2','SHA-224','RIPEMD-128','RIPEMD-160','GOST R 34.11-94','HAVAL-4-256','RIPEMD-320','RIPEMD-256','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['','HAVAL','RFC 1319','RFC 5831','Tiger','FIPS 180--3','RIPEMD-160','RFC 1321','RFC 1320','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['= 248 × 3','= 16032 × 5','= 12832 × 4','= 8016 × 5','= 9632 × 3','= 6416 × 4','= 4816 × 3','= 86448 × 18','4','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['A B S','A B L S','B','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								
+								</br>	
+								<label>Size (bit) - Word : </label></br> <input id="10" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Size (bit) - Digest : </label></br> <input id="11" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Little','Not Specified','N/A','Big','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['MD5','SHA-256','SHA-512','HAVAL-4-224','HAVAL-3-224','HAVAL-3-192','HAVAL-5-160','Tiger-128','HAVAL-3-128','HAVAL-3-160','HAVAL-5-256','RIPEMD','HAVAL-5-224','Tiger-192','HAVAL-5-192','MD4','HAVAL-4-160','HAVAL-3-256','SHA-0','HAVAL-4-128','SHA-1','SHA-384','HAVAL-4-192','Tiger-160','HAVAL-5-128','MD2','SHA-224','RIPEMD-128','RIPEMD-160','GOST R 34.11-94','HAVAL-4-256','RIPEMD-320','RIPEMD-256','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['','HAVAL','RFC 1319','RFC 5831','Tiger','FIPS 180--3','RIPEMD-160','RFC 1321','RFC 1320','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['= 248 × 3','= 16032 × 5','= 12832 × 4','= 8016 × 5','= 9632 × 3','= 6416 × 4','= 4816 × 3','= 86448 × 18','4','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['A B S','A B L S','B','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

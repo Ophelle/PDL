@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of programming paradigms -  Pseudocode examples comparing various paradigms </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>load r;                      1
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>load r;                      1
   r2 = r * r;                  2
   result = r2 * "3.142";       3
  . 
@@ -50,15 +53,14 @@
  .... storage .............
  result variable
  constant "3.142" :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >circle.area method(r2):
+											<input type="checkbox" name="Feature" >circle.area method(r2):
     push stack                                 7
     load r2;                                   8
     r3 = r2 * r2;                              9
     res = r3 * "3.142";                       10
     pop stack                                 11
     return(res);                           12</br>	
- 		 									<input type="checkbox" name="Feature" >13
+											<input type="checkbox" name="Feature" >13
  ...............................................
  main proc:
     load r;                                    1
@@ -76,8 +78,8 @@
  (heap) message variable for circle method call
  vtable(==>area)
  stack storage</br>	
- 		 									<input type="checkbox" name="Feature" >area proc(r2</br>	
- 		 									<input type="checkbox" name="Feature" >res):
+											<input type="checkbox" name="Feature" >area proc(r2</br>	
+											<input type="checkbox" name="Feature" >res):
     push stack                                 5
     load r2;                                   6
     r3 = r2 * r2;                              7
@@ -88,7 +90,7 @@
  main proc:
     load r;                                    1
     call area(r</br>	
- 		 									<input type="checkbox" name="Feature" >result);
+											<input type="checkbox" name="Feature" >result);
      +load p = address of parameter list;      2
      +load v = address of subroutine 'area';   3
      +goto v with return;                      4
@@ -102,21 +104,22 @@
  parameter list variable
  function pointer (==>area)
  stack storage</br>	
+									
+								</br>	
+								<label>Imperative : </label></br> <input id="2" type="text" name="Feature"></br>
 								
-						</br>	
-							<label>Imperative : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Object-oriented','Procedural','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Object-oriented','Procedural','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

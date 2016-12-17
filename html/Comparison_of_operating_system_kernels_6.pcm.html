@@ -1,86 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of operating system kernels -  File system support </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>NetWare kernel :</label></br>
+								<input type="radio" name="FeatureNetWare kernel" value="oui">Yes <input type="radio" name="FeatureNetWare kernel" value = "non">No <input type="radio" name="FeatureNetWare kernel" value = "non">Partial </br>
+								
+								</br>	
+								<label>Solaris kernel : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>FreeBSD kernel :</label></br>
+								<input type="radio" name="FeatureFreeBSD kernel" value="oui">Yes <input type="radio" name="FeatureFreeBSD kernel" value = "non">No <input type="radio" name="FeatureFreeBSD kernel" value = "non">Partial </br>
+								
+								</br>	
+								<label>Linux kernel :</label></br>
+								<input type="radio" name="FeatureLinux kernel" value="oui">Yes <input type="radio" name="FeatureLinux kernel" value = "non">No <input type="radio" name="FeatureLinux kernel" value = "non">Partial </br>
+								
+								</br>	
+								<label>DragonFly BSD kernel :</label></br>
+								<input type="radio" name="FeatureDragonFly BSD kernel" value="oui">Yes <input type="radio" name="FeatureDragonFly BSD kernel" value = "non">No <input type="radio" name="FeatureDragonFly BSD kernel" value = "non">Partial </br>
+								
+								</br>	
+								<label>MINIX 3 kernel :</label></br>
+								<input type="radio" name="FeatureMINIX 3 kernel" value="oui">Yes <input type="radio" name="FeatureMINIX 3 kernel" value = "non">No <input type="radio" name="FeatureMINIX 3 kernel" value = "non">Partial </br>
+								
+								</br>	
+								<label>Windows NT kernel : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>ReactOS kernel :</label></br>
+								<input type="radio" name="FeatureReactOS kernel" value="oui">Yes <input type="radio" name="FeatureReactOS kernel" value = "non">No <input type="radio" name="FeatureReactOS kernel" value = "non">Partial </br>
+								
+								</br>	
+								<label>Kernel : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>XNU :</label></br>
+								<input type="radio" name="FeatureXNU" value="oui">Yes <input type="radio" name="FeatureXNU" value = "non">No <input type="radio" name="FeatureXNU" value = "non">Partial </br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['?','Yes','No','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['?','No','Yes','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['ext3','System V FS','JFFS','BeFS','HPFS','NTFS','Amiga FFS','cramfs','ext4','FAT','HFS','BFS','Acorn ADFS','ext2','ISO 9660','QNX4 FS','ZFS','FreeVxFS','JFFS2','OCFS','HFS+','Btrfs','Reiser4','UDF','JFS','MINIX fs','UFS','NSS','ReiserFS','HAMMER','EFS','XFS','Tux3','exFAT','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>NetWare kernel :</label></br>
- 		 					 <input type="radio" name="FeatureNetWare kernel" value="oui">oui <input type="radio" name="FeatureNetWare kernel" value = "non">non </br>
-									
-						</br>	
-							<label>Solaris kernel : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>FreeBSD kernel :</label></br>
- 		 					 <input type="radio" name="FeatureFreeBSD kernel" value="oui">oui <input type="radio" name="FeatureFreeBSD kernel" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Linux kernel :</label></br>
- 		 					 <input type="radio" name="FeatureLinux kernel" value="oui">oui <input type="radio" name="FeatureLinux kernel" value = "non">non </br>
-									
-						</br>	
- 		 					<label>DragonFly BSD kernel :</label></br>
- 		 					 <input type="radio" name="FeatureDragonFly BSD kernel" value="oui">oui <input type="radio" name="FeatureDragonFly BSD kernel" value = "non">non </br>
-									
-						</br>	
- 		 					<label>MINIX 3 kernel :</label></br>
- 		 					 <input type="radio" name="FeatureMINIX 3 kernel" value="oui">oui <input type="radio" name="FeatureMINIX 3 kernel" value = "non">non </br>
-									
-						</br>	
-							<label>Windows NT kernel : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>ReactOS kernel :</label></br>
- 		 					 <input type="radio" name="FeatureReactOS kernel" value="oui">oui <input type="radio" name="FeatureReactOS kernel" value = "non">non </br>
-									
-						</br>	
-							<label>Kernel : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>XNU :</label></br>
- 		 					 <input type="radio" name="FeatureXNU" value="oui">oui <input type="radio" name="FeatureXNU" value = "non">non </br>
-									
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['?','Yes','No','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['?','No','Yes','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['ext3','System V FS','JFFS','BeFS','HPFS','NTFS','Amiga FFS','cramfs','ext4','FAT','HFS','BFS','Acorn ADFS','ext2','ISO 9660','QNX4 FS','ZFS','FreeVxFS','JFFS2','OCFS','HFS+','Btrfs','Reiser4','UDF','JFS','MINIX fs','UFS','NSS','ReiserFS','HAMMER','EFS','XFS','Tux3','exFAT','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

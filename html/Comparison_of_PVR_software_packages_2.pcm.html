@@ -1,112 +1,116 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of PVR software packages - Video format support</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>QuickTime :</label></br>
+								<input type="radio" name="FeatureQuickTime" value="oui">Yes <input type="radio" name="FeatureQuickTime" value = "non">No <input type="radio" name="FeatureQuickTime" value = "non">Partial </br>
+								
+								</br>	
+								<label>DVR : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>WMV :</label></br>
+								<input type="radio" name="FeatureWMV" value="oui">Yes <input type="radio" name="FeatureWMV" value = "non">No <input type="radio" name="FeatureWMV" value = "non">Partial </br>
+								
+								</br>	
+								<label>MPEG-1 :</label></br>
+								<input type="radio" name="FeatureMPEG-1" value="oui">Yes <input type="radio" name="FeatureMPEG-1" value = "non">No <input type="radio" name="FeatureMPEG-1" value = "non">Partial </br>
+								
+								</br>	
+								<label>MPEG-2 :</label></br>
+								<input type="radio" name="FeatureMPEG-2" value="oui">Yes <input type="radio" name="FeatureMPEG-2" value = "non">No <input type="radio" name="FeatureMPEG-2" value = "non">Partial </br>
+								
+								</br>	
+								<label>H.264/MPEG-4 AVC (MPEG-4 Part 10) :</label></br>
+								<input type="radio" name="FeatureH.264/MPEG-4 AVC (MPEG-4 Part 10)" value="oui">Yes <input type="radio" name="FeatureH.264/MPEG-4 AVC (MPEG-4 Part 10)" value = "non">No <input type="radio" name="FeatureH.264/MPEG-4 AVC (MPEG-4 Part 10)" value = "non">Partial </br>
+								
+								</br>	
+								<label>RealVideo :</label></br>
+								<input type="radio" name="FeatureRealVideo" value="oui">Yes <input type="radio" name="FeatureRealVideo" value = "non">No <input type="radio" name="FeatureRealVideo" value = "non">Partial </br>
+								
+								</br>	
+								<label>MP4 :</label></br>
+								<input type="radio" name="FeatureMP4" value="oui">Yes <input type="radio" name="FeatureMP4" value = "non">No <input type="radio" name="FeatureMP4" value = "non">Partial </br>
+								
+								</br>	
+								<label>AVI :</label></br>
+								<input type="radio" name="FeatureAVI" value="oui">Yes <input type="radio" name="FeatureAVI" value = "non">No <input type="radio" name="FeatureAVI" value = "non">Partial </br>
+								
+								</br>	
+								<label>ASF :</label></br>
+								<input type="radio" name="FeatureASF" value="oui">Yes <input type="radio" name="FeatureASF" value = "non">No <input type="radio" name="FeatureASF" value = "non">Partial </br>
+								
+								</br>	
+								<label>MPEG-4 ASP (MPEG-4 Part 2), i.e. DivX, XviD :</label></br>
+								<input type="radio" name="FeatureMPEG-4 ASP (MPEG-4 Part 2), i.e. DivX, XviD" value="oui">Yes <input type="radio" name="FeatureMPEG-4 ASP (MPEG-4 Part 2), i.e. DivX, XviD" value = "non">No <input type="radio" name="FeatureMPEG-4 ASP (MPEG-4 Part 2), i.e. DivX, XviD" value = "non">Partial </br>
+								
+								</br>	
+								<label>MKV : </label></br> <input id="12" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>HEVC (H.265) : </label></br> <input id="13" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>VP9 : </label></br> <input id="14" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>VP8 : </label></br> <input id="15" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['MediaPhoenix/ShowShifter','GB-PVR','Windows Media Center','SageTV','Kodi (formerly XBMC)','VBox@TV','EyeTV','MediaPortal','MythTV','Beyond TV','Arcsoft TotalMedia Theatre','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Unknown','Yes','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Unknown','Yes','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Unknown','Yes','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['Unknown','Yes','No','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>QuickTime :</label></br>
- 		 					 <input type="radio" name="FeatureQuickTime" value="oui">oui <input type="radio" name="FeatureQuickTime" value = "non">non </br>
-									
-						</br>	
-							<label>DVR : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>WMV :</label></br>
- 		 					 <input type="radio" name="FeatureWMV" value="oui">oui <input type="radio" name="FeatureWMV" value = "non">non </br>
-									
-						</br>	
- 		 					<label>MPEG-1 :</label></br>
- 		 					 <input type="radio" name="FeatureMPEG-1" value="oui">oui <input type="radio" name="FeatureMPEG-1" value = "non">non </br>
-									
-						</br>	
- 		 					<label>MPEG-2 :</label></br>
- 		 					 <input type="radio" name="FeatureMPEG-2" value="oui">oui <input type="radio" name="FeatureMPEG-2" value = "non">non </br>
-									
-						</br>	
- 		 					<label>H.264/MPEG-4 AVC (MPEG-4 Part 10) :</label></br>
- 		 					 <input type="radio" name="FeatureH.264/MPEG-4 AVC (MPEG-4 Part 10)" value="oui">oui <input type="radio" name="FeatureH.264/MPEG-4 AVC (MPEG-4 Part 10)" value = "non">non </br>
-									
-						</br>	
- 		 					<label>RealVideo :</label></br>
- 		 					 <input type="radio" name="FeatureRealVideo" value="oui">oui <input type="radio" name="FeatureRealVideo" value = "non">non </br>
-									
-						</br>	
- 		 					<label>MP4 :</label></br>
- 		 					 <input type="radio" name="FeatureMP4" value="oui">oui <input type="radio" name="FeatureMP4" value = "non">non </br>
-									
-						</br>	
- 		 					<label>AVI :</label></br>
- 		 					 <input type="radio" name="FeatureAVI" value="oui">oui <input type="radio" name="FeatureAVI" value = "non">non </br>
-									
-						</br>	
- 		 					<label>ASF :</label></br>
- 		 					 <input type="radio" name="FeatureASF" value="oui">oui <input type="radio" name="FeatureASF" value = "non">non </br>
-									
-						</br>	
- 		 					<label>MPEG-4 ASP (MPEG-4 Part 2), i.e. DivX, XviD :</label></br>
- 		 					 <input type="radio" name="FeatureMPEG-4 ASP (MPEG-4 Part 2), i.e. DivX, XviD" value="oui">oui <input type="radio" name="FeatureMPEG-4 ASP (MPEG-4 Part 2), i.e. DivX, XviD" value = "non">non </br>
-									
-						</br>	
-							<label>MKV : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>HEVC (H.265) : </label></br> <input id="13" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>VP9 : </label></br> <input id="14" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>VP8 : </label></br> <input id="15" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['MediaPhoenix/ShowShifter','GB-PVR','Windows Media Center','SageTV','Kodi (formerly XBMC)','VBox@TV','EyeTV','MediaPortal','MythTV','Beyond TV','Arcsoft TotalMedia Theatre','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Unknown','Yes','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Unknown','Yes','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Unknown','Yes','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Unknown','Yes','No','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

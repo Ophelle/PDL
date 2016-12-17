@@ -1,86 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of parser generators - Parsing expression grammars, deterministic boolean grammars</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Output languages : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Parsing algorithm : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Website : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Grammar, code : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Development platform : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Haskell','Java','C#','Smalltalk, Java, Dart','C, Java, JavaScript, Python, Ruby, Scheme','C','Ruby','Parrot bytecode','Dylan','C++','JavaScript, Squeak, Python','C++11','Common Lisp','Lua','D','Nemerle','Scheme','Java, Scala','PHP','C, OCaml, Java','Python','Erlang','JavaScript','Tcl','Python / C++ (beta)','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Apache License 2.0','GNU GPL','MIT','BSD','MIT or Public domain','Public domain','','Boost','Artistic 2.0','GNU LGPL','Proprietary','GNU GPL, commercial license available on request','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Packrat','Recursive descent','PEG parser interpreter, Packrat','2-phase scannerless top-down backtracking + runtime support','Packrat (modified to support left-recursion and resolve grammar ambiguity)','?','Packrat (modified), mutating interpreter','Hybrid recursive descent / operator precedence','Parsing Machine','PEG parser interpreter','Packrat (modified)','Recursive descent / Packrat (selectively)','Packrat + Cut + Left Recursion','Recursive descent + Pratt','? (PEG Parser?)','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['','Parser Grammar Engine','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['mixed','separate','identical','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['Java Virtual Machine','all','POSIX, Microsoft Windows','Parrot virtual machine','Microsoft Windows','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['parboiled','peg','PyPy rlib','PetitParser','Nemerle.Peg','parsepp','Treetop','Narwhal','Lambda PEG','PGE','lars::parser','Laja','Grako','Mouse','grammar::peg','PEGTL','pyPEG','neotoma','PHP PEG','CL-peg','LPeg','Yard','Drat!','AustenX','Katahdin','Spirit2','IronMeta','peg-parser','Pegasus','Arpeggio','NPEG','Aurochs','PackCC','Pappy','Rats!','Packrat','OMeta','Waxeye','Frisby','PEG.js','pegc','Parsnip','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Output languages : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Parsing algorithm : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Website : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Grammar, code : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Development platform : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Name : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Haskell','Java','C#','Smalltalk, Java, Dart','C, Java, JavaScript, Python, Ruby, Scheme','C','Ruby','Parrot bytecode','Dylan','C++','JavaScript, Squeak, Python','C++11','Common Lisp','Lua','D','Nemerle','Scheme','Java, Scala','PHP','C, OCaml, Java','Python','Erlang','JavaScript','Tcl','Python / C++ (beta)','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Apache License 2.0','GNU GPL','MIT','BSD','MIT or Public domain','Public domain','','Boost','Artistic 2.0','GNU LGPL','Proprietary','GNU GPL, commercial license available on request','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Packrat','Recursive descent','PEG parser interpreter, Packrat','2-phase scannerless top-down backtracking + runtime support','Packrat (modified to support left-recursion and resolve grammar ambiguity)','?','Packrat (modified), mutating interpreter','Hybrid recursive descent / operator precedence','Parsing Machine','PEG parser interpreter','Packrat (modified)','Recursive descent / Packrat (selectively)','Packrat + Cut + Left Recursion','Recursive descent + Pratt','? (PEG Parser?)','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['','Parser Grammar Engine','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['mixed','separate','identical','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Java Virtual Machine','all','POSIX, Microsoft Windows','Parrot virtual machine','Microsoft Windows','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['parboiled','peg','PyPy rlib','PetitParser','Nemerle.Peg','parsepp','Treetop','Narwhal','Lambda PEG','PGE','lars::parser','Laja','Grako','Mouse','grammar::peg','PEGTL','pyPEG','neotoma','PHP PEG','CL-peg','LPeg','Yard','Drat!','AustenX','Katahdin','Spirit2','IronMeta','peg-parser','Pegasus','Arpeggio','NPEG','Aurochs','PackCC','Pappy','Rats!','Packrat','OMeta','Waxeye','Frisby','PEG.js','pegc','Parsnip','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

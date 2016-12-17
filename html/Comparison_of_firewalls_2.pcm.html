@@ -1,82 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of firewalls - Firewall rule-set basic filtering features comparison</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>IP source address(es) :</label></br>
- 		 					 <input type="radio" name="FeatureIP source address(es)" value="oui">oui <input type="radio" name="FeatureIP source address(es)" value = "non">non </br>
-									
-						</br>	
- 		 					<label>TCP/UDP destination port(s) :</label></br>
- 		 					 <input type="radio" name="FeatureTCP/UDP destination port(s)" value="oui">oui <input type="radio" name="FeatureTCP/UDP destination port(s)" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Ethernet MAC source address :</label></br>
- 		 					 <input type="radio" name="FeatureEthernet MAC source address" value="oui">oui <input type="radio" name="FeatureEthernet MAC source address" value = "non">non </br>
-									
-						</br>	
- 		 					<label>IP destination address(es) :</label></br>
- 		 					 <input type="radio" name="FeatureIP destination address(es)" value="oui">oui <input type="radio" name="FeatureIP destination address(es)" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Ethernet MAC destination address :</label></br>
- 		 					 <input type="radio" name="FeatureEthernet MAC destination address" value="oui">oui <input type="radio" name="FeatureEthernet MAC destination address" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Changing default policy to accept/reject (by issuing a single rule) :</label></br>
- 		 					 <input type="radio" name="FeatureChanging default policy to accept/reject (by issuing a single rule)" value="oui">oui <input type="radio" name="FeatureChanging default policy to accept/reject (by issuing a single rule)" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Outbound firewall (egress) :</label></br>
- 		 					 <input type="radio" name="FeatureOutbound firewall (egress)" value="oui">oui <input type="radio" name="FeatureOutbound firewall (egress)" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Inbound firewall (ingress) :</label></br>
- 		 					 <input type="radio" name="FeatureInbound firewall (ingress)" value="oui">oui <input type="radio" name="FeatureInbound firewall (ingress)" value = "non">non </br>
-									
-						</br>	
-							<label>Can Target: : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>TCP/UDP source port(s) :</label></br>
- 		 					 <input type="radio" name="FeatureTCP/UDP source port(s)" value="oui">oui <input type="radio" name="FeatureTCP/UDP source port(s)" value = "non">non </br>
-									
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['IPFire','OPNsense','Untangle','Vyatta','Windows XP Firewall','Windows 7 /
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>IP source address(es) :</label></br>
+								<input type="radio" name="FeatureIP source address(es)" value="oui">Yes <input type="radio" name="FeatureIP source address(es)" value = "non">No <input type="radio" name="FeatureIP source address(es)" value = "non">Partial </br>
+								
+								</br>	
+								<label>TCP/UDP destination port(s) :</label></br>
+								<input type="radio" name="FeatureTCP/UDP destination port(s)" value="oui">Yes <input type="radio" name="FeatureTCP/UDP destination port(s)" value = "non">No <input type="radio" name="FeatureTCP/UDP destination port(s)" value = "non">Partial </br>
+								
+								</br>	
+								<label>Ethernet MAC source address :</label></br>
+								<input type="radio" name="FeatureEthernet MAC source address" value="oui">Yes <input type="radio" name="FeatureEthernet MAC source address" value = "non">No <input type="radio" name="FeatureEthernet MAC source address" value = "non">Partial </br>
+								
+								</br>	
+								<label>IP destination address(es) :</label></br>
+								<input type="radio" name="FeatureIP destination address(es)" value="oui">Yes <input type="radio" name="FeatureIP destination address(es)" value = "non">No <input type="radio" name="FeatureIP destination address(es)" value = "non">Partial </br>
+								
+								</br>	
+								<label>Ethernet MAC destination address :</label></br>
+								<input type="radio" name="FeatureEthernet MAC destination address" value="oui">Yes <input type="radio" name="FeatureEthernet MAC destination address" value = "non">No <input type="radio" name="FeatureEthernet MAC destination address" value = "non">Partial </br>
+								
+								</br>	
+								<label>Changing default policy to accept/reject (by issuing a single rule) :</label></br>
+								<input type="radio" name="FeatureChanging default policy to accept/reject (by issuing a single rule)" value="oui">Yes <input type="radio" name="FeatureChanging default policy to accept/reject (by issuing a single rule)" value = "non">No <input type="radio" name="FeatureChanging default policy to accept/reject (by issuing a single rule)" value = "non">Partial </br>
+								
+								</br>	
+								<label>Outbound firewall (egress) :</label></br>
+								<input type="radio" name="FeatureOutbound firewall (egress)" value="oui">Yes <input type="radio" name="FeatureOutbound firewall (egress)" value = "non">No <input type="radio" name="FeatureOutbound firewall (egress)" value = "non">Partial </br>
+								
+								</br>	
+								<label>Inbound firewall (ingress) :</label></br>
+								<input type="radio" name="FeatureInbound firewall (ingress)" value="oui">Yes <input type="radio" name="FeatureInbound firewall (ingress)" value = "non">No <input type="radio" name="FeatureInbound firewall (ingress)" value = "non">Partial </br>
+								
+								</br>	
+								<label>Can Target: : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>TCP/UDP source port(s) :</label></br>
+								<input type="radio" name="FeatureTCP/UDP source port(s)" value="oui">Yes <input type="radio" name="FeatureTCP/UDP source port(s)" value = "non">No <input type="radio" name="FeatureTCP/UDP source port(s)" value = "non">Partial </br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['IPFire','OPNsense','Untangle','Vyatta','Windows XP Firewall','Windows 7 /
 Windows 2008 R2
 Firewall','Windows Vista Firewall','Trend Micro Internet Security','WinGate','Zeroshell','Zorp','pfSense','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

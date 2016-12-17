@@ -1,84 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of regular expression engines - Languages</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Official website : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Software license : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Language : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Remarks :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Limited but REs are first-class citizens of the language with a specific </br>	
- 		 									<input type="checkbox" name="Feature" >...</br>	
- 		 									<input type="checkbox" name="Feature" >mod syntax.</br>	
- 		 									<input type="checkbox" name="Feature" >Uses simplified</br>	
- 		 									<input type="checkbox" name="Feature" > limited dialect; can be bound to more powerful library</br>	
- 		 									<input type="checkbox" name="Feature" > like PCRE or an alternative parser like LPeg.</br>	
- 		 									<input type="checkbox" name="Feature" >Full</br>	
- 		 									<input type="checkbox" name="Feature" > central part of the language</br>	
- 		 									<input type="checkbox" name="Feature" >Ruby 1.8 and 1.9 use different engines; 1.9 integrates Oniguruma.</br>	
- 		 									<input type="checkbox" name="Feature" >As of 2012</br>	
- 		 									<input type="checkbox" name="Feature" > available on only iOS 4+ and OS X 10.7+</br>	
- 		 									<input type="checkbox" name="Feature" >Omitted in the language report</br>	
- 		 									<input type="checkbox" name="Feature" > and in GHC's Hierarchical Libraries</br>	
- 		 									<input type="checkbox" name="Feature" >REs are written as strings in source code: all backslashes must be doubled</br>	
- 		 									<input type="checkbox" name="Feature" > harming readability.</br>	
- 		 									<input type="checkbox" name="Feature" >Free Pascal 2.6+ ships with TRegExpr from Sorokin and two other regular expression libraries; See wiki.lazarus.freepascal.org</br>	
- 		 									<input type="checkbox" name="Feature" >Regexpr.</br>	
- 		 									<input type="checkbox" name="Feature" >Has two implementations</br>	
- 		 									<input type="checkbox" name="Feature" > with PCRE being the more efficient in speed</br>	
- 		 									<input type="checkbox" name="Feature" > functions</br>	
- 		 									<input type="checkbox" name="Feature" >REs are part of the language core library using PCRE built-in and an optional wrapper for (C code) ICU is available.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['OCaml','PHP','.NET','Ruby','Python','D','Lua','Julia','Haskell','Go','Perl','Tcl','ActionScript 3','C++11 (C++)','Mathematica','Java','Free Pascal (Object Pascal)','JavaScript (ECMAScript)','SAP ABAP','Cocoa (Objective-C)','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Golang.org','Perl.com','Apple','python.org','tcl.tk','C++ standards website','ActionScript Technology Center','Caml','PHP.net','ECMA-262','Lua.org','MSDN','JuliaLang.org','Java','SAP.com','www.freepascal.org','ruby-doc.org','Haskell.org','D','Wolfram','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Tcl/Tk License
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Official website : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Software license : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Language : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Remarks :</label></br>
+											<input type="checkbox" name="Feature" >Limited but REs are first-class citizens of the language with a specific </br>	
+											<input type="checkbox" name="Feature" >...</br>	
+											<input type="checkbox" name="Feature" >mod syntax.</br>	
+											<input type="checkbox" name="Feature" >Uses simplified</br>	
+											<input type="checkbox" name="Feature" >limited dialect; can be bound to more powerful library</br>	
+											<input type="checkbox" name="Feature" >like PCRE or an alternative parser like LPeg.</br>	
+											<input type="checkbox" name="Feature" >Full</br>	
+											<input type="checkbox" name="Feature" >central part of the language</br>	
+											<input type="checkbox" name="Feature" >Ruby 1.8 and 1.9 use different engines; 1.9 integrates Oniguruma.</br>	
+											<input type="checkbox" name="Feature" >As of 2012</br>	
+											<input type="checkbox" name="Feature" >available on only iOS 4+ and OS X 10.7+</br>	
+											<input type="checkbox" name="Feature" >Omitted in the language report</br>	
+											<input type="checkbox" name="Feature" >and in GHC's Hierarchical Libraries</br>	
+											<input type="checkbox" name="Feature" >REs are written as strings in source code: all backslashes must be doubled</br>	
+											<input type="checkbox" name="Feature" >harming readability.</br>	
+											<input type="checkbox" name="Feature" >Free Pascal 2.6+ ships with TRegExpr from Sorokin and two other regular expression libraries; See wiki.lazarus.freepascal.org</br>	
+											<input type="checkbox" name="Feature" >Regexpr.</br>	
+											<input type="checkbox" name="Feature" >Has two implementations</br>	
+											<input type="checkbox" name="Feature" >with PCRE being the more efficient in speed</br>	
+											<input type="checkbox" name="Feature" >functions</br>	
+											<input type="checkbox" name="Feature" >REs are part of the language core library using PCRE built-in and an optional wrapper for (C code) ICU is available.</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['OCaml','PHP','.NET','Ruby','Python','D','Lua','Julia','Haskell','Go','Perl','Tcl','ActionScript 3','C++11 (C++)','Mathematica','Java','Free Pascal (Object Pascal)','JavaScript (ECMAScript)','SAP ABAP','Cocoa (Objective-C)','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Golang.org','Perl.com','Apple','python.org','tcl.tk','C++ standards website','ActionScript Technology Center','Caml','PHP.net','ECMA-262','Lua.org','MSDN','JuliaLang.org','Java','SAP.com','www.freepascal.org','ruby-doc.org','Haskell.org','D','Wolfram','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Tcl/Tk License
 (BSD-style)','?','LGPL with static linking exception','MIT License','style="background: #9FF; color: black; vertical-align: middle; text-align: center; " class="free table-free"|dotnet_license','BSD3','GNU General Public License','PHP License','LGPL','Proprietary','GNU Library General Public License','Free','BSD-style','style="background: #9FF; color: black; vertical-align: middle; text-align: center; " class="free table-free"|boost_mars','Python Software Foundation License','Artistic License, or GNU General Public License','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of firewalls - Firewall appliances</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>OS : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Cost : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Firewall : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['FreeBSD/NanoBSD-based appliance
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>OS : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Cost : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Firewall : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['FreeBSD/NanoBSD-based appliance
 firewall distribution','Proprietary, FortiOS','Linux-based appliance','Proprietary, runs only 
 on CISCO hardware','Proprietary operating system','Proprietary operating system ScreenOS','Proprietary operating system PANOS','Proprietary operating system Junos','Linux-based, with optional web filtering / auditing.','FreeBSD-based appliance
 embedded firewall distribution','Proprietary operating system Check Point IPSO
 and Gaia (Linux-based)','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['GPL','Proprietary','various','GPL version 2','BSD','GPL and Proprietary','ESF License Agreement, v1.0','BSD (2-clause)','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Included on Check Point
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['GPL','Proprietary','various','GPL version 2','BSD','GPL and Proprietary','ESF License Agreement, v1.0','BSD (2-clause)','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Included on Check Point
 security gateways','Free','Free / Paid','Included on all CISCO
 switches and routers','Included on Netscreen
 security gateways','Included on SRX
@@ -61,17 +64,18 @@ Networks firewalls','Included on all CISCO
 PIX devices','Paid','Included on all CISCO
 ASA devices','?','Included on all Fortigate
 devices','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Zeroshell','Juniper SRX','IPFire','CISCO ACLs','Sophos UTM','OPNsense','Opendium Iceni','Palo Alto Networks','FortiGate','Juniper SSG','IPCop','Check Point VPN-1','Monowall','pfsense','CISCO ASA','Untangle','Smoothwall','CISCO PIX','Vyatta','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Zeroshell','Juniper SRX','IPFire','CISCO ACLs','Sophos UTM','OPNsense','Opendium Iceni','Palo Alto Networks','FortiGate','Juniper SSG','IPCop','Check Point VPN-1','Monowall','pfsense','CISCO ASA','Untangle','Smoothwall','CISCO PIX','Vyatta','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

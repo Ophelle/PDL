@@ -1,82 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of IOC, FIFA, and ISO 3166 country codes</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Products : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>ISO : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Country : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>* : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>IOC : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Flag : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>FIFA : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['P178','P236','P118','P190','P78','P171','P197','P150','P165','P36','P33','P72','P16','P205','P138','P23','P184','P153','P226','P142','P42','P181','P239','P17','P174','P134','P223','P168','P164','P117','P85','P82','P232','P175','P50','P97','P68','P217','P73','P54','P143','P212','P231','P254','P114','P244','P18','P139','P24','P11','P10','P79','P94','P14','P64','P5','P167','P49','P148','P229','P21','P224','P66','P192','P113','P58','P170','P157','P63','P120','P186','P240','P242','P88','P119','P161','P185','P38','P144','P77','P140','P96','P177','P52','P84','P141','P107','P80','P35','P128','P145','P2','P149','P40','P195','P31','P122','P92','P22','P67','P253','P208','P158','P53','P104','P152','P247','P32','P198','P13','P57','P202','P19','P137','P251','P196','P222','P218','P146','P201','P124','P76','P81','P248','P93','P44','P69','P6','P9','P189','P182','P45','P238','P90','P39','P121','P221','P154','P75','P30','P112','P87','P188','P98','P210','P155','P235','P106','P203','P60','P102','P249','P15','P109','P8','P29','P187','P99','P56','P125','P133','P151','P108','P193','P48','P243','P209','P1','P200','P37','P100','P111','P162','P250','P95','P28','P246','P126','P4','P214','P132','P43','P130','P101','P129','P245','P123','P204','P20','P211','P3','P207','P227','P105','P234','P213','P71','P216','P147','P70','P219','P91','P115','P47','P61','P62','P34','P194','P179','P191','P156','P173','P166','P86','P135','P237','P127','P225','P183','P215','P51','P220','P7','P103','P83','P12','P89','P26','P172','P46','P241','P59','P110','P136','P159','P228','P27','P74','P180','P169','P160','P41','P65','P131','P206','P233','P230','P55','P163','P199','P116','P176','P25','P252','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['TON','ESP','TZA','MSR','ETH','MNG','SMR','PYF','GUM','HMD','SLE','IRL','LBN','MLT','SYC','KWT','ARE','COD','LKA','ZAF','MRT','VCT','BHS','ALB','JEY','SJM','NOR','UKR','SEN','CPV','TCA','BHR','CYP','FSM','1-ƒ-','GLP','JOR','SLV','JAM','SPM','ZMB','BMU','VEN','AND','DJI','NCL','VNM','BEL','NAM','SGS','FRA','NGA','ZWE','IDN','MMR','AIA','COG','MYS','MKD','SRB','BTN','GNQ','SWE','SGP','','TWN','SWZ','WLF','ISR','TTO','HKG','SOM','ASM','COM','CUB','GUF','GRL','GGY','FLK','FJI','1--ï','SSD','CHL','GAB','GRD','UMI','GRC','MHL','UZB','MAF','TUV','BWA','ERI','MWI','BDI','AZE','NFK','CYM','PLW','PRY','CUW','BRB','SXM','EGY','RUS','ITA','SVK','ARM','TJK','PNG','SAU','GBR','DEU','PAN','ALA','ECU','NIU','KGZ','POL','HTI','MOZ','IRQ','LTU','BGD','COK','NLD','SHN','STP','MCO','TGO','TKL','DZA','CCK','CIV','SUR','RWA','VIR','VAT','KOR','GIN','ROU','CXR','TCD','SLB','NRU','BLR','PHL','KHM','AUT','DMA','URY','PCN','TUN','MAR','ABW','MDA','MNP','JPN','NER','NIC','PAK','EST','LUX','MUS','PER','PRI','LIE','BEN','REU','SDN','TKM','HUN','USA','LSO','CZE','KIR','DNK','OMN','MNE','ATF','ISL','VGB','IND','MDG','CHE','CRI','LCA','IRN','BOL','GNB','DOM','PSE','LBY','BGR','KEN','LAO','LVA','UGA','GHA','KAZ','HRV','GEO','HND','KNA','NZL','CMR','LBR','WSM','GTM','AGO','NPL','TLS','GIB','AFG','BLZ','MYT','VUT','BLM','ARG','SYR','MTQ','FIN','CAF','MEX','YEM','MAC','BFA','PRK','GUY','MLI','FRO','IMN','QAT','COL','GMB','PRT','BIH','CAN','TUR','THA','BRA','ATG','CHN','BRN','BES','MDV','AUS','SVN','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Qatar','Greece','Portugal','Venezuela','Bhutan','Bosnia and Herzegovina','Madagascar','Scotland','Mexico','Moldova','Uzbekistan','Curaçao','South Georgia and the South Sandwich Islands','Bolivia','Saint Barthélemy','Japan','The Bahamas','Tokelau','The Gambia','Lithuania','Peru','New Zealand','England','Djibouti','Anguilla','Turks and Caicos Islands','French Polynesia','Brazil','Egypt','Ukraine','Botswana','Congo, Republic of the','Honduras','Jersey','Macau','Myanmar','Faroe Islands','Gibraltar','Guadeloupe','Wales','United Kingdom','Burundi','Marshall Islands','Luxembourg','Algeria','Sierra Leone','Hong Kong','Belgium','Niger','Kuwait','Slovakia','Uganda','Cyprus','Dominica','Belarus','Benin','Israel','Malta','Mauritius','Thailand','Poland','Republic of China (Taiwan)','Tonga','Bangladesh','Netherlands','Lesotho','Romania','Monaco','Finland','Mali','Korea, Republic of (South)','Iceland','Ghana','Cook Islands','Pitcairn Islands','Cape Verde','Saudi Arabia','Tuvalu','Central African Republic','Laos','Oman','Germany','United States Minor Outlying Islands','Czech Republic','Liberia','Togo','Montserrat','United States','British Indian Ocean Territory','Antigua and Barbuda','Guatemala','Bermuda','Bahrain','Guernsey','Aruba','Northern Mariana Islands','Mozambique','Malaysia','Serbia','Guam','Norfolk Island','Guyana','Kyrgyzstan','Zambia','Comoros','Cuba','Sweden','Barbados','Isle of Man','Rwanda','Uruguay','Kosovo','Micronesia, Federated States of','Norway','Cambodia','Argentina','Colombia','Haiti','Kazakhstan','Lebanon','São Tomé and Príncipe','Suriname','Wallis and Futuna','Brunei','Indonesia','Martinique','Afghanistan','Swaziland','British Virgin Islands','Trinidad and Tobago','Guinea-Bissau','Denmark','Saint Helena, Ascension and Tristan da Cunha','Iraq','Estonia','Timor-Leste','Namibia','Sudan','Spain','Chile','Turkmenistan','Saint Vincent and the Grenadines','Montenegro','Kiribati','South Sudan','Austria','El Salvador','Nauru','Syria','San Marino','Jordan','Kenya','Dominican Republic','Mongolia','Armenia','Tajikistan','Senegal','French Southern and Antarctic Lands','United Arab Emirates','Nigeria','Sri Lanka','Panama','','Guinea','Bulgaria','Côte d'Ivoire','American Samoa','Grenada','Malawi','Somalia','Albania','Angola','Libya','Solomon Islands','China, People's Republic of','Philippines','Turkey','Burkina Faso','Hungary','Gabon','State of Palestine','India','France','Svalbard and Jan Mayen','Papua New Guinea','Azerbaijan','Equatorial Guinea','Saint Pierre and Miquelon','Ethiopia','Nepal','Mayotte','Croatia','Northern Ireland','New Caledonia','Saint Martin (French part)','Cayman Islands','Belize','Andorra','Greenland','Yemen','Sint Maarten (Dutch part)','Cameroon','Vatican City State','Congo, Democratic Republic of the','Saint Kitts and Nevis','Saint Lucia','Morocco','Caribbean Netherlands: Bonaire, Sint Eustatius and Saba','Vanuatu','Réunion','Switzerland','Zimbabwe','Heard Island and McDonald Islands','Korea, Democratic People's Rep. (North)','Puerto Rico','Åland Islands','Falkland Islands','Jamaica','Maldives','Seychelles','Pakistan','Paraguay','Ireland','Ecuador','Tunisia','Costa Rica','Tanzania','Fiji','Vietnam','Christmas Island','Iran','Cocos (Keeling) Islands','Latvia','United States Virgin Islands','Canada','Georgia','Palau','Niue','Eritrea','Macedonia','Bouvet Island','Australia','Russian Federation','French Guiana','Chad','Samoa','South Africa','Italy','Liechtenstein','Mauritania','Nicaragua','Singapore','Slovenia','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['3OFI','2ö-ï','3öFI','1--ï','3OFï','','2-FI','2O-I','3OƒI','3öƒï','2-ƒï','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['HUN','QAT','GRN','SEN','IRI','LIB','','EGY','BAR','SKN','BRA','BER','MLI','SIN','COM','MON','COL','FIJ','FSM','SEY','MTN','ARM','ERI','ECU','CHN','IRL','BIH','MHL','RWA','AUT','SOL','GBS','VIE','TPE','CRC','PAK','ESP','SMR','HON','CAF','NEP','SVK','MDA','SRB','IRQ','TRI','CAY','HAI','VEN','CMR','ESA','BOL','POR','THA','MDV','ANT','SUR','TUN','ALG','SRI','AUS','SAM','AND','OMA','VAN','MAR','CPV','GUA','TOG','LTU','MGL','USA','SLO','GEQ','KSA','BRU','KIR','FRA','KEN','NCA','ETH','KOR','SLE','KOS','KAZ','HKG','VIN','NZL','ASA','RSA','PER','BUR','GHA','GEO','DJI','GER','ITA','LIE','ANG','TKM','CHI','LAO','AFG','BRN','BAN','PLE','SWZ','CYP','BLR','JAM','NAM','PLW','LES','SOM','TUV','STP','MAS','CHA','DEN','BDI','ALB','KGZ','PRK','NED','CUB','GAB','MYA','YEM','TUR','ARG','POL','JOR','ISV','COD','MKD','AZE','UGA','GUM','NGR','IVB','EST','SYR','IND','DMA','CZE','MNE','BOT','GRE','MEX','CGO','ISR','UKR','PUR','NRU','SUD','BHU','LCA','MAW','ISL','BEN','GUY','CIV','TLS','PNG','RUS','PHI','URU','CAM','TJK','BEL','PAR','TAN','UAE','ARU','ROU','INA','ZIM','CAN','MOZ','KUW','FIN','LUX','CRO','NIG','GAM','LBA','UZB','BIZ','NOR','ZAM','TGA','SUI','GBR','BUL','DOM','LBR','GUI','BAH','MRI','COK','MLT','JPN','PAN','LAT','MAD','SWE','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['','Western Sahara','Antarctica','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['','TGA','QAT','HON','PNG','NOR','OMA','BRU','ESP','UKR','MSR','PHI','STP','NEP','MAD','SKN','COK','ALB','MEX','SWE','GUA','CGO','CYP','SEY','VIN','KAZ','LBY','LVA','SUR','PRK','VEN','BAN','CIV','BAH','GRE','HUN','JOR','SCO','ARU','TAH','SAM','UAE','NCA','PLE','BDI','CMR','VAN','GNB','BOL','CPV','CZE','PAN','TUR','KOR','MGL','DEN','EGY','HAI','KSA','PUR','NCL','ISL','MNE','IOT1--ï','THA','PAK','BER','BVT1--ï','ATG','MAR','MAC','FIJ','BOT','LIB','SOL','BLZ','SVK','BEL','WAL','AUT','CTA','CHN','SSD','BIH','GUI','ZIM','LES','SDN','BRB','FRA','NIG','RWA','BHU','DOM','KUW','MKD','GAM','ASA','EQG','SOM','ECU','MOZ','ERI','LTU','NGA','DJI','AZE','CAY','TUN','MLI','GHA','CHI','BEN','BLR','SRI','MDA','YEM','COM','CRC','BFA','IRN','TAN','KEN','KGZ','CAN','CHA','PAR','ATA','GAB','GUY','ALG','GUM','LCA','SRB','RSA','AIA','TPE','POL','IND','SEN','TCA','FRO','HKG','TOG','AUS','MYA','LIE','JAM','LUX','RUS','SLV','COL','VIR','ANG','NED','UGA','ESH','NIR','MWI','ARG','VIE','COD','BUL','SWZ','BRA','LBR','SUI','AFG','AND','CUB','ZAM','SYR','CAM','CRO','FIN','SIN','DMA','ISR','ROU','BHR','ENG','ITA','MAS','EST','GRN','IRL','SVN','TLS','NZL','JPN','CUW','PER','VGB','TRI','POR','URU','MRI','USA','GEO','MDV','ARM','TKM','GER','MTN','MLT','IRQ','UZB','IDN','LAO','SLE','ETH','SMR','TJK','NAM','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Products : </label></br> <input id="1" type="aaaa" name="Feature"></br>
-							
-						</br>	
-							<label>ISO : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Country : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>* : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>IOC : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Flag : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>FIFA : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['TON','ESP','TZA','MSR','ETH','MNG','SMR','PYF','GUM','HMD','SLE','IRL','LBN','MLT','SYC','KWT','ARE','COD','LKA','ZAF','MRT','VCT','BHS','ALB','JEY','SJM','NOR','UKR','SEN','CPV','TCA','BHR','CYP','FSM','1-ƒ-','GLP','JOR','SLV','JAM','SPM','ZMB','BMU','VEN','AND','DJI','NCL','VNM','BEL','NAM','SGS','FRA','NGA','ZWE','IDN','MMR','AIA','COG','MYS','MKD','SRB','BTN','GNQ','SWE','SGP','','TWN','SWZ','WLF','ISR','TTO','HKG','SOM','ASM','COM','CUB','GUF','GRL','GGY','FLK','FJI','1--ï','SSD','CHL','GAB','GRD','UMI','GRC','MHL','UZB','MAF','TUV','BWA','ERI','MWI','BDI','AZE','NFK','CYM','PLW','PRY','CUW','BRB','SXM','EGY','RUS','ITA','SVK','ARM','TJK','PNG','SAU','GBR','DEU','PAN','ALA','ECU','NIU','KGZ','POL','HTI','MOZ','IRQ','LTU','BGD','COK','NLD','SHN','STP','MCO','TGO','TKL','DZA','CCK','CIV','SUR','RWA','VIR','VAT','KOR','GIN','ROU','CXR','TCD','SLB','NRU','BLR','PHL','KHM','AUT','DMA','URY','PCN','TUN','MAR','ABW','MDA','MNP','JPN','NER','NIC','PAK','EST','LUX','MUS','PER','PRI','LIE','BEN','REU','SDN','TKM','HUN','USA','LSO','CZE','KIR','DNK','OMN','MNE','ATF','ISL','VGB','IND','MDG','CHE','CRI','LCA','IRN','BOL','GNB','DOM','PSE','LBY','BGR','KEN','LAO','LVA','UGA','GHA','KAZ','HRV','GEO','HND','KNA','NZL','CMR','LBR','WSM','GTM','AGO','NPL','TLS','GIB','AFG','BLZ','MYT','VUT','BLM','ARG','SYR','MTQ','FIN','CAF','MEX','YEM','MAC','BFA','PRK','GUY','MLI','FRO','IMN','QAT','COL','GMB','PRT','BIH','CAN','TUR','THA','BRA','ATG','CHN','BRN','BES','MDV','AUS','SVN','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Qatar','Greece','Portugal','Venezuela','Bhutan','Bosnia and Herzegovina','Madagascar','Scotland','Mexico','Moldova','Uzbekistan','Curaçao','South Georgia and the South Sandwich Islands','Bolivia','Saint Barthélemy','Japan','The Bahamas','Tokelau','The Gambia','Lithuania','Peru','New Zealand','England','Djibouti','Anguilla','Turks and Caicos Islands','French Polynesia','Brazil','Egypt','Ukraine','Botswana','Congo, Republic of the','Honduras','Jersey','Macau','Myanmar','Faroe Islands','Gibraltar','Guadeloupe','Wales','United Kingdom','Burundi','Marshall Islands','Luxembourg','Algeria','Sierra Leone','Hong Kong','Belgium','Niger','Kuwait','Slovakia','Uganda','Cyprus','Dominica','Belarus','Benin','Israel','Malta','Mauritius','Thailand','Poland','Republic of China (Taiwan)','Tonga','Bangladesh','Netherlands','Lesotho','Romania','Monaco','Finland','Mali','Korea, Republic of (South)','Iceland','Ghana','Cook Islands','Pitcairn Islands','Cape Verde','Saudi Arabia','Tuvalu','Central African Republic','Laos','Oman','Germany','United States Minor Outlying Islands','Czech Republic','Liberia','Togo','Montserrat','United States','British Indian Ocean Territory','Antigua and Barbuda','Guatemala','Bermuda','Bahrain','Guernsey','Aruba','Northern Mariana Islands','Mozambique','Malaysia','Serbia','Guam','Norfolk Island','Guyana','Kyrgyzstan','Zambia','Comoros','Cuba','Sweden','Barbados','Isle of Man','Rwanda','Uruguay','Kosovo','Micronesia, Federated States of','Norway','Cambodia','Argentina','Colombia','Haiti','Kazakhstan','Lebanon','São Tomé and Príncipe','Suriname','Wallis and Futuna','Brunei','Indonesia','Martinique','Afghanistan','Swaziland','British Virgin Islands','Trinidad and Tobago','Guinea-Bissau','Denmark','Saint Helena, Ascension and Tristan da Cunha','Iraq','Estonia','Timor-Leste','Namibia','Sudan','Spain','Chile','Turkmenistan','Saint Vincent and the Grenadines','Montenegro','Kiribati','South Sudan','Austria','El Salvador','Nauru','Syria','San Marino','Jordan','Kenya','Dominican Republic','Mongolia','Armenia','Tajikistan','Senegal','French Southern and Antarctic Lands','United Arab Emirates','Nigeria','Sri Lanka','Panama','','Guinea','Bulgaria','Côte d'Ivoire','American Samoa','Grenada','Malawi','Somalia','Albania','Angola','Libya','Solomon Islands','China, People's Republic of','Philippines','Turkey','Burkina Faso','Hungary','Gabon','State of Palestine','India','France','Svalbard and Jan Mayen','Papua New Guinea','Azerbaijan','Equatorial Guinea','Saint Pierre and Miquelon','Ethiopia','Nepal','Mayotte','Croatia','Northern Ireland','New Caledonia','Saint Martin (French part)','Cayman Islands','Belize','Andorra','Greenland','Yemen','Sint Maarten (Dutch part)','Cameroon','Vatican City State','Congo, Democratic Republic of the','Saint Kitts and Nevis','Saint Lucia','Morocco','Caribbean Netherlands: Bonaire, Sint Eustatius and Saba','Vanuatu','Réunion','Switzerland','Zimbabwe','Heard Island and McDonald Islands','Korea, Democratic People's Rep. (North)','Puerto Rico','Åland Islands','Falkland Islands','Jamaica','Maldives','Seychelles','Pakistan','Paraguay','Ireland','Ecuador','Tunisia','Costa Rica','Tanzania','Fiji','Vietnam','Christmas Island','Iran','Cocos (Keeling) Islands','Latvia','United States Virgin Islands','Canada','Georgia','Palau','Niue','Eritrea','Macedonia','Bouvet Island','Australia','Russian Federation','French Guiana','Chad','Samoa','South Africa','Italy','Liechtenstein','Mauritania','Nicaragua','Singapore','Slovenia','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['3OFI','2ö-ï','3öFI','1--ï','3OFï','','2-FI','2O-I','3OƒI','3öƒï','2-ƒï','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['HUN','QAT','GRN','SEN','IRI','LIB','','EGY','BAR','SKN','BRA','BER','MLI','SIN','COM','MON','COL','FIJ','FSM','SEY','MTN','ARM','ERI','ECU','CHN','IRL','BIH','MHL','RWA','AUT','SOL','GBS','VIE','TPE','CRC','PAK','ESP','SMR','HON','CAF','NEP','SVK','MDA','SRB','IRQ','TRI','CAY','HAI','VEN','CMR','ESA','BOL','POR','THA','MDV','ANT','SUR','TUN','ALG','SRI','AUS','SAM','AND','OMA','VAN','MAR','CPV','GUA','TOG','LTU','MGL','USA','SLO','GEQ','KSA','BRU','KIR','FRA','KEN','NCA','ETH','KOR','SLE','KOS','KAZ','HKG','VIN','NZL','ASA','RSA','PER','BUR','GHA','GEO','DJI','GER','ITA','LIE','ANG','TKM','CHI','LAO','AFG','BRN','BAN','PLE','SWZ','CYP','BLR','JAM','NAM','PLW','LES','SOM','TUV','STP','MAS','CHA','DEN','BDI','ALB','KGZ','PRK','NED','CUB','GAB','MYA','YEM','TUR','ARG','POL','JOR','ISV','COD','MKD','AZE','UGA','GUM','NGR','IVB','EST','SYR','IND','DMA','CZE','MNE','BOT','GRE','MEX','CGO','ISR','UKR','PUR','NRU','SUD','BHU','LCA','MAW','ISL','BEN','GUY','CIV','TLS','PNG','RUS','PHI','URU','CAM','TJK','BEL','PAR','TAN','UAE','ARU','ROU','INA','ZIM','CAN','MOZ','KUW','FIN','LUX','CRO','NIG','GAM','LBA','UZB','BIZ','NOR','ZAM','TGA','SUI','GBR','BUL','DOM','LBR','GUI','BAH','MRI','COK','MLT','JPN','PAN','LAT','MAD','SWE','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['','Western Sahara','Antarctica','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['','TGA','QAT','HON','PNG','NOR','OMA','BRU','ESP','UKR','MSR','PHI','STP','NEP','MAD','SKN','COK','ALB','MEX','SWE','GUA','CGO','CYP','SEY','VIN','KAZ','LBY','LVA','SUR','PRK','VEN','BAN','CIV','BAH','GRE','HUN','JOR','SCO','ARU','TAH','SAM','UAE','NCA','PLE','BDI','CMR','VAN','GNB','BOL','CPV','CZE','PAN','TUR','KOR','MGL','DEN','EGY','HAI','KSA','PUR','NCL','ISL','MNE','IOT1--ï','THA','PAK','BER','BVT1--ï','ATG','MAR','MAC','FIJ','BOT','LIB','SOL','BLZ','SVK','BEL','WAL','AUT','CTA','CHN','SSD','BIH','GUI','ZIM','LES','SDN','BRB','FRA','NIG','RWA','BHU','DOM','KUW','MKD','GAM','ASA','EQG','SOM','ECU','MOZ','ERI','LTU','NGA','DJI','AZE','CAY','TUN','MLI','GHA','CHI','BEN','BLR','SRI','MDA','YEM','COM','CRC','BFA','IRN','TAN','KEN','KGZ','CAN','CHA','PAR','ATA','GAB','GUY','ALG','GUM','LCA','SRB','RSA','AIA','TPE','POL','IND','SEN','TCA','FRO','HKG','TOG','AUS','MYA','LIE','JAM','LUX','RUS','SLV','COL','VIR','ANG','NED','UGA','ESH','NIR','MWI','ARG','VIE','COD','BUL','SWZ','BRA','LBR','SUI','AFG','AND','CUB','ZAM','SYR','CAM','CRO','FIN','SIN','DMA','ISR','ROU','BHR','ENG','ITA','MAS','EST','GRN','IRL','SVN','TLS','NZL','JPN','CUW','PER','VGB','TRI','POR','URU','MRI','USA','GEO','MDV','ARM','TKM','GER','MTN','MLT','IRQ','UZB','IDN','LAO','SLE','ETH','SMR','TJK','NAM','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

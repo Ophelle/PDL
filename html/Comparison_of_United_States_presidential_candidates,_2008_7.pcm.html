@@ -1,82 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of United States presidential candidates, 2008 - Social Security</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Phase out Social Security. :</label></br>
+											<input type="checkbox" name="Feature" >Nader views Social Security as "government as it should work – a coming together of society to ensure that we</br>	
+											<input type="checkbox" name="Feature" >as a community</br>	
+											<input type="checkbox" name="Feature" >take care of each other as we age or suffer from disabilities." Nader opposes a privatized system that would replace "systemic tranquility with an enforced anxiety". He says people are already able to take risk in the stock market through IRA</br>	
+											<input type="checkbox" name="Feature" >401K and other tax-subsidized private retirement devices.</br>	
+											<input type="checkbox" name="Feature" >McKinney strongly opposes privatizing Social Security</br>	
+											<input type="checkbox" name="Feature" >and recognizes cuts disproportionately harm women. She believes tax payments on benefits should be reduced</br>	
+											<input type="checkbox" name="Feature" >and benefits increased.</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Chuck Baldwin : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>In June 1999, McCain said "The only way to increase the yield on Social Security dollars is by allowing workers to make investment decisions for themselves; by empowering American families to invest, in most robust portfolios, a portion of their earnings for Social Security that they would otherwise pay in taxes to Social Security." In January 2000, he repeated his strong support for creating private Social Security accounts. Partial privatization, or diverting payroll taxes to private accounts, would reduce available funds for current retirees significantly, requiring large debt increases to cover the transition. :</label></br>
+											<input type="checkbox" name="Feature" >In June 1999</br>	
+											<input type="checkbox" name="Feature" >McCain said "The only way to increase the yield on Social Security dollars is by allowing workers to make investment decisions for themselves; by empowering American families to invest</br>	
+											<input type="checkbox" name="Feature" >in most robust portfolios</br>	
+											<input type="checkbox" name="Feature" >a portion of their earnings for Social Security that they would otherwise pay in taxes to Social Security." In January 2000</br>	
+											<input type="checkbox" name="Feature" >he repeated his strong support for creating private Social Security accounts. Partial privatization</br>	
+											<input type="checkbox" name="Feature" >or diverting payroll taxes to private accounts</br>	
+											<input type="checkbox" name="Feature" >would reduce available funds for current retirees significantly</br>	
+											<input type="checkbox" name="Feature" >requiring large debt increases to cover the transition.</br>	
+											<input type="checkbox" name="Feature" >Obama has said that Social Security's funding problem is "real but manageable." He has proposed to fund Social Security by applying payroll taxes to individual income above $250</br>	
+											<input type="checkbox" name="Feature" >000 per year</br>	
+											<input type="checkbox" name="Feature" >and says that these high-income earners should "pay their fair share." When asked if he would consider raising the retirement age or cutting benefits</br>	
+											<input type="checkbox" name="Feature" >Obama did not rule these approaches out entirely</br>	
+											<input type="checkbox" name="Feature" >saying</br>	
+											<input type="checkbox" name="Feature" >"everything should be on the table."  However</br>	
+											<input type="checkbox" name="Feature" >he has said that he would not push for either of those approaches</br>	
+											<input type="checkbox" name="Feature" >and says that an increase in tax revenue is necessary to stabilize the system. Obama opposes adding personal accounts to Social Security.</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>John McCain : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Ralph Nader','Cynthia McKinney','Bob Barr','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['John McCain','Barack Obama','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Phase out Social Security. :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Nader views Social Security as "government as it should work – a coming together of society to ensure that we</br>	
- 		 									<input type="checkbox" name="Feature" > as a community</br>	
- 		 									<input type="checkbox" name="Feature" > take care of each other as we age or suffer from disabilities." Nader opposes a privatized system that would replace "systemic tranquility with an enforced anxiety". He says people are already able to take risk in the stock market through IRA</br>	
- 		 									<input type="checkbox" name="Feature" > 401K and other tax-subsidized private retirement devices.</br>	
- 		 									<input type="checkbox" name="Feature" >McKinney strongly opposes privatizing Social Security</br>	
- 		 									<input type="checkbox" name="Feature" > and recognizes cuts disproportionately harm women. She believes tax payments on benefits should be reduced</br>	
- 		 									<input type="checkbox" name="Feature" > and benefits increased.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Chuck Baldwin : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>In June 1999, McCain said "The only way to increase the yield on Social Security dollars is by allowing workers to make investment decisions for themselves; by empowering American families to invest, in most robust portfolios, a portion of their earnings for Social Security that they would otherwise pay in taxes to Social Security." In January 2000, he repeated his strong support for creating private Social Security accounts. Partial privatization, or diverting payroll taxes to private accounts, would reduce available funds for current retirees significantly, requiring large debt increases to cover the transition. :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >In June 1999</br>	
- 		 									<input type="checkbox" name="Feature" > McCain said "The only way to increase the yield on Social Security dollars is by allowing workers to make investment decisions for themselves; by empowering American families to invest</br>	
- 		 									<input type="checkbox" name="Feature" > in most robust portfolios</br>	
- 		 									<input type="checkbox" name="Feature" > a portion of their earnings for Social Security that they would otherwise pay in taxes to Social Security." In January 2000</br>	
- 		 									<input type="checkbox" name="Feature" > he repeated his strong support for creating private Social Security accounts. Partial privatization</br>	
- 		 									<input type="checkbox" name="Feature" > or diverting payroll taxes to private accounts</br>	
- 		 									<input type="checkbox" name="Feature" > would reduce available funds for current retirees significantly</br>	
- 		 									<input type="checkbox" name="Feature" > requiring large debt increases to cover the transition.</br>	
- 		 									<input type="checkbox" name="Feature" >Obama has said that Social Security's funding problem is "real but manageable." He has proposed to fund Social Security by applying payroll taxes to individual income above $250</br>	
- 		 									<input type="checkbox" name="Feature" >000 per year</br>	
- 		 									<input type="checkbox" name="Feature" > and says that these high-income earners should "pay their fair share." When asked if he would consider raising the retirement age or cutting benefits</br>	
- 		 									<input type="checkbox" name="Feature" > Obama did not rule these approaches out entirely</br>	
- 		 									<input type="checkbox" name="Feature" > saying</br>	
- 		 									<input type="checkbox" name="Feature" > "everything should be on the table."  However</br>	
- 		 									<input type="checkbox" name="Feature" > he has said that he would not push for either of those approaches</br>	
- 		 									<input type="checkbox" name="Feature" > and says that an increase in tax revenue is necessary to stabilize the system. Obama opposes adding personal accounts to Social Security.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>John McCain : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Ralph Nader','Cynthia McKinney','Bob Barr','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['John McCain','Barack Obama','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

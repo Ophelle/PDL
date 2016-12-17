@@ -1,105 +1,109 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of layout engines (ECMAScript) - Object object</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>hasOwnProperty(V) :</label></br>
+								<input type="radio" name="FeaturehasOwnProperty(V)" value="oui">Yes <input type="radio" name="FeaturehasOwnProperty(V)" value = "non">No <input type="radio" name="FeaturehasOwnProperty(V)" value = "non">Partial </br>
+								
+								</br>	
+								<label>toString() :</label></br>
+								<input type="radio" name="FeaturetoString()" value="oui">Yes <input type="radio" name="FeaturetoString()" value = "non">No <input type="radio" name="FeaturetoString()" value = "non">Partial </br>
+								
+								</br>	
+								<label>new Object([value]) :</label></br>
+								<input type="radio" name="Featurenew Object([value])" value="oui">Yes <input type="radio" name="Featurenew Object([value])" value = "non">No <input type="radio" name="Featurenew Object([value])" value = "non">Partial </br>
+								
+								</br>	
+								<label>constructor :</label></br>
+								<input type="radio" name="Featureconstructor" value="oui">Yes <input type="radio" name="Featureconstructor" value = "non">No <input type="radio" name="Featureconstructor" value = "non">Partial </br>
+								
+								</br>	
+								<label>Properties : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>prototype :</label></br>
+								<input type="radio" name="Featureprototype" value="oui">Yes <input type="radio" name="Featureprototype" value = "non">No <input type="radio" name="Featureprototype" value = "non">Partial </br>
+								
+								</br>	
+								<label>propertyIsEnumerable(V) :</label></br>
+								<input type="radio" name="FeaturepropertyIsEnumerable(V)" value="oui">Yes <input type="radio" name="FeaturepropertyIsEnumerable(V)" value = "non">No <input type="radio" name="FeaturepropertyIsEnumerable(V)" value = "non">Partial </br>
+								
+								</br>	
+								<label>Called as function : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Called as constructor : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>valueOf() :</label></br>
+								<input type="radio" name="FeaturevalueOf()" value="oui">Yes <input type="radio" name="FeaturevalueOf()" value = "non">No <input type="radio" name="FeaturevalueOf()" value = "non">Partial </br>
+								
+								</br>	
+								<label>isPrototypeOf(V) :</label></br>
+								<input type="radio" name="FeatureisPrototypeOf(V)" value="oui">Yes <input type="radio" name="FeatureisPrototypeOf(V)" value = "non">No <input type="radio" name="FeatureisPrototypeOf(V)" value = "non">Partial </br>
+								
+								</br>	
+								<label>toLocaleString() :</label></br>
+								<input type="radio" name="FeaturetoLocaleString()" value="oui">Yes <input type="radio" name="FeaturetoLocaleString()" value = "non">No <input type="radio" name="FeaturetoLocaleString()" value = "non">Partial </br>
+								
+								</br>	
+								<label>Properties of prototype : </label></br> <input id="13" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Object([value]) :</label></br>
+								<input type="radio" name="FeatureObject([value])" value="oui">Yes <input type="radio" name="FeatureObject([value])" value = "non">No <input type="radio" name="FeatureObject([value])" value = "non">Partial </br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Properties','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Called as function','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Called as constructor','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Properties of prototype','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>hasOwnProperty(V) :</label></br>
- 		 					 <input type="radio" name="FeaturehasOwnProperty(V)" value="oui">oui <input type="radio" name="FeaturehasOwnProperty(V)" value = "non">non </br>
-									
-						</br>	
- 		 					<label>toString() :</label></br>
- 		 					 <input type="radio" name="FeaturetoString()" value="oui">oui <input type="radio" name="FeaturetoString()" value = "non">non </br>
-									
-						</br>	
- 		 					<label>new Object([value]) :</label></br>
- 		 					 <input type="radio" name="Featurenew Object([value])" value="oui">oui <input type="radio" name="Featurenew Object([value])" value = "non">non </br>
-									
-						</br>	
- 		 					<label>constructor :</label></br>
- 		 					 <input type="radio" name="Featureconstructor" value="oui">oui <input type="radio" name="Featureconstructor" value = "non">non </br>
-									
-						</br>	
-							<label>Properties : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>prototype :</label></br>
- 		 					 <input type="radio" name="Featureprototype" value="oui">oui <input type="radio" name="Featureprototype" value = "non">non </br>
-									
-						</br>	
- 		 					<label>propertyIsEnumerable(V) :</label></br>
- 		 					 <input type="radio" name="FeaturepropertyIsEnumerable(V)" value="oui">oui <input type="radio" name="FeaturepropertyIsEnumerable(V)" value = "non">non </br>
-									
-						</br>	
-							<label>Called as function : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Called as constructor : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>valueOf() :</label></br>
- 		 					 <input type="radio" name="FeaturevalueOf()" value="oui">oui <input type="radio" name="FeaturevalueOf()" value = "non">non </br>
-									
-						</br>	
- 		 					<label>isPrototypeOf(V) :</label></br>
- 		 					 <input type="radio" name="FeatureisPrototypeOf(V)" value="oui">oui <input type="radio" name="FeatureisPrototypeOf(V)" value = "non">non </br>
-									
-						</br>	
- 		 					<label>toLocaleString() :</label></br>
- 		 					 <input type="radio" name="FeaturetoLocaleString()" value="oui">oui <input type="radio" name="FeaturetoLocaleString()" value = "non">non </br>
-									
-						</br>	
-							<label>Properties of prototype : </label></br> <input id="13" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Object([value]) :</label></br>
- 		 					 <input type="radio" name="FeatureObject([value])" value="oui">oui <input type="radio" name="FeatureObject([value])" value = "non">non </br>
-									
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Properties','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Called as function','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Called as constructor','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Properties of prototype','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

@@ -1,81 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of instant messaging clients - XMPP-related features</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Jingle - Voice calls :</label></br>
- 		 					 <input type="radio" name="FeatureJingle - Voice calls" value="oui">oui <input type="radio" name="FeatureJingle - Voice calls" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Jingle - File transfer :</label></br>
- 		 					 <input type="radio" name="FeatureJingle - File transfer" value="oui">oui <input type="radio" name="FeatureJingle - File transfer" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Transports :</label></br>
- 		 					 <input type="radio" name="FeatureTransports" value="oui">oui <input type="radio" name="FeatureTransports" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Jingle - Video calls :</label></br>
- 		 					 <input type="radio" name="FeatureJingle - Video calls" value="oui">oui <input type="radio" name="FeatureJingle - Video calls" value = "non">non </br>
-									
-						</br>	
- 		 					<label>File transfer
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Jingle - Voice calls :</label></br>
+								<input type="radio" name="FeatureJingle - Voice calls" value="oui">Yes <input type="radio" name="FeatureJingle - Voice calls" value = "non">No <input type="radio" name="FeatureJingle - Voice calls" value = "non">Partial </br>
+								
+								</br>	
+								<label>Jingle - File transfer :</label></br>
+								<input type="radio" name="FeatureJingle - File transfer" value="oui">Yes <input type="radio" name="FeatureJingle - File transfer" value = "non">No <input type="radio" name="FeatureJingle - File transfer" value = "non">Partial </br>
+								
+								</br>	
+								<label>Transports :</label></br>
+								<input type="radio" name="FeatureTransports" value="oui">Yes <input type="radio" name="FeatureTransports" value = "non">No <input type="radio" name="FeatureTransports" value = "non">Partial </br>
+								
+								</br>	
+								<label>Jingle - Video calls :</label></br>
+								<input type="radio" name="FeatureJingle - Video calls" value="oui">Yes <input type="radio" name="FeatureJingle - Video calls" value = "non">No <input type="radio" name="FeatureJingle - Video calls" value = "non">Partial </br>
+								
+								</br>	
+								<label>File transfer
 (XEP-0096) :</label></br>
- 		 					 <input type="radio" name="FeatureFile transfer
-(XEP-0096)" value="oui">oui <input type="radio" name="FeatureFile transfer
-(XEP-0096)" value = "non">non </br>
-									
-						</br>	
-							<label>Client : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Multi-user
+								<input type="radio" name="FeatureFile transfer
+(XEP-0096)" value="oui">Yes <input type="radio" name="FeatureFile transfer
+(XEP-0096)" value = "non">No <input type="radio" name="FeatureFile transfer
+(XEP-0096)" value = "non">Partial </br>
+								
+								</br>	
+								<label>Client : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Multi-user
 chat :</label></br>
- 		 					 <input type="radio" name="FeatureMulti-user
-chat" value="oui">oui <input type="radio" name="FeatureMulti-user
-chat" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Link-local
+								<input type="radio" name="FeatureMulti-user
+chat" value="oui">Yes <input type="radio" name="FeatureMulti-user
+chat" value = "non">No <input type="radio" name="FeatureMulti-user
+chat" value = "non">Partial </br>
+								
+								</br>	
+								<label>Link-local
 (XEP-0174) :</label></br>
- 		 					 <input type="radio" name="FeatureLink-local
-(XEP-0174)" value="oui">oui <input type="radio" name="FeatureLink-local
-(XEP-0174)" value = "non">non </br>
-									
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Psi','Kadu','Bombus','Gajim','Pidgin','BitlBee','MCabber','Trillian','Messages','InTouch Messenger','Jitsi','Nimbuzz','Kopete','Telepathy-based','Adium','Coccinella','climm','Tkabber','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								<input type="radio" name="FeatureLink-local
+(XEP-0174)" value="oui">Yes <input type="radio" name="FeatureLink-local
+(XEP-0174)" value = "non">No <input type="radio" name="FeatureLink-local
+(XEP-0174)" value = "non">Partial </br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Psi','Kadu','Bombus','Gajim','Pidgin','BitlBee','MCabber','Trillian','Messages','InTouch Messenger','Jitsi','Nimbuzz','Kopete','Telepathy-based','Adium','Coccinella','climm','Tkabber','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

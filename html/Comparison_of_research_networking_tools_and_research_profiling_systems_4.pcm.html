@@ -1,62 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of research networking tools and research profiling systems -  Controlled Vocabulary, Ontologies and Author Disambiguation </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Thesaurus/Controlled Vocabulary Used : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Automatic Author Disambiguation :</label></br>
+								<input type="radio" name="FeatureAutomatic Author Disambiguation" value="oui">Yes <input type="radio" name="FeatureAutomatic Author Disambiguation" value = "non">No <input type="radio" name="FeatureAutomatic Author Disambiguation" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Ontology/Ontologies Supported : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Research Networking Tool : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['unknown','Unknown','Maps to VIVO ontology','N/A','VIVO RDF ontology with additional Profiles RDF classes and properties','Uses elements of FOAF and Dublin Core in RDF; uses Pellet reasoning engine','CASRAI, VIVO','Supports mapping of publication, person and grants data to the VIVO ontology via their open source VIVO Harvester Extension.','The VIVO Ontology was developed and supported by NIH-funded efforts and continues to be developed and built upon through SourceForge and in collaboration with the eagle-i project.','Fully customizable data collection screens; campus, college and department-defined ontologies','Uses elements of FOAF and other ontologies','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Unknown','No thesaurus used','In some fields','VIVO uses several thesauri that are available through Semantic Web, including MeSH','MeSH','None','"Elsevier Fingerprinting Engine" uses ten thesauri including MeSH to match and identify key concepts for an individual or group of people. Thesauri updates and expansion are ongoing.','Yes','unknown','Not applicable','MeSH, Fields of Research, ScienceMetrix.','N/A','MeSH, others are being developed to go beyond the life and biomedical sciences','Scopus taxonomy uses MeSH and general keywords','None (Google uses generic keywords)','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Curvita Profile Manager','Faculty Profile System','Epernicus Solutions & Epernicus Network','Yaffle','Loki','Google','HUBzero','C-IKNOW','Faculty Scholarly Productivity Index','Academic Room','Elsevier's SciVal','McCormick Collaboration Visualization Tool','Activity Insight','Digital Vita','Elsevier's Pure (now integrated with SciVal Experts)','InCites','Profiles','Pivot','LatticeGrid','ResearcherID','GENIUS','Expertise @ Maryland','SciENcv','CUSP - Columbia University Scientific Profiles','Life Science Network','Faculty Research Information Profile (FRIP)','Converis','i2iConnect','EUREKA! Enhancing Student Research','LinkedIn','iamResearcher','Research Accelerator','OSU:pro','Community Academic Profiles - CAP','Symplectic Elements','MizzouLinks','INDURE','MyScienceWork','ERIM Member Profile System (ERIM MIS)','VIVO','Collaborative Partnership / Profile System','iAMscientist','Lattes Database','ReachNC','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Thesaurus/Controlled Vocabulary Used : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Automatic Author Disambiguation :</label></br>
- 		 					 <input type="radio" name="FeatureAutomatic Author Disambiguation" value="oui">oui <input type="radio" name="FeatureAutomatic Author Disambiguation" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Ontology/Ontologies Supported : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Research Networking Tool : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['unknown','Unknown','Maps to VIVO ontology','N/A','VIVO RDF ontology with additional Profiles RDF classes and properties','Uses elements of FOAF and Dublin Core in RDF; uses Pellet reasoning engine','CASRAI, VIVO','Supports mapping of publication, person and grants data to the VIVO ontology via their open source VIVO Harvester Extension.','The VIVO Ontology was developed and supported by NIH-funded efforts and continues to be developed and built upon through SourceForge and in collaboration with the eagle-i project.','Fully customizable data collection screens; campus, college and department-defined ontologies','Uses elements of FOAF and other ontologies','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Unknown','No thesaurus used','In some fields','VIVO uses several thesauri that are available through Semantic Web, including MeSH','MeSH','None','"Elsevier Fingerprinting Engine" uses ten thesauri including MeSH to match and identify key concepts for an individual or group of people. Thesauri updates and expansion are ongoing.','Yes','unknown','Not applicable','MeSH, Fields of Research, ScienceMetrix.','N/A','MeSH, others are being developed to go beyond the life and biomedical sciences','Scopus taxonomy uses MeSH and general keywords','None (Google uses generic keywords)','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Curvita Profile Manager','Faculty Profile System','Epernicus Solutions & Epernicus Network','Yaffle','Loki','Google','HUBzero','C-IKNOW','Faculty Scholarly Productivity Index','Academic Room','Elsevier's SciVal','McCormick Collaboration Visualization Tool','Activity Insight','Digital Vita','Elsevier's Pure (now integrated with SciVal Experts)','InCites','Profiles','Pivot','LatticeGrid','ResearcherID','GENIUS','Expertise @ Maryland','SciENcv','CUSP - Columbia University Scientific Profiles','Life Science Network','Faculty Research Information Profile (FRIP)','Converis','i2iConnect','EUREKA! Enhancing Student Research','LinkedIn','iamResearcher','Research Accelerator','OSU:pro','Community Academic Profiles - CAP','Symplectic Elements','MizzouLinks','INDURE','MyScienceWork','ERIM Member Profile System (ERIM MIS)','VIVO','Collaborative Partnership / Profile System','iAMscientist','Lattes Database','ReachNC','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

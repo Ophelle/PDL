@@ -1,86 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of C Sharp and Java -  Native interoperability </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Address-of :</label></br>
+								<input type="radio" name="FeatureAddress-of" value="oui">Yes <input type="radio" name="FeatureAddress-of" value = "non">No <input type="radio" name="FeatureAddress-of" value = "non">Partial </br>
+								
+								</br>	
+								<label>Cross-language interoperability : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Pointer and arithmetics :</label></br>
+								<input type="radio" name="FeaturePointer and arithmetics" value="oui">Yes <input type="radio" name="FeaturePointer and arithmetics" value = "non">No <input type="radio" name="FeaturePointer and arithmetics" value = "non">Partial </br>
+								
+								</br>	
+								<label>Object pinning (fix variable to address) :</label></br>
+								<input type="radio" name="FeatureObject pinning (fix variable to address)" value="oui">Yes <input type="radio" name="FeatureObject pinning (fix variable to address)" value = "non">No <input type="radio" name="FeatureObject pinning (fix variable to address)" value = "non">Partial </br>
+								
+								</br>	
+								<label>Marshalling : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Native types :</label></br>
+								<input type="radio" name="FeatureNative types" value="oui">Yes <input type="radio" name="FeatureNative types" value = "non">No <input type="radio" name="FeatureNative types" value = "non">Partial </br>
+								
+								</br>	
+								<label>External/native methods :</label></br>
+								<input type="radio" name="FeatureExternal/native methods" value="oui">Yes <input type="radio" name="FeatureExternal/native methods" value = "non">No <input type="radio" name="FeatureExternal/native methods" value = "non">Partial </br>
+								
+								</br>	
+								<label>Explicit stack allocation :</label></br>
+								<input type="radio" name="FeatureExplicit stack allocation" value="oui">Yes <input type="radio" name="FeatureExplicit stack allocation" value = "non">No <input type="radio" name="FeatureExplicit stack allocation" value = "non">Partial </br>
+								
+								</br>	
+								<label>Fixed-size buffers :</label></br>
+								<input type="radio" name="FeatureFixed-size buffers" value="oui">Yes <input type="radio" name="FeatureFixed-size buffers" value = "non">No <input type="radio" name="FeatureFixed-size buffers" value = "non">Partial </br>
+								
+								</br>	
+								<label>Native interoperability : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Yes (with Nashorn, CORBA, JNI or JNA)','Yes; C# was designed for it','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Yes; metadata controlled','External glue code required','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Java','C#','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Address-of :</label></br>
- 		 					 <input type="radio" name="FeatureAddress-of" value="oui">oui <input type="radio" name="FeatureAddress-of" value = "non">non </br>
-									
-						</br>	
-							<label>Cross-language interoperability : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Pointer and arithmetics :</label></br>
- 		 					 <input type="radio" name="FeaturePointer and arithmetics" value="oui">oui <input type="radio" name="FeaturePointer and arithmetics" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Object pinning (fix variable to address) :</label></br>
- 		 					 <input type="radio" name="FeatureObject pinning (fix variable to address)" value="oui">oui <input type="radio" name="FeatureObject pinning (fix variable to address)" value = "non">non </br>
-									
-						</br>	
-							<label>Marshalling : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Native types :</label></br>
- 		 					 <input type="radio" name="FeatureNative types" value="oui">oui <input type="radio" name="FeatureNative types" value = "non">non </br>
-									
-						</br>	
- 		 					<label>External/native methods :</label></br>
- 		 					 <input type="radio" name="FeatureExternal/native methods" value="oui">oui <input type="radio" name="FeatureExternal/native methods" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Explicit stack allocation :</label></br>
- 		 					 <input type="radio" name="FeatureExplicit stack allocation" value="oui">oui <input type="radio" name="FeatureExplicit stack allocation" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Fixed-size buffers :</label></br>
- 		 					 <input type="radio" name="FeatureFixed-size buffers" value="oui">oui <input type="radio" name="FeatureFixed-size buffers" value = "non">non </br>
-									
-						</br>	
-							<label>Native interoperability : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Yes (with Nashorn, CORBA, JNI or JNA)','Yes; C# was designed for it','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Yes; metadata controlled','External glue code required','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Java','C#','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

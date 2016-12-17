@@ -1,58 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of layout engines (Document Object Model) - Events</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Products : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Interface EventTarget - 5.0 : </label></br> <input id="2" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>KHTML - Interface EventTarget : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Interface EventTarget - Yes : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Interface EventTarget - 1.0 : </label></br> <input id="5" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Interface EventTarget - DOM2 : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Interface EventTarget - No : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['P67','P61','P37','P28','P31','P51','P59','P38','P62','P5','P49','P34','P55','P69','P44','P3','P75','P12','P33','P32','P57','P4','P16','P17','P25','P26','P24','P1','P53','P9','P63','P13','P8','P15','P70','P50','P43','P11','P66','P29','P46','P7','P52','P20','P10','P48','P19','P27','P54','P56','P47','P73','P30','P64','P65','P21','P6','P39','P41','P14','P45','P58','P36','P72','P22','P71','P18','P2','P23','P68','P42','P35','P40','P60','P74','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Products : </label></br> <input id="1" type="aaaa" name="Feature"></br>
-							
-						</br>	
-							<label>Interface EventTarget - 5.0 : </label></br> <input id="2" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>KHTML - Interface EventTarget : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Interface EventTarget - Yes : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Interface EventTarget - 1.0 : </label></br> <input id="5" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Interface EventTarget - DOM2 : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Interface EventTarget - No : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-		<script>
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

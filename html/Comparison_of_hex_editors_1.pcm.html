@@ -1,143 +1,140 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of hex editors -  Features </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Disk sector editing :</label></br>
+								<input type="radio" name="FeatureDisk sector editing" value="oui">Yes <input type="radio" name="FeatureDisk sector editing" value = "non">No <input type="radio" name="FeatureDisk sector editing" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Find in Files :</label></br>
+								<input type="radio" name="FeatureFind in Files" value="oui">Yes <input type="radio" name="FeatureFind in Files" value = "non">No <input type="radio" name="FeatureFind in Files" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>File Compare :</label></br>
+								<input type="radio" name="FeatureFile Compare" value="oui">Yes <input type="radio" name="FeatureFile Compare" value = "non">No <input type="radio" name="FeatureFile Compare" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Bookmarks :</label></br>
+								<input type="radio" name="FeatureBookmarks" value="oui">Yes <input type="radio" name="FeatureBookmarks" value = "non">No <input type="radio" name="FeatureBookmarks" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>File structure view :</label></br>
+								<input type="radio" name="FeatureFile structure view" value="oui">Yes <input type="radio" name="FeatureFile structure view" value = "non">No <input type="radio" name="FeatureFile structure view" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Maximum file size : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Insert / Delete bytes :</label></br>
+								<input type="radio" name="FeatureInsert / Delete bytes" value="oui">Yes <input type="radio" name="FeatureInsert / Delete bytes" value = "non">No <input type="radio" name="FeatureInsert / Delete bytes" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Bit editing :</label></br>
+								<input type="radio" name="FeatureBit editing" value="oui">Yes <input type="radio" name="FeatureBit editing" value = "non">No <input type="radio" name="FeatureBit editing" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Search Unicode :</label></br>
+								<input type="radio" name="FeatureSearch Unicode" value="oui">Yes <input type="radio" name="FeatureSearch Unicode" value = "non">No <input type="radio" name="FeatureSearch Unicode" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Text editor :</label></br>
+								<input type="radio" name="FeatureText editor" value="oui">Yes <input type="radio" name="FeatureText editor" value = "non">No <input type="radio" name="FeatureText editor" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Partial file loading :</label></br>
+								<input type="radio" name="FeaturePartial file loading" value="oui">Yes <input type="radio" name="FeaturePartial file loading" value = "non">No <input type="radio" name="FeaturePartial file loading" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Disassembler :</label></br>
+								<input type="radio" name="FeatureDisassembler" value="oui">Yes <input type="radio" name="FeatureDisassembler" value = "non">No <input type="radio" name="FeatureDisassembler" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Character encodings :</label></br>
+											<input type="checkbox" name="Feature" >ASCII</br>	
+											<input type="checkbox" name="Feature" >UTF-8</br>	
+											<input type="checkbox" name="Feature" >UTF-16 encoded Unicode</br>	
+											<input type="checkbox" name="Feature" >ISO-Latin-1</br>	
+											<input type="checkbox" name="Feature" >Macintosh</br>	
+											<input type="checkbox" name="Feature" >OEM</br>	
+											<input type="checkbox" name="Feature" >Unicode</br>	
+											<input type="checkbox" name="Feature" >Custom</br>	
+											<input type="checkbox" name="Feature" >ANSI</br>	
+											<input type="checkbox" name="Feature" >EBCDIC</br>	
+											<input type="checkbox" name="Feature" >Code Pages (MBCS</br>	
+											<input type="checkbox" name="Feature" >Mac</br>	
+											<input type="checkbox" name="Feature" >etc.)</br>	
+											<input type="checkbox" name="Feature" >all ICU encodings</br>	
+											<input type="checkbox" name="Feature" >custom</br>	
+											<input type="checkbox" name="Feature" >many others</br>	
+											<input type="checkbox" name="Feature" >MBCS</br>	
+											<input type="checkbox" name="Feature" >Unix</br>	
+											<input type="checkbox" name="Feature" >ISO</br>	
+											<input type="checkbox" name="Feature" >MAC</br>	
+											<input type="checkbox" name="Feature" >UTF-16</br>	
+											<input type="checkbox" name="Feature" >UTF-32</br>	
+											<input type="checkbox" name="Feature" >KOI8</br>	
+											<input type="checkbox" name="Feature" >Arabic</br>	
+											<input type="checkbox" name="Feature" >Hebrew</br>	
+											<input type="checkbox" name="Feature" >Shift JIS</br>	
+											<input type="checkbox" name="Feature" >GBK</br>	
+											<input type="checkbox" name="Feature" >EUC</br>	
+											<input type="checkbox" name="Feature" >Big5 and many others.</br>	
+											<input type="checkbox" name="Feature" >IEC 8859-1</br>	
+											<input type="checkbox" name="Feature" >EBCDIC.</br>	
+											<input type="checkbox" name="Feature" >Macintosh and all ICU encodings</br>	
+											<input type="checkbox" name="Feature" >Unicode (UTF-8</br>	
+											<input type="checkbox" name="Feature" >UTF-16)</br>	
+											<input type="checkbox" name="Feature" >IBM866</br>	
+											<input type="checkbox" name="Feature" >ISO-8859-1 to ISO-8859-16 (incl. Cyrillic</br>	
+											<input type="checkbox" name="Feature" >Greek</br>	
+											<input type="checkbox" name="Feature" >Hebrew)</br>	
+											<input type="checkbox" name="Feature" >x-user-defined and many others.</br>	
+											<input type="checkbox" name="Feature" >Big5</br>	
+											<input type="checkbox" name="Feature" >UTF-7(Export)</br>	
+											<input type="checkbox" name="Feature" >ISCII</br>	
+											<input type="checkbox" name="Feature" >Partial support of these formats: ANSI</br>	
+											<input type="checkbox" name="Feature" >UNICODE</br>	
+											<input type="checkbox" name="Feature" >UTF-16 EBCDIC</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['unlimited','2 GB','4 GB','','limited by free RAM','> 2 GB','2^63','>4 GB','2 GB (standard), unlimited (Pro 64)','2 MB','> 200GB','32 GB','Unlimited','8'192 TB','2Gb','Maximum file size','2GB+','Not unlimited','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Disk sector editing :</label></br>
- 		 					 <input type="radio" name="FeatureDisk sector editing" value="oui">oui <input type="radio" name="FeatureDisk sector editing" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Find in Files :</label></br>
- 		 					 <input type="radio" name="FeatureFind in Files" value="oui">oui <input type="radio" name="FeatureFind in Files" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>File Compare :</label></br>
- 		 					 <input type="radio" name="FeatureFile Compare" value="oui">oui <input type="radio" name="FeatureFile Compare" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Bookmarks :</label></br>
- 		 					 <input type="radio" name="FeatureBookmarks" value="oui">oui <input type="radio" name="FeatureBookmarks" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>File structure view :</label></br>
- 		 					 <input type="radio" name="FeatureFile structure view" value="oui">oui <input type="radio" name="FeatureFile structure view" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Maximum file size : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Insert / Delete bytes :</label></br>
- 		 					 <input type="radio" name="FeatureInsert / Delete bytes" value="oui">oui <input type="radio" name="FeatureInsert / Delete bytes" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Bit editing :</label></br>
- 		 					 <input type="radio" name="FeatureBit editing" value="oui">oui <input type="radio" name="FeatureBit editing" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Search Unicode :</label></br>
- 		 					 <input type="radio" name="FeatureSearch Unicode" value="oui">oui <input type="radio" name="FeatureSearch Unicode" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Text editor :</label></br>
- 		 					 <input type="radio" name="FeatureText editor" value="oui">oui <input type="radio" name="FeatureText editor" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Partial file loading :</label></br>
- 		 					 <input type="radio" name="FeaturePartial file loading" value="oui">oui <input type="radio" name="FeaturePartial file loading" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Disassembler :</label></br>
- 		 					 <input type="radio" name="FeatureDisassembler" value="oui">oui <input type="radio" name="FeatureDisassembler" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Character encodings :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >ASCII</br>	
- 		 									<input type="checkbox" name="Feature" > UTF-8</br>	
- 		 									<input type="checkbox" name="Feature" >UTF-16 encoded Unicode</br>	
- 		 									<input type="checkbox" name="Feature" > ISO-Latin-1</br>	
- 		 									<input type="checkbox" name="Feature" > Macintosh</br>	
- 		 									<input type="checkbox" name="Feature" >OEM</br>	
- 		 									<input type="checkbox" name="Feature" > Unicode</br>	
- 		 									<input type="checkbox" name="Feature" >Custom</br>	
- 		 									<input type="checkbox" name="Feature" >ANSI</br>	
- 		 									<input type="checkbox" name="Feature" > OEM</br>	
- 		 									<input type="checkbox" name="Feature" > EBCDIC</br>	
- 		 									<input type="checkbox" name="Feature" > Code Pages (MBCS</br>	
- 		 									<input type="checkbox" name="Feature" > Mac</br>	
- 		 									<input type="checkbox" name="Feature" > etc.)</br>	
- 		 									<input type="checkbox" name="Feature" > all ICU encodings</br>	
- 		 									<input type="checkbox" name="Feature" > ASCII</br>	
- 		 									<input type="checkbox" name="Feature" > custom</br>	
- 		 									<input type="checkbox" name="Feature" > many others</br>	
- 		 									<input type="checkbox" name="Feature" >MBCS</br>	
- 		 									<input type="checkbox" name="Feature" > Unix</br>	
- 		 									<input type="checkbox" name="Feature" > ANSI</br>	
- 		 									<input type="checkbox" name="Feature" >Unicode</br>	
- 		 									<input type="checkbox" name="Feature" > ISO</br>	
- 		 									<input type="checkbox" name="Feature" > MAC</br>	
- 		 									<input type="checkbox" name="Feature" >UTF-16</br>	
- 		 									<input type="checkbox" name="Feature" >UTF-32</br>	
- 		 									<input type="checkbox" name="Feature" > KOI8</br>	
- 		 									<input type="checkbox" name="Feature" > Arabic</br>	
- 		 									<input type="checkbox" name="Feature" > Hebrew</br>	
- 		 									<input type="checkbox" name="Feature" > Shift JIS</br>	
- 		 									<input type="checkbox" name="Feature" > GBK</br>	
- 		 									<input type="checkbox" name="Feature" > EUC</br>	
- 		 									<input type="checkbox" name="Feature" > Big5 and many others.</br>	
- 		 									<input type="checkbox" name="Feature" >ISO</br>	
- 		 									<input type="checkbox" name="Feature" >IEC 8859-1</br>	
- 		 									<input type="checkbox" name="Feature" > EBCDIC.</br>	
- 		 									<input type="checkbox" name="Feature" > Macintosh and all ICU encodings</br>	
- 		 									<input type="checkbox" name="Feature" >Unicode (UTF-8</br>	
- 		 									<input type="checkbox" name="Feature" >UTF-16)</br>	
- 		 									<input type="checkbox" name="Feature" > IBM866</br>	
- 		 									<input type="checkbox" name="Feature" > ISO-8859-1 to ISO-8859-16 (incl. Cyrillic</br>	
- 		 									<input type="checkbox" name="Feature" > Greek</br>	
- 		 									<input type="checkbox" name="Feature" > Hebrew)</br>	
- 		 									<input type="checkbox" name="Feature" > x-user-defined and many others.</br>	
- 		 									<input type="checkbox" name="Feature" > Big5</br>	
- 		 									<input type="checkbox" name="Feature" > UTF-7(Export)</br>	
- 		 									<input type="checkbox" name="Feature" >UTF-8</br>	
- 		 									<input type="checkbox" name="Feature" > ISCII</br>	
- 		 									<input type="checkbox" name="Feature" >Partial support of these formats: ANSI</br>	
- 		 									<input type="checkbox" name="Feature" > UNICODE</br>	
- 		 									<input type="checkbox" name="Feature" >UTF-16 EBCDIC</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['unlimited','2 GB','4 GB','','limited by free RAM','> 2 GB','2^63','>4 GB','2 GB (standard), unlimited (Pro 64)','2 MB','> 200GB','32 GB','Unlimited','8'192 TB','2Gb','Maximum file size','2GB+','Not unlimited','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

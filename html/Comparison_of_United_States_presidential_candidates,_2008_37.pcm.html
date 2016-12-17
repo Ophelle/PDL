@@ -1,71 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of United States presidential candidates, 2008 - Education</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Baldwin would support homeschoolers and disband the Department of Education. :</label></br>
+											<input type="checkbox" name="Feature" >Has often stated that it is wrong public education receives $38 billion annually while the Pentagon receives $700 billion annually. She also believes reforms like No Child Left Behind hurt the education system</br>	
+											<input type="checkbox" name="Feature" >and that free higher education and better primary education is what will improve school systems throughout the nation. She also voted yes on a substitute bill to lower student loan interest rates and increase black college and Hispanic college quality and quantity. She voted yes on a bill for state-testing and voted no on bills to allow vouchers in the District of Columbia</br>	
+											<input type="checkbox" name="Feature" >allowing vouchers in private schools and parochial schools</br>	
+											<input type="checkbox" name="Feature" >and no on a bill that would only give federal aid to schools that allowed school prayer.</br>	
+											<input type="checkbox" name="Feature" >Would abolish the Department of Education and eliminate federal grants and regulation; also opposes No Child Left Behind. Believes that education should return to the local level. Supports state-level tax credits to parents who use private education or homeschool. "Ultimately</br>	
+											<input type="checkbox" name="Feature" >education will best serve the children of America if it occurs within a competitive private system rather than a government system."</br>	
+									
+								</br>	
+								<label>Chuck Baldwin : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>McCain supports the use of school vouchers.  In 2006 he said, "Should intelligent design be taught as a science class? Probably not." On July 29, 2007, McCain voted against increasing federal student loans and Pell grants and expanding eligibility for financial aid. :</label></br>
+											<input type="checkbox" name="Feature" >During an October 2004 debate</br>	
+											<input type="checkbox" name="Feature" >Obama stated that he opposed education voucher for use at private schools because he believes they would undermine public schools.</br>	
+											<input type="checkbox" name="Feature" >McCain supports the use of school vouchers.  In 2006 he said</br>	
+											<input type="checkbox" name="Feature" >"Should intelligent design be taught as a science class? Probably not." On July 29</br>	
+											<input type="checkbox" name="Feature" >2007</br>	
+											<input type="checkbox" name="Feature" >McCain voted against increasing federal student loans and Pell grants and expanding eligibility for financial aid.</br>	
+									
+								</br>	
+								<label>John McCain : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Ralph Nader','Bob Barr','Cynthia McKinney','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Barack Obama','John McCain','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Baldwin would support homeschoolers and disband the Department of Education. :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Has often stated that it is wrong public education receives $38 billion annually while the Pentagon receives $700 billion annually. She also believes reforms like No Child Left Behind hurt the education system</br>	
- 		 									<input type="checkbox" name="Feature" > and that free higher education and better primary education is what will improve school systems throughout the nation. She also voted yes on a substitute bill to lower student loan interest rates and increase black college and Hispanic college quality and quantity. She voted yes on a bill for state-testing and voted no on bills to allow vouchers in the District of Columbia</br>	
- 		 									<input type="checkbox" name="Feature" > allowing vouchers in private schools and parochial schools</br>	
- 		 									<input type="checkbox" name="Feature" > and no on a bill that would only give federal aid to schools that allowed school prayer.</br>	
- 		 									<input type="checkbox" name="Feature" >Would abolish the Department of Education and eliminate federal grants and regulation; also opposes No Child Left Behind. Believes that education should return to the local level. Supports state-level tax credits to parents who use private education or homeschool. "Ultimately</br>	
- 		 									<input type="checkbox" name="Feature" > education will best serve the children of America if it occurs within a competitive private system rather than a government system."</br>	
-								
-						</br>	
-							<label>Chuck Baldwin : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>McCain supports the use of school vouchers.  In 2006 he said, "Should intelligent design be taught as a science class? Probably not." On July 29, 2007, McCain voted against increasing federal student loans and Pell grants and expanding eligibility for financial aid. :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >During an October 2004 debate</br>	
- 		 									<input type="checkbox" name="Feature" > Obama stated that he opposed education voucher for use at private schools because he believes they would undermine public schools.</br>	
- 		 									<input type="checkbox" name="Feature" >McCain supports the use of school vouchers.  In 2006 he said</br>	
- 		 									<input type="checkbox" name="Feature" > "Should intelligent design be taught as a science class? Probably not." On July 29</br>	
- 		 									<input type="checkbox" name="Feature" > 2007</br>	
- 		 									<input type="checkbox" name="Feature" > McCain voted against increasing federal student loans and Pell grants and expanding eligibility for financial aid.</br>	
-								
-						</br>	
-							<label>John McCain : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Ralph Nader','Bob Barr','Cynthia McKinney','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Barack Obama','John McCain','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

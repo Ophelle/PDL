@@ -1,73 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of Linux distributions - Live media</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Boots from DVD :</label></br>
- 		 					 <input type="radio" name="FeatureBoots from DVD" value="oui">oui <input type="radio" name="FeatureBoots from DVD" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>RAM use (MB) : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Distribution : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Size of media (MB) : </label></br> <input id="4" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Boots from CD :</label></br>
- 		 					 <input type="radio" name="FeatureBoots from CD" value="oui">oui <input type="radio" name="FeatureBoots from CD" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Installable from USB :</label></br>
- 		 					 <input type="radio" name="FeatureInstallable from USB" value="oui">oui <input type="radio" name="FeatureInstallable from USB" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Installable live CD/DVD :</label></br>
- 		 					 <input type="radio" name="FeatureInstallable live CD/DVD" value="oui">oui <input type="radio" name="FeatureInstallable live CD/DVD" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['48 to 96','?','','256','≈48','640','192 to 512','RAM use (MB)','128 to 512','128 to 768','256 to 1024','32 to 128','16 to 24','128 to 320','96 to 512','96 to 320','384','256 to 1,024','256 to 768','≈8','80','≈64','80 to 512','min 16','96','24 to 192','≈1,024','256 or >','up to 128','32 to 192','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Nanolinux','Inquisitor live CD','CrunchBang Linux','Pardus','Tiny SliTaz','gNewSense','Xubuntu','ClearOS','Fedora
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Boots from DVD :</label></br>
+								<input type="radio" name="FeatureBoots from DVD" value="oui">Yes <input type="radio" name="FeatureBoots from DVD" value = "non">No <input type="radio" name="FeatureBoots from DVD" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>RAM use (MB) : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Distribution : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Size of media (MB) : </label></br> <input id="4" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Boots from CD :</label></br>
+								<input type="radio" name="FeatureBoots from CD" value="oui">Yes <input type="radio" name="FeatureBoots from CD" value = "non">No <input type="radio" name="FeatureBoots from CD" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Installable from USB :</label></br>
+								<input type="radio" name="FeatureInstallable from USB" value="oui">Yes <input type="radio" name="FeatureInstallable from USB" value = "non">No <input type="radio" name="FeatureInstallable from USB" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Installable live CD/DVD :</label></br>
+								<input type="radio" name="FeatureInstallable live CD/DVD" value="oui">Yes <input type="radio" name="FeatureInstallable live CD/DVD" value = "non">No <input type="radio" name="FeatureInstallable live CD/DVD" value = "non">Partial </br>
+											<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['48 to 96','?','','256','≈48','640','192 to 512','RAM use (MB)','128 to 512','128 to 768','256 to 1024','32 to 128','16 to 24','128 to 320','96 to 512','96 to 320','384','256 to 1,024','256 to 768','≈8','80','≈64','80 to 512','min 16','96','24 to 192','≈1,024','256 or >','up to 128','32 to 192','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Nanolinux','Inquisitor live CD','CrunchBang Linux','Pardus','Tiny SliTaz','gNewSense','Xubuntu','ClearOS','Fedora
 live CD','Pentoo','Distribution','Gentoo','dyne:bolic','Musix GNU+Linux','Slax','Sabayon Linux live DVD','Kubuntu','Dragora GNU/Linux-Libre','Linux Mint','Trisquel','nUbuntu','Knoppix DVD
 "Maxi" edition','Damn Small Linux','SliTaz GNU/Linux','Bodhi Linux','Micro Core Linux','Puredyne','Debian Live','Elive','XBMC Live','Freespire','Scientific Linux','Mandriva Linux One','openGEU','Parabola GNU/Linux-libre','Tor-ramdisk','Trinity Rescue Kit','SystemRescueCD','Sabayon Linux live CD','AUSTRUMI Linux','Ubuntu','OpenWrt','Oralux','Grml','PCLinuxOS','Knoppix CD
 edition','Tiny Core Linux','Zentyal','Kali Linux','Chakra','OpenELEC','MCNLive','LibreCMC/LibreWRT','openSUSE','Feather Linux','Tails','MEPIS','BLAG','Puppy Linux (standard edition)','Ututo','CentOS','ALT Linux Desktop or Lite','Edubuntu','Arch Linux','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

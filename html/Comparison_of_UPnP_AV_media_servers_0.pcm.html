@@ -1,119 +1,123 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of UPnP AV media servers</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Unix-like :</label></br>
+								<input type="radio" name="FeatureUnix-like" value="oui">Yes <input type="radio" name="FeatureUnix-like" value = "non">No <input type="radio" name="FeatureUnix-like" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Transcoding :</label></br>
+								<input type="radio" name="FeatureTranscoding" value="oui">Yes <input type="radio" name="FeatureTranscoding" value = "non">No <input type="radio" name="FeatureTranscoding" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Images :</label></br>
+								<input type="radio" name="FeatureImages" value="oui">Yes <input type="radio" name="FeatureImages" value = "non">No <input type="radio" name="FeatureImages" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>DLNA support :</label></br>
+								<input type="radio" name="FeatureDLNA support" value="oui">Yes <input type="radio" name="FeatureDLNA support" value = "non">No <input type="radio" name="FeatureDLNA support" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Still Supported :</label></br>
+								<input type="radio" name="FeatureStill Supported" value="oui">Yes <input type="radio" name="FeatureStill Supported" value = "non">No <input type="radio" name="FeatureStill Supported" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Windows :</label></br>
+								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Multilingual : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Cost : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Implementation : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="11" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Web Interface :</label></br>
+								<input type="radio" name="FeatureWeb Interface" value="oui">Yes <input type="radio" name="FeatureWeb Interface" value = "non">No <input type="radio" name="FeatureWeb Interface" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Video :</label></br>
+								<input type="radio" name="FeatureVideo" value="oui">Yes <input type="radio" name="FeatureVideo" value = "non">No <input type="radio" name="FeatureVideo" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Subtitles : </label></br> <input id="14" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>OS X :</label></br>
+								<input type="radio" name="FeatureOS X" value="oui">Yes <input type="radio" name="FeatureOS X" value = "non">No <input type="radio" name="FeatureOS X" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Audio :</label></br>
+								<input type="radio" name="FeatureAudio" value="oui">Yes <input type="radio" name="FeatureAudio" value = "non">No <input type="radio" name="FeatureAudio" value = "non">Partial </br>
+											<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['GPL','Prop.','GPLv2','MIT','LGPLv2','License','GPL/BSD','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['No','Yes','Unknown','Multilingual','Partial','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Non-free','Free','Cost','','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Java','C++','C','C++ / C#','Unknown','Vala','Python','C++ / C# / Java','Implementation','C#','C++ / Python','Delphi','Objective C / C++ / JavaScript','C#/C++','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['Mezzmo','Coherence','Nullriver Medialink','Majestic Media Server','TVersity','KooRaRoo Media','TVble','GeeXboX uShare','Home Media Center','Jamcast','iSedora Media Server','PlayOn','Universal Media Server','Gmediaserver','Plex','ReadyMedia (formerly MiniDLNA)','Songbird','Foobar2000','Elgato Eyeconnect','PS3 Media Server','360 Media Server','Skifta','TVMOBiLi','Windows Media Connect','DivX','MediaMonkey','MediaTomb','myiHome','TwonkyMedia server','Kodi Entertainment Center','Rivet','SimpleCenter Premium','aVia Media Player','Name','PyMedS','Wild Media Server','xupnpd','FUPPES','MythTV with uPnP','Rygel','LXiMedia','Yazsoft Playback','LimboMedia','TVShare','BRisa','JRiver Media Center','Serviio','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['Unknown','Partial','Yes','Subtitles','No','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Unix-like :</label></br>
- 		 					 <input type="radio" name="FeatureUnix-like" value="oui">oui <input type="radio" name="FeatureUnix-like" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Transcoding :</label></br>
- 		 					 <input type="radio" name="FeatureTranscoding" value="oui">oui <input type="radio" name="FeatureTranscoding" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Images :</label></br>
- 		 					 <input type="radio" name="FeatureImages" value="oui">oui <input type="radio" name="FeatureImages" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>DLNA support :</label></br>
- 		 					 <input type="radio" name="FeatureDLNA support" value="oui">oui <input type="radio" name="FeatureDLNA support" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Still Supported :</label></br>
- 		 					 <input type="radio" name="FeatureStill Supported" value="oui">oui <input type="radio" name="FeatureStill Supported" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Windows :</label></br>
- 		 					 <input type="radio" name="FeatureWindows" value="oui">oui <input type="radio" name="FeatureWindows" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Multilingual : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Cost : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Implementation : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Name : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Web Interface :</label></br>
- 		 					 <input type="radio" name="FeatureWeb Interface" value="oui">oui <input type="radio" name="FeatureWeb Interface" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Video :</label></br>
- 		 					 <input type="radio" name="FeatureVideo" value="oui">oui <input type="radio" name="FeatureVideo" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Subtitles : </label></br> <input id="14" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>OS X :</label></br>
- 		 					 <input type="radio" name="FeatureOS X" value="oui">oui <input type="radio" name="FeatureOS X" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Audio :</label></br>
- 		 					 <input type="radio" name="FeatureAudio" value="oui">oui <input type="radio" name="FeatureAudio" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['GPL','Prop.','GPLv2','MIT','LGPLv2','License','GPL/BSD','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['No','Yes','Unknown','Multilingual','Partial','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Non-free','Free','Cost','','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Java','C++','C','C++ / C#','Unknown','Vala','Python','C++ / C# / Java','Implementation','C#','C++ / Python','Delphi','Objective C / C++ / JavaScript','C#/C++','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Mezzmo','Coherence','Nullriver Medialink','Majestic Media Server','TVersity','KooRaRoo Media','TVble','GeeXboX uShare','Home Media Center','Jamcast','iSedora Media Server','PlayOn','Universal Media Server','Gmediaserver','Plex','ReadyMedia (formerly MiniDLNA)','Songbird','Foobar2000','Elgato Eyeconnect','PS3 Media Server','360 Media Server','Skifta','TVMOBiLi','Windows Media Connect','DivX','MediaMonkey','MediaTomb','myiHome','TwonkyMedia server','Kodi Entertainment Center','Rivet','SimpleCenter Premium','aVia Media Player','Name','PyMedS','Wild Media Server','xupnpd','FUPPES','MythTV with uPnP','Rygel','LXiMedia','Yazsoft Playback','LimboMedia','TVShare','BRisa','JRiver Media Center','Serviio','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Unknown','Partial','Yes','Subtitles','No','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

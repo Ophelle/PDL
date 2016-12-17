@@ -1,137 +1,141 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>List of AMD graphics processing units -  IGP (HD 4xxx) </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Transistors (Million) : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>GFLOPS : </label></br> <input id="3" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Fillrate - FP32 (GP/s) : </label></br> <input id="4" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Fillrate - Texture (GT/s) : </label></br> <input id="5" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Die Size (mm) : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Graphics core : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Memory - Bus width (bit) : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Config core : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Core clock (MHz) : </label></br> <input id="10" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Memory (MB) : </label></br> <input id="11" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Launch : </label></br> <input id="12" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Features / Notes : </label></br> <input id="13" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Code name : </label></br> <input id="14" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Memory - Effective clock (MHz) : </label></br> <input id="15" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Model : </label></br> <input id="16" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Memory - Bus type : </label></br> <input id="17" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Fab (nm) : </label></br> <input id="18" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="19" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Fillrate - Pixel (GP/s) : </label></br> <input id="20" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['HT 3.0','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['>205','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['~73 (~9 × 8.05)','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['RV620','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['40:4:4','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['Up to 512 system + optional 128 sideport','Up to 512 system + 128 sideport','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['Mar 2010','Aug 2009','']
+								});
+								$("#8").typeahead({
+									name:"list8",
+									local : ['UVD2','']
+								});
+								$("#9").typeahead({
+									name:"list9",
+									local : ['RS880','RS880D','']
+								});
+								$("#10").typeahead({
+									name:"list10",
+									local : ['Radeon HD 4250 Graphics (880G Chipset)','Radeon HD 4200 Graphics (785G Chipset)','Radeon HD 4290 Graphics (890GX Chipset)','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Transistors (Million) : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>GFLOPS : </label></br> <input id="3" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Fillrate - FP32 (GP/s) : </label></br> <input id="4" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Fillrate - Texture (GT/s) : </label></br> <input id="5" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Die Size (mm) : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Graphics core : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Memory - Bus width (bit) : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Config core : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Core clock (MHz) : </label></br> <input id="10" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Memory (MB) : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Launch : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Features / Notes : </label></br> <input id="13" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Code name : </label></br> <input id="14" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Memory - Effective clock (MHz) : </label></br> <input id="15" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Model : </label></br> <input id="16" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Memory - Bus type : </label></br> <input id="17" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Fab (nm) : </label></br> <input id="18" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Memory - Bandwidth (GB/s) : </label></br> <input id="19" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Fillrate - Pixel (GP/s) : </label></br> <input id="20" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['HT 3.0','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['>205','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['~73 (~9 × 8.05)','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['RV620','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['40:4:4','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Up to 512 system + optional 128 sideport','Up to 512 system + 128 sideport','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['Mar 2010','Aug 2009','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['UVD2','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['RS880','RS880D','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['Radeon HD 4250 Graphics (880G Chipset)','Radeon HD 4200 Graphics (785G Chipset)','Radeon HD 4290 Graphics (890GX Chipset)','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

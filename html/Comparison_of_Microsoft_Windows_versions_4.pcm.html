@@ -1,100 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of Microsoft Windows versions - {{Anchor|GI-Mobile}}Windows Mobile</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Based on (kernel) : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Codename : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Release date : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Current version : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Supported architectures : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>RTM build : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Status support : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['CE 3.0','','CE 5.0','CE 5.2','CE 4.20','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Crossbow','Magneto','','Ozone','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['2009-05-18','2005-05-9/12','','2007-02-12','2003-06-23','2008-04-01','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['','']
+								});
+								$("#8").typeahead({
+									name:"list8",
+									local : ['Windows Pocket PC 2002','Windows Mobile 2003','Windows Mobile 5.0','Windows Mobile 6.0','Windows Mobile 6.1','Windows Mobile 6.5','']
+								});
+								$("#9").typeahead({
+									name:"list9",
+									local : ['','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Based on (kernel) : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Codename : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Release date : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Current version : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Supported architectures : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>RTM build : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Name : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Status support : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['CE 3.0','','CE 5.0','CE 5.2','CE 4.20','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Crossbow','Magneto','','Ozone','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['2009-05-18','2005-05-9/12','','2007-02-12','2003-06-23','2008-04-01','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['Windows Pocket PC 2002','Windows Mobile 2003','Windows Mobile 5.0','Windows Mobile 6.0','Windows Mobile 6.1','Windows Mobile 6.5','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

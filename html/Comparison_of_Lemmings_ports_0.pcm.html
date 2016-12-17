@@ -1,61 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of Lemmings ports - General information</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Developer : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Released : </label></br> <input id="2" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Publisher : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Platform : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Game Boy Color','Game Boy','PlayStation','Apple II','Sega Genesis / Mega Drive','Sega Game Gear','Atari Lynx','SAM Coupé','MS-DOS','PlayStation Portable','Amstrad CPC','Commodore Amiga CD32','Windows 95','Atari ST','OS/2 (demo only)','Acorn Archimedes','Arcade (prototype only)','TurboGrafx-CD','PC-98','PlayStation 2','CD-i','Cambridge Z88','Commodore 64','Mobile phone (Java ME)','ZX Spectrum','3DO','Commodore Amiga CDTV','Apple Macintosh','Commodore Amiga','NES','SNES','Sega Master System','Amstrad GX4000','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['DMA Design?','DMA Design','Ocean Software','Sunsoft','Krisalis Software','Data East USA','Chris White','Take-Two Interactive','E & E Software','Kuusoukagaku Corp.','Team17','Brutal Deluxe Software','?','Distinctive Developments','Probe Software Limited','Visual Sciences','Dominic Morris','BANDIT Inc.','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Sunsoft','Psygnosis','Sega','Imagineer','Ocean Software','Philips Interactive Media','TBA','Krisalis Software','?','FRED Publishing','DMA Design','Take-Two Interactive?','Sony Computer Entertainment','Sunsoft/Sega','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Developer : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Released : </label></br> <input id="2" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Publisher : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Platform : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Game Boy Color','Game Boy','PlayStation','Apple II','Sega Genesis / Mega Drive','Sega Game Gear','Atari Lynx','SAM Coupé','MS-DOS','PlayStation Portable','Amstrad CPC','Commodore Amiga CD32','Windows 95','Atari ST','OS/2 (demo only)','Acorn Archimedes','Arcade (prototype only)','TurboGrafx-CD','PC-98','PlayStation 2','CD-i','Cambridge Z88','Commodore 64','Mobile phone (Java ME)','ZX Spectrum','3DO','Commodore Amiga CDTV','Apple Macintosh','Commodore Amiga','NES','SNES','Sega Master System','Amstrad GX4000','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['DMA Design?','DMA Design','Ocean Software','Sunsoft','Krisalis Software','Data East USA','Chris White','Take-Two Interactive','E & E Software','Kuusoukagaku Corp.','Team17','Brutal Deluxe Software','?','Distinctive Developments','Probe Software Limited','Visual Sciences','Dominic Morris','BANDIT Inc.','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Sunsoft','Psygnosis','Sega','Imagineer','Ocean Software','Philips Interactive Media','TBA','Krisalis Software','?','FRED Publishing','DMA Design','Take-Two Interactive?','Sony Computer Entertainment','Sunsoft/Sega','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

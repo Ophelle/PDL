@@ -1,69 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of Scottish Gaelic and Irish - Differences in vocabulary</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>English : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Scottish Gaelic : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Notes :</label></br>
+											<input type="checkbox" name="Feature" >A number of words are used in both languages for "ocean" and "sea"</br>	
+											<input type="checkbox" name="Feature" >such as aigéan</br>	
+											<input type="checkbox" name="Feature" >aigeun</br>	
+											<input type="checkbox" name="Feature" >an fharraige. Caladh or cala (also in the compound "calafort" < "cala-phort") are commonly used in Irish for "harbour".</br>	
+											<input type="checkbox" name="Feature" >Breatain (Britain) is the same in both</br>	
+											<input type="checkbox" name="Feature" >but "little" Breatain is different in each: Brittany in Scottish and Wales in Irish. The Scottish Gaelic equivalent for Wales is A' Chuimrigh</br>	
+											<input type="checkbox" name="Feature" >a Gaelicisation of an Anglicisation of the Welsh Cymru. The Irish for Brittany is An Bhriotáin from Latin "Britannia".</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Irish : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Brittany','ocean','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['A' Bhreatain Bheag','cuan','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['An Bhreatain Bheag','cuan','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>English : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Scottish Gaelic : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Notes :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >A number of words are used in both languages for "ocean" and "sea"</br>	
- 		 									<input type="checkbox" name="Feature" > such as aigéan</br>	
- 		 									<input type="checkbox" name="Feature" >aigeun</br>	
- 		 									<input type="checkbox" name="Feature" > an fharraige. Caladh or cala (also in the compound "calafort" < "cala-phort") are commonly used in Irish for "harbour".</br>	
- 		 									<input type="checkbox" name="Feature" >Breatain (Britain) is the same in both</br>	
- 		 									<input type="checkbox" name="Feature" > but "little" Breatain is different in each: Brittany in Scottish and Wales in Irish. The Scottish Gaelic equivalent for Wales is A' Chuimrigh</br>	
- 		 									<input type="checkbox" name="Feature" > a Gaelicisation of an Anglicisation of the Welsh Cymru. The Irish for Brittany is An Bhriotáin from Latin "Britannia".</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Irish : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Brittany','ocean','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['A' Bhreatain Bheag','cuan','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['An Bhreatain Bheag','cuan','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

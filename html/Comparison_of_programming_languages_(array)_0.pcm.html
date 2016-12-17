@@ -1,65 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of programming languages (array) -  Array dimensions </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Last : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Languages : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>First : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Size : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','$','etc.','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['','$','etc.','@','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Object Pascal','Haskell','C#, Visual Basic .NET, Windows PowerShell, F#','PHP','Rust','Ada','Perl','Mathematica','J','Fortran','Perl 6','Visual Basic','MATLAB, GNU Octave, Julia','Java, JavaScript, D, Scala','Lua','Haxe','Smalltalk','Objective-C (NSArray * only)','Go','S-Lang','ALGOL 68','OCaml','Python','Xojo','Common Lisp','Ruby','ISLISP','CFML','Ch','Cobra','Scheme','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['etc.','','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Last : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Languages : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>First : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Size : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['','$','etc.','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['','$','etc.','@','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Object Pascal','Haskell','C#, Visual Basic .NET, Windows PowerShell, F#','PHP','Rust','Ada','Perl','Mathematica','J','Fortran','Perl 6','Visual Basic','MATLAB, GNU Octave, Julia','Java, JavaScript, D, Scala','Lua','Haxe','Smalltalk','Objective-C (NSArray * only)','Go','S-Lang','ALGOL 68','OCaml','Python','Xojo','Common Lisp','Ruby','ISLISP','CFML','Ch','Cobra','Scheme','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['etc.','','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

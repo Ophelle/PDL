@@ -1,82 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of brainwave entrainment software - Features</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Pre-made sessions :</label></br>
+								<input type="radio" name="FeaturePre-made sessions" value="oui">Yes <input type="radio" name="FeaturePre-made sessions" value = "non">No <input type="radio" name="FeaturePre-made sessions" value = "non">Partial </br>
+								
+								</br>	
+								<label>User-created sessions :</label></br>
+								<input type="radio" name="FeatureUser-created sessions" value="oui">Yes <input type="radio" name="FeatureUser-created sessions" value = "non">No <input type="radio" name="FeatureUser-created sessions" value = "non">Partial </br>
+								
+								</br>	
+								<label>Volume modulation for embedded audio :</label></br>
+								<input type="radio" name="FeatureVolume modulation for embedded audio" value="oui">Yes <input type="radio" name="FeatureVolume modulation for embedded audio" value = "non">No <input type="radio" name="FeatureVolume modulation for embedded audio" value = "non">Partial </br>
+								
+								</br>	
+								<label>Headphone-free sessions :</label></br>
+								<input type="radio" name="FeatureHeadphone-free sessions" value="oui">Yes <input type="radio" name="FeatureHeadphone-free sessions" value = "non">No <input type="radio" name="FeatureHeadphone-free sessions" value = "non">Partial </br>
+								
+								</br>	
+								<label>Background Noise : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Software : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Networkable :</label></br>
+								<input type="radio" name="FeatureNetworkable" value="oui">Yes <input type="radio" name="FeatureNetworkable" value = "non">No <input type="radio" name="FeatureNetworkable" value = "non">Partial </br>
+								
+								</br>	
+								<label>Export as sound file : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Embed audio (sounds, music, hypnosis) :</label></br>
+								<input type="radio" name="FeatureEmbed audio (sounds, music, hypnosis)" value="oui">Yes <input type="radio" name="FeatureEmbed audio (sounds, music, hypnosis)" value = "non">No <input type="radio" name="FeatureEmbed audio (sounds, music, hypnosis)" value = "non">Partial </br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Yes (white, pink and brown)','Yes (pink)','No','Yes','Yes (via VST)','Yes (white)','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Gnaural','Mind WorkStation','Neuro Entrainment','Lux VST Brainwave Entrainment Instrument','Isochronic Tone Generator','BrainWave Generator','Neuro-Programmer 3','BrainIgniter Player','Brainwave Studio','BeeOne SMOD/HMS','Discord','Neuro Sequencer Pro','SBaGen','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['No','Yes (through DAW)','Yes (MP3)','Yes (OGG, MP3 WAV)','Yes (via VST)','Yes (OGG, MP3, WAV)','Yes (WAV)','Yes (MP3, M4A, WAV)','Yes (WAV, raw audio)','Yes (WAV, raw audio, OGG, FLAC)','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Pre-made sessions :</label></br>
- 		 					 <input type="radio" name="FeaturePre-made sessions" value="oui">oui <input type="radio" name="FeaturePre-made sessions" value = "non">non </br>
-									
-						</br>	
- 		 					<label>User-created sessions :</label></br>
- 		 					 <input type="radio" name="FeatureUser-created sessions" value="oui">oui <input type="radio" name="FeatureUser-created sessions" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Volume modulation for embedded audio :</label></br>
- 		 					 <input type="radio" name="FeatureVolume modulation for embedded audio" value="oui">oui <input type="radio" name="FeatureVolume modulation for embedded audio" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Headphone-free sessions :</label></br>
- 		 					 <input type="radio" name="FeatureHeadphone-free sessions" value="oui">oui <input type="radio" name="FeatureHeadphone-free sessions" value = "non">non </br>
-									
-						</br>	
-							<label>Background Noise : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Software : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Networkable :</label></br>
- 		 					 <input type="radio" name="FeatureNetworkable" value="oui">oui <input type="radio" name="FeatureNetworkable" value = "non">non </br>
-									
-						</br>	
-							<label>Export as sound file : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Embed audio (sounds, music, hypnosis) :</label></br>
- 		 					 <input type="radio" name="FeatureEmbed audio (sounds, music, hypnosis)" value="oui">oui <input type="radio" name="FeatureEmbed audio (sounds, music, hypnosis)" value = "non">non </br>
-									
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Yes (white, pink and brown)','Yes (pink)','No','Yes','Yes (via VST)','Yes (white)','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Gnaural','Mind WorkStation','Neuro Entrainment','Lux VST Brainwave Entrainment Instrument','Isochronic Tone Generator','BrainWave Generator','Neuro-Programmer 3','BrainIgniter Player','Brainwave Studio','BeeOne SMOD/HMS','Discord','Neuro Sequencer Pro','SBaGen','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','Yes (through DAW)','Yes (MP3)','Yes (OGG, MP3 WAV)','Yes (via VST)','Yes (OGG, MP3, WAV)','Yes (WAV)','Yes (MP3, M4A, WAV)','Yes (WAV, raw audio)','Yes (WAV, raw audio, OGG, FLAC)','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

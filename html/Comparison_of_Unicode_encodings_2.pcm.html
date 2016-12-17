@@ -1,68 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of Unicode encodings -  Bit environments </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>UTF-9 and UTF-18 : </label></br> <input id="1" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>UTF-8 : </label></br> <input id="2" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Code range (hexadecimal) : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>UTF-16 : </label></br> <input id="4" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>GB 18030 :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >16 for characters inherited from
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>UTF-9 and UTF-18 : </label></br> <input id="1" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>UTF-8 : </label></br> <input id="2" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Code range (hexadecimal) : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>UTF-16 : </label></br> <input id="4" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>GB 18030 :</label></br>
+											<input type="checkbox" name="Feature" >16 for characters inherited from
 GB 2312</br>	
- 		 									<input type="checkbox" name="Feature" >GBK (e.g. most
+											<input type="checkbox" name="Feature" >GBK (e.g. most
 Chinese characters) 32 for
 everything else.</br>	
+									
+								</br>	
+								<label>UTF-32 : </label></br> <input id="6" type="number" name="Feature"></br>
 								
-						</br>	
-							<label>UTF-32 : </label></br> <input id="6" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>UTF-EBCDIC : </label></br> <input id="7" type="number" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['000000 – 00007F','004000 – 00FFFF','000080 – 00009F','010000 – 03FFFF','000400 – 0007FF','0000A0 – 0003FF','040000 – 10FFFF','000800 – 003FFF','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								</br>	
+								<label>UTF-EBCDIC : </label></br> <input id="7" type="number" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['000000 – 00007F','004000 – 00FFFF','000080 – 00009F','010000 – 03FFFF','000400 – 0007FF','0000A0 – 0003FF','040000 – 10FFFF','000800 – 003FFF','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

@@ -1,85 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of BitTorrent tracker software</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Tracker : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Programming Language : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Operating System Support :</label></br>
+											<input type="checkbox" name="Feature" >Windows</br>	
+											<input type="checkbox" name="Feature" >OS X</br>	
+											<input type="checkbox" name="Feature" >Unix-like</br>	
+											<input type="checkbox" name="Feature" >Morph OS</br>	
+											<input type="checkbox" name="Feature" >Linux</br>	
+											<input type="checkbox" name="Feature" >Mac OS</br>	
+											<input type="checkbox" name="Feature" >Android</br>	
+											<input type="checkbox" name="Feature" >OS</br>	
+											<input type="checkbox" name="Feature" >2</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Description :</label></br>
+											<input type="checkbox" name="Feature" >Lightweight. Supports DHT</br>	
+											<input type="checkbox" name="Feature" >PEX</br>	
+											<input type="checkbox" name="Feature" >announcements via UDP. Does not have a web interface or list of hosted torrents; it is not designed for secure or large-scale application.</br>	
+											<input type="checkbox" name="Feature" >Extremely lightweight and efficient BitTorrent tracker. Supports SQLite3</br>	
+											<input type="checkbox" name="Feature" >MySQL and soon PostgreSQL for storage.</br>	
+											<input type="checkbox" name="Feature" >Has a built-in tracker and announcement service</br>	
+											<input type="checkbox" name="Feature" >Uses MySQL for data storage</br>	
+											<input type="checkbox" name="Feature" >lightweight tracker</br>	
+											<input type="checkbox" name="Feature" >Uses libowfat</br>	
+											<input type="checkbox" name="Feature" >performs well even on embedded hardware. Only requirement is a POSIX compliant OS.</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['MonoTorrent','PeerTracker','qBittorrent','Vuze','MLDonkey','Opentracker','XBT Tracker','μTorrent','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Disputed','Freeware','GPL','MIT','Beerware','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['C#','Java','OCaml','C++','C','PHP','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Tracker : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Programming Language : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Operating System Support :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 									<input type="checkbox" name="Feature" > OS X</br>	
- 		 									<input type="checkbox" name="Feature" > Unix-like</br>	
- 		 									<input type="checkbox" name="Feature" > Morph OS</br>	
- 		 									<input type="checkbox" name="Feature" > Linux</br>	
- 		 									<input type="checkbox" name="Feature" > Mac OS</br>	
- 		 									<input type="checkbox" name="Feature" > Android</br>	
- 		 									<input type="checkbox" name="Feature" > OS</br>	
- 		 									<input type="checkbox" name="Feature" >2</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Description :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Lightweight. Supports DHT</br>	
- 		 									<input type="checkbox" name="Feature" > PEX</br>	
- 		 									<input type="checkbox" name="Feature" > announcements via UDP. Does not have a web interface or list of hosted torrents; it is not designed for secure or large-scale application.</br>	
- 		 									<input type="checkbox" name="Feature" >Extremely lightweight and efficient BitTorrent tracker. Supports SQLite3</br>	
- 		 									<input type="checkbox" name="Feature" > MySQL and soon PostgreSQL for storage.</br>	
- 		 									<input type="checkbox" name="Feature" >Has a built-in tracker and announcement service</br>	
- 		 									<input type="checkbox" name="Feature" >Uses MySQL for data storage</br>	
- 		 									<input type="checkbox" name="Feature" > lightweight tracker</br>	
- 		 									<input type="checkbox" name="Feature" >Uses libowfat</br>	
- 		 									<input type="checkbox" name="Feature" > performs well even on embedded hardware. Only requirement is a POSIX compliant OS.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['MonoTorrent','PeerTracker','qBittorrent','Vuze','MLDonkey','Opentracker','XBT Tracker','μTorrent','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Disputed','Freeware','GPL','MIT','Beerware','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['C#','Java','OCaml','C++','C','PHP','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

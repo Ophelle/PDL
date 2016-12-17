@@ -1,77 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of firewalls - Firewall's other features comparison</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Modularity: supports third-party modules to extend functionality? :</label></br>
+								<input type="radio" name="FeatureModularity: supports third-party modules to extend functionality?" value="oui">Yes <input type="radio" name="FeatureModularity: supports third-party modules to extend functionality?" value = "non">No <input type="radio" name="FeatureModularity: supports third-party modules to extend functionality?" value = "non">Partial </br>
+								
+								</br>	
+								<label>IPS : Intrusion prevention system : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>supports IPv6 ? :</label></br>
+								<input type="radio" name="Featuresupports IPv6 ?" value="oui">Yes <input type="radio" name="Featuresupports IPv6 ?" value = "non">No <input type="radio" name="Featuresupports IPv6 ?" value = "non">Partial </br>
+								
+								</br>	
+								<label>Operating Systems on which it runs? : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Class: Home / Professional : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Open-Source License? :</label></br>
+								<input type="radio" name="FeatureOpen-Source License?" value="oui">Yes <input type="radio" name="FeatureOpen-Source License?" value = "non">No <input type="radio" name="FeatureOpen-Source License?" value = "non">Partial </br>
+								
+								</br>	
+								<label>Features: : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Yes, with Snort','Yes','?','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['FreeBSD-based appliance','Linux (built on Debian)','Linux-based appliance distribution.','Windows 2000, Windows XP, Windows 2003, Windows Vista, Windows 2008. 32bit and 64bit.','Vyatta OS (built on Debian)','FreeBSD/NanoBSD-based appliance','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Both','Professional','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['OPNsense','Vyatta','pfSense','IPFire','WinGate','Untangle','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Modularity: supports third-party modules to extend functionality? :</label></br>
- 		 					 <input type="radio" name="FeatureModularity: supports third-party modules to extend functionality?" value="oui">oui <input type="radio" name="FeatureModularity: supports third-party modules to extend functionality?" value = "non">non </br>
-									
-						</br>	
-							<label>IPS : Intrusion prevention system : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>supports IPv6 ? :</label></br>
- 		 					 <input type="radio" name="Featuresupports IPv6 ?" value="oui">oui <input type="radio" name="Featuresupports IPv6 ?" value = "non">non </br>
-									
-						</br>	
-							<label>Operating Systems on which it runs? : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Class: Home / Professional : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Open-Source License? :</label></br>
- 		 					 <input type="radio" name="FeatureOpen-Source License?" value="oui">oui <input type="radio" name="FeatureOpen-Source License?" value = "non">non </br>
-									
-						</br>	
-							<label>Features: : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Yes, with Snort','Yes','?','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['FreeBSD-based appliance','Linux (built on Debian)','Linux-based appliance distribution.','Windows 2000, Windows XP, Windows 2003, Windows Vista, Windows 2008. 32bit and 64bit.','Vyatta OS (built on Debian)','FreeBSD/NanoBSD-based appliance','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Both','Professional','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['OPNsense','Vyatta','pfSense','IPFire','WinGate','Untangle','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

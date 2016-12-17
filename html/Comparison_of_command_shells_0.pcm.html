@@ -1,177 +1,180 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of command shells - General characteristics</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Logging :</label></br>
- 		 					 <input type="radio" name="FeatureLogging" value="oui">oui <input type="radio" name="FeatureLogging" value = "non">non </br>
-									
-						</br>	
-							<label>Startup/shutdown scripts : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Usually invoked : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Batch scripts : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Unicode support :</label></br>
- 		 					 <input type="radio" name="FeatureUnicode support" value="oui">oui <input type="radio" name="FeatureUnicode support" value = "non">non </br>
-									
-						</br>	
-							<label>Default script shell in : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>License : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Source code availability :</label></br>
- 		 					 <input type="radio" name="FeatureSource code availability" value="oui">oui <input type="radio" name="FeatureSource code availability" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Console redirection :</label></br>
- 		 					 <input type="radio" name="FeatureConsole redirection" value="oui">oui <input type="radio" name="FeatureConsole redirection" value = "non">non </br>
-									
-						</br>	
-							<label>Introduced : </label></br> <input id="10" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Usual environment : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Configurability : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Stream redirection : </label></br> <input id="13" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Native CIM/WBEM support :</label></br>
- 		 					 <input type="radio" name="FeatureNative CIM/WBEM support" value="oui">oui <input type="radio" name="FeatureNative CIM/WBEM support" value = "non">non </br>
-									
-						</br>	
-							<label>User interface : </label></br> <input id="15" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>ISO 8601 support : </label></br> <input id="16" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Platform-independent :</label></br>
- 		 					 <input type="radio" name="FeaturePlatform-independent" value="oui">oui <input type="radio" name="FeaturePlatform-independent" value = "non">non </br>
-									
-						</br>	
- 		 					<label>available as statically linked, independent single file executable :</label></br>
- 		 					 <input type="radio" name="Featureavailable as statically linked, independent single file executable" value="oui">oui <input type="radio" name="Featureavailable as statically linked, independent single file executable" value = "non">non </br>
-									
-						</br>	
-							<label>Default login shell in :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Windows NT</br>	
- 		 									<input type="checkbox" name="Feature" > 2000</br>	
- 		 									<input type="checkbox" name="Feature" > XP</br>	
- 		 									<input type="checkbox" name="Feature" > Server 2003</br>	
- 		 									<input type="checkbox" name="Feature" > Vista</br>	
- 		 									<input type="checkbox" name="Feature" >Plan 9</br>	
- 		 									<input type="checkbox" name="Feature" > Version 10 Unix</br>	
- 		 									<input type="checkbox" name="Feature" >OS</br>	
- 		 									<input type="checkbox" name="Feature" >2</br>	
- 		 									<input type="checkbox" name="Feature" >GNU</br>	
- 		 									<input type="checkbox" name="Feature" > Linux (default for root)</br>	
- 		 									<input type="checkbox" name="Feature" > Mac OS X 10.3+</br>	
- 		 									<input type="checkbox" name="Feature" >Minix</br>	
- 		 									<input type="checkbox" name="Feature" > BusyBox based systems</br>	
- 		 									<input type="checkbox" name="Feature" >Grml</br>	
- 		 									<input type="checkbox" name="Feature" > Gobolinux</br>	
- 		 									<input type="checkbox" name="Feature" >DOS</br>	
- 		 									<input type="checkbox" name="Feature" > Windows 95</br>	
- 		 									<input type="checkbox" name="Feature" > 98</br>	
- 		 									<input type="checkbox" name="Feature" > SE</br>	
- 		 									<input type="checkbox" name="Feature" > ME</br>	
- 		 									<input type="checkbox" name="Feature" >FreeBSD (default for root)</br>	
- 		 									<input type="checkbox" name="Feature" > formerly Mac OS X</br>	
- 		 									<input type="checkbox" name="Feature" >CP</br>	
- 		 									<input type="checkbox" name="Feature" >M (no login)</br>	
- 		 									<input type="checkbox" name="Feature" > MP</br>	
- 		 									<input type="checkbox" name="Feature" >M</br>	
- 		 									<input type="checkbox" name="Feature" >Windows Server 2008</br>	
- 		 									<input type="checkbox" name="Feature" > 7</br>	
- 		 									<input type="checkbox" name="Feature" >AIX</br>	
- 		 									<input type="checkbox" name="Feature" > HP-UX</br>	
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Logging :</label></br>
+								<input type="radio" name="FeatureLogging" value="oui">Yes <input type="radio" name="FeatureLogging" value = "non">No <input type="radio" name="FeatureLogging" value = "non">Partial </br>
 								
-						</br>	
- 		 					<label>Mouse support :</label></br>
- 		 					 <input type="radio" name="FeatureMouse support" value="oui">oui <input type="radio" name="FeatureMouse support" value = "non">non </br>
+								</br>	
+								<label>Startup/shutdown scripts : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Usually invoked : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Batch scripts : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Unicode support :</label></br>
+								<input type="radio" name="FeatureUnicode support" value="oui">Yes <input type="radio" name="FeatureUnicode support" value = "non">No <input type="radio" name="FeatureUnicode support" value = "non">Partial </br>
+								
+								</br>	
+								<label>Default script shell in : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>License : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Source code availability :</label></br>
+								<input type="radio" name="FeatureSource code availability" value="oui">Yes <input type="radio" name="FeatureSource code availability" value = "non">No <input type="radio" name="FeatureSource code availability" value = "non">Partial </br>
+								
+								</br>	
+								<label>Console redirection :</label></br>
+								<input type="radio" name="FeatureConsole redirection" value="oui">Yes <input type="radio" name="FeatureConsole redirection" value = "non">No <input type="radio" name="FeatureConsole redirection" value = "non">Partial </br>
+								
+								</br>	
+								<label>Introduced : </label></br> <input id="10" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Usual environment : </label></br> <input id="11" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Configurability : </label></br> <input id="12" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Stream redirection : </label></br> <input id="13" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Native CIM/WBEM support :</label></br>
+								<input type="radio" name="FeatureNative CIM/WBEM support" value="oui">Yes <input type="radio" name="FeatureNative CIM/WBEM support" value = "non">No <input type="radio" name="FeatureNative CIM/WBEM support" value = "non">Partial </br>
+								
+								</br>	
+								<label>User interface : </label></br> <input id="15" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>ISO 8601 support : </label></br> <input id="16" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Platform-independent :</label></br>
+								<input type="radio" name="FeaturePlatform-independent" value="oui">Yes <input type="radio" name="FeaturePlatform-independent" value = "non">No <input type="radio" name="FeaturePlatform-independent" value = "non">Partial </br>
+								
+								</br>	
+								<label>available as statically linked, independent single file executable :</label></br>
+								<input type="radio" name="Featureavailable as statically linked, independent single file executable" value="oui">Yes <input type="radio" name="Featureavailable as statically linked, independent single file executable" value = "non">No <input type="radio" name="Featureavailable as statically linked, independent single file executable" value = "non">Partial </br>
+								
+								</br>	
+								<label>Default login shell in :</label></br>
+											<input type="checkbox" name="Feature" >Windows NT</br>	
+											<input type="checkbox" name="Feature" >2000</br>	
+											<input type="checkbox" name="Feature" >XP</br>	
+											<input type="checkbox" name="Feature" >Server 2003</br>	
+											<input type="checkbox" name="Feature" >Vista</br>	
+											<input type="checkbox" name="Feature" >Plan 9</br>	
+											<input type="checkbox" name="Feature" >Version 10 Unix</br>	
+											<input type="checkbox" name="Feature" >OS</br>	
+											<input type="checkbox" name="Feature" >2</br>	
+											<input type="checkbox" name="Feature" >GNU</br>	
+											<input type="checkbox" name="Feature" >Linux (default for root)</br>	
+											<input type="checkbox" name="Feature" >Mac OS X 10.3+</br>	
+											<input type="checkbox" name="Feature" >Minix</br>	
+											<input type="checkbox" name="Feature" >BusyBox based systems</br>	
+											<input type="checkbox" name="Feature" >Grml</br>	
+											<input type="checkbox" name="Feature" >Gobolinux</br>	
+											<input type="checkbox" name="Feature" >DOS</br>	
+											<input type="checkbox" name="Feature" >Windows 95</br>	
+											<input type="checkbox" name="Feature" >98</br>	
+											<input type="checkbox" name="Feature" >SE</br>	
+											<input type="checkbox" name="Feature" >ME</br>	
+											<input type="checkbox" name="Feature" >FreeBSD (default for root)</br>	
+											<input type="checkbox" name="Feature" >formerly Mac OS X</br>	
+											<input type="checkbox" name="Feature" >CP</br>	
+											<input type="checkbox" name="Feature" >M (no login)</br>	
+											<input type="checkbox" name="Feature" >MP</br>	
+											<input type="checkbox" name="Feature" >M</br>	
+											<input type="checkbox" name="Feature" >Windows Server 2008</br>	
+											<input type="checkbox" name="Feature" >7</br>	
+											<input type="checkbox" name="Feature" >AIX</br>	
+											<input type="checkbox" name="Feature" >HP-UX</br>	
 									
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['?','Unspecified ( given as an example)','Yes ( and )','Yes (, , )','Partial (only via  startup option)','Yes (via login.csh, startup.csh and logout.csh)','Yes (, )','Yes (automatic via )','Yes (, , , , )','Yes (, , , , , , )','Yes (automatic  for primary shell and / as well as / for any shell, or explicitly via ,  or  startup options)','Yes (system and user's  and )','Yes (system and user's , , , , )','Yes ()','Yes (%USERPROFILE%\Documents \WindowsPowerShell\Microsoft.PowerShell_profile.ps1)','Yes (automatic via registry, or explicitly via  startup option)','Yes (automatic via / as well as / files, or explicitly via  option)','Yes (automatic via registry and / as well as /, or explicitly via  startup option)','Yes (automatic  for primary shell, or explicitly via ,  or  startup options)','Yes (SYS$MANAGER:SYLOGIN.COM or user defined LOGIN.COM)','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['fish','csh','bash, sh','ksh','COMMAND','scsh','?','(CCP)','tcsh, csh','sh','ksh, sh','zsh','rc','CMD','4OS2','4DOS, NDOS','TCC','powershell','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['?','Yes (via  command or  and  startup options)','Yes (Unix feature)','Yes (PowerShell feature)','Partial (only via external  command to update )','Yes','Yes (command line option)','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['OS/2','SunOS-5.x','7th Ed. UNIX,','Windows NT, 2000, XP, Server 2003, Vista','?','VMS','Optional','OpenBSD','GNU, Linux, Haiku, Mac OS X','OpenSolaris','Windows Server 2008, 7','DOS, Windows 95, 98, SE, ME','Plan 9, Version 10 Unix','Grml','POSIX','NetBSD, Minix, BusyBox based systems','optional','CP/M, MP/M','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Shareware','Public Domain','GPL','Proprietary','N/A','Freeware','IBM-EULA','Lucent Public License','vendor specific, f.e. MS-EULA, or BSD/GPL (free clones)','MS-EULA','BSD','Common Public License','MIT-style','LGPL','BSD-style','MIT License, with restrictions','style="background: #9FF; color: black; vertical-align: middle; text-align: center; " class="free table-free"|Free','Freeware (originally proprietary)','?','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Java','OS/2','POSIX','Plan 9, POSIX','7th Ed. UNIX','.NET','Various UNIX','Win32','OpenVMS','DOS, Windows 95, 98, SE, ME','Win32, OS/2','CP/M, MP/M','DOS','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['No','Yes (via variables and options)','Yes (via variables, options, functions, styles, etc.)','Yes (via / file, startup parameters, environment variables,  command)','Yes (via registry, startup parameters, and environment variables)','?','Yes (via startup parameters and environment variables, DR-DOS also supports  user-default switch command)','Yes (via  file, startup parameters, environment variables,  command)','Yes (via registry, / file, startup parameters, environment variables,  command)','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['Yes (, , , )','Yes (arbitrary )','Yes (,  assignment)','No','Yes (, , )','Yes','Yes (, )','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['Text-based CLI (Take Command: GUI)','Text-based CLI','?','Text-based CLI with TUI extensions','Graphical CLI','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['Yes ( builtin)','?','No','N/A','Yes','Yes ( and  utilities)','Yes (-t timestamp operator)','No (except for DR-DOS)','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								</br>	
+								<label>Mouse support :</label></br>
+								<input type="radio" name="FeatureMouse support" value="oui">Yes <input type="radio" name="FeatureMouse support" value = "non">No <input type="radio" name="FeatureMouse support" value = "non">Partial </br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['?','Unspecified ( given as an example)','Yes ( and )','Yes (, , )','Partial (only via  startup option)','Yes (via login.csh, startup.csh and logout.csh)','Yes (, )','Yes (automatic via )','Yes (, , , , )','Yes (, , , , , , )','Yes (automatic  for primary shell and / as well as / for any shell, or explicitly via ,  or  startup options)','Yes (system and user's  and )','Yes (system and user's , , , , )','Yes ()','Yes (%USERPROFILE%\Documents \WindowsPowerShell\Microsoft.PowerShell_profile.ps1)','Yes (automatic via registry, or explicitly via  startup option)','Yes (automatic via / as well as / files, or explicitly via  option)','Yes (automatic via registry and / as well as /, or explicitly via  startup option)','Yes (automatic  for primary shell, or explicitly via ,  or  startup options)','Yes (SYS$MANAGER:SYLOGIN.COM or user defined LOGIN.COM)','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['fish','csh','bash, sh','ksh','COMMAND','scsh','?','(CCP)','tcsh, csh','sh','ksh, sh','zsh','rc','CMD','4OS2','4DOS, NDOS','TCC','powershell','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['?','Yes (via  command or  and  startup options)','Yes (Unix feature)','Yes (PowerShell feature)','Partial (only via external  command to update )','Yes','Yes (command line option)','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['OS/2','SunOS-5.x','7th Ed. UNIX,','Windows NT, 2000, XP, Server 2003, Vista','?','VMS','Optional','OpenBSD','GNU, Linux, Haiku, Mac OS X','OpenSolaris','Windows Server 2008, 7','DOS, Windows 95, 98, SE, ME','Plan 9, Version 10 Unix','Grml','POSIX','NetBSD, Minix, BusyBox based systems','optional','CP/M, MP/M','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['Shareware','Public Domain','GPL','Proprietary','N/A','Freeware','IBM-EULA','Lucent Public License','vendor specific, f.e. MS-EULA, or BSD/GPL (free clones)','MS-EULA','BSD','Common Public License','MIT-style','LGPL','BSD-style','MIT License, with restrictions','style="background: #9FF; color: black; vertical-align: middle; text-align: center; " class="free table-free"|Free','Freeware (originally proprietary)','?','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['Java','OS/2','POSIX','Plan 9, POSIX','7th Ed. UNIX','.NET','Various UNIX','Win32','OpenVMS','DOS, Windows 95, 98, SE, ME','Win32, OS/2','CP/M, MP/M','DOS','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['No','Yes (via variables and options)','Yes (via variables, options, functions, styles, etc.)','Yes (via / file, startup parameters, environment variables,  command)','Yes (via registry, startup parameters, and environment variables)','?','Yes (via startup parameters and environment variables, DR-DOS also supports  user-default switch command)','Yes (via  file, startup parameters, environment variables,  command)','Yes (via registry, / file, startup parameters, environment variables,  command)','']
+								});
+								$("#8").typeahead({
+									name:"list8",
+									local : ['Yes (, , , )','Yes (arbitrary )','Yes (,  assignment)','No','Yes (, , )','Yes','Yes (, )','']
+								});
+								$("#9").typeahead({
+									name:"list9",
+									local : ['Text-based CLI (Take Command: GUI)','Text-based CLI','?','Text-based CLI with TUI extensions','Graphical CLI','']
+								});
+								$("#10").typeahead({
+									name:"list10",
+									local : ['Yes ( builtin)','?','No','N/A','Yes','Yes ( and  utilities)','Yes (-t timestamp operator)','No (except for DR-DOS)','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

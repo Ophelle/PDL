@@ -1,96 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of iPod managers - Media organization and transfer features</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>iRip :</label></br>
+								<input type="radio" name="FeatureiRip" value="oui">Yes <input type="radio" name="FeatureiRip" value = "non">No <input type="radio" name="FeatureiRip" value = "non">Partial </br>
+								
+								</br>	
+								<label>Amarok :</label></br>
+								<input type="radio" name="FeatureAmarok" value="oui">Yes <input type="radio" name="FeatureAmarok" value = "non">No <input type="radio" name="FeatureAmarok" value = "non">Partial </br>
+								
+								</br>	
+								<label>Banshee :</label></br>
+								<input type="radio" name="FeatureBanshee" value="oui">Yes <input type="radio" name="FeatureBanshee" value = "non">No <input type="radio" name="FeatureBanshee" value = "non">Partial </br>
+								
+								</br>	
+								<label>Winamp native :</label></br>
+								<input type="radio" name="FeatureWinamp native" value="oui">Yes <input type="radio" name="FeatureWinamp native" value = "non">No <input type="radio" name="FeatureWinamp native" value = "non">Partial </br>
+								
+								</br>	
+								<label>Rhythmbox :</label></br>
+								<input type="radio" name="FeatureRhythmbox" value="oui">Yes <input type="radio" name="FeatureRhythmbox" value = "non">No <input type="radio" name="FeatureRhythmbox" value = "non">Partial </br>
+								
+								</br>	
+								<label>Senuti :</label></br>
+								<input type="radio" name="FeatureSenuti" value="oui">Yes <input type="radio" name="FeatureSenuti" value = "non">No <input type="radio" name="FeatureSenuti" value = "non">Partial </br>
+								
+								</br>	
+								<label>Manager : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>EphPod :</label></br>
+								<input type="radio" name="FeatureEphPod" value="oui">Yes <input type="radio" name="FeatureEphPod" value = "non">No <input type="radio" name="FeatureEphPod" value = "non">Partial </br>
+								
+								</br>	
+								<label>iTunes :</label></br>
+								<input type="radio" name="FeatureiTunes" value="oui">Yes <input type="radio" name="FeatureiTunes" value = "non">No <input type="radio" name="FeatureiTunes" value = "non">Partial </br>
+								
+								</br>	
+								<label>XPlay :</label></br>
+								<input type="radio" name="FeatureXPlay" value="oui">Yes <input type="radio" name="FeatureXPlay" value = "non">No <input type="radio" name="FeatureXPlay" value = "non">Partial </br>
+								
+								</br>	
+								<label>Clementine :</label></br>
+								<input type="radio" name="FeatureClementine" value="oui">Yes <input type="radio" name="FeatureClementine" value = "non">No <input type="radio" name="FeatureClementine" value = "non">Partial </br>
+								
+								</br>	
+								<label>JRiver Media Center :</label></br>
+								<input type="radio" name="FeatureJRiver Media Center" value="oui">Yes <input type="radio" name="FeatureJRiver Media Center" value = "non">No <input type="radio" name="FeatureJRiver Media Center" value = "non">Partial </br>
+								
+								</br>	
+								<label>MediaMonkey :</label></br>
+								<input type="radio" name="FeatureMediaMonkey" value="oui">Yes <input type="radio" name="FeatureMediaMonkey" value = "non">No <input type="radio" name="FeatureMediaMonkey" value = "non">Partial </br>
+								
+								</br>	
+								<label>gtkpod :</label></br>
+								<input type="radio" name="Featuregtkpod" value="oui">Yes <input type="radio" name="Featuregtkpod" value = "non">No <input type="radio" name="Featuregtkpod" value = "non">Partial </br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Copy Smart Playlists','Copy Music','Extract Playlists','Extract DRM-Free Videos','Copy Videos','Extract DRM-Free Music','Copy Album Artwork','Extract Playcounts','Copy Content to iPod','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>iRip :</label></br>
- 		 					 <input type="radio" name="FeatureiRip" value="oui">oui <input type="radio" name="FeatureiRip" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Amarok :</label></br>
- 		 					 <input type="radio" name="FeatureAmarok" value="oui">oui <input type="radio" name="FeatureAmarok" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Banshee :</label></br>
- 		 					 <input type="radio" name="FeatureBanshee" value="oui">oui <input type="radio" name="FeatureBanshee" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Winamp native :</label></br>
- 		 					 <input type="radio" name="FeatureWinamp native" value="oui">oui <input type="radio" name="FeatureWinamp native" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Rhythmbox :</label></br>
- 		 					 <input type="radio" name="FeatureRhythmbox" value="oui">oui <input type="radio" name="FeatureRhythmbox" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Senuti :</label></br>
- 		 					 <input type="radio" name="FeatureSenuti" value="oui">oui <input type="radio" name="FeatureSenuti" value = "non">non </br>
-									
-						</br>	
-							<label>Manager : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>EphPod :</label></br>
- 		 					 <input type="radio" name="FeatureEphPod" value="oui">oui <input type="radio" name="FeatureEphPod" value = "non">non </br>
-									
-						</br>	
- 		 					<label>iTunes :</label></br>
- 		 					 <input type="radio" name="FeatureiTunes" value="oui">oui <input type="radio" name="FeatureiTunes" value = "non">non </br>
-									
-						</br>	
- 		 					<label>XPlay :</label></br>
- 		 					 <input type="radio" name="FeatureXPlay" value="oui">oui <input type="radio" name="FeatureXPlay" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Clementine :</label></br>
- 		 					 <input type="radio" name="FeatureClementine" value="oui">oui <input type="radio" name="FeatureClementine" value = "non">non </br>
-									
-						</br>	
- 		 					<label>JRiver Media Center :</label></br>
- 		 					 <input type="radio" name="FeatureJRiver Media Center" value="oui">oui <input type="radio" name="FeatureJRiver Media Center" value = "non">non </br>
-									
-						</br>	
- 		 					<label>MediaMonkey :</label></br>
- 		 					 <input type="radio" name="FeatureMediaMonkey" value="oui">oui <input type="radio" name="FeatureMediaMonkey" value = "non">non </br>
-									
-						</br>	
- 		 					<label>gtkpod :</label></br>
- 		 					 <input type="radio" name="Featuregtkpod" value="oui">oui <input type="radio" name="Featuregtkpod" value = "non">non </br>
-									
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Copy Smart Playlists','Copy Music','Extract Playlists','Extract DRM-Free Videos','Copy Videos','Extract DRM-Free Music','Copy Album Artwork','Extract Playcounts','Copy Content to iPod','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

@@ -1,57 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of United States presidential candidates, 2008 - Lobbying</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Chuck Baldwin : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>McCain does not allow his staffers to hold positions as lobbyists. :</label></br>
+											<input type="checkbox" name="Feature" >Obama does not take contributions from federally registered lobbyists or PACs</br>	
+											<input type="checkbox" name="Feature" >though he does accept money from non-federal lobbyists and unregistered lobbyists.</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>John McCain : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Cynthia McKinney','Bob Barr','Ralph Nader','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Barack Obama','John McCain','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Chuck Baldwin : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>McCain does not allow his staffers to hold positions as lobbyists. :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Obama does not take contributions from federally registered lobbyists or PACs</br>	
- 		 									<input type="checkbox" name="Feature" > though he does accept money from non-federal lobbyists and unregistered lobbyists.</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>John McCain : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Cynthia McKinney','Bob Barr','Ralph Nader','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Barack Obama','John McCain','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

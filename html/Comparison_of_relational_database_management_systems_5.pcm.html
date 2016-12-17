@@ -1,87 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of relational database management systems - Indices</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>GiST :</label></br>
+								<input type="radio" name="FeatureGiST" value="oui">Yes <input type="radio" name="FeatureGiST" value = "non">No <input type="radio" name="FeatureGiST" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Bitmap :</label></br>
+								<input type="radio" name="FeatureBitmap" value="oui">Yes <input type="radio" name="FeatureBitmap" value = "non">No <input type="radio" name="FeatureBitmap" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Reverse :</label></br>
+								<input type="radio" name="FeatureReverse" value="oui">Yes <input type="radio" name="FeatureReverse" value = "non">No <input type="radio" name="FeatureReverse" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Partial :</label></br>
+								<input type="radio" name="FeaturePartial" value="oui">Yes <input type="radio" name="FeaturePartial" value = "non">No <input type="radio" name="FeaturePartial" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Spatial : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Expression :</label></br>
+								<input type="radio" name="FeatureExpression" value="oui">Yes <input type="radio" name="FeatureExpression" value = "non">No <input type="radio" name="FeatureExpression" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Full-text :</label></br>
+								<input type="radio" name="FeatureFull-text" value="oui">Yes <input type="radio" name="FeatureFull-text" value = "non">No <input type="radio" name="FeatureFull-text" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>FOT : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>R-/R+ tree :</label></br>
+								<input type="radio" name="FeatureR-/R+ tree" value="oui">Yes <input type="radio" name="FeatureR-/R+ tree" value = "non">No <input type="radio" name="FeatureR-/R+ tree" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Hash :</label></br>
+								<input type="radio" name="FeatureHash" value="oui">Yes <input type="radio" name="FeatureHash" value = "non">No <input type="radio" name="FeatureHash" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>GIN :</label></br>
+								<input type="radio" name="FeatureGIN" value="oui">Yes <input type="radio" name="FeatureGIN" value = "non">No <input type="radio" name="FeatureGIN" value = "non">Partial </br>
+											<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Yes','?','PostGIS','No','Yes (Commercial only)','SpatiaLite','Spatial','MyISAM tables only','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['?','FOT','No','Yes','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>GiST :</label></br>
- 		 					 <input type="radio" name="FeatureGiST" value="oui">oui <input type="radio" name="FeatureGiST" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Bitmap :</label></br>
- 		 					 <input type="radio" name="FeatureBitmap" value="oui">oui <input type="radio" name="FeatureBitmap" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Reverse :</label></br>
- 		 					 <input type="radio" name="FeatureReverse" value="oui">oui <input type="radio" name="FeatureReverse" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Partial :</label></br>
- 		 					 <input type="radio" name="FeaturePartial" value="oui">oui <input type="radio" name="FeaturePartial" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Spatial : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Expression :</label></br>
- 		 					 <input type="radio" name="FeatureExpression" value="oui">oui <input type="radio" name="FeatureExpression" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Full-text :</label></br>
- 		 					 <input type="radio" name="FeatureFull-text" value="oui">oui <input type="radio" name="FeatureFull-text" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>FOT : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>R-/R+ tree :</label></br>
- 		 					 <input type="radio" name="FeatureR-/R+ tree" value="oui">oui <input type="radio" name="FeatureR-/R+ tree" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Hash :</label></br>
- 		 					 <input type="radio" name="FeatureHash" value="oui">oui <input type="radio" name="FeatureHash" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>GIN :</label></br>
- 		 					 <input type="radio" name="FeatureGIN" value="oui">oui <input type="radio" name="FeatureGIN" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Yes','?','PostGIS','No','Yes (Commercial only)','SpatiaLite','Spatial','MyISAM tables only','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['?','FOT','No','Yes','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

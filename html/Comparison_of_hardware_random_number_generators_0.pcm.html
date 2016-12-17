@@ -1,121 +1,122 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of hardware random number generators</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>OS :</label></br>
+											<input type="checkbox" name="Feature" >Windows</br>	
+											<input type="checkbox" name="Feature" >Linux</br>	
+											<input type="checkbox" name="Feature" >BSD</br>	
+											<input type="checkbox" name="Feature" >MacOS X</br>	
+											<input type="checkbox" name="Feature" >Mac</br>	
+											<input type="checkbox" name="Feature" >Pi</br>	
+											<input type="checkbox" name="Feature" >Solaris</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Price : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Intro Date : </label></br> <input id="3" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Manufacturer : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Model : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Throughput/$ :</label></br>
+											<input type="checkbox" name="Feature" >9859 bit</br>	
+											<input type="checkbox" name="Feature" >s </br>	
+											<input type="checkbox" name="Feature" >$</br>	
+											<input type="checkbox" name="Feature" >21404 bit</br>	
+											<input type="checkbox" name="Feature" >7000 bit</br>	
+											<input type="checkbox" name="Feature" >25316 bit</br>	
+											<input type="checkbox" name="Feature" >? bit</br>	
+											<input type="checkbox" name="Feature" >700 bit</br>	
+											<input type="checkbox" name="Feature" >3367 bit</br>	
+											<input type="checkbox" name="Feature" >8571 bit</br>	
+											<input type="checkbox" name="Feature" >17185 bit</br>	
+											<input type="checkbox" name="Feature" >4469 bit</br>	
+											<input type="checkbox" name="Feature" >550 bit</br>	
+											<input type="checkbox" name="Feature" >524 bit</br>	
+											<input type="checkbox" name="Feature" >10050 bit</br>	
+											<input type="checkbox" name="Feature" >3703 bit</br>	
+											<input type="checkbox" name="Feature" >5979 bit</br>	
+											<input type="checkbox" name="Feature" >739 bit</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Throughput :</label></br>
+											<input type="checkbox" name="Feature" >350 kbit</br>	
+											<input type="checkbox" name="Feature" >s</br>	
+											<input type="checkbox" name="Feature" >400 Mbit</br>	
+											<input type="checkbox" name="Feature" >72 kbit</br>	
+											<input type="checkbox" name="Feature" >550 kbit</br>	
+											<input type="checkbox" name="Feature" >4 Mbit</br>	
+											<input type="checkbox" name="Feature" >32 Mbit</br>	
+											<input type="checkbox" name="Feature" >16 Mbit</br>	
+											<input type="checkbox" name="Feature" >100 kbit</br>	
+											<input type="checkbox" name="Feature" >0.6 Mbit</br>	
+											<input type="checkbox" name="Feature" >12 Mbit</br>	
+											<input type="checkbox" name="Feature" >>350 kbit</br>	
+											<input type="checkbox" name="Feature" >1000 Mbit</br>	
+											<input type="checkbox" name="Feature" >2.0 Mbit</br>	
+											<input type="checkbox" name="Feature" >300 kbit</br>	
+											<input type="checkbox" name="Feature" >2 Mbit</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Interface : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['159€','$1.495','620€','2700€','$49.95','$895','N/A','$35','$199','119€','$79','2.230€','109€','990€','$50 NZD','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Araneus','TRNG98','Quant-Lab','Flying Stone Technology','ID Quantique SA','Comscire','ubld.it','TectroLabs','Moonbase Otago','QuintessenceLabs','WaywardGeek','LETech','Kidekin','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['OneRNG','TRNG9815','PQ32MU','Alea II','PQ4000KU','Quantis-USB','TRNG9803','FST-01 (includes NeuG 1.0)','QRBG121','Infinite Noise TRNG','GRANG (various devices)','qStream, qCrypt-xStream','TRNG','TrueRNG','Alea I','Quantis-PCI-4','TL200','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['USB','SERIAL','PCI','Network, PCIe','PCI/USB3/SATA','USB 2.0','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>OS :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 									<input type="checkbox" name="Feature" >Linux</br>	
- 		 									<input type="checkbox" name="Feature" >BSD</br>	
- 		 									<input type="checkbox" name="Feature" >MacOS X</br>	
- 		 									<input type="checkbox" name="Feature" >Mac</br>	
- 		 									<input type="checkbox" name="Feature" >Pi</br>	
- 		 									<input type="checkbox" name="Feature" >Solaris</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Price : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Intro Date : </label></br> <input id="3" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Manufacturer : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Model : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Throughput/$ :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >9859 bit</br>	
- 		 									<input type="checkbox" name="Feature" >s </br>	
- 		 									<input type="checkbox" name="Feature" >$</br>	
- 		 									<input type="checkbox" name="Feature" >21404 bit</br>	
- 		 									<input type="checkbox" name="Feature" >7000 bit</br>	
- 		 									<input type="checkbox" name="Feature" >25316 bit</br>	
- 		 									<input type="checkbox" name="Feature" >? bit</br>	
- 		 									<input type="checkbox" name="Feature" >700 bit</br>	
- 		 									<input type="checkbox" name="Feature" >3367 bit</br>	
- 		 									<input type="checkbox" name="Feature" >8571 bit</br>	
- 		 									<input type="checkbox" name="Feature" >17185 bit</br>	
- 		 									<input type="checkbox" name="Feature" >4469 bit</br>	
- 		 									<input type="checkbox" name="Feature" >550 bit</br>	
- 		 									<input type="checkbox" name="Feature" >524 bit</br>	
- 		 									<input type="checkbox" name="Feature" >10050 bit</br>	
- 		 									<input type="checkbox" name="Feature" >3703 bit</br>	
- 		 									<input type="checkbox" name="Feature" >5979 bit</br>	
- 		 									<input type="checkbox" name="Feature" >739 bit</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Throughput :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >350 kbit</br>	
- 		 									<input type="checkbox" name="Feature" >s</br>	
- 		 									<input type="checkbox" name="Feature" >400 Mbit</br>	
- 		 									<input type="checkbox" name="Feature" >72 kbit</br>	
- 		 									<input type="checkbox" name="Feature" >550 kbit</br>	
- 		 									<input type="checkbox" name="Feature" >4 Mbit</br>	
- 		 									<input type="checkbox" name="Feature" >32 Mbit</br>	
- 		 									<input type="checkbox" name="Feature" >16 Mbit</br>	
- 		 									<input type="checkbox" name="Feature" >100 kbit</br>	
- 		 									<input type="checkbox" name="Feature" >0.6 Mbit</br>	
- 		 									<input type="checkbox" name="Feature" >12 Mbit</br>	
- 		 									<input type="checkbox" name="Feature" >>350 kbit</br>	
- 		 									<input type="checkbox" name="Feature" >1000 Mbit</br>	
- 		 									<input type="checkbox" name="Feature" >2.0 Mbit</br>	
- 		 									<input type="checkbox" name="Feature" >300 kbit</br>	
- 		 									<input type="checkbox" name="Feature" >2 Mbit</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Interface : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['159€','$1.495','620€','2700€','$49.95','$895','N/A','$35','$199','119€','$79','2.230€','109€','990€','$50 NZD','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Araneus','TRNG98','Quant-Lab','Flying Stone Technology','ID Quantique SA','Comscire','ubld.it','TectroLabs','Moonbase Otago','QuintessenceLabs','WaywardGeek','LETech','Kidekin','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['OneRNG','TRNG9815','PQ32MU','Alea II','PQ4000KU','Quantis-USB','TRNG9803','FST-01 (includes NeuG 1.0)','QRBG121','Infinite Noise TRNG','GRANG (various devices)','qStream, qCrypt-xStream','TRNG','TrueRNG','Alea I','Quantis-PCI-4','TL200','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['USB','SERIAL','PCI','Network, PCIe','PCI/USB3/SATA','USB 2.0','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

@@ -1,80 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of portable media players -  Wi-Fi connectivity </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Ad hoc :</label></br>
+								<input type="radio" name="FeatureAd hoc" value="oui">Yes <input type="radio" name="FeatureAd hoc" value = "non">No <input type="radio" name="FeatureAd hoc" value = "non">Partial </br>
+								
+								</br>	
+								<label>Web radio/TV : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Web browser : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>On-demand : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Manufacturer : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Product : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Wireless synching :</label></br>
+								<input type="radio" name="FeatureWireless synching" value="oui">Yes <input type="radio" name="FeatureWireless synching" value = "non">No <input type="radio" name="FeatureWireless synching" value = "non">Partial </br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','Yes','No','radio only','Yes (using Flash-based Internet Radio sites)','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Opera 9','Webkit','IE Mobile','No','Opera 8.5','Minimo','NetFront','Opera','IE Mobile 6','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Rhapsody','','Yahoo! Music','Zune Marketplace','No','iTunes, Spotify','Creative MediaBox','PlayStation Store','Content Portals','Android Marketplace','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Creative','Microsoft','Sony','Archos','SanDisk','Apple Inc.','Samsung','Haier','Cowon','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['Archos PMA400','Archos 5, 7','Archos 605 WiFi, 705 WiFi','iPod Touch','Sony PSP','Cowon Q5W','Samsung Galaxy Player','Zune 30','ZEN X-Fi','Ibiza Rhapsody','Zune 80, 120','Sansa Connect','Zune HD','Archos 604 WiFi, 704 WiFi','Sony Walkman X Series','Zune 4, 8','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Ad hoc :</label></br>
- 		 					 <input type="radio" name="FeatureAd hoc" value="oui">oui <input type="radio" name="FeatureAd hoc" value = "non">non </br>
-									
-						</br>	
-							<label>Web radio/TV : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Web browser : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>On-demand : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Manufacturer : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Product : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Wireless synching :</label></br>
- 		 					 <input type="radio" name="FeatureWireless synching" value="oui">oui <input type="radio" name="FeatureWireless synching" value = "non">non </br>
-									
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['','Yes','No','radio only','Yes (using Flash-based Internet Radio sites)','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Opera 9','Webkit','IE Mobile','No','Opera 8.5','Minimo','NetFront','Opera','IE Mobile 6','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Rhapsody','','Yahoo! Music','Zune Marketplace','No','iTunes, Spotify','Creative MediaBox','PlayStation Store','Content Portals','Android Marketplace','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Creative','Microsoft','Sony','Archos','SanDisk','Apple Inc.','Samsung','Haier','Cowon','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Archos PMA400','Archos 5, 7','Archos 605 WiFi, 705 WiFi','iPod Touch','Sony PSP','Cowon Q5W','Samsung Galaxy Player','Zune 30','ZEN X-Fi','Ibiza Rhapsody','Zune 80, 120','Sansa Connect','Zune HD','Archos 604 WiFi, 704 WiFi','Sony Walkman X Series','Zune 4, 8','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

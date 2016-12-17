@@ -1,126 +1,126 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of defragmentation software</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>CLI :</label></br>
+								<input type="radio" name="FeatureCLI" value="oui">Yes <input type="radio" name="FeatureCLI" value = "non">No <input type="radio" name="FeatureCLI" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Script : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Program : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Supported file systems :</label></br>
+											<input type="checkbox" name="Feature" >FAT16</br>	
+											<input type="checkbox" name="Feature" >FAT32</br>	
+											<input type="checkbox" name="Feature" >NTFS</br>	
+											<input type="checkbox" name="Feature" >FAT12</br>	
+											<input type="checkbox" name="Feature" >exFAT</br>	
+											<input type="checkbox" name="Feature" >ReFS</br>	
+											<input type="checkbox" name="Feature" >CSVFS</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Scheduler :</label></br>
+								<input type="radio" name="FeatureScheduler" value="oui">Yes <input type="radio" name="FeatureScheduler" value = "non">No <input type="radio" name="FeatureScheduler" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Stable release : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>License : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Developer : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Supported platforms :</label></br>
+											<input type="checkbox" name="Feature" >Microsoft Windows XP</br>	
+											<input type="checkbox" name="Feature" >Server 2003</br>	
+											<input type="checkbox" name="Feature" >Vista</br>	
+											<input type="checkbox" name="Feature" >Server 2008</br>	
+											<input type="checkbox" name="Feature" >and 7 (including 64-bit versions)</br>	
+											<input type="checkbox" name="Feature" >Microsoft Windows 2000</br>	
+											<input type="checkbox" name="Feature" >XP</br>	
+											<input type="checkbox" name="Feature" >Windows NT 4.0</br>	
+											<input type="checkbox" name="Feature" >2000</br>	
+											<input type="checkbox" name="Feature" >7</br>	
+											<input type="checkbox" name="Feature" >and 8 (including 64-bit versions)</br>	
+											<input type="checkbox" name="Feature" >Home Server</br>	
+											<input type="checkbox" name="Feature" >and higher</br>	
+											<input type="checkbox" name="Feature" >Microsoft Windows XP and higher</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>Auto defrag when idle : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>GUI :</label></br>
+								<input type="radio" name="FeatureGUI" value="oui">Yes <input type="radio" name="FeatureGUI" value = "non">No <input type="radio" name="FeatureGUI" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Boot time :</label></br>
+								<input type="radio" name="FeatureBoot time" value="oui">Yes <input type="radio" name="FeatureBoot time" value = "non">No <input type="radio" name="FeatureBoot time" value = "non">Partial </br>
+											<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','No','Yes','Script','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Contig','UltraDefrag','O&O Defrag','MyDefrag','Diskeeper','Vopt','Program','Ashampoo Magical Defrag','Defraggler','WinContig','Auslogics Disk Defrag','Auslogics Defrag Screensaver','DiskTune','mst Defrag','UltimateDefrag','SmartDefrag','PerfectDisk','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['','Yes','Auto defrag when idle','Win TS','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['1.35.02','3.0.2 (February 2, 2010)','1.1.31 (April 6, 2009)','3.6','2.19.982 (March 11, 2015)','18.0.39 (2014)','Stable release','4.0.98.0 (July 3, 2012; 2 years ago)','5.3.0.0 (Free), 4.5.0.0 (Pro) (February 10, 2015; 3 months ago (Free), January 26, 2015; 4 months ago (Pro))','13.0 Build 842 (November 13, 2014)','2012 (16.0.1017.0) (October 26, 2012)','9.21.0001 (November 14, 2010)','6.1.0 (April 19, 2015)','1.6 (February 1, 2011)','2.7','1.1.1.50','4.3.1 (May 21, 2010)','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['Proprietary (Commercial)','Proprietary (Freeware)','License','Proprietary','GNU GPL','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['Developer','Windows Sysinternals','Jeroen Kessels','Ashampoo','Piriform','IObit','mst Software','Dmitri Arkhangelski, Justin Dearing, Sayem Chaklader, Stefan Pendl','Condusiv Technologies','Raxco Software','Marco D'Amato','DiskTrix','GoldenBow','Auslogics','DIY DataRecovery','O&O Software','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>CLI :</label></br>
- 		 					 <input type="radio" name="FeatureCLI" value="oui">oui <input type="radio" name="FeatureCLI" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Script : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Program : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Supported file systems :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >FAT16</br>	
- 		 									<input type="checkbox" name="Feature" > FAT32</br>	
- 		 									<input type="checkbox" name="Feature" > NTFS</br>	
- 		 									<input type="checkbox" name="Feature" >FAT12</br>	
- 		 									<input type="checkbox" name="Feature" > FAT16</br>	
- 		 									<input type="checkbox" name="Feature" > exFAT</br>	
- 		 									<input type="checkbox" name="Feature" > ReFS</br>	
- 		 									<input type="checkbox" name="Feature" > CSVFS</br>	
- 		 									<input type="checkbox" name="Feature" >FAT32</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
- 		 					<label>Scheduler :</label></br>
- 		 					 <input type="radio" name="FeatureScheduler" value="oui">oui <input type="radio" name="FeatureScheduler" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Stable release : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>License : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Developer : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Supported platforms :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Microsoft Windows XP</br>	
- 		 									<input type="checkbox" name="Feature" > Server 2003</br>	
- 		 									<input type="checkbox" name="Feature" > Vista</br>	
- 		 									<input type="checkbox" name="Feature" > Server 2008</br>	
- 		 									<input type="checkbox" name="Feature" > and 7 (including 64-bit versions)</br>	
- 		 									<input type="checkbox" name="Feature" >Microsoft Windows 2000</br>	
- 		 									<input type="checkbox" name="Feature" > XP</br>	
- 		 									<input type="checkbox" name="Feature" >Windows NT 4.0</br>	
- 		 									<input type="checkbox" name="Feature" > 2000</br>	
- 		 									<input type="checkbox" name="Feature" > 7</br>	
- 		 									<input type="checkbox" name="Feature" > and 8 (including 64-bit versions)</br>	
- 		 									<input type="checkbox" name="Feature" > Home Server</br>	
- 		 									<input type="checkbox" name="Feature" > and higher</br>	
- 		 									<input type="checkbox" name="Feature" >Microsoft Windows XP and higher</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>Auto defrag when idle : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>GUI :</label></br>
- 		 					 <input type="radio" name="FeatureGUI" value="oui">oui <input type="radio" name="FeatureGUI" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Boot time :</label></br>
- 		 					 <input type="radio" name="FeatureBoot time" value="oui">oui <input type="radio" name="FeatureBoot time" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['','No','Yes','Script','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Contig','UltraDefrag','O&O Defrag','MyDefrag','Diskeeper','Vopt','Program','Ashampoo Magical Defrag','Defraggler','WinContig','Auslogics Disk Defrag','Auslogics Defrag Screensaver','DiskTune','mst Defrag','UltimateDefrag','SmartDefrag','PerfectDisk','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['','Yes','Auto defrag when idle','Win TS','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['1.35.02','3.0.2 (February 2, 2010)','1.1.31 (April 6, 2009)','3.6','2.19.982 (March 11, 2015)','18.0.39 (2014)','Stable release','4.0.98.0 (July 3, 2012; 2 years ago)','5.3.0.0 (Free), 4.5.0.0 (Pro) (February 10, 2015; 3 months ago (Free), January 26, 2015; 4 months ago (Pro))','13.0 Build 842 (November 13, 2014)','2012 (16.0.1017.0) (October 26, 2012)','9.21.0001 (November 14, 2010)','6.1.0 (April 19, 2015)','1.6 (February 1, 2011)','2.7','1.1.1.50','4.3.1 (May 21, 2010)','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Proprietary (Commercial)','Proprietary (Freeware)','License','Proprietary','GNU GPL','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Developer','Windows Sysinternals','Jeroen Kessels','Ashampoo','Piriform','IObit','mst Software','Dmitri Arkhangelski, Justin Dearing, Sayem Chaklader, Stefan Pendl','Condusiv Technologies','Raxco Software','Marco D'Amato','DiskTrix','GoldenBow','Auslogics','DIY DataRecovery','O&O Software','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

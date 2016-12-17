@@ -1,96 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of integrated development environments -  Fortran </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Developer : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Latest stable release :</label></br>
+											<input type="checkbox" name="Feature" >4.3.1 </br>	
+											<input type="checkbox" name="Feature" >June 2009</br>	
+											<input type="checkbox" name="Feature" >1.9 </br>	
+											<input type="checkbox" name="Feature" >June 2</br>	
+											<input type="checkbox" name="Feature" >2010</br>	
+											<input type="checkbox" name="Feature" >13.12 </br>	
+											<input type="checkbox" name="Feature" >December 27</br>	
+											<input type="checkbox" name="Feature" >2013</br>	
+											<input type="checkbox" name="Feature" >0.21 </br>	
+											<input type="checkbox" name="Feature" >October 2</br>	
+											<input type="checkbox" name="Feature" >2011</br>	
+											<input type="checkbox" name="Feature" >8.0 </br>	
+											<input type="checkbox" name="Feature" >Mar 19</br>	
+											<input type="checkbox" name="Feature" >2014</br>	
+											<input type="checkbox" name="Feature" >8.1 </br>	
+											<input type="checkbox" name="Feature" >Sep 26</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								</br>	
+								<label>IDE : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Platform :</label></br>
+											<input type="checkbox" name="Feature" >Windows</br>	
+											<input type="checkbox" name="Feature" >Linux</br>	
+											<input type="checkbox" name="Feature" >Mac OS X</br>	
+											<input type="checkbox" name="Feature" >MS-DOS</br>	
+											<input type="checkbox" name="Feature" >OS</br>	
+											<input type="checkbox" name="Feature" >2</br>	
+											<input type="checkbox" name="Feature" >FreeBSD</br>	
+											<input type="checkbox" name="Feature" >IBM AIX</br>	
+											<input type="checkbox" name="Feature" >OpenBSD</br>	
+											<input type="checkbox" name="Feature" >Solaris</br>	
+											<input type="checkbox" name="Feature" >other Unix</br>	
+											<input type="checkbox" name="Feature" >DragonFly BSD</br>	
+											<input type="checkbox" name="Feature" >NetBSD</br>	
+											<input type="checkbox" name="Feature" >JVM</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['CDDL','EPL','GPL','OSI Approved','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['OpenWatcom Community','Team','KDevelop Team','University of Illinois, Los Alamos National Laboratory','NetBeans Community','Code::Blocks Team','AdaCore','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Geany','KDevelop','Photran (Eclipse)','Code::Blocks','NetBeans','GNAT Programming Studio','OpenWatcom','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Developer : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Latest stable release :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >4.3.1 </br>	
- 		 									<input type="checkbox" name="Feature" > June 2009</br>	
- 		 									<input type="checkbox" name="Feature" >1.9 </br>	
- 		 									<input type="checkbox" name="Feature" > June 2</br>	
- 		 									<input type="checkbox" name="Feature" > 2010</br>	
- 		 									<input type="checkbox" name="Feature" >13.12 </br>	
- 		 									<input type="checkbox" name="Feature" > December 27</br>	
- 		 									<input type="checkbox" name="Feature" > 2013</br>	
- 		 									<input type="checkbox" name="Feature" >0.21 </br>	
- 		 									<input type="checkbox" name="Feature" > October 2</br>	
- 		 									<input type="checkbox" name="Feature" > 2011</br>	
- 		 									<input type="checkbox" name="Feature" >8.0 </br>	
- 		 									<input type="checkbox" name="Feature" > Mar 19</br>	
- 		 									<input type="checkbox" name="Feature" > 2014</br>	
- 		 									<input type="checkbox" name="Feature" >8.1 </br>	
- 		 									<input type="checkbox" name="Feature" > Sep 26</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-						</br>	
-							<label>IDE : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Platform :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >Windows</br>	
- 		 									<input type="checkbox" name="Feature" > Linux</br>	
- 		 									<input type="checkbox" name="Feature" > Mac OS X</br>	
- 		 									<input type="checkbox" name="Feature" > MS-DOS</br>	
- 		 									<input type="checkbox" name="Feature" > OS</br>	
- 		 									<input type="checkbox" name="Feature" >2</br>	
- 		 									<input type="checkbox" name="Feature" > FreeBSD</br>	
- 		 									<input type="checkbox" name="Feature" > IBM AIX</br>	
- 		 									<input type="checkbox" name="Feature" > OpenBSD</br>	
- 		 									<input type="checkbox" name="Feature" > Solaris</br>	
- 		 									<input type="checkbox" name="Feature" > other Unix</br>	
- 		 									<input type="checkbox" name="Feature" > DragonFly BSD</br>	
- 		 									<input type="checkbox" name="Feature" > NetBSD</br>	
- 		 									<input type="checkbox" name="Feature" > JVM</br>	
- 		 										<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 								
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['CDDL','EPL','GPL','OSI Approved','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['OpenWatcom Community','Team','KDevelop Team','University of Illinois, Los Alamos National Laboratory','NetBeans Community','Code::Blocks Team','AdaCore','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Geany','KDevelop','Photran (Eclipse)','Code::Blocks','NetBeans','GNAT Programming Studio','OpenWatcom','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

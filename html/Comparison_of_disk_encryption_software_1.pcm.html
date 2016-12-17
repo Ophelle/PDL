@@ -1,87 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of disk encryption software - Operating systems</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>DragonFly BSD :</label></br>
+								<input type="radio" name="FeatureDragonFly BSD" value="oui">Yes <input type="radio" name="FeatureDragonFly BSD" value = "non">No <input type="radio" name="FeatureDragonFly BSD" value = "non">Partial </br>
+								
+								</br>	
+								<label>Mac OS X :</label></br>
+								<input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </br>
+								
+								</br>	
+								<label>Linux :</label></br>
+								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
+								
+								</br>	
+								<label>OpenBSD :</label></br>
+								<input type="radio" name="FeatureOpenBSD" value="oui">Yes <input type="radio" name="FeatureOpenBSD" value = "non">No <input type="radio" name="FeatureOpenBSD" value = "non">Partial </br>
+								
+								</br>	
+								<label>Windows NT-based :</label></br>
+								<input type="radio" name="FeatureWindows NT-based" value="oui">Yes <input type="radio" name="FeatureWindows NT-based" value = "non">No <input type="radio" name="FeatureWindows NT-based" value = "non">Partial </br>
+								
+								</br>	
+								<label>Pre-Windows NT :</label></br>
+								<input type="radio" name="FeaturePre-Windows NT" value="oui">Yes <input type="radio" name="FeaturePre-Windows NT" value = "non">No <input type="radio" name="FeaturePre-Windows NT" value = "non">Partial </br>
+								
+								</br>	
+								<label>NetBSD :</label></br>
+								<input type="radio" name="FeatureNetBSD" value="oui">Yes <input type="radio" name="FeatureNetBSD" value = "non">No <input type="radio" name="FeatureNetBSD" value = "non">Partial </br>
+								
+								</br>	
+								<label>FreeBSD :</label></br>
+								<input type="radio" name="FeatureFreeBSD" value="oui">Yes <input type="radio" name="FeatureFreeBSD" value = "non">No <input type="radio" name="FeatureFreeBSD" value = "non">Partial </br>
+								
+								</br>	
+								<label>Android : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Windows Mobile/Pocket PC :</label></br>
+								<input type="radio" name="FeatureWindows Mobile/Pocket PC" value="oui">Yes <input type="radio" name="FeatureWindows Mobile/Pocket PC" value = "non">No <input type="radio" name="FeatureWindows Mobile/Pocket PC" value = "non">Partial </br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="11" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','No','Yes','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['CGD','SafeHouse Professional','loop-AES','Trend Micro Endpoint Encryption','BestCrypt Volume Encryption','n-Crypt Pro','DriveSentry GoAnywhere 2','BitArmor DataControl','Knox','McAfee Drive Encryption (SafeBoot)','DISK Protect','FreeOTFE','CenterTools DriveLock','SafeGuard Enterprise','svnd / vnconfig','Private Disk','TrueCrypt','USBCrypt','encryptstick','R-Crypto','softraid / RAID C','FileVault 2','Scramdisk 4 Linux','PGPDisk','EgoSecure HDD Encryption','SafeGuard Easy','Check Point Full Disk Encryption','DriveCrypt','Discryptor','Symantec Endpoint Encryption','GBDE','SecuBox','Bloombase Keyparc','SpyProof!','DiskCryptor','Scramdisk','E4M','ProxyCrypt','Cryptainer','Sentry 2020','CipherShed','BitLocker Drive Encryption','VeraCrypt','FileVault','GELI','eCryptfs','Aloaha Secure Stick','e-Capsule Private Safe','SafeGuard PrivateDisk','SecureDoc','CryptArchiver','CrossCrypt','tcplay','dm-crypt/LUKS','FREE CompuSec','cryptoloop','cryptsetup/ dmsetup','PGP Whole Disk Encryption','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>DragonFly BSD :</label></br>
- 		 					 <input type="radio" name="FeatureDragonFly BSD" value="oui">oui <input type="radio" name="FeatureDragonFly BSD" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Mac OS X :</label></br>
- 		 					 <input type="radio" name="FeatureMac OS X" value="oui">oui <input type="radio" name="FeatureMac OS X" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Linux :</label></br>
- 		 					 <input type="radio" name="FeatureLinux" value="oui">oui <input type="radio" name="FeatureLinux" value = "non">non </br>
-									
-						</br>	
- 		 					<label>OpenBSD :</label></br>
- 		 					 <input type="radio" name="FeatureOpenBSD" value="oui">oui <input type="radio" name="FeatureOpenBSD" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Windows NT-based :</label></br>
- 		 					 <input type="radio" name="FeatureWindows NT-based" value="oui">oui <input type="radio" name="FeatureWindows NT-based" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Pre-Windows NT :</label></br>
- 		 					 <input type="radio" name="FeaturePre-Windows NT" value="oui">oui <input type="radio" name="FeaturePre-Windows NT" value = "non">non </br>
-									
-						</br>	
- 		 					<label>NetBSD :</label></br>
- 		 					 <input type="radio" name="FeatureNetBSD" value="oui">oui <input type="radio" name="FeatureNetBSD" value = "non">non </br>
-									
-						</br>	
- 		 					<label>FreeBSD :</label></br>
- 		 					 <input type="radio" name="FeatureFreeBSD" value="oui">oui <input type="radio" name="FeatureFreeBSD" value = "non">non </br>
-									
-						</br>	
-							<label>Android : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Windows Mobile/Pocket PC :</label></br>
- 		 					 <input type="radio" name="FeatureWindows Mobile/Pocket PC" value="oui">oui <input type="radio" name="FeatureWindows Mobile/Pocket PC" value = "non">non </br>
-									
-						</br>	
-							<label>Name : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['','No','Yes','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['CGD','SafeHouse Professional','loop-AES','Trend Micro Endpoint Encryption','BestCrypt Volume Encryption','n-Crypt Pro','DriveSentry GoAnywhere 2','BitArmor DataControl','Knox','McAfee Drive Encryption (SafeBoot)','DISK Protect','FreeOTFE','CenterTools DriveLock','SafeGuard Enterprise','svnd / vnconfig','Private Disk','TrueCrypt','USBCrypt','encryptstick','R-Crypto','softraid / RAID C','FileVault 2','Scramdisk 4 Linux','PGPDisk','EgoSecure HDD Encryption','SafeGuard Easy','Check Point Full Disk Encryption','DriveCrypt','Discryptor','Symantec Endpoint Encryption','GBDE','SecuBox','Bloombase Keyparc','SpyProof!','DiskCryptor','Scramdisk','E4M','ProxyCrypt','Cryptainer','Sentry 2020','CipherShed','BitLocker Drive Encryption','VeraCrypt','FileVault','GELI','eCryptfs','Aloaha Secure Stick','e-Capsule Private Safe','SafeGuard PrivateDisk','SecureDoc','CryptArchiver','CrossCrypt','tcplay','dm-crypt/LUKS','FREE CompuSec','cryptoloop','cryptsetup/ dmsetup','PGP Whole Disk Encryption','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

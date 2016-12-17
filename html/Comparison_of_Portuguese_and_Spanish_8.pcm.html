@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of Portuguese and Spanish - Contractions</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>em : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>de : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Preposition +
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>em : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>de : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Preposition +
 demonstrative
 (Portuguese) : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['daquele
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['daquele
 daquela
 daqueles
 daquelas','deste
@@ -49,10 +52,10 @@ destas','desse
 dessa
 desses
 dessas','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['nesse
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['nesse
 nessa
 nesses
 nessas','neste
@@ -62,10 +65,10 @@ nestas','naquele
 naquela
 naqueles
 naquelas','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['este (masc.sing.)
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['este (masc.sing.)
 esta (fem.sing.)
 estes (masc.pl.)
 estas (fem.pl.)','esse (masc.sing.)
@@ -75,13 +78,14 @@ essas (fem.pl.)','aquele (masc.sing.)
 aquela (fem.sing.)
 aqueles (masc.pl.)
 aquelas (fem.pl.)','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

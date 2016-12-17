@@ -1,60 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>List of Nvidia graphics processing units - Features</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Model : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Features - PureVideo WMV9 Decoding :</label></br>
+								<input type="radio" name="FeatureFeatures - PureVideo WMV9 Decoding" value="oui">Yes <input type="radio" name="FeatureFeatures - PureVideo WMV9 Decoding" value = "non">No <input type="radio" name="FeatureFeatures - PureVideo WMV9 Decoding" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Features - Scalable Link Interface (SLI) :</label></br>
+								<input type="radio" name="FeatureFeatures - Scalable Link Interface (SLI)" value="oui">Yes <input type="radio" name="FeatureFeatures - Scalable Link Interface (SLI)" value = "non">No <input type="radio" name="FeatureFeatures - Scalable Link Interface (SLI)" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Features - OpenEXR HDR :</label></br>
+								<input type="radio" name="FeatureFeatures - OpenEXR HDR" value="oui">Yes <input type="radio" name="FeatureFeatures - OpenEXR HDR" value = "non">No <input type="radio" name="FeatureFeatures - OpenEXR HDR" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Features - TurboCache :</label></br>
+								<input type="radio" name="FeatureFeatures - TurboCache" value="oui">Yes <input type="radio" name="FeatureFeatures - TurboCache" value = "non">No <input type="radio" name="FeatureFeatures - TurboCache" value = "non">Partial </br>
+											<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['GeForce 6800 LE','GeForce 6800 GT','GeForce 6150 SE','GeForce 6150','GeForce 6800 GTO','GeForce 6600 LE','GeForce 6200','GeForce 6600 DDR2','GeForce 6800 GS','GeForce 6800','GeForce 6150 LE','GeForce 6800 XT','GeForce 6100','GeForce 6800 Ultra','GeForce 6600','GeForce 6500','GeForce 6600 GT','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Model : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Features - PureVideo WMV9 Decoding :</label></br>
- 		 					 <input type="radio" name="FeatureFeatures - PureVideo WMV9 Decoding" value="oui">oui <input type="radio" name="FeatureFeatures - PureVideo WMV9 Decoding" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Features - Scalable Link Interface (SLI) :</label></br>
- 		 					 <input type="radio" name="FeatureFeatures - Scalable Link Interface (SLI)" value="oui">oui <input type="radio" name="FeatureFeatures - Scalable Link Interface (SLI)" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Features - OpenEXR HDR :</label></br>
- 		 					 <input type="radio" name="FeatureFeatures - OpenEXR HDR" value="oui">oui <input type="radio" name="FeatureFeatures - OpenEXR HDR" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Features - TurboCache :</label></br>
- 		 					 <input type="radio" name="FeatureFeatures - TurboCache" value="oui">oui <input type="radio" name="FeatureFeatures - TurboCache" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['GeForce 6800 LE','GeForce 6800 GT','GeForce 6150 SE','GeForce 6150','GeForce 6800 GTO','GeForce 6600 LE','GeForce 6200','GeForce 6600 DDR2','GeForce 6800 GS','GeForce 6800','GeForce 6150 LE','GeForce 6800 XT','GeForce 6100','GeForce 6800 Ultra','GeForce 6600','GeForce 6500','GeForce 6600 GT','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

@@ -1,53 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of American and British English - Equivalent idioms</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>British English : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>American English : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['lie of the land','a storm in a teacup','touch wood','a new lease of life','put (or stick) your oar in
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>British English : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>American English : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['lie of the land','a storm in a teacup','touch wood','a new lease of life','put (or stick) your oar in
 but it won't make a ha'porth of difference
 to put your two penn'orth (or tuppence worth) in','a drop in the ocean','blow one's own trumpet','not touch something with a bargepole','sweep under the carpet','haven't (got) a clue','take it with a pinch of salt','put a spanner in the works','skeleton in the cupboard','flogging a dead horse','see the wood for the trees','a home from home','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['blow (or toot) one's own horn','don't have a clue or have no clue (haven't got a clue is also acceptable)','not touch something with a ten-foot pole','a drop in the bucket, a spit in the ocean','a home away from home','sweep under the rug*','knock on wood','throw a (monkey) wrench (into a situation)','to put your two cents (or two cents' worth) in','skeleton in the closet','beating a dead horse','a tempest in a teapot','see the forest for the trees','a new lease on life','take it with a grain of salt','lay of the land','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['blow (or toot) one's own horn','don't have a clue or have no clue (haven't got a clue is also acceptable)','not touch something with a ten-foot pole','a drop in the bucket, a spit in the ocean','a home away from home','sweep under the rug*','knock on wood','throw a (monkey) wrench (into a situation)','to put your two cents (or two cents' worth) in','skeleton in the closet','beating a dead horse','a tempest in a teapot','see the forest for the trees','a new lease on life','take it with a grain of salt','lay of the land','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

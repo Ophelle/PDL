@@ -1,55 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of Tryton and Open ERP - Functionality</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Odoo :</label></br>
- 		 					 <input type="radio" name="FeatureOdoo" value="oui">oui <input type="radio" name="FeatureOdoo" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Subject : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Tryton :</label></br>
- 		 					 <input type="radio" name="FeatureTryton" value="oui">oui <input type="radio" name="FeatureTryton" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Integrated w/ Google Drive, Calendar, Spreadsheet','Human Resources','Website/CMS integration','Manufacturing Management','E-mail integration','Point of Sale','CRM','Payroll Management','VoIP','Portals','Document Management System','Sales Management','Analytic accounting','Warehouse Management','Integration with payment gateways','Purchase Management','E-commerce
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Odoo :</label></br>
+								<input type="radio" name="FeatureOdoo" value="oui">Yes <input type="radio" name="FeatureOdoo" value = "non">No <input type="radio" name="FeatureOdoo" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Subject : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Tryton :</label></br>
+								<input type="radio" name="FeatureTryton" value="oui">Yes <input type="radio" name="FeatureTryton" value = "non">No <input type="radio" name="FeatureTryton" value = "non">Partial </br>
+											<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Integrated w/ Google Drive, Calendar, Spreadsheet','Human Resources','Website/CMS integration','Manufacturing Management','E-mail integration','Point of Sale','CRM','Payroll Management','VoIP','Portals','Document Management System','Sales Management','Analytic accounting','Warehouse Management','Integration with payment gateways','Purchase Management','E-commerce
 (useful general discussions about 
  integrating any such webapp, 
  versus building a front-end )','Accounting & Financial Management','Project Management','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

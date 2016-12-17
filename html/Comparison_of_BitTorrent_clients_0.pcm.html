@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of BitTorrent clients -  General </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Year (not dynamic, but easier for sorting) : </label></br> <input id="1" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Latest stable software release : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Software license : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Developer : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Name : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['0.92 (April 20, 2005; 10 years ago)','1.5.1 (October 27, 2007; 7 years ago)','2.84 (1 July 2014; 11 months ago)','3.1.5 (March 22, 2014; 14 months ago)','1.50 (March 11, 2011; 4 years ago)','6.4.3 (January 21, 2015; 4 months ago)','15.04.2 (June 3, 2015; 8 days ago)','4.6.0 (October 13, 2014; 7 months ago )','rTorrent 0.9.4 / libTorrent 0.13.4 (May 9, 2014; 12 months ago)','3.1 (October 2, 2005; 9 years ago)','1.3.11 (November 30, 2014; 6 months ago)','7.9.13.4666 (Windows) 2.4.0 (Mac OS X) 1.3 (Android) (21 November 2013; 18 months ago (Windows) 27 February 2014; 15 months ago (Mac OS X) 23 August 2012; 2 years ago (Android))','2.12 (May 7, 2015; 35 days ago
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Year (not dynamic, but easier for sorting) : </label></br> <input id="1" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Latest stable software release : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Software license : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Developer : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['0.92 (April 20, 2005; 10 years ago)','1.5.1 (October 27, 2007; 7 years ago)','2.84 (1 July 2014; 11 months ago)','3.1.5 (March 22, 2014; 14 months ago)','1.50 (March 11, 2011; 4 years ago)','6.4.3 (January 21, 2015; 4 months ago)','15.04.2 (June 3, 2015; 8 days ago)','4.6.0 (October 13, 2014; 7 months ago )','rTorrent 0.9.4 / libTorrent 0.13.4 (May 9, 2014; 12 months ago)','3.1 (October 2, 2005; 9 years ago)','1.3.11 (November 30, 2014; 6 months ago)','7.9.13.4666 (Windows) 2.4.0 (Mac OS X) 1.3 (Android) (21 November 2013; 18 months ago (Windows) 27 February 2014; 15 months ago (Mac OS X) 23 August 2012; 2 years ago (Android))','2.12 (May 7, 2015; 35 days ago
 )','6.1.1 (May 12, 2015; 30 days ago)','Windows (Presto) - 12.17 
 Linux, FreeBSD, MacOS X - 12.16','6.0 (April 16, 2013; 2 years ago)','5.6.0.0 (March 3, 2015; 3 months ago)','3.9.5 (build 1537) (April 14, 2015; 58 days ago)','5.5.16 (September 30, 2010; 4 years ago)','2.2 (v223) (November 19, 2010; 4 years ago)','3.6.4 (September 24, 2010; 4 years ago)','3.2.0 (May 9, 2015; 33 days ago)','3.0.870 (October 9, 2013; 19 months ago)','3.62.0.21836 (December 31, 2012; 2 years ago)','Latest stable software release','Windows:
 
@@ -74,27 +77,28 @@ Mac OS X:
 
 7.4.3 (Build 39559) (March 19, 2015; 2 months ago)','1.38 (March 30, 2015; 2 months ago)','0.7.5 (May 23, 2011; 4 years ago
 )','0.3.17 (October 19, 2006; 8 years ago)','4.3.1 (January 17, 2013; 2 years ago)','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Software license','GPL','Proprietary','GPL/MIT','Proprietary, Adware','Python Software Foundation License','MIT','GPL
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Software license','GPL','Proprietary','GPL/MIT','Proprietary, Adware','Python Software Foundation License','MIT','GPL
 Optionally installs Ask.com toolbar','GPL 
 installs WhenU adware','LGPL','Proprietary (platform), GPL (core engine), Adware','BitTorrent Open Source License','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['The Tribler Team','MLDonkey Project','Ludvig Strigeus','Thunder Networking Technologies','Joris Guisson, Ivan Vasić','BitComet Development Group','Participatory Culture Foundation','Opera Software','Trend Media','Imre Kelényi','various','Radical Software','The FrostWire Project','Bram Cohen','ByteLinker Inc.','CodeLathe','Sarwat Khan','House of Life','Vuze','47 Software','alervd','John Hoffman','Christophe Dumez','University of Washington','Kevin Hearn','Developer','Eltima Software','Downhill Battle','Acquisition','Alexander V. Lukya','Jari Sundell','Lime Wire LLC','KDE','Shareaza Development Team','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Tonido Torrent','Meerkat Bittorrent Client','MLDonkey','Tixati','rTorrent','FlashGet','Wyzo','Xunlei','Deluge','Name','Free Download Manager','Transmission','FrostWire','Miro','BitSpirit','SymTorrent','BitLet','Acquisition','Tribler','BitTyrant','Vuze (formerly Azureus)','Blog Torrent','Lftp','LimeWire','KTorrent','TorrentFlux','KGet','BitTornado','OneSwarm','Shareaza','qBittorrent','Opera 12','ABC','Tomato Torrent','BitLord','BitTorrent','µTorrent','BitComet','Folx','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['The Tribler Team','MLDonkey Project','Ludvig Strigeus','Thunder Networking Technologies','Joris Guisson, Ivan Vasić','BitComet Development Group','Participatory Culture Foundation','Opera Software','Trend Media','Imre Kelényi','various','Radical Software','The FrostWire Project','Bram Cohen','ByteLinker Inc.','CodeLathe','Sarwat Khan','House of Life','Vuze','47 Software','alervd','John Hoffman','Christophe Dumez','University of Washington','Kevin Hearn','Developer','Eltima Software','Downhill Battle','Acquisition','Alexander V. Lukya','Jari Sundell','Lime Wire LLC','KDE','Shareaza Development Team','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Tonido Torrent','Meerkat Bittorrent Client','MLDonkey','Tixati','rTorrent','FlashGet','Wyzo','Xunlei','Deluge','Name','Free Download Manager','Transmission','FrostWire','Miro','BitSpirit','SymTorrent','BitLet','Acquisition','Tribler','BitTyrant','Vuze (formerly Azureus)','Blog Torrent','Lftp','LimeWire','KTorrent','TorrentFlux','KGet','BitTornado','OneSwarm','Shareaza','qBittorrent','Opera 12','ABC','Tomato Torrent','BitLord','BitTorrent','µTorrent','BitComet','Folx','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

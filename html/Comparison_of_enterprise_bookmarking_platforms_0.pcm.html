@@ -1,102 +1,106 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of enterprise bookmarking platforms -  General </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Contract support offered :</label></br>
+								<input type="radio" name="FeatureContract support offered" value="oui">Yes <input type="radio" name="FeatureContract support offered" value = "non">No <input type="radio" name="FeatureContract support offered" value = "non">Partial </br>
+								
+								</br>	
+								<label>Programming language : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Community website support :</label></br>
+								<input type="radio" name="FeatureCommunity website support" value="oui">Yes <input type="radio" name="FeatureCommunity website support" value = "non">No <input type="radio" name="FeatureCommunity website support" value = "non">Partial </br>
+								
+								</br>	
+								<label>User Interface : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Developed by : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Latest stable release : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Software : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Multilingual :</label></br>
+								<input type="radio" name="FeatureMultilingual" value="oui">Yes <input type="radio" name="FeatureMultilingual" value = "non">No <input type="radio" name="FeatureMultilingual" value = "non">Partial </br>
+								
+								</br>	
+								<label>Open source :</label></br>
+								<input type="radio" name="FeatureOpen source" value="oui">Yes <input type="radio" name="FeatureOpen source" value = "non">No <input type="radio" name="FeatureOpen source" value = "non">Partial </br>
+								
+								</br>	
+								<label>Cost (USD) : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Notes : </label></br> <input id="11" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['binary only','Javascript & PHP','Java','Javascript and Python (programming language)','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['browser','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['IBM Corporation','Knowledge Plaza','Scuttle','Connectbeam','Jumper Networks','Licorize','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Spotlight 3.1 (2008-6)','2.0','0.9.0 (2013-04)','2.0.1.7 (2010-7)','2.0.1 (2009-3)','2.3.18','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['Dogear','Knowledge Plaza','Jumper 2.0','Connectbeam','Licorize','Scuttle','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['Free','free trial, starts at €35/month/instance','per instance','$5 month/user if used as Software-as-a-Service, $4000 per server if installed (non expiring license)','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['still in alpha stage','Software-as-a-Service and installed option, full Java sources are provided in the installed version','Software-as-a-Service','runs on mySQL database for storing tag profiles. Can also be configured to run on Oracle Database 10g or Microsoft SQL Server 2005 Enterprise Edition','does not run on mySQL, requires IBM DB2 9.1 FP5, Oracle Database 10g 10.2.0.3, Microsoft SQL Server 2005 Enterprise Edition','none','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Contract support offered :</label></br>
- 		 					 <input type="radio" name="FeatureContract support offered" value="oui">oui <input type="radio" name="FeatureContract support offered" value = "non">non </br>
-									
-						</br>	
-							<label>Programming language : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Community website support :</label></br>
- 		 					 <input type="radio" name="FeatureCommunity website support" value="oui">oui <input type="radio" name="FeatureCommunity website support" value = "non">non </br>
-									
-						</br>	
-							<label>User Interface : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Developed by : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Latest stable release : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Software : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Multilingual :</label></br>
- 		 					 <input type="radio" name="FeatureMultilingual" value="oui">oui <input type="radio" name="FeatureMultilingual" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Open source :</label></br>
- 		 					 <input type="radio" name="FeatureOpen source" value="oui">oui <input type="radio" name="FeatureOpen source" value = "non">non </br>
-									
-						</br>	
-							<label>Cost (USD) : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Notes : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['binary only','Javascript & PHP','Java','Javascript and Python (programming language)','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['browser','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['IBM Corporation','Knowledge Plaza','Scuttle','Connectbeam','Jumper Networks','Licorize','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Spotlight 3.1 (2008-6)','2.0','0.9.0 (2013-04)','2.0.1.7 (2010-7)','2.0.1 (2009-3)','2.3.18','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['Dogear','Knowledge Plaza','Jumper 2.0','Connectbeam','Licorize','Scuttle','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['Free','free trial, starts at €35/month/instance','per instance','$5 month/user if used as Software-as-a-Service, $4000 per server if installed (non expiring license)','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['still in alpha stage','Software-as-a-Service and installed option, full Java sources are provided in the installed version','Software-as-a-Service','runs on mySQL database for storing tag profiles. Can also be configured to run on Oracle Database 10g or Microsoft SQL Server 2005 Enterprise Edition','does not run on mySQL, requires IBM DB2 9.1 FP5, Oracle Database 10g 10.2.0.3, Microsoft SQL Server 2005 Enterprise Edition','none','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

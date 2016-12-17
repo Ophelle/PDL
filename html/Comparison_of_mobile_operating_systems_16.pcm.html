@@ -1,85 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of mobile operating systems -  Other Features </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Screencast on device :</label></br>
+								<input type="radio" name="FeatureScreencast on device" value="oui">Yes <input type="radio" name="FeatureScreencast on device" value = "non">No <input type="radio" name="FeatureScreencast on device" value = "non">Partial </br>
+								
+								</br>	
+								<label>Move apps to external storage :</label></br>
+								<input type="radio" name="FeatureMove apps to external storage" value="oui">Yes <input type="radio" name="FeatureMove apps to external storage" value = "non">No <input type="radio" name="FeatureMove apps to external storage" value = "non">Partial </br>
+								
+								</br>	
+								<label>Other Features : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Remote Frame Buffer (RFB) protocol : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Non-intrusive incoming calls :</label></br>
+								<input type="radio" name="FeatureNon-intrusive incoming calls" value="oui">Yes <input type="radio" name="FeatureNon-intrusive incoming calls" value = "non">No <input type="radio" name="FeatureNon-intrusive incoming calls" value = "non">Partial </br>
+								
+								</br>	
+								<label>Screencast over USB :</label></br>
+								<input type="radio" name="FeatureScreencast over USB" value="oui">Yes <input type="radio" name="FeatureScreencast over USB" value = "non">No <input type="radio" name="FeatureScreencast over USB" value = "non">Partial </br>
+								
+								</br>	
+								<label>Screen share :</label></br>
+								<input type="radio" name="FeatureScreen share" value="oui">Yes <input type="radio" name="FeatureScreen share" value = "non">No <input type="radio" name="FeatureScreen share" value = "non">Partial </br>
+								
+								</br>	
+								<label>Non-intrusive notifications : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Feature : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Windows Phone','Android','Firefox OS','Mer','Tizen','Ubuntu Touch','iOS','Sailfish OS','BlackBerry 10','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Other Features','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['?','Yes','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Yes, except Calendar Reminders','Yes','?','5+','6+','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Screencast on device :</label></br>
- 		 					 <input type="radio" name="FeatureScreencast on device" value="oui">oui <input type="radio" name="FeatureScreencast on device" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Move apps to external storage :</label></br>
- 		 					 <input type="radio" name="FeatureMove apps to external storage" value="oui">oui <input type="radio" name="FeatureMove apps to external storage" value = "non">non </br>
-									
-						</br>	
-							<label>Other Features : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Remote Frame Buffer (RFB) protocol : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Non-intrusive incoming calls :</label></br>
- 		 					 <input type="radio" name="FeatureNon-intrusive incoming calls" value="oui">oui <input type="radio" name="FeatureNon-intrusive incoming calls" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Screencast over USB :</label></br>
- 		 					 <input type="radio" name="FeatureScreencast over USB" value="oui">oui <input type="radio" name="FeatureScreencast over USB" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Screen share :</label></br>
- 		 					 <input type="radio" name="FeatureScreen share" value="oui">oui <input type="radio" name="FeatureScreen share" value = "non">non </br>
-									
-						</br>	
-							<label>Non-intrusive notifications : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Feature : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Windows Phone','Android','Firefox OS','Mer','Tizen','Ubuntu Touch','iOS','Sailfish OS','BlackBerry 10','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Other Features','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['?','Yes','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Yes, except Calendar Reminders','Yes','?','5+','6+','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

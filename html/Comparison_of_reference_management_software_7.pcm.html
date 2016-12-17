@@ -1,67 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of reference management software -  Database connectivity </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>CiteSeer :</label></br>
+								<input type="radio" name="FeatureCiteSeer" value="oui">Yes <input type="radio" name="FeatureCiteSeer" value = "non">No <input type="radio" name="FeatureCiteSeer" value = "non">Partial </br>
+								
+								</br>	
+								<label>IEEE Xplore :</label></br>
+								<input type="radio" name="FeatureIEEE Xplore" value="oui">Yes <input type="radio" name="FeatureIEEE Xplore" value = "non">No <input type="radio" name="FeatureIEEE Xplore" value = "non">Partial </br>
+								
+								</br>	
+								<label>Software : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>PubMed :</label></br>
+								<input type="radio" name="FeaturePubMed" value="oui">Yes <input type="radio" name="FeaturePubMed" value = "non">No <input type="radio" name="FeaturePubMed" value = "non">Partial </br>
+								
+								</br>	
+								<label>ArXiv :</label></br>
+								<input type="radio" name="FeatureArXiv" value="oui">Yes <input type="radio" name="FeatureArXiv" value = "non">No <input type="radio" name="FeatureArXiv" value = "non">Partial </br>
+								
+								</br>	
+								<label>Other : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['CiteULike','Wikindx','Qiqqa','refbase','JabRef','Reference Manager','Mendeley','Aigaion','Biblioscape','KBibTeX','SciRef','colwiz','Papers','EndNote','RefWorks','Zotero','Bibus','Bookends','ReadCube','WizFolio','BibSonomy','Referencer','Bebop','BibBase','Sente','BibDesk','Docear','Citavi','RefDB','Paperpile','Pybliographer','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['various','No','?','DBLP, Zotero, BibSonomy, Mendeley','any Z39.50','none','ACM, ADS, Google Books, Google Scholar, JSTOR, MathSciNet, Project Muse, Scopus, Web of Science','various any Z39.50','Over 30 repositories, Import from integrated web browser','Import from integrated web browser','BibSonomy, CiteBase, CSB, DBLP, Google Scholar, ScienceDirect, INSPIRE-HEP, Z MATH, Z39.50','GoogleScholar, JSTOR','ACM portal, Jstor, DBLP, Google Scholar, Web of Science, any Z39.50 or Entrez, and others','WorldCat/OCLC, Ovid, EBSCO, ProQuest, Web of Science, Z39.50 (4700+ online resources), SRU, DOI lookup, ISBN lookup, PubmedID lookup','Google Scholar','DOI lookup','ACM portal, Jstor, INSPIRE-HEP','Web of Science, Amazon, Google Scholar, Z39.50','Microsoft Academic, Google Scholar','Z39.50, SRU, Web of Knowledge','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>CiteSeer :</label></br>
- 		 					 <input type="radio" name="FeatureCiteSeer" value="oui">oui <input type="radio" name="FeatureCiteSeer" value = "non">non </br>
-									
-						</br>	
- 		 					<label>IEEE Xplore :</label></br>
- 		 					 <input type="radio" name="FeatureIEEE Xplore" value="oui">oui <input type="radio" name="FeatureIEEE Xplore" value = "non">non </br>
-									
-						</br>	
-							<label>Software : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>PubMed :</label></br>
- 		 					 <input type="radio" name="FeaturePubMed" value="oui">oui <input type="radio" name="FeaturePubMed" value = "non">non </br>
-									
-						</br>	
- 		 					<label>ArXiv :</label></br>
- 		 					 <input type="radio" name="FeatureArXiv" value="oui">oui <input type="radio" name="FeatureArXiv" value = "non">non </br>
-									
-						</br>	
-							<label>Other : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['CiteULike','Wikindx','Qiqqa','refbase','JabRef','Reference Manager','Mendeley','Aigaion','Biblioscape','KBibTeX','SciRef','colwiz','Papers','EndNote','RefWorks','Zotero','Bibus','Bookends','ReadCube','WizFolio','BibSonomy','Referencer','Bebop','BibBase','Sente','BibDesk','Docear','Citavi','RefDB','Paperpile','Pybliographer','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['various','No','?','DBLP, Zotero, BibSonomy, Mendeley','any Z39.50','none','ACM, ADS, Google Books, Google Scholar, JSTOR, MathSciNet, Project Muse, Scopus, Web of Science','various any Z39.50','Over 30 repositories, Import from integrated web browser','Import from integrated web browser','BibSonomy, CiteBase, CSB, DBLP, Google Scholar, ScienceDirect, INSPIRE-HEP, Z MATH, Z39.50','GoogleScholar, JSTOR','ACM portal, Jstor, DBLP, Google Scholar, Web of Science, any Z39.50 or Entrez, and others','WorldCat/OCLC, Ovid, EBSCO, ProQuest, Web of Science, Z39.50 (4700+ online resources), SRU, DOI lookup, ISBN lookup, PubmedID lookup','Google Scholar','DOI lookup','ACM portal, Jstor, INSPIRE-HEP','Web of Science, Amazon, Google Scholar, Z39.50','Microsoft Academic, Google Scholar','Z39.50, SRU, Web of Knowledge','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

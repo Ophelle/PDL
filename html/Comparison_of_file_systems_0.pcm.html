@@ -1,69 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of file systems - General information</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Year
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Year
 introduced : </label></br> <input id="2" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>File system : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Creator : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Original operating system : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['MINIX V3 FS','ext','VxCFS','WBFS','Amiga OFS','Lanyard Filesystem','UFS2','HFS (Hierarchical File System)','AdvFS','DFS','MFS','ODS-5','GFS2','zFS','ISO 9660:1999','DOS (GEC)','TexFAT/TFAT','VMFS5','ODS-2','ext3','LFS','NTFS Version 3.1','SFS','Joliet ("CDFS")','Rock Ridge','PramFS','Level-D','FFS','ZFS','F2FS','Romeo','DECtape','JFS1','Melio FS','FAT32','FAT16B','VMFS3','Reliance Nitro','Lustre','Ceph','Be File System','HAMMER','HFS Plus','AFS','ISO 9660:1988','VxFS','UFS1','ext4','DOS 1.0','IlesfayFS','NWFS','OCFS2','HFS','NILFS','exFAT','ProDOS','XFS','FAT12','JFS','NSS','LTFS','FAT (8-bit)','MINIX V1 FS','DOMAIN file system','OS4000','George3','Oracle ACFS','ReFS','QFS','ADFS','IBM Spectrum Scale','MINIX V2 FS','ReiserFS','Fossil','Google File System','UDF','RT-11 file system','FAT16','Reiser4','PFS','PolyServe File System (PSFS)','CBM DOS','DOS 3.x','ODS-1','FATX','WAFL','UBIFS','V7FS','OCFS','Reliance','Elektronika BK tape format','Tux3','High Sierra','ext3cow','GFS','Amiga FFS','V6FS','Btrfs','NTFS Version 1.0','VMFS2','Non-Volatile File System','Pascal','CP/M file system','ext2','HPFS','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Digital Unix','z/OS (backported to OS/390)','Version 7 Unix','Linux','Berkeley Sprite','AmigaOS','IRIX','Version 6 Unix','Windows','4.2BSD','ProDOS 8','Solaris','RSX-11','Data ONTAP','Windows CE, Windows Mobile, VxWorks, Linux, custom ports','Atari 8-bit family','MS-DOS, Mac OS','Core Operating System','Windows 95','CP/M','Nintendo WII','Acorn Electron (later Arthur RISC OS)','VMware ESX Server 2.0','TOPS-10','Windows, Linux','OS4000','FreeBSD 5.0','Mac OS','Xbox','Mac OS 8.1','Linux - Red Hat Enterprise Linux 5 and Oracle Enterprise Linux 5 only','Linux, Hurd','Multiplatform MultoOS','Amiga OS 1.3','Windows CE, VxWorks, custom ports','NetWare 5','Windows CE 6.0','Microsoft Windows, planned Red Hat Enterprise Linux','MINIX 1.0','MVS/ESA (now z/OS)','OpenVMS 7.2','OS/2 Warp Server for e-business','OS/2','NetWare 286','MINIX 3','Microsoft Standalone Disk BASIC-80','Compaq MS-DOS 3.31, DR DOS 3.31','Domain/OS (Aegis, Domain)','RT-11','Microsoft Windows, Linux, Mac OS X, FreeBSD, and AmigaOS','Linux, Mac OS, Amiga OS, and FreeBSD','QDOS, 86-DOS','AIX, Linux, Windows','Windows XP','Windows NT 3.1','Microsoft Windows','developed for Unix System Laboratories, HP-UX','George 3','VMware ESX Server 3.0','Apple DOS','-','4.4BSD','PDP-6 Monitor','PC DOS 3.0/MS-DOS 3.0','MINIX 1.6 and 2.0','VMware ESXi 5.0tux 3 stats','Linux, Mac OS X, planned Microsoft Windows,','Windows 2012 Server','Microsoft BASIC (for CBM PET)','AIX','Vilnius Basic, BK monitor program','Apple Pascal','BeOS','AIX, HP-UX, Solaris, Linux','Plan 9 from Bell Labs, 4th Edition','Acorn BBC Micro MOS','Palm OS Garnet','AmigaOS, AROS, MorphOS','Microsoft Windows, Linux, Mac OS, and FreeBSD','Amiga OS','Windows CE 6.0, Windows XP SP3, Windows Vista SP1','OpenVMS','DragonFly BSD','MS-DOS, Mac OS, and AmigaOS','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['','proprietary','GPLv2','LGPL','GPL','CDDL','LPL','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Apollo Computer','Oracle Corporation','Tim Paterson, Seattle Computer Products','Apple Computer','Various','Carnegie Mellon University','Microsoft, Tom Miller, Gary Kimura','Dan Luedtke','Microsoft','Andrew S. Tanenbaum','IBM','DEC','Novell','Michiel Pelt','Datalight','LSC Inc, Sun Microsystems','Metacomco for Commodore','Margo Seltzer','Rémy Card','Stephen Tweedie','Red Hat','PolyServe','Bell Labs','Gary Kildall','Palm, Inc.','Zachary Peterson','Namesys','Samsung','Young Minds Inc.','ISO/ECMA/OSTA','Ilesfay Technology Group','ICT (later ICL)','Kirk McKusick','Microsoft, IBM','Commodore','John Hendrikx','kwiirk and Waninkoko (Wii homebrew)','VERITAS, (now Symantec)','VMware','Ecma International, Microsoft','Acorn Computers Ltd','Sage Weil, Inktank Storage, Red Hat','Ecma International','Marc McDonald, Microsoft','NPO "Scientific centre" (now Sitronics)','Cluster File Systems (later Oracle Corporation)','NTT','GEC','IBM & Microsoft','Compaq','Atari Corporation','Matthew Dillon','Sanbolic','Sistina (Red Hat)','Nokia with help of University of Szeged','Google','Adaptec','NetApp','MontaVista','SGI','Be Inc., D. Giampaolo, C. Meurillon','Sun Microsystems','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+												<input type="text"/></br>								
+								</br>	
+								<label>File system : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Creator : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Original operating system : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['MINIX V3 FS','ext','VxCFS','WBFS','Amiga OFS','Lanyard Filesystem','UFS2','HFS (Hierarchical File System)','AdvFS','DFS','MFS','ODS-5','GFS2','zFS','ISO 9660:1999','DOS (GEC)','TexFAT/TFAT','VMFS5','ODS-2','ext3','LFS','NTFS Version 3.1','SFS','Joliet ("CDFS")','Rock Ridge','PramFS','Level-D','FFS','ZFS','F2FS','Romeo','DECtape','JFS1','Melio FS','FAT32','FAT16B','VMFS3','Reliance Nitro','Lustre','Ceph','Be File System','HAMMER','HFS Plus','AFS','ISO 9660:1988','VxFS','UFS1','ext4','DOS 1.0','IlesfayFS','NWFS','OCFS2','HFS','NILFS','exFAT','ProDOS','XFS','FAT12','JFS','NSS','LTFS','FAT (8-bit)','MINIX V1 FS','DOMAIN file system','OS4000','George3','Oracle ACFS','ReFS','QFS','ADFS','IBM Spectrum Scale','MINIX V2 FS','ReiserFS','Fossil','Google File System','UDF','RT-11 file system','FAT16','Reiser4','PFS','PolyServe File System (PSFS)','CBM DOS','DOS 3.x','ODS-1','FATX','WAFL','UBIFS','V7FS','OCFS','Reliance','Elektronika BK tape format','Tux3','High Sierra','ext3cow','GFS','Amiga FFS','V6FS','Btrfs','NTFS Version 1.0','VMFS2','Non-Volatile File System','Pascal','CP/M file system','ext2','HPFS','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Digital Unix','z/OS (backported to OS/390)','Version 7 Unix','Linux','Berkeley Sprite','AmigaOS','IRIX','Version 6 Unix','Windows','4.2BSD','ProDOS 8','Solaris','RSX-11','Data ONTAP','Windows CE, Windows Mobile, VxWorks, Linux, custom ports','Atari 8-bit family','MS-DOS, Mac OS','Core Operating System','Windows 95','CP/M','Nintendo WII','Acorn Electron (later Arthur RISC OS)','VMware ESX Server 2.0','TOPS-10','Windows, Linux','OS4000','FreeBSD 5.0','Mac OS','Xbox','Mac OS 8.1','Linux - Red Hat Enterprise Linux 5 and Oracle Enterprise Linux 5 only','Linux, Hurd','Multiplatform MultoOS','Amiga OS 1.3','Windows CE, VxWorks, custom ports','NetWare 5','Windows CE 6.0','Microsoft Windows, planned Red Hat Enterprise Linux','MINIX 1.0','MVS/ESA (now z/OS)','OpenVMS 7.2','OS/2 Warp Server for e-business','OS/2','NetWare 286','MINIX 3','Microsoft Standalone Disk BASIC-80','Compaq MS-DOS 3.31, DR DOS 3.31','Domain/OS (Aegis, Domain)','RT-11','Microsoft Windows, Linux, Mac OS X, FreeBSD, and AmigaOS','Linux, Mac OS, Amiga OS, and FreeBSD','QDOS, 86-DOS','AIX, Linux, Windows','Windows XP','Windows NT 3.1','Microsoft Windows','developed for Unix System Laboratories, HP-UX','George 3','VMware ESX Server 3.0','Apple DOS','-','4.4BSD','PDP-6 Monitor','PC DOS 3.0/MS-DOS 3.0','MINIX 1.6 and 2.0','VMware ESXi 5.0tux 3 stats','Linux, Mac OS X, planned Microsoft Windows,','Windows 2012 Server','Microsoft BASIC (for CBM PET)','AIX','Vilnius Basic, BK monitor program','Apple Pascal','BeOS','AIX, HP-UX, Solaris, Linux','Plan 9 from Bell Labs, 4th Edition','Acorn BBC Micro MOS','Palm OS Garnet','AmigaOS, AROS, MorphOS','Microsoft Windows, Linux, Mac OS, and FreeBSD','Amiga OS','Windows CE 6.0, Windows XP SP3, Windows Vista SP1','OpenVMS','DragonFly BSD','MS-DOS, Mac OS, and AmigaOS','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['','proprietary','GPLv2','LGPL','GPL','CDDL','LPL','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Apollo Computer','Oracle Corporation','Tim Paterson, Seattle Computer Products','Apple Computer','Various','Carnegie Mellon University','Microsoft, Tom Miller, Gary Kimura','Dan Luedtke','Microsoft','Andrew S. Tanenbaum','IBM','DEC','Novell','Michiel Pelt','Datalight','LSC Inc, Sun Microsystems','Metacomco for Commodore','Margo Seltzer','Rémy Card','Stephen Tweedie','Red Hat','PolyServe','Bell Labs','Gary Kildall','Palm, Inc.','Zachary Peterson','Namesys','Samsung','Young Minds Inc.','ISO/ECMA/OSTA','Ilesfay Technology Group','ICT (later ICL)','Kirk McKusick','Microsoft, IBM','Commodore','John Hendrikx','kwiirk and Waninkoko (Wii homebrew)','VERITAS, (now Symantec)','VMware','Ecma International, Microsoft','Acorn Computers Ltd','Sage Weil, Inktank Storage, Red Hat','Ecma International','Marc McDonald, Microsoft','NPO "Scientific centre" (now Sitronics)','Cluster File Systems (later Oracle Corporation)','NTT','GEC','IBM & Microsoft','Compaq','Atari Corporation','Matthew Dillon','Sanbolic','Sistina (Red Hat)','Nokia with help of University of Szeged','Google','Adaptec','NetApp','MontaVista','SGI','Be Inc., D. Giampaolo, C. Meurillon','Sun Microsystems','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

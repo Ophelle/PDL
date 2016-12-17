@@ -1,110 +1,118 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of Axis & Allies games -  Units </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>British : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Products : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Italian : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>French : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>American : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>ANZAC : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>German : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Soviet : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Unit : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Japanese : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Base : </label></br> <input id="11" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','1941','Anniversary','Europe','1942 Second Edition','Pacific 1940','Pacific 1940 Second Edition','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['P42','P95','P13','P52','P9','P99','P79','P21','P68','P40','P64','P76','P93','P41','P38','P16','P77','P54','P3','P24','P43','P1','P14','P7','P57','P100','P29','P67','P59','P78','P61','P107','P112','P10','P25','P62','P46','P12','P87','P75','P104','P110','P58','P71','P74','P50','P109','P11','P51','P66','P90','P72','P26','P22','P91','P73','P34','P80','P111','P92','P47','P48','P106','P63','P36','P5','P28','P18','P81','P17','P65','P84','P39','P89','P15','P4','P98','P32','P101','P27','P23','P6','P30','P103','P31','P8','P44','P35','P2','P55','P102','P70','P85','P53','P94','P105','P37','P33','P88','P83','P60','P19','P96','P108','P20','P86','P49','P97','P69','P56','P82','P45','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Europe 1940 Second Edition','','Anniversary','Pacific 1940 Second Edition','Europe 1940','Pacific 1940','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['','Europe 1940','Pacific 1940 Second Edition','Europe 1940 Second Edition','Pacific 1940','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['1942 Second Edition','','1941','Europe','Guadalcanal','Pacific 1940','Battle of the Bulge','Pacific','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['','Pacific 1940','Pacific 1940 Second Edition','1942 Second Edition','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['','1941','Europe','Anniversary','1942 Second Edition','Europe 1940','Pacific 1940','Battle of the Bulge','']
+								});
+								$("#8").typeahead({
+									name:"list8",
+									local : ['Europe 1940 Second Edition','','Pacific 1940','1941','1942','Europe 1940','1942 Second Edition','Europe','Pacific','Anniversary','Pacific 1940 Second Edition','']
+								});
+								$("#9").typeahead({
+									name:"list9",
+									local : ['Tank','Fighter','Transport','Battleship','Bomber','Artillery','Tactical Bomber','Antiaircraft Gun','Cruiser','Mechanized Infantry','Carrier','Destroyer','Submarine','Truck','']
+								});
+								$("#10").typeahead({
+									name:"list10",
+									local : ['1941','','Pacific','Pacific 1940 Second Edition','1942 Second Edition','Pacific 1940','Guadalcanal','']
+								});
+								$("#11").typeahead({
+									name:"list11",
+									local : ['B-17','Zara class','Akizuki class','Srednyaya class','CA-12','Spitfire','Stuka','Majestic class','Tribal class','Priest','Iridio Mantovani','TB.Mk.I','GMC 2 1/2-ton','Kostromitinova class','Type 92 70mm','Hakusan Maru class','ZIS-42','Pe-8','Warspite','Cannone da 75/32','Fubuki class','He-111','P.108','Gnevny class','Soldati class','Gangut class','85mm M1939','Lancaster','Fort class','Type 1','Fw-190','Yak','Iowa class','Kirov class','105mm Howitzer','Ordnance QF 25 pounder','Admiral Hipper class','Ray class','Aquila','Royal Oak class','Cannone da 90/53','90mm M1','Sherman','Liberty ship','Hood','(Generic)','Monowai','Me-109','75mm Type 88','88mm Flak 36','Opel 3-ton','Kongo class','3.7in QFAA','Saumarez','SM.79','M14/41','Portland class','Takao class','8.8cm Flak 41','Betty','P-38 Lightning','Val','Panther','Yamazuki Maru class','Sumner class','Zero','SPA Dovunque-35','M15/42','Dauntless','U class','Mosquito','Graf Zeppelin','Illustrious class','Ju-88','Halifax','M5 Half-track','Yamato class','AC Sentinel','Type VII','Wasp','P-40 Warhawk','Zerstörer 1934','C.202','Truculent','MiG-3','Johnston class','Ram-Kangaroo','Kaichu class','Kent class','Shinano','Sd.Kfz. 251','PV-1','L/70 40mm','Sturmovik','Hilfskreuzer','Littorio class','I class','10.5 cm leFH 18','Bismarck class','Baltic Timber Ship','IS-2','Marconi class','Wildcat','T-34','Type 95','S class','Tiger','BL 5.5 inch','152mm Howitzer','Matilda II','Akagi','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>British : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Products : </label></br> <input id="2" type="aaaa" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Italian : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>French : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>American : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>ANZAC : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>German : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Soviet : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Unit : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Japanese : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Base : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['','1941','Anniversary','Europe','1942 Second Edition','Pacific 1940','Pacific 1940 Second Edition','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Europe 1940 Second Edition','','Anniversary','Pacific 1940 Second Edition','Europe 1940','Pacific 1940','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['','Europe 1940','Pacific 1940 Second Edition','Europe 1940 Second Edition','Pacific 1940','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['1942 Second Edition','','1941','Europe','Guadalcanal','Pacific 1940','Battle of the Bulge','Pacific','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['','Pacific 1940','Pacific 1940 Second Edition','1942 Second Edition','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['','1941','Europe','Anniversary','1942 Second Edition','Europe 1940','Pacific 1940','Battle of the Bulge','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['Europe 1940 Second Edition','','Pacific 1940','1941','1942','Europe 1940','1942 Second Edition','Europe','Pacific','Anniversary','Pacific 1940 Second Edition','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['Tank','Fighter','Transport','Battleship','Bomber','Artillery','Tactical Bomber','Antiaircraft Gun','Cruiser','Mechanized Infantry','Carrier','Destroyer','Submarine','Truck','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['1941','','Pacific','Pacific 1940 Second Edition','1942 Second Edition','Pacific 1940','Guadalcanal','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['B-17','Zara class','Akizuki class','Srednyaya class','CA-12','Spitfire','Stuka','Majestic class','Tribal class','Priest','Iridio Mantovani','TB.Mk.I','GMC 2 1/2-ton','Kostromitinova class','Type 92 70mm','Hakusan Maru class','ZIS-42','Pe-8','Warspite','Cannone da 75/32','Fubuki class','He-111','P.108','Gnevny class','Soldati class','Gangut class','85mm M1939','Lancaster','Fort class','Type 1','Fw-190','Yak','Iowa class','Kirov class','105mm Howitzer','Ordnance QF 25 pounder','Admiral Hipper class','Ray class','Aquila','Royal Oak class','Cannone da 90/53','90mm M1','Sherman','Liberty ship','Hood','(Generic)','Monowai','Me-109','75mm Type 88','88mm Flak 36','Opel 3-ton','Kongo class','3.7in QFAA','Saumarez','SM.79','M14/41','Portland class','Takao class','8.8cm Flak 41','Betty','P-38 Lightning','Val','Panther','Yamazuki Maru class','Sumner class','Zero','SPA Dovunque-35','M15/42','Dauntless','U class','Mosquito','Graf Zeppelin','Illustrious class','Ju-88','Halifax','M5 Half-track','Yamato class','AC Sentinel','Type VII','Wasp','P-40 Warhawk','Zerstörer 1934','C.202','Truculent','MiG-3','Johnston class','Ram-Kangaroo','Kaichu class','Kent class','Shinano','Sd.Kfz. 251','PV-1','L/70 40mm','Sturmovik','Hilfskreuzer','Littorio class','I class','10.5 cm leFH 18','Bismarck class','Baltic Timber Ship','IS-2','Marconi class','Wildcat','T-34','Type 95','S class','Tiger','BL 5.5 inch','152mm Howitzer','Matilda II','Akagi','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

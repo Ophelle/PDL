@@ -1,99 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of Internet Relay Chat clients -  Protocol support </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>CTCP :</label></br>
+								<input type="radio" name="FeatureCTCP" value="oui">Yes <input type="radio" name="FeatureCTCP" value = "non">No <input type="radio" name="FeatureCTCP" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>SASL : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>IPv6 :</label></br>
+								<input type="radio" name="FeatureIPv6" value="oui">Yes <input type="radio" name="FeatureIPv6" value = "non">No <input type="radio" name="FeatureIPv6" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>OCSP : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>DCC :</label></br>
+								<input type="radio" name="FeatureDCC" value="oui">Yes <input type="radio" name="FeatureDCC" value = "non">No <input type="radio" name="FeatureDCC" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>TLS : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>DANE : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Client : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>CRL : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>OTR :</label></br>
+								<input type="radio" name="FeatureOTR" value="oui">Yes <input type="radio" name="FeatureOTR" value = "non">No <input type="radio" name="FeatureOTR" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>SSL :</label></br>
+								<input type="radio" name="FeatureSSL" value="oui">Yes <input type="radio" name="FeatureSSL" value = "non">No <input type="radio" name="FeatureSSL" value = "non">Partial </br>
+											<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Yes','script','SASL','No','?','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['No','Yes','?','OCSP','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['No','?','Yes','TLS','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['?','Yes','No','DANE','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['ERC','Nettalk','Irssi','BitchX','Neebly','rcirc','Convos','Colloquy','Opera','Ircle','Snak','IceChat','mIRC','jIRCii','Bersirc','ii (IRC IT)','Smuxi','LimeChat','Visual IRC','Scrollback','ChatZilla','IRCjr','PJIRC','f-irc','Linkinus','AmIRC','LeetIRC','PIRCH','KVIrc','XChat','WeeChat','Konversation','qwebirc','DMDirc','HexChat','KiwiIRC','ircII','Quassel','Mibbit','Lingo','Textual','Client','HydraIRC','AdiIRC','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['?','No','CRL','Yes','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>CTCP :</label></br>
- 		 					 <input type="radio" name="FeatureCTCP" value="oui">oui <input type="radio" name="FeatureCTCP" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>SASL : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>IPv6 :</label></br>
- 		 					 <input type="radio" name="FeatureIPv6" value="oui">oui <input type="radio" name="FeatureIPv6" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>OCSP : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>DCC :</label></br>
- 		 					 <input type="radio" name="FeatureDCC" value="oui">oui <input type="radio" name="FeatureDCC" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>TLS : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>DANE : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Client : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>CRL : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>OTR :</label></br>
- 		 					 <input type="radio" name="FeatureOTR" value="oui">oui <input type="radio" name="FeatureOTR" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>SSL :</label></br>
- 		 					 <input type="radio" name="FeatureSSL" value="oui">oui <input type="radio" name="FeatureSSL" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Yes','script','SASL','No','?','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['No','Yes','?','OCSP','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['No','?','Yes','TLS','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['?','Yes','No','DANE','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['ERC','Nettalk','Irssi','BitchX','Neebly','rcirc','Convos','Colloquy','Opera','Ircle','Snak','IceChat','mIRC','jIRCii','Bersirc','ii (IRC IT)','Smuxi','LimeChat','Visual IRC','Scrollback','ChatZilla','IRCjr','PJIRC','f-irc','Linkinus','AmIRC','LeetIRC','PIRCH','KVIrc','XChat','WeeChat','Konversation','qwebirc','DMDirc','HexChat','KiwiIRC','ircII','Quassel','Mibbit','Lingo','Textual','Client','HydraIRC','AdiIRC','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['?','No','CRL','Yes','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

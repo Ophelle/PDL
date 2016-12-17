@@ -1,76 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of programming languages (object-oriented programming) -  Member availability </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label> - Method : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Products : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label> - Has member? : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>COBOL - N/A : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>OCaml - N/A : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Xojo - (using Introspection) : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Java - (using reflection) : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>ABAP Objects - N/A : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Eiffel - N/A : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Windows PowerShell - (using reflection) : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>C# - (using reflection) : </label></br> <input id="11" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>F# - (using reflection) : </label></br> <input id="12" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Visual Basic .NET - (using reflection) : </label></br> <input id="13" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['P2','P3','P1','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label> - Method : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Products : </label></br> <input id="2" type="aaaa" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label> - Has member? : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>COBOL - N/A : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>OCaml - N/A : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Xojo - (using Introspection) : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Java - (using reflection) : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>ABAP Objects - N/A : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Eiffel - N/A : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Windows PowerShell - (using reflection) : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>C# - (using reflection) : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>F# - (using reflection) : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Visual Basic .NET - (using reflection) : </label></br> <input id="13" type="text" name="Feature"></br>
-							
-		<script>
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

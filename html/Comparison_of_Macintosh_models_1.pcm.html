@@ -1,96 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of Macintosh models - Input/Output</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Optical drive : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Bluetooth :</label></br>
+								<input type="radio" name="FeatureBluetooth" value="oui">Yes <input type="radio" name="FeatureBluetooth" value = "non">No <input type="radio" name="FeatureBluetooth" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>FireWire 800 : </label></br> <input id="3" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>USB : </label></br> <input id="4" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Video interface : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Keyboard and mouse :</label></br>
+								<input type="radio" name="FeatureKeyboard and mouse" value="oui">Yes <input type="radio" name="FeatureKeyboard and mouse" value = "non">No <input type="radio" name="FeatureKeyboard and mouse" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>AirPort Extreme :</label></br>
+								<input type="radio" name="FeatureAirPort Extreme" value="oui">Yes <input type="radio" name="FeatureAirPort Extreme" value = "non">No <input type="radio" name="FeatureAirPort Extreme" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>iSight/Facetime Camera :</label></br>
+								<input type="radio" name="FeatureiSight/Facetime Camera" value="oui">Yes <input type="radio" name="FeatureiSight/Facetime Camera" value = "non">No <input type="radio" name="FeatureiSight/Facetime Camera" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>ExpressCard :</label></br>
+								<input type="radio" name="FeatureExpressCard" value="oui">Yes <input type="radio" name="FeatureExpressCard" value = "non">No <input type="radio" name="FeatureExpressCard" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>SD card slot :</label></br>
+								<input type="radio" name="FeatureSD card slot" value="oui">Yes <input type="radio" name="FeatureSD card slot" value = "non">No <input type="radio" name="FeatureSD card slot" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Remote IR receiver :</label></br>
+								<input type="radio" name="FeatureRemote IR receiver" value="oui">Yes <input type="radio" name="FeatureRemote IR receiver" value = "non">No <input type="radio" name="FeatureRemote IR receiver" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Model : </label></br> <input id="12" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Gigabit Ethernet :</label></br>
+								<input type="radio" name="FeatureGigabit Ethernet" value="oui">Yes <input type="radio" name="FeatureGigabit Ethernet" value = "non">No <input type="radio" name="FeatureGigabit Ethernet" value = "non">Partial </br>
+											<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['SuperDrive DL','No','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Thunderbolt (interface)','HDMI and Thunderbolt (interface)','Dual-link DVI and two Mini DisplayPort's','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['MacBook Pro 13 in 2.7 GHz','MacBook Pro 15 in 2.0 GHz','Mac Pro Quad-Core','MacBook Air 1.6 GHz','Mac mini','iMac 27 in low-end','Mac Pro 8-Core','Mac Pro 12-Core','MacBook Pro 13 in 2.3 GHz','iMac 21.5 in high-end','Mac mini Server','iMac 27 in high-end','MacBook Air 1.7 GHz','MacBook Pro 15 in 2.2 GHz','iMac 21.5 in low-end','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Optical drive : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Bluetooth :</label></br>
- 		 					 <input type="radio" name="FeatureBluetooth" value="oui">oui <input type="radio" name="FeatureBluetooth" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>FireWire 800 : </label></br> <input id="3" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>USB : </label></br> <input id="4" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Video interface : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Keyboard and mouse :</label></br>
- 		 					 <input type="radio" name="FeatureKeyboard and mouse" value="oui">oui <input type="radio" name="FeatureKeyboard and mouse" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>AirPort Extreme :</label></br>
- 		 					 <input type="radio" name="FeatureAirPort Extreme" value="oui">oui <input type="radio" name="FeatureAirPort Extreme" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>iSight/Facetime Camera :</label></br>
- 		 					 <input type="radio" name="FeatureiSight/Facetime Camera" value="oui">oui <input type="radio" name="FeatureiSight/Facetime Camera" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>ExpressCard :</label></br>
- 		 					 <input type="radio" name="FeatureExpressCard" value="oui">oui <input type="radio" name="FeatureExpressCard" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>SD card slot :</label></br>
- 		 					 <input type="radio" name="FeatureSD card slot" value="oui">oui <input type="radio" name="FeatureSD card slot" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Remote IR receiver :</label></br>
- 		 					 <input type="radio" name="FeatureRemote IR receiver" value="oui">oui <input type="radio" name="FeatureRemote IR receiver" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Model : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Gigabit Ethernet :</label></br>
- 		 					 <input type="radio" name="FeatureGigabit Ethernet" value="oui">oui <input type="radio" name="FeatureGigabit Ethernet" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['SuperDrive DL','No','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Thunderbolt (interface)','HDMI and Thunderbolt (interface)','Dual-link DVI and two Mini DisplayPort's','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['MacBook Pro 13 in 2.7 GHz','MacBook Pro 15 in 2.0 GHz','Mac Pro Quad-Core','MacBook Air 1.6 GHz','Mac mini','iMac 27 in low-end','Mac Pro 8-Core','Mac Pro 12-Core','MacBook Pro 13 in 2.3 GHz','iMac 21.5 in high-end','Mac mini Server','iMac 27 in high-end','MacBook Air 1.7 GHz','MacBook Pro 15 in 2.2 GHz','iMac 21.5 in low-end','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

@@ -1,71 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of raster graphics editors -  Color spaces </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>CMYK :</label></br>
+								<input type="radio" name="FeatureCMYK" value="oui">Yes <input type="radio" name="FeatureCMYK" value = "non">No <input type="radio" name="FeatureCMYK" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>HSV : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>LAB : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Indexed :</label></br>
+								<input type="radio" name="FeatureIndexed" value="oui">Yes <input type="radio" name="FeatureIndexed" value = "non">No <input type="radio" name="FeatureIndexed" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Grayscale :</label></br>
+								<input type="radio" name="FeatureGrayscale" value="oui">Yes <input type="radio" name="FeatureGrayscale" value = "non">No <input type="radio" name="FeatureGrayscale" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Adobe RGB :</label></br>
+								<input type="radio" name="FeatureAdobe RGB" value="oui">Yes <input type="radio" name="FeatureAdobe RGB" value = "non">No <input type="radio" name="FeatureAdobe RGB" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>sRGB :</label></br>
+								<input type="radio" name="FeaturesRGB" value="oui">Yes <input type="radio" name="FeaturesRGB" value = "non">No <input type="radio" name="FeaturesRGB" value = "non">Partial </br>
+											<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','No','Partial','Yes','?','HSV','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['No','Yes','','?','Curve editing only','Partial','LAB','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>CMYK :</label></br>
- 		 					 <input type="radio" name="FeatureCMYK" value="oui">oui <input type="radio" name="FeatureCMYK" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>HSV : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>LAB : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Indexed :</label></br>
- 		 					 <input type="radio" name="FeatureIndexed" value="oui">oui <input type="radio" name="FeatureIndexed" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Grayscale :</label></br>
- 		 					 <input type="radio" name="FeatureGrayscale" value="oui">oui <input type="radio" name="FeatureGrayscale" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>Adobe RGB :</label></br>
- 		 					 <input type="radio" name="FeatureAdobe RGB" value="oui">oui <input type="radio" name="FeatureAdobe RGB" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>sRGB :</label></br>
- 		 					 <input type="radio" name="FeaturesRGB" value="oui">oui <input type="radio" name="FeaturesRGB" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['','No','Partial','Yes','?','HSV','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['No','Yes','','?','Curve editing only','Partial','LAB','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

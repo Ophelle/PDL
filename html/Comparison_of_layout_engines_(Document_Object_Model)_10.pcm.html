@@ -1,55 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of layout engines (Document Object Model) - Range</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Products : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Interface Range - Yes : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Interface Range - No : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Interface Range - ? : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Interface Range - 1.0 : </label></br> <input id="5" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Interface Range - DOM2 : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['P5','P20','P1','P7','P23','P6','P26','P27','P28','P9','P10','P8','P24','P21','P11','P25','P22','P2','P3','P18','P4','P17','P29','P12','P14','P19','P15','P16','P13','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Products : </label></br> <input id="1" type="aaaa" name="Feature"></br>
-							
-						</br>	
-							<label>Interface Range - Yes : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Interface Range - No : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Interface Range - ? : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Interface Range - 1.0 : </label></br> <input id="5" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Interface Range - DOM2 : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-		<script>
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

@@ -1,113 +1,117 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of European traffic laws -  General </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Speed limit on single carriageway (km/h) : </label></br> <input id="1" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Triangle required :</label></br>
+								<input type="radio" name="FeatureTriangle required" value="oui">Yes <input type="radio" name="FeatureTriangle required" value = "non">No <input type="radio" name="FeatureTriangle required" value = "non">Partial </br>
+								
+								</br>	
+								<label>Speed limit on motorway (km/h) : </label></br> <input id="3" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Fire extinguisher required : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Speed limit in urban area : </label></br> <input id="5" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Minimum child age (front seat) : </label></br> <input id="6" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Country code : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Seatbelt required : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Spare bulb required :</label></br>
+								<input type="radio" name="FeatureSpare bulb required" value="oui">Yes <input type="radio" name="FeatureSpare bulb required" value = "non">No <input type="radio" name="FeatureSpare bulb required" value = "non">Partial </br>
+								
+								</br>	
+								<label>First aid required :</label></br>
+								<input type="radio" name="FeatureFirst aid required" value="oui">Yes <input type="radio" name="FeatureFirst aid required" value = "non">No <input type="radio" name="FeatureFirst aid required" value = "non">Partial </br>
+								
+								</br>	
+								<label>Tow rope required :</label></br>
+								<input type="radio" name="FeatureTow rope required" value="oui">Yes <input type="radio" name="FeatureTow rope required" value = "non">No <input type="radio" name="FeatureTow rope required" value = "non">Partial </br>
+								
+								</br>	
+								<label>Toll roads : </label></br> <input id="12" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Speed limit on dual carriageway (km/h) : </label></br> <input id="13" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Minimum driver's age : </label></br> <input id="14" type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Country : </label></br> <input id="15" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Permitted alcohol level (%) : </label></br> <input id="16" type="number" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Yes','Recommended','Fire extinguisher required','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Belarus','Greece','Lithuania','Finland','Liechtenstein','Iceland','Cyprus','Spain','France','Croatia','Ireland','Russia','Slovakia','Austria','Denmark','Estonia','Macedonia','Czech Republic','United Kingdom','Sweden','Latvia','Malta','Norway','Germany','Netherlands','Albania','Italy','Andorra','San Marino','Moldova','Ukraine','Montenegro','Bosnia and Herzegovina','Country','Slovenia','Turkey','Belgium','Portugal','Romania','Hungary','Serbia','Luxembourg','Switzerland','Bulgaria','Monaco','Poland','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['AND','L','M','NL','FL','LT','AL','EST','MK','PT','PL','MC','CZ','HR','MNE','I','SLO','SRB','TR','B','FIN','RO','CY','F','N','IS','DK','H','RUS','BY','LV','MD','BIH','UA','A','GB','GR','SK','D','BG','Country code','RSM','S','CH','E','IRL','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['All','Front','N/A','Seatbelt required','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['No','','Yes','Toll roads','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['110','N/A','120','100','130','100 (120 on expressways)','110 (rain/wet 100)','112','130 (urban 80)','Speed limit on dual carriageway (km/h)','no (130 recommended)','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Speed limit on single carriageway (km/h) : </label></br> <input id="1" type="number" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Triangle required :</label></br>
- 		 					 <input type="radio" name="FeatureTriangle required" value="oui">oui <input type="radio" name="FeatureTriangle required" value = "non">non </br>
-									
-						</br>	
-							<label>Speed limit on motorway (km/h) : </label></br> <input id="3" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Fire extinguisher required : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Speed limit in urban area : </label></br> <input id="5" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Minimum child age (front seat) : </label></br> <input id="6" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Country code : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Seatbelt required : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Spare bulb required :</label></br>
- 		 					 <input type="radio" name="FeatureSpare bulb required" value="oui">oui <input type="radio" name="FeatureSpare bulb required" value = "non">non </br>
-									
-						</br>	
- 		 					<label>First aid required :</label></br>
- 		 					 <input type="radio" name="FeatureFirst aid required" value="oui">oui <input type="radio" name="FeatureFirst aid required" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Tow rope required :</label></br>
- 		 					 <input type="radio" name="FeatureTow rope required" value="oui">oui <input type="radio" name="FeatureTow rope required" value = "non">non </br>
-									
-						</br>	
-							<label>Toll roads : </label></br> <input id="12" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Speed limit on dual carriageway (km/h) : </label></br> <input id="13" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Minimum driver's age : </label></br> <input id="14" type="number" name="Feature"></br>
-							
-						</br>	
-							<label>Country : </label></br> <input id="15" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Permitted alcohol level (%) : </label></br> <input id="16" type="number" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Yes','Recommended','Fire extinguisher required','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Belarus','Greece','Lithuania','Finland','Liechtenstein','Iceland','Cyprus','Spain','France','Croatia','Ireland','Russia','Slovakia','Austria','Denmark','Estonia','Macedonia','Czech Republic','United Kingdom','Sweden','Latvia','Malta','Norway','Germany','Netherlands','Albania','Italy','Andorra','San Marino','Moldova','Ukraine','Montenegro','Bosnia and Herzegovina','Country','Slovenia','Turkey','Belgium','Portugal','Romania','Hungary','Serbia','Luxembourg','Switzerland','Bulgaria','Monaco','Poland','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['AND','L','M','NL','FL','LT','AL','EST','MK','PT','PL','MC','CZ','HR','MNE','I','SLO','SRB','TR','B','FIN','RO','CY','F','N','IS','DK','H','RUS','BY','LV','MD','BIH','UA','A','GB','GR','SK','D','BG','Country code','RSM','S','CH','E','IRL','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['All','Front','N/A','Seatbelt required','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['No','','Yes','Toll roads','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['110','N/A','120','100','130','100 (120 on expressways)','110 (rain/wet 100)','112','130 (urban 80)','Speed limit on dual carriageway (km/h)','no (130 recommended)','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

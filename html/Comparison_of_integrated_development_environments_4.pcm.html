@@ -1,90 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of integrated development environments -  C# </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
-	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Mac OS X :</label></br>
- 		 					 <input type="radio" name="FeatureMac OS X" value="oui">oui <input type="radio" name="FeatureMac OS X" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Linux :</label></br>
- 		 					 <input type="radio" name="FeatureLinux" value="oui">oui <input type="radio" name="FeatureLinux" value = "non">non </br>
-									
-						</br>	
-							<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Developer : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Latest stable release :</label></br>
-							
- 		 									<input type="checkbox" name="Feature" >5.0 </br>	
- 		 									<input type="checkbox" name="Feature" > October 28</br>	
- 		 									<input type="checkbox" name="Feature" > 2014</br>	
- 		 									<input type="checkbox" name="Feature" >5.0.1.3 </br>	
- 		 									<input type="checkbox" name="Feature" > June 4</br>	
- 		 									<input type="checkbox" name="Feature" >11.0.60610.0  </br>	
- 		 									<input type="checkbox" name="Feature" > June 26</br>	
- 		 									<input type="checkbox" name="Feature" > 2013</br>	
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Mac OS X :</label></br>
+								<input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </br>
 								
-						</br>	
-							<label>IDE : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Windows :</label></br>
- 		 					 <input type="radio" name="FeatureWindows" value="oui">oui <input type="radio" name="FeatureWindows" value = "non">non </br>
+								</br>	
+								<label>Linux :</label></br>
+								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
+								
+								</br>	
+								<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Developer : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Latest stable release :</label></br>
+											<input type="checkbox" name="Feature" >5.0 </br>	
+											<input type="checkbox" name="Feature" > October 28</br>	
+											<input type="checkbox" name="Feature" > 2014</br>	
+											<input type="checkbox" name="Feature" >5.0.1.3 </br>	
+											<input type="checkbox" name="Feature" > June 4</br>	
+											<input type="checkbox" name="Feature" >11.0.60610.0  </br>	
+											<input type="checkbox" name="Feature" > June 26</br>	
+											<input type="checkbox" name="Feature" > 2013</br>	
 									
-						</br>	
-							<label>Other platforms : </label></br> <input id="8" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['Proprietary 
+								</br>	
+								<label>IDE : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Windows :</label></br>
+								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
+								
+								</br>	
+								<label>Other platforms : </label></br> <input id="8" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Proprietary 
 Community Edition: Freeware','LGPL','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['IC#Code Team','Microsoft','Xamarin and the Mono community','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Microsoft Visual Studio','MonoDevelop','SharpDevelop','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['','FreeBSD, OpenBSD, Solaris','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['IC#Code Team','Microsoft','Xamarin and the Mono community','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Microsoft Visual Studio','MonoDevelop','SharpDevelop','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['','FreeBSD, OpenBSD, Solaris','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
 		<div class="col-md-2">&nbsp;</div>
 		</div>
-		</div>
+	</div>
 </body>
 </html>

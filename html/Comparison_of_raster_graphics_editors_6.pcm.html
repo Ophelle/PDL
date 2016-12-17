@@ -1,88 +1,92 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of raster graphics editors -  File support </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>JPEG 2000 :</label></br>
+								<input type="radio" name="FeatureJPEG 2000" value="oui">Yes <input type="radio" name="FeatureJPEG 2000" value = "non">No <input type="radio" name="FeatureJPEG 2000" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>PSD :</label></br>
+								<input type="radio" name="FeaturePSD" value="oui">Yes <input type="radio" name="FeaturePSD" value = "non">No <input type="radio" name="FeaturePSD" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>HD Photo : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>BMP :</label></br>
+								<input type="radio" name="FeatureBMP" value="oui">Yes <input type="radio" name="FeatureBMP" value = "non">No <input type="radio" name="FeatureBMP" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>PCX :</label></br>
+								<input type="radio" name="FeaturePCX" value="oui">Yes <input type="radio" name="FeaturePCX" value = "non">No <input type="radio" name="FeaturePCX" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>GIF :</label></br>
+								<input type="radio" name="FeatureGIF" value="oui">Yes <input type="radio" name="FeatureGIF" value = "non">No <input type="radio" name="FeatureGIF" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>PNG :</label></br>
+								<input type="radio" name="FeaturePNG" value="oui">Yes <input type="radio" name="FeaturePNG" value = "non">No <input type="radio" name="FeaturePNG" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>JPEG :</label></br>
+								<input type="radio" name="FeatureJPEG" value="oui">Yes <input type="radio" name="FeatureJPEG" value = "non">No <input type="radio" name="FeatureJPEG" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>PSP :</label></br>
+								<input type="radio" name="FeaturePSP" value="oui">Yes <input type="radio" name="FeaturePSP" value = "non">No <input type="radio" name="FeaturePSP" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>RAW imports :</label></br>
+								<input type="radio" name="FeatureRAW imports" value="oui">Yes <input type="radio" name="FeatureRAW imports" value = "non">No <input type="radio" name="FeatureRAW imports" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>TIFF :</label></br>
+								<input type="radio" name="FeatureTIFF" value="oui">Yes <input type="radio" name="FeatureTIFF" value = "non">No <input type="radio" name="FeatureTIFF" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>XCF :</label></br>
+								<input type="radio" name="FeatureXCF" value="oui">Yes <input type="radio" name="FeatureXCF" value = "non">No <input type="radio" name="FeatureXCF" value = "non">Partial </br>
+											<input type="text"/></br>								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','No','Yes','Import only','HD Photo','Via plug-in','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>JPEG 2000 :</label></br>
- 		 					 <input type="radio" name="FeatureJPEG 2000" value="oui">oui <input type="radio" name="FeatureJPEG 2000" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>PSD :</label></br>
- 		 					 <input type="radio" name="FeaturePSD" value="oui">oui <input type="radio" name="FeaturePSD" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>HD Photo : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>BMP :</label></br>
- 		 					 <input type="radio" name="FeatureBMP" value="oui">oui <input type="radio" name="FeatureBMP" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>PCX :</label></br>
- 		 					 <input type="radio" name="FeaturePCX" value="oui">oui <input type="radio" name="FeaturePCX" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>GIF :</label></br>
- 		 					 <input type="radio" name="FeatureGIF" value="oui">oui <input type="radio" name="FeatureGIF" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>PNG :</label></br>
- 		 					 <input type="radio" name="FeaturePNG" value="oui">oui <input type="radio" name="FeaturePNG" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>JPEG :</label></br>
- 		 					 <input type="radio" name="FeatureJPEG" value="oui">oui <input type="radio" name="FeatureJPEG" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>PSP :</label></br>
- 		 					 <input type="radio" name="FeaturePSP" value="oui">oui <input type="radio" name="FeaturePSP" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>RAW imports :</label></br>
- 		 					 <input type="radio" name="FeatureRAW imports" value="oui">oui <input type="radio" name="FeatureRAW imports" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>TIFF :</label></br>
- 		 					 <input type="radio" name="FeatureTIFF" value="oui">oui <input type="radio" name="FeatureTIFF" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
- 		 					<label>XCF :</label></br>
- 		 					 <input type="radio" name="FeatureXCF" value="oui">oui <input type="radio" name="FeatureXCF" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['','No','Yes','Import only','HD Photo','Via plug-in','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

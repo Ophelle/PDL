@@ -1,56 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of regular expression engines - API features</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Native UTF-8 support :</label></br>
+								<input type="radio" name="FeatureNative UTF-8 support" value="oui">Yes <input type="radio" name="FeatureNative UTF-8 support" value = "non">No <input type="radio" name="FeatureNative UTF-8 support" value = "non">Partial </br>
+								
+								</br>	
+								<label>Partial match : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Multi-line matching :</label></br>
+								<input type="radio" name="FeatureMulti-line matching" value="oui">Yes <input type="radio" name="FeatureMulti-line matching" value = "non">No <input type="radio" name="FeatureMulti-line matching" value = "non">Partial </br>
+								
+								</br>	
+								<label>Native UTF-16 support :</label></br>
+								<input type="radio" name="FeatureNative UTF-16 support" value="oui">Yes <input type="radio" name="FeatureNative UTF-16 support" value = "non">No <input type="radio" name="FeatureNative UTF-16 support" value = "non">Partial </br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['?','Yes','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Native UTF-8 support :</label></br>
- 		 					 <input type="radio" name="FeatureNative UTF-8 support" value="oui">oui <input type="radio" name="FeatureNative UTF-8 support" value = "non">non </br>
-									
-						</br>	
-							<label>Partial match : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Multi-line matching :</label></br>
- 		 					 <input type="radio" name="FeatureMulti-line matching" value="oui">oui <input type="radio" name="FeatureMulti-line matching" value = "non">non </br>
-									
-						</br>	
- 		 					<label>Native UTF-16 support :</label></br>
- 		 					 <input type="radio" name="FeatureNative UTF-16 support" value="oui">oui <input type="radio" name="FeatureNative UTF-16 support" value = "non">non </br>
-									
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['?','Yes','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

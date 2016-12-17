@@ -1,80 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of application virtualization software - List of application virtual machine implementations</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Interpreter :</label></br>
+								<input type="radio" name="FeatureInterpreter" value="oui">Yes <input type="radio" name="FeatureInterpreter" value = "non">No <input type="radio" name="FeatureInterpreter" value = "non">Partial </br>
+								
+								</br>	
+								<label>JIT :</label></br>
+								<input type="radio" name="FeatureJIT" value="oui">Yes <input type="radio" name="FeatureJIT" value = "non">No <input type="radio" name="FeatureJIT" value = "non">Partial </br>
+								
+								</br>	
+								<label>Implementation Language : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Comments : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Virtual machine : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Languages : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>SLoC : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['C','C (typically)','','C, Perl','C++','Python','Forth, Forth Assembler','Smalltalk/Slang','JDK, OpenJDK & IcedTea with regular JIT : Java, C, ASM ; IcedTea with the "Zero" JIT : Java, C','C#, C','C, C#','C++, OCaml','C++, Ruby','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Clone of Common Language Runtime','interactive web authoring tool. bytecode is named "ActionScript Byte Code (.abc)"','clone of Common Language Runtime.','','UCSD Pascal, widespread in late 70s including Apple II','Virtual database engine','Application-level virtualization for native code','bytecode is CIL','MSIL, C and C++ output are supported. ActionScript Byte Code output is supported by Adobe Alchemy. bytecode is named "LLVM Bytecode (.bc)". assembly is named "LLVM Assembly Language (*.ll)".','Font rendering engine','Reference implementation by Sun ; OpenJDK: code under GPL ; IcedTea: code and tools under GPL','Virtual machine for another Ruby implementation','Based on Tamarin','A Micro-version of Microsoft .NET Framework to let applications run sandboxed inside browser','Dis Virtual Machine Specification','Virtual machine of the reference implementation for Ruby 1.9 and newer versions','Computer game engine','Checking of memory accesses and leaks under Linux','Self-hosting implementation of Python, next generation of Psyco','Is an open-source virtual machine designed for executing programs written in Hack and PHP.','Virtual machine for small devices, similar to Java','Features are simplified, usually include assembler, compiler, text-level and binary-level interpreters, sometimes editor, debugger and OS. Compilation speeds are >20 SKLOC/S and behave much like JIT.','op-code tree walker','Self hosting implementation of Squeak virtual machine.  Rich multi-media support.','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Lua','Mono','Rubinius','Icon','JVM','Dis (Inferno)','Glulx','Squeak','O-code machine','SQLite','Silverlight','Zend Engine','CLR','Adobe Flash Player (aka Tamarin)','Waba','TraceMonkey','Oz','LLVM','SECD','ScummVM','MMIX','p-code machine','Smalltalk','Forth','PyPy','NekoVM','HHVM','Perl virtual machine','DotGNU/Portable.NET','CPython','VisualWorks','Squirrel','TrueType','Valgrind','Vx32 virtual machine','Z-machine','Parrot','Yet Another Ruby VM (YARV)','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Python','Smalltalk','x86/x86-64 binaries','PHP','Ruby','JavaScript','C, C++, Objective-C, Ada, Fortran, and Rust','SQLite opcodes','Limbo','Pascal','x86 binaries','','Forth','CLI languages including: C#','ActionScript, SWF (file format)','Squeak Smalltalk','Z-Code','TrueType','Perl (6 & 5), NQP-rx, PIR, PASM, PBC, BASIC, bc, C, ECMAScript, Lisp, Lua, m4, Tcl, WMLScript, XML, and others','Perl','Java, Jython, Groovy, JRuby, C, C++, Clojure, Scala and several others','Scumm','currently Neko and Haxe','Squirrel','BCPL','Lua','MMIXAL','C#, VB.NET','PHP, Hack','Glulx, Z-code','CLI languages including: C#, VB.NET, IronPython, IronRuby, and others','Oz, Alice','ISWIM, Lispkit Lisp','Icon','C#, C++/CLI, F#, VB.NET','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['','75k','135k (initially released)','2.8K to 5.6K; advanced, professional implementations are smaller.','175k C, 9k Perl','12k','110k Smalltalk, ~300K C','111k C, 240k Perl','13k + 7k LuaJIT','811k','387k C, 368k Python, 10k ASM, 31k Psyco','15k + 2850 per JIT arch + 500 per host OS','467k','7MB (initially released)','46k','2332k','173k','JVM is around 6500k lines; TCK is 80k tests and around 1000k lines','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
- 		 					<label>Interpreter :</label></br>
- 		 					 <input type="radio" name="FeatureInterpreter" value="oui">oui <input type="radio" name="FeatureInterpreter" value = "non">non </br>
-									
-						</br>	
- 		 					<label>JIT :</label></br>
- 		 					 <input type="radio" name="FeatureJIT" value="oui">oui <input type="radio" name="FeatureJIT" value = "non">non </br>
-									
-						</br>	
-							<label>Implementation Language : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Comments : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Virtual machine : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Languages : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>SLoC : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['C','C (typically)','','C, Perl','C++','Python','Forth, Forth Assembler','Smalltalk/Slang','JDK, OpenJDK & IcedTea with regular JIT : Java, C, ASM ; IcedTea with the "Zero" JIT : Java, C','C#, C','C, C#','C++, OCaml','C++, Ruby','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['Clone of Common Language Runtime','interactive web authoring tool. bytecode is named "ActionScript Byte Code (.abc)"','clone of Common Language Runtime.','','UCSD Pascal, widespread in late 70s including Apple II','Virtual database engine','Application-level virtualization for native code','bytecode is CIL','MSIL, C and C++ output are supported. ActionScript Byte Code output is supported by Adobe Alchemy. bytecode is named "LLVM Bytecode (.bc)". assembly is named "LLVM Assembly Language (*.ll)".','Font rendering engine','Reference implementation by Sun ; OpenJDK: code under GPL ; IcedTea: code and tools under GPL','Virtual machine for another Ruby implementation','Based on Tamarin','A Micro-version of Microsoft .NET Framework to let applications run sandboxed inside browser','Dis Virtual Machine Specification','Virtual machine of the reference implementation for Ruby 1.9 and newer versions','Computer game engine','Checking of memory accesses and leaks under Linux','Self-hosting implementation of Python, next generation of Psyco','Is an open-source virtual machine designed for executing programs written in Hack and PHP.','Virtual machine for small devices, similar to Java','Features are simplified, usually include assembler, compiler, text-level and binary-level interpreters, sometimes editor, debugger and OS. Compilation speeds are >20 SKLOC/S and behave much like JIT.','op-code tree walker','Self hosting implementation of Squeak virtual machine.  Rich multi-media support.','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['Lua','Mono','Rubinius','Icon','JVM','Dis (Inferno)','Glulx','Squeak','O-code machine','SQLite','Silverlight','Zend Engine','CLR','Adobe Flash Player (aka Tamarin)','Waba','TraceMonkey','Oz','LLVM','SECD','ScummVM','MMIX','p-code machine','Smalltalk','Forth','PyPy','NekoVM','HHVM','Perl virtual machine','DotGNU/Portable.NET','CPython','VisualWorks','Squirrel','TrueType','Valgrind','Vx32 virtual machine','Z-machine','Parrot','Yet Another Ruby VM (YARV)','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['Python','Smalltalk','x86/x86-64 binaries','PHP','Ruby','JavaScript','C, C++, Objective-C, Ada, Fortran, and Rust','SQLite opcodes','Limbo','Pascal','x86 binaries','','Forth','CLI languages including: C#','ActionScript, SWF (file format)','Squeak Smalltalk','Z-Code','TrueType','Perl (6 & 5), NQP-rx, PIR, PASM, PBC, BASIC, bc, C, ECMAScript, Lisp, Lua, m4, Tcl, WMLScript, XML, and others','Perl','Java, Jython, Groovy, JRuby, C, C++, Clojure, Scala and several others','Scumm','currently Neko and Haxe','Squirrel','BCPL','Lua','MMIXAL','C#, VB.NET','PHP, Hack','Glulx, Z-code','CLI languages including: C#, VB.NET, IronPython, IronRuby, and others','Oz, Alice','ISWIM, Lispkit Lisp','Icon','C#, C++/CLI, F#, VB.NET','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['','75k','135k (initially released)','2.8K to 5.6K; advanced, professional implementations are smaller.','175k C, 9k Perl','12k','110k Smalltalk, ~300K C','111k C, 240k Perl','13k + 7k LuaJIT','811k','387k C, 368k Python, 10k ASM, 31k Psyco','15k + 2850 per JIT arch + 500 per host OS','467k','7MB (initially released)','46k','2332k','173k','JVM is around 6500k lines; TCK is 80k tests and around 1000k lines','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

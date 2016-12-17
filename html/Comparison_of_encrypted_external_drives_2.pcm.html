@@ -1,94 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of encrypted external drives - Features</h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Other Features : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Encryption Type : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Max Capacity : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Bootable :</label></br>
+								<input type="radio" name="FeatureBootable" value="oui">Yes <input type="radio" name="FeatureBootable" value = "non">No <input type="radio" name="FeatureBootable" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Certification : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Interface : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Included Software : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Managed :</label></br>
+								<input type="radio" name="FeatureManaged" value="oui">Yes <input type="radio" name="FeatureManaged" value = "non">No <input type="radio" name="FeatureManaged" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Name : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','ID Verify, Panic Mode, Upgradeable Firmware','High transfer speeds, Inactivity lock','Water resistant','Waterproof to 4'','Inactivity lock','Second unsecured partition','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['AES 256-bit CBC Hardware Encryption','Hardware','AES 128-bit CBC Hardware Encryption','Hardware Encryption','AES 256-bit Hardware Encryption','AES 256-bit XTS Hardware Encryption','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['128GB','8GB','32GB','16GB','','64GB / Future Support for 4TB','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['No','FIPS 140-2 Level 3','FIPS 140-2 ?','FIPS 140-2 Level 2','CESG CCTM,  FIPS 140-2','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['USB 2.0','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['No','','Identity Manager; Secure Sessions','No Software Required','DTVaultLock','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['DataTraveler Vault – Privacy Edition','DataTraveler 5000','CryptX2','Store 'n' Go Corporate','IronKey D200','Cruzer Enterprise','DataTraveler Locker+','SafeStick','JumpDrive SecureII Plus','DataTraveler Vault','IronKey S200','IronKey S100','IronClad','SafeStick SuperSonic','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Other Features : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Encryption Type : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Max Capacity : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Bootable :</label></br>
- 		 					 <input type="radio" name="FeatureBootable" value="oui">oui <input type="radio" name="FeatureBootable" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Certification : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Interface : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Included Software : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
- 		 					<label>Managed :</label></br>
- 		 					 <input type="radio" name="FeatureManaged" value="oui">oui <input type="radio" name="FeatureManaged" value = "non">non </br>
-									
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Name : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['','ID Verify, Panic Mode, Upgradeable Firmware','High transfer speeds, Inactivity lock','Water resistant','Waterproof to 4'','Inactivity lock','Second unsecured partition','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['AES 256-bit CBC Hardware Encryption','Hardware','AES 128-bit CBC Hardware Encryption','Hardware Encryption','AES 256-bit Hardware Encryption','AES 256-bit XTS Hardware Encryption','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['128GB','8GB','32GB','16GB','','64GB / Future Support for 4TB','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['No','FIPS 140-2 Level 3','FIPS 140-2 ?','FIPS 140-2 Level 2','CESG CCTM,  FIPS 140-2','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['USB 2.0','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['No','','Identity Manager; Secure Sessions','No Software Required','DTVaultLock','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['DataTraveler Vault – Privacy Edition','DataTraveler 5000','CryptX2','Store 'n' Go Corporate','IronKey D200','Cruzer Enterprise','DataTraveler Locker+','SafeStick','JumpDrive SecureII Plus','DataTraveler Vault','IronKey S200','IronKey S100','IronClad','SafeStick SuperSonic','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>

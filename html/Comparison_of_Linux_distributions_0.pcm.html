@@ -1,110 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
-<link href="css/moncss.css" rel="stylesheet"type="text/css">
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
-<script type="text/javascript" src="js/typeahead.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/formulaire.js"></script>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
 	<title>Prototype de formulaire Version 0.5</title>
 	<meta charset="utf-8">
 </head>
+
 <body>
-		<div class="container">
-  	<div class="row">
-      		<div class="col-md-2">&nbsp;</div>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
 			<div class="col-md-8">
 				<h1>Comparison of Linux distributions -  General </h1>
 			</div>
 			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red" >Formulaire</legend>
+								</br>	
+								<label>Maintainer : </label></br> <input id="1" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Release date : </label></br> <input id="2" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Target audience : </label></br> <input id="3" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Distribution : </label></br> <input id="4" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Security updates (years) : </label></br> <input id="5" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Current stable version : </label></br> <input id="6" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>System distribution commitment : </label></br> <input id="7" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Initial release year : </label></br> <input id="8" type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Forked from : </label></br> <input id="9" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Cost : </label></br> <input id="10" type="text" name="Feature"></br>
+								
+								</br>	
+								<label>Founder : </label></br> <input id="11" type="text" name="Feature"></br>
+								
+						<script>
+								$("#1").typeahead({
+									name:"list1",
+									local : ['dev team','Webconverger Limited','Debian Project','Linspire, Inc.','Porteus','The Grml Team','?','Rubén Rodríguez Pérez (quidam)','Invisible Things Lab','Dev Team','Red Hat','openSUSE Project','mageia.org','MEPIS LLC','Musix team','Gentoo Foundation, Inc.','Bodhi Linux Team','ClearFoundation','ALT Linux Team, ALT Linux LLC','TÜBİTAK','Tomas Matejicek','SYSGO','Debox Project','elementary','LibreWRT team','Matias A. Fonzo','Fedora Project','Pentoo','Alpine Linux Team','UTUTO dev team','Novell, Inc. dev team','Remote-Exploit','CentOS Project','The Chakra Project Team','Canonical Ltd.','Jaromil','OpenWrt team','Mandriva S.A.','Parsix Project','Team Tiny Core','Embedded Debian Project','Univention GmbH','Sourceforge.net','eBox Technologies','UCSD Supercomputing Center, Clustercorp','Thanatermesis','Salix team','Brixton Linux Action Group','Team-XBMC','Parabola Hackers','OpenELEC Team','Philip Newborough','Binary Emotions','Puppy Foundation','Oracle Corporation','Anticapitalista','Sam Geeraerts with sponsorship from the FSF','Stan McLaren','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['2014-11-03','?','2013-09-13','2012-04-21','2015-02-05','2014-11-29','2014-12-23','2013-12-20','2013-11-07','2015-05-12','2014-07-07','','2012-04-27','2013-08-10','2011-05-04','2014-03-13','2013-05-06','2013-11-05','2010-03-04','2014-09-26','2014-12-10','2015-04-25','2014-01-10','2015-04-23','2011-09-08','2014-05-15','2014','2014-06-20','2008-11-18','2014-02-09','2014-10-07','2014-11-04','2015-05-26','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['desktop, server','desktop','portable','web kiosks, digital signage, personal web navigation','general','auditing, forensic, security, network','embedded system','auditing, security','live','portable, lightweight','general, server, desktop','general, school','general, server','web applications','server, gateway, network','live, maintenance, security, network, forensic, accessibility','multimedia','Kiosk software, digital signage','simple, customisers','penetration testing, forensics, security','lightweight, portable','server, workstation','Security by Compartmentalization, desktop','server','network, lightweight','security-focused aimed for anonymity and privacy','Small Business Server','Tor server','(small business) server','general, desktop','old computers','workstation, server','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['LibreCMC/LibreWRT','Oracle Linux','Ututo','Webconverger','Trisquel GNU/Linux','Red Hat Enterprise Linux (RHEL)','PCLinuxOS','Debian','Scientific Linux','Instant WebKiosk','Elementary OS','gNewSense','Mandriva Linux','ALT Linux','Parsix','Chakra','OpenELEC','Source Mage GNU/Linux','ESSPEE','Linux Mint','Pentoo','Rocks Cluster Distribution','Slackware','Tiny Core Linux','antiX','Alpine Linux','OpenWrt','ELinOS','Mageia','Korora','Netrunner','Chromium OS','Arch Linux','gnuLinEx','SolydXK','Gentoo Linux','Zenwalk','Novell Open Enterprise Server','Ubuntu and Derivatives','Elive','MEPIS','Puppy Linux','Grml','Red Hat Linux','CrunchBang Linux','Parabola GNU/Linux-libre','Qubes OS','Fedora','Tor-ramdisk','Debox GNU/Linux','VectorLinux','Knoppix','Kali Linux','Tails','ArchBang','Damn Small Linux','Slax','ClearOS','dyne:bolic','Salix OS','Zentyal','Musix GNU+Linux','XBMCbuntu','SliTaz GNU/Linux','SUSE Linux','BLAG','openSUSE','Bodhi Linux','Sabayon Linux','Porteus','Univention Corporate Server','Dragora GNU/Linux-Libre','Pardus','CentOS','Emdebian Grip','Freespire','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['?','Standard releases – 9 months; LTS releases – 5 years','2014','~1.5 years','1','10 years','~3 years','','5 years','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['?','4.1','1.4','6.5','3.1.0','3.1 (Parkes)','4.4.10','14.1','2.0 (and R3 rc1)','13.2','2014.10.07','15.04','8.0','3.0.0','11','2012','17.1','2.0','3.2-2','22','7.0','2.2','6.5.0','2.4.0','20','3.0.1','Debian','0.2','XS 2012','1.3 (LibreWRT was at 2.0)','140k','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['X','100% Free: GNU FSDG followed in Parabola GNU/Linux-libre Social Contract','100% Free: GNU FSDG','Source Mage Social Contract','Debian Social Contract','Gentoo Social Contract','Fedora Licensing Guidelines','']
+								});
+								$("#8").typeahead({
+									name:"list8",
+									local : ['Xen and Fedora','Debian','Red Hat Enterprise Linux (RHEL)','','Gentoo Linux','Slackware','Chrome OS','SUSE Linux Enterprise Server','Slackware, Jurix','LibreWRT','Debian, Ubuntu','Mandriva Linux','Debian, OpenBox','Red Hat Linux','Arch Linux','Debian, Ubuntu, Kubuntu','Softlanding Linux System (SLS)','PCLinuxOS','Red Hat Linux, Red Hat Enterprise Linux (RHEL)','Tiny Core Linux','RHEL, CentOS','(originally forked from Arch Linux)','Fedora','Sorcerer','Red Hat Linux, Fedora','Gentoo Linux Embedded, uClibc','Ubuntu LTS','Ubuntu','Debian, Knoppix','Debian - MEPIS','']
+								});
+								$("#9").typeahead({
+									name:"list9",
+									local : ['Gratis','Commercial','?','']
+								});
+								$("#10").typeahead({
+									name:"list10",
+									local : ['Mageia Community','Anticapitalista','Bodhi Linux Team','Max Moser, Mati Aharoni, Martin J. Muench','Ryan Abrams, Eric Schabell','Regional Government of Extremadura','Jean-Philippe Guillemin','The XBMC Project','Diego Saravia, Daniel Olivera','UCSD Supercomputing Center, Clustercorp','Tomas Matejicek','Brixton Linux Action Group','Daniel Foré','Barry Kauler','MFD2HDx','Red Hat','Klaus Knopper','Philip Newborough','Patrick Volkerding','Parabola Hackers','?','Bill Reynolds','Christophe Lincoln','Thanatermesis','Kai Hendry','lxnay Design','SYSGO','Oracle Corporation','Blue Systems','SUSE Linux, Novell','Cyrille Pontvieux, George Vlahavas, Pierrick Le Brun, Thorsten Mühlfelder','Jan Mette and Arch Linux KDEmod developers','Lindows.com, Inc.','Stephan Raue, OpenELEC Team','Joanna Rutkowska','LibreWRT team','Arjen Balfoort','Ian Murdock','John Andrews','Embedded Debian Project','Warren Woodford','Daniel Robbins','Robert Shingledecker','Alpine Linux Team','CERN, Fermilab','Musix team','Fanthom','Judd Vinet','Brian Brazil and Paul O'Malley','Alan Baghumian','eBox Technologies','Robert S. Lange','Clement Lefebvre','Rubén Rodríguez Pérez (quidam)','Christ Smart','Fedora Project','','CentOS Project','Mandrakesoft S.A.','Univention GmbH','ESSPEE Project','Peter Baldwin','Michael Zanetta, Rick Farina, Jens Pranaitis','ALT Linux Team','Scientific and Technological Research Council of Turkey (TÜBİTAK)','Anthony G. Basile','Michael Prokop','Canonical Ltd.','Novell','Jaromil','Matias A. Fonzo','Marco Buratto','']
+								});
+						</script>
+						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
 	</div>
-	<div class="row">
-	<fieldset>
-		<div class="col-md-2">&nbsp;</div>
-		<div class="col-md-8">
-		<form action="" method="post">
-   			<legend style="color:red" >Formulaire</legend>
-						</br>	
-							<label>Maintainer : </label></br> <input id="1" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Release date : </label></br> <input id="2" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Target audience : </label></br> <input id="3" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Distribution : </label></br> <input id="4" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Security updates (years) : </label></br> <input id="5" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Current stable version : </label></br> <input id="6" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>System distribution commitment : </label></br> <input id="7" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Initial release year : </label></br> <input id="8" type="number" name="Feature"></br>
-							
- 		 								 		<input type="text"/></br>						</br>	
-							<label>Forked from : </label></br> <input id="9" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Cost : </label></br> <input id="10" type="text" name="Feature"></br>
-							
-						</br>	
-							<label>Founder : </label></br> <input id="11" type="text" name="Feature"></br>
-							
-		<script>
-          $("#1").typeahead({
-            name:"list1",
-            local : ['dev team','Webconverger Limited','Debian Project','Linspire, Inc.','Porteus','The Grml Team','?','Rubén Rodríguez Pérez (quidam)','Invisible Things Lab','Dev Team','Red Hat','openSUSE Project','mageia.org','MEPIS LLC','Musix team','Gentoo Foundation, Inc.','Bodhi Linux Team','ClearFoundation','ALT Linux Team, ALT Linux LLC','TÜBİTAK','Tomas Matejicek','SYSGO','Debox Project','elementary','LibreWRT team','Matias A. Fonzo','Fedora Project','Pentoo','Alpine Linux Team','UTUTO dev team','Novell, Inc. dev team','Remote-Exploit','CentOS Project','The Chakra Project Team','Canonical Ltd.','Jaromil','OpenWrt team','Mandriva S.A.','Parsix Project','Team Tiny Core','Embedded Debian Project','Univention GmbH','Sourceforge.net','eBox Technologies','UCSD Supercomputing Center, Clustercorp','Thanatermesis','Salix team','Brixton Linux Action Group','Team-XBMC','Parabola Hackers','OpenELEC Team','Philip Newborough','Binary Emotions','Puppy Foundation','Oracle Corporation','Anticapitalista','Sam Geeraerts with sponsorship from the FSF','Stan McLaren','']
-          });
-          $("#2").typeahead({
-            name:"list2",
-            local : ['2014-11-03','?','2013-09-13','2012-04-21','2015-02-05','2014-11-29','2014-12-23','2013-12-20','2013-11-07','2015-05-12','2014-07-07','','2012-04-27','2013-08-10','2011-05-04','2014-03-13','2013-05-06','2013-11-05','2010-03-04','2014-09-26','2014-12-10','2015-04-25','2014-01-10','2015-04-23','2011-09-08','2014-05-15','2014','2014-06-20','2008-11-18','2014-02-09','2014-10-07','2014-11-04','2015-05-26','']
-          });
-          $("#3").typeahead({
-            name:"list3",
-            local : ['desktop, server','desktop','portable','web kiosks, digital signage, personal web navigation','general','auditing, forensic, security, network','embedded system','auditing, security','live','portable, lightweight','general, server, desktop','general, school','general, server','web applications','server, gateway, network','live, maintenance, security, network, forensic, accessibility','multimedia','Kiosk software, digital signage','simple, customisers','penetration testing, forensics, security','lightweight, portable','server, workstation','Security by Compartmentalization, desktop','server','network, lightweight','security-focused aimed for anonymity and privacy','Small Business Server','Tor server','(small business) server','general, desktop','old computers','workstation, server','']
-          });
-          $("#4").typeahead({
-            name:"list4",
-            local : ['LibreCMC/LibreWRT','Oracle Linux','Ututo','Webconverger','Trisquel GNU/Linux','Red Hat Enterprise Linux (RHEL)','PCLinuxOS','Debian','Scientific Linux','Instant WebKiosk','Elementary OS','gNewSense','Mandriva Linux','ALT Linux','Parsix','Chakra','OpenELEC','Source Mage GNU/Linux','ESSPEE','Linux Mint','Pentoo','Rocks Cluster Distribution','Slackware','Tiny Core Linux','antiX','Alpine Linux','OpenWrt','ELinOS','Mageia','Korora','Netrunner','Chromium OS','Arch Linux','gnuLinEx','SolydXK','Gentoo Linux','Zenwalk','Novell Open Enterprise Server','Ubuntu and Derivatives','Elive','MEPIS','Puppy Linux','Grml','Red Hat Linux','CrunchBang Linux','Parabola GNU/Linux-libre','Qubes OS','Fedora','Tor-ramdisk','Debox GNU/Linux','VectorLinux','Knoppix','Kali Linux','Tails','ArchBang','Damn Small Linux','Slax','ClearOS','dyne:bolic','Salix OS','Zentyal','Musix GNU+Linux','XBMCbuntu','SliTaz GNU/Linux','SUSE Linux','BLAG','openSUSE','Bodhi Linux','Sabayon Linux','Porteus','Univention Corporate Server','Dragora GNU/Linux-Libre','Pardus','CentOS','Emdebian Grip','Freespire','']
-          });
-          $("#5").typeahead({
-            name:"list5",
-            local : ['?','Standard releases – 9 months; LTS releases – 5 years','2014','~1.5 years','1','10 years','~3 years','','5 years','']
-          });
-          $("#6").typeahead({
-            name:"list6",
-            local : ['?','4.1','1.4','6.5','3.1.0','3.1 (Parkes)','4.4.10','14.1','2.0 (and R3 rc1)','13.2','2014.10.07','15.04','8.0','3.0.0','11','2012','17.1','2.0','3.2-2','22','7.0','2.2','6.5.0','2.4.0','20','3.0.1','Debian','0.2','XS 2012','1.3 (LibreWRT was at 2.0)','140k','']
-          });
-          $("#7").typeahead({
-            name:"list7",
-            local : ['X','100% Free: GNU FSDG followed in Parabola GNU/Linux-libre Social Contract','100% Free: GNU FSDG','Source Mage Social Contract','Debian Social Contract','Gentoo Social Contract','Fedora Licensing Guidelines','']
-          });
-          $("#8").typeahead({
-            name:"list8",
-            local : ['Xen and Fedora','Debian','Red Hat Enterprise Linux (RHEL)','','Gentoo Linux','Slackware','Chrome OS','SUSE Linux Enterprise Server','Slackware, Jurix','LibreWRT','Debian, Ubuntu','Mandriva Linux','Debian, OpenBox','Red Hat Linux','Arch Linux','Debian, Ubuntu, Kubuntu','Softlanding Linux System (SLS)','PCLinuxOS','Red Hat Linux, Red Hat Enterprise Linux (RHEL)','Tiny Core Linux','RHEL, CentOS','(originally forked from Arch Linux)','Fedora','Sorcerer','Red Hat Linux, Fedora','Gentoo Linux Embedded, uClibc','Ubuntu LTS','Ubuntu','Debian, Knoppix','Debian - MEPIS','']
-          });
-          $("#9").typeahead({
-            name:"list9",
-            local : ['Gratis','Commercial','?','']
-          });
-          $("#10").typeahead({
-            name:"list10",
-            local : ['Mageia Community','Anticapitalista','Bodhi Linux Team','Max Moser, Mati Aharoni, Martin J. Muench','Ryan Abrams, Eric Schabell','Regional Government of Extremadura','Jean-Philippe Guillemin','The XBMC Project','Diego Saravia, Daniel Olivera','UCSD Supercomputing Center, Clustercorp','Tomas Matejicek','Brixton Linux Action Group','Daniel Foré','Barry Kauler','MFD2HDx','Red Hat','Klaus Knopper','Philip Newborough','Patrick Volkerding','Parabola Hackers','?','Bill Reynolds','Christophe Lincoln','Thanatermesis','Kai Hendry','lxnay Design','SYSGO','Oracle Corporation','Blue Systems','SUSE Linux, Novell','Cyrille Pontvieux, George Vlahavas, Pierrick Le Brun, Thorsten Mühlfelder','Jan Mette and Arch Linux KDEmod developers','Lindows.com, Inc.','Stephan Raue, OpenELEC Team','Joanna Rutkowska','LibreWRT team','Arjen Balfoort','Ian Murdock','John Andrews','Embedded Debian Project','Warren Woodford','Daniel Robbins','Robert Shingledecker','Alpine Linux Team','CERN, Fermilab','Musix team','Fanthom','Judd Vinet','Brian Brazil and Paul O'Malley','Alan Baghumian','eBox Technologies','Robert S. Lange','Clement Lefebvre','Rubén Rodríguez Pérez (quidam)','Christ Smart','Fedora Project','','CentOS Project','Mandrakesoft S.A.','Univention GmbH','ESSPEE Project','Peter Baldwin','Michael Zanetta, Rick Farina, Jens Pranaitis','ALT Linux Team','Scientific and Technological Research Council of Turkey (TÜBİTAK)','Anthony G. Basile','Michael Prokop','Canonical Ltd.','Novell','Jaromil','Matias A. Fonzo','Marco Buratto','']
-          });
-    </script>
-    <input type="submit" class="btn btn-info" value="Ajouter un produit" />
-		</form></fieldset>
-		</div>
-		<div class="col-md-2">&nbsp;</div>
-		</div>
-		</div>
 </body>
 </html>
