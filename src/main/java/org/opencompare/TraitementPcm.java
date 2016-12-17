@@ -44,18 +44,22 @@ public class TraitementPcm {
 	}
 	
 	public void loadPcm(File file) {
-		try {
-			this.file = file;
-			PCMLoader loader = new KMFJSONLoader();
-			this.pcm = loader.load(file).get(0).getPcm();
-			this.namePcm = this.pcm.getName().replaceAll("_", " ");
-			this.listFeatures = this.pcm.getConcreteFeatures();
-			this.allTypesOfFeature = getAllTypesOfFeature(this.listFeatures);
-			this.bestTypeForEachFeature = getBestTypeForEachFeature(this.allTypesOfFeature);
-			this.contentsTypeMultiple = contentsTypeMultiple(this.listFeatures);
-			this.allContentsOfEachCell = getAllContentsOfEachCell(this.listFeatures);
-		} catch(IOException e) {
-			System.out.println("Chargement du pcm échoué : " + e);
+		if(file.exists()) {
+			try {
+				this.file = file;
+				PCMLoader loader = new KMFJSONLoader();
+				this.pcm = loader.load(file).get(0).getPcm();
+				this.namePcm = this.pcm.getName().replaceAll("_", " ");
+				this.listFeatures = this.pcm.getConcreteFeatures();
+				this.allTypesOfFeature = getAllTypesOfFeature(this.listFeatures);
+				this.bestTypeForEachFeature = getBestTypeForEachFeature(this.allTypesOfFeature);
+				this.contentsTypeMultiple = contentsTypeMultiple(this.listFeatures);
+				this.allContentsOfEachCell = getAllContentsOfEachCell(this.listFeatures);
+			} catch(IOException e) {
+				System.out.println("Chargement du pcm échoué : " + e);
+			}
+		} else {
+			throw new UnsupportedOperationException("Le fichier n'existe pas ou le chemin est mal défini");
 		}
 	}
 
