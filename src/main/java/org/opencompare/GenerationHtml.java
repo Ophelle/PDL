@@ -21,6 +21,11 @@ public class GenerationHtml {
 		this.input = input;
 		this.output = output;
 	}
+	
+	public GenerationHtml(TraitementPcm traitPcm, String input) {
+		this.traitPcm = traitPcm;
+		this.input = input;
+	}
 
 	public void generateHtml() {
 		// Configuration du template
@@ -43,7 +48,7 @@ public class GenerationHtml {
 		ajoutVar.put("getAllTypesValue", this.traitPcm.getAllTypesOfFeature());
 		
 		// Création html
-		//FileWriter writer;
+		setOutput(this.traitPcm.getFile().getPath() + ".html");
 		try {
 			FileWriter writer = new FileWriter(new File(this.output));
 			try {
@@ -75,31 +80,35 @@ public class GenerationHtml {
 		File[] filesPcm = repertoryPcm.listFiles();
 		Map<String, Object> ajoutVar = new HashMap<String, Object>();
 		
+		
 		for(int i = 0; i < filesPcm.length; i++) {
-			getTraitPcm().loadPcm(filesPcm[i]);
-			// Attribution des variables au code html source
-			ajoutVar.put("titre", this.traitPcm.getNamePcm());
-			ajoutVar.put("name", "Prototype de formulaire");
-			ajoutVar.put("bestType", this.traitPcm.getBestTypeForEachFeature());
-			ajoutVar.put("allContentsCell", this.traitPcm.getAllContentsOfEachCell());
-			ajoutVar.put("ListMultiple",this.traitPcm.getContentsTypeMultiple());
-			ajoutVar.put("getAllTypesValue", this.traitPcm.getAllTypesOfFeature());
-			
-			setOutput("html/" + filesPcm[i].getName() + ".html");
-			FileWriter writer;
-			try {
-				writer = new FileWriter(new File(this.output));
+			if(filesPcm[i].getPath().endsWith(".pcm")) {
+				getTraitPcm().loadPcm(filesPcm[i]);
+				// Attribution des variables au code html source
+				ajoutVar.put("titre", this.traitPcm.getNamePcm());
+				ajoutVar.put("name", "Prototype de formulaire");
+				ajoutVar.put("bestType", this.traitPcm.getBestTypeForEachFeature());
+				ajoutVar.put("allContentsCell", this.traitPcm.getAllContentsOfEachCell());
+				ajoutVar.put("ListMultiple",this.traitPcm.getContentsTypeMultiple());
+				ajoutVar.put("getAllTypesValue", this.traitPcm.getAllTypesOfFeature());
+				
+				setOutput(filesPcm[i].getPath() + ".html");
+				FileWriter writer;
 				try {
-					temp.process(ajoutVar, writer);
-				} catch (TemplateException e) {
-					System.out.println("La génération du HTML a échoué : " + e);
+					writer = new FileWriter(new File(this.output));
+					try {
+						temp.process(ajoutVar, writer);
+						
+					} catch (TemplateException e) {
+						System.out.println("La génération du HTML a échoué : " + e);
+					}
+					writer.close();
+				} catch (IOException e) {
+					System.out.println("Le fichier n'existe pas : " + e);
 				}
-				writer.close();
-			} catch (IOException e) {
-				System.out.println("Le fichier n'existe pas : " + e);
+				System.out.println("HTML CREE au dossier : " + this.output);
+				ajoutVar = new HashMap<String, Object>();
 			}
-			System.out.println("HTML CREE au dossier : " + this.output);
-			ajoutVar = new HashMap<String, Object>();
 		}
 	}
 

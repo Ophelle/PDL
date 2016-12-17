@@ -25,8 +25,8 @@ public class Main {
 				System.out.println("Voulez-vous générer tous les formulaires ou un formulaire à partir du pcm de votre choix ? \n- Tapez 1 : Pour un formulaire\n- Tapez 2 : Pour tous les formulaires");
 				nb = sc.nextInt();
 				if(nb == 2) {
-					TraitementPcm trait = new TraitementPcm(new File("testPrototype/example0.pcm"));
-					GenerationHtml generator = new GenerationHtml(trait, "testPrototype/testHtml1.ftl", "testPrototype/testHtml1.html");
+					TraitementPcm trait = new TraitementPcm(new File("template/example0.pcm"));
+					GenerationHtml generator = new GenerationHtml(trait, "template/template_html.ftl");
 					generator.generatAllHtml();
 				} else if(nb == 1) {
 					while(!str.equals("q")) {
@@ -34,11 +34,11 @@ public class Main {
 						str = sc2.nextLine();
 						if(str.equals("d")) {
 							TraitementPcm trait = new TraitementPcm(new File(prop.getProperty("input")));
-							GenerationHtml generator = new GenerationHtml(trait, "testPrototype/testHtml1.ftl", "testPrototype/testHtml1.html");
+							GenerationHtml generator = new GenerationHtml(trait, "template/template_html.ftl");
 							generator.generateHtml();
 						} else if(!str.equals("q")) {
 							TraitementPcm trait = new TraitementPcm(new File(str));
-							GenerationHtml generator = new GenerationHtml(trait, "testPrototype/testHtml1.ftl", "testPrototype/testHtml1.html");
+							GenerationHtml generator = new GenerationHtml(trait, "template/template_html.ftl");
 							generator.generateHtml();
 						}
 					}
