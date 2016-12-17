@@ -208,14 +208,16 @@ public class TraitementPcm {
 						if (currentType == "multiple") {
 							currentContent = cell.getContent().split("[,/]");
 							for (String contenu : currentContent) {
-								if(contenu.charAt(0) == ' ') {
-									contenu = contenu.substring(1);
-									if(!listMultiple.contains(contenu)) {
-										listMultiple.add(contenu);
-									}
-								} else {
-									if(!listMultiple.contains(contenu)) {
-										listMultiple.add(contenu);
+								if(!contenu.equals("") && !contenu.equals(null)) {
+									if(contenu.charAt(0) == ' ') {
+										contenu = contenu.substring(1);
+										if(!listMultiple.contains(contenu)) {
+											listMultiple.add(contenu);
+										}
+									} else {
+										if(!listMultiple.contains(contenu)) {
+											listMultiple.add(contenu);
+										}
 									}
 								}
 							}
