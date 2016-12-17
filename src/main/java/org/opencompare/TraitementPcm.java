@@ -300,10 +300,10 @@ public class TraitementPcm {
 			str = "text";
 			break;
 		case "partial":
-			str = "a";
+			str = "text";
 			break;
 		default:
-			str = "aaaa";
+			str = "text";
 		}
 		return str;
 	}
