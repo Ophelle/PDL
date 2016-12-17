@@ -90,7 +90,7 @@
 							<#assign j=0>
 							<#list allContentsCell as key, value>
 								$("#${j}").typeahead({
-									name:"list${j}",
+									name:"${key}",
 									local : [<#list value as  values>'${values}',</#list>'']
 								});
 								<#assign j++>
