@@ -29,8 +29,17 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Media player audio scrubbing : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Wired video out : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Wireless video/audio streaming to set top boxes/TVs/speakers : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Media Playback and Controls :</label></br>
+											<input type="checkbox" name="Feature" >Media Playback and Controls</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Wired digital audio output :</label></br>
+								<input type="radio" name="FeatureWired digital audio output" value="oui">Yes <input type="radio" name="FeatureWired digital audio output" value = "non">No <input type="radio" name="FeatureWired digital audio output" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
 								<label>Video playback :</label></br>
 											<input type="checkbox" name="Feature" >H.264 (up to Main Profile)</br>	
@@ -58,13 +67,9 @@
 											<input type="checkbox" name="Feature" >MPEG-4 Part 2</br>	
 											<input type="checkbox" name="Feature" >H.264 (up to Baseline Profile)</br>	
 											<input type="checkbox" name="Feature" >MPEG-4 SP</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Media player fine scrubbing : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Feature : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Feature : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Audio playback :</label></br>
 											<input type="checkbox" name="Feature" >AAC</br>	
@@ -111,60 +116,47 @@
 											<input type="checkbox" name="Feature" >M4A</br>	
 											<input type="checkbox" name="Feature" >MKA</br>	
 											<input type="checkbox" name="Feature" >OGG</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Media player video scrubbing : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Media player video scrubbing : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Media player on-device playlist creation :</label></br>
 								<input type="radio" name="FeatureMedia player on-device playlist creation" value="oui">Yes <input type="radio" name="FeatureMedia player on-device playlist creation" value = "non">No <input type="radio" name="FeatureMedia player on-device playlist creation" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Wired digital audio output :</label></br>
-								<input type="radio" name="FeatureWired digital audio output" value="oui">Yes <input type="radio" name="FeatureWired digital audio output" value = "non">No <input type="radio" name="FeatureWired digital audio output" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Media player double speed playing : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Media player double speed playing : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label>Media player fine scrubbing : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>Media Playback and Controls :</label></br>
-											<input type="checkbox" name="Feature" >Media Playback and Controls</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Wired video out : </label></br> <input id="11" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Wireless video/audio streaming to set top boxes/TVs/speakers : </label></br> <input id="12" type="text" name="Feature"></br>
-								
+								<label>Media player audio scrubbing : </label></br> <input id="6" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Wired video out",
+									local : ['8.1+ USB','?','10+ 1080p via microHDMI, SlimPort (BlackBerry Passport)','No','1080p on select devices','Up to 720p via HDMI or VGA, 576p/480p via component or composite;5+: 1080p','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['7.10.7720.0+','Yes','?','']
+									name:"Wireless video/audio streaming to set top boxes/TVs/speakers",
+									local : ['4.2+ Miracast, but DLNA only available on selected devices','8.1+ Miracast on some devices','AirPlay','?','DLNA','10+ DLNA, 10.2+ Miracast on some devices','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Yes','?','8.1+','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['?','No','Yes','No, 3rd party software','Only Podcast','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['?','No, 3rd party software like VLC media player, basic fine scrubbing removed on 4+','No','Yes','']
-								});
-								$("#5").typeahead({
-									name:"list5",
+									name:"Feature",
 									local : ['Tizen','Ubuntu Touch','Android','Firefox OS','Windows Phone','iOS','Sailfish OS','BlackBerry 10','Mer','']
 								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['8.1+ USB','?','10+ 1080p via microHDMI, SlimPort (BlackBerry Passport)','No','1080p on select devices','Up to 720p via HDMI or VGA, 576p/480p via component or composite;
-5+: 1080p','']
+								$("#3").typeahead({
+									name:"Media player video scrubbing",
+									local : ['7.10.7720.0+','Yes','?','']
 								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['4.2+ Miracast, but DLNA only available on selected devices','8.1+ Miracast on some devices','AirPlay','?','DLNA','10+ DLNA, 10.2+ Miracast on some devices','']
+								$("#4").typeahead({
+									name:"Media player double speed playing",
+									local : ['?','No','Yes','No, 3rd party software','Only Podcast','']
+								});
+								$("#5").typeahead({
+									name:"Media player fine scrubbing",
+									local : ['?','No, 3rd party software like VLC media player, basic fine scrubbing removed on 4+','No','Yes','']
+								});
+								$("#6").typeahead({
+									name:"Media player audio scrubbing",
+									local : ['Yes','?','8.1+','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

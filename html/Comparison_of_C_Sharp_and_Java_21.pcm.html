@@ -33,50 +33,47 @@
 								<input type="radio" name="FeatureAddress-of" value="oui">Yes <input type="radio" name="FeatureAddress-of" value = "non">No <input type="radio" name="FeatureAddress-of" value = "non">Partial </br>
 								
 								</br>	
-								<label>Cross-language interoperability : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Pointer and arithmetics :</label></br>
-								<input type="radio" name="FeaturePointer and arithmetics" value="oui">Yes <input type="radio" name="FeaturePointer and arithmetics" value = "non">No <input type="radio" name="FeaturePointer and arithmetics" value = "non">Partial </br>
-								
-								</br>	
-								<label>Object pinning (fix variable to address) :</label></br>
-								<input type="radio" name="FeatureObject pinning (fix variable to address)" value="oui">Yes <input type="radio" name="FeatureObject pinning (fix variable to address)" value = "non">No <input type="radio" name="FeatureObject pinning (fix variable to address)" value = "non">Partial </br>
-								
-								</br>	
-								<label>Marshalling : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Native types :</label></br>
-								<input type="radio" name="FeatureNative types" value="oui">Yes <input type="radio" name="FeatureNative types" value = "non">No <input type="radio" name="FeatureNative types" value = "non">Partial </br>
-								
-								</br>	
-								<label>External/native methods :</label></br>
-								<input type="radio" name="FeatureExternal/native methods" value="oui">Yes <input type="radio" name="FeatureExternal/native methods" value = "non">No <input type="radio" name="FeatureExternal/native methods" value = "non">Partial </br>
+								<label>Fixed-size buffers :</label></br>
+								<input type="radio" name="FeatureFixed-size buffers" value="oui">Yes <input type="radio" name="FeatureFixed-size buffers" value = "non">No <input type="radio" name="FeatureFixed-size buffers" value = "non">Partial </br>
 								
 								</br>	
 								<label>Explicit stack allocation :</label></br>
 								<input type="radio" name="FeatureExplicit stack allocation" value="oui">Yes <input type="radio" name="FeatureExplicit stack allocation" value = "non">No <input type="radio" name="FeatureExplicit stack allocation" value = "non">Partial </br>
 								
 								</br>	
-								<label>Fixed-size buffers :</label></br>
-								<input type="radio" name="FeatureFixed-size buffers" value="oui">Yes <input type="radio" name="FeatureFixed-size buffers" value = "non">No <input type="radio" name="FeatureFixed-size buffers" value = "non">Partial </br>
+								<label>Object pinning (fix variable to address) :</label></br>
+								<input type="radio" name="FeatureObject pinning (fix variable to address)" value="oui">Yes <input type="radio" name="FeatureObject pinning (fix variable to address)" value = "non">No <input type="radio" name="FeatureObject pinning (fix variable to address)" value = "non">Partial </br>
 								
 								</br>	
-								<label>Native interoperability : </label></br> <input id="10" type="text" name="Feature"></br>
+								<label>Native interoperability : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>External/native methods :</label></br>
+								<input type="radio" name="FeatureExternal/native methods" value="oui">Yes <input type="radio" name="FeatureExternal/native methods" value = "non">No <input type="radio" name="FeatureExternal/native methods" value = "non">Partial </br>
 								
+								</br>	
+								<label>Cross-language interoperability : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Native types :</label></br>
+								<input type="radio" name="FeatureNative types" value="oui">Yes <input type="radio" name="FeatureNative types" value = "non">No <input type="radio" name="FeatureNative types" value = "non">Partial </br>
+								
+								</br>	
+								<label>Pointer and arithmetics :</label></br>
+											<input type="checkbox" name="Feature" >No; but references exist</br>	
+							
+								</br>	
+								<label>Marshalling : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Native interoperability",
+									local : ['Java','C#','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Cross-language interoperability",
 									local : ['Yes (with Nashorn, CORBA, JNI or JNA)','Yes; C# was designed for it','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Marshalling",
 									local : ['Yes; metadata controlled','External glue code required','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['Java','C#','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

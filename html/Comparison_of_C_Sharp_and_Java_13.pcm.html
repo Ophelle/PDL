@@ -29,25 +29,23 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>|| : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Java : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>a = 5, b = 20, s = still unchanged :</label></br>
 											<input type="checkbox" name="Feature" >a  = 10</br>	
 											<input type="checkbox" name="Feature" >b  = 5</br>	
 											<input type="checkbox" name="Feature" >s = Changed</br>	
-									
+							
+								</br>	
+								<label>Java : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>|| : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Java",
 									local : ['C#','']
+								});
+								$("#1").typeahead({
+									name:"||",
+									local : ['','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

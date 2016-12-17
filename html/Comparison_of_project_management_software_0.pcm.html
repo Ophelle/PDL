@@ -29,37 +29,34 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Web-based :</label></br>
-								<input type="radio" name="FeatureWeb-based" value="oui">Yes <input type="radio" name="FeatureWeb-based" value = "non">No <input type="radio" name="FeatureWeb-based" value = "non">Partial </br>
+								<label>Hosted On-Premises :</label></br>
+								<input type="radio" name="FeatureHosted On-Premises" value="oui">Yes <input type="radio" name="FeatureHosted On-Premises" value = "non">No <input type="radio" name="FeatureHosted On-Premises" value = "non">Partial </br>
 								
 								</br>	
-								<label>Programming language : </label></br> <input id="2" type="text" name="Feature"></br>
+								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Programming language : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Software : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Web-based :</label></br>
+								<input type="radio" name="FeatureWeb-based" value="oui">Yes <input type="radio" name="FeatureWeb-based" value = "non">No <input type="radio" name="FeatureWeb-based" value = "non">Partial </br>
 								
 								</br>	
 								<label>SaaS :</label></br>
 								<input type="radio" name="FeatureSaaS" value="oui">Yes <input type="radio" name="FeatureSaaS" value = "non">No <input type="radio" name="FeatureSaaS" value = "non">Partial </br>
 								
-								</br>	
-								<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Hosted On-Premises :</label></br>
-								<input type="radio" name="FeatureHosted On-Premises" value="oui">Yes <input type="radio" name="FeatureHosted On-Premises" value = "non">No <input type="radio" name="FeatureHosted On-Premises" value = "non">Partial </br>
-								
-								</br>	
-								<label>Software : </label></br> <input id="6" type="text" name="Feature"></br>
-								
 						<script>
+								$("#0").typeahead({
+									name:"License",
+									local : ['Proprietary','2-clause BSD license','GPL','Proprietary, GPL','Apache License','AGPL','Eclipse Public License','Proprietary, Open source','Unknown','AGPL; Proprietary (version 4)','CPAL','(modified) BSD license','Open source','LGPL','Open source (core only)','Mozilla Public License','Open source (disputed)','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Programming language",
 									local : ['','Java','Ruby','Python','X++','PHP','ASP.NET','C++','C++ and Java','Java, XML, FreeMarker, Groovy, JavaScript','JavaScript','Ruby on Rails and AngularJS','Ruby on Rails, AngularJS','SQLite and C','c#.net','Java and PHP','Unknown','Ruby on Rails','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Proprietary','2-clause BSD license','GPL','Proprietary, GPL','Apache License','AGPL','Eclipse Public License','Proprietary, Open source','Unknown','AGPL; Proprietary (version 4)','CPAL','(modified) BSD license','Open source','LGPL','Open source (core only)','Mozilla Public License','Open source (disputed)','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Software",
 									local : ['Open Workbench','phpGroupWare','Trello','Odoo','Microsoft Dynamics AX','SwiftKanban','Traction TeamPage','Ubidesk','TargetProcess','HP Project & Portfolio Software','DeskAway','NetSuite','Métier','Anyplan','Celoxis','Onepoint Project','TACTIC','Milestones Professional','NetPoint','Realisor','OpenProject','iManageProject','MacProject','Apache Bloodhound','Kayako helpdesk software','RhodeCode','Proliance','Projecturf','Redbooth','dotProject','O3Spaces','Planner Suite','The Bug Genie','Assembla','Merlin','Huddle','GroveSite','Contactizer','web2project','Hall.com','Mavenlink','Ganttic','Doolphy','Calligra Plan','Feng Office Community Edition','Tom's Planner','FMYI','Goodwerp','Fieldwire','PHProjekt','TeamDynamixHE','GanttProject','PLANTA Project','10,000ft','eXo Platform','5pm','Asana','Freedcamp','Advanced Projects','Compuware Changepoint','TaskJuggler','ClipPod','Clarizen','Prolog','Basecamp','Pivotal Tracker','in-Step BLUE','Journyx','Microsoft SharePoint Server','Eclipse PPM software','ProjectManager.com','DynaRoad','Copper Project','Wrike','Collabtive','ConceptDraw Project','JIRA','Project Builder','Twproject','Concerto Projects','RationalPlan','2-plan','Microsoft Team Foundation Server','RiskyProject','AtTask','Groupiful','Deltek Open Plan','Severa','Zoho Projects','OmniPlan','VPMi','Spider Project','Projektron BCS','Workgroups DaVinci','Central Desktop','FogBugz','MyWorkPLAN','FastTrack Schedule','Teamcenter','MantisBT','Easy projects','FinancialForce.com','Projector PSA','Planisware','Projectplace','Redmine','Project KickStart','MyIntervals','CEITON','workspace.com','ProjectLink','Deltek WelcomHome','Intervals','Oracle Primavera EPPM (Primavera P6)','TestTrack','ClickHome','Brightpod','LibrePlan','Intellinote','enQuire','Axosoft','Sciforma','24SevenOffice','WorkPLAN Enterprise','Talygen','Apollo','Binfire','Hansoft','ProjeQtOr','ProjectLibre','QuickBase','eGroupWare','BrightWork','Bontq','TrackerSuite.Net','Smartsheet','Genius Project','Microsoft Office Project Server','Launchpad','MindGenius','OpenProj','Project.net','SAP Business ByDesign','MatchWare MindView 5 Business Edition','Project Team Builder','Apache OFBiz','LisaProject','AceProject','InLoox','Priority Matrix','LiquidPlanner','Clinked','Fossil-scm','Microsoft Project','Endeavour Software Project Management','Trac','Group-Office','OnePager Pro','FusionForge','Hyperoffice','Eylean Board','Planbox','Plandora','TeamLab','']
 								});
 						</script>

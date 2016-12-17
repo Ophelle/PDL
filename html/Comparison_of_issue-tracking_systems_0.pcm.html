@@ -29,23 +29,11 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Implementation language(s) : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Implementation language(s) : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Refs : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Refs : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Launch date : </label></br> <input id="4" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Creator : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>System : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Back end :</label></br>
 											<input type="checkbox" name="Feature" >Flat file</br>	
@@ -74,27 +62,34 @@
 											<input type="checkbox" name="Feature" >Berkeley DB</br>	
 											<input type="checkbox" name="Feature" >Text files with custom daemon</br>	
 											<input type="checkbox" name="Feature" >search engine</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Launch date : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>System : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Creator : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Implementation language(s)",
 									local : ['kernel: Java; API: Java','Ruby','C++ and PHP','C','Java','Java, C#','kernel: executables for several platforms; hooks: Perl and Visual Basic','PHP','ASP','Java, C++, others','.NET','Python','C++, JavaScript','PHP, Java','Perl','C#, .NET','C, Java','Python, JavaScript','Emacs','Python,  JavaScript','C#','ASP on Windows, PHP on Mac, FreeBSD, and Linux','Java, MPS-based DSL','C, Web Front-end In Perl','.NET (client), Java (server)','HTML, Java on all platforms','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Refs",
 									local : ['','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#2").typeahead({
+									name:"License",
 									local : ['Proprietary','Proprietary, some parts GPL','Proprietary, hosted.','Proprietary, Saas','Proprietary, stand-alone and hosted, free version, free for open source projects','Proprietary. Free community licenses for open source and academic projects','GPLv2','Saas','AGPL','GPL','Proprietary, hosted; available for open source projects','Proprietary, Commercial','MIT license (ZPL v 2.0 for the template system)','Apache License','New BSD','Proprietary, some parts LGPL','Proprietary, online, hosted.','BSD','MPL','Mozilla Public License 1.1','Proprietary, free version','Proprietary, hosted','Proprietary, hosted. Available for free for open source projects','Proprietary, free version for public projects, non-profits and academic institutions','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['BMC Software','Canonical Ltd.','Ivaldi','Axosoft LLC','Turbine interactive','Jean-Philippe Lang','SysAid Technologies','Rational Software','Ka-Ping Yee, Richard Jones','Open Lab','Free Software Foundation','Microsoft','Various (open source contributors)','originally Starbase Corporation, currently Borland','Apache Software Foundation','otrs.org','Artenum','Doug Luxem','Usersnap GmbH','Seapine Software','Best Practical Solutions, LLC','INDEPNET','TechExcel','Zoho Corp.','Debian','Atlassian','Wrike, Inc.','Hornbill Systems','Google Code','Mozilla Foundation','Edgewall Software','Fog Creek Software','Assembla','Pivotal Labs','Kayako','MacsDesign Studio, LLC','Carsten Dominik','Planbox','JetBrains s.r.o.','D. Richard Hipp','Bontq LLC','Hewlett-Packard, formerly Mercury Interactive','Automation Centre','']
-								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#3").typeahead({
+									name:"System",
 									local : ['LibreSource','Usersnap','YouTrack','Request Tracker','Apache Bloodhound','Bugzilla','OTRS','TrackerSuite.Net','Liberum Help Desk','StarTeam','Launchpad','Plain Ticket','Team Foundation Server','Assembla Tickets','GLPI','Brimir','org-mode','Planbox','Axosoft','TestTrack','MantisBT','IBM Rational Team Concert','Teamwork','Debbugs','Fossil','Pivotal Tracker','HP Quality Center','IBM Rational ClearQuest','The Bug Genie','Wrike','Web Help Desk','Microsoft Dynamics CRM','Roundup','SysAid','Redmine','Trac','Kayako SupportSuite','FusionForge','JIRA','TechExcel's DevTrack','FogBugz','Supportworks','Zoho BugTracker','GNATS','Google Code Hosting','Bontq','BMC Remedy Action Request System','']
+								});
+								$("#4").typeahead({
+									name:"Creator",
+									local : ['BMC Software','Canonical Ltd.','Ivaldi','Axosoft LLC','Turbine interactive','Jean-Philippe Lang','SysAid Technologies','Rational Software','Ka-Ping Yee, Richard Jones','Open Lab','Free Software Foundation','Microsoft','Various (open source contributors)','originally Starbase Corporation, currently Borland','Apache Software Foundation','otrs.org','Artenum','Doug Luxem','Usersnap GmbH','Seapine Software','Best Practical Solutions, LLC','INDEPNET','TechExcel','Zoho Corp.','Debian','Atlassian','Wrike, Inc.','Hornbill Systems','Google Code','Mozilla Foundation','Edgewall Software','Fog Creek Software','Assembla','Pivotal Labs','Kayako','MacsDesign Studio, LLC','Carsten Dominik','Planbox','JetBrains s.r.o.','D. Richard Hipp','Bontq LLC','Hewlett-Packard, formerly Mercury Interactive','Automation Centre','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

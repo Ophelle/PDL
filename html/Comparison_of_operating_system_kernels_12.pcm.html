@@ -29,30 +29,28 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Solaris kernel :</label></br>
-								<input type="radio" name="FeatureSolaris kernel" value="oui">Yes <input type="radio" name="FeatureSolaris kernel" value = "non">No <input type="radio" name="FeatureSolaris kernel" value = "non">Partial </br>
-								
-								</br>	
 								<label>Linux :</label></br>
 								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
+								
+								</br>	
+								<label>Kernel name : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Solaris kernel :</label></br>
+								<input type="radio" name="FeatureSolaris kernel" value="oui">Yes <input type="radio" name="FeatureSolaris kernel" value = "non">No <input type="radio" name="FeatureSolaris kernel" value = "non">Partial </br>
 								
 								</br>	
 								<label>Windows NT kernel :</label></br>
 								<input type="radio" name="FeatureWindows NT kernel" value="oui">Yes <input type="radio" name="FeatureWindows NT kernel" value = "non">No <input type="radio" name="FeatureWindows NT kernel" value = "non">Partial </br>
 								
 								</br>	
-								<label>Kernel name : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>FreeBSD kernel : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>FreeBSD kernel : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Kernel name",
 									local : ['CRC32c','RIPEMD-320','HMAC','RIPEMD-128','RIPEMD-160','MDC2','LASH-256','RIPEMD-256','CRC-32 (IEEE)','Whirlpool','Tiger','MD2','Michael MIC','MD5','SHA-1','SHA-256','GOST','LASH-384','LASH-160','MD4','SHA-384','LASH-512','SHA-512','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"FreeBSD kernel",
 									local : ['Yes','?','']
 								});
 						</script>

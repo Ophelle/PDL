@@ -29,39 +29,35 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>IDE : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
-								
 								</br>	
 								<label>Latest Release :</label></br>
 											<input type="checkbox" name="Feature" >2.6.4 </br>	
 											<input type="checkbox" name="Feature" >Jan 19</br>	
 											<input type="checkbox" name="Feature" >2015</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Developer : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Platforms : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Developer : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>IDE : </label></br> <input id="5" type="text" name="Feature"></br>
-								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Java Virtual Machine','']
+								$("#0").typeahead({
+									name:"IDE",
+									local : ['EclipseFP Plugin','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"License",
 									local : ['EPL?','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#2").typeahead({
+									name:"Developer",
 									local : ['eclipsefp.github.io','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['EclipseFP Plugin','']
+								$("#3").typeahead({
+									name:"Platforms",
+									local : ['Java Virtual Machine','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

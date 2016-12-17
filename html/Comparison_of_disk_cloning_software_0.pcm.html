@@ -29,6 +29,18 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Operating system : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Sector by sector :</label></br>
+								<input type="radio" name="FeatureSector by sector" value="oui">Yes <input type="radio" name="FeatureSector by sector" value = "non">No <input type="radio" name="FeatureSector by sector" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>User interface : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Name : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
 								<label>File by file :</label></br>
 											<input type="checkbox" name="Feature" >FAT32</br>	
 											<input type="checkbox" name="Feature" >btrfs</br>	
@@ -46,7 +58,7 @@
 UFS (beta)</br>	
 											<input type="checkbox" name="Feature" >HFS (beta)</br>	
 											<input type="checkbox" name="Feature" >NTFS (experimental)</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>Mount or extract :</label></br>
 								<input type="radio" name="FeatureMount or extract" value="oui">Yes <input type="radio" name="FeatureMount or extract" value = "non">No <input type="radio" name="FeatureMount or extract" value = "non">Partial </br>
@@ -56,54 +68,32 @@ UFS (beta)</br>
 								<input type="radio" name="FeatureHot transfer" value="oui">Yes <input type="radio" name="FeatureHot transfer" value = "non">No <input type="radio" name="FeatureHot transfer" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Operation model - Client–server :</label></br>
-								<input type="radio" name="FeatureOperation model - Client–server" value="oui">Yes <input type="radio" name="FeatureOperation model - Client–server" value = "non">No <input type="radio" name="FeatureOperation model - Client–server" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>User interface : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Operation model - Standalone :</label></br>
 								<input type="radio" name="FeatureOperation model - Standalone" value="oui">Yes <input type="radio" name="FeatureOperation model - Standalone" value = "non">No <input type="radio" name="FeatureOperation model - Standalone" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Operation model - Offline
-(From a Live OS) :</label></br>
-								<input type="radio" name="FeatureOperation model - Offline
-(From a Live OS)" value="oui">Yes <input type="radio" name="FeatureOperation model - Offline
-(From a Live OS)" value = "non">No <input type="radio" name="FeatureOperation model - Offline
-(From a Live OS)" value = "non">Partial </br>
+								<label>Operation model - Client–server :</label></br>
+								<input type="radio" name="FeatureOperation model - Client–server" value="oui">Yes <input type="radio" name="FeatureOperation model - Client–server" value = "non">No <input type="radio" name="FeatureOperation model - Client–server" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>License : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Sector by sector :</label></br>
-								<input type="radio" name="FeatureSector by sector" value="oui">Yes <input type="radio" name="FeatureSector by sector" value = "non">No <input type="radio" name="FeatureSector by sector" value = "non">Partial </br>
+								<label>Operation model - Offline(From a Live OS) :</label></br>
+								<input type="radio" name="FeatureOperation model - Offline(From a Live OS)" value="oui">Yes <input type="radio" name="FeatureOperation model - Offline(From a Live OS)" value = "non">No <input type="radio" name="FeatureOperation model - Offline(From a Live OS)" value = "non">Partial </br>
 											<input type="text"/></br>								
-								</br>	
-								<label>Operating system : </label></br> <input id="10" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Name : </label></br> <input id="11" type="text" name="Feature"></br>
-								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Graphical','Command-line','Text-based','Text-based
-Command-line','Graphical
-Command-line','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"License",
 									local : ['GPL','Shareware','Freeware','BSD/CDDL/GNU/others','Part of Mac OS X','Freemium','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Operating system",
 									local : ['Linux','OS X','Windows','Independent (Live OS)','Unix','Windows, Linux, DOS','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#2").typeahead({
+									name:"User interface",
+									local : ['Graphical','Command-line','Text-based','Text-basedCommand-line','GraphicalCommand-line','']
+								});
+								$("#3").typeahead({
+									name:"Name",
 									local : ['partimage','Acronis True Image','Apple Software Restore','ntfsclone','Clonezilla','dd (Unix)','Mondo Rescue','Macrium Reflect','Ghost v15','FSArchiver','Disk Utility','GParted Live CD','Kleo Bare Metal Backup','Partition-Saving','PING','EASIS Drive Cloning','dcfldd','Image for Windows','Redo Backup and Recovery','']
 								});
 						</script>

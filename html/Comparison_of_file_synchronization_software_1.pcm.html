@@ -29,8 +29,15 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>OS : </label></br> <input id="1" type="text" name="Feature"></br>
+								<label>Detect move :</label></br>
+								<input type="radio" name="FeatureDetect move" value="oui">Yes <input type="radio" name="FeatureDetect move" value = "non">No <input type="radio" name="FeatureDetect move" value = "non">Partial </br>
 								
+								</br>	
+								<label>Vendor : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Full duplex transfer : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Name : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Comments :</label></br>
 											<input type="checkbox" name="Feature" >Sync folders</br>	
@@ -50,66 +57,54 @@
 											<input type="checkbox" name="Feature" >etc.</br>	
 											<input type="checkbox" name="Feature" >Sync local folders via OmniSync or WebDAV server but not to the server itself</br>	
 											<input type="checkbox" name="Feature" >Syncs mobile devices; successor to Microsoft ActiveSync</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
+								</br>	
+								<label>Online cloud storage :</label></br>
+								<input type="radio" name="FeatureOnline cloud storage" value="oui">Yes <input type="radio" name="FeatureOnline cloud storage" value = "non">No <input type="radio" name="FeatureOnline cloud storage" value = "non">Partial </br>
+								
+								</br>	
+								<label>Prior file versions, revision control : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>OS : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Remote desktop :</label></br>
 								<input type="radio" name="FeatureRemote desktop" value="oui">Yes <input type="radio" name="FeatureRemote desktop" value = "non">No <input type="radio" name="FeatureRemote desktop" value = "non">Partial </br>
-											<input type="text"/></br>								
+								
+								</br>	
+								<label>Portable :</label></br>
+								<input type="radio" name="FeaturePortable" value="oui">Yes <input type="radio" name="FeaturePortable" value = "non">No <input type="radio" name="FeaturePortable" value = "non">Partial </br>
+								
+								</br>	
+								<label>Detect rename :</label></br>
+								<input type="radio" name="FeatureDetect rename" value="oui">Yes <input type="radio" name="FeatureDetect rename" value = "non">No <input type="radio" name="FeatureDetect rename" value = "non">Partial </br>
+								
 								</br>	
 								<label>Scheduling :</label></br>
 											<input type="checkbox" name="Feature" >No</br>	
 											<input type="checkbox" name="Feature" >syncs whenever it's online</br>	
 											<input type="checkbox" name="Feature" >syncs whenever it's online and not paused</br>	
 											<input type="checkbox" name="Feature" >Monitoring synchronizing folder continuously (once a minute)</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Vendor : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Detect rename :</label></br>
-								<input type="radio" name="FeatureDetect rename" value="oui">Yes <input type="radio" name="FeatureDetect rename" value = "non">No <input type="radio" name="FeatureDetect rename" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Detect move :</label></br>
-								<input type="radio" name="FeatureDetect move" value="oui">Yes <input type="radio" name="FeatureDetect move" value = "non">No <input type="radio" name="FeatureDetect move" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Prior file versions, revision control : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Full duplex transfer : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Name : </label></br> <input id="10" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Portable :</label></br>
-								<input type="radio" name="FeaturePortable" value="oui">Yes <input type="radio" name="FeaturePortable" value = "non">No <input type="radio" name="FeaturePortable" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Online cloud storage :</label></br>
-								<input type="radio" name="FeatureOnline cloud storage" value="oui">Yes <input type="radio" name="FeatureOnline cloud storage" value = "non">No <input type="radio" name="FeatureOnline cloud storage" value = "non">Partial </br>
-											<input type="text"/></br>								
+							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Windows','OSX, OmniGroup software for iOS, open source framework available','Windows (Vista and greater), Windows Mobile, OSX','Windows / Mac OS X / Linux / FreeBSD / Android / iOS','Windows, OSX','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Vendor",
 									local : ['Microsoft','CodeStunts','Gbridge LLC','BitTorrent, Inc','CobianSoft','OmniGroup','SOB Soft','Lumisoft','']
 								});
+								$("#1").typeahead({
+									name:"Full duplex transfer",
+									local : ['','Yes','No','?','']
+								});
+								$("#2").typeahead({
+									name:"Name",
+									local : ['Microsoft SyncToy','OmniGroup OmniPresence','Cobian Backup','FTP LiveSync','Windows Mobile Device Center','Microsoft ActiveSync','Magic Mirror Sync','BitTorrent Sync','Windows Live Mesh (discontinued 13 February 2013)','Gbridge','Microsoft Sync Framework','Echosync','Windows Live Sync (discontinued 31 March 2011)','Briefcase in Microsoft Windows','']
+								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Prior file versions, revision control",
 									local : ['No, recycle bin only','Yes (previous versions moved to archive folder)','?','','Yes, trash folder','Yes, via VNC or RDP','No','No, via local Time Machine backup only','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['','Yes','No','?','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['Microsoft SyncToy','OmniGroup OmniPresence','Cobian Backup','FTP LiveSync','Windows Mobile Device Center','Microsoft ActiveSync','Magic Mirror Sync','BitTorrent Sync','Windows Live Mesh (discontinued 13 February 2013)','Gbridge','Microsoft Sync Framework','Echosync','Windows Live Sync (discontinued 31 March 2011)','Briefcase in Microsoft Windows','']
+									name:"OS",
+									local : ['Windows','OSX, OmniGroup software for iOS, open source framework available','Windows (Vista and greater), Windows Mobile, OSX','Windows / Mac OS X / Linux / FreeBSD / Android / iOS','Windows, OSX','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

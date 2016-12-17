@@ -29,24 +29,7 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Functional : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Language : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Procedural : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Generic : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Reflective : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Standardized? :</label></br>
-								<input type="radio" name="FeatureStandardized?" value="oui">Yes <input type="radio" name="FeatureStandardized?" value = "non">No <input type="radio" name="FeatureStandardized?" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Language : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Intended use :</label></br>
 											<input type="checkbox" name="Feature" >Application</br>	
@@ -105,49 +88,59 @@
 											<input type="checkbox" name="Feature" >mobile App</br>	
 											<input type="checkbox" name="Feature" >text processing</br>	
 											<input type="checkbox" name="Feature" >game</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Event-driven : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Procedural : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Object-oriented :</label></br>
 								<input type="radio" name="FeatureObject-oriented" value="oui">Yes <input type="radio" name="FeatureObject-oriented" value = "non">No <input type="radio" name="FeatureObject-oriented" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Other paradigm(s) : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+								<label>Other paradigm(s) : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Reflective : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Functional : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Event-driven : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Standardized? :</label></br>
+								<input type="radio" name="FeatureStandardized?" value="oui">Yes <input type="radio" name="FeatureStandardized?" value = "non">No <input type="radio" name="FeatureStandardized?" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Generic : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
 								<label>Imperative :</label></br>
 								<input type="radio" name="FeatureImperative" value="oui">Yes <input type="radio" name="FeatureImperative" value = "non">No <input type="radio" name="FeatureImperative" value = "non">Partial </br>
 											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['','Yes','can be viewed as','Functional','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Language",
 									local : ['Cython','ActionScript 3.0','Haxe','Seed7','APL','PL/I','FreeBASIC','SNOBOL','C','CLU','Visual FoxPro','Livecode','Opa','Perl','RPG','Bro','Factor','G2','J','Dart','Prolog','BlitzMax','ColdFusion (CFML)','Euphoria','Maple','Tcl','COMAL 80','Bash','BASIC','Visual Basic','OCaml','Oz','Dylan','HyperTalk','Small Basic','Clojure','PHP','Oberon','Plus','REBOL','S-Lang','Windows PowerShell','Cobra','ALGOL 58','JADE','BitC','MATLAB','Oxygene','Clarion','Swift','Xojo','Kotlin','XL','JavaScript','Gambas','Ruby','Scheme','Ateji PX','Language','COBOL','Objective-C','Erlang','Object Pascal (Delphi)','PureBasic','C#','Clean','Eiffel','Harbour','FP','Nim','Simula','Forth','AutoHotkey','Falcon','ALGOL 60','Go','AutoIt','Gosu','REALbasic','Game Maker Language','Mathematica','ALGOL 68','Modula-3','Joy','Lisp','Pascal','Ada','Racket','Logtalk','Io','BLISS','Assembly language','K','Scala','Elixir','Smalltalk','Fortran','BBj','Haskell','ISLISP','Rust','Occam','GraphTalk','D','Python','LabVIEW (G)','Boo','Java','Common Lisp','GLBasic','C++','MUMPS (M)','Visual Basic .NET','BeanShell','Aldor','Groovy','Julia','Lua','S','Standard ML','Visual Prolog','HyperNext','Modula-2','Crystal 1.0.0','F#','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Procedural",
 									local : ['','Yes','Procedural','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['','Yes','Generic','']
+								$("#2").typeahead({
+									name:"Other paradigm(s)",
+									local : ['Other paradigm(s)','','discrete event simulation, multi-threaded (quasi-parallel) program execution','multiple dispatch, meta, scalar and array-oriented, parallel, concurrent, distributed ("cloud")','concurrent, logic','array-oriented, function-level, tacit','multi-paradigm, extensible, structured','array-oriented, tacit','structured, concurrent','multiple dispatch, Concurrent, meta','dialected','aspect-oriented','stack-oriented','concurrent','logic, distributed','distributed','component-oriented','concurrent, distributed','concurrent, process-oriented','declarative, logic','concept programming','structured','weakly typed','pipeline','logic','concurrent, distributed, imperative object-oriented','generative, concurrent','lazy evaluation','dataflow, visual','pi calculus','concurrent, declarative','modular, logic, meta','data-centric, logic','declarative','common graphical development and runtime environment','simple object-oriented','prototype-based','any, syntax is usually highly specific, related to the target processor','extensible syntax, syntactic macros, multiple dispatch','concurrent, multi-user, NoSQL, transaction processing','prototype OOP, message oriented, tabular programming','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#3").typeahead({
+									name:"Reflective",
 									local : ['','Yes','Reflective','']
 								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#4").typeahead({
+									name:"Functional",
+									local : ['','Yes','can be viewed as','Functional','']
+								});
+								$("#5").typeahead({
+									name:"Event-driven",
 									local : ['','Yes','Event-driven','']
 								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['Other paradigm(s)','','discrete event simulation, multi-threaded (quasi-parallel) program execution','multiple dispatch, meta, scalar and array-oriented, parallel, concurrent, distributed ("cloud")','concurrent, logic','array-oriented, function-level, tacit','multi-paradigm, extensible, structured','array-oriented, tacit','structured, concurrent','multiple dispatch, Concurrent, meta','dialected','aspect-oriented','stack-oriented','concurrent','logic, distributed','distributed','component-oriented','concurrent, distributed','concurrent, process-oriented','declarative, logic','concept programming','structured','weakly typed','pipeline','logic','concurrent, distributed, imperative object-oriented','generative, concurrent','lazy evaluation','dataflow, visual','pi calculus','concurrent, declarative','modular, logic, meta','data-centric, logic','declarative','common graphical development and runtime environment','simple object-oriented','prototype-based','any, syntax is usually highly specific, related to the target processor','extensible syntax, syntactic macros, multiple dispatch','concurrent, multi-user, NoSQL, transaction processing','prototype OOP, message oriented, tabular programming','']
+								$("#6").typeahead({
+									name:"Generic",
+									local : ['','Yes','Generic','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

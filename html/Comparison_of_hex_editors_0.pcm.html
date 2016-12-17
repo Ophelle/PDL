@@ -29,30 +29,21 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Linux :</label></br>
-								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
+								<label>Windows :</label></br>
+								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
 								
 								</br>	
 								<label>Macintosh :</label></br>
 								<input type="radio" name="FeatureMacintosh" value="oui">Yes <input type="radio" name="FeatureMacintosh" value = "non">No <input type="radio" name="FeatureMacintosh" value = "non">Partial </br>
 								
 								</br>	
+								<label>Software license : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Cost : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
 								<label>Console :</label></br>
 								<input type="radio" name="FeatureConsole" value="oui">Yes <input type="radio" name="FeatureConsole" value = "non">No <input type="radio" name="FeatureConsole" value = "non">Partial </br>
-								
-								</br>	
-								<label>Software license : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>GUI :</label></br>
-								<input type="radio" name="FeatureGUI" value="oui">Yes <input type="radio" name="FeatureGUI" value = "non">No <input type="radio" name="FeatureGUI" value = "non">Partial </br>
-								
-								</br>	
-								<label>Windows :</label></br>
-								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
-								
-								</br>	
-								<label>Cost : </label></br> <input id="7" type="number" name="Feature"></br>
 								
 								</br>	
 								<label>Latest release date :</label></br>
@@ -104,13 +95,21 @@
 											<input type="checkbox" name="Feature" >July 13</br>	
 											<input type="checkbox" name="Feature" >June 19</br>	
 											<input type="checkbox" name="Feature" >September 26</br>	
-									
+							
 								</br>	
-								<label>Latest version : </label></br> <input id="9" type="number" name="Feature"></br>
+								<label>Linux :</label></br>
+								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
+								
+								</br>	
+								<label>Latest version : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>GUI :</label></br>
+								<input type="radio" name="FeatureGUI" value="oui">Yes <input type="radio" name="FeatureGUI" value = "non">No <input type="radio" name="FeatureGUI" value = "non">Partial </br>
 								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Software license",
 									local : ['Proprietary','Proprietary (Freeware)','none (web application)','GPL / Free Software','free (web application)','APL','BSD-3','MPL','Two-clause BSD license','MIT License','Proprietary (sourcecode included)','']
 								});
 						</script>

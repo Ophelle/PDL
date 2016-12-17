@@ -29,6 +29,14 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Primary service : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Service : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Multilingual :</label></br>
+								<input type="radio" name="FeatureMultilingual" value="oui">Yes <input type="radio" name="FeatureMultilingual" value = "non">No <input type="radio" name="FeatureMultilingual" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
 								<label>Owner :</label></br>
 											<input type="checkbox" name="Feature" >Status Net</br>	
 											<input type="checkbox" name="Feature" >Inc.</br>	
@@ -37,50 +45,37 @@
 											<input type="checkbox" name="Feature" >Facebook</br>	
 											<input type="checkbox" name="Feature" >Twitter</br>	
 											<input type="checkbox" name="Feature" >Instapray</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Primary service : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>Ad-free :</label></br>
 								<input type="radio" name="FeatureAd-free" value="oui">Yes <input type="radio" name="FeatureAd-free" value = "non">No <input type="radio" name="FeatureAd-free" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Service : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Content license : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Software license : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Software license : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Multilingual :</label></br>
-								<input type="radio" name="FeatureMultilingual" value="oui">Yes <input type="radio" name="FeatureMultilingual" value = "non">No <input type="radio" name="FeatureMultilingual" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Launched : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Content license : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Launched : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Primary service",
 									local : ['social network','micro-blogging','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Service",
 									local : ['Twitter','identi.ca','Tout','Yammer','Google+','Facebook','Instapray','']
 								});
+								$("#2").typeahead({
+									name:"Content license",
+									local : ['own TOS','CC-BY 3.0','']
+								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Software license",
 									local : ['proprietary','Apache v2 (pump.io)','']
 								});
 								$("#4").typeahead({
-									name:"list4",
+									name:"Launched",
 									local : ['2011-06','2013-03','2004-02','2008-09','2010-04','2008-07','2006-08','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['own TOS','CC-BY 3.0','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

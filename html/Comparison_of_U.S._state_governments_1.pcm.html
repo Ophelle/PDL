@@ -29,11 +29,7 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>State : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Key : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Key : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Notes :</label></br>
 											<input type="checkbox" name="Feature" >Arkansas</br>	
@@ -53,15 +49,17 @@
 											<input type="checkbox" name="Feature" >but keeping it for tax increases.</br>	
 											<input type="checkbox" name="Feature" >The Alabama State Senate allows a filibuster</br>	
 											<input type="checkbox" name="Feature" >and has a general three-fifths requirement to enact cloture. A simple majority of 18 is acceptable when dealing with the budget and redistricting.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
+								</br>	
+								<label>State : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['California','Alabama','Arkansas','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Key",
 									local : ['','']
+								});
+								$("#1").typeahead({
+									name:"State",
+									local : ['California','Alabama','Arkansas','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

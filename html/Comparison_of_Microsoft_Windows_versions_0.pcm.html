@@ -29,87 +29,65 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Codename : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Editions : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Release date : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Latest version : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Source model : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Target market : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Editions : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Codename : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Architecture : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Architecture : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Target market : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Name : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Release date : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Status support : </label></br> <input id="7" type="text" name="Feature"></br>
 								</br>	
 								<label>OS required :</label></br>
 											<input type="checkbox" name="Feature" >DOS 3.3 or higher</br>	
 											<input type="checkbox" name="Feature" >DOS 3.1 or higher</br>	
 											<input type="checkbox" name="Feature" >DOS 2.0 or higher</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Latest version : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Name : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Status support : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+								<label>Source model : </label></br> <input id="8" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Editions",
+									local : ['','Windows 3.0Windows 3.0aWindows 3.0a with Multimedia Extensions','Windows 3.1 (build 040)Windows for Workgroups 3.1Windows 3.11Windows for Workgroups 3.11Windows 3.2 (Simplified Chinese only)','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['*3.1: Janus
-3.1 for Workgroups: Kato
-3.11: Snowball (LB)
-3.11 for Workgroups: Sparta','','Interface Manager','']
+									name:"Latest version",
+									local : ['1.04 (1987-04-08)','2.03 (1987-12-09)','3.0a withMultimedia Extensions(1991-10-20)','2.11 (1989-03-13)','3.11 (1993-12-31)','0.9 (1984)','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['1992-04-06','1985-11-20','1990-05-22','1988-05-27','1987-12-09','Pre-release version','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['Closed source','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['','Windows 3.0
-Windows 3.0a
-Windows 3.0a with Multimedia Extensions','Windows 3.1 (build 040)
-Windows for Workgroups 3.1
-Windows 3.11
-Windows for Workgroups 3.11
-Windows 3.2 (Simplified Chinese only)','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['16-bit','16-bit*','']
-								});
-								$("#6").typeahead({
-									name:"list6",
+									name:"Target market",
 									local : ['Desktops','']
 								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['1.04 (1987-04-08)','2.03 (1987-12-09)','3.0a with
-Multimedia Extensions
-(1991-10-20)','2.11 (1989-03-13)','3.11 (1993-12-31)','0.9 (1984)','']
+								$("#3").typeahead({
+									name:"Codename",
+									local : ['*3.1: Janus3.1 for Workgroups: Kato3.11: Snowball (LB)3.11 for Workgroups: Sparta','','Interface Manager','']
 								});
-								$("#8").typeahead({
-									name:"list8",
+								$("#4").typeahead({
+									name:"Architecture",
+									local : ['16-bit','16-bit*','']
+								});
+								$("#5").typeahead({
+									name:"Name",
 									local : ['Windows 1.0 DR5','Windows 1.0','Windows 2.1x','Windows 2.0','Windows 3.0','Windows 3.1x','']
 								});
-								$("#9").typeahead({
-									name:"list9",
-									local : ['Unsupported
-(2001-12-31)','Unsupported
-(1985)','']
+								$("#6").typeahead({
+									name:"Release date",
+									local : ['1992-04-06','1985-11-20','1990-05-22','1988-05-27','1987-12-09','Pre-release version','']
+								});
+								$("#7").typeahead({
+									name:"Status support",
+									local : ['Unsupported(2001-12-31)','Unsupported(1985)','']
+								});
+								$("#8").typeahead({
+									name:"Source model",
+									local : ['Closed source','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

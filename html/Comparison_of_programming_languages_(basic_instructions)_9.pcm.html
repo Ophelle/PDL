@@ -29,26 +29,23 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>handler : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>throw : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>assertion : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>assertion : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>throw : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>handler : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['','(2.x)','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"throw",
 									local : ['','(2.x)','N/A','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"assertion",
 									local : ['N/A','','?','']
+								});
+								$("#2").typeahead({
+									name:"handler",
+									local : ['','(2.x)','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

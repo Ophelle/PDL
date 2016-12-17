@@ -29,116 +29,102 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Code Name : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Model : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>USB : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Features : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>PCI-Express : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Processors Supported :</label></br>
+											<input type="checkbox" name="Feature" >Athlon 64 X2</br>	
+											<input type="checkbox" name="Feature" >Athlon 64</br>	
+											<input type="checkbox" name="Feature" >Sempron 64
+Socket AM2</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Sound : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>FSB/HTFrequency (MHz) : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Fabrication
-process (nm) : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Code Name : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>SLI :</label></br>
-								<input type="radio" name="FeatureSLI" value="oui">Yes <input type="radio" name="FeatureSLI" value = "non">No <input type="radio" name="FeatureSLI" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Processors Supported : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>FSB/HT
-Frequency (MHz) : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>PCI : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Model : </label></br> <input id="10" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>LAN :</label></br>
-											<input type="checkbox" name="Feature" >1000 Mbit</br>	
-											<input type="checkbox" name="Feature" >s</br>	
-											<input type="checkbox" name="Feature" >4*1000 Mbit</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Features : </label></br> <input id="12" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>PATA : </label></br> <input id="13" type="text" name="Feature"></br>
-								
+								<label>Fabricationprocess (nm) : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>SATA :</label></br>
 											<input type="checkbox" name="Feature" >12 Ports 3.0Gbit</br>	
 											<input type="checkbox" name="Feature" >s</br>	
 											<input type="checkbox" name="Feature" >4 Ports 3.0Gbit</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Notes : </label></br> <input id="15" type="text" name="Feature"></br>
-								
+								<label>USB : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>LAN :</label></br>
+											<input type="checkbox" name="Feature" >1000 Mbit</br>	
+											<input type="checkbox" name="Feature" >s</br>	
+											<input type="checkbox" name="Feature" >4*1000 Mbit</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>Release Date :</label></br>
 											<input type="checkbox" name="Feature" >September</br>	
 											<input type="checkbox" name="Feature" >2007</br>	
 											<input type="checkbox" name="Feature" >December 6</br>	
 											<input type="checkbox" name="Feature" >2006</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>SLI : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>PATA : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>PCI : </label></br> <input id="8" type="text" name="Feature"></br>
+								</br>	
+								<label>Sound : </label></br> <input id="9" type="text" name="Feature"></br>
+								</br>	
+								<label>PCI-Express : </label></br> <input id="10" type="text" name="Feature"></br>
+								</br>	
+								<label>Notes : </label></br> <input id="11" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['2*MCP55','MCP68','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['12 Ports Rev 2.0','20 Ports Rev 2.0','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['5 Ports','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['1.0a
-56 lanes','1.1
-20 lanes','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['HDA','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['','']
-								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['Athlon 64 X2, Athlon 64, Sempron 64
-Socket AM2','AMD Dual Dual-core Socket F','']
-								});
-								$("#8").typeahead({
-									name:"list8",
-									local : ['HT 1 GHz','HT 1 GHz *2','']
-								});
-								$("#9").typeahead({
-									name:"list9",
+								$("#0").typeahead({
+									name:"Model",
 									local : ['nForce 630a','nForce 680a SLI','']
 								});
-								$("#10").typeahead({
-									name:"list10",
+								$("#1").typeahead({
+									name:"Features",
 									local : ['','Onboard GeForce 7025/7050','']
 								});
-								$("#11").typeahead({
-									name:"list11",
+								$("#2").typeahead({
+									name:"FSB/HTFrequency (MHz)",
+									local : ['HT 1 GHz','HT 1 GHz *2','']
+								});
+								$("#3").typeahead({
+									name:"Code Name",
+									local : ['2*MCP55','MCP68','']
+								});
+								$("#4").typeahead({
+									name:"Fabricationprocess (nm)",
+									local : ['','']
+								});
+								$("#5").typeahead({
+									name:"USB",
+									local : ['12 Ports Rev 2.0','20 Ports Rev 2.0','']
+								});
+								$("#6").typeahead({
+									name:"SLI",
+									local : ['x16+x16+x8+x8','No','']
+								});
+								$("#7").typeahead({
+									name:"PATA",
 									local : ['1 Ports UDMA 133','2 Ports UDMA 133','']
 								});
-								$("#12").typeahead({
-									name:"list12",
+								$("#8").typeahead({
+									name:"PCI",
+									local : ['5 Ports','']
+								});
+								$("#9").typeahead({
+									name:"Sound",
+									local : ['HDA','']
+								});
+								$("#10").typeahead({
+									name:"PCI-Express",
+									local : ['1.0a56 lanes','1.120 lanes','']
+								});
+								$("#11").typeahead({
+									name:"Notes",
 									local : ['For dual-socket systems','','']
 								});
 						</script>

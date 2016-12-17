@@ -29,83 +29,69 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>USB : </label></br> <input id="1" type="text" name="Feature"></br>
+								<label>Release Date : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Sound : </label></br> <input id="2" type="text" name="Feature"></br>
+								<label>USB : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Fabricationprocess (nm) : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>PCI : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Sound : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>SATA :</label></br>
+								<input type="radio" name="FeatureSATA" value="oui">Yes <input type="radio" name="FeatureSATA" value = "non">No <input type="radio" name="FeatureSATA" value = "non">Partial </br>
 								
 								</br>	
-								<label>Fabrication
-process (nm) : </label></br> <input id="3" type="text" name="Feature"></br>
+								<label>Features : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Notes : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>FireWire(IEEE1394) :</label></br>
+								<input type="radio" name="FeatureFireWire(IEEE1394)" value="oui">Yes <input type="radio" name="FeatureFireWire(IEEE1394)" value = "non">No <input type="radio" name="FeatureFireWire(IEEE1394)" value = "non">Partial </br>
 								
 								</br>	
-								<label>PCI : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>PATA : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
 								<label>LAN :</label></br>
 											<input type="checkbox" name="Feature" >100 Mbit</br>	
 											<input type="checkbox" name="Feature" >s</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
-								<label>Model : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Features : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>PATA : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>SATA :</label></br>
-								<input type="radio" name="FeatureSATA" value="oui">Yes <input type="radio" name="FeatureSATA" value = "non">No <input type="radio" name="FeatureSATA" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>FireWire
-(IEEE1394) :</label></br>
-								<input type="radio" name="FeatureFireWire
-(IEEE1394)" value="oui">Yes <input type="radio" name="FeatureFireWire
-(IEEE1394)" value = "non">No <input type="radio" name="FeatureFireWire
-(IEEE1394)" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Notes : </label></br> <input id="11" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Release Date : </label></br> <input id="12" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Model : </label></br> <input id="7" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"USB",
 									local : ['6 Ports Rev 1.1','']
 								});
+								$("#1").typeahead({
+									name:"Fabricationprocess (nm)",
+									local : ['','']
+								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"PCI",
 									local : ['5 Ports','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['MCP-D','MCP','']
+									name:"Sound",
+									local : ['AC'97 2.1NVAPU SoundStorm','AC'97 2.1','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['AC'97 2.1
-NVAPU SoundStorm','AC'97 2.1','']
+									name:"Features",
+									local : ['','']
 								});
 								$("#5").typeahead({
-									name:"list5",
+									name:"Notes",
 									local : ['','']
 								});
 								$("#6").typeahead({
-									name:"list6",
+									name:"PATA",
 									local : ['2 Ports UDMA 100','']
 								});
 								$("#7").typeahead({
-									name:"list7",
-									local : ['','']
-								});
-								$("#8").typeahead({
-									name:"list8",
-									local : ['','']
+									name:"Model",
+									local : ['MCP-D','MCP','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

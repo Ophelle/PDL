@@ -29,6 +29,10 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Configuration: GUI, text or both modes? : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Features: : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
 								<label>Remote Access: Web (HTTP), Telnet, SSH, RDP, Serial COM RS232, ... :</label></br>
 											<input type="checkbox" name="Feature" >Web (HTTPS)</br>	
 											<input type="checkbox" name="Feature" >SSH</br>	
@@ -38,28 +42,22 @@
 											<input type="checkbox" name="Feature" >SSH (Not enabeld by default)</br>	
 											<input type="checkbox" name="Feature" >Web GUI</br>	
 											<input type="checkbox" name="Feature" >WebConfig</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Change rules without requiring restart? :</label></br>
-								<input type="radio" name="FeatureChange rules without requiring restart?" value="oui">Yes <input type="radio" name="FeatureChange rules without requiring restart?" value = "non">No <input type="radio" name="FeatureChange rules without requiring restart?" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Configuration: GUI, text or both modes? : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Features: : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>Ability to centrally manage all firewalls together :</label></br>
 								<input type="radio" name="FeatureAbility to centrally manage all firewalls together" value="oui">Yes <input type="radio" name="FeatureAbility to centrally manage all firewalls together" value = "non">No <input type="radio" name="FeatureAbility to centrally manage all firewalls together" value = "non">Partial </br>
 											<input type="text"/></br>								
+								</br>	
+								<label>Change rules without requiring restart? :</label></br>
+								<input type="radio" name="FeatureChange rules without requiring restart?" value="oui">Yes <input type="radio" name="FeatureChange rules without requiring restart?" value = "non">No <input type="radio" name="FeatureChange rules without requiring restart?" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Configuration: GUI, text or both modes?",
 									local : ['GUI','both','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Features:",
 									local : ['Untangle','Zeroshell','ClearOS','OPNsense','pfSense','IPFire','WinGate','']
 								});
 						</script>

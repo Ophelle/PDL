@@ -29,6 +29,10 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Platform : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
 								<label>User Support :</label></br>
 											<input type="checkbox" name="Feature" >Documentation; API;   tutorials; discussion forums; email contacts</br>	
 											<input type="checkbox" name="Feature" >FAQ</br>	
@@ -117,7 +121,15 @@
 											<input type="checkbox" name="Feature" >Paper; tests; examples; tutorial; documentation</br>	
 											<input type="checkbox" name="Feature" >API; technical support from authors</br>	
 											<input type="checkbox" name="Feature" >Limited documentation; Author has limited time to work with clients</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>FIPA Compliant : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>3D Capabilities : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>GIS Capabilities : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Programming Language : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>Primary Domain :</label></br>
 											<input type="checkbox" name="Feature" >Simple Python Multi Agent Systems Framework using Agent</br>	
@@ -221,25 +233,7 @@
 											<input type="checkbox" name="Feature" >2D</br>	
 											<input type="checkbox" name="Feature" >3D simulations of (evolving) multi-agent systems and artificial life</br>	
 											<input type="checkbox" name="Feature" >Cellular automata; General purpose simulator</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Platform : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>3D Capabilities : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>FIPA Compliant : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>License : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>GIS Capabilities : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Programming Language : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>Operating System :</label></br>
 											<input type="checkbox" name="Feature" >Cross platform with binaries available for win32; Windows; Linux; PS-I is not currently available for Macintosh users except via emulation of a Windows</br>	
@@ -343,30 +337,30 @@
 											<input type="checkbox" name="Feature" >Any platform that supports C++;  Technically</br>	
 											<input type="checkbox" name="Feature" >the processing environment is supposedly checked for Java 1.4 but Java 1.5 seems to work fine. Simpackj has been tested with 1.5 and exhibits no issues. The SDK is preferred over the JRE</br>	
 											<input type="checkbox" name="Feature" >as this could be useful for certain types of Java code that you may be writing. The SDK includes a JRE</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
+								$("#0").typeahead({
+									name:"License",
+									local : ['GPL','Free for use and distribution for non-commercial purposes (open source)','Open source (free for academic and non-commercial use)','Academic Free License (open source)','Contact authors for availability','LGPL version 3','Academic Free License – open source','LGPL version 2','Proprietary - (free for academic institutions)','LGPL','Free, Not Open Source','Depends on module: GPL/LGPL/Propertiary','Free with government approval','StarLogo TNG License v1.0 - (closed source) - the code may be freed up eventually. The original StarLogo is apparently going to be released under an open source license soon','Proprietary; Free Personal Learning Edition available','Free for research purposes only','Freely available','BSD','The compiler is freely downloadable for evaluation purposes (open source) Later the system will be put under GNU license','LGPL; associated third party licenses (usually non¬proprietary)','Free (closed source)','Free, open source','Open Source, Free for educational and research applications, Apache Public License 2.0','Unknown','Proprietary; Discounted academic licenses available','Free (closed source) - Clearthought Software License, Version 1.0','Free to modify but not to distribute the modified version','Dual licensed: either accept the LGPL or contact Tryllian to acquire a closed source license','Apache License 2.0','Proprietary; free evaluation version available for research and experimentation (some limitations but no expiration)','Open Source','GPL version 2','GPL; third party license (for  VisualWorks)','new BSD','academic licence / free download','Proprietary, free version available','Cougaar Open Source License (COSL) is a modified version of the OSI approved BSD License','Apache License v2.','Artistic License Agreement','Open source (read license)','Proprietary; free for academic use','Proprietary (various prices for Developer's License; Modeler's License; Runtime License; and Academic Licenses)','Freely available for research purposes. Commercial license available soon.','Free (open source); MIT/XFREE86 license (for poplog libraries); may later be replaced by GPL','Open source (free for academic and non-commercial use),  distributed under GNU LGPL','Academic free license','Free (open source) - read license','LGPL for basic libraries; GPL for development and non- commercial applications','Proprietary','Unable to verify that available for public use','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Platform",
 									local : ['MOOSE (Multimodeling Object-Oriented Simulation Environment)','StarLogoT','StarLogo','jES (Java Enterprise Simulator)','GPU Agents','Brahms','JAS','MIMOSE (Micro-und Multilevel Modelling Software)','iGen','OBEUS (Object Based Environment for Urban Simulation)','JABM','oRIS','DigiHive','Repast','VSEit','MaDKit (Multi Agent Development Kit)','MASON','JIAC','MAS-SOC (Multi-Agent Simulations for the SOCial Sciences)','Cormas (Common-pool Resources and Multi-Agent Systems)','SeSAm (Shell for Simulated Agent Systems) (fully integrated graphical simulation environment)','LSD (Laboratory for Simulation Development)','Moduleco','TerraME','MASS (Multi-Agent Simulation Suit)','GROWlab','Sugarscape','NetLogo','AgentService','Swarm','DeX','FLUXY','SimPack','D-OMAR (Distributed Operator Model Architecture)','Jason (Jason:Interpreter for extension of AgentSpeak)','JCA-Sim','AgentBuilder','ABLE (Agent Building and Learning Environment)','MAGSY','Spatial Modeling Environment (SME)','Omonia (previously Quicksilver)','Cougaar','AOR Simulation','ICARO-T','SEAS (System Effectiveness Analysis Simulation)','Breve','Behaviour Composer (Rich Internet Application building on NetLogo)','MAML (Multi-Agent Modeling Language)','ADK (Tryllian Agent Development Kit)','DALI','ECHO','AnyLogic','Construct','Insight Maker','Jade’s sim++','SimAgent (also sim agent)','FAMOJA (Framework for Agent-based MOdelling with JAva)','FLAME','Soar','Janus','FLAME GPU','OpenStarLogo','StarLogo TNG','ZEUS','VisualBots','JESS','SimPlusPlus','JAMEL (Java Agent-based MacroEconomic Laboratory)','MacStarLogo','Framsticks','CybelePro','ECJ','A3 / AAA (Agent Anytime Anywhere)','JADE','PS-I (Political Science-Identity)','AgentSheets','SDML (Strictly Declarative Modeling Language)','Xholon','Ascape','JASA (Java Auction Simulator API)','Altreva Adaptive Modeler','GAMA','jEcho','SimBioSys','Boris','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['exports to VRML','Unknown','Yes','No','planned','Non-free 3D viewer extension is available','Yes, Brahms has been integrated with Virtual Worlds using a mapping of Areas to points with a radios in a 3D space','Up to 3 agent properties can be visualized in real-time using 2D graphics and color','Agent properties can be visualized dinamically','Asgard','Yes through Python','From Java, any visualisation can be added.','Plugin available','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"FIPA Compliant",
 									local : ['Unknown','Yes','No','Yes, agents use Communicative Acts objects to send FIPA messages.','Yes, agents can use FIPA Communicative Acts objects to send messages and use various FIPA Interaction Protocols.','Plugin available','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['GPL','Free for use and distribution for non-commercial purposes (open source)','Open source (free for academic and non-commercial use)','Academic Free License (open source)','Contact authors for availability','LGPL version 3','Academic Free License – open source','LGPL version 2','Proprietary - (free for academic institutions)','LGPL','Free, Not Open Source','Depends on module: GPL/LGPL/Propertiary','Free with government approval','StarLogo TNG License v1.0 - (closed source) - the code may be freed up eventually. The original StarLogo is apparently going to be released under an open source license soon','Proprietary; Free Personal Learning Edition available','Free for research purposes only','Freely available','BSD','The compiler is freely downloadable for evaluation purposes (open source) Later the system will be put under GNU license','LGPL; associated third party licenses (usually non¬proprietary)','Free (closed source)','Free, open source','Open Source, Free for educational and research applications, Apache Public License 2.0','Unknown','Proprietary; Discounted academic licenses available','Free (closed source) - Clearthought Software License, Version 1.0','Free to modify but not to distribute the modified version','Dual licensed: either accept the LGPL or contact Tryllian to acquire a closed source license','Apache License 2.0','Proprietary; free evaluation version available for research and experimentation (some limitations but no expiration)','Open Source','GPL version 2','GPL; third party license (for  VisualWorks)','new BSD','academic licence / free download','Proprietary, free version available','Cougaar Open Source License (COSL) is a modified version of the OSI approved BSD License','Apache License v2.','Artistic License Agreement','Open source (read license)','Proprietary; free for academic use','Proprietary (various prices for Developer's License; Modeler's License; Runtime License; and Academic Licenses)','Freely available for research purposes. Commercial license available soon.','Free (open source); MIT/XFREE86 license (for poplog libraries); may later be replaced by GPL','Open source (free for academic and non-commercial use),  distributed under GNU LGPL','Academic free license','Free (open source) - read license','LGPL for basic libraries; GPL for development and non- commercial applications','Proprietary','Unable to verify that available for public use','']
+								$("#3").typeahead({
+									name:"3D Capabilities",
+									local : ['exports to VRML','Unknown','Yes','No','planned','Non-free 3D viewer extension is available','Yes, Brahms has been integrated with Virtual Worlds using a mapping of Areas to points with a radios in a 3D space','Up to 3 agent properties can be visualized in real-time using 2D graphics and color','Agent properties can be visualized dinamically','Asgard','Yes through Python','From Java, any visualisation can be added.','Plugin available','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#4").typeahead({
+									name:"GIS Capabilities",
 									local : ['Unknown','Yes','Non-free extension available: JaSIM','Integrated with OpenMap','Yes: supports both tile maps from free online providers and shapefile-based maps','No','Yes, if used internally to another CASOS product called ORA','Yes, Brahms includes the concepts of hierarchical user defined Area objects that can have attributes representing coordinates, etc.','Raster- and Vector-GIS as spatial representation, ESRI-Arcview files can be imported','Yes, direct interface to TerraView and TerraLIb GIS','planned','']
 								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#5").typeahead({
+									name:"Programming Language",
 									local : ['Java','Java/Jess/JessML (declarative xml rule language)','Microsoft .Net, Mono, Shared Source CLI (SSCLI, aka Rotor)','Simple Interpreted object oriented language called Steve; agent behaviors can be written in python','Java 1.6 or higher; with the ability to code the agents using the SARL agent-oriented programming language.','Fully programmable with any language that can support activeX components (e.g. C, C++, VB, VBA, Java, and others), but no programming required','C++; (C libraries no longer maintained); Java','Java; UML-RT (UML for real time)','Pop-11, like Common Lisp, is a powerful extendable multi-purpose programming language supporting multiple paradigms. Within the Poplog environment Pop-11 also supports programs written in Prolog, Common Lisp or Standard ML','StarLogo (an extension of Logo)','C++','StarLogo TNG language – a graphical programming language and a 3d world','AgentSpeak(XL), an extension of Agentspeak(L) and (Environment Description Language for Multi-Agent Simulation); ELMS, a language for modelling environments where cognitive agents are situated. Future work to implement in Java','C++; LSD','StarLogoT','Knowledge Query and Manipulation Language (KQML); Java; C; C++','C++; dML (deX Modeling Language): a domain-specific language based on C++; python','Unknown','C','A model description language (derived from functional language paradigms)','AgentSpeak(L)','Prolog','Simulation compiled from visual specification; Visual programming','Java (OMAR-J); lisp (OMAR-L)','Java; Objective-C','Visual Basic','FABLES (Functional Agent-based Language for Simulations); Java; it is possible to run Repast and NetLogo simulations too.','FramScript (similar to JavaScript)','Smalltalk release 5i.2 Non-Commercial','Sicstus Prolog core with Linda tuple space, Python glue code dor MAS management, HTML5/CSS/AJAX web interface','NetLogo','Brahms language (an agent-oriented and object-oriented BDI language). Brahms is completely integrated with the Java programming language. Brahms and Java agents can interact together easily. The BVM (Brahms Virtual Machine) is a mult-agent discrete-event engine, running each agent as a separate event-based Java thread.','Javascript','Smalltalk (requires VisualWorks to run)','A modeling language, GAML, for specifying agents and environments. Developed in Java.','Java; MadKit may be developed in all languages that are compiled into Java; for the moment, MadKit comes with 4 scripting languages which are executed in the Java Virtual Machine: Scheme (Kawa), Jess (rule based language), BeanShell (Java interpreted) and Python (jython). Using the JNI (Java Native Interface) technique, it should be possible to develop agents written in C or C++. It is also possible to embed Java agents in C/C++ applications using the same technique, using JNI as a glue between the two worlds.','Soar 1 to 5 in Lisp; Soar 6 in C; Java, C++, TCL','Able Rule Language (ARL)','Tactical Programming Language (TPL)','Java; Cellular Description Language (CDL) (for input to simulation)','COGNET Execution Language (CEL); C++; C; Java','No knowledge of computer programming required','C based scripting and optimised CUDA code','Magsy (production language)','Microsoft.net .NET languages – C#, C++, or Visual Basic','Lua with extensions','MAML language; C; visual programming interface','No programming required','Visual editors and code generators','C and XML based and will run on laptops and HPC systems. Optimised for MIMD architectures using MPI.','Oris language; Very close to C++ and Java (dynamic and interpreted multi-agent language)','MacStarLogo','Developed in Python. Requires pyzmq.','Java (RepastS, RepastJ); Python (RepastPy); Visual Basic, .Net, C++, J#, C# (Repast.net)','No programming skills required. An adaptive form of genetic programming is used to create trading rules. User can select functions to be used in the genetic programming engine.','Visual AgenTalk; can be exported to Java;','Java; Lisp; C#; NetLogo','No programming required; TCL/TK scripting to apply effects','']
 								});
 						</script>

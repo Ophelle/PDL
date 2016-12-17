@@ -29,41 +29,38 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>UDF : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>NTFS : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
 								<label>FAT32 :</label></br>
 								<input type="radio" name="FeatureFAT32" value="oui">Yes <input type="radio" name="FeatureFAT32" value = "non">No <input type="radio" name="FeatureFAT32" value = "non">Partial </br>
 								
 								</br>	
-								<label>FAT12 :</label></br>
-								<input type="radio" name="FeatureFAT12" value="oui">Yes <input type="radio" name="FeatureFAT12" value = "non">No <input type="radio" name="FeatureFAT12" value = "non">Partial </br>
-								
+								<label>HPFS : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>HPFS : </label></br> <input id="3" type="text" name="Feature"></br>
+								<label>FAT16 :</label></br>
+								<input type="radio" name="FeatureFAT16" value="oui">Yes <input type="radio" name="FeatureFAT16" value = "non">No <input type="radio" name="FeatureFAT16" value = "non">Partial </br>
 								
 								</br>	
 								<label>ISO 9660 :</label></br>
 								<input type="radio" name="FeatureISO 9660" value="oui">Yes <input type="radio" name="FeatureISO 9660" value = "non">No <input type="radio" name="FeatureISO 9660" value = "non">Partial </br>
 								
 								</br>	
-								<label>UDF : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>NTFS : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>FAT16 :</label></br>
-								<input type="radio" name="FeatureFAT16" value="oui">Yes <input type="radio" name="FeatureFAT16" value = "non">No <input type="radio" name="FeatureFAT16" value = "non">Partial </br>
+								<label>FAT12 :</label></br>
+								<input type="radio" name="FeatureFAT12" value="oui">Yes <input type="radio" name="FeatureFAT12" value = "non">No <input type="radio" name="FeatureFAT12" value = "non">Partial </br>
 								
 						<script>
+								$("#0").typeahead({
+									name:"UDF",
+									local : ['Yes (1.5, read)','No','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"NTFS",
 									local : ['Network Drive','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Yes (1.5, read)','No','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"HPFS",
 									local : ['Network Drive','']
 								});
 						</script>

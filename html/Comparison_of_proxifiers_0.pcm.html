@@ -29,47 +29,42 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Status : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Developer : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Based on : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Name : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Source available :</label></br>
 								<input type="radio" name="FeatureSource available" value="oui">Yes <input type="radio" name="FeatureSource available" value = "non">No <input type="radio" name="FeatureSource available" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Status : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Based on : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>First release : </label></br> <input id="5" type="number" name="Feature"></br>
+								<label>First release : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
-								</br>	
-								<label>Developer : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Name : </label></br> <input id="7" type="text" name="Feature"></br>
-								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Active','N/A','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"License",
 									local : ['GPL','BSD','Proprietary (Shareware)','Proprietary (Freeware)','Proprietary','Apache','']
 								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['proxychains','tsocks','','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Developer",
 									local : ['Max Artemev','Inferno Nettverk A/S','','Initex Software','NEC','Ambroz Bizjak','Leonid Evdokimov','Proxy Labs','Robert Hogan','Networktunnel Lab','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#2").typeahead({
+									name:"Based on",
+									local : ['proxychains','tsocks','','']
+								});
+								$("#3").typeahead({
+									name:"Name",
 									local : ['SocksCap','proxychains-ng','Super Socks5Cap','ProxyCap','Proxifier','tun2socks','Dante client','FreeCap','redsocks','WideCap','torsocks','']
+								});
+								$("#4").typeahead({
+									name:"Status",
+									local : ['Active','N/A','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

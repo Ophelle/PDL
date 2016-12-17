@@ -29,12 +29,24 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Encrypted file systems :</label></br>
+								<input type="radio" name="FeatureEncrypted file systems" value="oui">Yes <input type="radio" name="FeatureEncrypted file systems" value = "non">No <input type="radio" name="FeatureEncrypted file systems" value = "non">Partial </br>
+								
+								</br>	
 								<label>Resource access control :</label></br>
 											<input type="checkbox" name="Feature" >Unix</br>	
 											<input type="checkbox" name="Feature" >ACLs</br>	
 											<input type="checkbox" name="Feature" >MAC</br>	
 											<input type="checkbox" name="Feature" >Veriexec</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
+								</br>	
+								<label>Data execution prevention - hardware :</label></br>
+								<input type="radio" name="FeatureData execution prevention - hardware" value="oui">Yes <input type="radio" name="FeatureData execution prevention - hardware" value = "non">No <input type="radio" name="FeatureData execution prevention - hardware" value = "non">Partial </br>
+								
+								</br>	
+								<label>Data execution prevention - emulation :</label></br>
+								<input type="radio" name="FeatureData execution prevention - emulation" value="oui">Yes <input type="radio" name="FeatureData execution prevention - emulation" value = "non">No <input type="radio" name="FeatureData execution prevention - emulation" value = "non">Partial </br>
+								
 								</br>	
 								<label>Subsystem isolation mechanisms :</label></br>
 											<input type="checkbox" name="Feature" >chroot</br>	
@@ -46,7 +58,9 @@
 											<input type="checkbox" name="Feature" >systrace</br>	
 											<input type="checkbox" name="Feature" >VKernel</br>	
 											<input type="checkbox" name="Feature" >MAC Partitions</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
+								</br>	
+								<label>Security logging : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Integrated firewall :</label></br>
 											<input type="checkbox" name="Feature" >IPFW2</br>	
@@ -54,25 +68,10 @@
 											<input type="checkbox" name="Feature" >PF</br>	
 											<input type="checkbox" name="Feature" >IPFW2 (deprecated)</br>	
 											<input type="checkbox" name="Feature" >NPF</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Data execution prevention - emulation :</label></br>
-								<input type="radio" name="FeatureData execution prevention - emulation" value="oui">Yes <input type="radio" name="FeatureData execution prevention - emulation" value = "non">No <input type="radio" name="FeatureData execution prevention - emulation" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Encrypted file systems :</label></br>
-								<input type="radio" name="FeatureEncrypted file systems" value="oui">Yes <input type="radio" name="FeatureEncrypted file systems" value = "non">No <input type="radio" name="FeatureEncrypted file systems" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Security logging : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Data execution prevention - hardware :</label></br>
-								<input type="radio" name="FeatureData execution prevention - hardware" value="oui">Yes <input type="radio" name="FeatureData execution prevention - hardware" value = "non">No <input type="radio" name="FeatureData execution prevention - hardware" value = "non">Partial </br>
-											<input type="text"/></br>								
+							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Security logging",
 									local : ['syslog, CAPP event auditing, OpenBSM','syslog','?','']
 								});
 						</script>

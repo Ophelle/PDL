@@ -29,8 +29,23 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Integration : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Driver : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Original/Primary developer : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Development : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Integration : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Free software :</label></br>
+								<input type="radio" name="FeatureFree software" value="oui">Yes <input type="radio" name="FeatureFree software" value = "non">No <input type="radio" name="FeatureFree software" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Free firmware :</label></br>
+								<input type="radio" name="FeatureFree firmware" value="oui">Yes <input type="radio" name="FeatureFree firmware" value = "non">No <input type="radio" name="FeatureFree firmware" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Chipset :</label></br>
 											<input type="checkbox" name="Feature" >Broadcom BCM430x</br>	
@@ -93,47 +108,27 @@
 											<input type="checkbox" name="Feature" >Raytheon Raylink</br>	
 											<input type="checkbox" name="Feature" >WebGear Aviator IEEE 802.11FH</br>	
 											<input type="checkbox" name="Feature" >Wireless 3945ABG</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Original/Primary developer : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Development : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Free firmware :</label></br>
-								<input type="radio" name="FeatureFree firmware" value="oui">Yes <input type="radio" name="FeatureFree firmware" value = "non">No <input type="radio" name="FeatureFree firmware" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>License : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Driver : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Free software :</label></br>
-								<input type="radio" name="FeatureFree software" value="oui">Yes <input type="radio" name="FeatureFree software" value = "non">No <input type="radio" name="FeatureFree software" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Integrated','Integrated (since 4.9)','2.7 to 4.3','Integrated (since 4.6)','2.7 to 5.4','Integrated (since 4.7)','']
+								$("#0").typeahead({
+									name:"Driver",
+									local : ['malo','ral/ural','upgt','cnw','iwn','urtw','an','wi','awi','urtwn','bwi','rum','atu','otus','acx','atw','pgt','run','iwi','rsu','rtw','ray','ath','uath','ipw','athn','wpi','zyd','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Original/Primary developer",
 									local : ['Ported from NetBSD','Damien Bergamini','','Bill Paul','Damien Bergamini','Marcus Glocker','Florian Stoehr, Damien Bergamini and Jonathan Gray','Marcus Glocker and Claudio Jeker','Weongyo Jeong (FreeBSD)','Ported from DragonFlyBSD','Ported from FreeBSD','Niall O'Higgins and Damien Bergamini','Sepherosa Ziehau','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#2").typeahead({
+									name:"Development",
 									local : ['Documentation based','Reverse Engineering','Partly based on the ath9k driver for Linux','Reverse engineering','','?','Based on source code released by Atheros for Linux under the ISC','Ported from DragonFly BSD','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['BSD','']
+								$("#3").typeahead({
+									name:"Integration",
+									local : ['Integrated','Integrated (since 4.9)','2.7 to 4.3','Integrated (since 4.6)','2.7 to 5.4','Integrated (since 4.7)','']
 								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['malo','ral/ural','upgt','cnw','iwn','urtw','an','wi','awi','urtwn','bwi','rum','atu','otus','acx','atw','pgt','run','iwi','rsu','rtw','ray','ath','uath','ipw','athn','wpi','zyd','']
+								$("#4").typeahead({
+									name:"License",
+									local : ['BSD','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

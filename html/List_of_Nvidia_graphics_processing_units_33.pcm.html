@@ -29,31 +29,18 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Bus interface : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Clock speed - Shader (MHz) : </label></br> <input id="2" type="number" name="Feature"></br>
+								<label>Memory (MB) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Fillrate - Texture (GT/s) : </label></br> <input id="3" type="number" name="Feature"></br>
+								<label>Clock speed - Shader (MHz) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>TDP (watts) : </label></br> <input id="4" type="number" name="Feature"></br>
+								<label>Clock speed - Core (MHz) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Memory - Bus width (bit) : </label></br> <input id="5" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Clock speed - Core (MHz) : </label></br> <input id="6" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Clock speed - Memory (MHz) : </label></br> <input id="7" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Core config : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Memory (MB) : </label></br> <input id="9" type="number" name="Feature"></br>
+								<label>Clock speed - Memory (MHz) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
 								<label>Launch :</label></br>
@@ -64,54 +51,61 @@
 											<input type="checkbox" name="Feature" >January 10</br>	
 											<input type="checkbox" name="Feature" >January 7</br>	
 											<input type="checkbox" name="Feature" >January 21</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Processing Power (GFLOPS) : </label></br> <input id="11" type="number" name="Feature"></br>
+								<label>Model : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Code name : </label></br> <input id="12" type="text" name="Feature"></br>
-								
+								<label>Memory - Bus type : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>API support (version) - DirectX : </label></br> <input id="13" type="number" name="Feature"></br>
+								<label>Memory - Bus width (bit) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>API support (version) - OpenGL : </label></br> <input id="14" type="number" name="Feature"></br>
+								<label>TDP (watts) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Model : </label></br> <input id="15" type="text" name="Feature"></br>
-								
+								<label>Core config : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Memory - Bus type : </label></br> <input id="16" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>GFLOPS/W : </label></br> <input id="17" type="number" name="Feature"></br>
+								<label>GFLOPS/W : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Fab (nm) : </label></br> <input id="18" type="number" name="Feature"></br>
+								<label>Code name : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Fillrate - Texture (GT/s) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="19" type="number" name="Feature"></br>
+								<label>Fillrate - Pixel (GP/s) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Fillrate - Pixel (GP/s) : </label></br> <input id="20" type="number" name="Feature"></br>
+								<label>Processing Power (GFLOPS) : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Fab (nm) : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>API support (version) - OpenGL : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>API support (version) - DirectX : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 						<script>
+								$("#0").typeahead({
+									name:"Bus interface",
+									local : ['PCIe 2.0 x16','Integrated  PCIe 2.0 x16','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['PCIe 2.0 x16','Integrated 
- PCIe 2.0 x16','']
+									name:"Model",
+									local : ['GeForce GT 320M','GeForce GT 325M','GeForce GTS 350M','GeForce GTS 360M','GeForce 315M','GeForce GT 335M','GeForce 310M','GeForce 320M','GeForce 305M','GeForce GT 330M','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Core config",
 									local : ['48:16:8','16:8:4','96:32:8','24:8:8','72:24:8','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Code name",
 									local : ['GT218','MCP89','GT215','GT216','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['GeForce GT 320M','GeForce GT 325M','GeForce GTS 350M','GeForce GTS 360M','GeForce 315M','GeForce GT 335M','GeForce 310M','GeForce 320M','GeForce 305M','GeForce GT 330M','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

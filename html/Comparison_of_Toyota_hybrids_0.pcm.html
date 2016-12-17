@@ -29,17 +29,23 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Maximum seating : </label></br> <input id="1" type="number" name="Feature"></br>
-								
+								<label>Electric motor output : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Release date : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Features : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>US model year : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>EPA/CARB emission certification :</label></br>
+											<input type="checkbox" name="Feature" >Tier II Bin 3</br>	
+											<input type="checkbox" name="Feature" >AT-PZEV</br>	
+											<input type="checkbox" name="Feature" >SULEV</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Traction battery power : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>EPA-estimated highway fuel economy : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Net power : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Requires premium fuel (91 octane (R+M)/2 ) :</label></br>
+								<input type="radio" name="FeatureRequires premium fuel (91 octane (R+M)/2 )" value="oui">Yes <input type="radio" name="FeatureRequires premium fuel (91 octane (R+M)/2 )" value = "non">No <input type="radio" name="FeatureRequires premium fuel (91 octane (R+M)/2 )" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
 								<label>Base price :</label></br>
 											<input type="checkbox" name="Feature" >US$22</br>	
@@ -51,106 +57,80 @@
 											<input type="checkbox" name="Feature" >480</br>	
 											<input type="checkbox" name="Feature" >US$34</br>	
 											<input type="checkbox" name="Feature" >700</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>EPA-estimated city fuel economy : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Maximum seating : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Engine output : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>EPA-estimated city fuel economy : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Traction battery power : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
 								<label>0-60 mph (97 km/h) acceleration : </label></br> <input id="7" type="text" name="Feature"></br>
-								
 								</br>	
 								<label>Smog forming emissions compared to average new vehicle : </label></br> <input id="8" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>EPA-estimated drivers fuel economy : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label>Release date : </label></br> <input id="9" type="text" name="Feature"></br>
 								</br>	
-								<label>EPA-estimated highway fuel economy : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+								<label>Engine : </label></br> <input id="10" type="text" name="Feature"></br>
 								</br>	
-								<label>EPA/CARB emission certification :</label></br>
-											<input type="checkbox" name="Feature" >Tier II Bin 3</br>	
-											<input type="checkbox" name="Feature" >AT-PZEV</br>	
-											<input type="checkbox" name="Feature" >SULEV</br>	
-									
+								<label>US model year : </label></br> <input id="11" type="text" name="Feature"></br>
 								</br>	
-								<label>Requires premium fuel (91 octane (R+M)/2 ) :</label></br>
-								<input type="radio" name="FeatureRequires premium fuel (91 octane (R+M)/2 )" value="oui">Yes <input type="radio" name="FeatureRequires premium fuel (91 octane (R+M)/2 )" value = "non">No <input type="radio" name="FeatureRequires premium fuel (91 octane (R+M)/2 )" value = "non">Partial </br>
-								
-								</br>	
-								<label>Features : </label></br> <input id="13" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Electric motor output : </label></br> <input id="14" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Net power : </label></br> <input id="15" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Engine : </label></br> <input id="16" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Engine output : </label></br> <input id="17" type="text" name="Feature"></br>
-								
+								<label>EPA-estimated drivers fuel economy : </label></br> <input id="12" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['mid-May 2009 (Japan)
-early June (US)','1997 (Japan)
-2000 (worldwide)','July 2005','2004','May 2006','September 2007','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['2010-','2004–2009','2001–2003','2007-','2008-','2005–2007','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['21 kW (28 hp)','45 kW (60 hp)','30 kW (40 hp)','27 kW (36 hp)','33 kW (44 hp)','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['27 mpg (8.7 L/100 km; 32 mpg)','42 mpg (5.6 L/100 km; 50 mpg)','48 mpg (4.9 L/100 km; 58 mpg)','33 mpg (7.1 L/100 km; 40 mpg)','28 mpg (8.4 L/100 km; 34 mpg) (2WD)
-27 mpg (8.7 L/100 km; 32 mpg) (4WD-i)','51 mpg (4.6 L/100 km; 61 mpg)','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['12.6 s','10.0 s','6.6  s (Motor Trend)','10.8 s','7.3 s (R&T, 5/06)','n/a','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['80% less','75% less','']
-								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['47.5 mpg (4.95 L/100 km; 57.0 mpg)','45 mpg (5.2 L/100 km; 54 mpg)','36.6 mpg (6.43 L/100 km; 44.0 mpg)','48.7 mpg (4.83 L/100 km; 58.5 mpg)','24.5 mpg (9.6 L/100 km; 29.4 mpg)','','']
-								});
-								$("#8").typeahead({
-									name:"list8",
-									local : ['25 mpg (9.4 L/100 km; 30 mpg)','45 mpg (5.2 L/100 km; 54 mpg)','34 mpg (6.9 L/100 km; 41 mpg)','41 mpg (5.7 L/100 km; 49 mpg)','48 mpg (4.9 L/100 km; 58 mpg)','25 mpg (9.4 L/100 km; 30 mpg) (2WD)
-25 mpg (9.4 L/100 km; 30 mpg) (4WD-i)','']
-								});
-								$("#9").typeahead({
-									name:"list9",
-									local : ['Camry','Highlander','Prius','']
-								});
-								$("#10").typeahead({
-									name:"list10",
+								$("#0").typeahead({
+									name:"Electric motor output",
 									local : ['80 hp','','45 hp','44 hp (33 kW) / 258 lb·ft (350 Nm)','67 hp (50 kW) / 295 lb·ft (400 Nm)','']
 								});
-								$("#11").typeahead({
-									name:"list11",
+								$("#1").typeahead({
+									name:"Features",
+									local : ['Camry','Highlander','Prius','']
+								});
+								$("#2").typeahead({
+									name:"EPA-estimated highway fuel economy",
+									local : ['25 mpg (9.4 L/100 km; 30 mpg)','45 mpg (5.2 L/100 km; 54 mpg)','34 mpg (6.9 L/100 km; 41 mpg)','41 mpg (5.7 L/100 km; 49 mpg)','48 mpg (4.9 L/100 km; 58 mpg)','25 mpg (9.4 L/100 km; 30 mpg) (2WD)25 mpg (9.4 L/100 km; 30 mpg) (4WD-i)','']
+								});
+								$("#3").typeahead({
+									name:"Net power",
 									local : ['','140 kW (187 hp)','60 kW (80 hp)','201 kW (270 hp)','80 kW (107 hp)','110 kW (134 hp)','']
 								});
-								$("#12").typeahead({
-									name:"list12",
-									local : ['3.3 L 3MZ-FE V6','1.8 L 2ZR-FXE I4 
-Atkinson cycle','1.5 L 1NZ-FXE I4 
-Atkinson cycle','2.4 L 2AZ-FXE I4 
-Atkinson cycle','']
-								});
-								$("#13").typeahead({
-									name:"list13",
+								$("#4").typeahead({
+									name:"Engine output",
 									local : ['147 hp (108 kW) / 138 lb·ft (187 Nm)','98 hp (73 kW) / 105 lb·ft (142 Nm)','156 kW (208 hp)','70 hp (52 kW) / 82 lb·ft (110 Nm)','','76 hp (57 kW) / 85 lb·ft (115 Nm)','']
+								});
+								$("#5").typeahead({
+									name:"Engine",
+									local : ['3.3 L 3MZ-FE V6','1.8 L 2ZR-FXE I4 Atkinson cycle','1.5 L 1NZ-FXE I4 Atkinson cycle','2.4 L 2AZ-FXE I4 Atkinson cycle','']
+								});
+								$("#6").typeahead({
+									name:"EPA-estimated city fuel economy",
+									local : ['27 mpg (8.7 L/100 km; 32 mpg)','42 mpg (5.6 L/100 km; 50 mpg)','48 mpg (4.9 L/100 km; 58 mpg)','33 mpg (7.1 L/100 km; 40 mpg)','28 mpg (8.4 L/100 km; 34 mpg) (2WD)27 mpg (8.7 L/100 km; 32 mpg) (4WD-i)','51 mpg (4.6 L/100 km; 61 mpg)','']
+								});
+								$("#7").typeahead({
+									name:"Traction battery power",
+									local : ['21 kW (28 hp)','45 kW (60 hp)','30 kW (40 hp)','27 kW (36 hp)','33 kW (44 hp)','']
+								});
+								$("#8").typeahead({
+									name:"0-60 mph (97 km/h) acceleration",
+									local : ['12.6 s','10.0 s','6.6  s (Motor Trend)','10.8 s','7.3 s (R&T, 5/06)','n/a','']
+								});
+								$("#9").typeahead({
+									name:"Smog forming emissions compared to average new vehicle",
+									local : ['80% less','75% less','']
+								});
+								$("#10").typeahead({
+									name:"Release date",
+									local : ['mid-May 2009 (Japan)early June (US)','1997 (Japan)2000 (worldwide)','July 2005','2004','May 2006','September 2007','']
+								});
+								$("#11").typeahead({
+									name:"US model year",
+									local : ['2010-','2004–2009','2001–2003','2007-','2008-','2005–2007','']
+								});
+								$("#12").typeahead({
+									name:"EPA-estimated drivers fuel economy",
+									local : ['47.5 mpg (4.95 L/100 km; 57.0 mpg)','45 mpg (5.2 L/100 km; 54 mpg)','36.6 mpg (6.43 L/100 km; 44.0 mpg)','48.7 mpg (4.83 L/100 km; 58.5 mpg)','24.5 mpg (9.6 L/100 km; 29.4 mpg)','','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

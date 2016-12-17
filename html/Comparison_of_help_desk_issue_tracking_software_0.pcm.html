@@ -29,43 +29,42 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Implementation language(s) : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Creator : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Back end :</label></br>
+											<input type="checkbox" name="Feature" >MySQL</br>	
+											<input type="checkbox" name="Feature" >PostgreSQL</br>	
+											<input type="checkbox" name="Feature" >Oracle</br>	
+											<input type="checkbox" name="Feature" >Microsoft SQL Server</br>	
+											<input type="checkbox" name="Feature" >Derby</br>	
+											<input type="checkbox" name="Feature" >Access</br>	
+											<input type="checkbox" name="Feature" >Sybase</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Creator : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>System : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>System : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Launch Date : </label></br> <input id="5" type="number" name="Feature"></br>
+								<label>Launch Date : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Back end : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Implementation language(s) : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Creator",
+									local : ['Kayako','Atlassian','MetaQuotes Software Corp.','Dell KACE','FrontRange Solutions','INDEPNET','Doug Luxem','Automation Centre','otrs.org','TechExcel','BMC Software','SolarWinds, LLC','Turbine interactive','Spiceworks IT Software','Hornbill Systems','Best Practical Solutions, LLC','SysAid Technologies','Ivaldi','Cherwell Software','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['Groupware, requires Lotus Notes','C++','Ruby','.NET','Java','Perl','ASP','Visual C++ and PHP','PHP','Unknown','Java, C#','C#','']
+									name:"System",
+									local : ['Brimir','JIRA','TechExcel ServiceWise','Cherwell','Spiceworks','TeamWox','Request Tracker','Remedy Action Request System','OTRS','TrackerSuite.Net','Liberum Help Desk','Web Help Desk','KACE','SysAid','Plain Ticket','Kayako SupportSuite','GLPI','Tracker','HEAT','Supportworks','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"License",
 									local : ['GPL','Proprietary','Proprietary; free for use','Proprietary, Free for non-commercial use; hosted & on-premises','Proprietary, online, hosted.','Proprietary, on-premise, SaaS','AGPL','Proprietary, some parts GPL','Proprietary, SaaS and On-Premise','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['Kayako','Atlassian','MetaQuotes Software Corp.','Dell KACE','FrontRange Solutions','INDEPNET','Doug Luxem','Automation Centre','otrs.org','TechExcel','BMC Software','SolarWinds, LLC','Turbine interactive','Spiceworks IT Software','Hornbill Systems','Best Practical Solutions, LLC','SysAid Technologies','Ivaldi','Cherwell Software','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['Brimir','JIRA','TechExcel ServiceWise','Cherwell','Spiceworks','TeamWox','Request Tracker','Remedy Action Request System','OTRS','TrackerSuite.Net','Liberum Help Desk','Web Help Desk','KACE','SysAid','Plain Ticket','Kayako SupportSuite','GLPI','Tracker','HEAT','Supportworks','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['MySQL, PostgreSQL, Oracle, Microsoft SQL Server','MySQL, Derby, Oracle, Microsoft SQL Server','Microsoft SQL Server','IBM Lotus Domino','sqlite','FireBird','Microsoft SQL Server, Access','MySQL','MySQL, PostgreSQL','Sybase, Microsoft SQL Server, Oracle','MySQL, PostgreSQL, Oracle','Microsoft SQL Server, MySQL, Oracle, Sybase','Microsoft SQL Server, Oracle','MySQL, Microsoft SQL Server, PostgreSQL,','']
+									name:"Implementation language(s)",
+									local : ['Groupware, requires Lotus Notes','C++','Ruby','.NET','Java','Perl','ASP','Visual C++ and PHP','PHP','Unknown','Java, C#','C#','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

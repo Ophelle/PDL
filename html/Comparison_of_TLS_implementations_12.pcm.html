@@ -29,12 +29,10 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>GOST 28147-89 IMIT :</label></br>
-								<input type="radio" name="FeatureGOST 28147-89 IMIT" value="oui">Yes <input type="radio" name="FeatureGOST 28147-89 IMIT" value = "non">No <input type="radio" name="FeatureGOST 28147-89 IMIT" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Implementation : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>GOST R 34.11-94 :</label></br>
-								<input type="radio" name="FeatureGOST R 34.11-94" value="oui">Yes <input type="radio" name="FeatureGOST R 34.11-94" value = "non">No <input type="radio" name="FeatureGOST R 34.11-94" value = "non">Partial </br>
+								<label>HMAC-MD5 :</label></br>
+								<input type="radio" name="FeatureHMAC-MD5" value="oui">Yes <input type="radio" name="FeatureHMAC-MD5" value = "non">No <input type="radio" name="FeatureHMAC-MD5" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
 								<label>AEAD :</label></br>
@@ -45,19 +43,20 @@
 								<input type="radio" name="FeatureHMAC-SHA256/384" value="oui">Yes <input type="radio" name="FeatureHMAC-SHA256/384" value = "non">No <input type="radio" name="FeatureHMAC-SHA256/384" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>HMAC-MD5 :</label></br>
-								<input type="radio" name="FeatureHMAC-MD5" value="oui">Yes <input type="radio" name="FeatureHMAC-MD5" value = "non">No <input type="radio" name="FeatureHMAC-MD5" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Implementation : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>HMAC-SHA1 :</label></br>
 								<input type="radio" name="FeatureHMAC-SHA1" value="oui">Yes <input type="radio" name="FeatureHMAC-SHA1" value = "non">No <input type="radio" name="FeatureHMAC-SHA1" value = "non">Partial </br>
 											<input type="text"/></br>								
+								</br>	
+								<label>GOST 28147-89 IMIT :</label></br>
+								<input type="radio" name="FeatureGOST 28147-89 IMIT" value="oui">Yes <input type="radio" name="FeatureGOST 28147-89 IMIT" value = "non">No <input type="radio" name="FeatureGOST 28147-89 IMIT" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>GOST R 34.11-94 :</label></br>
+								<input type="radio" name="FeatureGOST R 34.11-94" value="oui">Yes <input type="radio" name="FeatureGOST R 34.11-94" value = "non">No <input type="radio" name="FeatureGOST R 34.11-94" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Implementation",
 									local : ['GnuTLS','Botan','SharkSSL','JSSE','SChannel XP/2003, Vista/2008','SChannel 10 Technical Preview','Implementation','mbed TLS','SChannel 7/2008R2, 8/2012, 8.1/2012R2','NSS','MatrixSSL','cryptlib','OpenSSL','Secure Transport','wolfSSL','LibreSSL','RSA BSAFE','']
 								});
 						</script>

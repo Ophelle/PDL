@@ -29,18 +29,19 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>BATTERY : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>STORAGE : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>OS : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>FINGER PRINT SENSOR :</label></br>
 								<input type="radio" name="FeatureFINGER PRINT SENSOR" value="oui">Yes <input type="radio" name="FeatureFINGER PRINT SENSOR" value = "non">No <input type="radio" name="FeatureFINGER PRINT SENSOR" value = "non">Partial </br>
-											<input type="text"/></br>								
+								
+								</br>	
+								<label>OS : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>GRAPHICS : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>DISPLAY : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>OPTICAL DRIVE : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>BATTERY : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>CPU :</label></br>
 											<input type="checkbox" name="Feature" >2nd Gen Intel®
@@ -57,7 +58,7 @@
  CoreTM i3-2350M Processor</br>	
 											<input type="checkbox" name="Feature" >
  2.30 GHz</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
 								<label>MODEL :</label></br>
 											<input type="checkbox" name="Feature" >VPC EH2BGN</br>	
@@ -73,13 +74,13 @@
 											<input type="checkbox" name="Feature" >VPC EH35EN</br>	
 											<input type="checkbox" name="Feature" >VPC EH3AEN</br>	
 											<input type="checkbox" name="Feature" >VPC EH36EN</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
-								<label>GRAPHICS : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>COLOR : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>DISPLAY : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>RAM : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>WEIGHT : </label></br> <input id="7" type="text" name="Feature"></br>
 								</br>	
 								<label>WIRELESS :</label></br>
 											<input type="checkbox" name="Feature" >Integrated Wireless LAN
@@ -87,80 +88,45 @@
 											<input type="checkbox" name="Feature" >b</br>	
 											<input type="checkbox" name="Feature" >g</br>	
 											<input type="checkbox" name="Feature" >n</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
-								<label>COLOR : </label></br> <input id="10" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>WEIGHT : </label></br> <input id="11" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>OPTICAL DRIVE : </label></br> <input id="12" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>RAM : </label></br> <input id="13" type="text" name="Feature"></br>
-								
+								<label>STORAGE : </label></br> <input id="8" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"OS",
+									local : ['[] Processor, 2.30 GHz','Genuine Windows 7 Home Basic','Windows® 7 Home Premium','NVIDIA GeForce 410M GPU (512 MB)','Genuine Windows 7 Professional','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['6 cell 
- Battery','','']
+									name:"GRAPHICS",
+									local : ['NVIDIA® GeForce® 410M GPU (512 MB)','Intel HD Graphics 3000','NVIDIA® GeForce® 410M GPU (1 GB)','4 GB DDR3 SDRAM','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['500 GB HDD','320 GB','320 GB
-HDD','']
+									name:"DISPLAY",
+									local : ['15.5 (39.37cms) wide(WXGA: 1366x 768) (VAIO Display LED Backlight)','','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['[] Processor,
- 2.30 GHz','Genuine Windows 7 
-Home Basic','Windows® 7
- Home Premium','NVIDIA GeForce 
-410M GPU (512 MB)','Genuine Windows 7 
-Professional','']
+									name:"OPTICAL DRIVE",
+									local : ['','DVD SuperMulti Drive','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['NVIDIA® GeForce® 
-410M GPU (512 MB)','Intel HD Graphics 3000','NVIDIA® GeForce® 
-410M GPU (1 GB)','Intel HD Graphics
- 3000','4 GB DDR3
- SDRAM','']
+									name:"BATTERY",
+									local : ['6 cell  Battery','','']
 								});
 								$("#5").typeahead({
-									name:"list5",
-									local : ['15.5 (39.37cms) wide
-(WXGA: 1366x 768) 
-(VAIO Display 
-LED Backlight)','','']
+									name:"COLOR",
+									local : ['B-Black','B-Black  W-White','B-Black W-White','BL-Matte Black  WL-Matte White','B-BlackL-BlueP-PinkW-White','B-BlackL-BlueW-White','']
 								});
 								$("#6").typeahead({
-									name:"list6",
-									local : ['B-Black','B-Black 
- W-White','B-Black
- W-White','BL-Matte Black 
- WL-Matte White','B-Black
-L-Blue
-P-Pink
-W-White','B-Black
-L-Blue
-W-White','']
+									name:"RAM",
+									local : ['','4 GB DDR3 SDRAM','2GB DDR3 RAM','2 GB  DDR3  SDRAM','']
 								});
 								$("#7").typeahead({
-									name:"list7",
+									name:"WEIGHT",
 									local : ['','2.7 kg','']
 								});
 								$("#8").typeahead({
-									name:"list8",
-									local : ['','DVD SuperMulti 
-Drive','']
-								});
-								$("#9").typeahead({
-									name:"list9",
-									local : ['','4 GB DDR3 SDRAM','2GB 
-DDR3 RAM','2 GB  DDR3 
- SDRAM','']
+									name:"STORAGE",
+									local : ['500 GB HDD','320 GB','320 GBHDD','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

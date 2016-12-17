@@ -29,23 +29,21 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Reader name with purple background : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Reader name with purple background : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Legend : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Legend : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Reader name with grey background :</label></br>
 											<input type="checkbox" name="Feature" >software is being developed or status is unknown</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Legend','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Reader name with purple background",
 									local : ['discontinued software','']
+								});
+								$("#1").typeahead({
+									name:"Legend",
+									local : ['Legend','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

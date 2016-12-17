@@ -29,6 +29,27 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>#<TAG> ~ #</TAG>, #stop ~ EOF,#iffalse ~ #endif, #ifntrue ~ #endif, #if false ~ #endif, #if !true ~ #endif : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>#`( ~ ) : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>=begin ~ =end : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>=begin ~ =cut : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>¢ ~ ¢,# ~ #,co ~ co,comment ~ comment : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>" ~ " : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>/+ ~ +/ : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>--[[ ~ ]],--[=[ ~ ]=] : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>{ ~ } :</label></br>
+											<input type="checkbox" name="Feature" >Object Pascal (Delphi)</br>	
+											<input type="checkbox" name="Feature" >Pascal</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
 								<label>/* ~ */ :</label></br>
 											<input type="checkbox" name="Feature" >ActionScript</br>	
 											<input type="checkbox" name="Feature" >AutoHotkey</br>	
@@ -50,68 +71,27 @@
 											<input type="checkbox" name="Feature" >Swift</br>	
 											<input type="checkbox" name="Feature" >Visual Prolog</br>	
 											<input type="checkbox" name="Feature" >CSS</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>/# ~ #/ : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>(comment ~ ) : </label></br> <input id="8" type="text" name="Feature"></br>
 								</br>	
-								<label>--[[ ~ ]],
---[=[ ~ ]=] : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>%{ ~ %} : </label></br> <input id="9" type="text" name="Feature"></br>
 								</br>	
-								<label>{ ~ } :</label></br>
-											<input type="checkbox" name="Feature" >Object Pascal (Delphi)</br>	
-											<input type="checkbox" name="Feature" >Pascal</br>	
-									
+								<label>Symbol : </label></br> <input id="10" type="text" name="Feature"></br>
 								</br>	
-								<label>%{ ~ %} : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>#cs ~ #ce : </label></br> <input id="11" type="text" name="Feature"></br>
 								</br>	
-								<label>#cs ~ #ce : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>{- ~ -} : </label></br> <input id="12" type="text" name="Feature"></br>
 								</br>	
-								<label>{- ~ -} : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>/# ~ #/ : </label></br> <input id="13" type="text" name="Feature"></br>
 								</br>	
-								<label>=begin ~ =cut : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Symbol : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>#<TAG> ~ #</TAG>, #stop ~ EOF,
-#iffalse ~ #endif, #ifntrue ~ #endif,
- #if false ~ #endif, #if !true ~ #endif : </label></br> <input id="10" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>=begin ~ =end : </label></br> <input id="11" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>/+ ~ +/ : </label></br> <input id="12" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>" ~ " : </label></br> <input id="13" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>¢ ~ ¢,
-# ~ #,co ~ co,
-comment ~ comment : </label></br> <input id="14" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>(comment ~ ) : </label></br> <input id="15" type="text" name="Feature"></br>
-								
-								</br>	
-								<label># ~ # : </label></br> <input id="16" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>#`( ~ ) : </label></br> <input id="17" type="text" name="Feature"></br>
-								
+								<label># ~ # : </label></br> <input id="14" type="text" name="Feature"></br>
 								</br>	
 								<label>~ :</label></br>
 											<input type="checkbox" name="Feature" >Lisp</br>	
 											<input type="checkbox" name="Feature" >Scheme</br>	
 											<input type="checkbox" name="Feature" >Racket (can be nested in all three).</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>(* ~ *) :</label></br>
 											<input type="checkbox" name="Feature" >Object Pascal (Delphi)</br>	
@@ -124,67 +104,67 @@ comment ~ comment : </label></br> <input id="14" type="text" name="Feature"></br
 											<input type="checkbox" name="Feature" >Standard ML (can be nested)</br>	
 											<input type="checkbox" name="Feature" >Maple</br>	
 											<input type="checkbox" name="Feature" >Newspeak</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Cobra (can be nested)','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Powershell','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['Lua (the former form can be nested, but only within the latter, which can't be nested)','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['MATLAB (the symbols must be in a separate line)','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['AutoIt','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['Haskell (can be nested)','']
-								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['Perl','']
-								});
-								$("#8").typeahead({
-									name:"list8",
-									local : ['Languages','']
-								});
-								$("#9").typeahead({
-									name:"list9",
+								$("#0").typeahead({
+									name:"#<TAG> ~ #</TAG>, #stop ~ EOF,#iffalse ~ #endif, #ifntrue ~ #endif, #if false ~ #endif, #if !true ~ #endif",
 									local : ['S-Lang','']
 								});
-								$("#10").typeahead({
-									name:"list10",
+								$("#1").typeahead({
+									name:"#`( ~ )",
+									local : ['Perl6 (bracketing characters can be (), <>, {}, [], any Unicode characters with BiDi mirrorings, or Unicode characters with Ps/Pe/Pi/Pf properties)','']
+								});
+								$("#2").typeahead({
+									name:"=begin ~ =end",
 									local : ['Ruby','']
 								});
-								$("#11").typeahead({
-									name:"list11",
-									local : ['D (can be nested)','']
+								$("#3").typeahead({
+									name:"=begin ~ =cut",
+									local : ['Perl','']
 								});
-								$("#12").typeahead({
-									name:"list12",
-									local : ['Smalltalk','']
-								});
-								$("#13").typeahead({
-									name:"list13",
+								$("#4").typeahead({
+									name:"¢ ~ ¢,# ~ #,co ~ co,comment ~ comment",
 									local : ['ALGOL 68','']
 								});
-								$("#14").typeahead({
-									name:"list14",
+								$("#5").typeahead({
+									name:"# ~ #",
+									local : ['Powershell','']
+								});
+								$("#6").typeahead({
+									name:"" ~ "",
+									local : ['Smalltalk','']
+								});
+								$("#7").typeahead({
+									name:"/+ ~ +/",
+									local : ['D (can be nested)','']
+								});
+								$("#8").typeahead({
+									name:"--[[ ~ ]],--[=[ ~ ]=]",
+									local : ['Lua (the former form can be nested, but only within the latter, which can't be nested)','']
+								});
+								$("#9").typeahead({
+									name:"(comment ~ )",
 									local : ['Clojure','']
 								});
-								$("#15").typeahead({
-									name:"list15",
-									local : ['Perl6 (bracketing characters can be (), <>, {}, [], any Unicode characters with BiDi mirrorings, or Unicode characters with Ps/Pe/Pi/Pf properties)','']
+								$("#10").typeahead({
+									name:"%{ ~ %}",
+									local : ['MATLAB (the symbols must be in a separate line)','']
+								});
+								$("#11").typeahead({
+									name:"Symbol",
+									local : ['Languages','']
+								});
+								$("#12").typeahead({
+									name:"#cs ~ #ce",
+									local : ['AutoIt','']
+								});
+								$("#13").typeahead({
+									name:"{- ~ -}",
+									local : ['Haskell (can be nested)','']
+								});
+								$("#14").typeahead({
+									name:"/# ~ #/",
+									local : ['Cobra (can be nested)','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

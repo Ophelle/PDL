@@ -29,6 +29,14 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Open Source :</label></br>
+								<input type="radio" name="FeatureOpen Source" value="oui">Yes <input type="radio" name="FeatureOpen Source" value = "non">No <input type="radio" name="FeatureOpen Source" value = "non">Partial </br>
+								
+								</br>	
+								<label>Link to Product Page : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Developer/Owner : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
 								<label>Adopters :</label></br>
 											<input type="checkbox" name="Feature" >N</br>	
 											<input type="checkbox" name="Feature" >A (platform is directed toward individual researcher use)</br>	
@@ -102,31 +110,20 @@
 											<input type="checkbox" name="Feature" >National Science Foundation</br>	
 											<input type="checkbox" name="Feature" >McCormick School of Engineering and Applied Science at Northwestern University</br>	
 											<input type="checkbox" name="Feature" >100 university campuses and research organizations globally</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
-								<label>Open Source :</label></br>
-								<input type="radio" name="FeatureOpen Source" value="oui">Yes <input type="radio" name="FeatureOpen Source" value = "non">No <input type="radio" name="FeatureOpen Source" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Link to Product Page : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Research Networking Tool : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Developer/Owner : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Research Networking Tool : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Link to Product Page",
 									local : ['SciVal','People ERIM People profile system','HUBzero','Stony Brook University Faculty Profiles System','UM Experts','EUREKA','Epistemio','MyScienceWork','CUSP','Academic Analytics','VIVO and VIVO at Sourceforge','Activity Insight','Curvita Profile Manager','InfoEd GENIUS','Pivot','ResearcherID','InCites','iAMscientist','Community Academic Profiles','Converis','Collaboration at McCormick','Lattes','Loki','Profiles','LatticeGrid public Wiki','WebWork at archive.org','REACH NC','Symplectic Elements','none available','C-IKNOW','i2iConnect','Knode','Mendeley','DigitalVita','Discontinued. Work on this system ceased; moved on to developing Digital Vita','iamResearcher','YCCI Research Accelerator','OSU:pro','Google search generated from an institution's home page or Google search limited to only one domain (e.g. university.edu)','Pure','UC Irvine Faculty Profile System','Life Science Network','Collaborative Partnership and Research Expertise at UT Arlington','Yaffle','SciENcv','INDURE','Epernicus','LinkedIn','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Developer/Owner",
 									local : ['Google','ResearchAccelerator.org','Thomson Reuters','Unknown','University of Iowa','Erasmus Research Institute of Management, Erasmus University Rotterdam, Netherlands','Epernicus','Elsevier','Indiana University','Memorial University of Newfoundland','InfoEd Global','Mendeley','Digital Measures','University of Maryland','Knode','University of Texas at Austin (UTA)','University of Texas at Arlington','Science of Networks in Communities (SONIC) - Northwestern University','Stony Brook University','Harvard University','Northwestern University Clinical and Translational Sciences Institute (NUCATS) - Biomedical Informatics Center (NUBIC)','Indiana University / Purdue University','SciMed Solutions','University of Southampton, UK','LinkedIn','Life Science Network gGmbH','ProQuest, LLC','Northwestern University','iAMscientist.inc','Purdue University','University of Pittsburgh','RENCI (Renaissance Computing Institute, a collaboration between University of North Carolina at Chapel Hill, Duke University and North Carolina State University) Duke Research Triangle Institute University of North Carolina General Administration','Stanford University','Columbia University','Center for Dental Informatics - University of Pittsburgh','CNPq - Brazil','Academic Analytics, LLC','University of Missouri','Ohio State University','Cornell University (original developers) and University of Florida','Epistemio','Symplectic','University of California Irvine','A pilot program sponsored by the Federal Demonstration Partnership and the National Science and Technology Council (NSTC) supported by the STAR METRICS program','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#2").typeahead({
+									name:"Research Networking Tool",
 									local : ['Pivot','LinkedIn','Faculty Research Information Profile (FRIP)','Faculty Scholarly Productivity Index','Expertise @ Maryland','C-IKNOW','CUSP - Columbia University Scientific Profiles','Activity Insight','HUBzero','Loki','GENIUS','WorkWeb','Lattes Platform','Yaffle','Faculty Profile System','Digital Vita','Google','Elsevier's SciVal','Collaborative Partnership / Profile System','INDURE (Indiana Database for University Research Expertise)','MyScienceWork','Community Academic Profiles - CAP','Elsevier's Pure (now integrated with SciVal Experts)','iAMscientist','Profiles Research Networking Software','McCormick Collaboration Visualization Tool','Faculty Profiles System','EUREKA! Enhancing Student Research','Epistemio','VIVO','ResearcherID','Mendeley','Life Science Network','iamResearcher','SciENcv','Epernicus Solutions & Epernicus Network','i2iConnect','LatticeGrid','Converis','Curvita Profile Manager','InCites','Symplectic Elements','REACH NC Life Science Experts Visualization Tool','Knode','OSU:pro','Research Accelerator','ERIM Member Profile System (ERIM MIS)','MizzouLinks','']
 								});
 						</script>

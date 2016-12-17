@@ -29,19 +29,8 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Mac OS X :</label></br>
-								<input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </br>
-								
-								</br>	
-								<label>Linux :</label></br>
-								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
-								
-								</br>	
 								<label>Written in Java :</label></br>
 								<input type="radio" name="FeatureWritten in Java" value="oui">Yes <input type="radio" name="FeatureWritten in Java" value = "non">No <input type="radio" name="FeatureWritten in Java" value = "non">Partial </br>
-								
-								</br>	
-								<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
 								
 								</br>	
 								<label>GUI builder :</label></br>
@@ -52,23 +41,31 @@
 								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
 								
 								</br>	
-								<label>IDE : </label></br> <input id="7" type="text" name="Feature"></br>
+								<label>IDE : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Mac OS X :</label></br>
+								<input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </br>
 								
 								</br>	
-								<label>Other platforms : </label></br> <input id="8" type="text" name="Feature"></br>
+								<label>Linux :</label></br>
+								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
 								
+								</br>	
+								<label>Other platforms : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['GPL','Proprietary (freeware)','Proprietary','Proprietary OTN JDeveloper License (freeware)','EPL','Community Edition:  Apache License v2.0, Ultimate Edition: proprietary','Permissive','Cloud IDE','CDDL, GPL2','GPL2+GNU linking exception','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"IDE",
 									local : ['JDeveloper','Geany','BlueJ','IntelliJ IDEA','jGRASP','Xcode (Apple)','Eclipse JDT IBM','JCreator','Rational Application Developer','Servoy','Codenvy','DrJava','JBuilder','Greenfoot','NetBeans','KDevelop','MyEclipse','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Other platforms",
 									local : ['','FreeBSD, IBM AIX, OpenBSD, Solaris, other Unix','generic JVM','Solaris','IBM AIX, Solaris','FreeBSD, JVM, Solaris','FreeBSD, OpenBSD, Solaris','OpenBSD, Solaris','']
+								});
+								$("#2").typeahead({
+									name:"License",
+									local : ['GPL','Proprietary (freeware)','Proprietary','Proprietary OTN JDeveloper License (freeware)','EPL','Community Edition:  Apache License v2.0, Ultimate Edition: proprietary','Permissive','Cloud IDE','CDDL, GPL2','GPL2+GNU linking exception','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

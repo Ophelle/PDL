@@ -29,40 +29,35 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Vendor : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Vendor : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Notes : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>OS : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Name : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Notes : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Name : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>OS : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Cross-platform','Linux, Windows','','Windows','Linux, Windows, Unix','?','Windows, Linux, Mac OS X','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Zope Public License','Proprietary','Postgres','GPL/BSD','AGPL3 or proprietary','GPL2 or proprietary','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"Vendor",
 									local : ['OpenLink Software','PostgreSQL Global Development Group','Microsoft Corporation','Progress Software Corporation','Greenplum division of EMC Corporation','NHN Corporation','IBM','InterSystems','Zope Corporation','SAP','Oracle Corporation','GE Energy, a division of General Electric','4th Dimension','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"License",
+									local : ['Zope Public License','Proprietary','Postgres','GPL/BSD','AGPL3 or proprietary','GPL2 or proprietary','']
+								});
+								$("#2").typeahead({
+									name:"Notes",
 									local : ['For Python, also included in Zope web application server','','Supports data objects in .NET languages','Based on REST and Server-Side JavaScript','Uses PostgreSQL codebase','GIS for public utilities; can be stored inside Oracle Database','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#3").typeahead({
+									name:"Name",
 									local : ['Caché','Oracle Database','CUBRID','PostgreSQL','OpenEdge Advanced Business Language (formerly Progress 4GL)','VMDS (Version Managed Data Store)','Adaptive Server Enterprise','DB2','Greenplum Database','Zope Object Database','Microsoft SQL Server','WakandaDB','Informix','Virtuoso Universal Server','']
+								});
+								$("#4").typeahead({
+									name:"OS",
+									local : ['Cross-platform','Linux, Windows','','Windows','Linux, Windows, Unix','?','Windows, Linux, Mac OS X','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

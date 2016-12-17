@@ -29,43 +29,38 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Company : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Other Fees : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Commission : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Other Fees : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Profit-making Activity? :</label></br>
 								<input type="radio" name="FeatureProfit-making Activity?" value="oui">Yes <input type="radio" name="FeatureProfit-making Activity?" value = "non">No <input type="radio" name="FeatureProfit-making Activity?" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Source : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Source : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Card Processing Fee : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Company : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Commission : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Card Processing Fee : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Total Giving','Bmycharity','Justgiving','everydayhero','PayPal','UK Toremet','Virgin Money Giving','Localgiving.com','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Other Fees",
 									local : ['£100+VAT start-up fee','£15+VAT/month','None','£150 (+VAT?) start-up fee','£60+VAT/year','']
 								});
+								$("#1").typeahead({
+									name:"Source",
+									local : ['','']
+								});
+								$("#2").typeahead({
+									name:"Company",
+									local : ['Total Giving','Bmycharity','Justgiving','everydayhero','PayPal','UK Toremet','Virgin Money Giving','Localgiving.com','']
+								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Commission",
 									local : ['4.25% excluding gift aid','2% excluding gift aid','0%','1.4% (on domestic donations to non-profits)','5% including on gift aid','5% including on GiftAid','5% including Gift Aid','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['','']
-								});
-								$("#5").typeahead({
-									name:"list5",
+									name:"Card Processing Fee",
 									local : ['PayPal fees','Charity PayPal fees (1.4%+20p)','£0.20','£0.16','£0.13','£0.32','']
 								});
 						</script>

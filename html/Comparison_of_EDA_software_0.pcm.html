@@ -29,9 +29,6 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Comment :</label></br>
 											<input type="checkbox" name="Feature" >A printed circuit board design program for Microsoft Windows. FreePCB allows for up to 16 copper layers</br>	
 											<input type="checkbox" name="Feature" >both metric and English units</br>	
@@ -49,31 +46,30 @@
 											<input type="checkbox" name="Feature" >drill file creation. Sophisticated graphic interface. Active user community.</br>	
 											<input type="checkbox" name="Feature" >Used to produce netlists and publish high-quality drawings.</br>	
 											<input type="checkbox" name="Feature" >VLSI circuit design tool with connectivity at all levels. Can also be used for schematic entry and PCB design.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Architecture : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Autorouter : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Autorouter : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Architecture : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Name : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Name : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Autorouter",
+									local : ['Yes','','Built-in, or FreeRouting','no','n/a','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Architecture",
 									local : ['w32','*BSD, Java','*BSD, Linux, Mac','Linux','*BSD, Windows, Linux, Mac','Posix','Linux, Solaris, Mac, NetBSD, FreeBSD, w32','','Unix','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"License",
 									local : ['GPL','GNU GPL','BSD license','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['Yes','','Built-in, or FreeRouting','no','n/a','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+									name:"Name",
 									local : ['Oregano','Icarus Verilog','Quite Universal Circuit Simulator','KTechLab','Verilator','gEDA','Electric','KiCad','XCircuit','FreePCB','Magic','']
 								});
 						</script>

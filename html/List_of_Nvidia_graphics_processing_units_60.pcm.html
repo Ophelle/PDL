@@ -29,97 +29,80 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Code name : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Fillrate - Texture (GT/s) : </label></br> <input id="2" type="number" name="Feature"></br>
+								<label>API support (version) - DirectX : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Memory clock (MHz) : </label></br> <input id="3" type="number" name="Feature"></br>
+								<label>API support (version) - OpenGL : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>TDP (watts) : </label></br> <input id="4" type="number" name="Feature"></br>
+								<label>Memory clock (MHz) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Nvidia Optimus 
- Technology :</label></br>
-								<input type="radio" name="FeatureNvidia Optimus 
- Technology" value="oui">Yes <input type="radio" name="FeatureNvidia Optimus 
- Technology" value = "non">No <input type="radio" name="FeatureNvidia Optimus 
- Technology" value = "non">Partial </br>
+								<label>Nvidia Optimus  Technology :</label></br>
+								<input type="radio" name="FeatureNvidia Optimus  Technology" value="oui">Yes <input type="radio" name="FeatureNvidia Optimus  Technology" value = "non">No <input type="radio" name="FeatureNvidia Optimus  Technology" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Memory - Bus width (bit) : </label></br> <input id="6" type="number" name="Feature"></br>
+								<label>Processing Power  GFLOPS - Single precision : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Core config : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Core config : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Core clock (MHz) : </label></br> <input id="8" type="number" name="Feature"></br>
+								<label>Fab (nm) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Memory (MB) : </label></br> <input id="9" type="number" name="Feature"></br>
+								<label>Memory (MB) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Processing Power 
- GFLOPS - Single precision : </label></br> <input id="10" type="number" name="Feature"></br>
+								<label>Core clock (MHz) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Code name : </label></br> <input id="11" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>API support (version) - DirectX : </label></br> <input id="12" type="number" name="Feature"></br>
+								<label>Memory - Bus width (bit) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>API support (version) - OpenGL : </label></br> <input id="13" type="number" name="Feature"></br>
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Shader clock (MHz) : </label></br> <input id="14" type="number" name="Feature"></br>
+								<label>Memory - Bus type : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Notes : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>TDP (watts) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Model : </label></br> <input id="15" type="text" name="Feature"></br>
-								
+								<label>Bus interface : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Memory - Bus type : </label></br> <input id="16" type="text" name="Feature"></br>
-								
+								<label>Model : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>Fab (nm) : </label></br> <input id="17" type="number" name="Feature"></br>
+								<label>Shader clock (MHz) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="18" type="number" name="Feature"></br>
+								<label>Fillrate - Pixel (GP/s) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Notes : </label></br> <input id="19" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fillrate - Pixel (GP/s) : </label></br> <input id="20" type="number" name="Feature"></br>
+								<label>Fillrate - Texture (GT/s) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['PCIe 3.0 x16','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['192:16:8
-(1 SMX)','384:32:16
-(2 SMX)','192:16:16
-(1 SMX)','1344:112:32
-(7 SMX)','576:48:32
-(3 SMX)','960:80:32
-(5 SMX)','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"Code name",
 									local : ['GK107','GK104','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['Quadro K2000M','Quadro K1000M','Quadro K4000M','Quadro K3000M','Quadro K500M','Quadro K5000M','']
+								$("#1").typeahead({
+									name:"Core config",
+									local : ['192:16:8(1 SMX)','384:32:16(2 SMX)','192:16:16(1 SMX)','1344:112:32(7 SMX)','576:48:32(3 SMX)','960:80:32(5 SMX)','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#2").typeahead({
+									name:"Notes",
 									local : ['','']
+								});
+								$("#3").typeahead({
+									name:"Bus interface",
+									local : ['PCIe 3.0 x16','']
+								});
+								$("#4").typeahead({
+									name:"Model",
+									local : ['Quadro K2000M','Quadro K1000M','Quadro K4000M','Quadro K3000M','Quadro K500M','Quadro K5000M','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

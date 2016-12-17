@@ -29,40 +29,35 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Loop : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Postcondition : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Check : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Check : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Invariant : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Invariant : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Loop : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Precondition : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Postcondition : </label></br> <input id="5" type="text" name="Feature"></br>
-								
 						<script>
+								$("#0").typeahead({
+									name:"Postcondition",
+									local : ['','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Check",
 									local : ['','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Invariant",
 									local : ['','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['','N/A','']
+									name:"Loop",
+									local : ['','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['','']
+									name:"Precondition",
+									local : ['','N/A','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -29,34 +29,32 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Podcasting :</label></br>
-								<input type="radio" name="FeaturePodcasting" value="oui">Yes <input type="radio" name="FeaturePodcasting" value = "non">No <input type="radio" name="FeaturePodcasting" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Audio player : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>RTSP (RTSPU, RTSPT) :</label></br>
 								<input type="radio" name="FeatureRTSP (RTSPU, RTSPT)" value="oui">Yes <input type="radio" name="FeatureRTSP (RTSPU, RTSPT)" value = "non">No <input type="radio" name="FeatureRTSP (RTSPU, RTSPT)" value = "non">Partial </br>
-											<input type="text"/></br>								
+								
+								</br>	
+								<label>Audio player : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Other : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>HTTP :</label></br>
 								<input type="radio" name="FeatureHTTP" value="oui">Yes <input type="radio" name="FeatureHTTP" value = "non">No <input type="radio" name="FeatureHTTP" value = "non">Partial </br>
-											<input type="text"/></br>								
+								
+								</br>	
+								<label>Podcasting :</label></br>
+								<input type="radio" name="FeaturePodcasting" value="oui">Yes <input type="radio" name="FeaturePodcasting" value = "non">No <input type="radio" name="FeaturePodcasting" value = "non">Partial </br>
+								
 								</br>	
 								<label>MMS (MMSU, MMST) :</label></br>
 								<input type="radio" name="FeatureMMS (MMSU, MMST)" value="oui">Yes <input type="radio" name="FeatureMMS (MMSU, MMST)" value = "non">No <input type="radio" name="FeatureMMS (MMSU, MMST)" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Other : </label></br> <input id="6" type="text" name="Feature"></br>
 								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Audio player",
 									local : ['Zinf','Rhapsody','Audion','musikCube','MediaMonkey','Rhythmbox','AIMP','Amarok','MusicBee','foobar2000','cmus','Audio player','Media Jukebox','Cog','JuK','Musicmatch Jukebox','Sonique','XMMS','Audacious','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Other",
 									local : ['?','No','UPNP','Other','']
 								});
 						</script>

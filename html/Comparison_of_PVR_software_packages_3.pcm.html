@@ -29,71 +29,61 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Beyond TV :</label></br>
-								<input type="radio" name="FeatureBeyond TV" value="oui">Yes <input type="radio" name="FeatureBeyond TV" value = "non">No <input type="radio" name="FeatureBeyond TV" value = "non">Partial </br>
+								<label>Kodi (formerly XBMC) :</label></br>
+								<input type="radio" name="FeatureKodi (formerly XBMC)" value="oui">Yes <input type="radio" name="FeatureKodi (formerly XBMC)" value = "non">No <input type="radio" name="FeatureKodi (formerly XBMC)" value = "non">Partial </br>
 								
 								</br>	
-								<label>DVR : </label></br> <input id="2" type="text" name="Feature"></br>
+								<label>VBox@TV :</label></br>
+								<input type="radio" name="FeatureVBox@TV" value="oui">Yes <input type="radio" name="FeatureVBox@TV" value = "non">No <input type="radio" name="FeatureVBox@TV" value = "non">Partial </br>
 								
 								</br>	
-								<label>GB-PVR : </label></br> <input id="3" type="text" name="Feature"></br>
+								<label>MediaPhoenix/ShowShifter : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>MediaPortal :</label></br>
+								<input type="radio" name="FeatureMediaPortal" value="oui">Yes <input type="radio" name="FeatureMediaPortal" value = "non">No <input type="radio" name="FeatureMediaPortal" value = "non">Partial </br>
 								
 								</br>	
-								<label>VBox@TV : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>EyeTV : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>MythTV :</label></br>
 								<input type="radio" name="FeatureMythTV" value="oui">Yes <input type="radio" name="FeatureMythTV" value = "non">No <input type="radio" name="FeatureMythTV" value = "non">Partial </br>
 								
 								</br>	
-								<label>SageTV : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>GB-PVR : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Arcsoft TotalMedia Theatre :</label></br>
-								<input type="radio" name="FeatureArcsoft TotalMedia Theatre" value="oui">Yes <input type="radio" name="FeatureArcsoft TotalMedia Theatre" value = "non">No <input type="radio" name="FeatureArcsoft TotalMedia Theatre" value = "non">Partial </br>
+								<label>Beyond TV :</label></br>
+								<input type="radio" name="FeatureBeyond TV" value="oui">Yes <input type="radio" name="FeatureBeyond TV" value = "non">No <input type="radio" name="FeatureBeyond TV" value = "non">Partial </br>
 								
 								</br>	
 								<label>Windows Media Center :</label></br>
 								<input type="radio" name="FeatureWindows Media Center" value="oui">Yes <input type="radio" name="FeatureWindows Media Center" value = "non">No <input type="radio" name="FeatureWindows Media Center" value = "non">Partial </br>
 								
 								</br>	
-								<label>Kodi (formerly XBMC) :</label></br>
-								<input type="radio" name="FeatureKodi (formerly XBMC)" value="oui">Yes <input type="radio" name="FeatureKodi (formerly XBMC)" value = "non">No <input type="radio" name="FeatureKodi (formerly XBMC)" value = "non">Partial </br>
+								<label>SageTV :</label></br>
+								<input type="radio" name="FeatureSageTV" value="oui">Yes <input type="radio" name="FeatureSageTV" value = "non">No <input type="radio" name="FeatureSageTV" value = "non">Partial </br>
 								
 								</br>	
-								<label>MediaPhoenix/ShowShifter : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+								<label>DVR : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>EyeTV : </label></br> <input id="11" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>MediaPortal :</label></br>
-								<input type="radio" name="FeatureMediaPortal" value="oui">Yes <input type="radio" name="FeatureMediaPortal" value = "non">No <input type="radio" name="FeatureMediaPortal" value = "non">Partial </br>
+								<label>Arcsoft TotalMedia Theatre :</label></br>
+								<input type="radio" name="FeatureArcsoft TotalMedia Theatre" value="oui">Yes <input type="radio" name="FeatureArcsoft TotalMedia Theatre" value = "non">No <input type="radio" name="FeatureArcsoft TotalMedia Theatre" value = "non">Partial </br>
 								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Two-way Remote Control','Second Screen','Home Automation','Shared Media Database','Tuner Sharing','Media Extenders','Placeshifting/Spaceshifting','Hard Disk Pooling','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"MediaPhoenix/ShowShifter",
 									local : ['Unknown','']
 								});
+								$("#1").typeahead({
+									name:"EyeTV",
+									local : ['Unknown','Yes','']
+								});
+								$("#2").typeahead({
+									name:"GB-PVR",
+									local : ['Unknown','Yes','']
+								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['Unknown','Yes','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['Yes','Unknown','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['Unknown','Yes','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['Yes','Unknown','']
+									name:"DVR",
+									local : ['Two-way Remote Control','Second Screen','Home Automation','Shared Media Database','Tuner Sharing','Media Extenders','Placeshifting/Spaceshifting','Hard Disk Pooling','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

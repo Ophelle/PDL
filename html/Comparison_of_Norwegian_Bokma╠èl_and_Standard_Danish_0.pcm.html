@@ -29,40 +29,35 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Danish : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>(som) du snakker om, : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Jeg ved, : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>hvordan manden, : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>hvordan manden, : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>ser ud. : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>ser ud. : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Danish : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>(som) du snakker om, : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Jeg ved, : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['I know','Jeg vet','']
+								$("#0").typeahead({
+									name:"(som) du snakker om,",
+									local : ['(som) du snakker om,','(that) you're talking about','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"hvordan manden,",
 									local : ['what (lit. how) the man','hvordan mannen','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#2").typeahead({
+									name:"ser ud.",
 									local : ['looks like.','ser ut.','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#3").typeahead({
+									name:"Danish",
 									local : ['Norwegian','English','']
 								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['(som) du snakker om,','(that) you're talking about','']
+								$("#4").typeahead({
+									name:"Jeg ved,",
+									local : ['I know','Jeg vet','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -29,19 +29,7 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>ImgBurn :</label></br>
-								<input type="radio" name="FeatureImgBurn" value="oui">Yes <input type="radio" name="FeatureImgBurn" value = "non">No <input type="radio" name="FeatureImgBurn" value = "non">Partial </br>
-								
-								</br>	
-								<label>InfraRecorder : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>PowerISO : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>CDBurnerXP :</label></br>
-								<input type="radio" name="FeatureCDBurnerXP" value="oui">Yes <input type="radio" name="FeatureCDBurnerXP" value = "non">No <input type="radio" name="FeatureCDBurnerXP" value = "non">Partial </br>
-								
+								<label>UltraISO : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>cdrtools :</label></br>
 								<input type="radio" name="Featurecdrtools" value="oui">Yes <input type="radio" name="Featurecdrtools" value = "non">No <input type="radio" name="Featurecdrtools" value = "non">Partial </br>
@@ -49,17 +37,6 @@
 								</br>	
 								<label>DeepBurner :</label></br>
 								<input type="radio" name="FeatureDeepBurner" value="oui">Yes <input type="radio" name="FeatureDeepBurner" value = "non">No <input type="radio" name="FeatureDeepBurner" value = "non">Partial </br>
-								
-								</br>	
-								<label>X-CD-Roast :</label></br>
-								<input type="radio" name="FeatureX-CD-Roast" value="oui">Yes <input type="radio" name="FeatureX-CD-Roast" value = "non">No <input type="radio" name="FeatureX-CD-Roast" value = "non">Partial </br>
-								
-								</br>	
-								<label>UltraISO : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Alcohol 120% :</label></br>
-								<input type="radio" name="FeatureAlcohol 120%" value="oui">Yes <input type="radio" name="FeatureAlcohol 120%" value = "non">No <input type="radio" name="FeatureAlcohol 120%" value = "non">Partial </br>
 								
 								</br>	
 								<label>K3b :</label></br>
@@ -70,23 +47,42 @@
 								<input type="radio" name="FeatureNero Burning ROM" value="oui">Yes <input type="radio" name="FeatureNero Burning ROM" value = "non">No <input type="radio" name="FeatureNero Burning ROM" value = "non">Partial </br>
 								
 								</br>	
-								<label>Application : </label></br> <input id="12" type="text" name="Feature"></br>
+								<label>PowerISO : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Alcohol 120% :</label></br>
+								<input type="radio" name="FeatureAlcohol 120%" value="oui">Yes <input type="radio" name="FeatureAlcohol 120%" value = "non">No <input type="radio" name="FeatureAlcohol 120%" value = "non">Partial </br>
 								
+								</br>	
+								<label>ImgBurn :</label></br>
+								<input type="radio" name="FeatureImgBurn" value="oui">Yes <input type="radio" name="FeatureImgBurn" value = "non">No <input type="radio" name="FeatureImgBurn" value = "non">Partial </br>
+								
+								</br>	
+								<label>InfraRecorder : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>X-CD-Roast :</label></br>
+								<input type="radio" name="FeatureX-CD-Roast" value="oui">Yes <input type="radio" name="FeatureX-CD-Roast" value = "non">No <input type="radio" name="FeatureX-CD-Roast" value = "non">Partial </br>
+								
+								</br>	
+								<label>CDBurnerXP :</label></br>
+								<input type="radio" name="FeatureCDBurnerXP" value="oui">Yes <input type="radio" name="FeatureCDBurnerXP" value = "non">No <input type="radio" name="FeatureCDBurnerXP" value = "non">Partial </br>
+								
+								</br>	
+								<label>Application : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"UltraISO",
 									local : ['Yes','?','']
 								});
+								$("#1").typeahead({
+									name:"PowerISO",
+									local : ['?','Yes','']
+								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"InfraRecorder",
 									local : ['?','Yes','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['?','Yes','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+									name:"Application",
 									local : ['White (VCD/SVCD)','Blue (E-CD)','Green (CD-I)','Beige (PCD)','Purple (DDCD)','Yellow (CD-ROM)','Scarlet (SACD)','Orange (CD-R/CD-RW)','Red (CD-DA)','']
 								});
 						</script>

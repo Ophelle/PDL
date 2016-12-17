@@ -29,22 +29,13 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>User Account Control (UAC):
-Included with Windows Vista and later Microsoft Windows operating systems, UAC prompts the user for authorization when an application tries to perform an administrator task. :</label></br>
-											<input type="checkbox" name="Feature" >Runas:
-A command-line tool introduced with Windows 2000 that allows running a program</br>	
-											<input type="checkbox" name="Feature" >control panel applet</br>	
-											<input type="checkbox" name="Feature" >or a MMC snap-in as a different user. Runas makes use of the "Secondary Login" Windows service</br>	
-											<input type="checkbox" name="Feature" >also introduced with Windows 2000. This service provides the capability to allow applications running as a separate user to interact with the logged-in user's desktop. This is necessary to support drag-and-drop</br>	
-											<input type="checkbox" name="Feature" >clipboard sharing</br>	
-											<input type="checkbox" name="Feature" >and other interactive login features.</br>	
-									
+								<label>User Account Control prompt dialog box : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>User Account Control prompt dialog box : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>User Account Control (UAC):Included with Windows Vista and later Microsoft Windows operating systems, UAC prompts the user for authorization when an application tries to perform an administrator task. :</label></br>
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"User Account Control prompt dialog box",
 									local : ['User Account Control prompt dialog box','']
 								});
 						</script>

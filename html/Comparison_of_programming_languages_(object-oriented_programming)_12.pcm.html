@@ -29,33 +29,29 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>current object's parent object : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>current object : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>current object : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>current object's parent object : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Current Context of Execution : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>null reference : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Current Context of Execution : </label></br> <input id="4" type="text" name="Feature"></br>
-								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"current object",
 									local : ['','SELF','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"current object's parent object",
 									local : ['','SUPER','(3.x only)','']
 								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['','NULL','N/A','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#2").typeahead({
+									name:"Current Context of Execution",
 									local : ['','']
+								});
+								$("#3").typeahead({
+									name:"null reference",
+									local : ['','NULL','N/A','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

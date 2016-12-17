@@ -29,45 +29,34 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>em : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>de : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>de : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Preposition +definite article(Portuguese) : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>a : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>a : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>por : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>por : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Preposition +
-definite article
-(Portuguese) : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>em : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"de",
 									local : ['do','das','dos','da','']
 								});
+								$("#1").typeahead({
+									name:"Preposition +definite article(Portuguese)",
+									local : ['os(masc.pl.)','o(masc.sing.)','a(fem.sing.)','as(fem.pl.)','']
+								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"a",
 									local : ['aos','ao','à','às','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"por",
 									local : ['pelas','pela','pelos','pelo','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['os
-(masc.pl.)','o
-(masc.sing.)','a
-(fem.sing.)','as
-(fem.pl.)','']
-								});
-								$("#5").typeahead({
-									name:"list5",
+									name:"em",
 									local : ['no','nos','nas','na','']
 								});
 						</script>

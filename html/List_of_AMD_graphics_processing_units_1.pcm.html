@@ -29,6 +29,15 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Config core : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bus type : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bus width (bit) : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>API compliance : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
 								<label>Bus interface :</label></br>
 											<input type="checkbox" name="Feature" >ISA</br>	
 											<input type="checkbox" name="Feature" >MCA</br>	
@@ -37,49 +46,33 @@
 PCI</br>	
 											<input type="checkbox" name="Feature" >VLB</br>	
 											<input type="checkbox" name="Feature" >PCI</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Config core : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Model : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Memory - Bus width (bit) : </label></br> <input id="3" type="number" name="Feature"></br>
-								
+								<label>Memory (KB) : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Model : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Fab (µm) : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 								</br>	
-								<label>Memory - Bus type : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Memory (KB) : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fab (µm) : </label></br> <input id="7" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>Launch : </label></br> <input id="8" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>API compliance : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label>Launch : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Config core",
 									local : ['1:1','']
 								});
+								$("#1").typeahead({
+									name:"API compliance",
+									local : ['2D','']
+								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Model",
 									local : ['Mach 32','Mach 8','Mach 64','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['1024, 2048, 4096, 8192','512
-1024','1024
-2048','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['2D','']
+									name:"Memory (KB)",
+									local : ['1024, 2048, 4096, 8192','5121024','10242048','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

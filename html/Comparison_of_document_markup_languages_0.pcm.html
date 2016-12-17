@@ -29,6 +29,15 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Language : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Editor : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>First public release date : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Creator : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
 								<label>Viewer :</label></br>
 											<input type="checkbox" name="Feature" >Web browser</br>	
 											<input type="checkbox" name="Feature" >Word processor</br>	
@@ -73,31 +82,19 @@
 											<input type="checkbox" name="Feature" >Portable Document Format (PDF)</br>	
 											<input type="checkbox" name="Feature" >GDDM</br>	
 											<input type="checkbox" name="Feature" >AFP viewer</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Creator : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Language : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Editor : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>First public release date : </label></br> <input id="5" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Language",
 									local : ['Music Extensible Markup Language (MusicXML)','Script','Markdown','Office Open XML (OOXML)','Math Markup Language (MathML)','Open Mathematical Documents (OMDoc)','Maker Interchange Format (MIF)','OpenDocument Format (ODF)','Rich Text Format (RTF)','DocBook','HyperText Markup Language (HTML)','Textile','Computable Document Format','MakeDoc','Text Encoding Initiative (TEI)','Texinfo','reStructuredText','LilyPond','Language','The Music Encoding Initiative (MEI)','AsciiDoc','Creole','Scalable Vector Graphics (SVG)','TeX','Wireless Markup Language (WML)','Org-mode','Darwin Information Typing Architecture (DITA)','Extensible HyperText Markup Language (XHTML)','troff (typesetter runoff), groff (GNU runoff)','Encoded Archival Description (EAD)','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Dean Allen','Donald Knuth','IBM','Org-mode project','W3C','John Gruber and Aaron Swartz','Text Encoding Initiative Consortium','Richard Stallman','Joe Ossanna','Carl Sassenrath','OASIS, ISO/IEC','Berkeley Project','WAP Forum','Microsoft','Han-Wen Nienhuys, Jan Nieuwenhuizen','Recordare','David_Goodger','','Ecma International, ISO/IEC','Frame Technology acquired by Adobe Systems in 1995','IBM, OASIS','Creator','Michael Kohlhase','Tim Berners-Lee','Wolfram Research','The MEI Community','The Davenport Group, OASIS','Stuart Rackham','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Editor",
 									local : ['Text editor, HTML editor','XML editor','Text editor','Text/XML editor, TeX converter','Text editor, E-mail client','Text/XML editor','Text/XML editor, HTML editor','Text editor, Scorewriter','Mathematica','Text editor, Word processor','Text editor, FrameMaker','Scorewriter','Office suite','Vector graphics editor','Editor','Emacs, text editor','']
+								});
+								$("#2").typeahead({
+									name:"Creator",
+									local : ['Dean Allen','Donald Knuth','IBM','Org-mode project','W3C','John Gruber and Aaron Swartz','Text Encoding Initiative Consortium','Richard Stallman','Joe Ossanna','Carl Sassenrath','OASIS, ISO/IEC','Berkeley Project','WAP Forum','Microsoft','Han-Wen Nienhuys, Jan Nieuwenhuizen','Recordare','David_Goodger','','Ecma International, ISO/IEC','Frame Technology acquired by Adobe Systems in 1995','IBM, OASIS','Creator','Michael Kohlhase','Tim Berners-Lee','Wolfram Research','The MEI Community','The Davenport Group, OASIS','Stuart Rackham','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

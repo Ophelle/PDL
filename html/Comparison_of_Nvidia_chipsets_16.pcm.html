@@ -29,24 +29,26 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>USB : </label></br> <input id="1" type="text" name="Feature"></br>
+								<label>Release Date : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>PCI-Express : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Notes : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Code Name : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>SATA :</label></br>
+											<input type="checkbox" name="Feature" >6 Ports 3.0Gbit</br>	
+											<input type="checkbox" name="Feature" >s</br>	
+							
 								</br>	
-								<label>Sound : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>LAN :</label></br>
+											<input type="checkbox" name="Feature" >1000 Mbit</br>	
+											<input type="checkbox" name="Feature" >s</br>	
+							
 								</br>	
-								<label>Fabrication
-process (nm) : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>SLI : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>SLI : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>USB : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>PCI-Express : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Processors Supported :</label></br>
 											<input type="checkbox" name="Feature" >Phenom II</br>	
@@ -56,22 +58,17 @@ process (nm) : </label></br> <input id="5" type="text" name="Feature"></br>
 											<input type="checkbox" name="Feature" >Athlon 64</br>	
 											<input type="checkbox" name="Feature" >Sempron 64
 Socket AM3</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
-								<label>FSB/HT
-Frequency (MHz) : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>FSB/HTFrequency (MHz) : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>PCI : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label>Sound : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>LAN :</label></br>
-											<input type="checkbox" name="Feature" >1000 Mbit</br>	
-											<input type="checkbox" name="Feature" >s</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								<label>Fabricationprocess (nm) : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
-								<label>Model : </label></br> <input id="11" type="text" name="Feature"></br>
-								
+								<label>Code Name : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Model : </label></br> <input id="8" type="text" name="Feature"></br>
 								</br>	
 								<label>Features :</label></br>
 											<input type="checkbox" name="Feature" >Onboard GeForce 8200
@@ -80,68 +77,55 @@ PureVideo HD</br>
 											<input type="checkbox" name="Feature" >HybridPower</br>	
 											<input type="checkbox" name="Feature" >SLI-Memory Ready</br>	
 											<input type="checkbox" name="Feature" >FirstPacket</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
-								<label>PATA : </label></br> <input id="13" type="text" name="Feature"></br>
-								
+								<label>PATA : </label></br> <input id="9" type="text" name="Feature"></br>
 								</br>	
-								<label>SATA :</label></br>
-											<input type="checkbox" name="Feature" >6 Ports 3.0Gbit</br>	
-											<input type="checkbox" name="Feature" >s</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Notes : </label></br> <input id="15" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Release Date : </label></br> <input id="16" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>PCI : </label></br> <input id="10" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Notes",
+									local : ['Rebranded nForce 780a SLI','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['12 Ports Rev 2.0','']
+									name:"SLI",
+									local : ['x16+x16x16+x16+x8x8+x8+x8','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['2.0
-51 lanes','']
+									name:"USB",
+									local : ['12 Ports Rev 2.0','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['5 Ports','']
+									name:"PCI-Express",
+									local : ['2.051 lanes','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['MCP72 + nForce200','']
+									name:"PCI",
+									local : ['5 Ports','']
 								});
 								$("#5").typeahead({
-									name:"list5",
-									local : ['HDA','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['','']
-								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['x16+x16
-x16+x16+x8
-x8+x8+x8','']
-								});
-								$("#8").typeahead({
-									name:"list8",
+									name:"FSB/HTFrequency (MHz)",
 									local : ['HT3.0 2.6 GHz','']
 								});
+								$("#6").typeahead({
+									name:"Sound",
+									local : ['HDA','']
+								});
+								$("#7").typeahead({
+									name:"Fabricationprocess (nm)",
+									local : ['','']
+								});
+								$("#8").typeahead({
+									name:"Code Name",
+									local : ['MCP72 + nForce200','']
+								});
 								$("#9").typeahead({
-									name:"list9",
+									name:"Model",
 									local : ['nForce 980a SLI','']
 								});
 								$("#10").typeahead({
-									name:"list10",
+									name:"PATA",
 									local : ['1 Ports UDMA 133','']
-								});
-								$("#11").typeahead({
-									name:"list11",
-									local : ['Rebranded nForce 780a SLI','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

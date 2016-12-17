@@ -29,40 +29,35 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Licence : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Name : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Details : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Language : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Language : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Licence : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Platform : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Platform : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Name : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Details : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['A high-level portable library to easily write asynchronous FTP servers with Python. It is currently the most complete RFC-959 FTP server implementation available for Python.','']
+								$("#0").typeahead({
+									name:"Name",
+									local : ['pyftpdlib','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Language",
 									local : ['Python','']
 								});
+								$("#2").typeahead({
+									name:"Licence",
+									local : ['MIT License','']
+								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Platform",
 									local : ['Platform independent','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['MIT License','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['pyftpdlib','']
+									name:"Details",
+									local : ['A high-level portable library to easily write asynchronous FTP servers with Python. It is currently the most complete RFC-959 FTP server implementation available for Python.','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

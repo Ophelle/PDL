@@ -29,6 +29,22 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>-s- : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>z :</label></br>
+											<input type="checkbox" name="Feature" >θ</br>	
+											<input type="checkbox" name="Feature" >or </br>	
+											<input type="checkbox" name="Feature" >s</br>	
+											<input type="checkbox" name="Feature" >dz</br>	
+											<input type="checkbox" name="Feature" >z</br>	
+											<input type="checkbox" name="Feature" >c</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>ch :</label></br>
+											<input type="checkbox" name="Feature" >tʃ</br>	
+											<input type="checkbox" name="Feature" >ʃ</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
 								<label>j/g :</label></br>
 											<input type="checkbox" name="Feature" >jogar 'to play'</br>	
 											<input type="checkbox" name="Feature" >gente 'people'</br>	
@@ -39,7 +55,9 @@
 											<input type="checkbox" name="Feature" >gente</br>	
 											<input type="checkbox" name="Feature" >j</br>	
 											<input type="checkbox" name="Feature" >g</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Medieval Spanish and Portuguese : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>s-, -ss- :</label></br>
 											<input type="checkbox" name="Feature" >s</br>	
@@ -48,7 +66,7 @@
 											<input type="checkbox" name="Feature" >saber 'to know'</br>	
 											<input type="checkbox" name="Feature" >
 passar 'to pass'</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>ç/c :</label></br>
 											<input type="checkbox" name="Feature" >θ</br>	
@@ -61,18 +79,7 @@ passar 'to pass'</br>
 											<input type="checkbox" name="Feature" >z</br>	
 											<input type="checkbox" name="Feature" >c</br>	
 											<input type="checkbox" name="Feature" >ts</br>	
-									
-								</br>	
-								<label>Spelling : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>ch :</label></br>
-											<input type="checkbox" name="Feature" >tʃ</br>	
-											<input type="checkbox" name="Feature" >ʃ</br>	
-									
-								</br>	
-								<label>-s- : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>x :</label></br>
 											<input type="checkbox" name="Feature" >oxalá 'I hope; God grant'</br>	
@@ -80,31 +87,21 @@ passar 'to pass'</br>
 											<input type="checkbox" name="Feature" >g</br>	
 											<input type="checkbox" name="Feature" >x</br>	
 											<input type="checkbox" name="Feature" >ʃ</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>z :</label></br>
-											<input type="checkbox" name="Feature" >θ</br>	
-											<input type="checkbox" name="Feature" >or </br>	
-											<input type="checkbox" name="Feature" >s</br>	
-											<input type="checkbox" name="Feature" >dz</br>	
-											<input type="checkbox" name="Feature" >z</br>	
-											<input type="checkbox" name="Feature" >c</br>	
-									
-								</br>	
-								<label>Medieval Spanish and Portuguese : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label>Spelling : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Pronunciation','Examples','Spelling','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"-s-",
 									local : ['casa 'house'','s','/z/','casa','/s/','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Medieval Spanish and Portuguese",
 									local : ['Medieval Spanish and Portuguese','Modern Spanish','Modern Portuguese','']
+								});
+								$("#2").typeahead({
+									name:"Spelling",
+									local : ['Pronunciation','Examples','Spelling','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

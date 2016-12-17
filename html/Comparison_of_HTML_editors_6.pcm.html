@@ -29,70 +29,58 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Author : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Program : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Integrated Browser :</label></br>
+								<input type="radio" name="FeatureIntegrated Browser" value="oui">Yes <input type="radio" name="FeatureIntegrated Browser" value = "non">No <input type="radio" name="FeatureIntegrated Browser" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Version : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>HTML Compliant : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>System : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Cost : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
 								<label>Forms :</label></br>
 								<input type="radio" name="FeatureForms" value="oui">Yes <input type="radio" name="FeatureForms" value = "non">No <input type="radio" name="FeatureForms" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 								</br>	
-								<label>Program : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Version : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Author : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Display : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
 								<label>Tables :</label></br>
 								<input type="radio" name="FeatureTables" value="oui">Yes <input type="radio" name="FeatureTables" value = "non">No <input type="radio" name="FeatureTables" value = "non">Partial </br>
-								
-								</br>	
-								<label>Integrated 
-Browser :</label></br>
-								<input type="radio" name="FeatureIntegrated 
-Browser" value="oui">Yes <input type="radio" name="FeatureIntegrated 
-Browser" value = "non">No <input type="radio" name="FeatureIntegrated 
-Browser" value = "non">Partial </br>
-								
-								</br>	
-								<label>HTML 
-Compliant : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Cost : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>System : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Display : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+											<input type="text"/></br>								
 						<script>
+								$("#0").typeahead({
+									name:"Author",
+									local : ['Andrzej Stochniol','MediaTech','SoftQuad','Liem Bahenmann','SiliconGraphics','University of Chicago','Jochen Schales','GRIF','DART Software','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Program",
 									local : ['WebMagic','Live Markup','Symposia','asWedit','Phoenix','HoTMetaL','HoTMetaL pro','Webtor','Tkhtml','WebPages','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Version",
 									local : ['0.1.7','1.7','1','1.1','.91prealpha2','1.0+','0.8','2.3','16b4a','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['Andrzej Stochniol','MediaTech','SoftQuad','Liem Bahenmann','SiliconGraphics','University of Chicago','Jochen Schales','GRIF','DART Software','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+									name:"HTML Compliant",
 									local : ['No','HTML 2','HTML 3','HTML 1','HTML2','']
 								});
+								$("#4").typeahead({
+									name:"System",
+									local : ['Unix','NextStep','Windows','Unix,Windows','Irix','Unix, Windows, Macintosh','Macintosh','']
+								});
 								$("#5").typeahead({
-									name:"list5",
+									name:"Cost",
 									local : ['commercial','freeware','beta','']
 								});
 								$("#6").typeahead({
-									name:"list6",
-									local : ['Unix','NextStep','Windows','Unix,Windows','Irix','Unix, Windows, Macintosh','Macintosh','']
-								});
-								$("#7").typeahead({
-									name:"list7",
+									name:"Display",
 									local : ['WYSIWYG','source','']
 								});
 						</script>

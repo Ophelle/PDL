@@ -29,15 +29,6 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>First public release : </label></br> <input id="1" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>Language : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Latest stable version :</label></br>
 											<input type="checkbox" name="Feature" >1.3.14 </br>	
 											<input type="checkbox" name="Feature" >08.2008</br>	
@@ -54,13 +45,7 @@
 											<input type="checkbox" name="Feature" >0.14.0 </br>	
 											<input type="checkbox" name="Feature" >May 3</br>	
 											<input type="checkbox" name="Feature" >2014</br>	
-									
-								</br>	
-								<label>Creator : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Cost (USD) : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>Notes :</label></br>
 											<input type="checkbox" name="Feature" >General purpose numerical analysis library. Targets GNU</br>	
@@ -79,22 +64,40 @@
 											<input type="checkbox" name="Feature" >and therefore connected to the previous Numeric and Numarray packages for Python</br>	
 											<input type="checkbox" name="Feature" >C++ template library for linear algebra; includes various decompositions and factorisations; syntax (API) is similar to MATLAB.</br>	
 											<input type="checkbox" name="Feature" >Math and statistical libraries for the .NET Framework</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Language :</label></br>
+											<input type="checkbox" name="Feature" >C</br>	
+											<input type="checkbox" name="Feature" >Fortran</br>	
+											<input type="checkbox" name="Feature" >C++</br>	
+											<input type="checkbox" name="Feature" >C#</br>	
+											<input type="checkbox" name="Feature" >FreePascal</br>	
+											<input type="checkbox" name="Feature" >VBA</br>	
+											<input type="checkbox" name="Feature" >F#</br>	
+											<input type="checkbox" name="Feature" >Java</br>	
+											<input type="checkbox" name="Feature" >Android</br>	
+											<input type="checkbox" name="Feature" >Python</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Creator : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>First public release : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Cost (USD) : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['C, Fortran','C++, C#, FreePascal, VBA','C#, F#, C','Python','C#','Java, Android','C++','C','C, Java, C#, Fortran, Python','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Proprietary','MPL','Free for non-commercial use','GPL','MIT/X11','BSD','LGPL','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"Creator",
 									local : ['CenterSpace Software','Rogue Wave Software','jwork.org (S.Chekanov)','C. Rüegg, M. Cuda, et al.','GNU Project','scipy.org community','The Numerical Algorithms Group','H. Kutschbach','Sergey Bochkanov','NICTA','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"License",
+									local : ['Proprietary','MPL','Free for non-commercial use','GPL','MIT/X11','BSD','LGPL','']
+								});
+								$("#2").typeahead({
+									name:"Cost (USD)",
 									local : ['Free','Not free','$995','']
 								});
 						</script>

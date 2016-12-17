@@ -29,6 +29,20 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>OS X :</label></br>
+								<input type="radio" name="FeatureOS X" value="oui">Yes <input type="radio" name="FeatureOS X" value = "non">No <input type="radio" name="FeatureOS X" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Structure : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Windows :</label></br>
+								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Package : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Market focus : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
 								<label>Type :</label></br>
 											<input type="checkbox" name="Feature" >Personal Cash Management</br>	
 											<input type="checkbox" name="Feature" >Investment Management</br>	
@@ -200,47 +214,29 @@
 											<input type="checkbox" name="Feature" >Remote Access</br>	
 											<input type="checkbox" name="Feature" >expenses management</br>	
 											<input type="checkbox" name="Feature" >Business Accounting and Invoicing</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>Linux :</label></br>
 								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
 								<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>OS X :</label></br>
-								<input type="radio" name="FeatureOS X" value="oui">Yes <input type="radio" name="FeatureOS X" value = "non">No <input type="radio" name="FeatureOS X" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Windows :</label></br>
-								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Package : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Structure : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Market focus : </label></br> <input id="8" type="text" name="Feature"></br>
-								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Software as a Service','Proprietary','Proprietary and Software as a service','Licence','Software as a service and freeware','Software as a Service and freeware','Proprietary and freeware','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['iBank','Microsoft Dynamics AX','FlexAccount','BIG4books','Wave Accounting','Saasu','Aplos Software','Outright','Gem Accounts','CODA','invoiceit','CGram Enterprise','Moneydance','Sage 300 ERP','Acumatica','QuickBooks Online','FreshBooks','TRAVERSE','Intacct','Passport Software','Fortora Fresh Finance','MYOB AccountRight','POS solutions','Microsoft Dynamics NAV','Microsoft Dynamics SL','MoneyWiz','Sage Group','Kashoo','Package','24SevenOffice','Sage Pastel Evolution','Microsoft Money','NewViews','Xero','Oracle E-Business Suite','NOSA XP','Express Accounts from NCH Software','FreeAgent','MYOB EXO Business','NolaPro','FinancialForce.com','Open Systems Accounting Software','Microsoft Dynamics C5','SAP ERP','Cougar Mountain Software','The Access Group','Tally','Baan Corporation','QuickBooks Enterprise Solutions','You Need a Budget','SAP Business One','Sage Line 50','SAP Business ByDesign','Openda QX','KashFlow','Cheqbook','QuickBooks Pro/Premier','Microsoft Office Accounting','Red Wing Software','AME Accounting Software','Sage 50 Accounting','Comarch Altum','NetSuite','Brightpearl','Sage PFW ERP','Simply Accounting','Softline Pastel','Quicken','Mint.com','Microsoft Dynamics GP','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"Structure",
 									local : ['Stand alone','Stand alone/Web Access','Web based','Stand alone and Web based','Stand alone and web based','Stand alone and/or Web based','Stand-alone','Multi-User/Location, Terminal Server, Remote Access, Web Access, Mobile Access, Cloud Hostable','Stand alone and Web Based','Stand Alone/Web Access','Stand Alone','Stand Alone and Web based','Web Based','Windows remote connect client','Structure','Multi-User, Remote Access, Web Access, Mobile Access, Cloud Hostable','Stand alone and Mobile','Multi-User/Location, Terminal Server, Web Access','Multi-User/Location, Terminal Server','Stand alone  and/or  Web Access','Stand alone / Web Access','Stand alone, multi-user/location, terminal server, remote access','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Package",
+									local : ['iBank','Microsoft Dynamics AX','FlexAccount','BIG4books','Wave Accounting','Saasu','Aplos Software','Outright','Gem Accounts','CODA','invoiceit','CGram Enterprise','Moneydance','Sage 300 ERP','Acumatica','QuickBooks Online','FreshBooks','TRAVERSE','Intacct','Passport Software','Fortora Fresh Finance','MYOB AccountRight','POS solutions','Microsoft Dynamics NAV','Microsoft Dynamics SL','MoneyWiz','Sage Group','Kashoo','Package','24SevenOffice','Sage Pastel Evolution','Microsoft Money','NewViews','Xero','Oracle E-Business Suite','NOSA XP','Express Accounts from NCH Software','FreeAgent','MYOB EXO Business','NolaPro','FinancialForce.com','Open Systems Accounting Software','Microsoft Dynamics C5','SAP ERP','Cougar Mountain Software','The Access Group','Tally','Baan Corporation','QuickBooks Enterprise Solutions','You Need a Budget','SAP Business One','Sage Line 50','SAP Business ByDesign','Openda QX','KashFlow','Cheqbook','QuickBooks Pro/Premier','Microsoft Office Accounting','Red Wing Software','AME Accounting Software','Sage 50 Accounting','Comarch Altum','NetSuite','Brightpearl','Sage PFW ERP','Simply Accounting','Softline Pastel','Quicken','Mint.com','Microsoft Dynamics GP','']
+								});
+								$("#2").typeahead({
+									name:"Market focus",
 									local : ['Low to Mid Market','Mid-Market','(Small Businesses)','Accounting Firms','Mid Market','Personal','Entrepreneurs, freelancers, Contractors, Consultants, Small businesses - Low Market','Midsize to High-end','Low to High End Market','Small Business','Low to Mid-Market','Small & Midsize Enterprises (SME)','Private Enterprises, Public Sectors and Accounting Firms','Low-market (for SME)','Mid-market','Low-end to High End Markets','Low-end to High end','High Market','Low to Mid-Market. Small & Midsize Enterprises (SME)','Mid-Market to Enterprise','Small, Medium to Mid-size Enterprises (SME)','Low to Mid-Market nonprofit and faith-based organizations','Mid to High End Market','Low Market','Mid to Low-Market','Freelancers and Microbusiness','Newsagency pharmacy','Entrepreneurs, freelancers, contractors, consultants, small businesses – Low Market)','Market focus','Low-end','Midsize to High-end Enterprises','Small Businesses (Small Businesses)','']
+								});
+								$("#3").typeahead({
+									name:"License",
+									local : ['Software as a Service','Proprietary','Proprietary and Software as a service','Licence','Software as a service and freeware','Software as a Service and freeware','Proprietary and freeware','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

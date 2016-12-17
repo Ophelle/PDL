@@ -29,11 +29,26 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Custom authentication :</label></br>
+								<input type="radio" name="FeatureCustom authentication" value="oui">Yes <input type="radio" name="FeatureCustom authentication" value = "non">No <input type="radio" name="FeatureCustom authentication" value = "non">Partial </br>
+								
+								</br>	
+								<label>Filesystems : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Single sign-on : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Hardware acceleration :</label></br>
+								<input type="radio" name="FeatureHardware acceleration" value="oui">Yes <input type="radio" name="FeatureHardware acceleration" value = "non">No <input type="radio" name="FeatureHardware acceleration" value = "non">Partial </br>
 								
 								</br>	
 								<label>TPM :</label></br>
 								<input type="radio" name="FeatureTPM" value="oui">Yes <input type="radio" name="FeatureTPM" value = "non">No <input type="radio" name="FeatureTPM" value = "non">Partial </br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Passphrase strengthening :</label></br>
+								<input type="radio" name="FeaturePassphrase strengthening" value="oui">Yes <input type="radio" name="FeaturePassphrase strengthening" value = "non">No <input type="radio" name="FeaturePassphrase strengthening" value = "non">Partial </br>
 								
 								</br>	
 								<label>Two-factor authentication :</label></br>
@@ -44,42 +59,24 @@
 								<input type="radio" name="FeatureMultiple keys" value="oui">Yes <input type="radio" name="FeatureMultiple keys" value = "non">No <input type="radio" name="FeatureMultiple keys" value = "non">Partial </br>
 								
 								</br>	
-								<label>Filesystems : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Passphrase strengthening :</label></br>
-								<input type="radio" name="FeaturePassphrase strengthening" value="oui">Yes <input type="radio" name="FeaturePassphrase strengthening" value = "non">No <input type="radio" name="FeaturePassphrase strengthening" value = "non">Partial </br>
-								
-								</br>	
 								<label>Pre-boot authentication :</label></br>
 								<input type="radio" name="FeaturePre-boot authentication" value="oui">Yes <input type="radio" name="FeaturePre-boot authentication" value = "non">No <input type="radio" name="FeaturePre-boot authentication" value = "non">Partial </br>
-								
-								</br>	
-								<label>Custom authentication :</label></br>
-								<input type="radio" name="FeatureCustom authentication" value="oui">Yes <input type="radio" name="FeatureCustom authentication" value = "non">No <input type="radio" name="FeatureCustom authentication" value = "non">Partial </br>
-								
-								</br>	
-								<label>Hardware acceleration :</label></br>
-								<input type="radio" name="FeatureHardware acceleration" value="oui">Yes <input type="radio" name="FeatureHardware acceleration" value = "non">No <input type="radio" name="FeatureHardware acceleration" value = "non">Partial </br>
-								
-								</br>	
-								<label>Name : </label></br> <input id="10" type="text" name="Feature"></br>
 								
 								</br>	
 								<label>Hidden containers :</label></br>
 								<input type="radio" name="FeatureHidden containers" value="oui">Yes <input type="radio" name="FeatureHidden containers" value = "non">No <input type="radio" name="FeatureHidden containers" value = "non">Partial </br>
 								
 						<script>
+								$("#0").typeahead({
+									name:"Filesystems",
+									local : ['?','Any supported by OS','NTFS, FAT32','Only Windows MBR volumes; no UEFI GPT drives','ext2, ext3, reiserfs, minix, ntfs, vfat/msdos','Chiefly NTFS','Only Windows MBR volumes; no UEFI GPT drives, and dynamic drives discouraged','Yes','HFS+, possibly others','NTFS, FAT32 on non-system volumes','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Single sign-on",
 									local : ['N/A','?','Yes','No','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['?','Any supported by OS','NTFS, FAT32','Only Windows MBR volumes; no UEFI GPT drives','ext2, ext3, reiserfs, minix, ntfs, vfat/msdos','Chiefly NTFS','Only Windows MBR volumes; no UEFI GPT drives, and dynamic drives discouraged','Yes','HFS+, possibly others','NTFS, FAT32 on non-system volumes','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Name",
 									local : ['McAfee Drive Encryption (SafeBoot)','GBDE','FREE CompuSec','PGPDisk','SafeGuard Easy','Private Disk','ArchiCrypt Live','cryptoloop','BestCrypt','Aloaha Secure Stick','Scramdisk','DISK Protect','loop-AES','Symantec Endpoint Encryption','SafeHouse Professional','ProxyCrypt','Check Point Full Disk Encryption','FileVault','eCryptfs','CenterTools DriveLock','cryptsetup/ dmsetup','CrossCrypt','SafeGuard PrivateDisk','Bloombase Keyparc','FileVault 2','Sentry 2020','n-Crypt Pro','e-Capsule Private Safe','CipherShed','dm-crypt/LUKS','DriveCrypt','svnd / vnconfig','CryptArchiver','TrueCrypt','BitArmor DataControl','SecureDoc','FreeOTFE','R-Crypto','SafeGuard Enterprise','softraid / RAID C','EgoSecure HDD Encryption','SecuBox','BitLocker Drive Encryption','GELI','VeraCrypt','CGD','E4M','DiskCryptor','Scramdisk 4 Linux','Trend Micro Endpoint Encryption','DriveSentry GoAnywhere 2','']
 								});
 						</script>

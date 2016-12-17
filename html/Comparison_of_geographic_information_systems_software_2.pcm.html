@@ -29,17 +29,6 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Language :</label></br>
-											<input type="checkbox" name="Feature" >.NET</br>	
-											<input type="checkbox" name="Feature" >C++</br>	
-											<input type="checkbox" name="Feature" >Java</br>	
-											<input type="checkbox" name="Feature" >C#</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>WMS-C :</label></br>
-								<input type="radio" name="FeatureWMS-C" value="oui">Yes <input type="radio" name="FeatureWMS-C" value = "non">No <input type="radio" name="FeatureWMS-C" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
 								<label>Other :</label></br>
 											<input type="checkbox" name="Feature" >Including WMTS</br>	
 											<input type="checkbox" name="Feature" >WMS</br>	
@@ -52,13 +41,23 @@
 											<input type="checkbox" name="Feature" >TMS</br>	
 											<input type="checkbox" name="Feature" >KML</br>	
 											<input type="checkbox" name="Feature" >Virtual Earth</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Name : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Language :</label></br>
+											<input type="checkbox" name="Feature" >.NET</br>	
+											<input type="checkbox" name="Feature" >C++</br>	
+											<input type="checkbox" name="Feature" >Java</br>	
+											<input type="checkbox" name="Feature" >C#</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Name : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>WMS-C :</label></br>
+								<input type="radio" name="FeatureWMS-C" value="oui">Yes <input type="radio" name="FeatureWMS-C" value = "non">No <input type="radio" name="FeatureWMS-C" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Name",
 									local : ['GeoWebCache','MapProxy','MapDotNet','Erdas Apollo','GeoMedia WebMap and SDI Pro','ArcGIS Server','TileCache','']
 								});
 						</script>

@@ -29,52 +29,47 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Latest stable version : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Programming language : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
 								<label>Plugin Support :</label></br>
 								<input type="radio" name="FeaturePlugin Support" value="oui">Yes <input type="radio" name="FeaturePlugin Support" value = "non">No <input type="radio" name="FeaturePlugin Support" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 								</br>	
-								<label>Programming language : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Creator : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>OS : </label></br> <input id="3" type="text" name="Feature"></br>
-								
 								</br>	
 								<label>Free according to the FSF :</label></br>
 								<input type="radio" name="FeatureFree according to the FSF" value="oui">Yes <input type="radio" name="FeatureFree according to the FSF" value = "non">No <input type="radio" name="FeatureFree according to the FSF" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 								</br>	
-								<label>Latest stable version : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Software license : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Creator : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Software license : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Open source :</label></br>
 								<input type="radio" name="FeatureOpen source" value="oui">Yes <input type="radio" name="FeatureOpen source" value = "non">No <input type="radio" name="FeatureOpen source" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 						<script>
+								$("#0").typeahead({
+									name:"Latest stable version",
+									local : ['5.9.11','2.0.3','2.5.0','1.2.0','4.1.6','1.2','2.1.8','5.6.2','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Programming language",
 									local : ['Objective-C','C++ (Qt)','C++','Java','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Mac OS X','Microsoft Windows, Linux, Mac OS X','']
+									name:"Creator",
+									local : ['Running with Crayons','Josh Karlin','Brawer Software','James Thomson','Blacktree Software','Peter Maurer','Objective Development','S.Chekanov and jWork.ORG','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['5.9.11','2.0.3','2.5.0','1.2.0','4.1.6','1.2','2.1.8','5.6.2','']
+									name:"OS",
+									local : ['Mac OS X','Microsoft Windows, Linux, Mac OS X','']
 								});
 								$("#4").typeahead({
-									name:"list4",
+									name:"Software license",
 									local : ['Proprietary','Apache License','GPL','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['Running with Crayons','Josh Karlin','Brawer Software','James Thomson','Blacktree Software','Peter Maurer','Objective Development','S.Chekanov and jWork.ORG','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

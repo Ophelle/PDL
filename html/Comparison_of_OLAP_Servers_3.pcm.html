@@ -33,34 +33,31 @@
 								<input type="radio" name="FeaturePartitioning" value="oui">Yes <input type="radio" name="FeaturePartitioning" value = "non">No <input type="radio" name="FeaturePartitioning" value = "non">Partial </br>
 								
 								</br>	
+								<label>Real Time : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Semi-additive measures :</label></br>
 								<input type="radio" name="FeatureSemi-additive measures" value="oui">Yes <input type="radio" name="FeatureSemi-additive measures" value = "non">No <input type="radio" name="FeatureSemi-additive measures" value = "non">Partial </br>
-								
-								</br>	
-								<label>OLAP Server : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Real Time : </label></br> <input id="4" type="text" name="Feature"></br>
 								
 								</br>	
 								<label>Write-back :</label></br>
 								<input type="radio" name="FeatureWrite-back" value="oui">Yes <input type="radio" name="FeatureWrite-back" value = "non">No <input type="radio" name="FeatureWrite-back" value = "non">Partial </br>
 								
 								</br>	
-								<label>Many-to-Many : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Many-to-Many : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>OLAP Server : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['TM1','SAS OLAP Server','Essbase','MicroStrategy Intelligence Server','Infor BI OLAP Server','IBM Cognos','SAP NetWeaver BW','Microsoft Analysis Services','Mondrian OLAP server','Oracle Database OLAP Option','Jedox OLAP Server','Cubes','icCube','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Real Time",
 									local : ['?','Yes','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Many-to-Many",
 									local : ['Yes','?','']
+								});
+								$("#2").typeahead({
+									name:"OLAP Server",
+									local : ['TM1','SAS OLAP Server','Essbase','MicroStrategy Intelligence Server','Infor BI OLAP Server','IBM Cognos','SAP NetWeaver BW','Microsoft Analysis Services','Mondrian OLAP server','Oracle Database OLAP Option','Jedox OLAP Server','Cubes','icCube','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

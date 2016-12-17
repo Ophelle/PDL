@@ -29,21 +29,10 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Status : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>JVM : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Status : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Performance - Interpretation :</label></br>
 								<input type="radio" name="FeaturePerformance - Interpretation" value="oui">Yes <input type="radio" name="FeaturePerformance - Interpretation" value = "non">No <input type="radio" name="FeaturePerformance - Interpretation" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Supported class libraries - Other : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Supported class libraries - OpenJDK :</label></br>
-								<input type="radio" name="FeatureSupported class libraries - OpenJDK" value="oui">Yes <input type="radio" name="FeatureSupported class libraries - OpenJDK" value = "non">No <input type="radio" name="FeatureSupported class libraries - OpenJDK" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
 								<label>Performance - AOT :</label></br>
@@ -54,19 +43,27 @@
 								<input type="radio" name="FeaturePerformance - JIT" value="oui">Yes <input type="radio" name="FeaturePerformance - JIT" value = "non">No <input type="radio" name="FeaturePerformance - JIT" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
+								<label>JVM : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Supported class libraries - OpenJDK :</label></br>
+								<input type="radio" name="FeatureSupported class libraries - OpenJDK" value="oui">Yes <input type="radio" name="FeatureSupported class libraries - OpenJDK" value = "non">No <input type="radio" name="FeatureSupported class libraries - OpenJDK" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
 								<label>Supported class libraries - GNU Classpath :</label></br>
 								<input type="radio" name="FeatureSupported class libraries - GNU Classpath" value="oui">Yes <input type="radio" name="FeatureSupported class libraries - GNU Classpath" value = "non">No <input type="radio" name="FeatureSupported class libraries - GNU Classpath" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Latest supported Java version : </label></br> <input id="9" type="number" name="Feature"></br>
+								<label>Supported class libraries - Other : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Latest supported Java version : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Status",
 									local : ['Commercially available','','Interpreter-only port of OpenJDK using almost no assembly language and designed to be very portable.','Available free, commercial support optional','Unmaintained','Reference implementation.','Translates Java to C and compiles it with a C compiler.','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"JVM",
 									local : ['VMKit J3','Jato VM','Zing','Skelmir','IKVM.NET','JAmiga','CACAO','JC virtual machine','GCJ','HotSpot, Java SE embedded edition','JamVM','HotSpot, Oracle JDK edition','Jikes RVM','Mysaifu JVM','Avian','SableVM','HotSpot, OpenJDK edition','HotSpot, Zero port','Kaffe','Zulu','']
 								});
 						</script>

@@ -29,20 +29,13 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Camera model : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Camera model : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Camera line : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Camera line : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Lens mount : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Manufacturer : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Introduced : </label></br> <input id="4" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Lens mount : </label></br> <input id="5" type="text" name="Feature"></br>
-								
 								</br>	
 								<label>Weight :</label></br>
 											<input type="checkbox" name="Feature" >12.1 lb (5.5 kg)</br>	
@@ -55,29 +48,31 @@
 											<input type="checkbox" name="Feature" >with empty magazine</br>	
 											<input type="checkbox" name="Feature" >16.6 lb (7.5 kg)</br>	
 											<input type="checkbox" name="Feature" >with eyepiece</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>MOS/Sync : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Introduced : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>MOS/Sync : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Camera model",
 									local : ['Panaflex 16 ("The Elaine")','Arriflex 416 Plus','Arriflex 16HSR2 (Super 16)','Xtera','XTRprod','Arriflex 16SR3','Arriflex 16SR2 (Super 16)','Arriflex 16HSR3','A-Minima','XTRplus','X0plus','54LTR','XTR','Arriflex 416','7LTR (Super 16)','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Camera line",
 									local : ['Arriflex 16SR','A-Minima','Aaton XTR','Aaton LTR','Arriflex 416','Panaflex 16','']
 								});
+								$("#2").typeahead({
+									name:"Lens mount",
+									local : ['Arri PL','Arri bayonet (Arri PL for some later models)','Arri PL, Aaton universal, or PV mount','PV mount','Aaton universal','Arri PL and Nikon','']
+								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Manufacturer",
 									local : ['Panavision','Arri','Aaton','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['Arri PL','Arri bayonet (Arri PL for some later models)','Arri PL, Aaton universal, or PV mount','PV mount','Aaton universal','Arri PL and Nikon','']
-								});
-								$("#5").typeahead({
-									name:"list5",
+									name:"MOS/Sync",
 									local : ['Sync','']
 								});
 						</script>

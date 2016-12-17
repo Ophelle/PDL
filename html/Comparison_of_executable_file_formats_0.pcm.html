@@ -29,46 +29,23 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Can contain icon :</label></br>
-								<input type="radio" name="FeatureCan contain icon" value="oui">Yes <input type="radio" name="FeatureCan contain icon" value = "non">No <input type="radio" name="FeatureCan contain icon" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Explicit processor declarations : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Format name : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Filename extension : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>64-bit :</label></br>
-								<input type="radio" name="Feature64-bit" value="oui">Yes <input type="radio" name="Feature64-bit" value = "non">No <input type="radio" name="Feature64-bit" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Metadata :</label></br>
-								<input type="radio" name="FeatureMetadata" value="oui">Yes <input type="radio" name="FeatureMetadata" value = "non">No <input type="radio" name="FeatureMetadata" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Format name : </label></br> <input id="5" type="text" name="Feature"></br>
-								
 								</br>	
 								<label>Symbol table :</label></br>
 								<input type="radio" name="FeatureSymbol table" value="oui">Yes <input type="radio" name="FeatureSymbol table" value = "non">No <input type="radio" name="FeatureSymbol table" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>String table :</label></br>
-								<input type="radio" name="FeatureString table" value="oui">Yes <input type="radio" name="FeatureString table" value = "non">No <input type="radio" name="FeatureString table" value = "non">Partial </br>
-											<input type="text"/></br>								
+								
 								</br>	
 								<label>Fat binaries :</label></br>
 								<input type="radio" name="FeatureFat binaries" value="oui">Yes <input type="radio" name="FeatureFat binaries" value = "non">No <input type="radio" name="FeatureFat binaries" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Arbitrary sections :</label></br>
-								<input type="radio" name="FeatureArbitrary sections" value="oui">Yes <input type="radio" name="FeatureArbitrary sections" value = "non">No <input type="radio" name="FeatureArbitrary sections" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Explicit processor declarations : </label></br> <input id="10" type="text" name="Feature"></br>
 								
 								</br>	
-								<label>Digital signature :</label></br>
-								<input type="radio" name="FeatureDigital signature" value="oui">Yes <input type="radio" name="FeatureDigital signature" value = "non">No <input type="radio" name="FeatureDigital signature" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Metadata :</label></br>
+								<input type="radio" name="FeatureMetadata" value="oui">Yes <input type="radio" name="FeatureMetadata" value = "non">No <input type="radio" name="FeatureMetadata" value = "non">Partial </br>
+								
 								</br>	
 								<label>Operating system :</label></br>
 											<input type="checkbox" name="Feature" >NeXTSTEP</br>	
@@ -132,19 +109,39 @@
 											<input type="checkbox" name="Feature" >GEM</br>	
 											<input type="checkbox" name="Feature" >ViewMAX</br>	
 											<input type="checkbox" name="Feature" >some DOS extender</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
+								</br>	
+								<label>Digital signature :</label></br>
+								<input type="radio" name="FeatureDigital signature" value="oui">Yes <input type="radio" name="FeatureDigital signature" value = "non">No <input type="radio" name="FeatureDigital signature" value = "non">Partial </br>
+								
+								</br>	
+								<label>64-bit :</label></br>
+								<input type="radio" name="Feature64-bit" value="oui">Yes <input type="radio" name="Feature64-bit" value = "non">No <input type="radio" name="Feature64-bit" value = "non">Partial </br>
+								
+								</br>	
+								<label>Can contain icon :</label></br>
+								<input type="radio" name="FeatureCan contain icon" value="oui">Yes <input type="radio" name="FeatureCan contain icon" value = "non">No <input type="radio" name="FeatureCan contain icon" value = "non">Partial </br>
+								
+								</br>	
+								<label>Arbitrary sections :</label></br>
+								<input type="radio" name="FeatureArbitrary sections" value="oui">Yes <input type="radio" name="FeatureArbitrary sections" value = "non">No <input type="radio" name="FeatureArbitrary sections" value = "non">Partial </br>
+								
+								</br>	
+								<label>String table :</label></br>
+								<input type="radio" name="FeatureString table" value="oui">Yes <input type="radio" name="FeatureString table" value = "non">No <input type="radio" name="FeatureString table" value = "non">Partial </br>
+								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['none','.COM','.EXE','.68K','?','.286','.APP/.ACC','.EXP','.GEO','.186','.PIM/.XIP','.CMD','.EXM','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Explicit processor declarations",
 									local : ['No (x86 only)','Yes by file','Yes by file (286 and higher only)','No','Unknown','No (68000 and higher only)','Unknown (x86 only)','No (186/188 and higher only)','Unknown (286 and higher only)','Unknown (386 and higher only)','Yes by section','No (8080/Z80 only)','No (286 and higher only)','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Format name",
 									local : ['MZ (DOS)','a.out','COM (DOS)','Amiga Hunk','LE, (W3, W4)','P3','PEF','CP/M-68K','PE32+','NE','GEOS','PIM/XIP','ECOFF','LX','COFF','MP','P2','OS/360','SOM','MZ (GEM)','PE','ELF','CMD','DL','COM (CP/M)','XCOFF','Mach-O','FlexOS 186','FlexOS 286','']
+								});
+								$("#2").typeahead({
+									name:"Filename extension",
+									local : ['none','.COM','.EXE','.68K','?','.286','.APP/.ACC','.EXP','.GEO','.186','.PIM/.XIP','.CMD','.EXM','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

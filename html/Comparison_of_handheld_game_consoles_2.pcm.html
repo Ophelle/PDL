@@ -29,8 +29,13 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Resolution : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Game media : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								</br>	
+								<label>Display : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Controller : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Colors :</label></br>
 											<input type="checkbox" name="Feature" >32</br>	
@@ -55,33 +60,23 @@
 											<input type="checkbox" name="Feature" >700</br>	
 											<input type="checkbox" name="Feature" >000 colours</br>	
 											<input type="checkbox" name="Feature" >146 simultaneous</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Controller : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Resolution : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Display : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
+								$("#0").typeahead({
+									name:"Resolution",
+									local : ['240 x 160','240 x 320','160 x 102','160 x 152','160 x 144','320 x 224','256 x 192 (X2)','480 x 272','800 x 480','480 x 320','48 x 32','200 x 160','256x256','unknown','320 x 240','176 x 208','160 x 160 pixel display','16 x 16','75 x 64','224x144','224 X 144','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Game media",
 									local : ['Proprietary solid-state cartridge','built in, SD card or downloadable','Built-in, miniSD card or downloadable','SD card or downloadable','UMD or memory stick','MMC or downloadable','Rewritable SmartMedia','Secure Digital Memory Cards','Proprietary solid-state cartridge (compatible with TurboGrafx-16)','SD and SDHC','Proprietary matrix memory cards','Proprietary solid-state cartridge (compatible with Sega Genesis)','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Eight-Directional Digital Stick','Four-directional digital stick','Four-directional digital pad','D-Pad','8-directional analog thumbstick, stylus-driven touchscreen','Four-directional digital pad, shoulder buttons, action buttons, menu buttons, touch-screen, camera and motion sense','8-directional digital thumbstick','D-pad, stylus-driven touchscreen','Four-directional digital pad, touchscreen','Four-directional digital pad, shoulder buttons, action buttons, start & select buttons','12 button keypad, one paddle','Four-directional control pad','Four-directional digital pad, analog thumbstick','D-pad','Two analogue nubs, 4-Way D-pad, 46 key qwerty keyboard, touchscreen','']
+									name:"Display",
+									local : ['3.9 in. LCD','2.9 in. LCD','3.5 in. LCD','LCD','2.1 in. LCD','3.2 in. LCD','3 in. LCD','2.8 in. LCD','3.5 in. TFT','3.8 in. LCD','2 in. LCD','TFT LCD','3.5" LCD (diagonal);  3.25" x 1.88"','4.3 in. LCD','Backlit Reflective LCD','61 mm x 61 mm (2.37" x 2.37") LCD','Reflective LCD','4.3" Backlit LCD touchscreen','Two 3 in. LCDs','2.8 in. FSTN reflective LCD','2.1 in. Reflective LCD (Backlit in Gameking 2).','2,7" (48 (h) x 51 (w) mm) STN dot matriix','3.5" LCD','3.5" Backlit TFT LCD','2.49 in. FSTN Reflection LCD','2.8 in. TFT LCD','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['240 x 160','240 x 320','160 x 102','160 x 152','160 x 144','320 x 224','256 x 192 (X2)','480 x 272','800 x 480','480 x 320','48 x 32','200 x 160','256x256','unknown','320 x 240','176 x 208','160 x 160 pixel display','16 x 16','75 x 64','224x144','224 X 144','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['3.9 in. LCD','2.9 in. LCD','3.5 in. LCD','LCD','2.1 in. LCD','3.2 in. LCD','3 in. LCD','2.8 in. LCD','3.5 in. TFT','3.8 in. LCD','2 in. LCD','TFT LCD','3.5" LCD (diagonal); 
- 3.25" x 1.88"','4.3 in. LCD','Backlit Reflective LCD','61 mm x 61 mm (2.37" x 2.37") LCD','Reflective LCD','4.3" Backlit LCD touchscreen','Two 3 in. LCDs','2.8 in. FSTN reflective LCD','2.1 in. Reflective LCD (Backlit in Gameking 2).','2,7" (48 (h) x 51 (w) mm) STN dot matriix','3.5" LCD','3.5" Backlit TFT LCD','2.49 in. FSTN Reflection LCD','2.8 in. TFT LCD','']
+									name:"Controller",
+									local : ['Eight-Directional Digital Stick','Four-directional digital stick','Four-directional digital pad','D-Pad','8-directional analog thumbstick, stylus-driven touchscreen','Four-directional digital pad, shoulder buttons, action buttons, menu buttons, touch-screen, camera and motion sense','8-directional digital thumbstick','D-pad, stylus-driven touchscreen','Four-directional digital pad, touchscreen','Four-directional digital pad, shoulder buttons, action buttons, start & select buttons','12 button keypad, one paddle','Four-directional control pad','Four-directional digital pad, analog thumbstick','D-pad','Two analogue nubs, 4-Way D-pad, 46 key qwerty keyboard, touchscreen','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

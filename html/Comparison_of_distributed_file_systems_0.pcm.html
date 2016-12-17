@@ -29,8 +29,9 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Client : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Access API :</label></br>
 											<input type="checkbox" name="Feature" >POSIX</br>	
@@ -60,25 +61,20 @@
 											<input type="checkbox" name="Feature" >FUSE (C++ server: MetaServer and ChunkServer are both in C++)</br>	
 											<input type="checkbox" name="Feature" >Virtual file system</br>	
 											<input type="checkbox" name="Feature" >Installable File System</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Client : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Written in : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Written in : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['LGPL','GNU GPL 2+ and other','FRAUNHOFER FS (FhGFS) EULA,
-GPLv2 client','GPLv2','Apache License 2.0','BSD License','MIT','Proprietary','GPLv3','IBM Public License','']
+								$("#0").typeahead({
+									name:"License",
+									local : ['LGPL','GNU GPL 2+ and other','FRAUNHOFER FS (FhGFS) EULA,GPLv2 client','GPLv2','Apache License 2.0','BSD License','MIT','Proprietary','GPLv3','IBM Public License','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Client",
 									local : ['Tahoe-LAFS','FhGFS','HDFS','ObjectiveFS','MooseFS','GlusterFS','Quantcast File System','Ceph','OpenAFS','Lustre','Ori','XtreemFS','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#2").typeahead({
+									name:"Written in",
 									local : ['C','Python','C / C++','C++','Java, C++','Java','C, C++','']
 								});
 						</script>

@@ -29,52 +29,47 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>SMP support :</label></br>
-								<input type="radio" name="FeatureSMP support" value="oui">Yes <input type="radio" name="FeatureSMP support" value = "non">No <input type="radio" name="FeatureSMP support" value = "non">Partial </br>
-								
+								<label>USB support : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Architecture : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Package management : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Name : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Architecture : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Integrated firewall :</label></br>
 								<input type="radio" name="FeatureIntegrated firewall" value="oui">Yes <input type="radio" name="FeatureIntegrated firewall" value = "non">No <input type="radio" name="FeatureIntegrated firewall" value = "non">Partial </br>
 								
 								</br>	
-								<label>APIs : </label></br> <input id="4" type="text" name="Feature"></br>
+								<label>SMP support :</label></br>
+								<input type="radio" name="FeatureSMP support" value="oui">Yes <input type="radio" name="FeatureSMP support" value = "non">No <input type="radio" name="FeatureSMP support" value = "non">Partial </br>
 								
 								</br>	
-								<label>USB support : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>APIs : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>UDMA support :</label></br>
 								<input type="radio" name="FeatureUDMA support" value="oui">Yes <input type="radio" name="FeatureUDMA support" value = "non">No <input type="radio" name="FeatureUDMA support" value = "non">Partial </br>
 								
-								</br>	
-								<label>Package management : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Name : </label></br> <input id="8" type="text" name="Feature"></br>
-								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['ARMv7','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['WinRT','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"USB support",
 									local : ['Yes (USB 2.0)','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Package management",
 									local : ['Windows Phone Store','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#2").typeahead({
+									name:"Name",
 									local : ['Windows Phone 8','']
+								});
+								$("#3").typeahead({
+									name:"Architecture",
+									local : ['ARMv7','']
+								});
+								$("#4").typeahead({
+									name:"APIs",
+									local : ['WinRT','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

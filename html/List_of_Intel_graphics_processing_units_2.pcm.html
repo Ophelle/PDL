@@ -29,101 +29,68 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Device id. : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Device id. : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>DVMT (MB) : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory bandwidth (GB/s) : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 								</br>	
 								<label>Chipset : </label></br> <input id="2" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Pixel 
-pipelines : </label></br> <input id="3" type="number" name="Feature"></br>
+								<label>API support - OpenCL : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
+								</br>	
+								<label>API support - OpenGL : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>API support - DirectX : </label></br> <input id="4" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Memory bandwidth 
-(GB/s) : </label></br> <input id="5" type="number" name="Feature"></br>
+								<label>Graphics : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Shader model(vertex/pixel) :</label></br>
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Core renderclock (MHz) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Hardware acceleration - VC-1 : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Market : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
-								<label>Shader model
-(vertex/pixel) :</label></br>
-											<input type="checkbox" name="Feature" >3.0 (SW) </br>	
-											<input type="checkbox" name="Feature" >2.0</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								<label>Hardware acceleration - MPEG-2 : </label></br> <input id="7" type="text" name="Feature"></br>
 								</br>	
-								<label>Market : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Hardware acceleration - VC-1 : </label></br> <input id="8" type="text" name="Feature"></br>
 								</br>	
-								<label>Launch : </label></br> <input id="9" type="number" name="Feature"></br>
+								<label>Hardware acceleration - AVC : </label></br> <input id="9" type="text" name="Feature"></br>
+								</br>	
+								<label>Launch : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>DVMT 
-(MB) : </label></br> <input id="10" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Graphics : </label></br> <input id="11" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Core render
-clock (MHz) : </label></br> <input id="12" type="number" name="Feature"></br>
+								<label>Pixel pipelines : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>API support - OpenCL : </label></br> <input id="13" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Code name : </label></br> <input id="14" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>API support - OpenGL : </label></br> <input id="15" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Hardware acceleration - AVC : </label></br> <input id="16" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Hardware acceleration - MPEG-2 : </label></br> <input id="17" type="text" name="Feature"></br>
-								
+								<label>Code name : </label></br> <input id="10" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Device id.",
+									local : ['29C229C3','A011A012','25922792','A001A002','25822782  258A','27722776','29D229D3','27A227A627AE','29B229B3','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['29C2
-29C3','A011
-A012','2592
-2792','A001
-A002','2582
-2782 
- 258A','2772
-2776','29D2
-29D3','27A2
-27A6
-27AE','29B2
-29B3','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['915G','G33','915GV','Q35','910GL','Atom D4xx
-Atom D5xx','Atom N4xx
-Atom N5xx','G31','945GC','Q33','Mobile 945
-Family','915GL','945GZ','945G','Mobile 915
-Family','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['Desktop','Mobile','Nettop','Netbook','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+									name:"DVMT (MB)",
 									local : ['','128','Full','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#2").typeahead({
+									name:"Chipset",
+									local : ['915G','G33','915GV','Q35','910GL','Atom D4xxAtom D5xx','Atom N4xxAtom N5xx','G31','945GC','Q33','Mobile 945Family','915GL','945GZ','945G','Mobile 915Family','']
+								});
+								$("#3").typeahead({
+									name:"Graphics",
 									local : ['GMA 3100','GMA 3150','GMA 900','GMA 950','']
 								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#4").typeahead({
+									name:"Market",
+									local : ['Desktop','Mobile','Nettop','Netbook','']
+								});
+								$("#5").typeahead({
+									name:"Code name",
 									local : ['Alviso','Bearlake','Grantsdale','Pineview','Lakeport','Calistoga','']
 								});
 						</script>

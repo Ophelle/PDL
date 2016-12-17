@@ -29,35 +29,12 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>WFS-T :</label></br>
-								<input type="radio" name="FeatureWFS-T" value="oui">Yes <input type="radio" name="FeatureWFS-T" value = "non">No <input type="radio" name="FeatureWFS-T" value = "non">Partial </br>
-								
-								</br>	
-								<label>Language : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>WFS :</label></br>
 								<input type="radio" name="FeatureWFS" value="oui">Yes <input type="radio" name="FeatureWFS" value = "non">No <input type="radio" name="FeatureWFS" value = "non">Partial </br>
 								
 								</br>	
-								<label>FES :</label></br>
-								<input type="radio" name="FeatureFES" value="oui">Yes <input type="radio" name="FeatureFES" value = "non">No <input type="radio" name="FeatureFES" value = "non">Partial </br>
-								
-								</br>	
-								<label>WCS :</label></br>
-								<input type="radio" name="FeatureWCS" value="oui">Yes <input type="radio" name="FeatureWCS" value = "non">No <input type="radio" name="FeatureWCS" value = "non">Partial </br>
-								
-								</br>	
-								<label>SLD :</label></br>
-								<input type="radio" name="FeatureSLD" value="oui">Yes <input type="radio" name="FeatureSLD" value = "non">No <input type="radio" name="FeatureSLD" value = "non">Partial </br>
-								
-								</br>	
-								<label>WMC :</label></br>
-								<input type="radio" name="FeatureWMC" value="oui">Yes <input type="radio" name="FeatureWMC" value = "non">No <input type="radio" name="FeatureWMC" value = "non">Partial </br>
-								
-								</br>	
-								<label>WMS :</label></br>
-								<input type="radio" name="FeatureWMS" value="oui">Yes <input type="radio" name="FeatureWMS" value = "non">No <input type="radio" name="FeatureWMS" value = "non">Partial </br>
+								<label>WFS-T :</label></br>
+								<input type="radio" name="FeatureWFS-T" value="oui">Yes <input type="radio" name="FeatureWFS-T" value = "non">No <input type="radio" name="FeatureWFS-T" value = "non">Partial </br>
 								
 								</br>	
 								<label>Other :</label></br>
@@ -72,17 +49,38 @@
 											<input type="checkbox" name="Feature" >webclients</br>	
 											<input type="checkbox" name="Feature" >mobile clients. Editing Capabilities.</br>	
 											<input type="checkbox" name="Feature" >SOAP</br>	
-									
+							
 								</br>	
-								<label>Name : </label></br> <input id="10" type="text" name="Feature"></br>
+								<label>WMC :</label></br>
+								<input type="radio" name="FeatureWMC" value="oui">Yes <input type="radio" name="FeatureWMC" value = "non">No <input type="radio" name="FeatureWMC" value = "non">Partial </br>
 								
+								</br>	
+								<label>Language : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>FES :</label></br>
+								<input type="radio" name="FeatureFES" value="oui">Yes <input type="radio" name="FeatureFES" value = "non">No <input type="radio" name="FeatureFES" value = "non">Partial </br>
+								
+								</br>	
+								<label>WCS :</label></br>
+								<input type="radio" name="FeatureWCS" value="oui">Yes <input type="radio" name="FeatureWCS" value = "non">No <input type="radio" name="FeatureWCS" value = "non">Partial </br>
+								
+								</br>	
+								<label>WMS :</label></br>
+								<input type="radio" name="FeatureWMS" value="oui">Yes <input type="radio" name="FeatureWMS" value = "non">No <input type="radio" name="FeatureWMS" value = "non">Partial </br>
+								
+								</br>	
+								<label>SLD :</label></br>
+								<input type="radio" name="FeatureSLD" value="oui">Yes <input type="radio" name="FeatureSLD" value = "non">No <input type="radio" name="FeatureSLD" value = "non">Partial </br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Language",
 									local : ['Java/C++','C#/.NET','C++','Java','.NET/Java','C','ASP C#','.NET/C++','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Name",
 									local : ['MapDotNet','Manifold System','Deegree','SpatialFX','Orbit EOS','ArcGIS Server','GeoServer','Erdas Apollo','ZuluServer','GeoMedia WebMap & SDI Pro','Spatial Fusion Server','MapServer','']
 								});
 						</script>

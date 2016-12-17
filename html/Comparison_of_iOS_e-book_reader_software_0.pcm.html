@@ -29,14 +29,26 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Bookmarks : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Developer : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Progress indicator : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Auto-scroll :</label></br>
+								<input type="radio" name="FeatureAuto-scroll" value="oui">Yes <input type="radio" name="FeatureAuto-scroll" value = "non">No <input type="radio" name="FeatureAuto-scroll" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Backward/forward :</label></br>
+								<input type="radio" name="FeatureBackward/forward" value="oui">Yes <input type="radio" name="FeatureBackward/forward" value = "non">No <input type="radio" name="FeatureBackward/forward" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Rotation Lock :</label></br>
+								<input type="radio" name="FeatureRotation Lock" value="oui">Yes <input type="radio" name="FeatureRotation Lock" value = "non">No <input type="radio" name="FeatureRotation Lock" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
 								<label>Full text search :</label></br>
 								<input type="radio" name="FeatureFull text search" value="oui">Yes <input type="radio" name="FeatureFull text search" value = "non">No <input type="radio" name="FeatureFull text search" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Resume :</label></br>
+								<input type="radio" name="FeatureResume" value="oui">Yes <input type="radio" name="FeatureResume" value = "non">No <input type="radio" name="FeatureResume" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
 								<label>Cloud synchronisation :</label></br>
@@ -47,50 +59,34 @@
 								<input type="radio" name="FeatureGo To" value="oui">Yes <input type="radio" name="FeatureGo To" value = "non">No <input type="radio" name="FeatureGo To" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Developer : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Bookmarks : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Product : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Rotation Lock :</label></br>
-								<input type="radio" name="FeatureRotation Lock" value="oui">Yes <input type="radio" name="FeatureRotation Lock" value = "non">No <input type="radio" name="FeatureRotation Lock" value = "non">Partial </br>
+								<label>Pagination :</label></br>
+								<input type="radio" name="FeaturePagination" value="oui">Yes <input type="radio" name="FeaturePagination" value = "non">No <input type="radio" name="FeaturePagination" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
 								<label>Table of Contents :</label></br>
 								<input type="radio" name="FeatureTable of Contents" value="oui">Yes <input type="radio" name="FeatureTable of Contents" value = "non">No <input type="radio" name="FeatureTable of Contents" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Auto-scroll :</label></br>
-								<input type="radio" name="FeatureAuto-scroll" value="oui">Yes <input type="radio" name="FeatureAuto-scroll" value = "non">No <input type="radio" name="FeatureAuto-scroll" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Progress indicator : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Pagination :</label></br>
-								<input type="radio" name="FeaturePagination" value="oui">Yes <input type="radio" name="FeaturePagination" value = "non">No <input type="radio" name="FeaturePagination" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Backward/forward :</label></br>
-								<input type="radio" name="FeatureBackward/forward" value="oui">Yes <input type="radio" name="FeatureBackward/forward" value = "non">No <input type="radio" name="FeatureBackward/forward" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Resume :</label></br>
-								<input type="radio" name="FeatureResume" value="oui">Yes <input type="radio" name="FeatureResume" value = "non">No <input type="radio" name="FeatureResume" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Product : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Developer",
+									local : ['Tien Thinh Vu','K-NFB Reading Technology, Inc.','Bluefire Productions','Yuriy Melyushin','Datalogics, Inc','Apple','Appstafarian','Kobo Inc.','Ambibma Ltd.','NIX Solutions Ltd','Inkstone Software, Inc.','Beijing Founder Apabi Technology Limited','AMZN Mobile LLC','Lexcycle','Sandr','Ebooks.com Limited','Konstantin Bukreev','Obreey Products','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Bookmarks",
 									local : ['Unlimited','Yes','Last place marker only','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Progress indicator",
 									local : ['In library and in-book','In-book only','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['Tien Thinh Vu','K-NFB Reading Technology, Inc.','Bluefire Productions','Yuriy Melyushin','Datalogics, Inc','Apple','Appstafarian','Kobo Inc.','Ambibma Ltd.','NIX Solutions Ltd','Inkstone Software, Inc.','Beijing Founder Apabi Technology Limited','AMZN Mobile LLC','Lexcycle','Sandr','Ebooks.com Limited','Konstantin Bukreev','Obreey Products','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+									name:"Product",
 									local : ['Ebook Reader','i2Reader','Kobo Reading App','ShuBook','iBooks','eBookMobi','Bluefire Reader','KyBook Reader','uBooks','Blio','Kindle','Marvin','Apabi Reader','PocketBook reader','Stanza','MegaReader','DL Reader','iBouquiniste','']
 								});
 						</script>

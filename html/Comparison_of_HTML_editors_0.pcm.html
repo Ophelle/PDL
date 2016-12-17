@@ -29,43 +29,38 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Year : </label></br> <input id="1" type="number" name="Feature"></br>
+								<label>Year : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Version : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Version : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Website : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Creator : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Website : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Editor : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Software license : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Creator : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Editor : </label></br> <input id="6" type="text" name="Feature"></br>
-								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Version",
 									local : ['2.2.7 (February 1)','5.07 (July 28)','1.7.2 (June 19)','Preview 5 (March 28)','11.4.4 (January 18)','4.0.1460.0 (December 20)','(April)','5.4.2 (November)','6.9.1 (July 25)','2.0 Preview (August 12)','1.0 (June 28)','2','CS6.5 (8)(August 23)','292','3.6.0 (August 1)','4.1.1 (August)','5.5, build 2837 (March 4)','0.7.10/0.8b3 (August 30, 2007/ March 1, 2010)','2.29 (September 7)','2007 (December 4)','Version','4.1 (December)','2003 (October 21)','9.0 (June 1)','3.0','Release 1.2 (March 2)','2010SE (August 4)','1.7.13 (April 21)','3.5.9 (February 20)','5.2.2 (March 27)','1.44 (January 21)','','CC 2014 (14.1) (06 October)','7.0 (September 26)','4.1 (July)','']
 								});
+								$("#1").typeahead({
+									name:"Creator",
+									local : ['The Quanta Team','Adobe Systems (formerly GoLive Systems)','Google, Inc.','Microsoft','WebStorm IDE','Macromates','SeaMonkey Council','Arcazj','Bluefish','Disruptive Innovations','Lauyan Software','Claris','Softpress','Adobe','IBM','Kaze','Aptana','Panic, Inc.','Adobe Systems (formerly Macromedia)','Creator','Realmac Software','Mozilla Foundation','openElement','mirabyte','Linspire / Daniel Glazman','Oracle Corporation (formerly Sun Microsystems)','Chami.com','Paul Lutus','W3C, INRIA','CoffeeCup Software','Image-Line','']
+								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Website",
 									local : ['','?','Website','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['Proprietary','W3C','Software license','GPL','MPL 1.1/GPL 2.0/LGPL 2.1','Apache License 2.0','LGPL','MIT License','BSD or AFL','MPL','']
+									name:"Editor",
+									local : ['Arachnophilia','TextMate','Microsoft Visual Web Developer','TOWeb','Amaya','BlueGriffon','OpenOffice.org','Claris Homepage (Discontinued)','Coda','Microsoft Expression Web (Discontinued)','Microsoft FrontPage (Discontinued)','Bluefish','Web Architect','Contribute','Quanta Plus','HTML-Kit','Nvu (Discontinued)','GoLive (Discontinued)','SeaMonkey Composer','Editor','KompoZer (Discontinued)','openElement','Maqetta','Mozilla Composer (Discontinued)','Aptana Studio','Microsoft SharePoint Designer','OpenBEXI','Dreamweaver','CoffeeCup HTML Editor','Freeway','Brackets','EZGenerator','Microsoft FrontPage Express (Discontinued)','WebStorm IDE','Google Web Designer','RapidWeaver','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['The Quanta Team','Adobe Systems (formerly GoLive Systems)','Google, Inc.','Microsoft','WebStorm IDE','Macromates','SeaMonkey Council','Arcazj','Bluefish','Disruptive Innovations','Lauyan Software','Claris','Softpress','Adobe','IBM','Kaze','Aptana','Panic, Inc.','Adobe Systems (formerly Macromedia)','Creator','Realmac Software','Mozilla Foundation','openElement','mirabyte','Linspire / Daniel Glazman','Oracle Corporation (formerly Sun Microsystems)','Chami.com','Paul Lutus','W3C, INRIA','CoffeeCup Software','Image-Line','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['Arachnophilia','TextMate','Microsoft Visual Web Developer','TOWeb','Amaya','BlueGriffon','OpenOffice.org','Claris Homepage (Discontinued)','Coda','Microsoft Expression Web (Discontinued)','Microsoft FrontPage (Discontinued)','Bluefish','Web Architect','Contribute','Quanta Plus','HTML-Kit','Nvu (Discontinued)','GoLive (Discontinued)','SeaMonkey Composer','Editor','KompoZer (Discontinued)','openElement','Maqetta','Mozilla Composer (Discontinued)','Aptana Studio','Microsoft SharePoint Designer','OpenBEXI','Dreamweaver','CoffeeCup HTML Editor','Freeway','Brackets','EZGenerator','Microsoft FrontPage Express (Discontinued)','WebStorm IDE','Google Web Designer','RapidWeaver','']
+									name:"Software license",
+									local : ['Proprietary','W3C','Software license','GPL','MPL 1.1/GPL 2.0/LGPL 2.1','Apache License 2.0','LGPL','MIT License','BSD or AFL','MPL','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

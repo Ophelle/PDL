@@ -29,22 +29,20 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Client Name : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>OTR : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
 								<label>Encryption :</label></br>
 								<input type="radio" name="FeatureEncryption" value="oui">Yes <input type="radio" name="FeatureEncryption" value = "non">No <input type="radio" name="FeatureEncryption" value = "non">Partial </br>
 											<input type="text"/></br>								
-								</br>	
-								<label>OTR : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Client Name : </label></br> <input id="3" type="text" name="Feature"></br>
-								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Client Name",
 									local : ['Messages','AIM','Kadu','Coccinella','Centericq','IBM Lotus Sametime','Skype','Bombus','eBuddy','Yahoo! Messenger','Qnext','Fire','QuteCom','Paltalk','aMSN','Telepathy-based','Gadu-Gadu','Yuilop','IMVU','QIP','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"OTR",
 									local : ['?','No','Yes','']
 								});
 						</script>

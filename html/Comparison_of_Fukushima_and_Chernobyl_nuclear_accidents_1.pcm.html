@@ -29,46 +29,36 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Caesium-137 (TBq) - from : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Place : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Report-
-date : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Report-date : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Iodine-131 (TBq) - to : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Period ofdispersal : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Source : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Caesium-137 (TBq) - to : </label></br> <input id="4" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Iodine-131 (TBq) - from : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Caesium-137 (TBq) - from : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>Period of
-dispersal : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Iodine-131 (TBq) - from : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
-								<label>Place : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Source : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Iodine-131 (TBq) - to : </label></br> <input id="7" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Place",
+									local : ['Fukushima','Chernobyl','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Report-date",
 									local : ['2002','12 April 2011','2 April 2011','15 September 2011','22 March 2011','24. August 2011','7 June 2011','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Period ofdispersal",
 									local : ['11 March – 5 April','11 – 17 March 2011','12 – 19 March 2011','25 April – June 1986','12 – 15 March 2011','11 March – 5 April','March - September','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['Fukushima','Chernobyl','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+									name:"Source",
 									local : ['NISA','NSC','Kantei','ZAMG','NEA','']
 								});
 						</script>

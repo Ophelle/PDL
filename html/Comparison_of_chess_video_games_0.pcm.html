@@ -29,46 +29,38 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Latest release : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Platform : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Developer : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Chess engine : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>First release : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 								</br>	
-								<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Chess engine : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>First release : </label></br> <input id="5" type="number" name="Feature"></br>
-								
+								<label>Latest release : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Developer : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Platform : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['2002','','n/a','1998','2013','N/A','2007','2010','1994','2009','2012','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Amiga, 3DO, Acorn Archimedes, Amiga CD32,  Amiga CDTV, Apple IIGS, Apple IIe, Atari ST, Commodore 64, DOS, FM Towns, NES, Mac OS, PC-98, Sharp X68000, Windows 3.x','','Microsoft Windows, Mac OS X, Windows Mobile, Freescale DragonBall, ARM-based Palm OS, iPhone and iPod Touch','Microsoft Windows 3.11, Microsoft Windows','Unix-like','PC, DOS','Windows Vista, Windows XP, Mac, Nintendo DS','Microsoft Windows','Windows Vista, Windows XP, PlayStation 3, Wii, Nintendo DS, Windows 7','Microsoft Windows, Mac OS X, Nintendo DS, PlayStation 3, PlayStation Portable, Xbox 360, Wii','PlayStation 3, PlayStation Vita','ZX Spectrum','Windows Vista, Windows 7','MS Windows, MS-DOS, PlayStation Xbox 360 (XBLA), PSP, PS2','Nintendo Wii','Wii, Nintendo DS, PlayStation 2, Microsoft Windows, iPad','Steam (software)','Unix-like X11 Microsoft Windows','Playstation, Microsoft Windows','KIM-1','Playstation 2','Wiiware','Microsoft Windows, Mac OS X, Linux, iPhone, iPad, Android','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['n/a','','Silver Star Chess','Pure Chess','Deep Fritz','third-party','N/A','Loop Express','Chessmaster, Combat Chess, Grandmaster Chess','Microchess','WChess','Deep Junior','ChessV','Rybka','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#0").typeahead({
+									name:"License",
 									local : ['Commercial','Free','GPL','Free GPL','','']
 								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['VooFoo Studios','David Horne','GNU Project','','Interplay
-Silicon & Synapse (C64)','Tim Mann','Nintendo','Sierra Entertainment','Robert Ancell, GNOME Team','Reinhard Scharnagl','Chessbase','Slam Games','Targem Games
-Zuxxez Entertainment','Vasik Rajlich','AgeTec','Ubisoft Romania
-Zonic Limited (Mac OS X)','Amir Ban and Shay Bushinsky','Oberon Games','Mastertronic','Interplay','Gregory Strong','System 3','PyChess Project','Stefan Meyer-Kahlen','Peter R. Jennings','']
+								$("#1").typeahead({
+									name:"Developer",
+									local : ['VooFoo Studios','David Horne','GNU Project','','InterplaySilicon & Synapse (C64)','Tim Mann','Nintendo','Sierra Entertainment','Robert Ancell, GNOME Team','Reinhard Scharnagl','Chessbase','Slam Games','Targem GamesZuxxez Entertainment','Vasik Rajlich','AgeTec','Ubisoft RomaniaZonic Limited (Mac OS X)','Amir Ban and Shay Bushinsky','Oberon Games','Mastertronic','Interplay','Gregory Strong','System 3','PyChess Project','Stefan Meyer-Kahlen','Peter R. Jennings','']
+								});
+								$("#2").typeahead({
+									name:"Chess engine",
+									local : ['n/a','','Silver Star Chess','Pure Chess','Deep Fritz','third-party','N/A','Loop Express','Chessmaster, Combat Chess, Grandmaster Chess','Microchess','WChess','Deep Junior','ChessV','Rybka','']
+								});
+								$("#3").typeahead({
+									name:"Latest release",
+									local : ['2002','','n/a','1998','2013','N/A','2007','2010','1994','2009','2012','']
+								});
+								$("#4").typeahead({
+									name:"Platform",
+									local : ['Amiga, 3DO, Acorn Archimedes, Amiga CD32,  Amiga CDTV, Apple IIGS, Apple IIe, Atari ST, Commodore 64, DOS, FM Towns, NES, Mac OS, PC-98, Sharp X68000, Windows 3.x','','Microsoft Windows, Mac OS X, Windows Mobile, Freescale DragonBall, ARM-based Palm OS, iPhone and iPod Touch','Microsoft Windows 3.11, Microsoft Windows','Unix-like','PC, DOS','Windows Vista, Windows XP, Mac, Nintendo DS','Microsoft Windows','Windows Vista, Windows XP, PlayStation 3, Wii, Nintendo DS, Windows 7','Microsoft Windows, Mac OS X, Nintendo DS, PlayStation 3, PlayStation Portable, Xbox 360, Wii','PlayStation 3, PlayStation Vita','ZX Spectrum','Windows Vista, Windows 7','MS Windows, MS-DOS, PlayStation Xbox 360 (XBLA), PSP, PS2','Nintendo Wii','Wii, Nintendo DS, PlayStation 2, Microsoft Windows, iPad','Steam (software)','Unix-like X11 Microsoft Windows','Playstation, Microsoft Windows','KIM-1','Playstation 2','Wiiware','Microsoft Windows, Mac OS X, Linux, iPhone, iPad, Android','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

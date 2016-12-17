@@ -29,19 +29,17 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Mouse : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Keyboard : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Keyboard : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Mouse : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Mouse','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Keyboard",
 									local : ['Keyboard','']
+								});
+								$("#1").typeahead({
+									name:"Mouse",
+									local : ['Mouse','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -29,86 +29,75 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Production cost : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Durability : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Cyclic/continuous ? : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Efficiency : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Pump type : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Size of device : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
 								<label>Suction lift ? :</label></br>
 								<input type="radio" name="FeatureSuction lift ?" value="oui">Yes <input type="radio" name="FeatureSuction lift ?" value = "non">No <input type="radio" name="FeatureSuction lift ?" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 								</br>	
-								<label>Fabrication requirements : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Difficulty of production : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
-								<label>Cyclic/continuous ? : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Maximum lift height : </label></br> <input id="7" type="text" name="Feature"></br>
 								</br>	
-								<label>Durability : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Output : </label></br> <input id="8" type="text" name="Feature"></br>
 								</br>	
-								<label>Difficulty of repair : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Fabrication requirements : </label></br> <input id="9" type="text" name="Feature"></br>
 								</br>	
-								<label>Size of device : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Efficiency : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Difficulty of production : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Maximum lift height : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Output : </label></br> <input id="10" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Production cost : </label></br> <input id="11" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Pump type : </label></br> <input id="12" type="text" name="Feature"></br>
-								
+								<label>Difficulty of repair : </label></br> <input id="10" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Production cost",
+									local : ['medium-high','high','low-medium','medium','?','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['?','']
+									name:"Durability",
+									local : ['?','very high','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Cyclic/continuous ?",
 									local : ['cyclic','continuous','>2m','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Efficiency",
 									local : ['low-medium','medium','high','?','medium-high','low','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['industrial','traditional','traditional/industrial','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['>6m','3m-20m','5m-10m','3m-10m','10m-20m','1-300m','10m-100m','low-medium','100m-500m','2m-200m','>2m','5m-50m','>3m','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['medium-high','very low','low-medium','medium','?','']
-								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['medium-high','high','low-medium','medium','?','']
-								});
-								$("#8").typeahead({
-									name:"list8",
-									local : ['?','very high','']
-								});
-								$("#9").typeahead({
-									name:"list9",
+									name:"Pump type",
 									local : ['Progressive cavity pump (Moyno)','Gear and lobe pump','Piston pump, bucket pump','Open screw pump','Pulser Pump','Petropump','Coil pump and spiral pump','Semi-rotary pump','Plunger pump','Water ladder','Flexible vane pump','Archimedean screw','Chain (or rope) and washer pump','Gas or vapour displacement pump','Flash wheel and treadmill','Porous rope','Diaphragm pump','Peristaltic pump','']
 								});
-								$("#10").typeahead({
-									name:"list10",
-									local : ['?','easy','']
-								});
-								$("#11").typeahead({
-									name:"list11",
+								$("#5").typeahead({
+									name:"Size of device",
 									local : ['?','small-huge','']
+								});
+								$("#6").typeahead({
+									name:"Difficulty of production",
+									local : ['industrial','traditional','traditional/industrial','']
+								});
+								$("#7").typeahead({
+									name:"Maximum lift height",
+									local : ['>6m','3m-20m','5m-10m','3m-10m','10m-20m','1-300m','10m-100m','low-medium','100m-500m','2m-200m','>2m','5m-50m','>3m','']
+								});
+								$("#8").typeahead({
+									name:"Output",
+									local : ['medium-high','very low','low-medium','medium','?','']
+								});
+								$("#9").typeahead({
+									name:"Fabrication requirements",
+									local : ['?','']
+								});
+								$("#10").typeahead({
+									name:"Difficulty of repair",
+									local : ['?','easy','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

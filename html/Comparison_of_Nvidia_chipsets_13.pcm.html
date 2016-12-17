@@ -29,27 +29,26 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>PCI-Express : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>PCI-Express : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>USB : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>LAN :</label></br>
+											<input type="checkbox" name="Feature" >1000 Mbit</br>	
+											<input type="checkbox" name="Feature" >s</br>	
+											<input type="checkbox" name="Feature" >2*1000 Mbit</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Code Name : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>SLI : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Memory : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>PATA : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Sound : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Release Date :</label></br>
+											<input type="checkbox" name="Feature" >December 17</br>	
+											<input type="checkbox" name="Feature" >2007</br>	
+											<input type="checkbox" name="Feature" >October 16</br>	
+											<input type="checkbox" name="Feature" >2008</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Fabrication
-process (nm) : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>SLI : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>PCI : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Processors Supported :</label></br>
 											<input type="checkbox" name="Feature" >Intel Core2</br>	
@@ -60,109 +59,82 @@ LGA 775</br>
 Compatible with Intel 05B</br>	
 											<input type="checkbox" name="Feature" >05A</br>	
 											<input type="checkbox" name="Feature" >06 processors</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>FSB/HT
-Frequency (MHz) : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label>Fabricationprocess (nm) : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>PCI : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+								<label>FSB/HTFrequency (MHz) : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>LAN :</label></br>
-											<input type="checkbox" name="Feature" >1000 Mbit</br>	
-											<input type="checkbox" name="Feature" >s</br>	
-											<input type="checkbox" name="Feature" >2*1000 Mbit</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								<label>Sound : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
-								<label>Model : </label></br> <input id="12" type="text" name="Feature"></br>
-								
+								<label>USB : </label></br> <input id="7" type="text" name="Feature"></br>
 								</br>	
-								<label>Features : </label></br> <input id="13" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>PATA : </label></br> <input id="14" type="text" name="Feature"></br>
-								
+								<label>Memory : </label></br> <input id="8" type="text" name="Feature"></br>
 								</br>	
 								<label>SATA :</label></br>
 											<input type="checkbox" name="Feature" >6 Ports 3.0Gbit</br>	
 											<input type="checkbox" name="Feature" >s</br>	
 											<input type="checkbox" name="Feature" >4 Ports 3.0Gbit</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Notes : </label></br> <input id="16" type="text" name="Feature"></br>
-								
+								<label>Model : </label></br> <input id="9" type="text" name="Feature"></br>
 								</br>	
-								<label>Release Date :</label></br>
-											<input type="checkbox" name="Feature" >December 17</br>	
-											<input type="checkbox" name="Feature" >2007</br>	
-											<input type="checkbox" name="Feature" >October 16</br>	
-											<input type="checkbox" name="Feature" >2008</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								<label>Features : </label></br> <input id="10" type="text" name="Feature"></br>
+								</br>	
+								<label>Code Name : </label></br> <input id="11" type="text" name="Feature"></br>
+								</br>	
+								<label>Notes : </label></br> <input id="12" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['2.0
-24 lanes
-1.1
-2 lanes','2.0
-20 lanes','2.0
-32 lanes
-1.1
-30 lanes','2.0
-32 lanes
-1.1
-28 lanes','']
+								$("#0").typeahead({
+									name:"PCI-Express",
+									local : ['2.024 lanes1.12 lanes','2.020 lanes','2.032 lanes1.130 lanes','2.032 lanes1.128 lanes','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"PCI",
 									local : ['5 Ports','']
 								});
+								$("#2").typeahead({
+									name:"SLI",
+									local : ['x8+x8','x16+x16+x16','No','']
+								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['12 Ports Rev 2.0','8 Ports Rev 2.0','10 Ports Rev 2.0','']
+									name:"PATA",
+									local : ['1 Ports UDMA 133','2 Ports UDMA 133','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['Crush72 + MCP55 + nForce200','MCP7A','Crush72 + MCP51 + nForce200','Crush73 + MCP55','']
+									name:"Fabricationprocess (nm)",
+									local : ['','45nm','90nm','']
 								});
 								$("#5").typeahead({
-									name:"list5",
-									local : ['DDR3-1333
-dual channel','DDR2-800
-dual channel','DDR3-1333
-dual channel, up to 8 GB','']
+									name:"FSB/HTFrequency (MHz)",
+									local : ['1333 MHz','1600 MHz','']
 								});
 								$("#6").typeahead({
-									name:"list6",
+									name:"Sound",
 									local : ['HDA','']
 								});
 								$("#7").typeahead({
-									name:"list7",
-									local : ['','45nm','90nm','']
+									name:"USB",
+									local : ['12 Ports Rev 2.0','8 Ports Rev 2.0','10 Ports Rev 2.0','']
 								});
 								$("#8").typeahead({
-									name:"list8",
-									local : ['x8+x8','x16+x16+x16','No','']
+									name:"Memory",
+									local : ['DDR3-1333dual channel','DDR2-800dual channel','DDR3-1333dual channel, up to 8 GB','']
 								});
 								$("#9").typeahead({
-									name:"list9",
-									local : ['1333 MHz','1600 MHz','']
-								});
-								$("#10").typeahead({
-									name:"list10",
+									name:"Model",
 									local : ['nForce 750i SLI','nForce 780i SLI','nForce 730i','nForce 740i SLI','nForce 760i SLI','nForce 790i SLI','']
 								});
-								$("#11").typeahead({
-									name:"list11",
+								$("#10").typeahead({
+									name:"Features",
 									local : ['Onboard GeForce 9300','','']
 								});
-								$("#12").typeahead({
-									name:"list12",
-									local : ['1 Ports UDMA 133','2 Ports UDMA 133','']
+								$("#11").typeahead({
+									name:"Code Name",
+									local : ['Crush72 + MCP55 + nForce200','MCP7A','Crush72 + MCP51 + nForce200','Crush73 + MCP55','']
 								});
-								$("#13").typeahead({
-									name:"list13",
+								$("#12").typeahead({
+									name:"Notes",
 									local : ['','Unofficial support DDR2-1066','Compatible with Intel 05B/05A/06 processors','']
 								});
 						</script>

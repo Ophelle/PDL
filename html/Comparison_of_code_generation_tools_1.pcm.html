@@ -29,14 +29,17 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Other input : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Name : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Active; Passive : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Implementation Language : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Implementation Language : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Model : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Typical input : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Active; Passive : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Other input : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>Typical output :</label></br>
 											<input type="checkbox" name="Feature" >Application and Code in ASP.Net</br>	
@@ -153,41 +156,31 @@ Application_B Documentation</br>
 											<input type="checkbox" name="Feature" >Any code; Java</br>	
 											<input type="checkbox" name="Feature" >JSP</br>	
 											<input type="checkbox" name="Feature" >C++ and CoffeeScript classes</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Model : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Typical input : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Name : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
+								$("#0").typeahead({
+									name:"Name",
+									local : ['OMS.Ice – T4 Text Template Generator','Reegenerator','CodeOnTime','anycode/','Apeel PHP Code Generator Pro','CodeSmith Generator','gSOAP','TLGen','T4','Spring Roo','MinuteProject','NoORM','Cog','Microsoft Visual Studio LightSwitch','X2X','C++ Middleware Writer','PHPRunner','LayerCake Generator .NET','OutSystems Platform','AtomWeaver','GenerateXY','XACT X4MR','Acceleo','Accelerator','Linx','Jigy Generator','Velocity apache','JCodeBox','Code4Green','ribosome','Jostraca','CodeFluent Entities','EazyCode','Iron Speed Designer','CodeCooker','Isis','kiss!','XDocLet','actifsource','GNU AutoGen','Radarc Online','Click2Code for windows','ZumCoder/MDA','Umple','for Visual Studio','Pro*C','DMS Software Reengineering Toolkit','Scalagen','Appsroller Web Form Generator','CodeGenerator360','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['Import from UML, Ecore.','Templates','Shell commands','Include files','Java','','optionally JSON (for layout hints)','N/A','Custom templates (Groovy)','Templates and Various XML configuration tables','Import from UML domain model (XML), Import from DB','Templates, Import from DB','C# partial classes','Code in C#, VB.net, ASP.net, SharePoint, SQL, JAVA, classical ASP, HTML, XML','PHP, HTML, CSS','XML Schema, Templates and configuration tables','Java   C#   C++   C   Perl   Python   Ruby   TCL   Javascript   Fortran   Lisp   Scheme   Cobol   XSLT   JSP   PHP   Yacc   SQL   XML   System Configuration Files','CHILL, CMS2, FORTRAN, COBOL, JOVIAL, PASCAL, PL/1, PLM86','Database, XSD, XML, C# or VB.Net Code','Pure Umple code describing associations, patterns, state machines etc.','config, velocity files','-','XML, CSV, Java, ... (extensible)','Code generation script in Ruby, JavaScript or Python','PHP, ASPX, HTML, CSS,','Any EMF based input (Xtext DSLs, GMF graphical models, etc.)','XML Schema','XML, CGI data','CSV export from Excel-Sheet','Code in any language','Javascript','CSS','Java, C#, Javascript','Well-formed output language code fragments','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Active','Passive','Active; Passive','','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Implementation Language",
 									local : ['Ruby, JavaScript or Python','C#, VB.Net, XSD','Java','C#, VB.Net, SQL','','C#, XSL, XSD','C# / VB.NET','C#','Java pojos','C++','C#, VB.NET, JavaScript','C','PHP','VB6','Javascript','Java code','Scala','PHP/ASP/C#/VB.NET','Delphi','C#, SMO API, T4 Templating','C#/Angular.js/Node.js','.Net','C#, VB.net, ASP.net, SharePoint, SQL, JAVA, classical ASP, HTML, XML','C#, VB.Net','C++, Lua','Python','C / C++','Several code generation DSLs (attribute grammars, tree patterns, source-to-source rewrites)','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#2").typeahead({
+									name:"Model",
 									local : ['Tier','Mixed','MVC','','Web Tier','Munger','DSLs represented as abstract syntax trees','Inline','']
 								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['Database schema','User-defined models, XML','Java and automatically-introspected project metadata','Database schema (Oracle, MySQL, PostgresSQL), XML (domain model UML exported XML)','User-defined EMF based models (UML, Ecore, user defined metamodels)','User-defined Models','Code4Green - an online ultimate code generation tool with a green cause of plantation of trees on each 10,000 LOC','T4 text template, C# or VB','SQL in C','Database as Data Model','Database','WSDL specifications','Java','User-defined models','Database Tables','DSL instance / Middle file','Any code','Autogen definitions (lists of key-value pair or hierarchical data arranged like C structs), Autogen templates (fixed output plus inline macros for conditional or repetitive emission of code blocks or evaluation of Bourne shell or Scheme expressions)','Just fill out a SIMPLE form','User defined models based on the OutSystems visual modelling language','WYSIWYG UI/Data Layer Editor','XSD, DBML, Database Schema(Mysql,SqlServer,PostegreSQL,SQLite),HTML forms,PHP class and (ZML "ZumCoder Model Language", a XML define structure','T4 Template/Text File','Language_A Source,
- Language_A-to-Language_B Transform Rules','User-defined Templates','Any format that can be read by Ruby, JavaScript or Python','Tree models built using a cooperative template system, based on the ABSE modeling approach','Database WSDL','Database Schema','DSL instance','UML','User-defined models, Database schema','Isis Java code: Domain Design','Database schema (ADOX, DB2 zOS, ISeries, MySQL, Oracle, Postgre, SQL Anywhere, SQL Compact, SQL Server, SQLite, VistaDB), C# or VB.NET source code, Any meta data source.. E.G., Web Services, SharePoint, UML, XSD, XML, DBML, EDMX, JSON, HBM, HTML and more...','Microsoft SQL Server Database schema','Any textual format','JavaDoc','Java, C++, PHP, Ruby with embedded Umple code','Process Design from Linx designer','']
+								$("#3").typeahead({
+									name:"Typical input",
+									local : ['Database schema','User-defined models, XML','Java and automatically-introspected project metadata','Database schema (Oracle, MySQL, PostgresSQL), XML (domain model UML exported XML)','User-defined EMF based models (UML, Ecore, user defined metamodels)','User-defined Models','Code4Green - an online ultimate code generation tool with a green cause of plantation of trees on each 10,000 LOC','T4 text template, C# or VB','SQL in C','Database as Data Model','Database','WSDL specifications','Java','User-defined models','Database Tables','DSL instance / Middle file','Any code','Autogen definitions (lists of key-value pair or hierarchical data arranged like C structs), Autogen templates (fixed output plus inline macros for conditional or repetitive emission of code blocks or evaluation of Bourne shell or Scheme expressions)','Just fill out a SIMPLE form','User defined models based on the OutSystems visual modelling language','WYSIWYG UI/Data Layer Editor','XSD, DBML, Database Schema(Mysql,SqlServer,PostegreSQL,SQLite),HTML forms,PHP class and (ZML "ZumCoder Model Language", a XML define structure','T4 Template/Text File','Language_A Source, Language_A-to-Language_B Transform Rules','User-defined Templates','Any format that can be read by Ruby, JavaScript or Python','Tree models built using a cooperative template system, based on the ABSE modeling approach','Database WSDL','Database Schema','DSL instance','UML','User-defined models, Database schema','Isis Java code: Domain Design','Database schema (ADOX, DB2 zOS, ISeries, MySQL, Oracle, Postgre, SQL Anywhere, SQL Compact, SQL Server, SQLite, VistaDB), C# or VB.NET source code, Any meta data source.. E.G., Web Services, SharePoint, UML, XSD, XML, DBML, EDMX, JSON, HBM, HTML and more...','Microsoft SQL Server Database schema','Any textual format','JavaDoc','Java, C++, PHP, Ruby with embedded Umple code','Process Design from Linx designer','']
 								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['OMS.Ice – T4 Text Template Generator','Reegenerator','CodeOnTime','anycode/','Apeel PHP Code Generator Pro','CodeSmith Generator','gSOAP','TLGen','T4','Spring Roo','MinuteProject','NoORM','Cog','Microsoft Visual Studio LightSwitch','X2X','C++ Middleware Writer','PHPRunner','LayerCake Generator .NET','OutSystems Platform','AtomWeaver','GenerateXY','XACT X4MR','Acceleo','Accelerator','Linx','Jigy Generator','Velocity apache','JCodeBox','Code4Green','ribosome','Jostraca','CodeFluent Entities','EazyCode','Iron Speed Designer','CodeCooker','Isis','kiss!','XDocLet','actifsource','GNU AutoGen','Radarc Online','Click2Code for windows','ZumCoder/MDA','Umple','for Visual Studio','Pro*C','DMS Software Reengineering Toolkit','Scalagen','Appsroller Web Form Generator','CodeGenerator360','']
+								$("#4").typeahead({
+									name:"Active; Passive",
+									local : ['Active','Passive','Active; Passive','','']
+								});
+								$("#5").typeahead({
+									name:"Other input",
+									local : ['Import from UML, Ecore.','Templates','Shell commands','Include files','Java','','optionally JSON (for layout hints)','N/A','Custom templates (Groovy)','Templates and Various XML configuration tables','Import from UML domain model (XML), Import from DB','Templates, Import from DB','C# partial classes','Code in C#, VB.net, ASP.net, SharePoint, SQL, JAVA, classical ASP, HTML, XML','PHP, HTML, CSS','XML Schema, Templates and configuration tables','Java   C#   C++   C   Perl   Python   Ruby   TCL   Javascript   Fortran   Lisp   Scheme   Cobol   XSLT   JSP   PHP   Yacc   SQL   XML   System Configuration Files','CHILL, CMS2, FORTRAN, COBOL, JOVIAL, PASCAL, PL/1, PLM86','Database, XSD, XML, C# or VB.Net Code','Pure Umple code describing associations, patterns, state machines etc.','config, velocity files','-','XML, CSV, Java, ... (extensible)','Code generation script in Ruby, JavaScript or Python','PHP, ASPX, HTML, CSS,','Any EMF based input (Xtext DSLs, GMF graphical models, etc.)','XML Schema','XML, CGI data','CSV export from Excel-Sheet','Code in any language','Javascript','CSS','Java, C#, Javascript','Well-formed output language code fragments','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -29,6 +29,18 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Scripting : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>GUI :</label></br>
+								<input type="radio" name="FeatureGUI" value="oui">Yes <input type="radio" name="FeatureGUI" value = "non">No <input type="radio" name="FeatureGUI" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Reports : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Name : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Horizontal / Vertical : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
 								<label>CLI :</label></br>
 								<input type="radio" name="FeatureCLI" value="oui">Yes <input type="radio" name="FeatureCLI" value = "non">No <input type="radio" name="FeatureCLI" value = "non">Partial </br>
 											<input type="text"/></br>								
@@ -36,38 +48,22 @@
 								<label>Syntax Highlighting :</label></br>
 								<input type="radio" name="FeatureSyntax Highlighting" value="oui">Yes <input type="radio" name="FeatureSyntax Highlighting" value = "non">No <input type="radio" name="FeatureSyntax Highlighting" value = "non">Partial </br>
 											<input type="text"/></br>								
-								</br>	
-								<label>Reports : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>GUI :</label></br>
-								<input type="radio" name="FeatureGUI" value="oui">Yes <input type="radio" name="FeatureGUI" value = "non">No <input type="radio" name="FeatureGUI" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Horizontal / Vertical : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Scripting : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Name : </label></br> <input id="7" type="text" name="Feature"></br>
-								
 						<script>
+								$("#0").typeahead({
+									name:"Scripting",
+									local : ['','Yes','Java API','JavaScript','elisp','vim script','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Reports",
 									local : ['No','','CSV, Tab-delimited, HTML, XML','Text, CSV','HTML, Text(combined or side-by-side)','Text','XHTML','HTML, Text, Unix Patch','HTML','UNIX, HTML, Diff','Yes','HTML, Text(unified, traditional or side-by-side)','XML, HTML, CSV, Text, Unix Patch','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Yes','horizontal','vertical','','both','optional','Both','landscape + portrait','']
+									name:"Name",
+									local : ['Far Manager (compare)','Lazarus Diff','WinDiff','DiffTool','Eclipse (compare)','diff','diff3','Beyond Compare','vimdiff','UCC','SG DiffMerge','jEdit JDiff plugin','Pretty Diff','IntelliJ IDEA (compare)','Perforce P4Merge','Araxis Merge','Guiffy SureMerge','Tkdiff','ExamDiff Pro','Total Commander (compare)','Diffuse','FileMerge','Meld','Compare++','Ediff','KDiff3','WinMerge','fc','Kompare','Notepad++ (compare)','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['','Yes','Java API','JavaScript','elisp','vim script','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['Far Manager (compare)','Lazarus Diff','WinDiff','DiffTool','Eclipse (compare)','diff','diff3','Beyond Compare','vimdiff','UCC','SG DiffMerge','jEdit JDiff plugin','Pretty Diff','IntelliJ IDEA (compare)','Perforce P4Merge','Araxis Merge','Guiffy SureMerge','Tkdiff','ExamDiff Pro','Total Commander (compare)','Diffuse','FileMerge','Meld','Compare++','Ediff','KDiff3','WinMerge','fc','Kompare','Notepad++ (compare)','']
+									name:"Horizontal / Vertical",
+									local : ['Yes','horizontal','vertical','','both','optional','Both','landscape + portrait','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -29,11 +29,15 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Office suite : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Products : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Notes : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Office suite : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Version : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Developer : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Operating systems :</label></br>
 											<input type="checkbox" name="Feature" >Windows</br>	
@@ -41,47 +45,37 @@
 											<input type="checkbox" name="Feature" >Unix-based systems</br>	
 											<input type="checkbox" name="Feature" >Mac OS X</br>	
 											<input type="checkbox" name="Feature" >Solaris</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Version : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Developer : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Notes : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>ISO/IEC 26300:2006 :</label></br>
 								<input type="radio" name="FeatureISO/IEC 26300:2006" value="oui">Yes <input type="radio" name="FeatureISO/IEC 26300:2006" value = "non">No <input type="radio" name="FeatureISO/IEC 26300:2006" value = "non">Partial </br>
 											<input type="text"/></br>								
+								</br>	
+								<label>Products : </label></br> <input id="5" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"License",
+									local : ['LGPL','GPL / LGPL','Proprietary','GPL','License','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['Google Docs & Spreadsheets','LibreOffice','','NeoOffice','Microsoft Office','KOffice','OpenOffice.org','Standalone','IBM Lotus Symphony','Office suite','IBM Workplace Collaboration Services','Calligra Suite','StarOffice','']
+									name:"Notes",
+									local : ['','Saves in ODF 1.2','Import only','no longer being actively marketed','Notes','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['P13','P11','P14','P10','P8','P3','P12','P6','P7','P9','P4','P5','P1','P15','P2','']
+									name:"Office suite",
+									local : ['Google Docs & Spreadsheets','LibreOffice','','NeoOffice','Microsoft Office','KOffice','OpenOffice.org','Standalone','IBM Lotus Symphony','Office suite','IBM Workplace Collaboration Services','Calligra Suite','StarOffice','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Version",
 									local : ['1.2','1.4+','2.0+','2.4+','8','1.12.5+','','1.0+','3.3.0','2007 SP2','2006','2.2.5','Version','2.5+','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['LGPL','GPL / LGPL','Proprietary','GPL','License','']
-								});
-								$("#5").typeahead({
-									name:"list5",
+									name:"Developer",
 									local : ['GNOME','Patrick Luby and Edward Peterlin','AdventNet','Sun Microsystems','Microsoft','LibreOffice','Google','Team and Concepts','Developer','IBM','KDE Project','OpenOffice.org','']
 								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['','Saves in ODF 1.2','Import only','no longer being actively marketed','Notes','']
+								$("#5").typeahead({
+									name:"Products",
+									local : ['P13','P11','P14','P10','P8','P3','P12','P6','P7','P9','P4','P5','P1','P15','P2','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

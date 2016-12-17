@@ -38,44 +38,26 @@
 											<input type="checkbox" name="Feature" >SCSI</br>	
 											<input type="checkbox" name="Feature" >SAT; Areca</br>	
 											<input type="checkbox" name="Feature" >3ware</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>User interface : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>RAID support : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>RAID support : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Operating system : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>USB, eSATA and
-removable drives :</label></br>
-											<input type="checkbox" name="Feature" >USB</br>	
-											<input type="checkbox" name="Feature" >eSATA and
-removable drives</br>	
-											<input type="checkbox" name="Feature" >eSATA</br>	
-											<input type="checkbox" name="Feature" >See list of supported devices; SAT driver required on OS X only</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Shows S.M.A.R.T. attributes :</label></br>
-								<input type="radio" name="FeatureShows S.M.A.R.T. attributes" value="oui">Yes <input type="radio" name="FeatureShows S.M.A.R.T. attributes" value = "non">No <input type="radio" name="FeatureShows S.M.A.R.T. attributes" value = "non">Partial </br>
+								<label>Hard driveself-testing :</label></br>
+								<input type="radio" name="FeatureHard driveself-testing" value="oui">Yes <input type="radio" name="FeatureHard driveself-testing" value = "non">No <input type="radio" name="FeatureHard driveself-testing" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Operating system : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Hard drive
-self-testing :</label></br>
-								<input type="radio" name="FeatureHard drive
-self-testing" value="oui">Yes <input type="radio" name="FeatureHard drive
-self-testing" value = "non">No <input type="radio" name="FeatureHard drive
-self-testing" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Notification :</label></br>
 								<input type="radio" name="FeatureNotification" value="oui">Yes <input type="radio" name="FeatureNotification" value = "non">No <input type="radio" name="FeatureNotification" value = "non">Partial </br>
 											<input type="text"/></br>								
+								</br>	
+								<label>User interface : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>USB, eSATA andremovable drives :</label></br>
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>Notes :</label></br>
 											<input type="checkbox" name="Feature" >Also shows temperature of CPU</br>	
@@ -91,29 +73,32 @@ self-testing" value = "non">Partial </br>
 											<input type="checkbox" name="Feature" >Primarily a defragmenter; support basic S.M.A.R.T. stat display</br>	
 											<input type="checkbox" name="Feature" >includes the one-word summary of drive-health.</br>	
 											<input type="checkbox" name="Feature" >allowing the user to use GNOME Disks without any changes to the computer.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Name : </label></br> <input id="11" type="text" name="Feature"></br>
-								
+								<label>Shows S.M.A.R.T. attributes :</label></br>
+								<input type="radio" name="FeatureShows S.M.A.R.T. attributes" value="oui">Yes <input type="radio" name="FeatureShows S.M.A.R.T. attributes" value = "non">No <input type="radio" name="FeatureShows S.M.A.R.T. attributes" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Name : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['GUI','CLI and GUI (via GSmartControl and HDD Guardian)','User interface','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"RAID support",
 									local : ['?','Several RAID controllers','Some RAID controllers','RAID support','No','']
 								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['Freeware','LGPL v2+','Commercial proprietary','Trialware','GNU GPL v2','License, price','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Operating system",
 									local : ['Linux','Windows','Operating system','DOS, FreeDOS','OS X','Windows, Unix-like (Linux, OS X, BSD, etc.)','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#2").typeahead({
+									name:"License",
+									local : ['Freeware','LGPL v2+','Commercial proprietary','Trialware','GNU GPL v2','License, price','']
+								});
+								$("#3").typeahead({
+									name:"User interface",
+									local : ['GUI','CLI and GUI (via GSmartControl and HDD Guardian)','User interface','']
+								});
+								$("#4").typeahead({
+									name:"Name",
 									local : ['SpinRite','Name','AIDA64','SpeedFan','Argus Monitor','Disk Utility','Speccy','smartmontools','Defraggler','GNOME Disks','']
 								});
 						</script>

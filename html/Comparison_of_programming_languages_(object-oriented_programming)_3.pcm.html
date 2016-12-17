@@ -29,32 +29,28 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>friend : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>protected : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>private : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>private : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>protected : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>friend : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>public : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>public : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"protected",
+									local : ['','N/A','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"private",
 									local : ['','level-number field clauses.','N/A','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"friend",
 									local : ['','N/A','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['','N/A','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+									name:"public",
 									local : ['','N/A','']
 								});
 						</script>

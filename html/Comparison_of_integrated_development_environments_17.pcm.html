@@ -29,72 +29,63 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Latest stable release date : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Platform : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Toolkit : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Latest stable release version : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>IDE : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Python3x support : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
 								<label>Debugger :</label></br>
 								<input type="radio" name="FeatureDebugger" value="oui">Yes <input type="radio" name="FeatureDebugger" value = "non">No <input type="radio" name="FeatureDebugger" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 								</br>	
-								<label>Platform : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Python2x support : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Latest stable release date : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Latest stable release version : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>License : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Python2x support : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
 								<label>Developer : </label></br> <input id="7" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Toolkit : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>IDE : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Python3x support : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+								<label>License : </label></br> <input id="8" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Latest stable release date",
+									local : ['2011-05-13','2015-04-03','2014-04-16','2010-08-04','2015-04-09','2015-01-05','N/A','2015-01-30','2014-11-28','2008-02-14','2012-03-24','2014-09-14','2013-07-07','2015-05-01','2015-03-21','2015-04-07','2015-02-06','2015-03-23','2014-10-13','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Platform",
 									local : ['Cross-platform','Windows, Linux, Mac OS X','Web-based','Windows, Linux, Mac OS X, FreeBSD, IBM AIX, OpenBSD, Solaris, other Unix','Windows, Linux, Mac OS X, FreeBSD, OpenBSD, Solaris','Windows','Windows, Linux, Mac OS X, FreeBSD, JVM, Solaris','Unix-like','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Yes','','Yes (Python 2.7)','Yes 2.6, 2.7','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['2011-05-13','2015-04-03','2014-04-16','2010-08-04','2015-04-09','2015-01-05','N/A','2015-01-30','2014-11-28','2008-02-14','2012-03-24','2014-09-14','2013-07-07','2015-05-01','2015-03-21','2015-04-07','2015-02-06','2015-03-23','2014-10-13','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['0.8.4h','N/A','1.5.2','4.7.1','eric6 6.0.4','9.0.0','5.7.0','2.5.3','1.24.1','0.6.2','3.13.92','2.1','4.0.6','2.3.4','3.2','4.0.0','8.0.2','2.3','5.1.4','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['Apache License 2.0','GPL','BSD-like for free Canopy Express, Proprietary for Canopy Pro','Proprietary','EPL','Open-source','LGPL','MIT Licence','Proprietary and Community Edition Apache License 2.0','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['Carlos Cordoba','Guido van Rossum et al.','Aptana','PythonAnywhere LLP','Team','Microsoft','Kiriakos Vlahos','ActiveState','SourceLair, Limited.','Detlev Offenbach','Stani Michiels','Naba Kumar','KDE KDevelop Team','Oracle','JetBrains','Wingware','Enthought','Novell and the Mono community','']
-								});
-								$("#7").typeahead({
-									name:"list7",
+									name:"Toolkit",
 									local : ['HTML','GTK+','PyGTK','Gtk#','JVCL','Windows Forms','PyQT, PySide','Qt','SWT','wxPython','PyQt','Swing','Mozilla platform','Qt4 with PySide','Tkinter','']
 								});
-								$("#8").typeahead({
-									name:"list8",
+								$("#3").typeahead({
+									name:"Latest stable release version",
+									local : ['0.8.4h','N/A','1.5.2','4.7.1','eric6 6.0.4','9.0.0','5.7.0','2.5.3','1.24.1','0.6.2','3.13.92','2.1','4.0.6','2.3.4','3.2','4.0.0','8.0.2','2.3','5.1.4','']
+								});
+								$("#4").typeahead({
+									name:"IDE",
 									local : ['IDLE','Python Tools for Visual Studio','PIDA','Komodo IDE','Geany','Wing IDE','KDevelop','PyScripter','SourceLair','Spyder','Canopy','Anjuta','Eric Python and Ruby IDE','PyCharm','Ninja-IDE','NetBeans (Doesn't support Python from version 7.0)','MonoDevelop','PyDev (Eclipse)','PythonAnywhere','Stani's Python Editor','']
 								});
-								$("#9").typeahead({
-									name:"list9",
+								$("#5").typeahead({
+									name:"Python3x support",
 									local : ['','Yes','Yes up to v3.3','No','Yes 3.2, 3.3, 3.4','']
+								});
+								$("#6").typeahead({
+									name:"Python2x support",
+									local : ['Yes','','Yes (Python 2.7)','Yes 2.6, 2.7','']
+								});
+								$("#7").typeahead({
+									name:"Developer",
+									local : ['Carlos Cordoba','Guido van Rossum et al.','Aptana','PythonAnywhere LLP','Team','Microsoft','Kiriakos Vlahos','ActiveState','SourceLair, Limited.','Detlev Offenbach','Stani Michiels','Naba Kumar','KDE KDevelop Team','Oracle','JetBrains','Wingware','Enthought','Novell and the Mono community','']
+								});
+								$("#8").typeahead({
+									name:"License",
+									local : ['Apache License 2.0','GPL','BSD-like for free Canopy Express, Proprietary for Canopy Pro','Proprietary','EPL','Open-source','LGPL','MIT Licence','Proprietary and Community Edition Apache License 2.0','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -29,41 +29,36 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Boots from DVD :</label></br>
-								<input type="radio" name="FeatureBoots from DVD" value="oui">Yes <input type="radio" name="FeatureBoots from DVD" value = "non">No <input type="radio" name="FeatureBoots from DVD" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>RAM use (MB) : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Distribution : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Size of media (MB) : </label></br> <input id="4" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Distribution : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Boots from CD :</label></br>
 								<input type="radio" name="FeatureBoots from CD" value="oui">Yes <input type="radio" name="FeatureBoots from CD" value = "non">No <input type="radio" name="FeatureBoots from CD" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Installable from USB :</label></br>
-								<input type="radio" name="FeatureInstallable from USB" value="oui">Yes <input type="radio" name="FeatureInstallable from USB" value = "non">No <input type="radio" name="FeatureInstallable from USB" value = "non">Partial </br>
+								<label>Size of media (MB) : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>RAM use (MB) : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Boots from DVD :</label></br>
+								<input type="radio" name="FeatureBoots from DVD" value="oui">Yes <input type="radio" name="FeatureBoots from DVD" value = "non">No <input type="radio" name="FeatureBoots from DVD" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
 								<label>Installable live CD/DVD :</label></br>
 								<input type="radio" name="FeatureInstallable live CD/DVD" value="oui">Yes <input type="radio" name="FeatureInstallable live CD/DVD" value = "non">No <input type="radio" name="FeatureInstallable live CD/DVD" value = "non">Partial </br>
 											<input type="text"/></br>								
+								</br>	
+								<label>Installable from USB :</label></br>
+								<input type="radio" name="FeatureInstallable from USB" value="oui">Yes <input type="radio" name="FeatureInstallable from USB" value = "non">No <input type="radio" name="FeatureInstallable from USB" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['48 to 96','?','','256','≈48','640','192 to 512','RAM use (MB)','128 to 512','128 to 768','256 to 1024','32 to 128','16 to 24','128 to 320','96 to 512','96 to 320','384','256 to 1,024','256 to 768','≈8','80','≈64','80 to 512','min 16','96','24 to 192','≈1,024','256 or >','up to 128','32 to 192','']
+								$("#0").typeahead({
+									name:"Distribution",
+									local : ['Nanolinux','Inquisitor live CD','CrunchBang Linux','Pardus','Tiny SliTaz','gNewSense','Xubuntu','ClearOS','Fedoralive CD','Pentoo','Distribution','Gentoo','dyne:bolic','Musix GNU+Linux','Slax','Sabayon Linux live DVD','Kubuntu','Dragora GNU/Linux-Libre','Linux Mint','Trisquel','nUbuntu','Knoppix DVD"Maxi" edition','Damn Small Linux','SliTaz GNU/Linux','Bodhi Linux','Micro Core Linux','Puredyne','Debian Live','Elive','XBMC Live','Freespire','Scientific Linux','Mandriva Linux One','openGEU','Parabola GNU/Linux-libre','Tor-ramdisk','Trinity Rescue Kit','SystemRescueCD','Sabayon Linux live CD','AUSTRUMI Linux','Ubuntu','OpenWrt','Oralux','Grml','PCLinuxOS','Knoppix CDedition','Tiny Core Linux','Zentyal','Kali Linux','Chakra','OpenELEC','MCNLive','LibreCMC/LibreWRT','openSUSE','Feather Linux','Tails','MEPIS','BLAG','Puppy Linux (standard edition)','Ututo','CentOS','ALT Linux Desktop or Lite','Edubuntu','Arch Linux','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Nanolinux','Inquisitor live CD','CrunchBang Linux','Pardus','Tiny SliTaz','gNewSense','Xubuntu','ClearOS','Fedora
-live CD','Pentoo','Distribution','Gentoo','dyne:bolic','Musix GNU+Linux','Slax','Sabayon Linux live DVD','Kubuntu','Dragora GNU/Linux-Libre','Linux Mint','Trisquel','nUbuntu','Knoppix DVD
-"Maxi" edition','Damn Small Linux','SliTaz GNU/Linux','Bodhi Linux','Micro Core Linux','Puredyne','Debian Live','Elive','XBMC Live','Freespire','Scientific Linux','Mandriva Linux One','openGEU','Parabola GNU/Linux-libre','Tor-ramdisk','Trinity Rescue Kit','SystemRescueCD','Sabayon Linux live CD','AUSTRUMI Linux','Ubuntu','OpenWrt','Oralux','Grml','PCLinuxOS','Knoppix CD
-edition','Tiny Core Linux','Zentyal','Kali Linux','Chakra','OpenELEC','MCNLive','LibreCMC/LibreWRT','openSUSE','Feather Linux','Tails','MEPIS','BLAG','Puppy Linux (standard edition)','Ututo','CentOS','ALT Linux Desktop or Lite','Edubuntu','Arch Linux','']
+								$("#1").typeahead({
+									name:"RAM use (MB)",
+									local : ['48 to 96','?','','256','≈48','640','192 to 512','RAM use (MB)','128 to 512','128 to 768','256 to 1024','32 to 128','16 to 24','128 to 320','96 to 512','96 to 320','384','256 to 1,024','256 to 768','≈8','80','≈64','80 to 512','min 16','96','24 to 192','≈1,024','256 or >','up to 128','32 to 192','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

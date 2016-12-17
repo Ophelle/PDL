@@ -29,32 +29,29 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Developer : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Maintained? :</label></br>
 								<input type="radio" name="FeatureMaintained?" value="oui">Yes <input type="radio" name="FeatureMaintained?" value = "non">No <input type="radio" name="FeatureMaintained?" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Developer : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Encryption : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Licensing : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>First released : </label></br> <input id="5" type="number" name="Feature"></br>
+								<label>First released : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
+								</br>	
+								<label>Encryption : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Licensing : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Developer",
 									local : ['DriveSentry','Pawel Jakub Dawidek','Paul Le Roux','Clemens Fruhwirth (LUKS)','Steven Scherrer','WinMagic Inc.','OpenBSD','Hans-Ulrich Juettner','AgileBits','PGP Corporation (acquired by Symantec in 2010)','Sophos (Utimaco)','Jari Ruusu','Poul-Henning Kamp','SecurStar GmbH','CenterTools','McAfee, Inc.','SECUDE','Dustin Kirkland, Tyler Hicks, (formerly Mike Halcrow)','Softwaredevelopment Remus ArchiCrypt','Christophe Saout','Symantec Corporation','EISST Ltd.','R-Tools Technology Inc','PC Dynamics, Inc.','ntldr','Alex Hornung','WinEncrypt','CE-Infosys','Apple Inc.','SoftWinter','Check Point Software Technologies Ltd','Shaun Hollingworth','TrueCrypt Foundation','Jetico','EgoSecure GmbH','Trend Micro','Cypherix Software','Information Security Corp.','CipherShed Project','Roland C. Dowdeswell','IDRIX','Developer','Cosect Ltd.','Aiko Solutions','WinAbility Software Corp.','v77','BitArmor Systems Inc.','Bloombase','?','Microsoft','Aloaha','Valient Gough','Becrypt Ltd','Dekart','The MorphOS Development Team','ENC Security Systems','Sarah Dean','n-Trance Security Ltd','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Encryption",
 									local : ['Symantec Endpoint Encryption','FileVault 2','Knox','svnd / vnconfig','GELI','BitArmor DataControl','PGPDisk','SafeGuard PrivateDisk','DriveCrypt','ArchiCrypt Live','loop-AES','CryptArchiver','tcplay','Discryptor','USBCrypt','CrossCrypt','CGD','GBDE','Sentry 2020','FREE CompuSec','Private Disk','FreeOTFE','EncryptStick','softraid / RAID C','Check Point Full Disk Encryption','FileVault','dm-crypt/LUKS','n-Crypt Pro','Scramdisk 4 Linux','cryptoloop','Cryptainer','SafeGuard Enterprise','Name','VeraCrypt','SafeGuard Easy','e-Capsule Private Safe','SECUDE Secure Notebook','Bloombase Keyparc','EgoSecure HDD Encryption','DiskCryptor','McAfee Drive Encryption (SafeBoot)','Aloaha Secure Stick','BitLocker','DriveSentry GoAnywhere 2','Scramdisk','KryptOS','CenterTools DriveLock','SafeHouse Professional','Trend Micro Endpoint Encryption (Mobile Armor)','SecuBox','DISK Protect','EncFS','ProxyCrypt','SecureDoc','TrueCrypt','E4M','BestCrypt','SpyProof!','eCryptfs','cryptsetup/dmsetup','R-Crypto','CipherShed','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#2").typeahead({
+									name:"Licensing",
 									local : ['GPL','Proprietary','TrueCrypt License Version 3.0','LGPLv3','BSD','Open source','Microsoft Public License (Ms-PL)','TrueCrypt License 3.1','Licensing','']
 								});
 						</script>

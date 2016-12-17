@@ -29,40 +29,35 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Digestate : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Carbon dioxide : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Methane : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Hydrogen sulfide (trace levels) : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Hydrogen sulfide (trace levels) : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Digestate : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Anaerobic digestion : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Anaerobic digestion : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Carbon dioxide : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Methane : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Compost','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Heat','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"Carbon dioxide",
 									local : ['Carbon dioxide','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Hydrogen sulfide (trace levels)",
 									local : ['','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#2").typeahead({
+									name:"Digestate",
+									local : ['Compost','']
+								});
+								$("#3").typeahead({
+									name:"Anaerobic digestion",
 									local : ['Composting','']
+								});
+								$("#4").typeahead({
+									name:"Methane",
+									local : ['Heat','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

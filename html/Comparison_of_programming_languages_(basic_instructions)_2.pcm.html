@@ -29,33 +29,29 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Integer : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Integer : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Half and Quadruple precision etc. : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Single precision : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Double precision : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Double precision : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Single precision : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Half and Quadruple precision etc. : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Integer",
+									local : ['N/A','','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Single precision",
 									local : ['N/A','','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['N/A','','etc. &  etc.','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Double precision",
 									local : ['N/A','','(.Net 4.0)','etc.','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['N/A','','']
+								$("#3").typeahead({
+									name:"Half and Quadruple precision etc.",
+									local : ['N/A','','etc. &  etc.','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

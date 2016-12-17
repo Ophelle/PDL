@@ -29,25 +29,7 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Free GB (number only) : </label></br> <input id="1" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>FTP upload possible? :</label></br>
-								<input type="radio" name="FeatureFTP upload possible?" value="oui">Yes <input type="radio" name="FeatureFTP upload possible?" value = "non">No <input type="radio" name="FeatureFTP upload possible?" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Follows symlinks : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>File expiration : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Client-side encryption : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Direct access :</label></br>
-								<input type="radio" name="FeatureDirect access" value="oui">Yes <input type="radio" name="FeatureDirect access" value = "non">No <input type="radio" name="FeatureDirect access" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>File expiration : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Misc. notes :</label></br>
 											<input type="checkbox" name="Feature" >Subscription costs US$6</br>	
@@ -96,13 +78,11 @@
 											<input type="checkbox" name="Feature" >audit logs</br>	
 											<input type="checkbox" name="Feature" >granular security control</br>	
 											<input type="checkbox" name="Feature" >embedable on website.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Traffic or bandwidth limit : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Max. file size : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label>FTP upload possible? :</label></br>
+								<input type="radio" name="FeatureFTP upload possible?" value="oui">Yes <input type="radio" name="FeatureFTP upload possible?" value = "non">No <input type="radio" name="FeatureFTP upload possible?" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
 								<label>Storage size :</label></br>
 											<input type="checkbox" name="Feature" >2 GB free</br>	
@@ -182,7 +162,21 @@ Unlimited  GB professional paid</br>
 											<input type="checkbox" name="Feature" >
 500 GB paid</br>	
 											<input type="checkbox" name="Feature" >5  GB free</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Direct access :</label></br>
+								<input type="radio" name="FeatureDirect access" value="oui">Yes <input type="radio" name="FeatureDirect access" value = "non">No <input type="radio" name="FeatureDirect access" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Traffic or bandwidth limit : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>File versioning :</label></br>
+								<input type="radio" name="FeatureFile versioning" value="oui">Yes <input type="radio" name="FeatureFile versioning" value = "non">No <input type="radio" name="FeatureFile versioning" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Max. file size : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Follows symlinks : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Remote upload? :</label></br>
 								<input type="radio" name="FeatureRemote upload?" value="oui">Yes <input type="radio" name="FeatureRemote upload?" value = "non">No <input type="radio" name="FeatureRemote upload?" value = "non">Partial </br>
@@ -192,55 +186,35 @@ Unlimited  GB professional paid</br>
 								<input type="radio" name="FeatureDeveloper API?" value="oui">Yes <input type="radio" name="FeatureDeveloper API?" value = "non">No <input type="radio" name="FeatureDeveloper API?" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>File versioning :</label></br>
-								<input type="radio" name="FeatureFile versioning" value="oui">Yes <input type="radio" name="FeatureFile versioning" value = "non">No <input type="radio" name="FeatureFile versioning" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Client-side encryption : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Web host : </label></br> <input id="14" type="text" name="Feature"></br>
-								
+								<label>Free GB (number only) : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Web host : </label></br> <input id="5" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"File expiration",
+									local : ['None','?','270 days of account inactivity','60 days after last download free,Never paid','None, pay for storage each month','30 days after the last time it was downloaded','For paying users there is usually no file expiration.','No expiration for paid accounts,90 days of inactivity for free users','7 or 14  days based on subscription','1 Year Minimum','None, unless set by user','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['?','No','Yes','']
+									name:"Traffic or bandwidth limit",
+									local : ['None','Download:1.25 GB/day;500MB/hr, Upload:500MB/day;300MB/hr','Amazon S3 limits','500 MB per 30 min free,1  to 8  TB per month paid','10 GB/file/day free,250 GB file/day paid','?','10  GB/month free,2 TB/month paid','40 GB/day free,','1 to 8 TB per month paid.','20  GB/day free (links only),200  GB/day paid (links only)','200/400/600 GB per month','Bandwidth throttled after 1 TB uploaded','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['None','?','270 days of account inactivity','60 days after last download free,
-Never paid','None, pay for storage each month','30 days after the last time it was downloaded','For paying users there is usually no file expiration.','No expiration for paid accounts,
-90 days of inactivity for free users','7 or 14  days based on subscription','1 Year Minimum','None, unless set by user','']
+									name:"Max. file size",
+									local : ['5  TB per file, unlimited files per bucket','20 GB Windows paid,4 GB Mac & free','40  GB','Only restricted by browser memory capability','5 GB','100  MB free,1  GB paid,4 GB professional','None','5 GB','2 GB upload via Web, 10 GB download','5 TB','?','2 GB paid','10 GB','500 MB free,1-2 GB paid','250  MB free Personal,1  GB paid Personal,2 GB Business,5 GB Enterprise','2  GB','150  MB free,Unlimited premium','2 GB','None through desktop client.','2 GB upload via Web or WebDAV, 10 GB upload via application','10  GB free,20  GB paid','1  GB','10  GB.Unlimited usingclient  application','1  GB free,2  GB paid','4 GB regular upload,32 GB Power Upload plug-in','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['?','Yes','No','']
+									name:"Follows symlinks",
+									local : ['?','No','Yes','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['None','Download:1.25 GB/day;500MB/hr, Upload:500MB/day;300MB/hr','Amazon S3 limits','500 MB per 30 min free,
-1  to 8  TB per month paid','10 GB/file/day free,
-250 GB file/day paid','?','10  GB/month free,
-2 TB/month paid','40 GB/day free,','1 to 8 TB per month paid.','20  GB/day free (links only),
-200  GB/day paid (links only)','200/400/600 GB per month','Bandwidth throttled after 1 TB uploaded','']
+									name:"Client-side encryption",
+									local : ['?','Yes','No','']
 								});
 								$("#5").typeahead({
-									name:"list5",
-									local : ['5  TB per file, unlimited files per bucket','20 GB Windows paid,
-4 GB Mac & free','40  GB','Only restricted by browser memory capability','5 GB','100  MB free,
-1  GB paid,
-4 GB professional','None','5 GB','2 GB upload via Web, 10 GB download','5 TB','?','2 GB paid','10 GB','500 MB free,
-1-2 GB paid','250  MB free Personal,
-1  GB paid Personal,
-2 GB Business,
-5 GB Enterprise','2  GB','150  MB free,
-Unlimited premium','2 GB','None through desktop client.','2 GB upload via Web or WebDAV,
- 10 GB upload via application','10  GB free,
-20  GB paid','1  GB','10  GB.
-Unlimited using
-client  application','1  GB free,
-2  GB paid','4 GB regular upload,
-32 GB Power Upload plug-in','']
-								});
-								$("#6").typeahead({
-									name:"list6",
+									name:"Web host",
 									local : ['Yandex Disk','ASUS WebStorage','Box','OneDrive','Pogoplug','FileDropper','Mega','Wuala','Handy Backup','Synaptop','Tresorit','Bitcasa','MagicVortex','Google Drive','Amazon Cloud Drive','SpiderOak','Tencent Weiyun','IBM Connections','MediaFire','Baidu Cloud','Apple iCloud','Copy','Dropbox','Fileserve','SugarSync','CloudMe','TitanFile','Infinit','Amazon S3','']
 								});
 						</script>

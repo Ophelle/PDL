@@ -29,64 +29,59 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>External hardware : </label></br> <input id="1" type="text" name="Feature"></br>
+								<label>Online :</label></br>
+								<input type="radio" name="FeatureOnline" value="oui">Yes <input type="radio" name="FeatureOnline" value = "non">No <input type="radio" name="FeatureOnline" value = "non">Partial </br>
 								
 								</br>	
-								<label>Creator / developer : </label></br> <input id="2" type="text" name="Feature"></br>
+								<label>External hardware : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>iOS :</label></br>
+								<input type="radio" name="FeatureiOS" value="oui">Yes <input type="radio" name="FeatureiOS" value = "non">No <input type="radio" name="FeatureiOS" value = "non">Partial </br>
 								
 								</br>	
-								<label>BSD :</label></br>
-								<input type="radio" name="FeatureBSD" value="oui">Yes <input type="radio" name="FeatureBSD" value = "non">No <input type="radio" name="FeatureBSD" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Microsoft Windows :</label></br>
-								<input type="radio" name="FeatureMicrosoft Windows" value="oui">Yes <input type="radio" name="FeatureMicrosoft Windows" value = "non">No <input type="radio" name="FeatureMicrosoft Windows" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Network storage : </label></br> <input id="5" type="text" name="Feature"></br>
+								<label>Linux :</label></br>
+								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
 								
 								</br>	
 								<label>Mac OS X :</label></br>
 								<input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Linux :</label></br>
-								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Digital audio editor : </label></br> <input id="8" type="text" name="Feature"></br>
 								
 								</br>	
-								<label>Software license : </label></br> <input id="9" type="text" name="Feature"></br>
+								<label>Creator / developer : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>BSD :</label></br>
+								<input type="radio" name="FeatureBSD" value="oui">Yes <input type="radio" name="FeatureBSD" value = "non">No <input type="radio" name="FeatureBSD" value = "non">Partial </br>
 								
 								</br>	
-								<label>Online :</label></br>
-								<input type="radio" name="FeatureOnline" value="oui">Yes <input type="radio" name="FeatureOnline" value = "non">No <input type="radio" name="FeatureOnline" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Microsoft Windows :</label></br>
+								<input type="radio" name="FeatureMicrosoft Windows" value="oui">Yes <input type="radio" name="FeatureMicrosoft Windows" value = "non">No <input type="radio" name="FeatureMicrosoft Windows" value = "non">Partial </br>
+								
 								</br>	
-								<label>iOS :</label></br>
-								<input type="radio" name="FeatureiOS" value="oui">Yes <input type="radio" name="FeatureiOS" value = "non">No <input type="radio" name="FeatureiOS" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Software license : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Digital audio editor : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Network storage : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"External hardware",
 									local : ['','External 2U rack unit','Optional MIDI controller, CDJ, DJ mixer with vinyl emulation software and CDs.','No','Unknown','Requires hardware dongle','Ilok required, other systems require Digidesgin/avid interface.','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Creator / developer",
 									local : ['Audacity Team','MAGIX','Atomix Productions','Cockos','Cakewalk','Avid','Goldwave Inc.','PreSonus','Ableton','Fasoft','Propellerhead Software','Renoise Team','Acoustica','Rosegarden','Kai Vehmanen','Apple','Image-Line','Conrad Parker','Steinberg','Kreatives','The Ardour Community','Centre for Speech Technology at KTH','Qtractor','Sony','Tobias Doerffel','Adobe Systems','Hobnox','Traverso','Mark of the Unicorn','Jokosher','Martin Pesch','Chris Bagwell, et al.','Tracktion Software Inc','Zynewave','HighCriteria','Leaff Engineering','Diamond Cut Productions','MuseE','Sonoma Wire Works','Meline and Philipp Henkel','Harrison Consoles','Acon Digital','Mackie','BIAS','C2 Solutions Ltd., trading as iThinkApps.com','']
 								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['','NFS','Unknown','SoundCloud','No','MediaNet (proprietary)','']
+								$("#2").typeahead({
+									name:"Software license",
+									local : ['GNU GPL','Proprietary','Proprietary (Freeware)','Freeware','BSD-like','Shareware','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#3").typeahead({
+									name:"Digital audio editor",
 									local : ['Audiotool','MusE','Ardour','SpectraLayers','NU-Tech','n-Track','Nuendo','Diamond Cut ART','SONAR','Harrison Mixbus','Soundbooth','LMMS','WaveSurfer','Ecasound','Logic Express/Studio','AudioDesk','WaveLab','Live','Rosegarden','Cubase','Reason','Audacity','Mixcraft','REAPER','Renoise','Kristal','mp3TrueEdit','Traverso DAW','RiffWorks','Goldwave','Pro Tools','ACID Pro','SoX','VirtualDJ','mp3DirectCut','Soundscape 32','MAGIX Sequoia','Studio One','Qtractor','GarageBand','BIAS Peak','Jokosher','FL Studio','Record','Sound Forge','Tracktion','Audiobook Cutter Free Edition','Acoustica','Sweep','Podium','MAGIX Samplitude','Audition','Podium Free','Total Recorder','Digital Performer','']
 								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['GNU GPL','Proprietary','Proprietary (Freeware)','Freeware','BSD-like','Shareware','']
+								$("#4").typeahead({
+									name:"Network storage",
+									local : ['','NFS','Unknown','SoundCloud','No','MediaNet (proprietary)','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

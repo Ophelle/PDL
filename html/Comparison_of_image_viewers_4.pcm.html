@@ -29,6 +29,16 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>color management (ICC) : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>selection (styles) : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>hotkeys :</label></br>
+								<input type="radio" name="Featurehotkeys" value="oui">Yes <input type="radio" name="Featurehotkeys" value = "non">No <input type="radio" name="Featurehotkeys" value = "non">Partial </br>
+								
+								</br>	
+								<label>adjust image (functions) : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
 								<label>other / special :</label></br>
 											<input type="checkbox" name="Feature" >capture page</br>	
 											<input type="checkbox" name="Feature" >remove page</br>	
@@ -79,108 +89,45 @@
 											<input type="checkbox" name="Feature" >create HTML album</br>	
 											<input type="checkbox" name="Feature" >collages</br>	
 											<input type="checkbox" name="Feature" >Search for Faces</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
+								</br>	
+								<label>Program : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>metadata : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>JPEG Lossless operations : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>search (criteria) :</label></br>
 								<input type="radio" name="Featuresearch (criteria)" value="oui">Yes <input type="radio" name="Featuresearch (criteria)" value = "non">No <input type="radio" name="Featuresearch (criteria)" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>metadata : </label></br> <input id="3" type="text" name="Feature"></br>
 								
 								</br>	
-								<label>Program : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>selection (styles) : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Unicode support : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>hotkeys :</label></br>
-								<input type="radio" name="Featurehotkeys" value="oui">Yes <input type="radio" name="Featurehotkeys" value = "non">No <input type="radio" name="Featurehotkeys" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>color management (ICC) : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>JPEG Lossless operations : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>adjust image (functions) : </label></br> <input id="10" type="text" name="Feature"></br>
+								<label>Unicode support :</label></br>
+								<input type="radio" name="FeatureUnicode support" value="oui">Yes <input type="radio" name="FeatureUnicode support" value = "non">No <input type="radio" name="FeatureUnicode support" value = "non">Partial </br>
 								
 						<script>
+								$("#0").typeahead({
+									name:"color management (ICC)",
+									local : ['','No','Yes','YesCustom monitor profile supported','Yes(supports custom monitor profile, direct conversion from image colorspace to monitor colorspace, ICC v4)','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['Yes','Yes
- Exif and IPTC','Partial','No','Yes
- IPTC, Exif, XMP, JPEG comment','Yes
- Read IPTC, Exif, XMP','Yes: Exif','Yes
-Write XMP Rating/Label, IPTC metadata, Windows Rating, embedded or in sidecar files, shows shooting info (Exif) and realtime RGB histogram','Partial
- JPEG comment','Partial
- view comments','','Yes
- EXIF, IPTC, and custom keywords','Yes
- Exif, IPTC','Partial
- Keywords','Yes
- IPTC, Exif, JPEG comment','Yes
- Exif, IPTC, XMP','Yes
-Exif, IPTC, user defined','Yes
- JPEG comment, IPTC, Exif','']
+									name:"selection (styles)",
+									local : ['Partial individual, all','YesCopy, move, delete, rate, label','','No','Yes individual, linear','Yes','Yes linear, block, complex','Yes linear, complex','Yes individual, linear, hide','Yes block, linear, complex','Yes individual, linear, block','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['CDisplay','STDU Viewer','Gwenview','F-Spot','XnView','FastStone Image Viewer','Geeqie','Comix','gThumb','digiKam','Shotwell','ACDSee','KPhotoAlbum','Zoner Photo Studio','Phase One Media Pro','Eye of gnome','Windows Picture and Fax Viewer','Simple Comic','Picasa','xv','ResourceSpace','Photos','ImageAXS','FastPictureViewer','IrfanView','']
+									name:"adjust image (functions)",
+									local : ['No','Partial basic','Yes Rotate','Yes many','Yes','Yes Rotate, Filter','Yes many editing function','Yesrotate','Yes per KIPI plugins','Yes rotate, lossless JPEG rotate, annotate TIFF images','Yes Rotate, Red eye removal, saturation, color balance, levels and more','','Yes rotate, brightness, contrast','Yes rotate, gamma','Yes very many','Yes Exposure, Saturation, Tint, Shadows, Temperature, and more','Yes manipulate color, flip/rotate, etc.','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['Partial
- individual, all','Yes
-Copy, move, delete, rate, label','','No','Yes
- individual, linear','Yes','Yes
- linear, block, complex','Yes
- linear, complex','Yes
- individual, linear, hide','Yes
- block, linear, complex','Yes
- individual, linear, block','']
+									name:"Program",
+									local : ['CDisplay','STDU Viewer','Gwenview','F-Spot','XnView','FastStone Image Viewer','Geeqie','Comix','gThumb','digiKam','Shotwell','ACDSee','KPhotoAlbum','Zoner Photo Studio','Phase One Media Pro','Eye of gnome','Windows Picture and Fax Viewer','Simple Comic','Picasa','xv','ResourceSpace','Photos','ImageAXS','FastPictureViewer','IrfanView','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['Yes','No
-Supported in XnViewMP','Yes, native','','Yes
-(with plugin)','No','']
+									name:"metadata",
+									local : ['Yes','Yes Exif and IPTC','Partial','No','Yes IPTC, Exif, XMP, JPEG comment','Yes Read IPTC, Exif, XMP','Yes: Exif','YesWrite XMP Rating/Label, IPTC metadata, Windows Rating, embedded or in sidecar files, shows shooting info (Exif) and realtime RGB histogram','Partial JPEG comment','Partial view comments','','Yes EXIF, IPTC, and custom keywords','Yes Exif, IPTC','Partial Keywords','Yes IPTC, Exif, JPEG comment','Yes Exif, IPTC, XMP','YesExif, IPTC, user defined','Yes JPEG comment, IPTC, Exif','']
 								});
 								$("#5").typeahead({
-									name:"list5",
-									local : ['','No','Yes','Yes
-Custom monitor profile supported','Yes
-(supports custom monitor profile, direct conversion from image colorspace to monitor colorspace, ICC v4)','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['','Yes
-rotation only','Yes','Yes
-lossless transitions','Yes
-rotate only','No','Yes
-in 90° steps','Yes
-crop plugin and rotate plugin available','n/a','']
-								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['No','Partial
- basic','Yes
- Rotate','Yes
- many','Yes','Yes
- Rotate, Filter','Yes
- many editing function','Yes
-rotate','Yes
- per KIPI plugins','Yes
- rotate, lossless JPEG rotate, annotate TIFF images','Yes
- Rotate, Red eye removal, saturation, color balance, levels and more','','Yes
- rotate, brightness, contrast','Yes
- rotate, gamma','Yes
- very many','Yes
- Exposure, Saturation, Tint, Shadows, Temperature, and more','Yes
- manipulate color, flip/rotate, etc.','']
+									name:"JPEG Lossless operations",
+									local : ['','Yesrotation only','Yes','Yeslossless transitions','Yesrotate only','No','Yesin 90° steps','Yescrop plugin and rotate plugin available','n/a','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

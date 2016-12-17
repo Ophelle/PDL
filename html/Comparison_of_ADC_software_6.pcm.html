@@ -29,37 +29,34 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Programming language : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>ADC client : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
 								<label>WebUI :</label></br>
 								<input type="radio" name="FeatureWebUI" value="oui">Yes <input type="radio" name="FeatureWebUI" value = "non">No <input type="radio" name="FeatureWebUI" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>CLI :</label></br>
-								<input type="radio" name="FeatureCLI" value="oui">Yes <input type="radio" name="FeatureCLI" value = "non">No <input type="radio" name="FeatureCLI" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Programming language : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>ADC client : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Based on : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>GUI :</label></br>
 								<input type="radio" name="FeatureGUI" value="oui">Yes <input type="radio" name="FeatureGUI" value = "non">No <input type="radio" name="FeatureGUI" value = "non">Partial </br>
 											<input type="text"/></br>								
+								</br>	
+								<label>Based on : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>CLI :</label></br>
+								<input type="radio" name="FeatureCLI" value="oui">Yes <input type="radio" name="FeatureCLI" value = "non">No <input type="radio" name="FeatureCLI" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Programming language",
 									local : ['Programming language','C++','C++, Lua','C','Java','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"ADC client",
 									local : ['TKDC++','ncdc','AirDC++','ADC client','AirDC++ nano','DC++','EiskaltDC++','LinuxDC++','ApexDC++','StrongDC++','FlylinkDC++','RSX++','Jucy','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#2").typeahead({
+									name:"Based on",
 									local : ['StrongDC++, DC++, ApexDC speed mode','StrongDC++','AirDC++,nanodc','','DC++','StrongDC++, DC++','Based on','']
 								});
 						</script>

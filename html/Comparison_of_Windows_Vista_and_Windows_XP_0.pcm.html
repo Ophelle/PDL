@@ -29,31 +29,31 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Windows 8 : </label></br> <input id="1" type="text" name="Feature"></br>
+								<label>Windows Vista :</label></br>
+								<input type="radio" name="FeatureWindows Vista" value="oui">Yes <input type="radio" name="FeatureWindows Vista" value = "non">No <input type="radio" name="FeatureWindows Vista" value = "non">Partial </br>
 								
+								</br>	
+								<label>Feature : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Windows 7 :</label></br>
 								<input type="radio" name="FeatureWindows 7" value="oui">Yes <input type="radio" name="FeatureWindows 7" value = "non">No <input type="radio" name="FeatureWindows 7" value = "non">Partial </br>
 								
 								</br>	
-								<label>Feature : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Windows XP : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Windows Vista :</label></br>
-								<input type="radio" name="FeatureWindows Vista" value="oui">Yes <input type="radio" name="FeatureWindows Vista" value = "non">No <input type="radio" name="FeatureWindows Vista" value = "non">Partial </br>
-								
-								</br>	
-								<label>Windows XP :</label></br>
-								<input type="radio" name="FeatureWindows XP" value="oui">Yes <input type="radio" name="FeatureWindows XP" value = "non">No <input type="radio" name="FeatureWindows XP" value = "non">Partial </br>
-								
+								<label>Windows 8 : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Feature",
+									local : ['Windows Security Center','Windows Firewall','Data Execution Prevention','User Account Control','Windows Defender','BitLocker Drive Encryption','Parental controls','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['Yes (replaced by Family Safety)','Yes','Yes (replaced by Action Center)','Yes (Pro and Enterprise only)','Yes (added antivirus capabilities, available in older versions as the Microsoft Security Essentials download)','']
+									name:"Windows XP",
+									local : ['Yes (starting w/ SP2)','No','Yes','Available as a free download','Some (Internet Explorer allows parental control of web browsing)','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Windows Security Center','Windows Firewall','Data Execution Prevention','User Account Control','Windows Defender','BitLocker Drive Encryption','Parental controls','']
+									name:"Windows 8",
+									local : ['Yes (replaced by Family Safety)','Yes','Yes (replaced by Action Center)','Yes (Pro and Enterprise only)','Yes (added antivirus capabilities, available in older versions as the Microsoft Security Essentials download)','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

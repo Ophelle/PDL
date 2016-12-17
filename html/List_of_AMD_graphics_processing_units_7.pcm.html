@@ -29,29 +29,12 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
+								<label>Memory clock (MHz) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Memory clock (MHz) : </label></br> <input id="2" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Config core : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Config core : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Memory - Bus width (bit) : </label></br> <input id="4" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Fillrate - MTexels/s : </label></br> <input id="5" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Core clock (MHz) : </label></br> <input id="6" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Memory (MB) :</label></br>
-											<input type="checkbox" name="Feature" >128</br>	
-											<input type="checkbox" name="Feature" >256</br>	
-											<input type="checkbox" name="Feature" >64</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								<label>Model : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Launch :</label></br>
 											<input type="checkbox" name="Feature" >Mar. 1</br>	
@@ -62,47 +45,59 @@
 											<input type="checkbox" name="Feature" >Oct. 24</br>	
 											<input type="checkbox" name="Feature" >Sept. 9</br>	
 											<input type="checkbox" name="Feature" >Sept. 30</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
-								<label>Fillrate - MPixels/s : </label></br> <input id="9" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Memory (MB) :</label></br>
+											<input type="checkbox" name="Feature" >128</br>	
+											<input type="checkbox" name="Feature" >256</br>	
+											<input type="checkbox" name="Feature" >64</br>	
+							
 								</br>	
-								<label>Code name : </label></br> <input id="10" type="text" name="Feature"></br>
+								<label>Fillrate - MOperations/s : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Fillrate - MOperations/s : </label></br> <input id="11" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Model : </label></br> <input id="12" type="text" name="Feature"></br>
+								<label>Fillrate - MTexels/s : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Memory - Bus type : </label></br> <input id="13" type="text" name="Feature"></br>
+								<label>Fillrate - MVertices/s : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Fab (nm) : </label></br> <input id="14" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Fillrate - MPixels/s : </label></br> <input type="number" name="Feature"></br>
+								
 								</br>	
-								<label>Fillrate - MVertices/s : </label></br> <input id="15" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Bus interface : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="16" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Memory - Bus type : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Memory - Bus width (bit) : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Fab (nm) : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Code name : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Core clock (MHz) : </label></br> <input type="number" name="Feature"></br>
+								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['AGP 8x','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Config core",
 									local : ['8:4:8:8','4:2:4:4','4:4:4:4','4:4:4:8','']
 								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['R350','R360','RV360','R300 (khan)','RV350 (shivah)','R350, R360','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Model",
 									local : ['Radeon 9600 SE','Radeon 9700','Radeon 9600','Radeon 9600 Pro','Radeon 9800 Pro','Radeon 9550','Radeon 9500 Pro','Radeon 9600 XT','Radeon 9700 Pro','Radeon 9800 XL','Radeon 9800','Radeon 9550 SE','Radeon 9500','Radeon 9800 XXL','Radeon 9800 SE','Radeon 9800 XT','']
+								});
+								$("#2").typeahead({
+									name:"Bus interface",
+									local : ['AGP 8x','']
+								});
+								$("#3").typeahead({
+									name:"Code name",
+									local : ['R350','R360','RV360','R300 (khan)','RV350 (shivah)','R350, R360','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

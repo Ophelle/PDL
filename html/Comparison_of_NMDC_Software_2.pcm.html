@@ -29,70 +29,65 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>CLI :</label></br>
-								<input type="radio" name="FeatureCLI" value="oui">Yes <input type="radio" name="FeatureCLI" value = "non">No <input type="radio" name="FeatureCLI" value = "non">Partial </br>
-								
-								</br>	
 								<label>Mac OS X :</label></br>
 								<input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </br>
 								
 								</br>	
-								<label>FOSS :</label></br>
-								<input type="radio" name="FeatureFOSS" value="oui">Yes <input type="radio" name="FeatureFOSS" value = "non">No <input type="radio" name="FeatureFOSS" value = "non">Partial </br>
+								<label>Other OS :</label></br>
+								<input type="radio" name="FeatureOther OS" value="oui">Yes <input type="radio" name="FeatureOther OS" value = "non">No <input type="radio" name="FeatureOther OS" value = "non">Partial </br>
 								
 								</br>	
-								<label>Based on : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>NMDC Client : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Windows :</label></br>
-								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
-								
-								</br>	
-								<label>NMDC Client : </label></br> <input id="6" type="text" name="Feature"></br>
+								<label>GUI :</label></br>
+								<input type="radio" name="FeatureGUI" value="oui">Yes <input type="radio" name="FeatureGUI" value = "non">No <input type="radio" name="FeatureGUI" value = "non">Partial </br>
 								
 								</br>	
 								<label>Other UI :</label></br>
 								<input type="radio" name="FeatureOther UI" value="oui">Yes <input type="radio" name="FeatureOther UI" value = "non">No <input type="radio" name="FeatureOther UI" value = "non">Partial </br>
 								
 								</br>	
-								<label>Active :</label></br>
-								<input type="radio" name="FeatureActive" value="oui">Yes <input type="radio" name="FeatureActive" value = "non">No <input type="radio" name="FeatureActive" value = "non">Partial </br>
+								<label>FOSS :</label></br>
+								<input type="radio" name="FeatureFOSS" value="oui">Yes <input type="radio" name="FeatureFOSS" value = "non">No <input type="radio" name="FeatureFOSS" value = "non">Partial </br>
 								
 								</br>	
 								<label>Linux :</label></br>
 								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
 								
 								</br>	
-								<label>Programming language : </label></br> <input id="10" type="text" name="Feature"></br>
+								<label>Active :</label></br>
+								<input type="radio" name="FeatureActive" value="oui">Yes <input type="radio" name="FeatureActive" value = "non">No <input type="radio" name="FeatureActive" value = "non">Partial </br>
 								
 								</br>	
-								<label>Software license : </label></br> <input id="11" type="text" name="Feature"></br>
+								<label>Windows :</label></br>
+								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
 								
 								</br>	
-								<label>GUI :</label></br>
-								<input type="radio" name="FeatureGUI" value="oui">Yes <input type="radio" name="FeatureGUI" value = "non">No <input type="radio" name="FeatureGUI" value = "non">Partial </br>
+								<label>Programming language : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>CLI :</label></br>
+								<input type="radio" name="FeatureCLI" value="oui">Yes <input type="radio" name="FeatureCLI" value = "non">No <input type="radio" name="FeatureCLI" value = "non">Partial </br>
 								
 								</br>	
-								<label>Other OS :</label></br>
-								<input type="radio" name="FeatureOther OS" value="oui">Yes <input type="radio" name="FeatureOther OS" value = "non">No <input type="radio" name="FeatureOther OS" value = "non">Partial </br>
-								
+								<label>Based on : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Software license : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['','DC++','Valknut','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"NMDC Client",
 									local : ['ShakesPeer','Shareaza','NeoModus Direct Connect','EiskaltDC','DCDM++','DC#','LDCC','MLDonkey','RevConnect','Valknut','CzDC','DCTC','ncdc','fulDC','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Programming language",
 									local : ['Visual Basic, C++','C++','C','OCaml, C, assembly','C#','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['GNU GPL','Proprietary
-Freeware','Unknown','MIT Licence','']
+								$("#2").typeahead({
+									name:"Based on",
+									local : ['','DC++','Valknut','']
+								});
+								$("#3").typeahead({
+									name:"Software license",
+									local : ['GNU GPL','ProprietaryFreeware','Unknown','MIT Licence','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

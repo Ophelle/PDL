@@ -29,19 +29,17 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Trident : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>? : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>? : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Trident : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Gecko','Presto','Tasman','iCab','KHTML','WebKit','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"?",
 									local : ['?','']
+								});
+								$("#1").typeahead({
+									name:"Trident",
+									local : ['Gecko','Presto','Tasman','iCab','KHTML','WebKit','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

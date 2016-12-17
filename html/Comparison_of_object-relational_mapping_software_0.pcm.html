@@ -29,18 +29,6 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Availability : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Software : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Platform : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Version :</label></br>
 											<input type="checkbox" name="Feature" >0.9.4 </br>	
 											<input type="checkbox" name="Feature" >March 28</br>	
@@ -75,23 +63,31 @@
 											<input type="checkbox" name="Feature" > 2011</br>	
 											<input type="checkbox" name="Feature" >4</br>	
 											<input type="checkbox" name="Feature" >April 1</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Platform : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Software : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Availability : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Commercial & Open source','Open source','Commercial','Part of .NET 4.5','Dual-licensed','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Platform",
 									local : ['Python','.NET 4.0','Java Virtual Machine','PHP','.NET, Java, PHP','.NET 4.5','Perl','Cross-platform','.NET 2.0','Cross-platform C++','.NET 3.5+','']
 								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['BSD License','GNU Lesser General Public License','Apache License 2.0','LGPL 2.1','MIT','Proprietary software','','Apache License 2.0 and Proprietary License','Artistic License 1.0 & GPL','Modified BSD License','Oracle License','GNU General Public License and Proprietary License','New BSD','LGPL','Eclipse Public License Version 1.0 (EPL) and Eclipse Distribution License Version 1.0 (EDL)','WebORB for .NET and WebORB for Java = Proprietary License, WebORB for PHP = Mozilla Public License','MIT License','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Software",
 									local : ['Apache Cayenne','Microsoft ADO.NET Entity Framework','Doctrine','jOOQ','RedBeanPHP','Hibernate','Skipper','SubSonic','DBIx::Class','nHibernate','ODB','EclipseLink','MyBatis/iBATIS','Dapper','SQLObject','SQLAlchemy','Storm','LLBLGen Pro','TopLink','WebORB Integration Server','EntitySpaces','ECO','']
+								});
+								$("#2").typeahead({
+									name:"Availability",
+									local : ['Commercial & Open source','Open source','Commercial','Part of .NET 4.5','Dual-licensed','']
+								});
+								$("#3").typeahead({
+									name:"License",
+									local : ['BSD License','GNU Lesser General Public License','Apache License 2.0','LGPL 2.1','MIT','Proprietary software','','Apache License 2.0 and Proprietary License','Artistic License 1.0 & GPL','Modified BSD License','Oracle License','GNU General Public License and Proprietary License','New BSD','LGPL','Eclipse Public License Version 1.0 (EPL) and Eclipse Distribution License Version 1.0 (EDL)','WebORB for .NET and WebORB for Java = Proprietary License, WebORB for PHP = Mozilla Public License','MIT License','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

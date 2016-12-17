@@ -37,29 +37,21 @@
 											<input type="checkbox" name="Feature" >IXP150</br>	
 											<input type="checkbox" name="Feature" >IXP200</br>	
 											<input type="checkbox" name="Feature" >IXP300</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Codename : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Model : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Processors Supported : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Year : </label></br> <input id="4" type="number" name="Feature"></br>
+								<label>FSB/QDR Frequency (MHz) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>NB-SB Interface : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fabrication process (nm) : </label></br> <input id="6" type="number" name="Feature"></br>
+								<label>Fabrication process (nm) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
+								</br>	
+								<label>Codename : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Crossfire Enabled :</label></br>
 								<input type="radio" name="FeatureCrossfire Enabled" value="oui">Yes <input type="radio" name="FeatureCrossfire Enabled" value = "non">No <input type="radio" name="FeatureCrossfire Enabled" value = "non">Partial </br>
 											<input type="text"/></br>								
-								</br>	
-								<label>Model : </label></br> <input id="8" type="text" name="Feature"></br>
-								
 								</br>	
 								<label>Features :</label></br>
 											<input type="checkbox" name="Feature" >Radeon VE (7000) IGP 183 MHz</br>	
@@ -70,10 +62,7 @@
 											<input type="checkbox" name="Feature" >Radeon X700 IGP</br>	
 											<input type="checkbox" name="Feature" >500 MHz</br>	
 											<input type="checkbox" name="Feature" >Radeon VE (7000) IGP 150 MHz</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>FSB/QDR Frequency (MHz) : </label></br> <input id="10" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>Notes :</label></br>
 											<input type="checkbox" name="Feature" >AVIVO</br>	
@@ -86,28 +75,30 @@
 											<input type="checkbox" name="Feature" >Video Immersion</br>	
 											<input type="checkbox" name="Feature" >TV-out</br>	
 											<input type="checkbox" name="Feature" >ATI PowerPlay</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Year : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>NB-SB Interface : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Processors Supported : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Model",
+									local : ['ATI Radeon 9100 PRO IGP','','ATI Radeon 9000 PRO IGP','IGP 7000 (IGP 360)','IGP 330','ATI Radeon Xpress 1150 (originally named ATI Radeon Xpress 200 for Intel)Intel Essential Series D101GCC/D102GCC (Grand Country)','ATI Radeon Xpress 1250','IGP 340M','IGP 345M','ATI Radeon CrossFire Xpress 3200','IGP 340','IGP 350M','Model','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['Codename','RC350','RS200M revB','RS200L','RS200','RD600','RS350','RS600','RX320M','RX330','RS250M','RS400
-RS415
-
-RC400
-RC410','RS200M+','RS200M revA','']
+									name:"Codename",
+									local : ['Codename','RC350','RS200M revB','RS200L','RS200','RD600','RS350','RS600','RX320M','RX330','RS250M','RS400RS415RC400RC410','RS200M+','RS200M revA','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Processors Supported','Pentium 4-M HT, Pentium 4, Pentium M','Pentium 4 (Northwood, Prescott)','','Pentium 4-M','Pentium M','Pentium 4, Core 2','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"NB-SB Interface",
 									local : ['','NB-SB Interface','A-Link/PCI','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['ATI Radeon 9100 PRO IGP','','ATI Radeon 9000 PRO IGP','IGP 7000 (IGP 360)','IGP 330','ATI Radeon Xpress 1150 (originally named ATI Radeon Xpress 200 for Intel)
-Intel Essential Series D101GCC/D102GCC (Grand Country)','ATI Radeon Xpress 1250','IGP 340M','IGP 345M','ATI Radeon CrossFire Xpress 3200','IGP 340','IGP 350M','Model','']
+								$("#3").typeahead({
+									name:"Processors Supported",
+									local : ['Processors Supported','Pentium 4-M HT, Pentium 4, Pentium M','Pentium 4 (Northwood, Prescott)','','Pentium 4-M','Pentium M','Pentium 4, Core 2','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

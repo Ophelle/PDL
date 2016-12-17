@@ -29,34 +29,32 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Keystroke stacking : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Process substitution :</label></br>
+								<input type="radio" name="FeatureProcess substitution" value="oui">Yes <input type="radio" name="FeatureProcess substitution" value = "non">No <input type="radio" name="FeatureProcess substitution" value = "non">Partial </br>
+								
+								</br>	
 								<label>Subshells :</label></br>
 								<input type="radio" name="FeatureSubshells" value="oui">Yes <input type="radio" name="FeatureSubshells" value = "non">No <input type="radio" name="FeatureSubshells" value = "non">Partial </br>
-								
-								</br>	
-								<label>Keystroke stacking : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>TCP/UDP connections as streams :</label></br>
-								<input type="radio" name="FeatureTCP/UDP connections as streams" value="oui">Yes <input type="radio" name="FeatureTCP/UDP connections as streams" value = "non">No <input type="radio" name="FeatureTCP/UDP connections as streams" value = "non">Partial </br>
 								
 								</br>	
 								<label>Command substitution :</label></br>
 								<input type="radio" name="FeatureCommand substitution" value="oui">Yes <input type="radio" name="FeatureCommand substitution" value = "non">No <input type="radio" name="FeatureCommand substitution" value = "non">Partial </br>
 								
 								</br>	
-								<label>Process substitution :</label></br>
-								<input type="radio" name="FeatureProcess substitution" value="oui">Yes <input type="radio" name="FeatureProcess substitution" value = "non">No <input type="radio" name="FeatureProcess substitution" value = "non">Partial </br>
-								
+								<label>Pipes : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Pipes : </label></br> <input id="6" type="text" name="Feature"></br>
+								<label>TCP/UDP connections as streams :</label></br>
+								<input type="radio" name="FeatureTCP/UDP connections as streams" value="oui">Yes <input type="radio" name="FeatureTCP/UDP connections as streams" value = "non">No <input type="radio" name="FeatureTCP/UDP connections as streams" value = "non">Partial </br>
 								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Keystroke stacking",
 									local : ['N/A','No','Yes (via )','?','Yes (via  and )','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Pipes",
 									local : ['bytes concurrent','text sequential temporary files','text (via  command)','text concurrent','not supported','text','No','objects concurrent','bytes (may contain serialized objects if  is used) concurrent','']
 								});
 						</script>

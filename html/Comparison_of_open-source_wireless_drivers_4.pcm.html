@@ -29,8 +29,15 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Integration : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Integration : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Free firmware : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Free software :</label></br>
+								<input type="radio" name="FeatureFree software" value="oui">Yes <input type="radio" name="FeatureFree software" value = "non">No <input type="radio" name="FeatureFree software" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Development methodologies : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Chipset :</label></br>
 											<input type="checkbox" name="Feature" >Intel PRO</br>	
@@ -74,49 +81,36 @@
 											<input type="checkbox" name="Feature" >4800</br>	
 											<input type="checkbox" name="Feature" >Cisco Aironet 340</br>	
 											<input type="checkbox" name="Feature" >350</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Development methodologies : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Original/Primary developer : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Original/Primary developer : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Free firmware : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>License : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Driver : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Free software :</label></br>
-								<input type="radio" name="FeatureFree software" value="oui">Yes <input type="radio" name="FeatureFree software" value = "non">No <input type="radio" name="FeatureFree software" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Driver : </label></br> <input id="5" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Integration",
 									local : ['Integrated','']
 								});
+								$("#1").typeahead({
+									name:"Free firmware",
+									local : ['N/A','No','']
+								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Development methodologies",
 									local : ['Ported from OpenBSD','','Ported from Dragonfly BSD','Binary blob ported from FreeBSD','Ported from FreeBSD','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Original/Primary developer",
 									local : ['Damien Bergamini (OpenBSD)','','David Young','Claudio Jeker (OpenBSD)','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['N/A','No','']
-								});
-								$("#5").typeahead({
-									name:"list5",
+									name:"License",
 									local : ['BSD','']
 								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#5").typeahead({
+									name:"Driver",
 									local : ['an','urtwn','iwn','ath','ray','zyd','wpi','athn','cnw','atw','ral','ipw','iwi','atu','bwi','awi','run','rtw','']
 								});
 						</script>

@@ -29,83 +29,71 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Fedora :</label></br>
-								<input type="radio" name="FeatureFedora" value="oui">Yes <input type="radio" name="FeatureFedora" value = "non">No <input type="radio" name="FeatureFedora" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Gentoo : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Tor-ramdisk : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Alpine Linux : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Debian/Ubuntu : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Trisquel : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Mandriva : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Gentoo : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Alpine Linux : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Ututo : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Distribution : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label>gNewSense : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>SUSE Linux :</label></br>
 								<input type="radio" name="FeatureSUSE Linux" value="oui">Yes <input type="radio" name="FeatureSUSE Linux" value = "non">No <input type="radio" name="FeatureSUSE Linux" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Parabola GNU/Linux-libre : </label></br> <input id="11" type="text" name="Feature"></br>
-								
+								<label>Fedora :</label></br>
+								<input type="radio" name="FeatureFedora" value="oui">Yes <input type="radio" name="FeatureFedora" value = "non">No <input type="radio" name="FeatureFedora" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
-								<label>gNewSense : </label></br> <input id="12" type="text" name="Feature"></br>
-								
+								<label>Parabola GNU/Linux-libre : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Debian/Ubuntu : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Mandriva : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Distribution : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Tor-ramdisk :</label></br>
+								<input type="radio" name="FeatureTor-ramdisk" value="oui">Yes <input type="radio" name="FeatureTor-ramdisk" value = "non">No <input type="radio" name="FeatureTor-ramdisk" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Ututo : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Trisquel : </label></br> <input id="8" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Gentoo",
+									local : ['PaX optional','Optional','SELinux','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Alpine Linux",
 									local : ['Unknown','PaX','Yes','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"gNewSense",
 									local : ['Unknown','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['Software executable space protection','grsecurity','Compile time buffer checks','Mandatory access control','RSBAC','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['No','Yes','Unknown','PaX','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['Yes','PaX optional','Optional','SELinux, AppArmor','']
-								});
-								$("#6").typeahead({
-									name:"list6",
+									name:"Parabola GNU/Linux-libre",
 									local : ['Unknown','']
 								});
+								$("#4").typeahead({
+									name:"Debian/Ubuntu",
+									local : ['Yes','PaX optional','Optional','SELinux, AppArmor','']
+								});
+								$("#5").typeahead({
+									name:"Mandriva",
+									local : ['AppArmor','Unknown','Yes','']
+								});
+								$("#6").typeahead({
+									name:"Distribution",
+									local : ['Software executable space protection','grsecurity','Compile time buffer checks','Mandatory access control','RSBAC','']
+								});
 								$("#7").typeahead({
-									name:"list7",
+									name:"Ututo",
 									local : ['Unknown','']
 								});
 								$("#8").typeahead({
-									name:"list8",
+									name:"Trisquel",
 									local : ['Unknown','']
-								});
-								$("#9").typeahead({
-									name:"list9",
-									local : ['AppArmor','Unknown','Yes','']
-								});
-								$("#10").typeahead({
-									name:"list10",
-									local : ['PaX optional','Optional','SELinux','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

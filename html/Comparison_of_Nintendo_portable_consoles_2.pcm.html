@@ -29,54 +29,46 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>DSi (DSi-exclusive)
-and DSiWare : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>DSi (DSi-exclusive)and DSiWare : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>3DS : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>GBA : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>GBA : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>GB : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>3DS : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>GBC : </label></br> <input id="4" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Software : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>DS : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>GB : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>DS : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Software : </label></br> <input id="6" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"DSi (DSi-exclusive)and DSiWare",
+									local : ['','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"DS",
 									local : ['','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+									name:"GBA",
 									local : ['','Some via Virtual Console','(single-player only)','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#3").typeahead({
+									name:"GB",
 									local : ['','Some via Virtual Console','']
 								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#4").typeahead({
+									name:"3DS",
+									local : ['','']
+								});
+								$("#5").typeahead({
+									name:"GBC",
 									local : ['Some via Virtual Console','','']
 								});
-								$("#7").typeahead({
-									name:"list7",
+								$("#6").typeahead({
+									name:"Software",
 									local : ['Hardware','']
 								});
 						</script>

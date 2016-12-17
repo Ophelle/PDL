@@ -29,62 +29,59 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Debugger :</label></br>
-								<input type="radio" name="FeatureDebugger" value="oui">Yes <input type="radio" name="FeatureDebugger" value = "non">No <input type="radio" name="FeatureDebugger" value = "non">Partial </br>
+								<label>Export to Mobile :</label></br>
+								<input type="radio" name="FeatureExport to Mobile" value="oui">Yes <input type="radio" name="FeatureExport to Mobile" value = "non">No <input type="radio" name="FeatureExport to Mobile" value = "non">Partial </br>
 								
 								</br>	
-								<label>Mac OS X :</label></br>
-								<input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </br>
-								
-								</br>	
-								<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Other platforms : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Other platforms : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>GUI builder :</label></br>
 								<input type="radio" name="FeatureGUI builder" value="oui">Yes <input type="radio" name="FeatureGUI builder" value = "non">No <input type="radio" name="FeatureGUI builder" value = "non">Partial </br>
+								
+								</br>	
+								<label>Debugger :</label></br>
+								<input type="radio" name="FeatureDebugger" value="oui">Yes <input type="radio" name="FeatureDebugger" value = "non">No <input type="radio" name="FeatureDebugger" value = "non">Partial </br>
 								
 								</br>	
 								<label>Windows :</label></br>
 								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
 								
 								</br>	
-								<label>IDE : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>MXML :</label></br>
 								<input type="radio" name="FeatureMXML" value="oui">Yes <input type="radio" name="FeatureMXML" value = "non">No <input type="radio" name="FeatureMXML" value = "non">Partial </br>
-								
-								</br>	
-								<label>Static code analysis :</label></br>
-								<input type="radio" name="FeatureStatic code analysis" value="oui">Yes <input type="radio" name="FeatureStatic code analysis" value = "non">No <input type="radio" name="FeatureStatic code analysis" value = "non">Partial </br>
-								
-								</br>	
-								<label>Export to Mobile :</label></br>
-								<input type="radio" name="FeatureExport to Mobile" value="oui">Yes <input type="radio" name="FeatureExport to Mobile" value = "non">No <input type="radio" name="FeatureExport to Mobile" value = "non">Partial </br>
 								
 								</br>	
 								<label>Linux :</label></br>
 								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
 								
 								</br>	
+								<label>IDE : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
 								<label>Profiler :</label></br>
 								<input type="radio" name="FeatureProfiler" value="oui">Yes <input type="radio" name="FeatureProfiler" value = "non">No <input type="radio" name="FeatureProfiler" value = "non">Partial </br>
 								
+								</br>	
+								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Mac OS X :</label></br>
+								<input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </br>
+								
+								</br>	
+								<label>Static code analysis :</label></br>
+								<input type="radio" name="FeatureStatic code analysis" value="oui">Yes <input type="radio" name="FeatureStatic code analysis" value = "non">No <input type="radio" name="FeatureStatic code analysis" value = "non">Partial </br>
+								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Proprietary','MIT License','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Other platforms",
 									local : ['JVM','','FreeBSD, OpenBSD, Solaris','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"IDE",
 									local : ['IntelliJ IDEA','Flash Professional','FlashDevelop','Powerflasher FDT','Flash Builder','']
+								});
+								$("#2").typeahead({
+									name:"License",
+									local : ['Proprietary','MIT License','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

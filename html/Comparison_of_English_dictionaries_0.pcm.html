@@ -29,6 +29,13 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>First published : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Latest edition : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Main accent : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
 								<label>Pages :</label></br>
 											<input type="checkbox" name="Feature" >2</br>	
 											<input type="checkbox" name="Feature" >112</br>	
@@ -39,16 +46,12 @@
 											<input type="checkbox" name="Feature" >21</br>	
 											<input type="checkbox" name="Feature" >730</br>	
 											<input type="checkbox" name="Feature" >096</br>	
-									
+							
 								</br>	
-								<label>Latest edition : </label></br> <input id="2" type="text" name="Feature"></br>
+								<label>Year : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Year : </label></br> <input id="3" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>Pronunciation guide : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Title : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Entries (approx.) :</label></br>
 											<input type="checkbox" name="Feature" >291</br>	
@@ -59,39 +62,31 @@
 											<input type="checkbox" name="Feature" >350</br>	
 											<input type="checkbox" name="Feature" >130</br>	
 											<input type="checkbox" name="Feature" >355</br>	
-									
+							
 								</br>	
-								<label>Title : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Publisher : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Publisher : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Main accent : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>First published : </label></br> <input id="9" type="number" name="Feature"></br>
-								
+								<label>Pronunciation guide : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Latest edition",
 									local : ['5th (ISBN 0-547-04101-2)','3rd (ISBN 0-87-779201-1)','2nd (20 vols., ISBN 0-19-861186-2)','3rd (ISBN 0-19-957112-0)','11th (ISBN 0-00-743786-2)','3rd (ISBN 0-19-539288-4)','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Diacritical','IPA','']
+								$("#1").typeahead({
+									name:"Main accent",
+									local : ['British','American','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#2").typeahead({
+									name:"Title",
 									local : ['Collins English Dictionary','Oxford Dictionary of English','Oxford English Dictionary (OED)','American Heritage Dictionary (AHD)','New Oxford American Dictionary (NOAD)','Webster's Third New International Dictionary','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#3").typeahead({
+									name:"Publisher",
 									local : ['Oxford University Press','HarperCollins Publishers','Houghton Mifflin Harcourt','Merriam-Webster','']
 								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['British','American','']
+								$("#4").typeahead({
+									name:"Pronunciation guide",
+									local : ['Diacritical','IPA','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

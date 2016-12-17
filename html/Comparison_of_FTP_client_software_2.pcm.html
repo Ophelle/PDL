@@ -44,34 +44,31 @@
 											<input type="checkbox" name="Feature" >2012; 3 years ago</br>	
 											<input type="checkbox" name="Feature" >5.7.3 October 30</br>	
 											<input type="checkbox" name="Feature" >2013; 19 months ago</br>	
-									
+							
 								</br>	
-								<label>Software license : </label></br> <input id="2" type="text" name="Feature"></br>
+								<label>Creator : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>First public release date : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Creator : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Software license : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Copy files over 2 GB :</label></br>
 								<input type="radio" name="FeatureCopy files over 2 GB" value="oui">Yes <input type="radio" name="FeatureCopy files over 2 GB" value = "non">No <input type="radio" name="FeatureCopy files over 2 GB" value = "non">Partial </br>
 								
 								</br>	
-								<label>Client : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>First public release date : </label></br> <input id="6" type="number" name="Feature"></br>
-								
+								<label>Client : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Creator",
+									local : ['Stack-Its','Fetch Softworks','Eugene Roshal / FAR Group','CoreFTP.com','CrossFTP.com','Codeorigin, LLC','syncplify.me','Netsarang Computer','Glub Tech','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Software license",
 									local : ['Proprietary','Apache','Freeware','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Stack-Its','Fetch Softworks','Eugene Roshal / FAR Group','CoreFTP.com','CrossFTP.com','Codeorigin, LLC','syncplify.me','Netsarang Computer','Glub Tech','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Client",
 									local : ['FAR Manager','FTP Script!','Xftp','CrossFTP','Fetch','rwBackup','Secure FTP','Sysax FTP Automation','CoreFTP','']
 								});
 						</script>

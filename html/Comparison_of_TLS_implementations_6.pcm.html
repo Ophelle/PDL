@@ -29,13 +29,7 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Trust on First Use (TOFU) :</label></br>
-								<input type="radio" name="FeatureTrust on First Use (TOFU)" value="oui">Yes <input type="radio" name="FeatureTrust on First Use (TOFU)" value = "non">No <input type="radio" name="FeatureTrust on First Use (TOFU)" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>OCSP :</label></br>
-								<input type="radio" name="FeatureOCSP" value="oui">Yes <input type="radio" name="FeatureOCSP" value = "non">No <input type="radio" name="FeatureOCSP" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Implementation : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>PKIX path validation :</label></br>
 								<input type="radio" name="FeaturePKIX path validation" value="oui">Yes <input type="radio" name="FeaturePKIX path validation" value = "non">No <input type="radio" name="FeaturePKIX path validation" value = "non">Partial </br>
@@ -45,19 +39,24 @@
 								<input type="radio" name="FeatureCRL" value="oui">Yes <input type="radio" name="FeatureCRL" value = "non">No <input type="radio" name="FeatureCRL" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>DANE (DNSSEC) :</label></br>
-								<input type="radio" name="FeatureDANE (DNSSEC)" value="oui">Yes <input type="radio" name="FeatureDANE (DNSSEC)" value = "non">No <input type="radio" name="FeatureDANE (DNSSEC)" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
 								<label>Application-defined :</label></br>
 								<input type="radio" name="FeatureApplication-defined" value="oui">Yes <input type="radio" name="FeatureApplication-defined" value = "non">No <input type="radio" name="FeatureApplication-defined" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Implementation : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>DANE (DNSSEC) :</label></br>
+								<input type="radio" name="FeatureDANE (DNSSEC)" value="oui">Yes <input type="radio" name="FeatureDANE (DNSSEC)" value = "non">No <input type="radio" name="FeatureDANE (DNSSEC)" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Trust on First Use (TOFU) :</label></br>
+								<input type="radio" name="FeatureTrust on First Use (TOFU)" value="oui">Yes <input type="radio" name="FeatureTrust on First Use (TOFU)" value = "non">No <input type="radio" name="FeatureTrust on First Use (TOFU)" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>OCSP :</label></br>
+								<input type="radio" name="FeatureOCSP" value="oui">Yes <input type="radio" name="FeatureOCSP" value = "non">No <input type="radio" name="FeatureOCSP" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Implementation",
 									local : ['JSSE','RSA BSAFE','SharkSSL','GnuTLS','Implementation','cryptlib','MatrixSSL','Secure Transport','mbed TLS','Botan','LibreSSL','wolfSSL','SChannel','OpenSSL','NSS','']
 								});
 						</script>

@@ -29,55 +29,43 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>DNSBL :</label></br>
-								<input type="radio" name="FeatureDNSBL" value="oui">Yes <input type="radio" name="FeatureDNSBL" value = "non">No <input type="radio" name="FeatureDNSBL" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>IRC daemon : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>CGI:IRC/WEBIRC host spoofing :</label></br>
 								<input type="radio" name="FeatureCGI:IRC/WEBIRC host spoofing" value="oui">Yes <input type="radio" name="FeatureCGI:IRC/WEBIRC host spoofing" value = "non">No <input type="radio" name="FeatureCGI:IRC/WEBIRC host spoofing" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Spamfilter
-regexp / glob :</label></br>
-											<input type="checkbox" name="Feature" >No </br>	
-											<input type="checkbox" name="Feature" >No</br>	
-											<input type="checkbox" name="Feature" >Yes</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								
 								</br>	
 								<label>Join throttling :</label></br>
 								<input type="radio" name="FeatureJoin throttling" value="oui">Yes <input type="radio" name="FeatureJoin throttling" value = "non">No <input type="radio" name="FeatureJoin throttling" value = "non">Partial </br>
-											<input type="text"/></br>								
+								
 								</br>	
 								<label>Variable per-channel banlist size :</label></br>
 								<input type="radio" name="FeatureVariable per-channel banlist size" value="oui">Yes <input type="radio" name="FeatureVariable per-channel banlist size" value = "non">No <input type="radio" name="FeatureVariable per-channel banlist size" value = "non">Partial </br>
-											<input type="text"/></br>								
+								
+								</br>	
+								<label>IRC daemon : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Channel censorIRCd config / chanop-controlled :</label></br>
+							
+								</br>	
+								<label>Channel flood controlsbasic / advanced :</label></br>
+							
+								</br>	
+								<label>Spamfilterregexp / glob :</label></br>
+							
+								</br>	
+								<label>DNSBL :</label></br>
+								<input type="radio" name="FeatureDNSBL" value="oui">Yes <input type="radio" name="FeatureDNSBL" value = "non">No <input type="radio" name="FeatureDNSBL" value = "non">Partial </br>
+								
 								</br>	
 								<label>Timed bans :</label></br>
 								<input type="radio" name="FeatureTimed bans" value="oui">Yes <input type="radio" name="FeatureTimed bans" value = "non">No <input type="radio" name="FeatureTimed bans" value = "non">Partial </br>
-											<input type="text"/></br>								
+								
 								</br>	
 								<label>Connect-flood detection :</label></br>
 								<input type="radio" name="FeatureConnect-flood detection" value="oui">Yes <input type="radio" name="FeatureConnect-flood detection" value = "non">No <input type="radio" name="FeatureConnect-flood detection" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Channel censor
-IRCd config / chanop-controlled :</label></br>
-											<input type="checkbox" name="Feature" >No </br>	
-											<input type="checkbox" name="Feature" >No</br>	
-											<input type="checkbox" name="Feature" >Partial </br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Channel flood controls
-basic / advanced :</label></br>
-											<input type="checkbox" name="Feature" >No </br>	
-											<input type="checkbox" name="Feature" >No</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"IRC daemon",
 									local : ['OfficeIRC Server','PleXusIRCd','WeIRCd','Nefarious IRCu','UnrealIRCd','Charybdis','ircd-ratbox','ShadowIRCd','ngIRCd','IRCD','IRCD-Hybrid','pureIRCd','ircu','miniircd','ConferenceRoom','RockIRCd','ithildin','solid-ircd','Bahamut','InspIRCd','RubIRCd','bIRCd','Synchronet IRCd','']
 								});
 						</script>

@@ -29,47 +29,41 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>OpenIndiana : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Nexenta OS : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Distribution : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Distribution : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>BeleniX : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>BeleniX : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>SchilliX : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>MilaX : </label></br> <input id="4" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Nexenta OS : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>SchilliX : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>OpenIndiana : </label></br> <input id="5" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['?','Yes','IPS','']
+								$("#0").typeahead({
+									name:"Nexenta OS",
+									local : ['?','APT','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Distribution",
 									local : ['Default package management tools','Package Format','Approximate number of packages','Default installer','Approximate number of source packages','Graphical installation procedure','']
 								});
+								$("#2").typeahead({
+									name:"BeleniX",
+									local : ['?','']
+								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"SchilliX",
 									local : ['?','']
 								});
 								$("#4").typeahead({
-									name:"list4",
+									name:"MilaX",
 									local : ['?','']
 								});
 								$("#5").typeahead({
-									name:"list5",
-									local : ['?','APT','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['?','']
+									name:"OpenIndiana",
+									local : ['?','Yes','IPS','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

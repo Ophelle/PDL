@@ -29,166 +29,136 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Has multiple binary compatibility standards (commonly Microsoft (for MSVC compiler) and Itanium/GNU (for virtually all other compilers)). :</label></br>
+											<input type="checkbox" name="Feature" >Has a single</br>	
+											<input type="checkbox" name="Feature" >OS- and compiler-independent binary compatibility standard.</br>	
+							
+								</br>	
+								<label>Runs as native executable machine code for the target instruction set(s). : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Allows procedural programming, functional programming, object-oriented programming, generic programming, and template metaprogramming. Favors a mix of paradigms. :</label></br>
+											<input type="checkbox" name="Feature" >Allows procedural programming</br>	
+											<input type="checkbox" name="Feature" >functional programming (since Java 8) and generic programming (since Java 5)</br>	
+											<input type="checkbox" name="Feature" >but strongly encourages the object-oriented programming paradigm. Includes support for the creation of scripting languages.</br>	
+							
+								</br>	
 								<label>Standardized minimum limits for all numerical types, but the actual sizes are implementation-defined. Standardized types are available through the standard library . :</label></br>
 											<input type="checkbox" name="Feature" >Standardized limits and sizes of all primitive types on all platforms.</br>	
-									
+							
 								</br>	
-								<label>Resource management can be done manually or by automatic lifetime-based resource management (RAII). :</label></br>
-											<input type="checkbox" name="Feature" >Resource management must be done manually</br>	
-											<input type="checkbox" name="Feature" >or automatically via finalizers</br>	
-											<input type="checkbox" name="Feature" >though this is generally discouraged. Has try-with-resources for automatic scope-based resource management (version 7 onwards).</br>	
-									
+								<label>Memory management can be done manually through new / delete, automatically by scope, or by smart pointers. Supports deterministic destruction of objects. Garbage collection ABI standardized in C++11, though compilers are not required to implement garbage collection. : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Compatible with C source code, except for a few corner case. :</label></br>
-											<input type="checkbox" name="Feature" >Provides the Java Native Interface and recently Java Native Access as a way to directly call C</br>	
-											<input type="checkbox" name="Feature" >C++ code.</br>	
-									
+								<label>Pointers, references, and pass-by-value are supported for all types (primitive or user-defined). :</label></br>
+											<input type="checkbox" name="Feature" >All types (primitive types and reference types) are always passed by value.</br>	
+							
 								</br>	
 								<label>Function pointers, function objects, lambdas (in C++11), and interfaces. :</label></br>
 											<input type="checkbox" name="Feature" >References to functions achieved via the reflection API. OOP idioms using Interfaces</br>	
 											<input type="checkbox" name="Feature" >such as Adapter</br>	
 											<input type="checkbox" name="Feature" >Observer</br>	
 											<input type="checkbox" name="Feature" >and Listener are generally preferred over direct references to methods.</br>	
-									
-								</br>	
-								<label>Runs as native executable machine code for the target instruction set(s). : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Provides object types and type names. Allows reflection through RTTI. :</label></br>
-											<input type="checkbox" name="Feature" >Is reflective</br>	
-											<input type="checkbox" name="Feature" >allowing metaprogramming and dynamic code generation at runtime.</br>	
-									
-								</br>	
-								<label>Memory management can be done manually through new / delete, automatically by scope, or by smart pointers. Supports deterministic destruction of objects. Garbage collection ABI standardized in C++11, though compilers are not required to implement garbage collection. : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Compile-time templates. Allows for Turing complete meta-programming. :</label></br>
-											<input type="checkbox" name="Feature" >Generics are used to achieve basic type-parametrization</br>	
-											<input type="checkbox" name="Feature" >but they do not translate from source code to byte code due to the use of type erasure by the compiler.</br>	
-									
-								</br>	
-								<label>Single and Multiple inheritance of classes, including virtual inheritance. :</label></br>
-											<input type="checkbox" name="Feature" >Single inheritance of classes. Supports multiple inheritance via the Interfaces construct</br>	
-											<input type="checkbox" name="Feature" >which is equivalent to a C++ class composed of abstract methods.</br>	
-									
-								</br>	
-								<label>Source code can be written to be platform-independent (can be compiled for Windows, BSD, Linux, Mac OS X, Solaris, etc., without modification) and written to take advantage of platform-specific features. Typically compiled into native machine code, must be re-compiled for each target platform. :</label></br>
-											<input type="checkbox" name="Feature" >Compiled into byte code for the JVM. Byte code is dependent on the Java platform</br>	
-											<input type="checkbox" name="Feature" >but is typically independent of operating system specific features.</br>	
-									
-								</br>	
-								<label>C++ : </label></br> <input id="11" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>The C++ Standard Library was designed to have a limited scope and functionality but includes language support, diagnostics, general utilities, strings, locales, containers, algorithms, iterators, numerics, input/output, random number generators, regular expression parsing, threading facilities, type traits (for static type introspection) and Standard C Library. The Boost library offers more functionality including network I/O.
-A rich amount of third-party libraries exist for GUI and other functionalities like: ACE, Crypto++, various XMPP Instant Messaging (IM) libraries, OpenLDAP, Qt, gtkmm. :</label></br>
-											<input type="checkbox" name="Feature" >The standard library has grown with each release. By version 1.6</br>	
-											<input type="checkbox" name="Feature" >the library included support for locales</br>	
-											<input type="checkbox" name="Feature" >logging</br>	
-											<input type="checkbox" name="Feature" >containers and iterators</br>	
-											<input type="checkbox" name="Feature" >algorithms</br>	
-											<input type="checkbox" name="Feature" >GUI programming (but not using the system GUI)</br>	
-											<input type="checkbox" name="Feature" >graphics</br>	
-											<input type="checkbox" name="Feature" >multi-threading</br>	
-											<input type="checkbox" name="Feature" >networking</br>	
-											<input type="checkbox" name="Feature" >platform security</br>	
-											<input type="checkbox" name="Feature" >introspection</br>	
-											<input type="checkbox" name="Feature" >dynamic class loading</br>	
-											<input type="checkbox" name="Feature" >blocking and non-blocking I</br>	
-											<input type="checkbox" name="Feature" >O. It provided interfaces or support classes for XML</br>	
-											<input type="checkbox" name="Feature" >XSLT</br>	
-											<input type="checkbox" name="Feature" >MIDI</br>	
-											<input type="checkbox" name="Feature" >database connectivity</br>	
-											<input type="checkbox" name="Feature" >naming services (e.g. LDAP)</br>	
-											<input type="checkbox" name="Feature" >cryptography</br>	
-											<input type="checkbox" name="Feature" >security services (e.g. Kerberos)</br>	
-											<input type="checkbox" name="Feature" >print services</br>	
-											<input type="checkbox" name="Feature" >and web services. SWT offers an abstraction for platform-specific GUIs.</br>	
-									
-								</br>	
-								<label>Optional automated bounds checking (e.g., the  method in  and  containers). : </label></br> <input id="13" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Supports classes, structs (POD-types), and unions, and can allocate them on the heap or the stack. : </label></br> <input id="14" type="text" name="Feature"></br>
-								
+							
 								</br>	
 								<label>No standard inline documentation mechanism. Third-party software (e.g. Doxygen) exists. :</label></br>
 											<input type="checkbox" name="Feature" >Extensive Javadoc documentation standard on all system classes and methods.</br>	
-									
-								</br>	
-								<label>const keyword for defining immutable variables and member functions that do not change the object. Const-ness is propagated as a means to enforce, at compile-time, correctness of the code with respect to mutability of objects (see const-correctness). :</label></br>
-											<input type="checkbox" name="Feature" >final provides a version of const</br>	
-											<input type="checkbox" name="Feature" >equivalent to type* const pointers for objects and const for primitive types. Immutability of object members achieved through read-only interfaces and object encapsulation.</br>	
-									
-								</br>	
-								<label>Supports native unsigned arithmetic. : </label></br> <input id="17" type="text" name="Feature"></br>
-								
+							
 								</br>	
 								<label>Write once, compile anywhere (WOCA). :</label></br>
 											<input type="checkbox" name="Feature" >Write once</br>	
 											<input type="checkbox" name="Feature" >run anywhere </br>	
 											<input type="checkbox" name="Feature" >everywhere (WORA </br>	
 											<input type="checkbox" name="Feature" >WORE).</br>	
-									
+							
 								</br>	
-								<label>Pointers, references, and pass-by-value are supported for all types (primitive or user-defined). :</label></br>
-											<input type="checkbox" name="Feature" >All types (primitive types and reference types) are always passed by value.</br>	
-									
+								<label>Compile-time templates. Allows for Turing complete meta-programming. :</label></br>
+											<input type="checkbox" name="Feature" >Generics are used to achieve basic type-parametrization</br>	
+											<input type="checkbox" name="Feature" >but they do not translate from source code to byte code due to the use of type erasure by the compiler.</br>	
+							
 								</br>	
-								<label>Allows explicitly overriding types as well as some implicit narrowing conversions (for compatibility with C). : </label></br> <input id="20" type="text" name="Feature"></br>
-								
+								<label>const keyword for defining immutable variables and member functions that do not change the object. Const-ness is propagated as a means to enforce, at compile-time, correctness of the code with respect to mutability of objects (see const-correctness). :</label></br>
+											<input type="checkbox" name="Feature" >final provides a version of const</br>	
+											<input type="checkbox" name="Feature" >equivalent to type* const pointers for objects and const for primitive types. Immutability of object members achieved through read-only interfaces and object encapsulation.</br>	
+							
 								</br>	
-								<label>Supports the goto statement. :</label></br>
-											<input type="checkbox" name="Feature" >Supports labels with loops and statement blocks.</br>	
-									
-								</br>	
-								<label>Allows procedural programming, functional programming, object-oriented programming, generic programming, and template metaprogramming. Favors a mix of paradigms. :</label></br>
-											<input type="checkbox" name="Feature" >Allows procedural programming</br>	
-											<input type="checkbox" name="Feature" >functional programming (since Java 8) and generic programming (since Java 5)</br>	
-											<input type="checkbox" name="Feature" >but strongly encourages the object-oriented programming paradigm. Includes support for the creation of scripting languages.</br>	
-									
-								</br>	
-								<label>Has multiple binary compatibility standards (commonly Microsoft (for MSVC compiler) and Itanium/GNU (for virtually all other compilers)). :</label></br>
-											<input type="checkbox" name="Feature" >Has a single</br>	
-											<input type="checkbox" name="Feature" >OS- and compiler-independent binary compatibility standard.</br>	
-									
+								<label>Resource management can be done manually or by automatic lifetime-based resource management (RAII). :</label></br>
+											<input type="checkbox" name="Feature" >Resource management must be done manually</br>	
+											<input type="checkbox" name="Feature" >or automatically via finalizers</br>	
+											<input type="checkbox" name="Feature" >though this is generally discouraged. Has try-with-resources for automatic scope-based resource management (version 7 onwards).</br>	
+							
 								</br>	
 								<label>Operator overloading for most operators. Preserving meaning (semantics) is highly recommended. :</label></br>
 											<input type="checkbox" name="Feature" >Operators are not overridable. The language overrides + and += for the String class.</br>	
-									
+							
+								</br>	
+								<label>Compatible with C source code, except for a few corner case. :</label></br>
+											<input type="checkbox" name="Feature" >Provides the Java Native Interface and recently Java Native Access as a way to directly call C</br>	
+											<input type="checkbox" name="Feature" >C++ code.</br>	
+							
+								</br>	
+								<label>Allows explicitly overriding types as well as some implicit narrowing conversions (for compatibility with C). : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Supports native unsigned arithmetic. : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Source code can be written to be platform-independent (can be compiled for Windows, BSD, Linux, Mac OS X, Solaris, etc., without modification) and written to take advantage of platform-specific features. Typically compiled into native machine code, must be re-compiled for each target platform. :</label></br>
+											<input type="checkbox" name="Feature" >Compiled into byte code for the JVM. Byte code is dependent on the Java platform</br>	
+											<input type="checkbox" name="Feature" >but is typically independent of operating system specific features.</br>	
+							
+								</br>	
+								<label>C++ : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Provides object types and type names. Allows reflection through RTTI. :</label></br>
+											<input type="checkbox" name="Feature" >Is reflective</br>	
+											<input type="checkbox" name="Feature" >allowing metaprogramming and dynamic code generation at runtime.</br>	
+							
+								</br>	
+								<label>Supports classes, structs (POD-types), and unions, and can allocate them on the heap or the stack. : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Optional automated bounds checking (e.g., the  method in  and  containers). : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>The C++ Standard Library was designed to have a limited scope and functionality but includes language support, diagnostics, general utilities, strings, locales, containers, algorithms, iterators, numerics, input/output, random number generators, regular expression parsing, threading facilities, type traits (for static type introspection) and Standard C Library. The Boost library offers more functionality including network I/O.A rich amount of third-party libraries exist for GUI and other functionalities like: ACE, Crypto++, various XMPP Instant Messaging (IM) libraries, OpenLDAP, Qt, gtkmm. :</label></br>
+							
+								</br>	
+								<label>Single and Multiple inheritance of classes, including virtual inheritance. :</label></br>
+											<input type="checkbox" name="Feature" >Single inheritance of classes. Supports multiple inheritance via the Interfaces construct</br>	
+											<input type="checkbox" name="Feature" >which is equivalent to a C++ class composed of abstract methods.</br>	
+							
 								</br>	
 								<label>Extension of C with object-oriented programming, still able to run C code. :</label></br>
 											<input type="checkbox" name="Feature" >Strongly influenced by C++</br>	
 											<input type="checkbox" name="Feature" >C syntax.</br>	
-									
+							
+								</br>	
+								<label>Supports the goto statement. :</label></br>
+											<input type="checkbox" name="Feature" >Supports labels with loops and statement blocks.</br>	
+							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Runs as native executable machine code for the target instruction set(s).",
 									local : ['Runs in a virtual machine.','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Memory management can be done manually through new / delete, automatically by scope, or by smart pointers. Supports deterministic destruction of objects. Garbage collection ABI standardized in C++11, though compilers are not required to implement garbage collection.",
 									local : ['Automatic garbage collection. Supports a non-deterministic finalize() method whose use is not recommended.','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#2").typeahead({
+									name:"C++",
 									local : ['Java','']
 								});
+								$("#3").typeahead({
+									name:"Allows explicitly overriding types as well as some implicit narrowing conversions (for compatibility with C).",
+									local : ['Rigid type safety except for widening conversions.','']
+								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['All operations are required to be Bound-checked by all compliant distributions of Java. HotSpot can remove bounds checking.','']
+									name:"Supports native unsigned arithmetic.",
+									local : ['No native support for unsigned arithmetic.','']
 								});
 								$("#5").typeahead({
-									name:"list5",
+									name:"Supports classes, structs (POD-types), and unions, and can allocate them on the heap or the stack.",
 									local : ['Classes are allocated on the heap. Java SE 6 optimizes with escape analysis to allocate some objects on the stack.','']
 								});
 								$("#6").typeahead({
-									name:"list6",
-									local : ['No native support for unsigned arithmetic.','']
-								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['Rigid type safety except for widening conversions.','']
+									name:"Optional automated bounds checking (e.g., the  method in  and  containers).",
+									local : ['All operations are required to be Bound-checked by all compliant distributions of Java. HotSpot can remove bounds checking.','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

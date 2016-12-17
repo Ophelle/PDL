@@ -29,61 +29,54 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Status : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Based on : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Latest release : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Current version : </label></br> <input id="3" type="number" name="Feature"></br>
+								<label>First release : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Name : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Current version : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
+								</br>	
+								<label>Status : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Developer : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>Source available :</label></br>
 								<input type="radio" name="FeatureSource available" value="oui">Yes <input type="radio" name="FeatureSource available" value = "non">No <input type="radio" name="FeatureSource available" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Based on : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>License : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>First release : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Developer : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Name : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label>Latest release : </label></br> <input id="6" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Active','Inactive','?','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['2010-10-08','','2013-08-06','2015-03-18','2015-04-15','2014-02-25','2014-01-16','2011-07-24','2015-02-28','2013-06-26','2014-01-31','2015-01-14','2013-02-28','2015-05-01','2012-11-12','2015-05-02','2014-08-29','2015-01-28','2014-03-06','2013-07-29','2015-02-15','2013-07-16','2015-02-20','2013-06-22','2013-07','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"Based on",
 									local : ['','Own implementation in C','OpenSSH 2.3','OpenSSH','OpenSSH, Telnet, FTP, vncviewer, rdesktop, cu, remote-tty, mosh, cadaver','ossh','PuTTY','F-Secure SSH','TeraTerm 2.3 (1994–1998)','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"License",
 									local : ['Proprietary','BSD','MIT','GPL','Apache','CDDL','Microsoft MS-CL','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#2").typeahead({
+									name:"First release",
 									local : ['1995-07-01','2002-05','2006','1999-01-22','','2015-05','1998-06','2003-04','1995-07','1996','2000','2010-01-01','2002-07','1998','1999-12-01','2008','1998-11-13','2004','2002','1998?','2007-11','2011-11','2003-04-06','2012-11-28','2001-06-22','2001','1999-05-23','']
 								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#3").typeahead({
+									name:"Name",
+									local : ['TtyEmulator','SecureCRT','TN3270 Plus','SmartFTP','Salt','SSH Tectia Client/ConnectSecure','Reflection for Secure IT','WinSCP','Bitvise SSH Client/Tunnelier','lsh','Tera Term','MobaXterm','ZOC Terminal','Token2Shell','DameWare','Admin Hands','Dropbear','OpenSSH','AbsoluteTelnet','FileZilla','MindTerm','SunSSH','PuTTY','Private Shell','ProxyCap','Terminals CodePlex','ConnectBot','eSSH Client','PACManager','Xshell','Penguinet','']
+								});
+								$("#4").typeahead({
+									name:"Status",
+									local : ['Active','Inactive','?','']
+								});
+								$("#5").typeahead({
+									name:"Developer",
 									local : ['Matt Johnston','Bitvise','Choung Networks','Celestial Software (Brian Pence)','Simon Tatham','SSH Communications Security (former Tectia)','FCS Software','David Torrejón Vaquerizas','Imposant','TeraTerm Project','Martin Prikryl','EmTec, Innovative Software','NetSarang','Open Solaris','The OpenBSD project','Terminals CodePlex Project','Maarten L. Hekkelman','SmartSoft Ltd','Attachmate','Ecode Software','Kenny Root / Jeffrey Sharkey','Cryptzone','Tim Kosse','Proxy Labs','Admin Hands','SDI USA, Inc.','SolarWinds','Niels Möller','VanDyke Software','Mobatek','siliconcircus','']
 								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['TtyEmulator','SecureCRT','TN3270 Plus','SmartFTP','Salt','SSH Tectia Client/ConnectSecure','Reflection for Secure IT','WinSCP','Bitvise SSH Client/Tunnelier','lsh','Tera Term','MobaXterm','ZOC Terminal','Token2Shell','DameWare','Admin Hands','Dropbear','OpenSSH','AbsoluteTelnet','FileZilla','MindTerm','SunSSH','PuTTY','Private Shell','ProxyCap','Terminals CodePlex','ConnectBot','eSSH Client','PACManager','Xshell','Penguinet','']
+								$("#6").typeahead({
+									name:"Latest release",
+									local : ['2010-10-08','','2013-08-06','2015-03-18','2015-04-15','2014-02-25','2014-01-16','2011-07-24','2015-02-28','2013-06-26','2014-01-31','2015-01-14','2013-02-28','2015-05-01','2012-11-12','2015-05-02','2014-08-29','2015-01-28','2014-03-06','2013-07-29','2015-02-15','2013-07-16','2015-02-20','2013-06-22','2013-07','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

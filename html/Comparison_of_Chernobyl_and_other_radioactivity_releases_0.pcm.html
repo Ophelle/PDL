@@ -29,19 +29,17 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Ratio between the release due to the bomb and the Chernobyl accident : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Ratio between the release due to the bomb and the Chernobyl accident : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Isotope : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Isotope : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Xe','I','Sr','Cs','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Ratio between the release due to the bomb and the Chernobyl accident",
 									local : ['1:25','1:890','1:87','1:31','']
+								});
+								$("#1").typeahead({
+									name:"Isotope",
+									local : ['Xe','I','Sr','Cs','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -33,6 +33,16 @@
 								<input type="radio" name="FeatureRSA" value="oui">Yes <input type="radio" name="FeatureRSA" value = "non">No <input type="radio" name="FeatureRSA" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
+								<label>ECDH-RSA :</label></br>
+								<input type="radio" name="FeatureECDH-RSA" value="oui">Yes <input type="radio" name="FeatureECDH-RSA" value = "non">No <input type="radio" name="FeatureECDH-RSA" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Implementation : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>DHE-RSA (forward secrecy) :</label></br>
+								<input type="radio" name="FeatureDHE-RSA (forward secrecy)" value="oui">Yes <input type="radio" name="FeatureDHE-RSA (forward secrecy)" value = "non">No <input type="radio" name="FeatureDHE-RSA (forward secrecy)" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
 								<label>ECDH-ECDSA :</label></br>
 								<input type="radio" name="FeatureECDH-ECDSA" value="oui">Yes <input type="radio" name="FeatureECDH-ECDSA" value = "non">No <input type="radio" name="FeatureECDH-ECDSA" value = "non">Partial </br>
 											<input type="text"/></br>								
@@ -45,31 +55,20 @@
 								<input type="radio" name="FeatureECDHE-ECDSA (forward secrecy)" value="oui">Yes <input type="radio" name="FeatureECDHE-ECDSA (forward secrecy)" value = "non">No <input type="radio" name="FeatureECDHE-ECDSA (forward secrecy)" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>DHE-RSA (forward secrecy) :</label></br>
-								<input type="radio" name="FeatureDHE-RSA (forward secrecy)" value="oui">Yes <input type="radio" name="FeatureDHE-RSA (forward secrecy)" value = "non">No <input type="radio" name="FeatureDHE-RSA (forward secrecy)" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
 								<label>ECDHE-RSA (forward secrecy) :</label></br>
 								<input type="radio" name="FeatureECDHE-RSA (forward secrecy)" value="oui">Yes <input type="radio" name="FeatureECDHE-RSA (forward secrecy)" value = "non">No <input type="radio" name="FeatureECDHE-RSA (forward secrecy)" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>ECDH-RSA :</label></br>
-								<input type="radio" name="FeatureECDH-RSA" value="oui">Yes <input type="radio" name="FeatureECDH-RSA" value = "non">No <input type="radio" name="FeatureECDH-RSA" value = "non">Partial </br>
+								<label>GOST R 34.10-94 / 34.10-2001 :</label></br>
+								<input type="radio" name="FeatureGOST R 34.10-94 / 34.10-2001" value="oui">Yes <input type="radio" name="FeatureGOST R 34.10-94 / 34.10-2001" value = "non">No <input type="radio" name="FeatureGOST R 34.10-94 / 34.10-2001" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
 								<label>DHE-DSS (forward secrecy) :</label></br>
 								<input type="radio" name="FeatureDHE-DSS (forward secrecy)" value="oui">Yes <input type="radio" name="FeatureDHE-DSS (forward secrecy)" value = "non">No <input type="radio" name="FeatureDHE-DSS (forward secrecy)" value = "non">Partial </br>
 											<input type="text"/></br>								
-								</br>	
-								<label>Implementation : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>GOST R 34.10-94 / 34.10-2001 :</label></br>
-								<input type="radio" name="FeatureGOST R 34.10-94 / 34.10-2001" value="oui">Yes <input type="radio" name="FeatureGOST R 34.10-94 / 34.10-2001" value = "non">No <input type="radio" name="FeatureGOST R 34.10-94 / 34.10-2001" value = "non">Partial </br>
-											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Implementation",
 									local : ['SChannel 10 Technical Preview','MatrixSSL','SChannel Vista/2008, 2008R2, 2012','cryptlib','LibreSSL','SChannel 7, 8, 8.1/2012R2','GnuTLS','RSA BSAFE','Implementation','Botan','JSSE','Secure Transport','mbed TLS','NSS','SharkSSL','wolfSSL','OpenSSL','SChannel XP/2003','']
 								});
 						</script>

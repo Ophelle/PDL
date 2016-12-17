@@ -34,16 +34,9 @@
 											<input type="checkbox" name="Feature" >664</br>	
 											<input type="checkbox" name="Feature" >736</br>	
 											<input type="checkbox" name="Feature" >728</br>	
-									
+							
 								</br>	
-								<label>Latest edition : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Year : </label></br> <input id="3" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>Pronunciation guide : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Publisher : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Entries (approx.) :</label></br>
 											<input type="checkbox" name="Feature" >165</br>	
@@ -51,38 +44,40 @@
 											<input type="checkbox" name="Feature" >163</br>	
 											<input type="checkbox" name="Feature" >320</br>	
 											<input type="checkbox" name="Feature" >000+</br>	
-									
+							
 								</br>	
-								<label>Title : </label></br> <input id="6" type="text" name="Feature"></br>
+								<label>First published : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Publisher : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Latest edition : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Main accent : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Title : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>First published : </label></br> <input id="9" type="number" name="Feature"></br>
+								<label>Pronunciation guide : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Main accent : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Year : </label></br> <input type="number" name="Feature"></br>
 								
 						<script>
+								$("#0").typeahead({
+									name:"Publisher",
+									local : ['Microsoft','Merriam-Webster','Houghton Mifflin Harcourt','Webster's New World (John Wiley & Sons)','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Latest edition",
 									local : ['11th (ISBN 0-8777-9809-5)','4th (ISBN 0-7645-7125-7)','1st (ISBN-13: 978-0312280871)','4th (ISBN 0-547-24766-4)','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['','Diacritical','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Title",
 									local : ['Microsoft Encarta College Dictionary','American Heritage College Dictionary','Merriam-Webster's Collegiate Dictionary','Webster's New World College Dictionary','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['Microsoft','Merriam-Webster','Houghton Mifflin Harcourt','Webster's New World (John Wiley & Sons)','']
+								$("#3").typeahead({
+									name:"Pronunciation guide",
+									local : ['','Diacritical','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#4").typeahead({
+									name:"Main accent",
 									local : ['American','']
 								});
 						</script>

@@ -29,27 +29,22 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Format : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Languages : </label></br> <input id="1" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Format : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>If not found : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>If not found : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['string.lastIndexOf(substring«,startpos«, charcount»»)','std.string.rfind(string, substring)','Str.search_backward (Str.regexp_string substring) string (Str.length string - 1)','Ada.Strings.Unbounded.Index(Source => string, Pattern => substring, 
- Going => Ada.Strings.Backward)','string.rfind(substring«,startpos»)','instrrev(«startpos,» string,substring)','rindex(string,substring«,startpos»)','strrpos(string,substring«,startpos»)','string.rfind(substring«,startpos«, endpos»»)','string.lastIndexOf(substring«,startpos»)','(search substring string :from-end t)','InStrRev(«startpos,» string,substring)','string.rindex(substring«,startpos»)','string.match(string, '.*()'..substring) 
- string:match('.*()'..substring)','string.LastIndexOf(substring«,startpos«, charcount»»)','[string rangeOfString:substring options:NSBackwardsSearch].location','strings.LastIndex(string, substring)','rpos(string, substring«,startpos»)','']
+								$("#0").typeahead({
+									name:"Format",
+									local : ['string.lastIndexOf(substring«,startpos«, charcount»»)','std.string.rfind(string, substring)','Str.search_backward (Str.regexp_string substring) string (Str.length string - 1)','Ada.Strings.Unbounded.Index(Source => string, Pattern => substring,  Going => Ada.Strings.Backward)','string.rfind(substring«,startpos»)','instrrev(«startpos,» string,substring)','rindex(string,substring«,startpos»)','strrpos(string,substring«,startpos»)','string.rfind(substring«,startpos«, endpos»»)','string.lastIndexOf(substring«,startpos»)','(search substring string :from-end t)','InStrRev(«startpos,» string,substring)','string.rindex(substring«,startpos»)','string.match(string, '.*()'..substring)  string:match('.*()'..substring)','string.LastIndexOf(substring«,startpos«, charcount»»)','[string rangeOfString:substring options:NSBackwardsSearch].location','strings.LastIndex(string, substring)','rpos(string, substring«,startpos»)','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Languages",
 									local : ['Perl','Go','Java, JavaScript','D','Python','Ruby','Objective-C (NSString * only)','C++ (STL)','FreeBASIC','PHP','Ada','OCaml','Common Lisp','Seed7','Lua','VB','VB .NET, C#, Windows PowerShell, F#','Cobra','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#2").typeahead({
+									name:"If not found",
 									local : ['returns nil','returns std::string::npos','returns -1','returns NIL','returns 0','returns NSNotFound','returns FALSE','raises Not_found','']
 								});
 						</script>

@@ -29,35 +29,32 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Notes : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Memory - RAM type : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Memory - RAM type : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Memory clock (MHz) : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Memory - Bus width (bit) : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>API compliance (version) - DirectX :</label></br>
-								<input type="radio" name="FeatureAPI compliance (version) - DirectX" value="oui">Yes <input type="radio" name="FeatureAPI compliance (version) - DirectX" value = "non">No <input type="radio" name="FeatureAPI compliance (version) - DirectX" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Memory - Bus width (bit) : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Memory clock (MHz) : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Bus interface : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>Core config : </label></br> <input id="6" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Core clock (MHz) : </label></br> <input id="7" type="number" name="Feature"></br>
+								<label>Fillrate - Vertices/s : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Fillrate - MOperations/s :</label></br>
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Fillrate - MTextels/s : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Memory (MB) : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Fillrate - MPixels/s : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 								</br>	
-								<label>API compliance (version) - other : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fillrate - MTextels/s : </label></br> <input id="10" type="number" name="Feature"></br>
+								<label>Processing PowerGFLOPs : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
 								<label>Launch :</label></br>
@@ -71,86 +68,55 @@
 											<input type="checkbox" name="Feature" >2013</br>	
 											<input type="checkbox" name="Feature" >November 18</br>	
 											<input type="checkbox" name="Feature" >2012</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Fillrate - MPixels/s : </label></br> <input id="12" type="number" name="Feature"></br>
+								<label>Model : </label></br> <input id="8" type="text" name="Feature"></br>
+								</br>	
+								<label>Code name : </label></br> <input id="9" type="text" name="Feature"></br>
+								</br>	
+								<label>Core clock (MHz) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Processing Power
-GFLOPs : </label></br> <input id="13" type="number" name="Feature"></br>
+								<label>Memory (MB) : </label></br> <input id="10" type="text" name="Feature"></br>
+								</br>	
+								<label>Fab (nm) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Fillrate - Vertices/s : </label></br> <input id="14" type="text" name="Feature"></br>
-								
+								<label>API compliance (version) - other : </label></br> <input id="11" type="text" name="Feature"></br>
 								</br>	
-								<label>Code name : </label></br> <input id="15" type="text" name="Feature"></br>
-								
+								<label>API compliance (version) - DirectX :</label></br>
+								<input type="radio" name="FeatureAPI compliance (version) - DirectX" value="oui">Yes <input type="radio" name="FeatureAPI compliance (version) - DirectX" value = "non">No <input type="radio" name="FeatureAPI compliance (version) - DirectX" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
-								<label>API compliance (version) - OpenGL : </label></br> <input id="16" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fillrate - MOperations/s :</label></br>
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Model : </label></br> <input id="18" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fab (nm) : </label></br> <input id="19" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="20" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Notes : </label></br> <input id="21" type="text" name="Feature"></br>
-								
+								<label>API compliance (version) - OpenGL : </label></br> <input id="12" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Notes",
+									local : ['Fixed-function T&L, TEV "pixel shader"','Surface tessellation','','Notes','Tiled resources','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['Integrated','Bus interface','']
+									name:"Memory clock (MHz)",
+									local : ['1375 (5500 effective)','Memory clock (MHz)','700500','32481162','486Unknown243','800 (1600 effective)550','1066 (2133 effective)1706 (3412 effective)','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['1375 (5500 effective)','Memory clock (MHz)','700
-500','324
-81
-162','486
-Unknown
-243','800 (1600 effective)
-550','1066 (2133 effective)
-1706 (3412 effective)','']
+									name:"Bus interface",
+									local : ['Integrated','Bus interface','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Core config",
 									local : ['48:16:8','1152:72:32','Core config','4:1:4:4','768:48:16','320:16:8','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['512 (shared)
-10 eDRAM','24 shared
-16 shared
-3 eDRAM','Memory (MB)','2048 (shared)
-32 eDRAM','8192 (shared)','8192 (shared)
-32 eSRAM','24 shared
-64 shared
-3 eDRAM','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['Code name','Liverpool','Durango','','Xenon
-Zephyr
-Opus
-Falcon
-Jasper
-Vejle
-Corona','']
-								});
-								$("#6").typeahead({
-									name:"list6",
+									name:"Model",
 									local : ['Model','Hollywood (Wii)','Flipper (GameCube)','Xenos (Xbox 360)','Latte (Wii U)','Durango (Xbox One)','Liverpool (PlayStation 4)','']
 								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['Fixed-function T&L, TEV "pixel shader"','Surface tessellation','','Notes','Tiled resources','']
+								$("#5").typeahead({
+									name:"Code name",
+									local : ['Code name','Liverpool','Durango','','XenonZephyrOpusFalconJasperVejleCorona','']
+								});
+								$("#6").typeahead({
+									name:"Memory (MB)",
+									local : ['512 (shared)10 eDRAM','24 shared16 shared3 eDRAM','Memory (MB)','2048 (shared)32 eDRAM','8192 (shared)','8192 (shared)32 eSRAM','24 shared64 shared3 eDRAM','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

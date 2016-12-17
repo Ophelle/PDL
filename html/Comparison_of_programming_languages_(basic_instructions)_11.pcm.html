@@ -29,46 +29,35 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>basic/void function : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>basic/void function : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Products : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>value-returning function : </label></br> <input id="2" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Products : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>required main function : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>required main function : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>calling a function : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>calling a function : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"basic/void function",
+									local : ['','N/A','parameters  ($1, $2, $3, ...)  (all parameters)  (the number of parameters)  (this function name)','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Products",
 									local : ['P22','P10','P28','P8','P36','P14','P6','P12','P39','P19','P20','P25','P30','P11','P33','P15','P26','P37','P21','P31','P17','P18','P5','P2','P16','P9','P34','P35','P24','P27','P13','P4','P3','P1','P23','P32','P29','P38','P7','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['N/A','','']
+									name:"value-returning function",
+									local : ['','parameters  ($1, $2, $3, ...)  (all parameters)  (the number of parameters)  (this function name)','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['','']
+									name:"required main function",
+									local : ['N/A','','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['','N/A','parameters  ($1, $2, $3, ...)
-  (all parameters)
-  (the number of parameters)
-  (this function name)','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['','parameters  ($1, $2, $3, ...)
-  (all parameters)
-  (the number of parameters)
-  (this function name)','']
+									name:"calling a function",
+									local : ['','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

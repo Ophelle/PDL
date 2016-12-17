@@ -29,39 +29,26 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Handoff : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Common Interference : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Common Interference : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Frequency utilization/Call density : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Encoding : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Handset interoperability : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Roaming : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Generation : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Feature : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Encoding : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Year of First Use : </label></br> <input id="6" type="number" name="Feature"></br>
+								<label>Year of First Use : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Generation : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Roaming : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>Handset interoperability : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Technology : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
-								<label>Technology : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label>Handoff : </label></br> <input id="7" type="text" name="Feature"></br>
 								</br>	
-								<label>Frequency utilization/Call density : </label></br> <input id="10" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Voice and Data at the same time :</label></br>
-								<input type="radio" name="FeatureVoice and Data at the same time" value="oui">Yes <input type="radio" name="FeatureVoice and Data at the same time" value = "non">No <input type="radio" name="FeatureVoice and Data at the same time" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Feature : </label></br> <input id="8" type="text" name="Feature"></br>
 								</br>	
 								<label>Signal quality/coverage area :</label></br>
 											<input type="checkbox" name="Feature" >Good coverage indoors on 850</br>	
@@ -70,42 +57,46 @@
 											<input type="checkbox" name="Feature" >900 MHz.</br>	
 											<input type="checkbox" name="Feature" >Unlimited cell size</br>	
 											<input type="checkbox" name="Feature" >low transmitter power permits large cells</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Voice and Data at the same time :</label></br>
+								<input type="radio" name="FeatureVoice and Data at the same time" value="oui">Yes <input type="radio" name="FeatureVoice and Data at the same time" value = "non">No <input type="radio" name="FeatureVoice and Data at the same time" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
+								$("#0").typeahead({
+									name:"Common Interference",
+									local : ['None','Some electronics, e.g. amplifiers','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['2G','3G','1G','4G','']
+									name:"Frequency utilization/Call density",
+									local : ['Lower than CDMA-2000?','1.228  MHz = 3Mbit/s','5 MHz = 2 Mbit/s. 42Mbit/s for HSPA+. Each call uses 1.8-12 kbit/s depending on chosen quality and audio complexity.','Very low density','','0.2 MHz = 8 timeslots. Each timeslot can hold up to 2 calls (4 calls with VAMOS) through interleaving.','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Handset interoperability",
 									local : ['None','RUIM (rarely used)','SIM card','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['Soft','Hard','']
+									name:"Generation",
+									local : ['2G','3G','1G','4G','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['W-CDMA','CDMA','OFDMA','TDMA and FDMA','FDMA','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['Lower than CDMA-2000?','1.228  MHz = 3Mbit/s','5 MHz = 2 Mbit/s. 42Mbit/s for HSPA+. Each call uses 1.8-12 kbit/s depending on chosen quality and audio complexity.','Very low density','','0.2 MHz = 8 timeslots. Each timeslot can hold up to 2 calls (4 calls with VAMOS) through interleaving.','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['None','Some electronics, e.g. amplifiers','']
-								});
-								$("#7").typeahead({
-									name:"list7",
+									name:"Encoding",
 									local : ['Digital','Analog','']
 								});
-								$("#8").typeahead({
-									name:"list8",
+								$("#5").typeahead({
+									name:"Roaming",
 									local : ['Nordics and several other European countries','Worldwide, all countries except Japan and South Korea','Limited','Worldwide','']
 								});
-								$("#9").typeahead({
-									name:"list9",
+								$("#6").typeahead({
+									name:"Technology",
+									local : ['W-CDMA','CDMA','OFDMA','TDMA and FDMA','FDMA','']
+								});
+								$("#7").typeahead({
+									name:"Handoff",
+									local : ['Soft','Hard','']
+								});
+								$("#8").typeahead({
+									name:"Feature",
 									local : ['IS-95 (CDMA one)','UMTS (3GSM)','NMT','LTE','IS-2000 (CDMA 2000)','GSM','']
 								});
 						</script>

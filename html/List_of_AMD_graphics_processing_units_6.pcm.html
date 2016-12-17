@@ -29,69 +29,63 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Memory (MB) : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Memory clock (MHz) : </label></br> <input id="2" type="number" name="Feature"></br>
+								<label>Launch : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Config core : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Memory - Bus width (bit) : </label></br> <input id="4" type="number" name="Feature"></br>
+								<label>Memory clock (MHz) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Fillrate - MTexels/s : </label></br> <input id="5" type="number" name="Feature"></br>
+								<label>Config core : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Bus interface : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Code name : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Model : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Fillrate - MPixels/s : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Core clock (MHz) : </label></br> <input id="6" type="number" name="Feature"></br>
+								<label>Fillrate - MOperations/s : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Memory (MB) : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Launch : </label></br> <input id="8" type="number" name="Feature"></br>
+								<label>Fillrate - MVertices/s : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Fillrate - MPixels/s : </label></br> <input id="9" type="number" name="Feature"></br>
+								<label>Fillrate - MTexels/s : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Code name : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+								<label>Memory - Bus type : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>Fillrate - MOperations/s : </label></br> <input id="11" type="number" name="Feature"></br>
+								<label>Memory - Bus width (bit) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Model : </label></br> <input id="12" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Memory - Bus type : </label></br> <input id="13" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fillrate - MVertices/s : </label></br> <input id="14" type="number" name="Feature"></br>
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="15" type="number" name="Feature"></br>
+								<label>Core clock (MHz) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['FSB','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['4:1:2:2','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"Memory (MB)",
 									local : ['16 - 128','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Config core",
+									local : ['4:1:2:2','']
+								});
+								$("#2").typeahead({
+									name:"Bus interface",
+									local : ['FSB','']
+								});
+								$("#3").typeahead({
+									name:"Code name",
 									local : ['RS300 (superman)','RS350','RC350','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#4").typeahead({
+									name:"Model",
 									local : ['Radeon 9100 Pro','Radeon 9000','Radeon 9100','']
 								});
 						</script>

@@ -29,32 +29,27 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Downcasting - Runtime check : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Is instance of (includes subtypes) : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Is instance of (includes subtypes) : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Upcasting : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Upcasting : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Downcasting - No check : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Downcasting - No check : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Downcasting - Runtime check : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Get object type : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Get object type : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Is instance of (includes subtypes)",
 									local : ['','x AS type','=','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['','N/A','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Upcasting",
 									local : ['N/A','','?=','']
+								});
+								$("#2").typeahead({
+									name:"Get object type",
+									local : ['','N/A','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

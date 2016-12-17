@@ -29,6 +29,11 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Initial public release : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Products : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Release date :</label></br>
 											<input type="checkbox" name="Feature" >2010</br>	
 											<input type="checkbox" name="Feature" >December 17</br>	
@@ -62,19 +67,16 @@
 											<input type="checkbox" name="Feature" >May 6</br>	
 											<input type="checkbox" name="Feature" >October 17</br>	
 											<input type="checkbox" name="Feature" >November 6</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Initial public release : </label></br> <input id="2" type="number" name="Feature"></br>
+								<label>Predecessor : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Preferred license : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Current stable version : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Products : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Predecessor : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Current stable version : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Cost, availability : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Target system type :</label></br>
 											<input type="checkbox" name="Feature" >Server</br>	
@@ -103,48 +105,34 @@
 											<input type="checkbox" name="Feature" >enterprise</br>	
 											<input type="checkbox" name="Feature" >military</br>	
 											<input type="checkbox" name="Feature" >education</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Preferred license : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Creator : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Cost, availability : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Creator : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Name : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+								<label>Name : </label></br> <input id="5" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Products",
 									local : ['P47','P22','P35','P14','P25','P28','P42','P33','P17','P31','P43','P45','P21','P12','P41','P13','P3','P11','P4','P20','P5','P15','P44','P30','P16','P18','P8','P26','P24','P9','P50','P6','P19','P23','P27','P34','P53','P1','P51','P48','P40','P29','P2','P37','P39','P32','P52','P49','P7','P10','P36','P54','P46','P38','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Predecessor",
 									local : ['OS/390','RISC OS 4','Unix, POSIX','VM','None','RISC OS 5','UNIX System V','EPOC32','','S-Net','BSD 4.3','OpenSolaris','VSE/ESA','OS/2, Windows 9x and MS-DOS','BeOS R5','Unix, Windows 3.x','NetBSD 1.0','NeXTSTEP, BSD','AmigaOS classic','UNIX System V Release 3','SunOS','VRTX','MPE','FreeBSD','Predecessor','Plan 9','Unix','Linux kernel','RSX-11M','RISC OS 6','Windows NT','OS/2','Minix2','386BSD','MS-DOS, Windows NT 3.5','OS/400','Arthur, also the BBC Master OS','OS X','STOP 5, XTS-300','Symbian','Linux','Guardian','Exec 8, OS 1100','OS/2, MS-DOS and Windows 3.x','TRIPOS (as the disk operating component of AmigaOS)','']
 								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['6.3','Fourth Edition','3.0.4','6.20','10.10','0.3.17','CP OS 16 (Exec 49.2)','7.5','6.1.5','H06.24/J06.13','7.2','R1/Alpha4','7','3.9','8.3','1.21c','4.0.3','10.1','6.5.30','4.0','6.6.0','MPE-V','10.10.3 Yosemite','ER5','9.5','2.1','4.1 Final Edition','8.4-1H1','Windows Server 2012 R2 (NT 6.3.9600)','6.5 SP8','CP OS 17.0','3.3.0','4.52','3.71','1.5','5.1 Lollipop','Current stable version','7.1 TL3','11.2','5.20','11.31, 11i v3 Update 13','9.2.2','6.5','','3.3','Windows Me (Win 4.90.3000)','4.39','2.1 (V2R1)','5.7','5.2','Windows 8.1 (NT 6.3.9600)','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#2").typeahead({
+									name:"Preferred license",
 									local : ['Proprietary','MIT','GNU GPL, GNU LGPL','BSD','Apache 2.0, GNU GPLv2','LPL','ISC','Proprietary, open source clone available under AROS Public License','Preferred license','CDDL','EPL','Proprietary; Shared Source','Proprietary higher level API layers; open source core system (ARM versions): APSL, GNU GPL, others','MIT, GNU GPL, GNU LGPL, LPL','Proprietary higher level API layers; open source core system (Intel-PowerPC versions): APSL, GNU GPL, others','Shared Source','GNU GPLv2','']
 								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['Monthly license fee','Discontinued; Bundled with hardware up to version 3.0 (Amiga International hardware came with 3.1); versions 2.1, 3.0, 3.1, 3.5, 3.9 also available as separate packages','Windows 8.1 US$119.99, Windows 8.1 Pro $199.99','US$469 Web Server; other editions dependent on number of CALs purchased','Free','Discontinued; Bundled with hardware','Monthly license fee, about US$130 and up','4.0 bundled with hardware; 4.0 for classic and 4.1 available as standalone package at €29','Bundled with hardware','US$60k+; bundled with XTS hardware and OEM licensed','Bundled with hardware, then sold separately at £70 (US$127)','Discontinued; Was bundled with HP-3000 PA-RISC hardware','Discontinued; Was bundled with hardware, then sold separately','Discontinued','Paid','Discontinued; Commercial','Home-student edition (max. five per site) US$149.00
-business edition $259.00','Commercial; (but free/no-cost perpetual license when used "for the purpose of developing, testing, prototyping and demonstrating your applications")','Free for non-commercial use (recent releases); formerly bundled with hardware','Bundled with hardware; No-cost update via Mac App Store for users of OS X 10.6 or later, assuming hardware requirements are met','Superseded by Novell Open Enterprise Server; Was US$184 (one-user)','Discontinued (see eComStation successor); Was US$300','Discontinued; Was bundled with 68k and PowerPC Macs;
-versions 7-9 sold as retail upgrades','US$400','Previously bundled with hardware; No longer a separate operating system, but a group of services installed atop any current version of Mac OS X; US$19.99 on the Mac App Store','Bundled with hardware and free updates given to most existing users, subject to hardware requirements','Commercial, free non-commercial use','Cost, availability','Non-free','Discontinued; Was bundled with hardware','Discontinued; Was bundled with HP-3000 CISC hardware "Classic"','Bundled with BlackBerry 10 and PlayBook devices. Commercial; an academic version exists that needs authorization code before installing','']
+								$("#3").typeahead({
+									name:"Cost, availability",
+									local : ['Monthly license fee','Discontinued; Bundled with hardware up to version 3.0 (Amiga International hardware came with 3.1); versions 2.1, 3.0, 3.1, 3.5, 3.9 also available as separate packages','Windows 8.1 US$119.99, Windows 8.1 Pro $199.99','US$469 Web Server; other editions dependent on number of CALs purchased','Free','Discontinued; Bundled with hardware','Monthly license fee, about US$130 and up','4.0 bundled with hardware; 4.0 for classic and 4.1 available as standalone package at €29','Bundled with hardware','US$60k+; bundled with XTS hardware and OEM licensed','Bundled with hardware, then sold separately at £70 (US$127)','Discontinued; Was bundled with HP-3000 PA-RISC hardware','Discontinued; Was bundled with hardware, then sold separately','Discontinued','Paid','Discontinued; Commercial','Home-student edition (max. five per site) US$149.00business edition $259.00','Commercial; (but free/no-cost perpetual license when used "for the purpose of developing, testing, prototyping and demonstrating your applications")','Free for non-commercial use (recent releases); formerly bundled with hardware','Bundled with hardware; No-cost update via Mac App Store for users of OS X 10.6 or later, assuming hardware requirements are met','Superseded by Novell Open Enterprise Server; Was US$184 (one-user)','Discontinued (see eComStation successor); Was US$300','Discontinued; Was bundled with 68k and PowerPC Macs;versions 7-9 sold as retail upgrades','US$400','Previously bundled with hardware; No longer a separate operating system, but a group of services installed atop any current version of Mac OS X; US$19.99 on the Mac App Store','Bundled with hardware and free updates given to most existing users, subject to hardware requirements','Commercial, free non-commercial use','Cost, availability','Non-free','Discontinued; Was bundled with hardware','Discontinued; Was bundled with HP-3000 CISC hardware "Classic"','Bundled with BlackBerry 10 and PlayBook devices. Commercial; an academic version exists that needs authorization code before installing','']
 								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#4").typeahead({
+									name:"Creator",
 									local : ['BAE Systems','Symbian Foundation','yellowTAB','Acorn Computers','Andrew S. Tanenbaum','HP','Creator','Haiku Inc.','The NetBSD Project','Apple Inc.','QNX Software Systems','The OpenBSD Project','Wind River Systems','Hyperion Entertainment','SGI','Android, Inc., Google','Symbian Ltd.','IBM','Matthew Dillon','Microsoft','The FreeBSD Project','Novell','RISCOS Ltd','Hewlett-Packard','Many, based on software developed by Sun Microsystems and many others','RISCOS Ltd, Pace plc','Unisys','DEC (now HP)','NeXT','Serenity Systems, Mensys BV','IBM and Microsoft','Sun','ReactOS development team','Commodore International, Haage & Partner, Hyperion Entertainment','PC-BSD Software','Bell Labs','Linus Torvalds, et al.','Eric Turgeon','Castle Technology, RISC OS Open','Psion PLC','']
 								});
-								$("#7").typeahead({
-									name:"list7",
+								$("#5").typeahead({
+									name:"Name",
 									local : ['EPOC32','RISC OS','HP NonStop','HP-UX','Symbian platform','Haiku','DragonFly BSD','Windows Server (NT family)','z/VM','Linux','MINIX 3','ZETA','Inferno','eComStation','NeXTSTEP','ReactOS','FreeBSD','GhostBSD','QNX','Symbian','PC-BSD','z/VSE','Plan 9','VxWorks','IRIX','OS/2','AIX','NetWare','OpenIndiana','Name','OS 2200','Solaris','AmigaOS 4','NetBSD','iOS','Windows (classic 9x family)','OpenBSD','OpenVMS','Mac OS','Android','MPE/XL','STOP 6, XTS-400','AmigaOS classic','RISC iX','IBM i','Windows (NT family)','(Mac) OS X Server','z/OS','(Mac) OS X','MPE','MCP','']
 								});
 						</script>

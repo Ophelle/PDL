@@ -29,33 +29,29 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>IDE : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Developer : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Developer : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>IDE : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Platform : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Platform : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"IDE",
+									local : ['BlackBox Component Builder','CPIde','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['Windows','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Proprietary','Proprietary similar to Sleepycat','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Developer",
 									local : ['Oberon microsystems','CFB Software','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['BlackBox Component Builder','CPIde','']
+								$("#2").typeahead({
+									name:"Platform",
+									local : ['Windows','']
+								});
+								$("#3").typeahead({
+									name:"License",
+									local : ['Proprietary','Proprietary similar to Sleepycat','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -29,26 +29,7 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Latest version - date (version) : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Primary developers : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>First public release - date (version) : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Programming language : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>IRC Bot : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Software license : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Website : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Software license : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Notable features :</label></br>
 											<input type="checkbox" name="Feature" >Twisted engine allows connecting to multiple IM sources</br>	
@@ -117,42 +98,53 @@
 											<input type="checkbox" name="Feature" >Many plugins; usable offline as a Haskell development tool; embeddable in GHCi</br>	
 											<input type="checkbox" name="Feature" >Python IRC bot with an extensible plugin and protocol system</br>	
 											<input type="checkbox" name="Feature" >and a package manager. Also supports mumble.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Operating system : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label>Latest version - date (version) : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Website : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>First public release - date (version) : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Operating system : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Primary developers : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>IRC Bot : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Programming language : </label></br> <input id="7" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Software license",
+									local : ['GPL-2.0','?','Artistic License','GPL','MIT','EFLv2','LGPL','BSD','GPL-3.0','Artistic License 2.0','MPL','Apache v2','GPL-2+','ISC','Freeware','GPLv3','Simplified BSD','GPL3, core under MIT','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Latest version - date (version)",
 									local : ['2011-07-16 (1.0)','2009-12-14 (1.5.0)','2011-01-20 (4.2.3.2)','?','2011-12-15','2015-04-08 (1.2.0)','? (0.1.1)','2011-05-08','2013-09-06 (0.9)','2011-02-24 (0.9b10)','2009-07-24 (3.0.99p3)','2015-01-25 (5.0.0)','2013-10-09','2014-09-17 (1.3.3 see commits)','2015-02-14 (1.1.5)','2014-12-13 (3.0)','2013-10-30 (4.2)','? (0.83.4.1)','2012-03-23 (0.84.4)','2012-11-20 (0.4.2)','2002-01-04 (2.4)','2014-09-25 (1.1.0+ - see commits)','2012-08-04','2015-01-16 (0.3.9)','2014-08-22 (1.0.3_01)','2011-10-25 (1.6.21)','? (1.0.1)','2011-03-15 (1.5.3)','2014-06-01','2015-01-04 (2.3.0)','2015-03-31 (2.2.5)','? (1.2)','2014-08-20 (1.2.43)','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Q-bot','David Demelier','Sean B. Palmer','umby24','Kevin Lenzo','Proton','Ian Hickson, Chris Crews','Paul Mutton','team; nicknamed 'G24'','Matthew Turland','Derek Hoagland','Jonathan Hitchcock, Michael Gorven, Stefano Rivera','Michael Yanovich','Shockah, clone1018','Lee Watson','Selig, Posiden, Wil','ceph','Martyn Smith','gdude2002 and rakiru','YouGov, Jamie Turner, Chris Mulligan','Havvy (Ryan Scheel)','MattMc','Martín Ferrari and Damyan Ivanov','François Poirotte','Julien Palard','Andrew J. Bromage et al.','Andriy Grytsenko','Bart Thate','Snowstormer','Weaver/Solo','Tor Henning Ueland','Edward Powell, Dimitri Molenaars, Elad Alfassa, Ari Koivula','Pannekoek','ruby-rbot','Marlinc','Alpine Linux','Stefan Hüsges','Alexander Boyd, Maximilian Dirkmann, James Stoker','Jason Hamilton, juice','Digit','Eggheads','Dominik Honnef, Lee Jarvis','Jeremiah Fincher, James Vega and others','']
+									name:"Website",
+									local : ['','git site','git wiki','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"First public release - date (version)",
 									local : ['? (0.1)','2010-04','?','2011-03-22','2013-09-13 (1.0)','2008-02-18','2004-08','2001-08-01','2010-10-09','2014-08-21 (1.0)','20','2013-04-08 (Git)','November '13','1993-12','? (0.30)','2011-01 (beta)','? (1.0)','2008-07-14 (Git)','2014-02-10 (1.0)','2010-07-08 (0.3.2)','? (0.1.0)','2007','2012-07-15 (3.0.0)','2011-03-20','2011-1-1','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['mIRC Script','Python','PHP','C','Perl','Haskell','Sleep','Ruby','Python (2)','C#','Javascript','C (Lua scriptable)','Java','C++11 and Lua','Python2','Python, Twisted in IM protocols','']
+									name:"Operating system",
+									local : ['Unix-like','Cross-platform','Windows','']
 								});
 								$("#5").typeahead({
-									name:"list5",
-									local : ['Cerberus','Tennu','JZBot','IrcBot','irccd','Shocky','Khaos','Darkbot','VikingBot','allie','Daskeb','phenny','Ruby-rbot','guppy','JSONBOT','Lambdabot','Eggdrop','pmxbot','Cinch','Phergie','Rubybot','Yauib','node-irc','Schongo','KGB','sircbot','Willie','Q-bot','Gambot','jenni','Infobot','FoxBot','MrBot - AwesomeBot','PircBot','Ultros','Gozerbot','jerkbot','Erebot','FoxEye','Supybot','Mozbot','Pbot','EnergyMech','Ibid','']
+									name:"Primary developers",
+									local : ['Q-bot','David Demelier','Sean B. Palmer','umby24','Kevin Lenzo','Proton','Ian Hickson, Chris Crews','Paul Mutton','team; nicknamed 'G24'','Matthew Turland','Derek Hoagland','Jonathan Hitchcock, Michael Gorven, Stefano Rivera','Michael Yanovich','Shockah, clone1018','Lee Watson','Selig, Posiden, Wil','ceph','Martyn Smith','gdude2002 and rakiru','YouGov, Jamie Turner, Chris Mulligan','Havvy (Ryan Scheel)','MattMc','Martín Ferrari and Damyan Ivanov','François Poirotte','Julien Palard','Andrew J. Bromage et al.','Andriy Grytsenko','Bart Thate','Snowstormer','Weaver/Solo','Tor Henning Ueland','Edward Powell, Dimitri Molenaars, Elad Alfassa, Ari Koivula','Pannekoek','ruby-rbot','Marlinc','Alpine Linux','Stefan Hüsges','Alexander Boyd, Maximilian Dirkmann, James Stoker','Jason Hamilton, juice','Digit','Eggheads','Dominik Honnef, Lee Jarvis','Jeremiah Fincher, James Vega and others','']
 								});
 								$("#6").typeahead({
-									name:"list6",
-									local : ['GPL-2.0','?','Artistic License','GPL','MIT','EFLv2','LGPL','BSD','GPL-3.0','Artistic License 2.0','MPL','Apache v2','GPL-2+','ISC','Freeware','GPLv3','Simplified BSD','GPL3, core under MIT','']
+									name:"IRC Bot",
+									local : ['Cerberus','Tennu','JZBot','IrcBot','irccd','Shocky','Khaos','Darkbot','VikingBot','allie','Daskeb','phenny','Ruby-rbot','guppy','JSONBOT','Lambdabot','Eggdrop','pmxbot','Cinch','Phergie','Rubybot','Yauib','node-irc','Schongo','KGB','sircbot','Willie','Q-bot','Gambot','jenni','Infobot','FoxBot','MrBot - AwesomeBot','PircBot','Ultros','Gozerbot','jerkbot','Erebot','FoxEye','Supybot','Mozbot','Pbot','EnergyMech','Ibid','']
 								});
 								$("#7").typeahead({
-									name:"list7",
-									local : ['','git site','git wiki','']
-								});
-								$("#8").typeahead({
-									name:"list8",
-									local : ['Unix-like','Cross-platform','Windows','']
+									name:"Programming language",
+									local : ['mIRC Script','Python','PHP','C','Perl','Haskell','Sleep','Ruby','Python (2)','C#','Javascript','C (Lua scriptable)','Java','C++11 and Lua','Python2','Python, Twisted in IM protocols','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

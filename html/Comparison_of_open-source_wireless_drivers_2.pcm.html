@@ -29,9 +29,6 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Integration : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Chipset :</label></br>
 											<input type="checkbox" name="Feature" >Lucent Hermes (WaveLAN</br>	
 											<input type="checkbox" name="Feature" >ORiNOCO); Intersil PRISM-II</br>	
@@ -62,46 +59,43 @@
 											<input type="checkbox" name="Feature" >4318</br>	
 											<input type="checkbox" name="Feature" >Ralink RT2501USB</br>	
 											<input type="checkbox" name="Feature" >RT2601USB</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Original/Primary developer : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Driver : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Development : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Development : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Driver : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Non-free firmware required : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Non-free firmware required : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Original/Primary developer : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Integration : </label></br> <input id="5" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Integrated','Integrated since 1.5','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['','Bill Paul (FreeBSD)','Sepherosa Ziehau','Damien Bergamini (OpenBSD)','Damien Bergamini','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"License",
 									local : ['BSD','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['Ported from OpenBSD','Reverse engineering','','Documentation based','Ported from NetBSD','Ported from FreeBSD','']
-								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#1").typeahead({
+									name:"Driver",
 									local : ['iwl','ral','wpi','an','bwi','iwn','iwi','ath','wi','rum','rtw','acx','']
 								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#2").typeahead({
+									name:"Development",
+									local : ['Ported from OpenBSD','Reverse engineering','','Documentation based','Ported from NetBSD','Ported from FreeBSD','']
+								});
+								$("#3").typeahead({
+									name:"Non-free firmware required",
 									local : ['Yes','N/A','']
+								});
+								$("#4").typeahead({
+									name:"Original/Primary developer",
+									local : ['','Bill Paul (FreeBSD)','Sepherosa Ziehau','Damien Bergamini (OpenBSD)','Damien Bergamini','']
+								});
+								$("#5").typeahead({
+									name:"Integration",
+									local : ['Integrated','Integrated since 1.5','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

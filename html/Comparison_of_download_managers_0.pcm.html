@@ -29,38 +29,29 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Adware, Malware & Spyware : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>CLI :</label></br>
 								<input type="radio" name="FeatureCLI" value="oui">Yes <input type="radio" name="FeatureCLI" value = "non">No <input type="radio" name="FeatureCLI" value = "non">Partial </br>
-								
-								</br>	
-								<label>Mac OS X :</label></br>
-								<input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 								</br>	
 								<label>Linux :</label></br>
 								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
+								</br>	
+								<label>Mac OS X :</label></br>
+								<input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
 								<label>Web :</label></br>
 								<input type="radio" name="FeatureWeb" value="oui">Yes <input type="radio" name="FeatureWeb" value = "non">No <input type="radio" name="FeatureWeb" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 								</br>	
-								<label>Adware, Malware & Spyware : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Latest stable release : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>GUI :</label></br>
-								<input type="radio" name="FeatureGUI" value="oui">Yes <input type="radio" name="FeatureGUI" value = "non">No <input type="radio" name="FeatureGUI" value = "non">Partial </br>
-								
+								<label>Latest stable release : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Windows :</label></br>
 								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
-								
-								</br>	
-								<label>Manager : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+											<input type="text"/></br>								
 								</br>	
 								<label>License / Price (USD) :</label></br>
 											<input type="checkbox" name="Feature" >Proprietary </br>	
@@ -80,42 +71,24 @@
 											<input type="checkbox" name="Feature" >$9.95 single</br>	
 											<input type="checkbox" name="Feature" >$24.95 family pack for Pro</br>	
 											<input type="checkbox" name="Feature" >$24.95</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>GUI :</label></br>
+								<input type="radio" name="FeatureGUI" value="oui">Yes <input type="radio" name="FeatureGUI" value = "non">No <input type="radio" name="FeatureGUI" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Manager : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Adware, Malware & Spyware",
+									local : ['Adware on free version','None Known','No','Software Informer (optional install)','None','Adware Mobogenie (optional install)','Adware Mobogenie (optional install);Adware browser hijacker Mysearchdial (Mandatory)','?','Adware from version 0.85 to 0.97;Potentially sensitive information reported to BC Servers','Cydoor Pop-up ads,banners','None as of Version 5;Aureate adware prior to that','Original Client:None Known','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['Adware on free version','None Known','No','Software Informer (optional install)','None','Adware Mobogenie (optional install)','Adware Mobogenie (optional install);
-Adware browser hijacker Mysearchdial (Mandatory)','?','Adware from version 0.85 to 0.97;
-Potentially sensitive information reported to BC Servers','Cydoor Pop-up ads,
-banners','None as of Version 5;
-Aureate adware prior to that','Original Client:
-None Known','']
+									name:"Latest stable release",
+									local : [':Template:Latest stable software release/UGet','0.9.581(19 January 2011; 4 years ago)','15.04.2 (June 3, 2015; 8 days ago)','0.7.3-3(8 May 2006; 9 years ago)','3.7.0.1195(January 10, 2012; 3 years ago)','2.7.8.0 (December 15, 2014; 5 months ago)','6.3.1.514(May 16, 2014; 12 months ago)','1.9.341(June 27, 2007; 7 years ago)','?','3.0.2.1(November 6, 2013; 18 months ago)','10.0.5.7(November 27, 2013; 18 months ago)','3.0.870(October 9, 2013; 19 months ago)','3.5(October 8, 2014; 7 months ago)','5.03(February 1, 2008; 7 years ago)','3.9.5 (build 1537) (April 14, 2015; 58 days ago)','6.5 (January 24, 2011; 4 years ago)','3.1.5 (March 22, 2014; 14 months ago)','1.21(January 28, 2015; 4 months ago)','6.23 Build 12(May 21, 2015; 12 months ago)','2.0.18 (January 20, 2015; 4 months ago)','5.14.2.1329(December 27, 2012; 2 years ago)','1.38 (March 30, 2015; 2 months ago)                                                                ','7.0.5.0(October 20, 2011; 3 years ago)','2.0.3.7(April 29, 2015; 43 days ago)','3.0.0.20(February 17, 2012; 3 years ago)','2.5.1(June 2, 2010; 5 years ago)','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : [':Template:Latest stable software release/UGet','0.9.581
-(19 January 2011; 4 years ago)','15.04.2 (June 3, 2015; 8 days ago)','0.7.3-3
-(8 May 2006; 9 years ago)','3.7.0.1195
-(January 10, 2012; 3 years ago)','2.7.8.0 (December 15, 2014; 5 months ago)','6.3.1.514
-(May 16, 2014; 12 months ago)','1.9.341
-(June 27, 2007; 7 years ago)','?','3.0.2.1
-(November 6, 2013; 18 months ago)','10.0.5.7
-(November 27, 2013; 18 months ago)','3.0.870
-(October 9, 2013; 19 months ago)','3.5
-(October 8, 2014; 7 months ago)','5.03
-(February 1, 2008; 7 years ago)','3.9.5 (build 1537) (April 14, 2015; 58 days ago)','6.5 (January 24, 2011; 4 years ago)','3.1.5 (March 22, 2014; 14 months ago)','1.21
-(January 28, 2015; 4 months ago)','6.23 Build 12
-(May 21, 2015; 12 months ago)','2.0.18 (January 20, 2015; 4 months ago)','5.14.2.1329
-(December 27, 2012; 2 years ago)','1.38 (March 30, 2015; 2 months ago) 
-
-                                                               ','7.0.5.0
-(October 20, 2011; 3 years ago)','2.0.3.7
-(April 29, 2015; 43 days ago)','3.0.0.20
-(February 17, 2012; 3 years ago)','2.5.1
-(June 2, 2010; 5 years ago)','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Manager",
 									local : ['Download Accelerator Plus','EagleGet','Maxel','DownloadStudio','GetRight','MiniDM','Free Studio','Jigdo','BitComet','Internet Download Manager','Free Download Manager','Download Accelerator Manager','uGet','DownThemAll!','JDownloader','Shareaza','Tmib video downloader','4K Video Downloader','MLDonkey','FreshDownload','Folx','Internet Download Accelerator','Freemake Video Downloader','KGet','Download Express','Go!Zilla','FlashGet','']
 								});
 						</script>

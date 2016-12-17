@@ -29,26 +29,23 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Application : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Software license : </label></br> <input id="1" type="text" name="Feature"></br>
-								
 								</br>	
 								<label>Creator : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Application : </label></br> <input id="3" type="text" name="Feature"></br>
-								
 						<script>
+								$("#0").typeahead({
+									name:"Application",
+									local : ['UltraISO','PowerISO','cdrtools','ImgBurn','DeepBurner','InfraRecorder','X-CD-Roast','Ashampoo Burning Studio','K3b','CDBurnerXP','Alcohol 120%','Nero Burning ROM','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Software license",
 									local : ['Open-source (CDDL parts are GPL)','Freeware','Open-source (GPL)','Shareware','Freemium','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Creator",
 									local : ['Jörg Schilling','T. Niederreiter','Stefan Haglund, Fredrik Haglund','Ashampoo Software','EZB Systems','LIGHTNING UK!','Sebastian Trüg, Christian Kvasny','Christian Kindahl','Alcohol Soft','Ahead Software','PowerISO Computing, Inc.','Astonsoft','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['UltraISO','PowerISO','cdrtools','ImgBurn','DeepBurner','InfraRecorder','X-CD-Roast','Ashampoo Burning Studio','K3b','CDBurnerXP','Alcohol 120%','Nero Burning ROM','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

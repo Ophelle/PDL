@@ -29,55 +29,46 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Java EE
-compatibility : </label></br> <input id="1" type="text" name="Feature"></br>
+								<label>JSPspec : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
+								<label>Last release date : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Java EEcompatibility : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Vendor : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Servletspec : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Product : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Product : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Vendor : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>JSP
-spec : </label></br> <input id="5" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Servlet
-spec : </label></br> <input id="6" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Last release date : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Edition : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Edition : </label></br> <input id="5" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Last release date",
+									local : ['2015-04','2012-06','2013-04-25','2006-03-09','2013-06-21','2015-01-01','2014-12-05','2014-06-26','2009-08','2013-10-04','2014-09','2007-01','2007-11-06','2014-11-20','2008-09-15','2014-08-06','2005-03','2012-06-15','2013-01-11','2014-09-12','2013-05-28','2013-07-09','2005-03-23','2011-07-29','2014-08-26','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Java EEcompatibility",
 									local : ['6','Yes','7 (partial)','6 Web Profile','No','1.4','1.3','6 Full Platform','7 Full Platform','yes','partial','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Proprietary','Apache 2.0, EPL','CDDL, GPL','LGPL','GPL','Apache License','proprietary','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['GlassFish','ColdFusion','NetWeaver Application Server','Ruby','Enhydra','WebObjects','Geronimo','Oracle Containers for J2EE','JRun','Resin Professional Application Server','IBM WebSphere Application Server Liberty Core','Enterprise Server','WebLogic Server','WebSphere AS Community Edition','TomEE','Orion Application Server','Resin Servlet Container (Open Source)','iPlanet Web Server','JBoss Enterprise Application Platform','Siwpas','IBM WebSphere Application Server','JOnAS','JEUS','Jetty','WildFly','Dynamo AS','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+									name:"Vendor",
 									local : ['Oracle Corporation','ASF','Borland','IBM','SAP AG','Apple Inc.','ATG','Red Hat','IronFlare','MechSoft','Ruby','Caucho Technology','Eclipse Foundation','TmaxSoft','Adobe Systems','OW2 Consortium (formerly ObjectWeb)','GlassFish Community','Lutris','Oracle Corporation (formerly BEA Systems)','']
 								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['2015-04','2012-06','2013-04-25','2006-03-09','2013-06-21','2015-01-01','2014-12-05','2014-06-26','2009-08','2013-10-04','2014-09','2007-01','2007-11-06','2014-11-20','2008-09-15','2014-08-06','2005-03','2012-06-15','2013-01-11','2014-09-12','2013-05-28','2013-07-09','2005-03-23','2011-07-29','2014-08-26','']
+								$("#3").typeahead({
+									name:"License",
+									local : ['Proprietary','Apache 2.0, EPL','CDDL, GPL','LGPL','GPL','Apache License','proprietary','']
 								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#4").typeahead({
+									name:"Product",
+									local : ['GlassFish','ColdFusion','NetWeaver Application Server','Ruby','Enhydra','WebObjects','Geronimo','Oracle Containers for J2EE','JRun','Resin Professional Application Server','IBM WebSphere Application Server Liberty Core','Enterprise Server','WebLogic Server','WebSphere AS Community Edition','TomEE','Orion Application Server','Resin Servlet Container (Open Source)','iPlanet Web Server','JBoss Enterprise Application Platform','Siwpas','IBM WebSphere Application Server','JOnAS','JEUS','Jetty','WildFly','Dynamo AS','']
+								});
+								$("#5").typeahead({
+									name:"Edition",
 									local : ['4.0.36','5.4.3','2.0.0','6.3.0.GA','5.3','9.2.6','8.5.5.3','7.0.21','7','1.7.1','6.7','1.2','3.0.1','8.2.0.Final','5.1.9','4.1','7.4','2.0.7','6.3','4 updater 7','10.1.3.5.0','12.1.3','10.0.11','3.0.0.4','']
 								});
 						</script>

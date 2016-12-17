@@ -29,62 +29,55 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>YAP-Prolog : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Name : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>SWI-Prolog : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>SWI-Prolog : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Ciao :</label></br>
 								<input type="radio" name="FeatureCiao" value="oui">Yes <input type="radio" name="FeatureCiao" value = "non">No <input type="radio" name="FeatureCiao" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 								</br>	
-								<label>Jekejeke Prolog : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>GNU Prolog : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>XSB : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Jekejeke Prolog : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Visual Prolog :</label></br>
 								<input type="radio" name="FeatureVisual Prolog" value="oui">Yes <input type="radio" name="FeatureVisual Prolog" value = "non">No <input type="radio" name="FeatureVisual Prolog" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 								</br>	
-								<label>GNU Prolog : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>YAP-Prolog : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Name : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>SICStus Prolog : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>SICStus Prolog : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label>XSB : </label></br> <input id="6" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['','']
+								$("#0").typeahead({
+									name:"Name",
+									local : ['Type checker','Determinacy checker','Call-pattern checker','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"SWI-Prolog",
 									local : ['','Yes','']
 								});
+								$("#2").typeahead({
+									name:"GNU Prolog",
+									local : ['','']
+								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Jekejeke Prolog",
 									local : ['','']
 								});
 								$("#4").typeahead({
-									name:"list4",
+									name:"YAP-Prolog",
 									local : ['','']
 								});
 								$("#5").typeahead({
-									name:"list5",
-									local : ['','']
+									name:"SICStus Prolog",
+									local : ['Yes','','']
 								});
 								$("#6").typeahead({
-									name:"list6",
-									local : ['Type checker','Determinacy checker','Call-pattern checker','']
-								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['Yes','','']
+									name:"XSB",
+									local : ['','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

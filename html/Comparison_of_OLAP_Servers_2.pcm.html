@@ -29,53 +29,58 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>MDX :</label></br>
-								<input type="radio" name="FeatureMDX" value="oui">Yes <input type="radio" name="FeatureMDX" value = "non">No <input type="radio" name="FeatureMDX" value = "non">Partial </br>
-								
-								</br>	
-								<label>Visualization : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>LINQ :</label></br>
-								<input type="radio" name="FeatureLINQ" value="oui">Yes <input type="radio" name="FeatureLINQ" value = "non">No <input type="radio" name="FeatureLINQ" value = "non">Partial </br>
-								
-								</br>	
-								<label>Custom functions :</label></br>
-								<input type="radio" name="FeatureCustom functions" value="oui">Yes <input type="radio" name="FeatureCustom functions" value = "non">No <input type="radio" name="FeatureCustom functions" value = "non">Partial </br>
-								
-								</br>	
-								<label>XML for Analysis :</label></br>
-								<input type="radio" name="FeatureXML for Analysis" value="oui">Yes <input type="radio" name="FeatureXML for Analysis" value = "non">No <input type="radio" name="FeatureXML for Analysis" value = "non">Partial </br>
-								
-								</br>	
-								<label>OLE DB for OLAP :</label></br>
-								<input type="radio" name="FeatureOLE DB for OLAP" value="oui">Yes <input type="radio" name="FeatureOLE DB for OLAP" value = "non">No <input type="radio" name="FeatureOLE DB for OLAP" value = "non">Partial </br>
-								
-								</br>	
-								<label>OLAP Server : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>JSON : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>OLAP Server : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Stored procedures :</label></br>
 								<input type="radio" name="FeatureStored procedures" value="oui">Yes <input type="radio" name="FeatureStored procedures" value = "non">No <input type="radio" name="FeatureStored procedures" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
+								</br>	
+								<label>LINQ :</label></br>
+								<input type="radio" name="FeatureLINQ" value="oui">Yes <input type="radio" name="FeatureLINQ" value = "non">No <input type="radio" name="FeatureLINQ" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Visualization :</label></br>
+											<input type="checkbox" name="Feature" >TM1 Web</br>	
+											<input type="checkbox" name="Feature" >TM1 Contributor</br>	
+											<input type="checkbox" name="Feature" >IBM Cognos Insight</br>	
+											<input type="checkbox" name="Feature" >IBM Cognos Cafe for Excel</br>	
+											<input type="checkbox" name="Feature" >SmartView (Excel-AddIn)</br>	
+											<input type="checkbox" name="Feature" >WebAnalysis</br>	
+											<input type="checkbox" name="Feature" >Financial Reports</br>	
+											<input type="checkbox" name="Feature" >Java</br>	
+											<input type="checkbox" name="Feature" >Javascript</br>	
+											<input type="checkbox" name="Feature" >Microsoft Excel</br>	
+											<input type="checkbox" name="Feature" >Microsoft Power BI</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>SQL :</label></br>
 								<input type="radio" name="FeatureSQL" value="oui">Yes <input type="radio" name="FeatureSQL" value = "non">No <input type="radio" name="FeatureSQL" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
+								</br>	
+								<label>Custom functions :</label></br>
+								<input type="radio" name="FeatureCustom functions" value="oui">Yes <input type="radio" name="FeatureCustom functions" value = "non">No <input type="radio" name="FeatureCustom functions" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>MDX :</label></br>
+								<input type="radio" name="FeatureMDX" value="oui">Yes <input type="radio" name="FeatureMDX" value = "non">No <input type="radio" name="FeatureMDX" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>JSON : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>XML for Analysis :</label></br>
+								<input type="radio" name="FeatureXML for Analysis" value="oui">Yes <input type="radio" name="FeatureXML for Analysis" value = "non">No <input type="radio" name="FeatureXML for Analysis" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>OLE DB for OLAP :</label></br>
+								<input type="radio" name="FeatureOLE DB for OLAP" value="oui">Yes <input type="radio" name="FeatureOLE DB for OLAP" value = "non">No <input type="radio" name="FeatureOLE DB for OLAP" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['TM1 Web/TM1 Contributor, IBM Cognos Insight, IBM Cognos Cafe for Excel','?','SmartView (Excel-AddIn), WebAnalysis, Financial Reports','Java, Javascript','Application Studio','Yes','Web Report Studio','Cubes Viewer','Microsoft Excel, Microsoft Power BI','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"OLAP Server",
 									local : ['SAP NetWeaver BW','SAS OLAP Server','Oracle Database OLAP Option','icCube','Infor BI OLAP Server','Cubes','Mondrian OLAP server','Essbase','Jedox OLAP Server','Microsoft Analysis Services','MicroStrategy Intelligence Server','Cognos TM1','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"JSON",
 									local : ['Yes','','']
 								});
 						</script>

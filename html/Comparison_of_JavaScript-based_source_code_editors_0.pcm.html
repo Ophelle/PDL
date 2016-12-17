@@ -29,8 +29,13 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Site : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Open source :</label></br>
+								<input type="radio" name="FeatureOpen source" value="oui">Yes <input type="radio" name="FeatureOpen source" value = "non">No <input type="radio" name="FeatureOpen source" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Software license : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Editor : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Browser support :</label></br>
 											<input type="checkbox" name="Feature" >Firefox 3.5+</br>	
@@ -62,27 +67,17 @@
 											<input type="checkbox" name="Feature" >IE 6 & 7</br>	
 											<input type="checkbox" name="Feature" >Firefox 2 & 3</br>	
 											<input type="checkbox" name="Feature" >Safari 3.1</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Software license : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>Activity :</label></br>
 								<input type="radio" name="FeatureActivity" value="oui">Yes <input type="radio" name="FeatureActivity" value = "non">No <input type="radio" name="FeatureActivity" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Style, clone of : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Cost (US$) : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Open source :</label></br>
-								<input type="radio" name="FeatureOpen source" value="oui">Yes <input type="radio" name="FeatureOpen source" value = "non">No <input type="radio" name="FeatureOpen source" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Site : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Editor : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Cost (US$) : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Style, clone of : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Latest version :</label></br>
 											<input type="checkbox" name="Feature" >1.1.3</br>	
@@ -107,27 +102,27 @@
 											<input type="checkbox" name="Feature" >2008</br>	
 											<input type="checkbox" name="Feature" >0.8.2</br>	
 											<input type="checkbox" name="Feature" >2010-01-14</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Home','Home, demo','example','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Software license",
 									local : ['MIT, GPL','BSD','GPL','New BSD License','MIT-like','Dual','Public Cloud','LGPL','-','dual-licensed: BSD 3-clause and EPL','']
 								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['Microsoft Visual Studio','Eclipse','Markup editor, no syntax highlight','nano','plain textarea','Emacs','Sublime Text / Microsoft Visual Studio','Eclipse SWT StyledText, regular textarea','vi','Emacs, Vim and others','regular textarea','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Editor",
 									local : ['MDK-Editor','CodeTextArea','EditArea','9ne','Ace (editor)','Ymacs','Monaco Editor','Helene','jsvi','CodeMirror','LDT','CodePress','Markitup','GitHub Atom','Codenvy Editor','Orion','Micro','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#2").typeahead({
+									name:"Cost (US$)",
 									local : ['Free','used only by Microsoft','-','Depends on use','']
+								});
+								$("#3").typeahead({
+									name:"Site",
+									local : ['Home','Home, demo','example','']
+								});
+								$("#4").typeahead({
+									name:"Style, clone of",
+									local : ['Microsoft Visual Studio','Eclipse','Markup editor, no syntax highlight','nano','plain textarea','Emacs','Sublime Text / Microsoft Visual Studio','Eclipse SWT StyledText, regular textarea','vi','Emacs, Vim and others','regular textarea','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

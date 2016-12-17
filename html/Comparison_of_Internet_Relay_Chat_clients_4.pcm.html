@@ -29,67 +29,61 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>CTCP :</label></br>
-								<input type="radio" name="FeatureCTCP" value="oui">Yes <input type="radio" name="FeatureCTCP" value = "non">No <input type="radio" name="FeatureCTCP" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Client : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>SASL : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>TLS : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>SSL :</label></br>
+								<input type="radio" name="FeatureSSL" value="oui">Yes <input type="radio" name="FeatureSSL" value = "non">No <input type="radio" name="FeatureSSL" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
 								<label>IPv6 :</label></br>
 								<input type="radio" name="FeatureIPv6" value="oui">Yes <input type="radio" name="FeatureIPv6" value = "non">No <input type="radio" name="FeatureIPv6" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>OCSP : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>DCC :</label></br>
-								<input type="radio" name="FeatureDCC" value="oui">Yes <input type="radio" name="FeatureDCC" value = "non">No <input type="radio" name="FeatureDCC" value = "non">Partial </br>
+								<label>CTCP :</label></br>
+								<input type="radio" name="FeatureCTCP" value="oui">Yes <input type="radio" name="FeatureCTCP" value = "non">No <input type="radio" name="FeatureCTCP" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>TLS : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>CRL : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>DANE : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>OCSP : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Client : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>CRL : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label>SASL : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>OTR :</label></br>
 								<input type="radio" name="FeatureOTR" value="oui">Yes <input type="radio" name="FeatureOTR" value = "non">No <input type="radio" name="FeatureOTR" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>SSL :</label></br>
-								<input type="radio" name="FeatureSSL" value="oui">Yes <input type="radio" name="FeatureSSL" value = "non">No <input type="radio" name="FeatureSSL" value = "non">Partial </br>
+								<label>DANE : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>DCC :</label></br>
+								<input type="radio" name="FeatureDCC" value="oui">Yes <input type="radio" name="FeatureDCC" value = "non">No <input type="radio" name="FeatureDCC" value = "non">Partial </br>
 											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Yes','script','SASL','No','?','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['No','Yes','?','OCSP','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['No','?','Yes','TLS','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['?','Yes','No','DANE','']
-								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#0").typeahead({
+									name:"Client",
 									local : ['ERC','Nettalk','Irssi','BitchX','Neebly','rcirc','Convos','Colloquy','Opera','Ircle','Snak','IceChat','mIRC','jIRCii','Bersirc','ii (IRC IT)','Smuxi','LimeChat','Visual IRC','Scrollback','ChatZilla','IRCjr','PJIRC','f-irc','Linkinus','AmIRC','LeetIRC','PIRCH','KVIrc','XChat','WeeChat','Konversation','qwebirc','DMDirc','HexChat','KiwiIRC','ircII','Quassel','Mibbit','Lingo','Textual','Client','HydraIRC','AdiIRC','']
 								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#1").typeahead({
+									name:"TLS",
+									local : ['No','?','Yes','TLS','']
+								});
+								$("#2").typeahead({
+									name:"CRL",
 									local : ['?','No','CRL','Yes','']
+								});
+								$("#3").typeahead({
+									name:"OCSP",
+									local : ['No','Yes','?','OCSP','']
+								});
+								$("#4").typeahead({
+									name:"SASL",
+									local : ['Yes','script','SASL','No','?','']
+								});
+								$("#5").typeahead({
+									name:"DANE",
+									local : ['?','Yes','No','DANE','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -29,87 +29,79 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Fillrate - Texture (GT/s) : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Fillrate - Pixel (GP/s) : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Memory clock (MHz) : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Memory (MB) : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Model Number : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>API compliance (version) - DirectX : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>API compliance (version) - OpenGL : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Fillrate - Texture (GT/s) : </label></br> <input id="2" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Memory - Bus type : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Memory clock (MHz) : </label></br> <input id="3" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>API compliance (version) - DirectX : </label></br> <input id="4" type="text" name="Feature"></br>
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Memory - Bus width (bit) : </label></br> <input id="5" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Memory - Bus width (bit) : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Fab (nm) : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Code name : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Model : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>Config core : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Launch : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Core clock (MHz) : </label></br> <input type="number" name="Feature"></br>
 								
-								</br>	
-								<label>Core clock (MHz) : </label></br> <input id="7" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Memory (MB) : </label></br> <input id="8" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Model Number : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Launch : </label></br> <input id="10" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Code name : </label></br> <input id="11" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>API compliance (version) - OpenGL : </label></br> <input id="12" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Model : </label></br> <input id="13" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Memory - Bus type : </label></br> <input id="14" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fab (nm) : </label></br> <input id="15" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="16" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Fillrate - Pixel (GP/s) : </label></br> <input id="17" type="number" name="Feature"></br>
-												<input type="text"/></br>								
 								</br>	
 								<label>Notes :</label></br>
 											<input type="checkbox" name="Feature" >3DC</br>	
 											<input type="checkbox" name="Feature" >Dynamic Lane Count Switching</br>	
 											<input type="checkbox" name="Feature" >DLCS</br>	
 											<input type="checkbox" name="Feature" >Clock Gating</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['PCI-E x16','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['2:4:4:4','6:8:8:4','6:12:12:12','6:16:16:16','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"Model Number",
 									local : ['M26','M28 PRO','M28','M22','M24','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Model",
 									local : ['Mobility Radeon X800','Mobility Radeon X800 XT','Mobility Radeon X700','Mobility Radeon X600','Mobility Radeon X300','']
 								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['Mar 2005','Jun 2005','Jun 2004','Nov 2005','Nov 2004','']
+								$("#2").typeahead({
+									name:"Bus interface",
+									local : ['PCI-E x16','']
 								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#3").typeahead({
+									name:"Code name",
 									local : ['RV410','RV380','R423','RV370','']
+								});
+								$("#4").typeahead({
+									name:"Config core",
+									local : ['2:4:4:4','6:8:8:4','6:12:12:12','6:16:16:16','']
+								});
+								$("#5").typeahead({
+									name:"Launch",
+									local : ['Mar 2005','Jun 2005','Jun 2004','Nov 2005','Nov 2004','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

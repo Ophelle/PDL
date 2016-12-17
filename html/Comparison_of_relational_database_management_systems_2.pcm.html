@@ -29,34 +29,32 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Fine-grained locking : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Unicode :</label></br>
 								<input type="radio" name="FeatureUnicode" value="oui">Yes <input type="radio" name="FeatureUnicode" value = "non">No <input type="radio" name="FeatureUnicode" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Transactions :</label></br>
-								<input type="radio" name="FeatureTransactions" value="oui">Yes <input type="radio" name="FeatureTransactions" value = "non">No <input type="radio" name="FeatureTransactions" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
 								<label>ACID :</label></br>
 								<input type="radio" name="FeatureACID" value="oui">Yes <input type="radio" name="FeatureACID" value = "non">No <input type="radio" name="FeatureACID" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Fine-grained locking : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Transactions :</label></br>
+								<input type="radio" name="FeatureTransactions" value="oui">Yes <input type="radio" name="FeatureTransactions" value = "non">No <input type="radio" name="FeatureTransactions" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
 								<label>Referential integrity :</label></br>
 								<input type="radio" name="FeatureReferential integrity" value="oui">Yes <input type="radio" name="FeatureReferential integrity" value = "non">No <input type="radio" name="FeatureReferential integrity" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Interface : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Interface : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Fine-grained locking",
 									local : ['?','No (Database-level locking)','Yes (Row-level locking)','Fine-grained locking','Yes (optimistic and pessimistic cell-level locking)','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Interface",
 									local : ['API & GUI & SQL','SQL and JSON','SQL','proprietary direct call & SQL (via 3rd party)','GUI & SQL','API & SQL','SQL & QUEL','SQL & API','Multiple','Interface','GUI  & SQL','']
 								});
 						</script>

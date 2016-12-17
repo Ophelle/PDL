@@ -29,80 +29,74 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>exec(string) : </label></br> <input id="1" type="number" name="Feature"></br>
+								<label>RegExp (pattern, flags) : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>lastIndex : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>toString() : </label></br> <input id="2" type="number" name="Feature"></br>
+								<label>toString() : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>constructor : </label></br> <input id="3" type="number" name="Feature"></br>
+								<label>Properties : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>prototype : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>global : </label></br> <input id="4" type="number" name="Feature"></br>
+								<label>Called as function : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>exec(string) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>source : </label></br> <input id="5" type="number" name="Feature"></br>
+								<label>source : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Properties : </label></br> <input id="6" type="text" name="Feature"></br>
+								<label>Properties of prototype : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>ignoreCase : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>prototype : </label></br> <input id="7" type="number" name="Feature"></br>
+								<label>test(string) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Properties of instances : </label></br> <input id="8" type="text" name="Feature"></br>
+								<label>global : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Called as function : </label></br> <input id="9" type="text" name="Feature"></br>
+								<label>Called as constructor : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>new RegExp (pattern, flags) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Called as constructor : </label></br> <input id="10" type="text" name="Feature"></br>
+								<label>multiline : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>new RegExp (pattern, flags) : </label></br> <input id="11" type="number" name="Feature"></br>
-								
+								<label>Properties of instances : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>ignoreCase : </label></br> <input id="12" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>multiline : </label></br> <input id="13" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>Properties of prototype : </label></br> <input id="14" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>lastIndex : </label></br> <input id="15" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>test(string) : </label></br> <input id="16" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>RegExp (pattern, flags) : </label></br> <input id="17" type="text" name="Feature"></br>
+								<label>constructor : </label></br> <input type="number" name="Feature"></br>
 								
 						<script>
+								$("#0").typeahead({
+									name:"RegExp (pattern, flags)",
+									local : ['?','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Properties",
 									local : ['Properties','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Properties of instances','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Called as function",
 									local : ['Called as function','']
 								});
+								$("#3").typeahead({
+									name:"Properties of prototype",
+									local : ['Properties of prototype','']
+								});
 								$("#4").typeahead({
-									name:"list4",
+									name:"Called as constructor",
 									local : ['Called as constructor','']
 								});
 								$("#5").typeahead({
-									name:"list5",
-									local : ['Properties of prototype','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['?','']
+									name:"Properties of instances",
+									local : ['Properties of instances','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -29,55 +29,23 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Preposition +demonstrative(Portuguese) : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>em : </label></br> <input id="1" type="text" name="Feature"></br>
-								
 								</br>	
 								<label>de : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Preposition +
-demonstrative
-(Portuguese) : </label></br> <input id="3" type="text" name="Feature"></br>
-								
 						<script>
+								$("#0").typeahead({
+									name:"Preposition +demonstrative(Portuguese)",
+									local : ['este (masc.sing.)esta (fem.sing.)estes (masc.pl.)estas (fem.pl.)','esse (masc.sing.)essa (fem.sing.)esses (masc.pl.)essas (fem.pl.)','aquele (masc.sing.)aquela (fem.sing.)aqueles (masc.pl.)aquelas (fem.pl.)','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['daquele
-daquela
-daqueles
-daquelas','deste
-desta
-destes
-destas','desse
-dessa
-desses
-dessas','']
+									name:"em",
+									local : ['nessenessanessesnessas','nestenestanestesnestas','naquelenaquelanaquelesnaquelas','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['nesse
-nessa
-nesses
-nessas','neste
-nesta
-nestes
-nestas','naquele
-naquela
-naqueles
-naquelas','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['este (masc.sing.)
-esta (fem.sing.)
-estes (masc.pl.)
-estas (fem.pl.)','esse (masc.sing.)
-essa (fem.sing.)
-esses (masc.pl.)
-essas (fem.pl.)','aquele (masc.sing.)
-aquela (fem.sing.)
-aqueles (masc.pl.)
-aquelas (fem.pl.)','']
+									name:"de",
+									local : ['daqueledaqueladaquelesdaquelas','destedestadestesdestas','dessedessadessesdessas','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

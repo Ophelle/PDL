@@ -29,52 +29,47 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Preprocessing, Compilation and Packaging : </label></br> <input id="1" type="text" name="Feature"></br>
+								<label>Explicit regions :</label></br>
+								<input type="radio" name="FeatureExplicit regions" value="oui">Yes <input type="radio" name="FeatureExplicit regions" value = "non">No <input type="radio" name="FeatureExplicit regions" value = "non">Partial </br>
 								
 								</br>	
-								<label>Namespaces : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Classes/assembly search path : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>File contents : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Custom errors/warnings :</label></br>
 								<input type="radio" name="FeatureCustom errors/warnings" value="oui">Yes <input type="radio" name="FeatureCustom errors/warnings" value = "non">No <input type="radio" name="FeatureCustom errors/warnings" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Explicit regions :</label></br>
-								<input type="radio" name="FeatureExplicit regions" value="oui">Yes <input type="radio" name="FeatureExplicit regions" value = "non">No <input type="radio" name="FeatureExplicit regions" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Packaging : </label></br> <input id="6" type="text" name="Feature"></br>
 								
+								</br>	
+								<label>Preprocessing, Compilation and Packaging : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Conditional compilation :</label></br>
 								<input type="radio" name="FeatureConditional compilation" value="oui">Yes <input type="radio" name="FeatureConditional compilation" value = "non">No <input type="radio" name="FeatureConditional compilation" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>File contents : </label></br> <input id="8" type="text" name="Feature"></br>
 								
+								</br>	
+								<label>Namespaces : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Packaging : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Classes/assembly search path : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"File contents",
+									local : ['Free','Restricted','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Preprocessing, Compilation and Packaging",
 									local : ['Java','C#','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Packaging",
 									local : ['Assembly','Package','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Namespaces",
 									local : ['Packages','Namespaces','']
 								});
 								$("#4").typeahead({
-									name:"list4",
+									name:"Classes/assembly search path",
 									local : ['ClassPath','Both compile-time and runtime','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['Free','Restricted','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -29,33 +29,29 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Method : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Focus : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Focus : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Name : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Method : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Notes : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Name : </label></br> <input id="4" type="text" name="Feature"></br>
-								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Focus",
 									local : ['Books','Content creators','']
 								});
+								$("#1").typeahead({
+									name:"Name",
+									local : ['Unglue.it','Flattr','']
+								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Method",
 									local : ['Contributing to making books open access','Flattr button display along the content','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Notes",
 									local : ['','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['Unglue.it','Flattr','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

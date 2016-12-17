@@ -29,38 +29,36 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>RAM Use in MB : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Installable Over USBs :</label></br>
 								<input type="radio" name="FeatureInstallable Over USBs" value="oui">Yes <input type="radio" name="FeatureInstallable Over USBs" value = "non">No <input type="radio" name="FeatureInstallable Over USBs" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Installable Live CD :</label></br>
-								<input type="radio" name="FeatureInstallable Live CD" value="oui">Yes <input type="radio" name="FeatureInstallable Live CD" value = "non">No <input type="radio" name="FeatureInstallable Live CD" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Distribution : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Boots from DVD :</label></br>
 								<input type="radio" name="FeatureBoots from DVD" value="oui">Yes <input type="radio" name="FeatureBoots from DVD" value = "non">No <input type="radio" name="FeatureBoots from DVD" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
+								<label>RAM Use in MB : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Size in MB : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Installable Live CD :</label></br>
+								<input type="radio" name="FeatureInstallable Live CD" value="oui">Yes <input type="radio" name="FeatureInstallable Live CD" value = "non">No <input type="radio" name="FeatureInstallable Live CD" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
 								<label>Boots from CD-ROM :</label></br>
 								<input type="radio" name="FeatureBoots from CD-ROM" value="oui">Yes <input type="radio" name="FeatureBoots from CD-ROM" value = "non">No <input type="radio" name="FeatureBoots from CD-ROM" value = "non">Partial </br>
 											<input type="text"/></br>								
-								</br>	
-								<label>Distribution : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Size in MB : </label></br> <input id="7" type="number" name="Feature"></br>
-												<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['RAM Use','?','128','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Distribution",
 									local : ['SchilliX','MilaX','OpenIndiana','BeleniX','Distribution','Nexenta OS','']
+								});
+								$("#1").typeahead({
+									name:"RAM Use in MB",
+									local : ['RAM Use','?','128','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

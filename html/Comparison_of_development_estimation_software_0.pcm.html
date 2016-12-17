@@ -29,12 +29,34 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Schedule estimate :</label></br>
-								<input type="radio" name="FeatureSchedule estimate" value="oui">Yes <input type="radio" name="FeatureSchedule estimate" value = "non">No <input type="radio" name="FeatureSchedule estimate" value = "non">Partial </br>
-								
+								<label>Software : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Platforms : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Cost Models : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Supported Programming Languages : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Report Output Format :</label></br>
+											<input type="checkbox" name="Feature" >proprietary</br>	
+											<input type="checkbox" name="Feature" >Excel</br>	
+											<input type="checkbox" name="Feature" >CSV</br>	
+											<input type="checkbox" name="Feature" >Text</br>	
+											<input type="checkbox" name="Feature" >Microsoft Project</br>	
+											<input type="checkbox" name="Feature" >IBM Rational</br>	
+											<input type="checkbox" name="Feature" >Oracle Crystal Ball</br>	
+											<input type="checkbox" name="Feature" >Microsoft PowerPoint</br>	
+											<input type="checkbox" name="Feature" >text</br>	
+											<input type="checkbox" name="Feature" >HTML</br>	
+											<input type="checkbox" name="Feature" >XML</br>	
+											<input type="checkbox" name="Feature" >CAD</br>	
+											<input type="checkbox" name="Feature" >PDF</br>	
+											<input type="checkbox" name="Feature" >MS Project</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Platforms : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Cost : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>Input :</label></br>
 											<input type="checkbox" name="Feature" >Size (SLOC</br>	
@@ -74,67 +96,39 @@
 											<input type="checkbox" name="Feature" >features</br>	
 											<input type="checkbox" name="Feature" >Time and Resource Constraints</br>	
 											<input type="checkbox" name="Feature" >Prioritities</br>	
-									
-								</br>	
-								<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Supported Programming Languages : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>Cost estimate :</label></br>
 								<input type="radio" name="FeatureCost estimate" value="oui">Yes <input type="radio" name="FeatureCost estimate" value = "non">No <input type="radio" name="FeatureCost estimate" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 								</br>	
-								<label>Software : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Report Output Format :</label></br>
-											<input type="checkbox" name="Feature" >proprietary</br>	
-											<input type="checkbox" name="Feature" >Excel</br>	
-											<input type="checkbox" name="Feature" >CSV</br>	
-											<input type="checkbox" name="Feature" >Text</br>	
-											<input type="checkbox" name="Feature" >Microsoft Project</br>	
-											<input type="checkbox" name="Feature" >IBM Rational</br>	
-											<input type="checkbox" name="Feature" >Oracle Crystal Ball</br>	
-											<input type="checkbox" name="Feature" >Microsoft PowerPoint</br>	
-											<input type="checkbox" name="Feature" >text</br>	
-											<input type="checkbox" name="Feature" >HTML</br>	
-											<input type="checkbox" name="Feature" >XML</br>	
-											<input type="checkbox" name="Feature" >CAD</br>	
-											<input type="checkbox" name="Feature" >PDF</br>	
-											<input type="checkbox" name="Feature" >MS Project</br>	
-									
-								</br>	
-								<label>Cost Models : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Cost : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+								<label>Schedule estimate :</label></br>
+								<input type="radio" name="FeatureSchedule estimate" value="oui">Yes <input type="radio" name="FeatureSchedule estimate" value = "non">No <input type="radio" name="FeatureSchedule estimate" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
+								$("#0").typeahead({
+									name:"Software",
+									local : ['Forecast.it','Costar','ProjectCodeMeter','Seer for Software','TruePlanning','USC COCOMO II','Construx Estimate','AFCAA REVIC','SystemStar','Cost Xpert sucCXess 2012 R2','SLIM','TSA Metric Studio','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['Windows','Full web-based, collaborative platform','DOS','Windows, Any (Web-based)','Windows, SunOS','Any (Web-based) runs on any Java Application Server','']
+									name:"Cost Models",
+									local : ['COSYSMO 2005','Function points','SLIM','ALA, COCOMO','REVIC','Weighted Micro Function Points, COCOMO II 2000, COCOMO 81, REVIC','SLIM, COCOMO II, Monte Carlo','COCOMO.II.2000, COCOMO.II.1999, COCOMO.II.1998','COCOMO II Early Design and Post-Architecture (1997 - 2003); CX COCOMO 2009 - 2012; REVIC','PRICE','COCOMO II, COCOMO 81, REVIC','SEER-SEM','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Proprietary','Proprietary Free for NGO and educational use','Proprietary Free for public distribution','Proprietary Free for personal and educational use','']
+									name:"Cost",
+									local : ['Commercial','Free','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Supported Programming Languages",
 									local : ['any','Any through the API','C, C++, C#, J#, Java, PHP, Objective C, JavaScript, UnrealEngine script, Flash ActionScript, DigitalMars D','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['Forecast.it','Costar','ProjectCodeMeter','Seer for Software','TruePlanning','USC COCOMO II','Construx Estimate','AFCAA REVIC','SystemStar','Cost Xpert sucCXess 2012 R2','SLIM','TSA Metric Studio','']
+									name:"License",
+									local : ['Proprietary','Proprietary Free for NGO and educational use','Proprietary Free for public distribution','Proprietary Free for personal and educational use','']
 								});
 								$("#5").typeahead({
-									name:"list5",
-									local : ['COSYSMO 2005','Function points','SLIM','ALA, COCOMO','REVIC','Weighted Micro Function Points, COCOMO II 2000, COCOMO 81, REVIC','SLIM, COCOMO II, Monte Carlo','COCOMO.II.2000, COCOMO.II.1999, COCOMO.II.1998','COCOMO II Early Design and Post-Architecture (1997 - 2003); CX COCOMO 2009 - 2012; REVIC','PRICE','COCOMO II, COCOMO 81, REVIC','SEER-SEM','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['Commercial','Free','']
+									name:"Platforms",
+									local : ['Windows','Full web-based, collaborative platform','DOS','Windows, Any (Web-based)','Windows, SunOS','Any (Web-based) runs on any Java Application Server','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

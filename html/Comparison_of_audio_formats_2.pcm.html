@@ -29,44 +29,39 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>QuickTime : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>GStreamer : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>FFmpeg :</label></br>
 								<input type="radio" name="FeatureFFmpeg" value="oui">Yes <input type="radio" name="FeatureFFmpeg" value = "non">No <input type="radio" name="FeatureFFmpeg" value = "non">Partial </br>
 								
 								</br>	
-								<label>ACM : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>DirectShow : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Audio compression format : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>QuickTime : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>DirectShow : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>ACM : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>GStreamer : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Audio compression format : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"DirectShow",
+									local : ['Yes (ffdshow)','No','Yes','Yes (ffdshow, Monogram)','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"QuickTime",
 									local : ['Yes (Perian)','No','Yes','Yes (flip4mac)','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Yes (GStreamer FFmpeg plug-in)','Yes (GStreamer Base Plug-ins, GStreamer FFmpeg plug-in)','No','Yes (GStreamer Ugly Plug-ins)','Yes (GStreamer FFmpeg plug-in, GStreamer DLL loader plugin + Binary Codec Packages)','Yes (GStreamer Ugly, GStreamer FFmpeg plug-in)','Yes (GStramer Good Plug-ins, GStreamer FFmpeg plug-in)','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"ACM",
 									local : ['Yes (ffdshow)','No','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['LPAC','QCELP','OptimFROG','Windows Media Audio v1','Meridian Lossless Packing','ATRAC3','Musepack','AAC','RealAudio','Monkey's Audio','Cook Codec','True Audio (TTA)','Shorten','E-AC-3','8SVX','WavPack','Windows Media Audio v2','DTS-HD','AC3','Truespeech','HE-AAC','AMR','Speex','La','FLAC','Apple Lossless','DCA aka DTS','ATRAC3plus','MP3','Nellymoser Asao Codec in Flash','Sonic Audio','Vorbis','Windows Media Audio Lossless','Windows Media Audio Voice','Windows Media Audio Pro','']
+								$("#3").typeahead({
+									name:"GStreamer",
+									local : ['Yes (GStreamer FFmpeg plug-in)','Yes (GStreamer Base Plug-ins, GStreamer FFmpeg plug-in)','No','Yes (GStreamer Ugly Plug-ins)','Yes (GStreamer FFmpeg plug-in, GStreamer DLL loader plugin + Binary Codec Packages)','Yes (GStreamer Ugly, GStreamer FFmpeg plug-in)','Yes (GStramer Good Plug-ins, GStreamer FFmpeg plug-in)','']
 								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['Yes (ffdshow)','No','Yes','Yes (ffdshow, Monogram)','']
+								$("#4").typeahead({
+									name:"Audio compression format",
+									local : ['LPAC','QCELP','OptimFROG','Windows Media Audio v1','Meridian Lossless Packing','ATRAC3','Musepack','AAC','RealAudio','Monkey's Audio','Cook Codec','True Audio (TTA)','Shorten','E-AC-3','8SVX','WavPack','Windows Media Audio v2','DTS-HD','AC3','Truespeech','HE-AAC','AMR','Speex','La','FLAC','Apple Lossless','DCA aka DTS','ATRAC3plus','MP3','Nellymoser Asao Codec in Flash','Sonic Audio','Vorbis','Windows Media Audio Lossless','Windows Media Audio Voice','Windows Media Audio Pro','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

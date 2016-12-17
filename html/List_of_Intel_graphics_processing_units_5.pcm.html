@@ -29,51 +29,9 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Device id. : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Graphics : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>API support - DirectX : </label></br> <input id="2" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>CPU : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Core clock (MHz) : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Market : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Launch : </label></br> <input id="6" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Memory bandwidth
-(GB/s) : </label></br> <input id="7" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>DVMT 
-(MB) : </label></br> <input id="8" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Graphics : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>API support - OpenCL :</label></br>
-								<input type="radio" name="FeatureAPI support - OpenCL" value="oui">Yes <input type="radio" name="FeatureAPI support - OpenCL" value = "non">No <input type="radio" name="FeatureAPI support - OpenCL" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Code name : </label></br> <input id="11" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Shader 
-model : </label></br> <input id="12" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>API support - OpenGL : </label></br> <input id="13" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Execution 
-units : </label></br> <input id="14" type="number" name="Feature"></br>
+								<label>Execution units : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
 								<label>Hardware acceleration - CVT HD :</label></br>
@@ -83,61 +41,61 @@ units : </label></br> <input id="14" type="number" name="Feature"></br>
 								<label>Hardware acceleration - QSV :</label></br>
 								<input type="radio" name="FeatureHardware acceleration - QSV" value="oui">Yes <input type="radio" name="FeatureHardware acceleration - QSV" value = "non">No <input type="radio" name="FeatureHardware acceleration - QSV" value = "non">Partial </br>
 											<input type="text"/></br>								
+								</br>	
+								<label>DVMT (MB) : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Device id. : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory bandwidth(GB/s) : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Core clock (MHz) : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Shader model : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Code name : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Market : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>CPU : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>API support - OpenGL : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>API support - OpenCL :</label></br>
+								<input type="radio" name="FeatureAPI support - OpenCL" value="oui">Yes <input type="radio" name="FeatureAPI support - OpenCL" value = "non">No <input type="radio" name="FeatureAPI support - OpenCL" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>API support - DirectX : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Launch : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 						<script>
+								$("#0").typeahead({
+									name:"Graphics",
+									local : ['HD Graphics','HD Graphics 3000','HD Graphics 2000','HD Graphics P3000','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['0102
-0106
-0112
-0116
-0122
-0126
-010A','']
+									name:"Device id.",
+									local : ['010201060112011601220126010A','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Core i3-23x0E
-Core i3-23xxM
-Core i5-251xE
-Core i5-2xxxM
-Core i7-2xxxQM
-Core i7-271xQE
-Core i7-29x0XM','Celeron G4x0
-Celeron G5x0
-Celeron G530T
-Pentium G6xx
-Pentium G6x0T
-Pentium G8x0','Celeron B7x0
-Celeron 8x7
-Celeron B8xx
-Pentium B9x0
-Pentium 9x7','Xeon E3-12x5','Xeon E3-1260L','Core i3-2102
-Core i3-21x0
-Core i3-21x0T
-Core i5-2xx0
-Core i5-2x00S
-Core i5-2xx0T
-Core i7-2600
-Core i7-2600S','Core i3-21x5
-Core i5-2405S
-Core i5-2500K
-Core i7-2x00K','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Core clock (MHz)",
 									local : ['350–1150','850–1350','650–1300','650–1100','650–1350','']
 								});
+								$("#3").typeahead({
+									name:"Code name",
+									local : ['Sandy Bridge','']
+								});
 								$("#4").typeahead({
-									name:"list4",
+									name:"Market",
 									local : ['Workstation','Desktop','Mobile','']
 								});
 								$("#5").typeahead({
-									name:"list5",
-									local : ['HD Graphics','HD Graphics 3000','HD Graphics 2000','HD Graphics P3000','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['Sandy Bridge','']
+									name:"CPU",
+									local : ['Core i3-23x0ECore i3-23xxMCore i5-251xECore i5-2xxxMCore i7-2xxxQMCore i7-271xQECore i7-29x0XM','Celeron G4x0Celeron G5x0Celeron G530TPentium G6xxPentium G6x0TPentium G8x0','Celeron B7x0Celeron 8x7Celeron B8xxPentium B9x0Pentium 9x7','Xeon E3-12x5','Xeon E3-1260L','Core i3-2102Core i3-21x0Core i3-21x0TCore i5-2xx0Core i5-2x00SCore i5-2xx0TCore i7-2600Core i7-2600S','Core i3-21x5Core i5-2405SCore i5-2500KCore i7-2x00K','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

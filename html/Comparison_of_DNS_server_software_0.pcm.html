@@ -29,21 +29,6 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Slave mode :</label></br>
-								<input type="radio" name="FeatureSlave mode" value="oui">Yes <input type="radio" name="FeatureSlave mode" value = "non">No <input type="radio" name="FeatureSlave mode" value = "non">Partial </br>
-								
-								</br>	
-								<label>Server : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Authoritative :</label></br>
-								<input type="radio" name="FeatureAuthoritative" value="oui">Yes <input type="radio" name="FeatureAuthoritative" value = "non">No <input type="radio" name="FeatureAuthoritative" value = "non">Partial </br>
-								
-								</br>	
-								<label>IPv6 :</label></br>
-								<input type="radio" name="FeatureIPv6" value="oui">Yes <input type="radio" name="FeatureIPv6" value = "non">No <input type="radio" name="FeatureIPv6" value = "non">Partial </br>
-								
-								</br>	
 								<label>Recursion ACL :</label></br>
 								<input type="radio" name="FeatureRecursion ACL" value="oui">Yes <input type="radio" name="FeatureRecursion ACL" value = "non">No <input type="radio" name="FeatureRecursion ACL" value = "non">Partial </br>
 								
@@ -52,28 +37,16 @@
 								<input type="radio" name="FeatureDNSSEC" value="oui">Yes <input type="radio" name="FeatureDNSSEC" value = "non">No <input type="radio" name="FeatureDNSSEC" value = "non">Partial </br>
 								
 								</br>	
-								<label>split horizon :</label></br>
-								<input type="radio" name="Featuresplit horizon" value="oui">Yes <input type="radio" name="Featuresplit horizon" value = "non">No <input type="radio" name="Featuresplit horizon" value = "non">Partial </br>
-								
-								</br>	
-								<label>Caching :</label></br>
-								<input type="radio" name="FeatureCaching" value="oui">Yes <input type="radio" name="FeatureCaching" value = "non">No <input type="radio" name="FeatureCaching" value = "non">Partial </br>
-								
-								</br>	
-								<label>Free Software :</label></br>
-								<input type="radio" name="FeatureFree Software" value="oui">Yes <input type="radio" name="FeatureFree Software" value = "non">No <input type="radio" name="FeatureFree Software" value = "non">Partial </br>
-								
-								</br>	
-								<label>Wildcard :</label></br>
-								<input type="radio" name="FeatureWildcard" value="oui">Yes <input type="radio" name="FeatureWildcard" value = "non">No <input type="radio" name="FeatureWildcard" value = "non">Partial </br>
-								
-								</br>	
 								<label>TSIG :</label></br>
 								<input type="radio" name="FeatureTSIG" value="oui">Yes <input type="radio" name="FeatureTSIG" value = "non">No <input type="radio" name="FeatureTSIG" value = "non">Partial </br>
 								
 								</br>	
 								<label>Recursive :</label></br>
 								<input type="radio" name="FeatureRecursive" value="oui">Yes <input type="radio" name="FeatureRecursive" value = "non">No <input type="radio" name="FeatureRecursive" value = "non">Partial </br>
+								
+								</br>	
+								<label>Wildcard :</label></br>
+								<input type="radio" name="FeatureWildcard" value="oui">Yes <input type="radio" name="FeatureWildcard" value = "non">No <input type="radio" name="FeatureWildcard" value = "non">Partial </br>
 								
 								</br>	
 								<label>Interface :</label></br>
@@ -92,10 +65,36 @@
 											<input type="checkbox" name="Feature" >API</br>	
 											<input type="checkbox" name="Feature" >WMI</br>	
 											<input type="checkbox" name="Feature" >RPC</br>	
-									
+							
+								</br>	
+								<label>Server : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>split horizon :</label></br>
+								<input type="radio" name="Featuresplit horizon" value="oui">Yes <input type="radio" name="Featuresplit horizon" value = "non">No <input type="radio" name="Featuresplit horizon" value = "non">Partial </br>
+								
+								</br>	
+								<label>Caching :</label></br>
+								<input type="radio" name="FeatureCaching" value="oui">Yes <input type="radio" name="FeatureCaching" value = "non">No <input type="radio" name="FeatureCaching" value = "non">Partial </br>
+								
+								</br>	
+								<label>Authoritative :</label></br>
+								<input type="radio" name="FeatureAuthoritative" value="oui">Yes <input type="radio" name="FeatureAuthoritative" value = "non">No <input type="radio" name="FeatureAuthoritative" value = "non">Partial </br>
+								
+								</br>	
+								<label>IPv6 :</label></br>
+								<input type="radio" name="FeatureIPv6" value="oui">Yes <input type="radio" name="FeatureIPv6" value = "non">No <input type="radio" name="FeatureIPv6" value = "non">Partial </br>
+								
+								</br>	
+								<label>Free Software :</label></br>
+								<input type="radio" name="FeatureFree Software" value="oui">Yes <input type="radio" name="FeatureFree Software" value = "non">No <input type="radio" name="FeatureFree Software" value = "non">Partial </br>
+								
+								</br>	
+								<label>Slave mode :</label></br>
+								<input type="radio" name="FeatureSlave mode" value="oui">Yes <input type="radio" name="FeatureSlave mode" value = "non">No <input type="radio" name="FeatureSlave mode" value = "non">Partial </br>
+								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Server",
 									local : ['Dnsmasq','Unbound','YADIFA','djbdns','Nominum Vantio','yaku-ns','pdnsd','NSD','Nominum ANS','Posadis','gdnsd','dbndns','MaraDNS','PowerDNS','Microsoft DNS','dnrd','Knot DNS','BIND','Simple DNS Plus','DNS Blast','']
 								});
 						</script>

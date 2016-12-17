@@ -33,22 +33,7 @@
 								<input type="radio" name="FeatureDebugger" value="oui">Yes <input type="radio" name="FeatureDebugger" value = "non">No <input type="radio" name="FeatureDebugger" value = "non">Partial </br>
 								
 								</br>	
-								<label>Mac OS X :</label></br>
-								<input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </br>
-								
-								</br>	
-								<label>Linux :</label></br>
-								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
-								
-								</br>	
-								<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Developer : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>IDE : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>IDE : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Windows :</label></br>
 								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
@@ -58,24 +43,35 @@
 								<input type="radio" name="FeatureGUI builder" value="oui">Yes <input type="radio" name="FeatureGUI builder" value = "non">No <input type="radio" name="FeatureGUI builder" value = "non">Partial </br>
 								
 								</br>	
-								<label>Other platforms : </label></br> <input id="9" type="text" name="Feature"></br>
+								<label>Linux :</label></br>
+								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
 								
+								</br>	
+								<label>Mac OS X :</label></br>
+								<input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </br>
+								
+								</br>	
+								<label>Other platforms : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Developer : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Proprietary','MIT License','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Cincom','Object Arts','INRIA','squeak.org','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"IDE",
 									local : ['Squeak','Dolphin Smalltalk','Pharo','VisualWorks','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Other platforms",
 									local : ['various','','']
+								});
+								$("#2").typeahead({
+									name:"License",
+									local : ['Proprietary','MIT License','']
+								});
+								$("#3").typeahead({
+									name:"Developer",
+									local : ['Cincom','Object Arts','INRIA','squeak.org','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

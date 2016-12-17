@@ -29,6 +29,23 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Latest edition : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>First published : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Usage examples (approx.) :</label></br>
+											<input type="checkbox" name="Feature" >160</br>	
+											<input type="checkbox" name="Feature" >000</br>	
+											<input type="checkbox" name="Feature" >165</br>	
+											<input type="checkbox" name="Feature" >85</br>	
+							
+								</br>	
+								<label>Title : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Year : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
 								<label>Pages :</label></br>
 											<input type="checkbox" name="Feature" >2</br>	
 											<input type="checkbox" name="Feature" >032</br>	
@@ -38,48 +55,27 @@
 											<input type="checkbox" name="Feature" >796</br>	
 											<input type="checkbox" name="Feature" >080</br>	
 											<input type="checkbox" name="Feature" >082</br>	
-									
+							
 								</br>	
-								<label>Latest edition : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Publisher : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Year : </label></br> <input id="3" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>Main dialect : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Title : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Usage examples (approx.) : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Publisher : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>First published : </label></br> <input id="8" type="number" name="Feature"></br>
-								
+								<label>Main dialect : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Latest edition",
 									local : ['2nd (ISBN 1-4050-2526-3)','4th (ISBN 9781107619500)','1st (ISBN 0-87779-550-9)','7th (ISBN 9781424027514)','9th (ISBN 0-19-479900-X)','6th (ISBN 1-408-21533-0)','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['British','American','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Title",
 									local : ['Collins COBUILD Advanced Dictionary','Oxford Advanced Learner's Dictionary','Longman Dictionary of Contemporary English','Macmillan English Dictionary for Advanced Learners','Merriam-Webster's Advanced Learner's English Dictionary','Cambridge Advanced Learner's Dictionary','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['160,000','165,000','','85,000','']
-								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#2").typeahead({
+									name:"Publisher",
 									local : ['Oxford University Press','Cambridge University Press','Macmillan Education','Collins Cobuild','Pearson-Longman','Merriam-Webster','']
+								});
+								$("#3").typeahead({
+									name:"Main dialect",
+									local : ['British','American','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

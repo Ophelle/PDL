@@ -29,25 +29,22 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>finalizer : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>destructor : </label></br> <input id="1" type="text" name="Feature"></br>
-								
 								</br>	
 								<label>constructor : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>finalizer : </label></br> <input id="3" type="text" name="Feature"></br>
-								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"finalizer",
 									local : ['','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"destructor",
 									local : ['','N/A','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#2").typeahead({
+									name:"constructor",
 									local : ['','N/A','constructor(«parameters») { instructions }','']
 								});
 						</script>

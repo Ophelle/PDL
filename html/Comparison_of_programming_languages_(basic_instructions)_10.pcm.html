@@ -29,39 +29,34 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>branch (goto) : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>branch (goto) : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>exit block(break) : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>exit block(break) : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>continue : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>label : </label></br> <input id="3" type="text" name="Feature"></br>
-								
 								</br>	
 								<label>return value from generator : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>continue : </label></br> <input id="5" type="text" name="Feature"></br>
-								
 						<script>
+								$("#0").typeahead({
+									name:"branch (goto)",
+									local : ['','N/A','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"exit block(break)",
 									local : ['','N/A','...','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"continue",
 									local : ['','N/A','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['','N/A','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+									name:"label",
 									local : ['','...','N/A','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#4").typeahead({
+									name:"return value from generator",
 									local : ['','(Callback)','N/A','']
 								});
 						</script>

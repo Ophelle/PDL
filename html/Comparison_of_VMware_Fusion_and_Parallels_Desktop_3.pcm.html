@@ -29,48 +29,44 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Windows Launch Performance : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Application Launch : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Footprint on Mac : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Application Performance :</label></br>
-											<input type="checkbox" name="Feature" >Both products did well</br>	
-											<input type="checkbox" name="Feature" >except for IE where Parallels Desktop is 80-91% faster</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
 								</br>	
 								<label>3D and HD Performance :</label></br>
 											<input type="checkbox" name="Feature" >Dependent on game</br>	
 											<input type="checkbox" name="Feature" >video and Windows environment.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Test Suite : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Footprint on Mac : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Application Performance :</label></br>
+											<input type="checkbox" name="Feature" >Both products did well</br>	
+											<input type="checkbox" name="Feature" >except for IE where Parallels Desktop is 80-91% faster</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>CPU :</label></br>
 											<input type="checkbox" name="Feature" >Parallels Desktop for Mac</br>	
 											<input type="checkbox" name="Feature" >except for 2 of the 14 tests</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Windows Launch Performance : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Test Suite : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
+								$("#0").typeahead({
+									name:"Windows Launch Performance",
+									local : ['Parallels Desktop for Mac','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Application Launch",
 									local : ['VMware Fusion','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Parallels Desktop for Mac','']
+									name:"Test Suite",
+									local : ['Performance Winner','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Footprint on Mac",
 									local : ['Parallels Desktop for Mac','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['Performance Winner','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

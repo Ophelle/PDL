@@ -29,61 +29,57 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Type : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Themeable :</label></br>
-								<input type="radio" name="FeatureThemeable" value="oui">Yes <input type="radio" name="FeatureThemeable" value = "non">No <input type="radio" name="FeatureThemeable" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
 								<label>Panel for window switching :</label></br>
 								<input type="radio" name="FeaturePanel for window switching" value="oui">Yes <input type="radio" name="FeaturePanel for window switching" value = "non">No <input type="radio" name="FeaturePanel for window switching" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Language : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Type : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Configurable titlebar buttons :</label></br>
-								<input type="radio" name="FeatureConfigurable titlebar buttons" value="oui">Yes <input type="radio" name="FeatureConfigurable titlebar buttons" value = "non">No <input type="radio" name="FeatureConfigurable titlebar buttons" value = "non">Partial </br>
+								<label>Tabbed windows :</label></br>
+								<input type="radio" name="FeatureTabbed windows" value="oui">Yes <input type="radio" name="FeatureTabbed windows" value = "non">No <input type="radio" name="FeatureTabbed windows" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
 								<label>Graphical configuration :</label></br>
 								<input type="radio" name="FeatureGraphical configuration" value="oui">Yes <input type="radio" name="FeatureGraphical configuration" value = "non">No <input type="radio" name="FeatureGraphical configuration" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Tabbed windows :</label></br>
-								<input type="radio" name="FeatureTabbed windows" value="oui">Yes <input type="radio" name="FeatureTabbed windows" value = "non">No <input type="radio" name="FeatureTabbed windows" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
 								<label>ICCCM/EWMH compliant :</label></br>
 								<input type="radio" name="FeatureICCCM/EWMH compliant" value="oui">Yes <input type="radio" name="FeatureICCCM/EWMH compliant" value = "non">No <input type="radio" name="FeatureICCCM/EWMH compliant" value = "non">Partial </br>
 											<input type="text"/></br>								
+								</br>	
+								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Configurable titlebar buttons :</label></br>
+								<input type="radio" name="FeatureConfigurable titlebar buttons" value="oui">Yes <input type="radio" name="FeatureConfigurable titlebar buttons" value = "non">No <input type="radio" name="FeatureConfigurable titlebar buttons" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Name : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Language : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Hotkey :</label></br>
 								<input type="radio" name="FeatureHotkey" value="oui">Yes <input type="radio" name="FeatureHotkey" value = "non">No <input type="radio" name="FeatureHotkey" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Name : </label></br> <input id="11" type="text" name="Feature"></br>
-								
+								<label>Themeable :</label></br>
+								<input type="radio" name="FeatureThemeable" value="oui">Yes <input type="radio" name="FeatureThemeable" value = "non">No <input type="radio" name="FeatureThemeable" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Type",
 									local : ['Stacking','Tiling and stacking','Dynamic','Compositing','Tiling','re-parenting','Compositing or Stacking','stacking','Tiling and Stacking','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['C (Clutter)','C (OpenGL)','C++','Common Lisp','C, C++ (GTK+)','C','Haskell','Lisp, C','Go','C, Lua','C++ (Qt)','C (FLTK)','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"License",
 									local : ['GPL','MIT License','WTFPL','MIT','BSD','Artistic','ISC','The Open Group Public License','LGPL with naming restrictions on modified versions','GPL, LGPL','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#2").typeahead({
+									name:"Name",
 									local : ['PekWM','Enlightenment','twm','9wm','evilwm','Blackbox','Fluxbox','i3','Xfwm (Xfce)','Wingo','mwm (Motif Window Manager)','Mutter (GNOME/MeeGo)','Matchbox','Ion','Compiz','KWin (KDE)','Ratpoison','Metacity (GNOME)','Sawfish','WMFS','wmii','aewm','cwm','FLWM','IceWM','FVWM','awesome','JWM','xmonad','StumpWM','dwm','PlayWM','spectrwm','Openbox','sithWM','']
+								});
+								$("#3").typeahead({
+									name:"Language",
+									local : ['C (Clutter)','C (OpenGL)','C++','Common Lisp','C, C++ (GTK+)','C','Haskell','Lisp, C','Go','C, Lua','C++ (Qt)','C (FLTK)','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

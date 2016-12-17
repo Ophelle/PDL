@@ -29,135 +29,79 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Device id. : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Graphics : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>API support - DirectX : </label></br> <input id="2" type="number" name="Feature"></br>
+								<label>Core clock (MHz) : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>DVMT (MB) : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Shader model : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Code name : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory bandwidth(GB/s) : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Market : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Device id. : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>CPU : </label></br> <input id="8" type="text" name="Feature"></br>
+								</br>	
+								<label>Launch : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>CPU : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Hardware acceleration - CVT HD : </label></br> <input id="9" type="text" name="Feature"></br>
 								</br>	
-								<label>Core clock (MHz) : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Hardware acceleration - QSV : </label></br> <input id="10" type="text" name="Feature"></br>
 								</br>	
-								<label>Market : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Execution units : </label></br> <input id="11" type="text" name="Feature"></br>
 								</br>	
-								<label>Launch : </label></br> <input id="6" type="number" name="Feature"></br>
+								<label>API support - OpenCL : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Memory bandwidth
-(GB/s) : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>API support - OpenGL : </label></br> <input id="12" type="text" name="Feature"></br>
 								</br>	
-								<label>DVMT 
-(MB) : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Graphics : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>API support - OpenCL : </label></br> <input id="10" type="number" name="Feature"></br>
+								<label>API support - DirectX : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
-								</br>	
-								<label>Code name : </label></br> <input id="11" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Shader 
-model : </label></br> <input id="12" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>API support - OpenGL : </label></br> <input id="13" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Hardware acceleration - CVT HD : </label></br> <input id="14" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Hardware acceleration - QSV : </label></br> <input id="15" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Execution 
-units : </label></br> <input id="16" type="text" name="Feature"></br>
-								
 						<script>
+								$("#0").typeahead({
+									name:"Graphics",
+									local : ['HD Graphics','Iris Pro Graphics 6200','HD Graphics 5500','HD Graphics 6000','HD Graphics 5300','Iris Graphics 6100','HD Graphics 5600','Iris Pro Graphics P6300','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['1602 
-1606 
-160A 
-160B 
-160D 
-160E 
-1612 
-1616 
-161A 
-161B 
-161D 
-161E 
-
-1622 
-1626 
-162A 
-162B 
-162D 
-162E 
-1632 
-1636 
-163A 
-163B 
-163D 
-163E','22B0 
-22B1 
-22B2 
-22B3','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Core i7-5700EQ','Core i7-5950HQ','Core i5-5675C
- Core i5-5675R','Core i7-5850EQ','Pentium N3700','Core i3-5005U','Core i3-5157U','Celeron 3215U
- Celeron 3765U
-Pentium 3825U','Core i5-5x00U','Core i5-5287U
- Core i7-5557U','Core i5-5350H','Celeron 3205U
- Celeron 3755U
- Pentium 3805U','Core M-5Y10c','Core M-5Y70','Atom x5-Z8x00','Core i5-5575R','Xeon E3-1278L v4','Core M-5Y10
-Core M-5Y10a','Core M-5Y31','Core i5-5250U','Xeon E3-1265L v4','Atom x7-Z8700','Core i7-5700HQ','Core i7-5750HQ
- Core i7-5850HQ','Core i5-5257U','Core i7-5775C
- Core i5-5775R','Core i5-5350U
- Core i7-5x50U','Core M-5Y51
-Core M-5Y71','Core i3-5010U','Core i7-5x00U','Celeron N3xx0','Xeon E3-1285 v4
- Xeon E3-1285L v4','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Core clock (MHz)",
 									local : ['300–1150','300–850','300–1050','800–1000','320-640','400-700','300–950','100–800','300–1000','300–900','300–1100','200-600','300–800','100–850','']
 								});
+								$("#2").typeahead({
+									name:"DVMT (MB)",
+									local : ['','?','']
+								});
+								$("#3").typeahead({
+									name:"Shader model",
+									local : ['','?','']
+								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['Mobile','Ultramobile','Desktop','Workstation','']
+									name:"Code name",
+									local : ['Broadwell','Cherryview (Braswell, Cherry Trail)','']
 								});
 								$("#5").typeahead({
-									name:"list5",
+									name:"Memory bandwidth(GB/s)",
 									local : ['','?','']
 								});
 								$("#6").typeahead({
-									name:"list6",
-									local : ['','?','']
+									name:"Market",
+									local : ['Mobile','Ultramobile','Desktop','Workstation','']
 								});
 								$("#7").typeahead({
-									name:"list7",
-									local : ['HD Graphics','Iris Pro Graphics 6200','HD Graphics 5500','HD Graphics 6000','HD Graphics 5300','Iris Graphics 6100','HD Graphics 5600','Iris Pro Graphics P6300','']
+									name:"Device id.",
+									local : ['1602 1606 160A 160B 160D 160E 1612 1616 161A 161B 161D 161E 1622 1626 162A 162B 162D 162E 1632 1636 163A 163B 163D 163E','22B0 22B1 22B2 22B3','']
 								});
 								$("#8").typeahead({
-									name:"list8",
-									local : ['Broadwell','Cherryview (Braswell, Cherry Trail)','']
+									name:"CPU",
+									local : ['Core i7-5700EQ','Core i7-5950HQ','Core i5-5675C Core i5-5675R','Core i7-5850EQ','Pentium N3700','Core i3-5005U','Core i3-5157U','Celeron 3215U Celeron 3765UPentium 3825U','Core i5-5x00U','Core i5-5287U Core i7-5557U','Core i5-5350H','Celeron 3205U Celeron 3755U Pentium 3805U','Core M-5Y10c','Core M-5Y70','Atom x5-Z8x00','Core i5-5575R','Xeon E3-1278L v4','Core M-5Y10Core M-5Y10a','Core M-5Y31','Core i5-5250U','Xeon E3-1265L v4','Atom x7-Z8700','Core i7-5700HQ','Core i7-5750HQ Core i7-5850HQ','Core i5-5257U','Core i7-5775C Core i5-5775R','Core i5-5350U Core i7-5x50U','Core M-5Y51Core M-5Y71','Core i3-5010U','Core i7-5x00U','Celeron N3xx0','Xeon E3-1285 v4 Xeon E3-1285L v4','']
 								});
 								$("#9").typeahead({
-									name:"list9",
-									local : ['','?','']
-								});
-								$("#10").typeahead({
-									name:"list10",
+									name:"Execution units",
 									local : ['12','24 (GT2)','48+eDRAM (GT3e)','48 (GT3)','16','23 (GT2)','12 (GT1)','']
 								});
 						</script>

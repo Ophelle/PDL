@@ -29,6 +29,10 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Year : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Audio : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
 								<label>Codename :</label></br>
 											<input type="checkbox" name="Feature" >IXP300</br>	
 											<input type="checkbox" name="Feature" >SB300</br>	
@@ -40,30 +44,19 @@
 											<input type="checkbox" name="Feature" >SB450</br>	
 											<input type="checkbox" name="Feature" >IXP460</br>	
 											<input type="checkbox" name="Feature" >SB460</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
-								<label>SATA Ports : </label></br> <input id="2" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Model : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Year : </label></br> <input id="3" type="text" name="Feature"></br>
+								<label>SATA Ports : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Model : </label></br> <input id="4" type="text" name="Feature"></br>
+								<label>Fabricationprocess (nm) : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>USB Ports : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>USB Ports : </label></br> <input id="5" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Audio : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>IDE Channels
-(2 Devices/Channel) : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fabrication
-process (nm) : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>IDE Channels(2 Devices/Channel) : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Notes :</label></br>
 											<input type="checkbox" name="Feature" >3Com 10</br>	
@@ -82,30 +75,27 @@ APM</br>
 											<input type="checkbox" name="Feature" >10
 eSATA</br>	
 											<input type="checkbox" name="Feature" >ASF 2.0</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Year",
 									local : ['2004','2006','','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['AMD 480/570/580 
-CrossFire Chipset','Radeon Xpress 200
-Radeon Xpress 1150','Radeon Xpress 1600
-Radeon Xpress 1150','','Radeon 330 IGP','Radeon 9100 IGP','Radeon 340 IGP','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Audio",
 									local : ['AC'97','HD','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['1 (UDMA 33/66/100/133)','1','2 (UDMA33/66)','1 (ATA 133)','1 (UDMA 100)','2','2 (UDMA 100/133)','']
+								$("#2").typeahead({
+									name:"Model",
+									local : ['AMD 480/570/580 CrossFire Chipset','Radeon Xpress 200Radeon Xpress 1150','Radeon Xpress 1600Radeon Xpress 1150','','Radeon 330 IGP','Radeon 9100 IGP','Radeon 340 IGP','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#3").typeahead({
+									name:"Fabricationprocess (nm)",
 									local : ['','130','']
+								});
+								$("#4").typeahead({
+									name:"IDE Channels(2 Devices/Channel)",
+									local : ['1 (UDMA 33/66/100/133)','1','2 (UDMA33/66)','1 (ATA 133)','1 (UDMA 100)','2','2 (UDMA 100/133)','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

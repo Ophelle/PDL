@@ -180,16 +180,11 @@
 											<input type="checkbox" name="Feature" >and Business Catalyst</br>	
 											<input type="checkbox" name="Feature" >ODBC</br>	
 											<input type="checkbox" name="Feature" >CSV</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Platform : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>System : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>First Release Date : </label></br> <input id="4" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Platform : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Features :</label></br>
 											<input type="checkbox" name="Feature" >All-in-one CRM</br>	
@@ -402,30 +397,30 @@
 											<input type="checkbox" name="Feature" >Dispatching</br>	
 											<input type="checkbox" name="Feature" >Automated Reports</br>	
 											<input type="checkbox" name="Feature" >and built-in Knowledge Base.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Creator : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>First Release Date : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 								</br>	
-								<label>System : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Creator : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"System",
+									local : ['allocPSA','Vision','Autotask','Mavenlink','Tenrox PSA','Kimble','10,000ft','PROMYS PSA Anywhere','moon','AffinityLive','Clarizen','Connectwise','AtTask','WinServ','HarmonyPSA ]','Talygen','PacketTrap','CommitCRM','TrackerSuite.Net','FinancialForce PSA','Projectex','Changepoint','V1 PSA (Formerly Sharpowl)','Projector','Atollon Lagoon','Precursive]','Q360 Enterprise','Tigerpaw Business Suite','SherpaDesk','Pie','OpenAir','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Platform",
 									local : ['Cloud computing with mobile app for iOS and Android','Web-based application with mobile app for iPhone','Web-based application','Cloud computing based application running natively on Force.com','Desktop Client-Server','Web-Based','Web-Based supporting any iPhone, Android, Blackberry or Windows Mobile device','Locally hosted Web-Based client','On-Premise; Web-Based; HTML 5 Web-Based Mobile Solution','Web-based','MS/SQL Server On Premises or Hosted with Mobile Smart Device access','Cloud or Self-Hosted','Web-Based and Windows Client','Cloud or Web-Based application with mobile web apps for iPhone, Android, BlackBerry or Windows Mobile','Microsoft Server 2008, Microsoft SQL Server 2008','Web-Based or On-Premises','On-Premise; RemoteApp; Web-Based; iPhone Application','Cloud based application running natively on Force.com','Web-based and mobile application','Web-Based Mobility solutions for tablets and smartphone devices through multiple browsers','Windows, Web-Based','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['SaaS, Buy and Host & On-Premises','SaaS & On-Premises','SaaS','SaaS or On-site','SaaS \
-OnPremise','','OnPremise/SaaS','Commercial','Concurrent or Named','Affero General Public License & SaaS','Active resource','']
+									name:"License",
+									local : ['SaaS, Buy and Host & On-Premises','SaaS & On-Premises','SaaS','SaaS or On-site','SaaS \OnPremise','','OnPremise/SaaS','Commercial','Concurrent or Named','Affero General Public License & SaaS','Active resource','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Creator",
 									local : ['Atollon','Kimble Applications','AIT TMS','V1 Ltd','PIEmatrix','W.S Software Inc.','Connectwise.com','bigWebApps','PacketTrap PSA','Clarizen','Mavenlink','NetSuite','Precursive Ltd','Projector PSA','AtTask','Tigerpaw Software, Inc.','Tenrox','Autotask Corporation','Datalogic Solutions Ltd','Cyber IT Solutions','Artefact Product Group','Solutions360 Inc.','Deltek','FinancialForce.com','AffinityLive','Talygen Business Intelligence','PROMYS Inc.','Automation Centre','Commit Business Solutions Ltd','MoonPSA','Compuware','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['allocPSA','Vision','Autotask','Mavenlink','Tenrox PSA','Kimble','10,000ft','PROMYS PSA Anywhere','moon','AffinityLive','Clarizen','Connectwise','AtTask','WinServ','HarmonyPSA ]','Talygen','PacketTrap','CommitCRM','TrackerSuite.Net','FinancialForce PSA','Projectex','Changepoint','V1 PSA (Formerly Sharpowl)','Projector','Atollon Lagoon','Precursive]','Q360 Enterprise','Tigerpaw Business Suite','SherpaDesk','Pie','OpenAir','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

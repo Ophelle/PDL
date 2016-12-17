@@ -29,23 +29,21 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Product : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Free :</label></br>
 								<input type="radio" name="FeatureFree" value="oui">Yes <input type="radio" name="FeatureFree" value = "non">No <input type="radio" name="FeatureFree" value = "non">Partial </br>
 											<input type="text"/></br>								
+								</br>	
+								<label>Product : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['','Proprietary','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Product",
 									local : ['Kindle','MegaReader','ShuBook','Bluefire Reader','Apabi Reader','Kobo Reading App','Stanza','iBooks','DL Reader','Blio','uBooks','iBouquiniste','eBookMobi','i2Reader','Marvin','Ebook Reader','']
+								});
+								$("#1").typeahead({
+									name:"License",
+									local : ['','Proprietary','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

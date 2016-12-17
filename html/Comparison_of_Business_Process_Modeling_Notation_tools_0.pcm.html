@@ -29,17 +29,16 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>First Release : </label></br> <input id="1" type="number" name="Feature"></br>
+								<label>Platform / OS : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>First Release : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Latest Release : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Creator : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Software license : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Software license : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Platform / OS : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>BPMN Version : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Features :</label></br>
 											<input type="checkbox" name="Feature" >Powerful as a standalone BPM application. Integrated suite of applications to provide end-to-end Solutions for Human and Content Centric Processes. Single vendor solution from HP MFPs to Document Capture to Process Automation to Content Management to Records Retention to Legal Holds to Content Distribution</br>	
@@ -218,44 +217,35 @@ iServer supports BPMN 2.0 XML.</br>
 											<input type="checkbox" name="Feature" >supports Visio files</br>	
 											<input type="checkbox" name="Feature" >JIRA integration</br>	
 											<input type="checkbox" name="Feature" >Confluence integration</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Creator : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Name : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>BPMN Version : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Name : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Latest Release : </label></br> <input id="5" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Platform / OS",
+									local : ['Windows, Citrix','Windows','Windows (and Linux, Mac unofficially)','Cross-platform (browser based)','Windows, Linux, Mac OS','Cloud (browser based)','Windows SharePoint Microsoft Visio','Platform independent web application, Windows, Mac, Linux','Linux, AIX, HP-UX, Solaris, Windows','Windows, Linux','Cross-Platform, Cloud and On-Premise','Cross-platform','Windows, Mac, Linux/Unix','Java / Windows','Cross plattform','Enterprise Architecture tool','cross-platform, java, eclipse','Cloud or On-premise (Windows, Linux) server),  Client-side browser','Windows, Linux, Mac','Windows, Linux, Mac, Solaris','Windows, Mac ( Linux unofficially)','Java / Windows, Linux, Mac, Solaris','Microsoft SharePoint','Cloud','Windows, Mac, Linux','iOS, Android','Windows, Linux, OS X, Solaris','iOS, Android, Windows, Linux, OS X','Windows Cloud & On-premise','Windows and Cross-platform (via iGrafx Cloud)','Windows Microsoft Visio SharePoint','eclipse based tool for creating executable processes','Mac','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['','2014, September','March 2014','2014-11-16','2014-10-16','updated monthly','2013','updated every week','2015','2012-07','2012-03','2014-01','2014','2013-02','September 2014','2014-05','2012','2012-12-19','2012-05-10','2014-08-02','2014-Feb','2014-10-01','2013-Sep','2010','2014-03-31','Bi-yearly','2013-08','2015-01','2014-07-02','2009-07-04','Bi-monthly','2015, Apr','2013-14','2014-04-03','updated twice a month','2015-03','2013-03','2014-09-18','2013-06-12','2014-08-01','2014-06-02','2014-Jan','']
+									name:"Creator",
+									local : ['BOC Information Technologies Consulting AG','å?²è€€å¼º (Blenta)(Sourceforge ID)','ARCWAY AG','IntelliPROBPMS','itp commerce ag','Omni Group','Axellience','Altova','semture GmbH','IBM','Bizagi','Lucid Software Inc','Microsoft','iGrafx','TIBCO Software Inc.','Camunda Services GmbH','Informatica','Inspire Technologies','MID GmbH','Runa Consulting Group','Sparx Systems','BiZZdesign','Alfresco and the Activiti community','NetBeans Community project.','LINTRA Solutions GmbH','No Magic','SYDLE Systems','HP','Tabtou Ltd','Semtation GmbH','W4 Software','Artech','Eclipse.org. Eclipse SOA project.','Visual Paradigm','QPR Software Plc.','AXON iVY','Bonitasoft','Triaster','Redhat','Trisotech','Camunda','Pega BPM','yWorks','IMAGE Technology S.A.','Orbus Software','Intellivate GmbH','Software AG','Method Park','process4.biz Softwareentwicklungs- und Vertriebs GmbH','Signavio','Imixs-Workflow','Visible Systems','Dusan Rodina','AuraPortal','Borland','Modeliosoft','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Proprietary - 14 day free trial on team accounts / Free professional accounts for educators and students / Free version','Proprietary - Free trial version','GPLv2','Eclipse Public License 1.0','Proprietary','Apache License 2.0','Freeware','GPL (v4.0)
-Proprietary (V3.0)
-GPL (V2.2 and earlier)','Freeware (downloadable)','GPL','Proprietary/Shareware','Apache License','Free and open-source software (LGPL)','Proprietary, free single user (Designer) edition','Proprietary, shareware, 1 month free trial','Proprietary/Freeware','Proprietary, free Personal Edition','Suite Proprietary or Cloud and Modeler Freeware','Open source','Freeware (registration needed)','Proprietary, free Trial Edition','']
+									name:"Software license",
+									local : ['Proprietary - 14 day free trial on team accounts / Free professional accounts for educators and students / Free version','Proprietary - Free trial version','GPLv2','Eclipse Public License 1.0','Proprietary','Apache License 2.0','Freeware','GPL (v4.0)Proprietary (V3.0)GPL (V2.2 and earlier)','Freeware (downloadable)','GPL','Proprietary/Shareware','Apache License','Free and open-source software (LGPL)','Proprietary, free single user (Designer) edition','Proprietary, shareware, 1 month free trial','Proprietary/Freeware','Proprietary, free Personal Edition','Suite Proprietary or Cloud and Modeler Freeware','Open source','Freeware (registration needed)','Proprietary, free Trial Edition','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['Windows, Citrix','Windows','Windows (and Linux, Mac unofficially)','Cross-platform (browser based)','Windows, Linux, Mac OS','Cloud (browser based)','Windows SharePoint Microsoft Visio','Platform independent web application, Windows, Mac, Linux','Linux, AIX, HP-UX, Solaris, Windows','Windows, Linux','Cross-Platform, Cloud and On-Premise','Cross-platform','Windows, Mac, Linux/Unix','Java / Windows','Cross plattform','Enterprise Architecture tool','cross-platform, java, eclipse','Cloud or 
-On-premise (Windows, Linux) server),  Client-side browser','Windows, Linux, Mac','Windows, Linux, Mac, Solaris','Windows, Mac ( Linux unofficially)','Java / Windows, Linux, Mac, Solaris','Microsoft SharePoint','Cloud','Windows, Mac, Linux','iOS, Android','Windows, Linux, OS X, Solaris','iOS, Android, Windows, Linux, OS X','Windows Cloud & On-premise','Windows and Cross-platform (via iGrafx Cloud)','Windows Microsoft Visio SharePoint','eclipse based tool for creating executable processes','Mac','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['BOC Information Technologies Consulting AG','å?²è€€å¼º (Blenta)
-(Sourceforge ID)','ARCWAY AG','IntelliPROBPMS','itp commerce ag','Omni Group','Axellience','Altova','semture GmbH','IBM','Bizagi','Lucid Software Inc','Microsoft','iGrafx','TIBCO Software Inc.','Camunda Services GmbH','Informatica','Inspire Technologies','MID GmbH','Runa Consulting Group','Sparx Systems','BiZZdesign','Alfresco and the Activiti community','NetBeans Community project.','LINTRA Solutions GmbH','No Magic','SYDLE Systems','HP','Tabtou Ltd','Semtation GmbH','W4 Software','Artech','Eclipse.org. Eclipse SOA project.','Visual Paradigm','QPR Software Plc.','AXON iVY','Bonitasoft','Triaster','Redhat','Trisotech','Camunda','Pega BPM','yWorks','IMAGE Technology S.A.','Orbus Software','Intellivate GmbH','Software AG','Method Park','process4.biz Softwareentwicklungs- und Vertriebs GmbH','Signavio','Imixs-Workflow','Visible Systems','Dusan Rodina','AuraPortal','Borland','Modeliosoft','']
-								});
-								$("#5").typeahead({
-									name:"list5",
+									name:"BPMN Version",
 									local : ['BPMN 2.0','','BPMN 2.0 BPMN 1.2','BPMN 1.1, 2.0','BPMN 2.0+','BPMN','BPMN2.0','']
 								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#4").typeahead({
+									name:"Name",
 									local : ['IBM Rational System Architect','MagicDraw','Eclipse BPMN2 Modeler','Microsoft Visio 2013','inspire smart process Modeller','Agiles BPMS & ECM','Intellileap Solutions','BPMN Web Modeler','SemTalk','bpmn.io','jBPMN','GenMyModel','jBPM','process4.biz BPM','Enterprise Architect','Triaster','Logizian','Bonita BPM','Visible Analyst','Modelio','yEd','Borland Together','TIBCO ActiveMatrix','SYDLE SEED Community','Imixs-BPMN','Yaoqiang BPMN Editor','ARIS Express','Genexus WorkFlow','ADONIS (software)','W4 BPMN+','LucidChart','OmniGraffle','iServer','IBM Process Designer','INNOVATOR for Business Analysts','iGrafx Flowcharter, iGrafx Process','ActiveVOS','BPMN Visio Modeler','Altova UModel','Software Ideas Modeler','Bizagi Process Modeler','Stages','Bizagi BPM Suite','AuraPortal','Camunda Modeler','QUAM','Pega Systems','BiZZdesign Architect','Axon.ivy Designer','IYOPRO','Signavio Process Editor','ProcessCraft','Cubetto Toolset','HP Process Automation','RunaWFE','IBM BlueWorks Live','ARCWAY Cockpit','QPR ProcessDesigner','Process Modeler for Microsoft Visio','Activiti Modeler','Cubetto','']
+								});
+								$("#5").typeahead({
+									name:"Latest Release",
+									local : ['','2014, September','March 2014','2014-11-16','2014-10-16','updated monthly','2013','updated every week','2015','2012-07','2012-03','2014-01','2014','2013-02','September 2014','2014-05','2012','2012-12-19','2012-05-10','2014-08-02','2014-Feb','2014-10-01','2013-Sep','2010','2014-03-31','Bi-yearly','2013-08','2015-01','2014-07-02','2009-07-04','Bi-monthly','2015, Apr','2013-14','2014-04-03','updated twice a month','2015-03','2013-03','2014-09-18','2013-06-12','2014-08-01','2014-06-02','2014-Jan','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

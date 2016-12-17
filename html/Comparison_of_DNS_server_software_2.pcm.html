@@ -29,37 +29,33 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Software license : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Software license : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Creator : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Server : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Server : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Cost (USD) : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Cost (USD) : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Creator : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Public source code :</label></br>
 								<input type="radio" name="FeaturePublic source code" value="oui">Yes <input type="radio" name="FeaturePublic source code" value = "non">No <input type="radio" name="FeaturePublic source code" value = "non">Partial </br>
 											<input type="text"/></br>								
 						<script>
+								$("#0").typeahead({
+									name:"Software license",
+									local : ['Clickwrap license','BSD','GPL','Public domain','BSD variant','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Server",
 									local : ['Dnsmasq','NSD','YADIFA','MaraDNS','Nominum ANS','BIND','Simple DNS Plus','Microsoft DNS','Posadis','PowerDNS','Unbound','djbdns','yaku-ns','Knot DNS','gdnsd','pdnsd','DNS Blast','Nominum Vantio','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Clickwrap license','BSD','GPL','Public domain','BSD variant','']
+									name:"Cost (USD)",
+									local : ['Unpublished price','Free','Included with Windows Server','$79 – $379','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Creator",
 									local : ['PowerDNS.COM BV / Bert Hubert','Meilof Veeningen','Nominum','Simon Kelley','NLnet Labs','Brandon Black','Microsoft','Internet Systems Consortium','Sam Trenholme','CZ.NIC','Daniel J. Bernstein','JH Software','Thomas Moestl and Paul Rombouts','Salvatore Sanfilippo','EURid','EfficientIP','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['Unpublished price','Free','Included with Windows Server','$79 – $379','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

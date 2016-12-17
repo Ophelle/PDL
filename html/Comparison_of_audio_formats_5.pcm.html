@@ -29,17 +29,6 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Sample Rate : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>CBR :</label></br>
-								<input type="radio" name="FeatureCBR" value="oui">Yes <input type="radio" name="FeatureCBR" value = "non">No <input type="radio" name="FeatureCBR" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Multichannel :</label></br>
-								<input type="radio" name="FeatureMultichannel" value="oui">Yes <input type="radio" name="FeatureMultichannel" value = "non">No <input type="radio" name="FeatureMultichannel" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
 								<label>Bit rate :</label></br>
 											<input type="checkbox" name="Feature" >16</br>	
 											<input type="checkbox" name="Feature" >24</br>	
@@ -85,21 +74,17 @@
 											<input type="checkbox" name="Feature" >48 kbit</br>	
 											<input type="checkbox" name="Feature" >36</br>	
 											<input type="checkbox" name="Feature" >40</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
-								<label>Bits per sample : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Latency : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>VBR :</label></br>
 								<input type="radio" name="FeatureVBR" value="oui">Yes <input type="radio" name="FeatureVBR" value = "non">No <input type="radio" name="FeatureVBR" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Audio compression format : </label></br> <input id="7" type="text" name="Feature"></br>
 								
 								</br>	
 								<label>Stereo :</label></br>
 								<input type="radio" name="FeatureStereo" value="oui">Yes <input type="radio" name="FeatureStereo" value = "non">No <input type="radio" name="FeatureStereo" value = "non">Partial </br>
-											<input type="text"/></br>								
+								
 								</br>	
 								<label>Algorithm :</label></br>
 											<input type="checkbox" name="Feature" >sub-band ADPCM</br>	
@@ -122,26 +107,37 @@
 											<input type="checkbox" name="Feature" >TDAC</br>	
 											<input type="checkbox" name="Feature" >CS-ACELP</br>	
 											<input type="checkbox" name="Feature" >(incorporates elements of Siren Codec and Ericsson technology)</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
-								<label>Latency : </label></br> <input id="10" type="text" name="Feature"></br>
+								<label>Bits per sample : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Sample Rate : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Multichannel :</label></br>
+								<input type="radio" name="FeatureMultichannel" value="oui">Yes <input type="radio" name="FeatureMultichannel" value = "non">No <input type="radio" name="FeatureMultichannel" value = "non">Partial </br>
+								
+								</br>	
+								<label>Audio compression format : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>CBR :</label></br>
+								<input type="radio" name="FeatureCBR" value="oui">Yes <input type="radio" name="FeatureCBR" value = "non">No <input type="radio" name="FeatureCBR" value = "non">Partial </br>
 								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['8 kHz','48 kHz','32 kHz','8, 16 kHz','16 kHz','']
+								$("#0").typeahead({
+									name:"Latency",
+									local : ['','15 ms','125 µs (typical)','11.875 ms','4 ms','49.625 ms','125 µs','40 ms','37.5 ms','5–40 ms','0.625 ms','42.875–43.875 ms','48.9375 ms','25 ms','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Bits per sample",
 									local : ['13 bit','14 bit','8 bit (log)','16 bit','']
 								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['G.722.1','G.711.1','G.718','G.721','G.729E','G.729','G.718B','G.722.1C','G.727','G.726','G.722','G.728','G.711.0','G.729D','G.723','G.729.1','G.719','G.722.2 (AMR-WB)','G.711','G.723.1','']
+								$("#2").typeahead({
+									name:"Sample Rate",
+									local : ['8 kHz','48 kHz','32 kHz','8, 16 kHz','16 kHz','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['','15 ms','125 µs (typical)','11.875 ms','4 ms','49.625 ms','125 µs','40 ms','37.5 ms','5–40 ms','0.625 ms','42.875–43.875 ms','48.9375 ms','25 ms','']
+								$("#3").typeahead({
+									name:"Audio compression format",
+									local : ['G.722.1','G.711.1','G.718','G.721','G.729E','G.729','G.718B','G.722.1C','G.727','G.726','G.722','G.728','G.711.0','G.729D','G.723','G.729.1','G.719','G.722.2 (AMR-WB)','G.711','G.723.1','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

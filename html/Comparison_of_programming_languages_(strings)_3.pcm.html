@@ -29,19 +29,17 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Language(s) : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Syntax : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Syntax : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Language(s) : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['C, C++, C#, D, F#, Java, Ocaml, Perl, Python, JavaScript, Mathematica, Ya','Smalltalk','Windows Powershell','REBOL','Eiffel','FreeBASIC','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Syntax",
 									local : ['','']
+								});
+								$("#1").typeahead({
+									name:"Language(s)",
+									local : ['C, C++, C#, D, F#, Java, Ocaml, Perl, Python, JavaScript, Mathematica, Ya','Smalltalk','Windows Powershell','REBOL','Eiffel','FreeBASIC','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

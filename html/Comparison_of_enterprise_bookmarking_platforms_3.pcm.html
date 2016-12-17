@@ -29,6 +29,10 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Mandatory facets :</label></br>
+								<input type="radio" name="FeatureMandatory facets" value="oui">Yes <input type="radio" name="FeatureMandatory facets" value = "non">No <input type="radio" name="FeatureMandatory facets" value = "non">Partial </br>
+								
+								</br>	
 								<label>Restricted facets :</label></br>
 								<input type="radio" name="FeatureRestricted facets" value="oui">Yes <input type="radio" name="FeatureRestricted facets" value = "non">No <input type="radio" name="FeatureRestricted facets" value = "non">Partial </br>
 								
@@ -37,12 +41,9 @@
 								<input type="radio" name="FeatureFaceted classification" value="oui">Yes <input type="radio" name="FeatureFaceted classification" value = "non">No <input type="radio" name="FeatureFaceted classification" value = "non">Partial </br>
 								
 								</br>	
-								<label>Mandatory facets :</label></br>
-								<input type="radio" name="FeatureMandatory facets" value="oui">Yes <input type="radio" name="FeatureMandatory facets" value = "non">No <input type="radio" name="FeatureMandatory facets" value = "non">Partial </br>
-								
+								<label>Notes : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Software : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Software : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Predefined tags :</label></br>
 								<input type="radio" name="FeaturePredefined tags" value="oui">Yes <input type="radio" name="FeaturePredefined tags" value = "non">No <input type="radio" name="FeaturePredefined tags" value = "non">Partial </br>
@@ -51,17 +52,14 @@
 								<label>Related/synonym tags :</label></br>
 								<input type="radio" name="FeatureRelated/synonym tags" value="oui">Yes <input type="radio" name="FeatureRelated/synonym tags" value = "non">No <input type="radio" name="FeatureRelated/synonym tags" value = "non">Partial </br>
 								
-								</br>	
-								<label>Notes : </label></br> <input id="7" type="text" name="Feature"></br>
-								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Knowledge Plaza','Jumper 2.0','Connectbeam','Dogear','Scuttle','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Notes",
 									local : ['none','']
+								});
+								$("#1").typeahead({
+									name:"Software",
+									local : ['Knowledge Plaza','Jumper 2.0','Connectbeam','Dogear','Scuttle','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

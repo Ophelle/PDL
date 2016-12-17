@@ -29,18 +29,9 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Edition : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Software license : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Software : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Creator : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Open source :</label></br>
-								<input type="radio" name="FeatureOpen source" value="oui">Yes <input type="radio" name="FeatureOpen source" value = "non">No <input type="radio" name="FeatureOpen source" value = "non">Partial </br>
-											<input type="text"/></br>								
 								</br>	
 								<label>Cost (USD) :</label></br>
 											<input type="checkbox" name="Feature" >Free </br>	
@@ -78,39 +69,42 @@
 											<input type="checkbox" name="Feature" >support</br>	
 											<input type="checkbox" name="Feature" >free</br>	
 											<input type="checkbox" name="Feature" >commercial support available</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Edition : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Creator : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Implementation : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Open source :</label></br>
+								<input type="radio" name="FeatureOpen source" value="oui">Yes <input type="radio" name="FeatureOpen source" value = "non">No <input type="radio" name="FeatureOpen source" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
-								<label>Release Date : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Implementation : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Release Date : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Software : </label></br> <input id="5" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Edition",
+									local : ['4.12','1.0','3.4.6','7.0.0.3','7.0.0.1','2.3.1','1.6.1','2.3.0','12.1.3.0.0','5.0','2013 R2','2.0','4.x','3.1.3','7.3','5.1.1','5.3','5.1','2.13.2','4.7.0','6.0','4.0','9.0','4.5','6.1','3.0','6.5.2','2013','8.x','8.5','11','5.x','6','3.5.0','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Software license",
 									local : ['proprietary/SaaS','AGPL','proprietary','based on Apache Software License','Apache Software License','LGPL','CPAL','CDDL','variant of MIT','Proprietary','JPL','[Apache Software License] / [GPL] / Subscription','Dual (GPL or proprietary)','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Software",
 									local : ['WebSphere Message Broker','WebSphere Process Server','BizTalk Server','Apache Camel','Openadaptor','Talend ESB','AdroitLogic UltraESB','Flow Software','Mule ESB','Spagic','JBoss Enterprise SOA Platform','OpenESB','PEtALS ESB','Sun Java Composite Application Platform Suite','JBoss Enterprise Service Bus (ESB)','Magic xpi Integration Platform','webMethods Integration Server','Artix ESB','Oracle Enterprise Service Bus','Informatica Power Center','Adeptia Integration Suite','Unify NXJ','Automation Anywhere Integration Pack','SAP NetWeaver Process Integration (short SAP PI)','Linx 5','WSO2 Enterprise Service Bus (ESB)','SEEBURGER Business Integration Server','TrackerSuite.Net','SharePoint Server','OpenLink Virtuoso','FUSE ESB - Enterprise ServiceMix','Sonic ESB','Apache Synapse','WebSphere Enterprise Service Bus','Astera Software Centerprise Data Integrator','Oracle BPEL Process Manager','ServiceMix','Jitterbit','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Creator",
 									local : ['Twenty57.com','Magic Software Enterprises','Jitterbit','The Software Conservancy','Progress Software','MuleSoft','OpenLink Software','Oracle Corporation','SEEBURGER AG','SAP AG','Adeptia','Engineering group','AdroitLogic','Software AG','Flow Software Ltd','OpenESB Community','Apache Software Foundation','JBoss, a division of Red Hat, Inc.','FuseSource','Unify Corporation','IBM','Astera Software','WSO2','OW2 Consortium','Talend','Automation Anywhere','Microsoft','Informatica','Automation Centre','Sun Microsystems','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['4.12','1.0','3.4.6','7.0.0.3','7.0.0.1','2.3.1','1.6.1','2.3.0','12.1.3.0.0','5.0','2013 R2','2.0','4.x','3.1.3','7.3','5.1.1','5.3','5.1','2.13.2','4.7.0','6.0','4.0','9.0','4.5','6.1','3.0','6.5.2','2013','8.x','8.5','11','5.x','6','3.5.0','']
-								});
-								$("#5").typeahead({
-									name:"list5",
+									name:"Implementation",
 									local : ['','Enterprise Service Bus','ESB, BPEL','Talend ESB','Dynamic Case Management','']
 								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#5").typeahead({
+									name:"Release Date",
 									local : ['July 2010','May 2008','Oct 2011','2013','October 2007','June 2014','July 2014','May, 2010','March 2013','February 2011','May 2010','Sept 2013','Sept 2010','June 2012','April 2013','Jule 2014','2011','2003','May 2012','Feb 2011','2007','2001','July 2013','June 2015','November 2010','','January 2015','May 2013','Feb 2014','July 2011','June 2008','March 2012','']
 								});
 						</script>

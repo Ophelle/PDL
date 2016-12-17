@@ -29,27 +29,8 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Supports IPv6 :</label></br>
-								<input type="radio" name="FeatureSupports IPv6" value="oui">Yes <input type="radio" name="FeatureSupports IPv6" value = "non">No <input type="radio" name="FeatureSupports IPv6" value = "non">Partial </br>
-								
-								</br>	
-								<label>SCP :</label></br>
-								<input type="radio" name="FeatureSCP" value="oui">Yes <input type="radio" name="FeatureSCP" value = "non">No <input type="radio" name="FeatureSCP" value = "non">Partial </br>
-								
-								</br>	
-								<label>Supports OpenSSH authorized keys :</label></br>
-								<input type="radio" name="FeatureSupports OpenSSH authorized keys" value="oui">Yes <input type="radio" name="FeatureSupports OpenSSH authorized keys" value = "non">No <input type="radio" name="FeatureSupports OpenSSH authorized keys" value = "non">Partial </br>
-								
-								</br>	
-								<label>Privilege separation :</label></br>
-								<input type="radio" name="FeaturePrivilege separation" value="oui">Yes <input type="radio" name="FeaturePrivilege separation" value = "non">No <input type="radio" name="FeaturePrivilege separation" value = "non">Partial </br>
-								
-								</br>	
-								<label>FIPS 140-2 certified : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>SFTP :</label></br>
-								<input type="radio" name="FeatureSFTP" value="oui">Yes <input type="radio" name="FeatureSFTP" value = "non">No <input type="radio" name="FeatureSFTP" value = "non">Partial </br>
+								<label>SSH1 :</label></br>
+								<input type="radio" name="FeatureSSH1" value="oui">Yes <input type="radio" name="FeatureSSH1" value = "non">No <input type="radio" name="FeatureSSH1" value = "non">Partial </br>
 								
 								</br>	
 								<label>Port forwarding :</label></br>
@@ -60,20 +41,37 @@
 								<input type="radio" name="FeatureSSH2" value="oui">Yes <input type="radio" name="FeatureSSH2" value = "non">No <input type="radio" name="FeatureSSH2" value = "non">Partial </br>
 								
 								</br>	
-								<label>SSH1 :</label></br>
-								<input type="radio" name="FeatureSSH1" value="oui">Yes <input type="radio" name="FeatureSSH1" value = "non">No <input type="radio" name="FeatureSSH1" value = "non">Partial </br>
+								<label>Supports IPv6 :</label></br>
+								<input type="radio" name="FeatureSupports IPv6" value="oui">Yes <input type="radio" name="FeatureSupports IPv6" value = "non">No <input type="radio" name="FeatureSupports IPv6" value = "non">Partial </br>
 								
 								</br>	
-								<label>Name : </label></br> <input id="10" type="text" name="Feature"></br>
+								<label>Privilege separation :</label></br>
+								<input type="radio" name="FeaturePrivilege separation" value="oui">Yes <input type="radio" name="FeaturePrivilege separation" value = "non">No <input type="radio" name="FeaturePrivilege separation" value = "non">Partial </br>
+								
+								</br>	
+								<label>SFTP :</label></br>
+								<input type="radio" name="FeatureSFTP" value="oui">Yes <input type="radio" name="FeatureSFTP" value = "non">No <input type="radio" name="FeatureSFTP" value = "non">Partial </br>
+								
+								</br>	
+								<label>Name : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>FIPS 140-2 certified : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>SCP :</label></br>
+								<input type="radio" name="FeatureSCP" value="oui">Yes <input type="radio" name="FeatureSCP" value = "non">No <input type="radio" name="FeatureSCP" value = "non">Partial </br>
+								
+								</br>	
+								<label>Supports OpenSSH authorized keys :</label></br>
+								<input type="radio" name="FeatureSupports OpenSSH authorized keys" value="oui">Yes <input type="radio" name="FeatureSupports OpenSSH authorized keys" value = "non">No <input type="radio" name="FeatureSupports OpenSSH authorized keys" value = "non">Partial </br>
 								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Yes','?','Partial','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Name",
 									local : ['Bitvise SSH Server','Copssh','CrushFTP Server','GoAnywhere Services','MobaSSH SSH Server','Apache MINA SSHD','Syncplify.me Server','Attachmate Reflection for Secure IT','Maverick SSHD','TinySSH','OpenSSH','Pragma Fortress SSH Server','Tectia SSH Server','SilverSHielD','KpyM SSH Server','Georgia SoftWorks SSH Server','Dropbear','Lsh','']
+								});
+								$("#1").typeahead({
+									name:"FIPS 140-2 certified",
+									local : ['Yes','?','Partial','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

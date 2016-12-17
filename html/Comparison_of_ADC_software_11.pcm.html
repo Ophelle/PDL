@@ -29,48 +29,41 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Plugin, extendable :</label></br>
+								<input type="radio" name="FeaturePlugin, extendable" value="oui">Yes <input type="radio" name="FeaturePlugin, extendable" value = "non">No <input type="radio" name="FeaturePlugin, extendable" value = "non">Partial </br>
+								
+								</br>	
+								<label>Other software : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>IPv6 :</label></br>
+								<input type="radio" name="FeatureIPv6" value="oui">Yes <input type="radio" name="FeatureIPv6" value = "non">No <input type="radio" name="FeatureIPv6" value = "non">Partial </br>
+								
+								</br>	
 								<label>Hash algorithms : </label></br> <input id="1" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>IPv6 : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>ADC support : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>ADC support : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Encryption :</label></br>
 								<input type="radio" name="FeatureEncryption" value="oui">Yes <input type="radio" name="FeatureEncryption" value = "non">No <input type="radio" name="FeatureEncryption" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Other software : </label></br> <input id="5" type="text" name="Feature"></br>
 								
 								</br>	
-								<label>Plugin, extendable :</label></br>
-								<input type="radio" name="FeaturePlugin, extendable" value="oui">Yes <input type="radio" name="FeaturePlugin, extendable" value = "non">No <input type="radio" name="FeaturePlugin, extendable" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Other : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Other : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Tiger tree hash','Hash algorithms','','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['No','?','IPv6','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['TIGR','Any clients, hubs','TIGR, ADCS','ADC support','ADCS, OSNR','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#0").typeahead({
+									name:"Other software",
 									local : ['Other software','ADCCore','DCBouncer','DC-Hublink','Embla','DCWatch','NetChatLink','Announcer Bot','FlowLib','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#1").typeahead({
+									name:"Other",
 									local : ['','only Luadch supports OSNR','Other','']
+								});
+								$("#2").typeahead({
+									name:"Hash algorithms",
+									local : ['Tiger tree hash','Hash algorithms','','']
+								});
+								$("#3").typeahead({
+									name:"ADC support",
+									local : ['TIGR','Any clients, hubs','TIGR, ADCS','ADC support','ADCS, OSNR','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

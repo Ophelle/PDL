@@ -29,47 +29,41 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>License Pricing : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Website : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Company : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Software license : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Website : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Latest stable version : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Software license : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>OLAP Server : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Latest stable version : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>License Pricing : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>OLAP Server : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Company : </label></br> <input id="5" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['','community/','-','free','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Oracle','SAP','Pentaho','Microsoft','Open source community','Jedox','MicroStrategy','SAS Institute','IBM','Infor','icCube','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"Website",
 									local : ['','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Software license",
 									local : ['EPL','Proprietary','GPL v2 or EULA, Proprietary','MIT','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#2").typeahead({
+									name:"Latest stable version",
 									local : ['7.30','2014','9','10.6.0','11.1.2.4','11g R2','5.1 SR4','9.4','3.7','10.2.2 FP3','5.1','1.0.1','']
 								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#3").typeahead({
+									name:"OLAP Server",
 									local : ['Oracle Database OLAP Option','Mondrian OLAP server','SAP NetWeaver BW','Essbase','MicroStrategy Intelligence Server','SAS OLAP Server','Microsoft Analysis Services','Cognos TM1','Infor BI OLAP Server','icCube','Jedox OLAP Server','Cubes','']
+								});
+								$("#4").typeahead({
+									name:"License Pricing",
+									local : ['','community/','-','free','']
+								});
+								$("#5").typeahead({
+									name:"Company",
+									local : ['Oracle','SAP','Pentaho','Microsoft','Open source community','Jedox','MicroStrategy','SAS Institute','IBM','Infor','icCube','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

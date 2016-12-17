@@ -29,58 +29,53 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Error (message) : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Called as function : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>toString() : </label></br> <input id="2" type="number" name="Feature"></br>
-								
+								<label>Called as constructor : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>name : </label></br> <input id="3" type="number" name="Feature"></br>
-								
+								<label>name : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 								</br>	
-								<label>constructor : </label></br> <input id="4" type="number" name="Feature"></br>
-								
+								<label>constructor : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 								</br>	
-								<label>Properties of prototype : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Error (message) : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>new Error (message) : </label></br> <input id="6" type="number" name="Feature"></br>
-								
+								<label>Properties : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Properties : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>message : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 								</br>	
-								<label>message : </label></br> <input id="8" type="number" name="Feature"></br>
-								
+								<label>toString() : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 								</br>	
-								<label>prototype : </label></br> <input id="9" type="number" name="Feature"></br>
-								
+								<label>Properties of prototype : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Called as function : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+								<label>new Error (message) : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 								</br>	
-								<label>Called as constructor : </label></br> <input id="11" type="text" name="Feature"></br>
-								
+								<label>prototype : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['?','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Properties','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['Properties of prototype','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#0").typeahead({
+									name:"Called as function",
 									local : ['Called as function','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#1").typeahead({
+									name:"Called as constructor",
 									local : ['Called as constructor','']
+								});
+								$("#2").typeahead({
+									name:"Error (message)",
+									local : ['?','']
+								});
+								$("#3").typeahead({
+									name:"Properties",
+									local : ['Properties','']
+								});
+								$("#4").typeahead({
+									name:"Properties of prototype",
+									local : ['Properties of prototype','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

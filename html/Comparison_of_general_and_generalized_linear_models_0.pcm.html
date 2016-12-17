@@ -29,17 +29,33 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Function in R : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Typical estimation method :</label></br>
+											<input type="checkbox" name="Feature" >Least squares</br>	
+											<input type="checkbox" name="Feature" >best linear unbiased prediction</br>	
+											<input type="checkbox" name="Feature" >Maximum likelihood or Bayesian</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Command in SPSS :</label></br>
+											<input type="checkbox" name="Feature" >regression</br>	
+											<input type="checkbox" name="Feature" >glm</br>	
+											<input type="checkbox" name="Feature" >genlin</br>	
+											<input type="checkbox" name="Feature" >logistic regression</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Procedure in SAS :</label></br>
+											<input type="checkbox" name="Feature" >PROC GLM</br>	
+											<input type="checkbox" name="Feature" >PROC MIXED</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
 								<label>Command in Stata : </label></br> <input id="1" type="text" name="Feature"></br>
-								
 								</br>	
 								<label>Function in Matlab : </label></br> <input id="2" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Function in R : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Function in Mathematica : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Procedure in SAS : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Command in EViews : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Special cases :</label></br>
 											<input type="checkbox" name="Feature" >linear regression</br>	
@@ -51,50 +67,27 @@
 											<input type="checkbox" name="Feature" >MANOVA</br>	
 											<input type="checkbox" name="Feature" >MANCOVA</br>	
 											<input type="checkbox" name="Feature" >mixed model</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Typical estimation method :</label></br>
-											<input type="checkbox" name="Feature" >Least squares</br>	
-											<input type="checkbox" name="Feature" >best linear unbiased prediction</br>	
-											<input type="checkbox" name="Feature" >Maximum likelihood or Bayesian</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Command in SPSS :</label></br>
-											<input type="checkbox" name="Feature" >regression</br>	
-											<input type="checkbox" name="Feature" >glm</br>	
-											<input type="checkbox" name="Feature" >genlin</br>	
-											<input type="checkbox" name="Feature" >logistic regression</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Command in EViews : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Function in Mathematica : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
+								$("#0").typeahead({
+									name:"Function in R",
+									local : ['lm()','glm()','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Command in Stata",
 									local : ['regress','glm','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Function in Matlab",
 									local : ['glmfit()','mvregress()','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['lm()','glm()','']
+									name:"Function in Mathematica",
+									local : ['LinearModelFit[]','GeneralizedLinearModelFit[]','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['PROC GLM, PROC MIXED','PROC GENMOD (PROC LOGISTIC for logistic regression only)','']
-								});
-								$("#5").typeahead({
-									name:"list5",
+									name:"Command in EViews",
 									local : ['ls','','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['LinearModelFit[]','GeneralizedLinearModelFit[]','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

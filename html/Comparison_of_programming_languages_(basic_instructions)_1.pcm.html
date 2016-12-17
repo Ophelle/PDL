@@ -29,32 +29,28 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Other precision : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Single precision : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Double precision : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Processor dependent : </label></br> <input id="2" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Double precision : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Single precision : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Other precision : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['','N/A','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"Single precision",
 									local : ['N/A','','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Double precision",
+									local : ['','N/A','']
+								});
+								$("#2").typeahead({
+									name:"Processor dependent",
+									local : ['','']
+								});
+								$("#3").typeahead({
+									name:"Other precision",
 									local : [', , etc.','','N/A','']
 								});
 						</script>

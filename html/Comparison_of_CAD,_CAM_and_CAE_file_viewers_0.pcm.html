@@ -29,6 +29,20 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>User Interface Language(s) :</label></br>
+											<input type="checkbox" name="Feature" >CN</br>	
+											<input type="checkbox" name="Feature" >EN</br>	
+											<input type="checkbox" name="Feature" >ES</br>	
+											<input type="checkbox" name="Feature" >FR</br>	
+											<input type="checkbox" name="Feature" >DE</br>	
+											<input type="checkbox" name="Feature" >HU</br>	
+											<input type="checkbox" name="Feature" >IT</br>	
+											<input type="checkbox" name="Feature" >JP</br>	
+											<input type="checkbox" name="Feature" >RU</br>	
+											<input type="checkbox" name="Feature" >other</br>	
+											<input type="checkbox" name="Feature" >PT</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
 								<label>Supported format(s) :</label></br>
 											<input type="checkbox" name="Feature" >DWG</br>	
 											<input type="checkbox" name="Feature" >DXF</br>	
@@ -49,64 +63,43 @@
 											<input type="checkbox" name="Feature" >CADDS</br>	
 											<input type="checkbox" name="Feature" >Solid Edge</br>	
 											<input type="checkbox" name="Feature" >DRW</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>3D support? :</label></br>
-								<input type="radio" name="Feature3D support?" value="oui">Yes <input type="radio" name="Feature3D support?" value = "non">No <input type="radio" name="Feature3D support?" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>Runs on POSIX style systems? :</label></br>
 								<input type="radio" name="FeatureRuns on POSIX style systems?" value="oui">Yes <input type="radio" name="FeatureRuns on POSIX style systems?" value = "non">No <input type="radio" name="FeatureRuns on POSIX style systems?" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Runs on Windows? :</label></br>
-								<input type="radio" name="FeatureRuns on Windows?" value="oui">Yes <input type="radio" name="FeatureRuns on Windows?" value = "non">No <input type="radio" name="FeatureRuns on Windows?" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Developer : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Latest stable release : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Other platforms? :</label></br>
 								<input type="radio" name="FeatureOther platforms?" value="oui">Yes <input type="radio" name="FeatureOther platforms?" value = "non">No <input type="radio" name="FeatureOther platforms?" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Application : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Developer : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Open source? : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label>Application : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>User Interface Language(s) :</label></br>
-											<input type="checkbox" name="Feature" >CN</br>	
-											<input type="checkbox" name="Feature" >EN</br>	
-											<input type="checkbox" name="Feature" >ES</br>	
-											<input type="checkbox" name="Feature" >FR</br>	
-											<input type="checkbox" name="Feature" >DE</br>	
-											<input type="checkbox" name="Feature" >HU</br>	
-											<input type="checkbox" name="Feature" >IT</br>	
-											<input type="checkbox" name="Feature" >JP</br>	
-											<input type="checkbox" name="Feature" >RU</br>	
-											<input type="checkbox" name="Feature" >other</br>	
-											<input type="checkbox" name="Feature" >PT</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								<label>3D support? :</label></br>
+								<input type="radio" name="Feature3D support?" value="oui">Yes <input type="radio" name="Feature3D support?" value = "non">No <input type="radio" name="Feature3D support?" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Open source? : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Latest stable release : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Runs on Windows? :</label></br>
+								<input type="radio" name="FeatureRuns on Windows?" value="oui">Yes <input type="radio" name="FeatureRuns on Windows?" value = "non">No <input type="radio" name="FeatureRuns on Windows?" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Developer",
 									local : ['VariCAD','Advanced Computer Solutions','LibreCAD','progeCAD','Sescoi','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['14','1.7 (2009)','2014 v2','2009','2.0.6 (10/2014)','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Application",
 									local : ['Caddie','VariCAD Viewer','WorkXPlore 3D','LibreCAD','progeCAD Viewer DWG (based on IntelliCAD) (incomplete entry)','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#2").typeahead({
+									name:"Open source?",
 									local : ['Yes (GPLv2)','No(Free download)','No','']
 								});
 						</script>

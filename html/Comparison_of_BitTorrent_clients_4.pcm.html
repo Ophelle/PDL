@@ -29,8 +29,8 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Sequential downloading :</label></br>
-								<input type="radio" name="FeatureSequential downloading" value="oui">Yes <input type="radio" name="FeatureSequential downloading" value = "non">No <input type="radio" name="FeatureSequential downloading" value = "non">Partial </br>
+								<label>Auto updates :</label></br>
+								<input type="radio" name="FeatureAuto updates" value="oui">Yes <input type="radio" name="FeatureAuto updates" value = "non">No <input type="radio" name="FeatureAuto updates" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
 								<label>Selective downloads :</label></br>
@@ -45,14 +45,6 @@
 								<input type="radio" name="FeaturePrioritization" value="oui">Yes <input type="radio" name="FeaturePrioritization" value = "non">No <input type="radio" name="FeaturePrioritization" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Reviews and Comments :</label></br>
-								<input type="radio" name="FeatureReviews and Comments" value="oui">Yes <input type="radio" name="FeatureReviews and Comments" value = "non">No <input type="radio" name="FeatureReviews and Comments" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Web seeding :</label></br>
-								<input type="radio" name="FeatureWeb seeding" value="oui">Yes <input type="radio" name="FeatureWeb seeding" value = "non">No <input type="radio" name="FeatureWeb seeding" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
 								<label>Broad-catching (RSS) :</label></br>
 								<input type="radio" name="FeatureBroad-catching (RSS)" value="oui">Yes <input type="radio" name="FeatureBroad-catching (RSS)" value = "non">No <input type="radio" name="FeatureBroad-catching (RSS)" value = "non">Partial </br>
 											<input type="text"/></br>								
@@ -61,34 +53,40 @@
 								<input type="radio" name="FeatureRemote control via web" value="oui">Yes <input type="radio" name="FeatureRemote control via web" value = "non">No <input type="radio" name="FeatureRemote control via web" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>BitTorrent client : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Tracker exchange :</label></br>
-								<input type="radio" name="FeatureTracker exchange" value="oui">Yes <input type="radio" name="FeatureTracker exchange" value = "non">No <input type="radio" name="FeatureTracker exchange" value = "non">Partial </br>
+								<label>Web seeding :</label></br>
+								<input type="radio" name="FeatureWeb seeding" value="oui">Yes <input type="radio" name="FeatureWeb seeding" value = "non">No <input type="radio" name="FeatureWeb seeding" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Auto updates :</label></br>
-								<input type="radio" name="FeatureAuto updates" value="oui">Yes <input type="radio" name="FeatureAuto updates" value = "non">No <input type="radio" name="FeatureAuto updates" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>BitTorrent client : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>SOCKS :</label></br>
 								<input type="radio" name="FeatureSOCKS" value="oui">Yes <input type="radio" name="FeatureSOCKS" value = "non">No <input type="radio" name="FeatureSOCKS" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Notes : </label></br> <input id="13" type="text" name="Feature"></br>
-								
+								<label>Notes : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Cache :</label></br>
 								<input type="radio" name="FeatureCache" value="oui">Yes <input type="radio" name="FeatureCache" value = "non">No <input type="radio" name="FeatureCache" value = "non">Partial </br>
 											<input type="text"/></br>								
+								</br>	
+								<label>Sequential downloading :</label></br>
+								<input type="radio" name="FeatureSequential downloading" value="oui">Yes <input type="radio" name="FeatureSequential downloading" value = "non">No <input type="radio" name="FeatureSequential downloading" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Tracker exchange :</label></br>
+								<input type="radio" name="FeatureTracker exchange" value="oui">Yes <input type="radio" name="FeatureTracker exchange" value = "non">No <input type="radio" name="FeatureTracker exchange" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Reviews and Comments :</label></br>
+								<input type="radio" name="FeatureReviews and Comments" value="oui">Yes <input type="radio" name="FeatureReviews and Comments" value = "non">No <input type="radio" name="FeatureReviews and Comments" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"BitTorrent client",
 									local : ['Tonido Torrent','BitComet','SymTorrent','BitLord','TorrentFlux','ABC','Free Download Manager','Tribler','BitTorrent 6','qBittorrent','Opera 12','BitLet','BitTorrent 5, Mainline','Acquisition','FlashGet','KTorrent','Vuze (formerly Azureus)','Blog Torrent','Shareaza','BitTyrant','Deluge','Tomato Torrent','MLDonkey','OneSwarm','BitTorrent client','µTorrent','Transmission','rTorrent','Tixati','Meerkat Bittorrent Client','BitTornado','Xunlei','LimeWire','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Notes",
 									local : ['','No built-in disk cache but a delayed sync','lightweight client, Portable version available','Portable version available','FlashGet (standalone application) is not FlashGot (Firefox Addon)','3 torrents max, infinity when registered','Web browser','supports AppleScript','has all BitTyrant features','BitTorrent client for cell phones','Notes','Upload priority optimized according to a series of research papers','Fully distributed keyword search; integrated anti-spam measures','']
 								});
 						</script>

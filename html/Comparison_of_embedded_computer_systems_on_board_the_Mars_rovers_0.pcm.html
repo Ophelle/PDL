@@ -29,55 +29,47 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>EEPROM : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>CPU : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Rover (mission, organization, year) : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>RAM : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>CPU time available for the autonomy software : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>EEPROM : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>CPU : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Rover (mission, organization, year) : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>CPU time available for the autonomy software : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Flash : </label></br> <input id="5" type="text" name="Feature"></br>
-								
 								</br>	
 								<label>Operating system : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>RAM : </label></br> <input id="7" type="text" name="Feature"></br>
-								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['3 MB','6 MB','256 KB','None','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Pathfinder Lander (NASA, 1997) 
-  (Base station for Sojourner rover)','Curiosity (Mars Science Laboratory (MSL), NASA, 2011)','Spirit and Opportunity (Mars Exploration Rover (MER), NASA, 2004)','Sojourner Rover (Pathfinder, NASA, 1997)','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"CPU",
 									local : ['132 MHz BAE RAD750','20 MHz MFC (IBM RAD6000 Precursor)','2 MHz  Intel 80C85','20 MHz BAE RAD6000','']
 								});
+								$("#1").typeahead({
+									name:"RAM",
+									local : ['512 KB','128 MB','256 MB','']
+								});
+								$("#2").typeahead({
+									name:"EEPROM",
+									local : ['3 MB','6 MB','256 KB','None','']
+								});
+								$("#3").typeahead({
+									name:"Rover (mission, organization, year)",
+									local : ['Pathfinder Lander (NASA, 1997)   (Base station for Sojourner rover)','Curiosity (Mars Science Laboratory (MSL), NASA, 2011)','Spirit and Opportunity (Mars Exploration Rover (MER), NASA, 2004)','Sojourner Rover (Pathfinder, NASA, 1997)','']
+								});
 								$("#4").typeahead({
-									name:"list4",
+									name:"CPU time available for the autonomy software",
 									local : ['less than 75%','Not applicable to Cyclic Executives','']
 								});
 								$("#5").typeahead({
-									name:"list5",
+									name:"Flash",
 									local : ['256 MB','2 GB','None','176 KB','']
 								});
 								$("#6").typeahead({
-									name:"list6",
+									name:"Operating system",
 									local : ['VxWorks (multitasking)','Custom cyclic executive','']
-								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['512 KB','128 MB','256 MB','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

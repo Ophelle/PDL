@@ -29,23 +29,11 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>XML Support : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Data Passing : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Business Model : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Business Model : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Connection Model : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Design-time support :</label></br>
-											<input type="checkbox" name="Feature" >Derives information about data implicitly at run time</br>	
-											<input type="checkbox" name="Feature" >based on metadata that is often expensive to obtain.</br>	
-											<input type="checkbox" name="Feature" >Leverages known metadata at design time in order to provide better run-time performance and more consistent run-time behavior.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Disconnected Access : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>XML Support : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Control of data access behaviors :</label></br>
 											<input type="checkbox" name="Feature" >Provides well-defined</br>	
@@ -53,30 +41,36 @@
 											<input type="checkbox" name="Feature" >performance</br>	
 											<input type="checkbox" name="Feature" >and semantics.</br>	
 											<input type="checkbox" name="Feature" >Includes implicit behaviors that may not always be required in an application and that may therefore limit performance.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Data Passing : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Design-time support :</label></br>
+											<input type="checkbox" name="Feature" >Derives information about data implicitly at run time</br>	
+											<input type="checkbox" name="Feature" >based on metadata that is often expensive to obtain.</br>	
+											<input type="checkbox" name="Feature" >Leverages known metadata at design time in order to provide better run-time performance and more consistent run-time behavior.</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Disconnected Access : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Connection Model :</label></br>
+											<input type="checkbox" name="Feature" >Client application needs to be connected always to data-server while working on the data</br>	
+											<input type="checkbox" name="Feature" >unless using client-side cursors or a disconnected Record set</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Limited','Robust Support','']
+								$("#0").typeahead({
+									name:"Data Passing",
+									local : ['ADO.NET uses XML for passing the data.','ADO objects communicate in binary mode.','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Business Model",
 									local : ['Connection-oriented Models used mostly','Disconnected models are used:Message-like Models.','']
 								});
+								$("#2").typeahead({
+									name:"XML Support",
+									local : ['Limited','Robust Support','']
+								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['Client application needs to be connected always to data-server while working on the data, unless using client-side cursors or a disconnected Record set','Client disconnected as soon as the data is processed. DataSet is disconnected at all times.','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+									name:"Disconnected Access",
 									local : ['Provided by Record set','Provided by Data Adapter and Data set','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['ADO.NET uses XML for passing the data.','ADO objects communicate in binary mode.','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

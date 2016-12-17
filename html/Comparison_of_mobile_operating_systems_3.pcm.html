@@ -29,21 +29,15 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Official application store : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Cost to publish application to official store : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Non-discriminatory stores : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Non-discriminatory stores : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Common API for smartphones, tablets, and PCs :</label></br>
 								<input type="radio" name="FeatureCommon API for smartphones, tablets, and PCs" value="oui">Yes <input type="radio" name="FeatureCommon API for smartphones, tablets, and PCs" value = "non">No <input type="radio" name="FeatureCommon API for smartphones, tablets, and PCs" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Cost to develop for the mobile OS : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Cost to develop for the mobile OS : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Official application store : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Official SDK platform(s) :</label></br>
 											<input type="checkbox" name="Feature" >Windows</br>	
@@ -55,37 +49,37 @@
 											<input type="checkbox" name="Feature" >Linux</br>	
 											<input type="checkbox" name="Feature" >Mac OS X and Windows</br>	
 											<input type="checkbox" name="Feature" >OS X</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Feature : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Feature : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Application Ecosystem : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Application Ecosystem : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Cost to publish application to official store : </label></br> <input id="5" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Tizen Store','?','Windows Phone Store','BlackBerry World, Amazon Appstore','App Store','Ubuntu Store','Firefox Marketplace','Google Play','Jolla Store','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Included in the cost (US$99/year) to develop for the mobile OS','Free','US$19/year for an individual and $99/year for a company account. Students can get a token for an individual account (1 token for 365 days) which gives free access to Windows Store/Phone Dev Center for 12 months.','US$25 once to offer it on Google Play','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"Non-discriminatory stores",
 									local : ['Developers can distribute apps from their own sources','Developers can distribute apps from their own sources, supports multiple app stores','?','Apple discriminates based on country and own Apple policies','Discriminates by country and manufacturer','3rd party software','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Cost to develop for the mobile OS",
 									local : ['Free','US$99/year','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#2").typeahead({
+									name:"Official application store",
+									local : ['Tizen Store','?','Windows Phone Store','BlackBerry World, Amazon Appstore','App Store','Ubuntu Store','Firefox Marketplace','Google Play','Jolla Store','']
+								});
+								$("#3").typeahead({
+									name:"Feature",
 									local : ['Firefox OS','Android','Windows Phone','Tizen','iOS','Mer','Sailfish OS','BlackBerry 10','Ubuntu Touch','']
 								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#4").typeahead({
+									name:"Application Ecosystem",
 									local : ['Application Ecosystem','']
+								});
+								$("#5").typeahead({
+									name:"Cost to publish application to official store",
+									local : ['Included in the cost (US$99/year) to develop for the mobile OS','Free','US$19/year for an individual and $99/year for a company account. Students can get a token for an individual account (1 token for 365 days) which gives free access to Windows Store/Phone Dev Center for 12 months.','US$25 once to offer it on Google Play','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

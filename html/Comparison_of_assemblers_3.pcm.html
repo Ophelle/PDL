@@ -29,12 +29,6 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Assembler : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Host platform :</label></br>
 											<input type="checkbox" name="Feature" >IBM OS</br>	
 											<input type="checkbox" name="Feature" >360 and CP-67</br>	
@@ -43,7 +37,11 @@
 											<input type="checkbox" name="Feature" >360</br>	
 											<input type="checkbox" name="Feature" >IBM BPS</br>	
 											<input type="checkbox" name="Feature" >360 and successors</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Assembler : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Instruction set :</label></br>
 											<input type="checkbox" name="Feature" >IBM System</br>	
@@ -52,15 +50,15 @@
 											<input type="checkbox" name="Feature" >Architecture</br>	
 											<input type="checkbox" name="Feature" >370</br>	
 											<input type="checkbox" name="Feature" >360 and System</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Proprietary','Free','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Assembler",
 									local : ['IBM Assembler D','IBM Assembler F','BAL','PL360','IBM Assembler XF','HLASM','IBM Assembler H','Dignus Systems/ASM','']
+								});
+								$("#1").typeahead({
+									name:"License",
+									local : ['Proprietary','Free','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

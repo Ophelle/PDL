@@ -29,11 +29,6 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Model/database comparison and synchronization :</label></br>
-											<input type="checkbox" name="Feature" >Update database and</br>	
-											<input type="checkbox" name="Feature" >or update model</br>	
-									
-								</br>	
 								<label>Reverse engineering :</label></br>
 								<input type="radio" name="FeatureReverse engineering" value="oui">Yes <input type="radio" name="FeatureReverse engineering" value = "non">No <input type="radio" name="FeatureReverse engineering" value = "non">Partial </br>
 								
@@ -49,7 +44,18 @@
 											<input type="checkbox" name="Feature" >Logical</br>	
 											<input type="checkbox" name="Feature" >Logical & Physical + MDA Transform of Logical to Physical</br>	
 											<input type="checkbox" name="Feature" >ETL</br>	
-									
+							
+								</br>	
+								<label>Tool : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Model/database comparison and synchronization :</label></br>
+											<input type="checkbox" name="Feature" >Update database and</br>	
+											<input type="checkbox" name="Feature" >or update model</br>	
+							
+								</br>	
+								<label>Teamwork/repository :</label></br>
+								<input type="radio" name="FeatureTeamwork/repository" value="oui">Yes <input type="radio" name="FeatureTeamwork/repository" value = "non">No <input type="radio" name="FeatureTeamwork/repository" value = "non">Partial </br>
+								
 								</br>	
 								<label>Supported notations :</label></br>
 											<input type="checkbox" name="Feature" >IDEF1X</br>	
@@ -58,17 +64,10 @@
 											<input type="checkbox" name="Feature" >UML DDL</br>	
 											<input type="checkbox" name="Feature" >Information Engineering & ERD</br>	
 											<input type="checkbox" name="Feature" >UML</br>	
-									
-								</br>	
-								<label>Tool : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Teamwork/repository :</label></br>
-								<input type="radio" name="FeatureTeamwork/repository" value="oui">Yes <input type="radio" name="FeatureTeamwork/repository" value = "non">No <input type="radio" name="FeatureTeamwork/repository" value = "non">Partial </br>
-								
+							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Tool",
 									local : ['CA ERwin Data Modeler','PowerDesigner','Enterprise Architect','MySQL Workbench','Oracle SQL Developer Data Modeler','Toad Data Modeler','MagicDraw','Navicat Data Modeler','Database Workbench','Open ModelSphere','ER/Studio','DeZign for Databases','']
 								});
 						</script>

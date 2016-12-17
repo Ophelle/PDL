@@ -29,72 +29,63 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Output languages : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Parsing algorithm : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Lexer : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Input grammar notation : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Grammar, code : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Parsing algorithm : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Website : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Input grammar notation : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Output languages : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Grammar, code : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Website : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Name : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>IDE :</label></br>
 								<input type="radio" name="FeatureIDE" value="oui">Yes <input type="radio" name="FeatureIDE" value = "non">No <input type="radio" name="FeatureIDE" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Development platform : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label>Lexer : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
-								<label>Name : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+								<label>Development platform : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="8" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['C#','C++','C#, Java','Perl','C','C, C++','C#, Visual Basic','N/A (state machine is runtime generated)','OCaml','ML','x86 assembly language, ANSI C, C#, D, Java, Pascal, Object Pascal,  Python, Visual Basic 6, Visual Basic .NET, Visual C++','Python','Java','PHP','C#, Java, Python','Turbo Pascal','?','C++11','Icon','JavaScript, JScript, ECMAScript','Java, C++, JavaScript (via GWT compiler)','Haskell','C++, C#','Haskell 98','C, Java','C, C++, C#, Java, OCaml, Python','Python (no generation, library)','C, C++, C#, Java','C (no generation, library)','C++, Java','Erlang','ActionScript, Ada95, C, C++, C#, Java, JavaScript, Objective-C, Perl, Python, Ruby','Eiffel','C, C++, JavaScript, Java','Scheme 48','interpreted','C, target-language independent','Common Lisp','C, C++, C#, Java, JavaScript','C, C++, C#, F#, Java, Ada, Pascal, Modula-2, Oberon, Ruby, Unicon, Visual Basic .NET','Output languages','C, Java, Perl, JavaScript','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['internal','none','generated','external','?','external or generated','generated (?)','generated or external','mixed','Lexer','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['?','Boost','BSD','GNU GPL','GNU LGPL','MIT','CPL & CDDL','Erlang','Public domain','MPL/GNU LGPL','MIT License','Proprietary','Artistic','zlib','Apache License 2.0','Artistic 2.0','License','Modified Zlib','Perl','EPL','GNU GPL, GNU LGPL','QPL','CPOL 1.0','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#0").typeahead({
+									name:"Parsing algorithm",
 									local : ['LL','LL(k)','LR(1)','LALR(1)','Recursive descent, Backtracking','LL(k) LR(k)','LL(1)','Backtracking Bottom-up','Backtracking LALR(1)','LL, Backtracking','Recursive descent','LL(*)','LR(1), LALR(1), LR(0)','LR(?), some conjunctive stuff, see Whale Calf','LR(1), LALR(1)','Parsing algorithm','LL(1), Backtracking, Shunting yard','Backtracking LALR(k)','LL(1), LALR(1)','LR(?), LL(?), LALR(?), SLR(?)','LL(k) + syntactic and semantic predicates','GLR','LALR(k)','LR(???)','LALR(k), LR(k)','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#1").typeahead({
+									name:"Input grammar notation",
 									local : ['?','EBNF','YACC','Lisp','ANTLR-like','EBNF or Java','BNF dialect','Java annotations','C#','C#/BNF-like','BNF','Markdown','BNF, EBNF or C#','YACC, EBNF','Python','AXE/C++','Input grammar notation','ABNF','BNF in C++ types','']
 								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#2").typeahead({
+									name:"Grammar, code",
 									local : ['mixed','separate','?','Grammar, code','']
 								});
-								$("#7").typeahead({
-									name:"list7",
+								$("#3").typeahead({
+									name:"Website",
 									local : ['','?','[ftp://ftp.iecc.com/pub/file/bison++flex++/]','/','Website','']
 								});
-								$("#8").typeahead({
-									name:"list8",
+								$("#4").typeahead({
+									name:"Output languages",
+									local : ['C#','C++','C#, Java','Perl','C','C, C++','C#, Visual Basic','N/A (state machine is runtime generated)','OCaml','ML','x86 assembly language, ANSI C, C#, D, Java, Pascal, Object Pascal,  Python, Visual Basic 6, Visual Basic .NET, Visual C++','Python','Java','PHP','C#, Java, Python','Turbo Pascal','?','C++11','Icon','JavaScript, JScript, ECMAScript','Java, C++, JavaScript (via GWT compiler)','Haskell','C++, C#','Haskell 98','C, Java','C, C++, C#, Java, OCaml, Python','Python (no generation, library)','C, C++, C#, Java','C (no generation, library)','C++, Java','Erlang','ActionScript, Ada95, C, C++, C#, Java, JavaScript, Objective-C, Perl, Python, Ruby','Eiffel','C, C++, JavaScript, Java','Scheme 48','interpreted','C, target-language independent','Common Lisp','C, C++, C#, Java, JavaScript','C, C++, C#, F#, Java, Ada, Pascal, Modula-2, Oberon, Ruby, Unicon, Visual Basic .NET','Output languages','C, Java, Perl, JavaScript','']
+								});
+								$("#5").typeahead({
+									name:"Name",
+									local : ['UniCC','Lime','jay','Essence','Simple Parser','Parser Objects','MyParser','BYACC/J','Bison++','ANTLR3','QLALR','Toy Parser Generator','Hime Parser Generator','GPPG','jacc','Frown','TinyPG','SLK','LLLPG','LLnextgen','Yacc (AT&T)/Sun','CppCC','LEPL','eyapp','LISA','Menhir','Parsec','PLY','Irony','TP Yacc','Product','NLT','Coco/R','CL-Yacc','Parse','Grammatica','Beaver','PCCTS','PRECC','RPATK','Yapps','Hyacc','GOLD','YooParse','JFLAP','ocamlyacc','byacc','More Than Parsing','APG','Visual BNF','TextTransformer','Tap','KDevelop-PG-Qt','yecc','ML-Yacc','AXE','Lemon','Kelbt','Monkey','Spirit','Dragon','JetPAG','PlyPlus','JavaCC','JS/CC','Eto.Parse','Lapg','LLgen','CookCC','ANTLR4','Sweet Parser','HiLexed','CUP','eli','kmyacc','Sprache','LPG','geyacc','SableCC','Styx','iyacc','Msta','wisent','BtYacc','olex','Yacc++','Bisonc++','CSP','Parse::Yapp','Whale','']
+								});
+								$("#6").typeahead({
+									name:"Lexer",
+									local : ['internal','none','generated','external','?','external or generated','generated (?)','generated or external','mixed','Lexer','']
+								});
+								$("#7").typeahead({
+									name:"Development platform",
 									local : ['all','Microsoft Windows','Java Virtual Machine','.NET Framework','.NET Framework, Mono','POSIX','all, KDE','any platform with standard C++11 compiler','Development platform','POSIX, Cygwin','DOS, POSIX','C++11 compliant compiler','Java Virtual Machine, .NET Framework','']
 								});
-								$("#9").typeahead({
-									name:"list9",
-									local : ['UniCC','Lime','jay','Essence','Simple Parser','Parser Objects','MyParser','BYACC/J','Bison++','ANTLR3','QLALR','Toy Parser Generator','Hime Parser Generator','GPPG','jacc','Frown','TinyPG','SLK','LLLPG','LLnextgen','Yacc (AT&T)/Sun','CppCC','LEPL','eyapp','LISA','Menhir','Parsec','PLY','Irony','TP Yacc','Product','NLT','Coco/R','CL-Yacc','Parse','Grammatica','Beaver','PCCTS','PRECC','RPATK','Yapps','Hyacc','GOLD','YooParse','JFLAP','ocamlyacc','byacc','More Than Parsing','APG','Visual BNF','TextTransformer','Tap','KDevelop-PG-Qt','yecc','ML-Yacc','AXE','Lemon','Kelbt','Monkey','Spirit','Dragon','JetPAG','PlyPlus','JavaCC','JS/CC','Eto.Parse','Lapg','LLgen','CookCC','ANTLR4','Sweet Parser','HiLexed','CUP','eli','kmyacc','Sprache','LPG','geyacc','SableCC','Styx','iyacc','Msta','wisent','BtYacc','olex','Yacc++','Bisonc++','CSP','Parse::Yapp','Whale','']
+								$("#8").typeahead({
+									name:"License",
+									local : ['?','Boost','BSD','GNU GPL','GNU LGPL','MIT','CPL & CDDL','Erlang','Public domain','MPL/GNU LGPL','MIT License','Proprietary','Artistic','zlib','Apache License 2.0','Artistic 2.0','License','Modified Zlib','Perl','EPL','GNU GPL, GNU LGPL','QPL','CPOL 1.0','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -29,40 +29,34 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>DD-WRT : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Name : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>OpenWrt : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Pfsense : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Pfsense : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>DD-WRT : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Tomato : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Tomato :</label></br>
+											<input type="checkbox" name="Feature" >Some mods support IPv6</br>	
+											<input type="checkbox" name="Feature" >others do not (yet) - see article</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Name : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>OpenWrt : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Name",
+									local : ['Reference links','Notes','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['8.09 supports v6 routing with Quagga. 10.03.1 supports v6 routing with Quagga & BIRD.','Full IPv6 support in Barrier Breaker','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Pfsense",
 									local : ['','Version 2.1 or better','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['Some mods support IPv6, others do not (yet) - see article','Varies by mod','']
+								$("#2").typeahead({
+									name:"DD-WRT",
+									local : ['','']
 								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['Reference links','Notes','']
+								$("#3").typeahead({
+									name:"OpenWrt",
+									local : ['8.09 supports v6 routing with Quagga. 10.03.1 supports v6 routing with Quagga & BIRD.','Full IPv6 support in Barrier Breaker','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -29,24 +29,27 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Ping flood protection : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Smurf attack protection : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>In-kernel key management : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Audit API : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Capability-based security : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>SYN flood protection : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Network Behavior Analysis : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Kernel ASLR :</label></br>
 								<input type="radio" name="FeatureKernel ASLR" value="oui">Yes <input type="radio" name="FeatureKernel ASLR" value = "non">No <input type="radio" name="FeatureKernel ASLR" value = "non">Partial </br>
 											<input type="text"/></br>								
+								</br>	
+								<label>Ping flood protection : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Mandatory access control : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Kernel Name : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>UDP flood protection : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>In-kernel key management : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Sandbox : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>SYN flood protection : </label></br> <input id="8" type="text" name="Feature"></br>
 								</br>	
 								<label>File access control :</label></br>
 											<input type="checkbox" name="Feature" >Traditional Unix permissions</br>	
@@ -54,73 +57,59 @@
 											<input type="checkbox" name="Feature" >POSIX and NFSv4 ACL</br>	
 											<input type="checkbox" name="Feature" >access control list</br>	
 											<input type="checkbox" name="Feature" >NFSv4 ACL</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Sandbox : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>UDP flood protection : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Network Behavior Analysis : </label></br> <input id="10" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Kernel Name : </label></br> <input id="11" type="text" name="Feature"></br>
-								
+								<label>Capability-based security : </label></br> <input id="9" type="text" name="Feature"></br>
 								</br>	
 								<label>Disable memory execution support :</label></br>
 								<input type="radio" name="FeatureDisable memory execution support" value="oui">Yes <input type="radio" name="FeatureDisable memory execution support" value = "non">No <input type="radio" name="FeatureDisable memory execution support" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Mandatory access control : </label></br> <input id="13" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Smurf attack protection : </label></br> <input id="14" type="text" name="Feature"></br>
-								
+								<label>Audit API : </label></br> <input id="10" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Smurf attack protection",
 									local : ['No?','?','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['?','keyctl','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['OpenBSM','?','fanotify','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['?','Capsicum','No','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['SYN cookies','?','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['?','Apple XNU Sandbox','SELinux Sandbox, seccomp, KVM','Capsicum','']
-								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['?','No?','']
-								});
-								$("#8").typeahead({
-									name:"list8",
+								$("#1").typeahead({
+									name:"Network Behavior Analysis",
 									local : ['?','No','']
 								});
-								$("#9").typeahead({
-									name:"list9",
-									local : ['Windows NT kernel','XNU','Linux','FreeBSD Kernel','Solaris Kernel','']
+								$("#2").typeahead({
+									name:"Ping flood protection",
+									local : ['No?','?','']
 								});
-								$("#10").typeahead({
-									name:"list10",
+								$("#3").typeahead({
+									name:"Mandatory access control",
 									local : ['TrustedBSD MAC','Mandatory Integrity Control','Solaris Trusted Extensions','LSM(SELinux, SMACK, TOMOYO Linux, AppArmor)','']
 								});
-								$("#11").typeahead({
-									name:"list11",
-									local : ['No?','?','']
+								$("#4").typeahead({
+									name:"Kernel Name",
+									local : ['Windows NT kernel','XNU','Linux','FreeBSD Kernel','Solaris Kernel','']
+								});
+								$("#5").typeahead({
+									name:"UDP flood protection",
+									local : ['?','No?','']
+								});
+								$("#6").typeahead({
+									name:"In-kernel key management",
+									local : ['?','keyctl','']
+								});
+								$("#7").typeahead({
+									name:"Sandbox",
+									local : ['?','Apple XNU Sandbox','SELinux Sandbox, seccomp, KVM','Capsicum','']
+								});
+								$("#8").typeahead({
+									name:"SYN flood protection",
+									local : ['SYN cookies','?','']
+								});
+								$("#9").typeahead({
+									name:"Capability-based security",
+									local : ['?','Capsicum','No','']
+								});
+								$("#10").typeahead({
+									name:"Audit API",
+									local : ['OpenBSM','?','fanotify','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

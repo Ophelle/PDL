@@ -29,72 +29,35 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Processing Power
-GFLOPs - Double Precision : </label></br> <input id="1" type="text" name="Feature"></br>
+								<label>Processing PowerGFLOPs - Double Precision : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Processing PowerGFLOPs - Single Precision : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Bus interface : </label></br> <input id="2" type="text" name="Feature"></br>
+								<label>Fillrate - Texture (GT/s) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Fillrate - Texture (GT/s) : </label></br> <input id="3" type="number" name="Feature"></br>
+								<label>Fillrate - Pixel (GP/s) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>API compliance (version) - DirectX : </label></br> <input id="4" type="number" name="Feature"></br>
+								<label>Memory - Bus width (bit) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>TDP watts : </label></br> <input id="5" type="text" name="Feature"></br>
+								<label>Memory - Bus type : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Memory - Bus width (bit) : </label></br> <input id="6" type="number" name="Feature"></br>
+								<label>Memory (MB) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Config core : </label></br> <input id="7" type="text" name="Feature"></br>
+								<label>Clock rate - Core (MHz) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Memory (MB) : </label></br> <input id="8" type="number" name="Feature"></br>
+								<label>Clock rate - Memory (MHz) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Launch :</label></br>
-											<input type="checkbox" name="Feature" >May 24</br>	
-											<input type="checkbox" name="Feature" >2011</br>	
-											<input type="checkbox" name="Feature" >February 7</br>	
-											<input type="checkbox" name="Feature" >2012</br>	
-											<input type="checkbox" name="Feature" >November 1</br>	
-									
-								</br>	
-								<label>Clock rate - Core (MHz) : </label></br> <input id="10" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>Processing Power
-GFLOPs - Single Precision : </label></br> <input id="11" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>API compliance (version) - OpenCL : </label></br> <input id="12" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>Code name : </label></br> <input id="13" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>API compliance (version) - OpenGL : </label></br> <input id="14" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>Model : </label></br> <input id="15" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Memory - Bus type : </label></br> <input id="16" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fab (nm) : </label></br> <input id="17" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="18" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>Clock rate - Memory (MHz) : </label></br> <input id="19" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>Fillrate - Pixel (GP/s) : </label></br> <input id="20" type="number" name="Feature"></br>
-								
+								<label>Model : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Notes :</label></br>
 											<input type="checkbox" name="Feature" >HD3D</br>	
@@ -102,27 +65,55 @@ GFLOPs - Single Precision : </label></br> <input id="11" type="number" name="Fea
 											<input type="checkbox" name="Feature" >DP 1.2</br>	
 											<input type="checkbox" name="Feature" >PowerPlay</br>	
 											<input type="checkbox" name="Feature" >Eyefinity</br>	
-									
+							
+								</br>	
+								<label>Bus interface : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Config core : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>API compliance (version) - OpenCL : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>API compliance (version) - DirectX : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>API compliance (version) - OpenGL : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Code name : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Launch :</label></br>
+											<input type="checkbox" name="Feature" >May 24</br>	
+											<input type="checkbox" name="Feature" >2011</br>	
+											<input type="checkbox" name="Feature" >February 7</br>	
+											<input type="checkbox" name="Feature" >2012</br>	
+											<input type="checkbox" name="Feature" >November 1</br>	
+							
+								</br>	
+								<label>Fab (nm) : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>TDP watts : </label></br> <input id="6" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Model",
+									local : ['FirePro V5900','FirePro V7900','FirePro V3900','FirePro V4900','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Bus interface",
 									local : ['PCIe 2.1 x16','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['<75 Max','<150 Max','50','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Config core",
 									local : ['480(96×5):24:8','1280(320×4):80:32','512(128×4):32:32','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#3").typeahead({
+									name:"Code name",
 									local : ['Cayman Pro GL','Turks','Cayman LE GL','']
 								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['FirePro V5900','FirePro V7900','FirePro V3900','FirePro V4900','']
+								$("#4").typeahead({
+									name:"TDP watts",
+									local : ['<75 Max','<150 Max','50','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

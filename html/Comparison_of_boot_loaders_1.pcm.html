@@ -29,26 +29,6 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Others : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Supported decompression : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Advanced command :</label></br>
-								<input type="radio" name="FeatureAdvanced command" value="oui">Yes <input type="radio" name="FeatureAdvanced command" value = "non">No <input type="radio" name="FeatureAdvanced command" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Supported protocol : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Scriptable :</label></br>
-								<input type="radio" name="FeatureScriptable" value="oui">Yes <input type="radio" name="FeatureScriptable" value = "non">No <input type="radio" name="FeatureScriptable" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Supported executable : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Supported filesystem :</label></br>
 											<input type="checkbox" name="Feature" >ext2</br>	
 											<input type="checkbox" name="Feature" >ext3</br>	
@@ -98,10 +78,23 @@
 											<input type="checkbox" name="Feature" >NFS</br>	
 											<input type="checkbox" name="Feature" >EFI</br>	
 											<input type="checkbox" name="Feature" >efivarfs</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Supported architecture : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Supported protocol : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Scriptable :</label></br>
+								<input type="radio" name="FeatureScriptable" value="oui">Yes <input type="radio" name="FeatureScriptable" value = "non">No <input type="radio" name="FeatureScriptable" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Supported executable : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Others : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Name : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Supported decompression : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Supported architecture : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>Supported OS :</label></br>
 											<input type="checkbox" name="Feature" >GNU</br>	
@@ -148,34 +141,35 @@
 											<input type="checkbox" name="Feature" >Windows 2003</br>	
 											<input type="checkbox" name="Feature" >eCos</br>	
 											<input type="checkbox" name="Feature" >WinCE</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Name : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+								<label>Advanced command :</label></br>
+								<input type="radio" name="FeatureAdvanced command" value="oui">Yes <input type="radio" name="FeatureAdvanced command" value = "non">No <input type="radio" name="FeatureAdvanced command" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['FreeBSD's master boot record',' ','SSH, NFS support. kexec-based bootloader.','default bootloader on Windows NT','Kernel/multiboot module support','Successor of NTLDR; used on Vista and up.','Supported devices: MCF54xx, MCF5329, MCF5373, LLH7A400, LLH7A404, LLH79520, LLH79524, LSH7727, LSH7750, LSH7760, PXA270, PXA320, IMX31, IMX27, OMAP35xx, OMAP37xx','IBM IPL upper compatible','Proprietary','kexec and SYSLINUX based bootloader.','clone of NTLDR','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['?','bzip2, gzip','bzip2, gzip, lz4, xz, lzo','gzip, bzip2, lzo, zip, lzma, ?','gzip','gzip (for kernel modules)','bzip2, gzip, lzma','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"Supported protocol",
 									local : ['?','TFTP','TFTP, NFS, serial (S-Record, Y-Modem, Kermit binary protocol)','HTTP, FTP, TFTP','TFTP, serial (X-modem)','No networking','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Supported executable",
 									local : ['?','ELF','ELF, U-Boot image format','Portable Executable','None','ELF, binary, BIN (WinCE), SREC','ELF,Binary','']
 								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['i386 (PC, coreboot, OLPC, Mac), PowerPC (Mac, Pegasos II, IBM), Sun UltraSPARC (SPARC v9)','PowerPC (Open Firmware)','?','x86 (PC)','i386 (PC), ARM, PowerPC','ARM','ARM7, ARM9, ARM11, Cortex-A8, StrongARM, SH, ColdFire','i386 (PC)','i386','i386, PowerPC64','ARM, ColdFire, H8300, x86, Freescale/Motorola 68000, MIPS, PPC, SH, SPARC, SPARCLite','PPC, ARM, AVR32, Blackfin, ColdFire, IXP, Leon2, m68k, MicroBlaze, MIPS, NIOS, NIOS2, PXA, x86, StrongARM, SH2, SH3, SH4, ...','i386 (PC), ARM (only on Windows Mobile remake)','ARM, Blackfin, NIOS2, MIPS, x86, PPC','']
+								$("#2").typeahead({
+									name:"Others",
+									local : ['FreeBSD's master boot record',' ','SSH, NFS support. kexec-based bootloader.','default bootloader on Windows NT','Kernel/multiboot module support','Successor of NTLDR; used on Vista and up.','Supported devices: MCF54xx, MCF5329, MCF5373, LLH7A400, LLH7A404, LLH79520, LLH79524, LSH7727, LSH7750, LSH7760, PXA270, PXA320, IMX31, IMX27, OMAP35xx, OMAP37xx','IBM IPL upper compatible','Proprietary','kexec and SYSLINUX based bootloader.','clone of NTLDR','']
 								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#3").typeahead({
+									name:"Name",
 									local : ['SYSLINUX','kboot','Multiple Boot Manager','GRUB 2','Yaboot','GRUB Legacy','Runnix','FREELDR','Windows Boot Manager','Das U-Boot','boot0','RedBoot','bootload (Technologic Systems)','LILO','LOLO (Logic PD)','kexec-loader','NTLDR','Barebox','AKernelLoader','extipl','']
+								});
+								$("#4").typeahead({
+									name:"Supported decompression",
+									local : ['?','bzip2, gzip','bzip2, gzip, lz4, xz, lzo','gzip, bzip2, lzo, zip, lzma, ?','gzip','gzip (for kernel modules)','bzip2, gzip, lzma','']
+								});
+								$("#5").typeahead({
+									name:"Supported architecture",
+									local : ['i386 (PC, coreboot, OLPC, Mac), PowerPC (Mac, Pegasos II, IBM), Sun UltraSPARC (SPARC v9)','PowerPC (Open Firmware)','?','x86 (PC)','i386 (PC), ARM, PowerPC','ARM','ARM7, ARM9, ARM11, Cortex-A8, StrongARM, SH, ColdFire','i386 (PC)','i386','i386, PowerPC64','ARM, ColdFire, H8300, x86, Freescale/Motorola 68000, MIPS, PPC, SH, SPARC, SPARCLite','PPC, ARM, AVR32, Blackfin, ColdFire, IXP, Leon2, m68k, MicroBlaze, MIPS, NIOS, NIOS2, PXA, x86, StrongARM, SH2, SH3, SH4, ...','i386 (PC), ARM (only on Windows Mobile remake)','ARM, Blackfin, NIOS2, MIPS, x86, PPC','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -29,50 +29,41 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Speed : </label></br> <input id="1" type="text" name="Feature"></br>
+								<label>Range : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Speed :</label></br>
+											<input type="checkbox" name="Feature" >? km</br>	
+											<input type="checkbox" name="Feature" >h</br>	
+							
+								</br>	
+								<label>Type : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Model : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Door-to-doorcapable :</label></br>
+								<input type="radio" name="FeatureDoor-to-doorcapable" value="oui">Yes <input type="radio" name="FeatureDoor-to-doorcapable" value = "non">No <input type="radio" name="FeatureDoor-to-doorcapable" value = "non">Partial </br>
 								
 								</br>	
-								<label>Type : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Capacity : </label></br> <input id="3" type="number" name="Feature"></br>
+								<label>Capacity : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
 								<label>Price :</label></br>
 											<input type="checkbox" name="Feature" >€61</br>	
 											<input type="checkbox" name="Feature" >000</br>	
 											<input type="checkbox" name="Feature" >€69</br>	
-									
-								</br>	
-								<label>Model : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Door-to-door
-capable :</label></br>
-								<input type="radio" name="FeatureDoor-to-door
-capable" value="oui">Yes <input type="radio" name="FeatureDoor-to-door
-capable" value = "non">No <input type="radio" name="FeatureDoor-to-door
-capable" value = "non">Partial </br>
-								
-								</br>	
-								<label>Range : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['? km/h','186 mph (299 km/h)','']
+								$("#0").typeahead({
+									name:"Range",
+									local : ['882 mi (1,419 km)','','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Type",
 									local : ['Motor glider','Ultra-light','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#2").typeahead({
+									name:"Model",
 									local : ['Distar UFM-13 Lambada','Pipistrel Virus','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['882 mi (1,419 km)','','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

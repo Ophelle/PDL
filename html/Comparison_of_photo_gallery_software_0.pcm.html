@@ -29,68 +29,62 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Tags Categories Keywords : </label></br> <input id="1" type="text" name="Feature"></br>
+								<label>IPTC Support :</label></br>
+								<input type="radio" name="FeatureIPTC Support" value="oui">Yes <input type="radio" name="FeatureIPTC Support" value = "non">No <input type="radio" name="FeatureIPTC Support" value = "non">Partial </br>
 								
 								</br>	
-								<label>Resizing : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Tags Categories Keywords : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Languages : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Upload : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Platform :</label></br>
 											<input type="checkbox" name="Feature" >Windows</br>	
 											<input type="checkbox" name="Feature" >Mac</br>	
 											<input type="checkbox" name="Feature" >Linux</br>	
-									
+							
 								</br>	
-								<label>IPTC Support :</label></br>
-								<input type="radio" name="FeatureIPTC Support" value="oui">Yes <input type="radio" name="FeatureIPTC Support" value = "non">No <input type="radio" name="FeatureIPTC Support" value = "non">Partial </br>
+								<label>GeoTagging Support :</label></br>
+								<input type="radio" name="FeatureGeoTagging Support" value="oui">Yes <input type="radio" name="FeatureGeoTagging Support" value = "non">No <input type="radio" name="FeatureGeoTagging Support" value = "non">Partial </br>
 								
+								</br>	
+								<label>Resizing : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Name : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>Output :</label></br>
 											<input type="checkbox" name="Feature" >XHTML</br>	
 											<input type="checkbox" name="Feature" >HTML</br>	
 											<input type="checkbox" name="Feature" >CSS</br>	
 											<input type="checkbox" name="Feature" >Flash</br>	
-									
-								</br>	
-								<label>License : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Upload : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Languages : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>GeoTagging Support :</label></br>
-								<input type="radio" name="FeatureGeoTagging Support" value="oui">Yes <input type="radio" name="FeatureGeoTagging Support" value = "non">No <input type="radio" name="FeatureGeoTagging Support" value = "non">Partial </br>
-								
-								</br>	
-								<label>Name : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Tags Categories Keywords",
 									local : ['','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Automatic','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['Shareware','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['FTP','']
-								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#1").typeahead({
+									name:"Languages",
 									local : ['Multilingual','']
 								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#2").typeahead({
+									name:"Upload",
+									local : ['FTP','']
+								});
+								$("#3").typeahead({
+									name:"Resizing",
+									local : ['Automatic','']
+								});
+								$("#4").typeahead({
+									name:"Name",
 									local : ['Jalbum','']
+								});
+								$("#5").typeahead({
+									name:"License",
+									local : ['Shareware','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -29,49 +29,44 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Name/Website : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Social Security Number required? :</label></br>
-								<input type="radio" name="FeatureSocial Security Number required?" value="oui">Yes <input type="radio" name="FeatureSocial Security Number required?" value = "non">No <input type="radio" name="FeatureSocial Security Number required?" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Cost of credit report : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Cost of credit score :</label></br>
 											<input type="checkbox" name="Feature" >Free; once weekly</br>	
 											<input type="checkbox" name="Feature" >Free; once every 3 months</br>	
 											<input type="checkbox" name="Feature" >Free; once monthly</br>	
 											<input type="checkbox" name="Feature" >Free; once every 6 months</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>Credit card required? :</label></br>
 								<input type="radio" name="FeatureCredit card required?" value="oui">Yes <input type="radio" name="FeatureCredit card required?" value = "non">No <input type="radio" name="FeatureCredit card required?" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Report type : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Social Security Number required? :</label></br>
+								<input type="radio" name="FeatureSocial Security Number required?" value="oui">Yes <input type="radio" name="FeatureSocial Security Number required?" value = "non">No <input type="radio" name="FeatureSocial Security Number required?" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
-								<label>Score type : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Name/Website : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Cost of credit report : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Report type : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Score type : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Cost of credit report",
+									local : ['Free proprietary credit report summary','Free; once every 6 months','Free; one from each agency every 12 months','Free TransUnion credit report summary','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Name/Website",
 									local : ['Credit Sesame','Mint.com','Credit.com','Quizzle','LendingTree','AnnualCreditReport.com','WisePiggy','Credit Karma','Credit Concierge','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Report type",
 									local : ['TransUnion','Experian (bare)','Transunion, Equifax','Transunion','Equifax','Equifax, Experian & Transunion','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['','VantageScore 3.0','Experian's National Equivalency Score, VantageScore 3.0','VantageScore 3.0,
-Transunion's TransRisk New Account score.','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['Free proprietary credit report summary','Free; once every 6 months','Free; one from each agency every 12 months','Free TransUnion credit report summary','']
+									name:"Score type",
+									local : ['','VantageScore 3.0','Experian's National Equivalency Score, VantageScore 3.0','VantageScore 3.0,Transunion's TransRisk New Account score.','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

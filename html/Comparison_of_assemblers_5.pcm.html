@@ -29,6 +29,18 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Active Development :</label></br>
+								<input type="radio" name="FeatureActive Development" value="oui">Yes <input type="radio" name="FeatureActive Development" value = "non">No <input type="radio" name="FeatureActive Development" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Assembler : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Open source :</label></br>
+								<input type="radio" name="FeatureOpen source" value="oui">Yes <input type="radio" name="FeatureOpen source" value = "non">No <input type="radio" name="FeatureOpen source" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
 								<label>OS :</label></br>
 											<input type="checkbox" name="Feature" >Windows</br>	
 											<input type="checkbox" name="Feature" >Linux</br>	
@@ -50,33 +62,19 @@
 											<input type="checkbox" name="Feature" >16-bit part in Linux</br>	
 											<input type="checkbox" name="Feature" >86-DOS</br>	
 											<input type="checkbox" name="Feature" >DOS DEBUG</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>x86-64 :</label></br>
 								<input type="radio" name="Featurex86-64" value="oui">Yes <input type="radio" name="Featurex86-64" value = "non">No <input type="radio" name="Featurex86-64" value = "non">Partial </br>
 											<input type="text"/></br>								
-								</br>	
-								<label>Active Development :</label></br>
-								<input type="radio" name="FeatureActive Development" value="oui">Yes <input type="radio" name="FeatureActive Development" value = "non">No <input type="radio" name="FeatureActive Development" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Assembler : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Open source :</label></br>
-								<input type="radio" name="FeatureOpen source" value="oui">Yes <input type="radio" name="FeatureOpen source" value = "non">No <input type="radio" name="FeatureOpen source" value = "non">Partial </br>
-											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['BSD','BSD with added Copyleft','Sybase Open Watcom Public License','Microsoft EULA','GPL','LGPL','?','Proprietary','Free','Public Domain','Public domain','BSD since 2003','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Assembler",
 									local : ['Tim Paterson's ASM','IBM ALP','WASM','TASM','vasm','SLR's OPTASM','ACK','Arrowsoft Assembler','GAS','AT&T','MASM','Mical a86','POASM','RosAsm','LZASM','TCCASM','A86/A386','Yasm','JWASM','Bruce D. Evans' as86','FASM','GoAsm','Digital Research ASM86','NASM','DevelSoftware Assembler','HLA','Xenix','']
+								});
+								$("#1").typeahead({
+									name:"License",
+									local : ['BSD','BSD with added Copyleft','Sybase Open Watcom Public License','Microsoft EULA','GPL','LGPL','?','Proprietary','Free','Public Domain','Public domain','BSD since 2003','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

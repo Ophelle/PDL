@@ -29,14 +29,9 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Programming Language : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Tracker : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Programming Language : </label></br> <input id="3" type="text" name="Feature"></br>
-								
 								</br>	
 								<label>Operating System Support :</label></br>
 											<input type="checkbox" name="Feature" >Windows</br>	
@@ -48,7 +43,7 @@
 											<input type="checkbox" name="Feature" >Android</br>	
 											<input type="checkbox" name="Feature" >OS</br>	
 											<input type="checkbox" name="Feature" >2</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>Description :</label></br>
 											<input type="checkbox" name="Feature" >Lightweight. Supports DHT</br>	
@@ -61,19 +56,21 @@
 											<input type="checkbox" name="Feature" >lightweight tracker</br>	
 											<input type="checkbox" name="Feature" >Uses libowfat</br>	
 											<input type="checkbox" name="Feature" >performs well even on embedded hardware. Only requirement is a POSIX compliant OS.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Tracker : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['MonoTorrent','PeerTracker','qBittorrent','Vuze','MLDonkey','Opentracker','XBT Tracker','μTorrent','']
+								$("#0").typeahead({
+									name:"Programming Language",
+									local : ['C#','Java','OCaml','C++','C','PHP','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"License",
 									local : ['Disputed','Freeware','GPL','MIT','Beerware','']
 								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['C#','Java','OCaml','C++','C','PHP','']
+								$("#2").typeahead({
+									name:"Tracker",
+									local : ['MonoTorrent','PeerTracker','qBittorrent','Vuze','MLDonkey','Opentracker','XBT Tracker','μTorrent','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

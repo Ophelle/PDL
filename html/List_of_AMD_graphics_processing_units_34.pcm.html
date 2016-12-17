@@ -29,32 +29,28 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fillrate - Texture (GT/s) : </label></br> <input id="2" type="number" name="Feature"></br>
+								<label>Memory - Bus width (bit) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Memory clock (MHz) : </label></br> <input id="3" type="number" name="Feature"></br>
+								<label>Memory - Bus type : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Core clock (MHz) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>API compliance (version) - DirectX : </label></br> <input id="4" type="number" name="Feature"></br>
+								<label>Memory (MB) : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Fab (nm) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Memory - Bus width (bit) : </label></br> <input id="5" type="number" name="Feature"></br>
+								<label>Fillrate - Pixel (GP/s) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Config core : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Core clock (MHz) : </label></br> <input id="7" type="number" name="Feature"></br>
+								<label>Fillrate - Texture (GT/s) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Memory (MB) : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Model Number : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label>Model Number : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Launch :</label></br>
 											<input type="checkbox" name="Feature" >September 1</br>	
@@ -64,32 +60,27 @@
 											<input type="checkbox" name="Feature" >June 5</br>	
 											<input type="checkbox" name="Feature" >August 1</br>	
 											<input type="checkbox" name="Feature" >July 25</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Processing Power
-GFLOPs : </label></br> <input id="11" type="number" name="Feature"></br>
+								<label>Code name : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Config core : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory clock (MHz) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Code name : </label></br> <input id="12" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>API compliance (version) - OpenGL : </label></br> <input id="13" type="number" name="Feature"></br>
+								<label>API compliance (version) - OpenGL : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Model : </label></br> <input id="14" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Memory - Bus type : </label></br> <input id="15" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fab (nm) : </label></br> <input id="16" type="number" name="Feature"></br>
+								<label>API compliance (version) - DirectX : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="17" type="text" name="Feature"></br>
-								
+								<label>Bus interface : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
-								<label>Fillrate - Pixel (GP/s) : </label></br> <input id="18" type="number" name="Feature"></br>
+								<label>Processing PowerGFLOPs : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
+								</br>	
+								<label>Model : </label></br> <input id="7" type="text" name="Feature"></br>
 								</br>	
 								<label>Notes :</label></br>
 											<input type="checkbox" name="Feature" >UVD</br>	
@@ -97,32 +88,31 @@ GFLOPs : </label></br> <input id="11" type="number" name="Feature"></br>
 											<input type="checkbox" name="Feature" >PowerPlay 7.0. TDP 30 watts</br>	
 											<input type="checkbox" name="Feature" >PowerPlay 7.0. TDP 110 watts</br>	
 											<input type="checkbox" name="Feature" >PowerPlay 7.0. TDP 55 watts.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
+								$("#0").typeahead({
+									name:"Memory (MB)",
+									local : ['256, 512','5121024','2x 512','up to 512 from system memory','256','512','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['PCIe x16 1.1','PCIe x16 2.0','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['40:4:4','320:16:16','120:8:4','2x [320:16:16]','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['256, 512','512
-1024','2x 512','up to 512 from system memory','256','512','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+									name:"Model Number",
 									local : ['M86-XT','M82-SE','M88-L/M88-LP','2x M88-LXT','M82','M88-LXT','RS780MC','M82-MPE','2x M88-L/M88-LP','M82-XT','M86','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#2").typeahead({
+									name:"Model",
 									local : ['Mobility Radeon HD 3450','Mobility Radeon HD 3850','Mobility Radeon HD 3670','Mobility Radeon HD 3470','Mobility Radeon HD 3410','Mobility Radeon HD 3430','Mobility Radeon HD 3100','Mobility Radeon HD 3870 X2','Mobility Radeon HD 3650','Mobility Radeon HD 3870','Mobility Radeon HD 3200','Mobility Radeon HD 3850 X2','']
 								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#3").typeahead({
+									name:"Code name",
 									local : ['RV620','R680','RV670','RV635','']
+								});
+								$("#4").typeahead({
+									name:"Config core",
+									local : ['40:4:4','320:16:16','120:8:4','2x [320:16:16]','']
+								});
+								$("#5").typeahead({
+									name:"Bus interface",
+									local : ['PCIe x16 1.1','PCIe x16 2.0','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

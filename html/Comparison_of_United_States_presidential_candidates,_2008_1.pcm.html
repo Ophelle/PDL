@@ -29,32 +29,36 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>U.S. House committee memberships : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Gender : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>U.S. Senate committee memberships : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>U.S. Senate committee memberships : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Management/Corporate experience : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Management/Corporate experience : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Undergraduate education : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Undergraduate education :</label></br>
+											<input type="checkbox" name="Feature" >B.A. Columbia University (Political Science</br>	
+											<input type="checkbox" name="Feature" >International Relations) 1983</br>	
+											<input type="checkbox" name="Feature" >B.A. Princeton University (East Asian Studies</br>	
+											<input type="checkbox" name="Feature" >International Relations) 1955</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Teaching experience : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Spouse's graduate education : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Net worth (with spouse) : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Armed Forces experience : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Gender : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Armed Forces awards : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>Armed Forces experience : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Teaching experience : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
-								<label>Spouse's graduate education : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label>Spouse : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Spouse’s profession : </label></br> <input id="8" type="text" name="Feature"></br>
+								</br>	
+								<label>Other political experience : </label></br> <input id="9" type="text" name="Feature"></br>
+								</br>	
+								<label>Spouse’s undergraduate education : </label></br> <input id="10" type="text" name="Feature"></br>
+								</br>	
+								<label>Party : </label></br> <input id="11" type="text" name="Feature"></br>
 								</br>	
 								<label>Profession :</label></br>
 											<input type="checkbox" name="Feature" >Former U.S. Congressman</br>	
@@ -72,19 +76,11 @@
 											<input type="checkbox" name="Feature" >Professor of Constitutional Law</br>	
 											<input type="checkbox" name="Feature" >U.S. Congressman</br>	
 											<input type="checkbox" name="Feature" >Businessman Naval Aviator</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Party : </label></br> <input id="11" type="text" name="Feature"></br>
-								
+								<label>Graduate education : </label></br> <input id="12" type="text" name="Feature"></br>
 								</br>	
-								<label>Spouse : </label></br> <input id="12" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Other political experience : </label></br> <input id="13" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Last political office : </label></br> <input id="14" type="text" name="Feature"></br>
-								
+								<label>U.S. House committee memberships : </label></br> <input id="13" type="text" name="Feature"></br>
 								</br>	
 								<label>States/Countries lived in :</label></br>
 											<input type="checkbox" name="Feature" >Georgia</br>	
@@ -108,93 +104,78 @@
 											<input type="checkbox" name="Feature" >Indonesia</br>	
 											<input type="checkbox" name="Feature" >Massachusetts</br>	
 											<input type="checkbox" name="Feature" >New York</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Armed Forces awards : </label></br> <input id="16" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Graduate education : </label></br> <input id="17" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Spouse’s profession : </label></br> <input id="18" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Spouse’s undergraduate education : </label></br> <input id="19" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Age : </label></br> <input id="20" type="number" name="Feature"></br>
+								<label>Age : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
+								</br>	
+								<label>Last political office : </label></br> <input id="14" type="text" name="Feature"></br>
+								</br>	
+								<label>Net worth (with spouse) : </label></br> <input id="15" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['None','Committee on the Judiciary, Government Reform Committee, Committee on Financial Services, Committee on Veteran's Affairs','Committee on Interior Affairs, Committee on Armed Services; Subcommittee on Military Personnel; Subcommittee on Terrorism and Unconventional Threats, Committee on the Budget','Committee on the Judiciary, Committee on Oversight and Government Reform, Committee on Financial Services','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['None','Health, Education, Labor, and Pensions, Foreign Relations; Homeland Security and Governmental Affairs; Veterans' Affairs','Advised auto safety subcommittee (1964)','Armed Services Committee; (Chairman of the) Commerce, Science and Transportation Committee; (Chairman of the) Indian Affairs Committee; Committee on POW/MIA Affairs','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['Founded/lead Crossroad Baptist Church, Pensacola (1975–)','None','President of the Southeastern Legal Foundation','President of the Harvard Law Review; Junior editor for Business International Corporation; Associate Lawyer of Davis, Miner, Barnhill & Galland','','Vice President of Public Relations for Hensley & Co.','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['B.A. Columbia University (Political Science, International Relations) 1983','B.A. Liberty University','B.A. University of Southern California (International Relations) 1970','B.A. Princeton University (East Asian Studies, International Relations) 1955','B.A. University of Southern California (International Relations)','B.S. United States Naval Academy (The Naval Academy had a fixed curriculum and did not allow Midshipmen to pick a major)','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['Gave the 114th Landon Lecture on March 15, 1999 at Kansas State','Pastor of Crossroad Baptist Church, Pensacola (1975–)','Lecturer in Constitutional Law at the University of Chicago Law School (1993–2004)','Professor of History and Government (University of Hartford)','Adjunct professor teaching "Privacy and Public Policy in 21st century Business and Society" at Kennesaw State University (2008)','Earth Day Lecturer at CSU (2008)','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['','$50,000 (US$)','$23–36 million (US$)','$10–16 million (US$)','$4 million (US$)','']
-								});
-								$("#7").typeahead({
-									name:"list7",
+								$("#0").typeahead({
+									name:"Gender",
 									local : ['Male','Female','']
 								});
-								$("#8").typeahead({
-									name:"list8",
-									local : ['None','(1958–1981) Midshipman, US Naval Academy; Naval Aviator; Prisoner of War; Commander; Commanding Officer, VA-174 "Hellrazors"','US Army (1959)','','']
+								$("#1").typeahead({
+									name:"U.S. Senate committee memberships",
+									local : ['None','Health, Education, Labor, and Pensions, Foreign Relations; Homeland Security and Governmental Affairs; Veterans' Affairs','Advised auto safety subcommittee (1964)','Armed Services Committee; (Chairman of the) Commerce, Science and Transportation Committee; (Chairman of the) Indian Affairs Committee; Committee on POW/MIA Affairs','']
 								});
-								$("#9").typeahead({
-									name:"list9",
+								$("#2").typeahead({
+									name:"Management/Corporate experience",
+									local : ['Founded/lead Crossroad Baptist Church, Pensacola (1975–)','None','President of the Southeastern Legal Foundation','President of the Harvard Law Review; Junior editor for Business International Corporation; Associate Lawyer of Davis, Miner, Barnhill & Galland','','Vice President of Public Relations for Hensley & Co.','']
+								});
+								$("#3").typeahead({
+									name:"Spouse's graduate education",
 									local : ['n/a','J.D. in Law, 1988, Harvard Law School','None','M.A. in Special Education, University of Southern California','','']
 								});
-								$("#10").typeahead({
-									name:"list10",
+								$("#4").typeahead({
+									name:"Spouse",
 									local : ['Michelle Obama (m. 1992)','None','Jeri Barr (m. 1986)','Connie Cole Baldwin (m. 1973)','Cindy Hensley McCain (m. 1980)','']
 								});
-								$("#11").typeahead({
-									name:"list11",
-									local : ['Libertarian Party
-Republican Party (former)','Green Party
-Democratic Party (former)','Democratic Party','Republican Party','Independent','Constitution Party
-Republican Party (former)','']
+								$("#5").typeahead({
+									name:"Armed Forces experience",
+									local : ['None','(1958–1981) Midshipman, US Naval Academy; Naval Aviator; Prisoner of War; Commander; Commanding Officer, VA-174 "Hellrazors"','US Army (1959)','','']
 								});
-								$("#12").typeahead({
-									name:"list12",
-									local : ['Illinois State Senator (1996–2004)','Region 4 Representative for the Libertarian National Committee (2006–2008), National Rifle Association Board Member,','Consultant to Department of Labor (1964)','Florida Chairman of Moral Majority (1980–1984), 2004 Constitution Party Vice Presidential nominee','United States Congressman (1982–1986)','Member of the Georgia House of Representatives, (1988–1992)','']
-								});
-								$("#13").typeahead({
-									name:"list13",
-									local : ['U.S. Congressman (1995–2003)','U.S. Congresswoman (1993–2003, 2005–2007)','U.S. Senator (1987–present)','None','U.S. Senator (2005–2008)','']
-								});
-								$("#14").typeahead({
-									name:"list14",
+								$("#6").typeahead({
+									name:"Armed Forces awards",
 									local : ['None','Silver Star, Legion of Merit, Bronze Star, Distinguished Flying Cross, Navy Commendation Medal and the National Order of Vietnam from South Vietnam','','']
 								});
-								$("#15").typeahead({
-									name:"list15",
-									local : ['M.A. George Washington University (International Relations) (1972), J.D. Georgetown University Law Center (1977)','L.L.B. Harvard Law (1958)','J.D. Harvard Law (1991)','Master's Degree in Theology Christian Bible College','National War College','M.A. Fletcher School of Law and Diplomacy at Tufts University (1982?); diplomatic fellow, Spelman College (1984); a PhD student at University of California, Berkeley','']
+								$("#7").typeahead({
+									name:"Teaching experience",
+									local : ['Gave the 114th Landon Lecture on March 15, 1999 at Kansas State','Pastor of Crossroad Baptist Church, Pensacola (1975–)','Lecturer in Constitutional Law at the University of Chicago Law School (1993–2004)','Professor of History and Government (University of Hartford)','Adjunct professor teaching "Privacy and Public Policy in 21st century Business and Society" at Kennesaw State University (2008)','Earth Day Lecturer at CSU (2008)','']
 								});
-								$("#16").typeahead({
-									name:"list16",
+								$("#8").typeahead({
+									name:"Spouse’s profession",
 									local : ['n/a','Attorney, Executive','','High School Teacher, Businessperson, Philanthropist','Numerous positions in Cobb, Georgia','']
 								});
-								$("#17").typeahead({
-									name:"list17",
+								$("#9").typeahead({
+									name:"Other political experience",
+									local : ['Illinois State Senator (1996–2004)','Region 4 Representative for the Libertarian National Committee (2006–2008), National Rifle Association Board Member,','Consultant to Department of Labor (1964)','Florida Chairman of Moral Majority (1980–1984), 2004 Constitution Party Vice Presidential nominee','United States Congressman (1982–1986)','Member of the Georgia House of Representatives, (1988–1992)','']
+								});
+								$("#10").typeahead({
+									name:"Spouse’s undergraduate education",
 									local : ['B.A. in Education, University of Southern California','None','B.A. in Sociology, 1985, Princeton University','n/a','','']
+								});
+								$("#11").typeahead({
+									name:"Party",
+									local : ['Libertarian PartyRepublican Party (former)','Green PartyDemocratic Party (former)','Democratic Party','Republican Party','Independent','Constitution PartyRepublican Party (former)','']
+								});
+								$("#12").typeahead({
+									name:"Graduate education",
+									local : ['M.A. George Washington University (International Relations) (1972), J.D. Georgetown University Law Center (1977)','L.L.B. Harvard Law (1958)','J.D. Harvard Law (1991)','Master's Degree in Theology Christian Bible College','National War College','M.A. Fletcher School of Law and Diplomacy at Tufts University (1982?); diplomatic fellow, Spelman College (1984); a PhD student at University of California, Berkeley','']
+								});
+								$("#13").typeahead({
+									name:"U.S. House committee memberships",
+									local : ['None','Committee on the Judiciary, Government Reform Committee, Committee on Financial Services, Committee on Veteran's Affairs','Committee on Interior Affairs, Committee on Armed Services; Subcommittee on Military Personnel; Subcommittee on Terrorism and Unconventional Threats, Committee on the Budget','Committee on the Judiciary, Committee on Oversight and Government Reform, Committee on Financial Services','']
+								});
+								$("#14").typeahead({
+									name:"Last political office",
+									local : ['U.S. Congressman (1995–2003)','U.S. Congresswoman (1993–2003, 2005–2007)','U.S. Senator (1987–present)','None','U.S. Senator (2005–2008)','']
+								});
+								$("#15").typeahead({
+									name:"Net worth (with spouse)",
+									local : ['','$50,000 (US$)','$23–36 million (US$)','$10–16 million (US$)','$4 million (US$)','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

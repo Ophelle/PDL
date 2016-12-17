@@ -29,14 +29,6 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Pre-made sessions :</label></br>
-								<input type="radio" name="FeaturePre-made sessions" value="oui">Yes <input type="radio" name="FeaturePre-made sessions" value = "non">No <input type="radio" name="FeaturePre-made sessions" value = "non">Partial </br>
-								
-								</br>	
-								<label>User-created sessions :</label></br>
-								<input type="radio" name="FeatureUser-created sessions" value="oui">Yes <input type="radio" name="FeatureUser-created sessions" value = "non">No <input type="radio" name="FeatureUser-created sessions" value = "non">Partial </br>
-								
-								</br>	
 								<label>Volume modulation for embedded audio :</label></br>
 								<input type="radio" name="FeatureVolume modulation for embedded audio" value="oui">Yes <input type="radio" name="FeatureVolume modulation for embedded audio" value = "non">No <input type="radio" name="FeatureVolume modulation for embedded audio" value = "non">Partial </br>
 								
@@ -45,34 +37,39 @@
 								<input type="radio" name="FeatureHeadphone-free sessions" value="oui">Yes <input type="radio" name="FeatureHeadphone-free sessions" value = "non">No <input type="radio" name="FeatureHeadphone-free sessions" value = "non">Partial </br>
 								
 								</br>	
-								<label>Background Noise : </label></br> <input id="5" type="text" name="Feature"></br>
+								<label>User-created sessions :</label></br>
+								<input type="radio" name="FeatureUser-created sessions" value="oui">Yes <input type="radio" name="FeatureUser-created sessions" value = "non">No <input type="radio" name="FeatureUser-created sessions" value = "non">Partial </br>
 								
 								</br>	
-								<label>Software : </label></br> <input id="6" type="text" name="Feature"></br>
+								<label>Export as sound file : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Pre-made sessions :</label></br>
+								<input type="radio" name="FeaturePre-made sessions" value="oui">Yes <input type="radio" name="FeaturePre-made sessions" value = "non">No <input type="radio" name="FeaturePre-made sessions" value = "non">Partial </br>
 								
+								</br>	
+								<label>Software : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Networkable :</label></br>
 								<input type="radio" name="FeatureNetworkable" value="oui">Yes <input type="radio" name="FeatureNetworkable" value = "non">No <input type="radio" name="FeatureNetworkable" value = "non">Partial </br>
 								
 								</br>	
-								<label>Export as sound file : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Embed audio (sounds, music, hypnosis) :</label></br>
 								<input type="radio" name="FeatureEmbed audio (sounds, music, hypnosis)" value="oui">Yes <input type="radio" name="FeatureEmbed audio (sounds, music, hypnosis)" value = "non">No <input type="radio" name="FeatureEmbed audio (sounds, music, hypnosis)" value = "non">Partial </br>
 								
+								</br>	
+								<label>Background Noise : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Yes (white, pink and brown)','Yes (pink)','No','Yes','Yes (via VST)','Yes (white)','']
+								$("#0").typeahead({
+									name:"Export as sound file",
+									local : ['No','Yes (through DAW)','Yes (MP3)','Yes (OGG, MP3 WAV)','Yes (via VST)','Yes (OGG, MP3, WAV)','Yes (WAV)','Yes (MP3, M4A, WAV)','Yes (WAV, raw audio)','Yes (WAV, raw audio, OGG, FLAC)','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Software",
 									local : ['Gnaural','Mind WorkStation','Neuro Entrainment','Lux VST Brainwave Entrainment Instrument','Isochronic Tone Generator','BrainWave Generator','Neuro-Programmer 3','BrainIgniter Player','Brainwave Studio','BeeOne SMOD/HMS','Discord','Neuro Sequencer Pro','SBaGen','']
 								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['No','Yes (through DAW)','Yes (MP3)','Yes (OGG, MP3 WAV)','Yes (via VST)','Yes (OGG, MP3, WAV)','Yes (WAV)','Yes (MP3, M4A, WAV)','Yes (WAV, raw audio)','Yes (WAV, raw audio, OGG, FLAC)','']
+								$("#2").typeahead({
+									name:"Background Noise",
+									local : ['Yes (white, pink and brown)','Yes (pink)','No','Yes','Yes (via VST)','Yes (white)','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -29,34 +29,31 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Peripheral Support : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>USB keyboard : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Feature : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Interchangeable external memory cards :</label></br>
+								<input type="radio" name="FeatureInterchangeable external memory cards" value="oui">Yes <input type="radio" name="FeatureInterchangeable external memory cards" value = "non">No <input type="radio" name="FeatureInterchangeable external memory cards" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
 								<label>Bluetooth keyboard :</label></br>
 								<input type="radio" name="FeatureBluetooth keyboard" value="oui">Yes <input type="radio" name="FeatureBluetooth keyboard" value = "non">No <input type="radio" name="FeatureBluetooth keyboard" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Feature : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>USB keyboard : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Interchangeable external memory cards :</label></br>
-								<input type="radio" name="FeatureInterchangeable external memory cards" value="oui">Yes <input type="radio" name="FeatureInterchangeable external memory cards" value = "non">No <input type="radio" name="FeatureInterchangeable external memory cards" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Peripheral Support : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"USB keyboard",
 									local : ['With Camera Connection Kit','?','No','Yes','3.1+','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Peripheral Support','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Feature",
 									local : ['Firefox OS','Sailfish OS','Tizen','iOS','Android','Ubuntu Touch','BlackBerry 10','Windows Phone','Mer','']
+								});
+								$("#2").typeahead({
+									name:"Peripheral Support",
+									local : ['Peripheral Support','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

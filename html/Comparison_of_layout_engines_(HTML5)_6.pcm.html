@@ -29,22 +29,20 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>a ping : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>track : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>device :</label></br>
 								<input type="radio" name="Featuredevice" value="oui">Yes <input type="radio" name="Featuredevice" value = "non">No <input type="radio" name="Featuredevice" value = "non">Partial </br>
-											<input type="text"/></br>								
+								
+								</br>	
+								<label>a ping : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>track : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"a ping",
 									local : ['No','Depends','','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"track",
 									local : ['','6.0','']
 								});
 						</script>

@@ -29,14 +29,19 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Solaris kernel : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Solaris kernel : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Kernel Name : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Kernel Name : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Linux kernel : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>XNU :</label></br>
+								<input type="radio" name="FeatureXNU" value="oui">Yes <input type="radio" name="FeatureXNU" value = "non">No <input type="radio" name="FeatureXNU" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Windows NT kernel :</label></br>
+								<input type="radio" name="FeatureWindows NT kernel" value="oui">Yes <input type="radio" name="FeatureWindows NT kernel" value = "non">No <input type="radio" name="FeatureWindows NT kernel" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Linux kernel : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>FreeBSD kernel :</label></br>
 								<input type="radio" name="FeatureFreeBSD kernel" value="oui">Yes <input type="radio" name="FeatureFreeBSD kernel" value = "non">No <input type="radio" name="FeatureFreeBSD kernel" value = "non">Partial </br>
@@ -45,29 +50,18 @@
 								<label>DragonFly BSD kernel :</label></br>
 								<input type="radio" name="FeatureDragonFly BSD kernel" value="oui">Yes <input type="radio" name="FeatureDragonFly BSD kernel" value = "non">No <input type="radio" name="FeatureDragonFly BSD kernel" value = "non">Partial </br>
 											<input type="text"/></br>								
-								</br>	
-								<label>Windows NT kernel : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>XNU :</label></br>
-								<input type="radio" name="FeatureXNU" value="oui">Yes <input type="radio" name="FeatureXNU" value = "non">No <input type="radio" name="FeatureXNU" value = "non">Partial </br>
-											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Solaris kernel",
 									local : ['?','KSSL','Yes','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Kernel Name",
 									local : ['HTTP','FTP','NFS','9P','SSL proxy','CIFS','Name server','Transport-layer load balancer','Application-layer load balancer','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#2").typeahead({
+									name:"Linux kernel",
 									local : ['No','IP Virtual Server','knfsd','(patch available)','?','(TUX web server patch)','(KTCPVS)','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['Yes','?','HTTP.sys','No','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

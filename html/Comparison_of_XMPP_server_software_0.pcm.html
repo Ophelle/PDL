@@ -29,94 +29,83 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Status : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Sun Java Communications Suite : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Description : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Metronome : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Metronome : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>jabberd14 : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>jabberd14 : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Sun Java Communications Suite : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>jabberd2 : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Isode M-Link :</label></br>
 								<input type="radio" name="FeatureIsode M-Link" value="oui">Yes <input type="radio" name="FeatureIsode M-Link" value = "non">No <input type="radio" name="FeatureIsode M-Link" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Tigase : </label></br> <input id="7" type="text" name="Feature"></br>
 								
 								</br>	
-								<label>RFC : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Prosody : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Openfire : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label>Tigase : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>iChat Server : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+								<label>RFC : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
-								<label>Prosody : </label></br> <input id="11" type="text" name="Feature"></br>
-								
+								<label>Status : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Description : </label></br> <input id="8" type="text" name="Feature"></br>
 								</br>	
 								<label>MongooseIM :</label></br>
 								<input type="radio" name="FeatureMongooseIM" value="oui">Yes <input type="radio" name="FeatureMongooseIM" value = "non">No <input type="radio" name="FeatureMongooseIM" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>jabberd2 : </label></br> <input id="13" type="text" name="Feature"></br>
 								
 								</br>	
 								<label>ejabberd :</label></br>
 								<input type="radio" name="Featureejabberd" value="oui">Yes <input type="radio" name="Featureejabberd" value = "non">No <input type="radio" name="Featureejabberd" value = "non">Partial </br>
-											<input type="text"/></br>								
+								
+								</br>	
+								<label>iChat Server : </label></br> <input id="9" type="text" name="Feature"></br>
+								</br>	
+								<label>Openfire : </label></br> <input id="10" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Sun Java Communications Suite",
+									local : ['Unknown','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['Final','Obsolete','Informational','']
+									name:"Metronome",
+									local : ['Unknown','Yes','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['XMPP IM','XMPP URN','XMPP Core','XMPP ENUM','XMPP CPIM','XMPP E2E','XMPP AF','XMPP URI','']
+									name:"jabberd14",
+									local : ['Unknown','Yes','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"jabberd2",
 									local : ['Unknown','Yes','']
 								});
 								$("#4").typeahead({
-									name:"list4",
+									name:"Prosody",
 									local : ['Unknown','Yes','']
 								});
 								$("#5").typeahead({
-									name:"list5",
-									local : ['Unknown','']
-								});
-								$("#6").typeahead({
-									name:"list6",
+									name:"Tigase",
 									local : ['Unknown','Yes','']
 								});
-								$("#7").typeahead({
-									name:"list7",
+								$("#6").typeahead({
+									name:"RFC",
 									local : ['RFC 3923','RFC 4979','RFC 6121','RFC 6120','RFC 4854','RFC 3922','RFC 5122','RFC 3921','RFC 6122','RFC 3920','']
 								});
+								$("#7").typeahead({
+									name:"Status",
+									local : ['Final','Obsolete','Informational','']
+								});
 								$("#8").typeahead({
-									name:"list8",
-									local : ['Yes/Partial','Yes','Unknown','']
+									name:"Description",
+									local : ['XMPP IM','XMPP URN','XMPP Core','XMPP ENUM','XMPP CPIM','XMPP E2E','XMPP AF','XMPP URI','']
 								});
 								$("#9").typeahead({
-									name:"list9",
+									name:"iChat Server",
 									local : ['Unknown','Yes','']
 								});
 								$("#10").typeahead({
-									name:"list10",
-									local : ['Unknown','Yes','']
-								});
-								$("#11").typeahead({
-									name:"list11",
-									local : ['Unknown','Yes','']
+									name:"Openfire",
+									local : ['Yes/Partial','Yes','Unknown','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

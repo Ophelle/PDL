@@ -29,38 +29,35 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>iCab : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>KHTML : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Presto : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Tasman : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Gecko : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
 								<label>WebKit :</label></br>
 								<input type="radio" name="FeatureWebKit" value="oui">Yes <input type="radio" name="FeatureWebKit" value = "non">No <input type="radio" name="FeatureWebKit" value = "non">Partial </br>
 								
 								</br>	
-								<label>Presto : </label></br> <input id="2" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>KHTML : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Tasman : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Trident : </label></br> <input id="5" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>iCab : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Gecko : </label></br> <input id="7" type="number" name="Feature"></br>
+								<label>Trident : </label></br> <input type="number" name="Feature"></br>
 								
 						<script>
+								$("#0").typeahead({
+									name:"iCab",
+									local : ['?','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"KHTML",
 									local : ['Partialgroupnote','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['?','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Tasman",
 									local : ['?','']
 								});
 						</script>

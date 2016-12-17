@@ -29,41 +29,38 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>easy to view all document labels of same type document : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>use simultaneously different application :</label></br>
 								<input type="radio" name="Featureuse simultaneously different application" value="oui">Yes <input type="radio" name="Featureuse simultaneously different application" value = "non">No <input type="radio" name="Featureuse simultaneously different application" value = "non">Partial </br>
-								
-								</br>	
-								<label>Concept : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>memory efficiency :</label></br>
-								<input type="radio" name="Featurememory efficiency" value="oui">Yes <input type="radio" name="Featurememory efficiency" value = "non">No <input type="radio" name="Featurememory efficiency" value = "non">Partial </br>
-								
-								</br>	
-								<label>easy to view all document labels of same type document : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+											<input type="text"/></br>								
 								</br>	
 								<label>small-sized content :</label></br>
 								<input type="radio" name="Featuresmall-sized content" value="oui">Yes <input type="radio" name="Featuresmall-sized content" value = "non">No <input type="radio" name="Featuresmall-sized content" value = "non">Partial </br>
-								
-								</br>	
-								<label>Applications : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+											<input type="text"/></br>								
 								</br>	
 								<label>multiple type document :</label></br>
 								<input type="radio" name="Featuremultiple type document" value="oui">Yes <input type="radio" name="Featuremultiple type document" value = "non">No <input type="radio" name="Featuremultiple type document" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
+								</br>	
+								<label>Concept : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>memory efficiency :</label></br>
+								<input type="radio" name="Featurememory efficiency" value="oui">Yes <input type="radio" name="Featurememory efficiency" value = "non">No <input type="radio" name="Featurememory efficiency" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Applications : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"easy to view all document labels of same type document",
+									local : ['depends on Window System','depends on Application','Yes','No','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Concept",
 									local : ['MDI: Window splitting','MDI: Tabbed document interface','Single document interface','MDI: Overlappable windows','MDI: IDE-style interface','Controlled Single Document Interface','Single document window splitting','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['depends on Window System','depends on Application','Yes','No','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Applications",
 									local : ['','Opera','Eclipse','Inkscape','GIMP','gedit, Firefox','']
 								});
 						</script>

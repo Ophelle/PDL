@@ -29,38 +29,9 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>First public release :</label></br>
-											<input type="checkbox" name="Feature" >1999</br>	
-											<input type="checkbox" name="Feature" >April 27</br>	
-											<input type="checkbox" name="Feature" >Zing 4.0</br>	
-											<input type="checkbox" name="Feature" >October 2010</br>	
-											<input type="checkbox" name="Feature" >Zulu 7.0</br>	
-											<input type="checkbox" name="Feature" >September 2013</br>	
-											<input type="checkbox" name="Feature" >2004</br>	
-											<input type="checkbox" name="Feature" >June 28</br>	
-											<input type="checkbox" name="Feature" >2005</br>	
-											<input type="checkbox" name="Feature" >May 19</br>	
-											<input type="checkbox" name="Feature" >2008</br>	
-											<input type="checkbox" name="Feature" >October 20</br>	
-											<input type="checkbox" name="Feature" >2001</br>	
-											<input type="checkbox" name="Feature" >October 14</br>	
-											<input type="checkbox" name="Feature" >March 3</br>	
-											<input type="checkbox" name="Feature" >2003</br>	
-											<input type="checkbox" name="Feature" >March 13</br>	
-											<input type="checkbox" name="Feature" >April 16</br>	
-									
+								<label>Latest stable version : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Latest stable version : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Cost, availability : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Creator : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Name : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Latest release date :</label></br>
 											<input type="checkbox" name="Feature" >2010</br>	
@@ -86,30 +57,54 @@
 											<input type="checkbox" name="Feature" >September 4</br>	
 											<input type="checkbox" name="Feature" >2008</br>	
 											<input type="checkbox" name="Feature" >February 22</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Name : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Cost, availability : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>First public release :</label></br>
+											<input type="checkbox" name="Feature" >1999</br>	
+											<input type="checkbox" name="Feature" >April 27</br>	
+											<input type="checkbox" name="Feature" >Zing 4.0</br>	
+											<input type="checkbox" name="Feature" >October 2010</br>	
+											<input type="checkbox" name="Feature" >Zulu 7.0</br>	
+											<input type="checkbox" name="Feature" >September 2013</br>	
+											<input type="checkbox" name="Feature" >2004</br>	
+											<input type="checkbox" name="Feature" >June 28</br>	
+											<input type="checkbox" name="Feature" >2005</br>	
+											<input type="checkbox" name="Feature" >May 19</br>	
+											<input type="checkbox" name="Feature" >2008</br>	
+											<input type="checkbox" name="Feature" >October 20</br>	
+											<input type="checkbox" name="Feature" >2001</br>	
+											<input type="checkbox" name="Feature" >October 14</br>	
+											<input type="checkbox" name="Feature" >March 3</br>	
+											<input type="checkbox" name="Feature" >2003</br>	
+											<input type="checkbox" name="Feature" >March 13</br>	
+											<input type="checkbox" name="Feature" >April 16</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Creator : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Proprietary','ISC license','GPL version 2 or later.','zlib License','GPL version 2 or later, with the "libgcc exception".','GPL version 2 only.','LGPL version 2.1 or later','LGPL version 2.1 or later.','GPL version 2 only','GNU General Public License Version 2','Eclipse Public License version 1.0','University of Illinois/NCSA Open Source License','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Latest stable version",
 									local : ['?','3.1.3','1.6.0','1.1.9','Zing 15.05','0.0.6','0.4.8','0.30','2.0.0','1.0.1','1.4.7','Zulu 8.7','4.4','0.3','1.13','7.0.4335.0','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Name",
+									local : ['CACAO','JAmiga','VMKit J3','IKVM.NET','Zulu','JC virtual machine','Mysaifu JVM','SableVM','HotSpot, OpenJDK edition','JamVM','Avian','HotSpot, Zero port','HotSpot, Oracle JDK edition','HotSpot, Java SE embedded edition','GCJ','Jikes RVM','Kaffe','Zing','CEE-J','Jato VM','']
+								});
+								$("#2").typeahead({
+									name:"Cost, availability",
 									local : ['Free','Commercial','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#3").typeahead({
+									name:"Creator",
 									local : ['Sun Microsystems, Oracle','Azul Systems','Skelmir','ReadyTalk','Pekka Enberg and contributors','IBM','Gary Benson','Transvirtual Technologies','Peter Werno, Joakim Nordström','Vienna University of Technology','?','GNU','Archie L. Cobbs','Jeroen Frijters','Robert Lougher','Sable Research Group','']
 								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['CACAO','JAmiga','VMKit J3','IKVM.NET','Zulu','JC virtual machine','Mysaifu JVM','SableVM','HotSpot, OpenJDK edition','JamVM','Avian','HotSpot, Zero port','HotSpot, Oracle JDK edition','HotSpot, Java SE embedded edition','GCJ','Jikes RVM','Kaffe','Zing','CEE-J','Jato VM','']
+								$("#4").typeahead({
+									name:"License",
+									local : ['Proprietary','ISC license','GPL version 2 or later.','zlib License','GPL version 2 or later, with the "libgcc exception".','GPL version 2 only.','LGPL version 2.1 or later','LGPL version 2.1 or later.','GPL version 2 only','GNU General Public License Version 2','Eclipse Public License version 1.0','University of Illinois/NCSA Open Source License','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

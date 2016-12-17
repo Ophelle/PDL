@@ -29,29 +29,23 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>WebKit : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Gecko : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Trident : </label></br> <input id="2" type="number" name="Feature"></br>
+								<label>Trident : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Presto : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>WebKit : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Gecko : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Presto : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Depends','Partial','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['2.6','2.9.220','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"Gecko",
 									local : ['Depends','1.9.1','']
+								});
+								$("#1").typeahead({
+									name:"WebKit",
+									local : ['Depends','Partial','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

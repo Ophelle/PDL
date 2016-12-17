@@ -33,30 +33,28 @@
 								<input type="radio" name="FeatureRecursive globbing (generating files from any level of subdirectories)" value="oui">Yes <input type="radio" name="FeatureRecursive globbing (generating files from any level of subdirectories)" value = "non">No <input type="radio" name="FeatureRecursive globbing (generating files from any level of subdirectories)" value = "non">Partial </br>
 								
 								</br>	
-								<label>Pattern matching (filename globbing) : </label></br> <input id="2" type="text" name="Feature"></br>
+								<label>Globbing qualifiers (filename generation based on file attributes) :</label></br>
+								<input type="radio" name="FeatureGlobbing qualifiers (filename generation based on file attributes)" value="oui">Yes <input type="radio" name="FeatureGlobbing qualifiers (filename generation based on file attributes)" value = "non">No <input type="radio" name="FeatureGlobbing qualifiers (filename generation based on file attributes)" value = "non">Partial </br>
+								
+								</br>	
+								<label>Pattern matching (filename globbing) : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Alternation (Brace expansion) :</label></br>
+								<input type="radio" name="FeatureAlternation (Brace expansion)" value="oui">Yes <input type="radio" name="FeatureAlternation (Brace expansion)" value = "non">No <input type="radio" name="FeatureAlternation (Brace expansion)" value = "non">Partial </br>
 								
 								</br>	
 								<label>Pattern matching (regular expression built-in) :</label></br>
 								<input type="radio" name="FeaturePattern matching (regular expression built-in)" value="oui">Yes <input type="radio" name="FeaturePattern matching (regular expression built-in)" value = "non">No <input type="radio" name="FeaturePattern matching (regular expression built-in)" value = "non">Partial </br>
 								
 								</br>	
-								<label>Globbing qualifiers (filename generation based on file attributes) :</label></br>
-								<input type="radio" name="FeatureGlobbing qualifiers (filename generation based on file attributes)" value="oui">Yes <input type="radio" name="FeatureGlobbing qualifiers (filename generation based on file attributes)" value = "non">No <input type="radio" name="FeatureGlobbing qualifiers (filename generation based on file attributes)" value = "non">Partial </br>
-								
-								</br>	
-								<label>String processing : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Alternation (Brace expansion) :</label></br>
-								<input type="radio" name="FeatureAlternation (Brace expansion)" value="oui">Yes <input type="radio" name="FeatureAlternation (Brace expansion)" value = "non">No <input type="radio" name="FeatureAlternation (Brace expansion)" value = "non">Partial </br>
-								
+								<label>String processing : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Pattern matching (filename globbing)",
 									local : ['Yes','?','Yes (, , )','Yes (, , , extended wildcards,  popup command)','Yes (, )','Yes (, , , )','Yes (, , , extended globbing)','No','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"String processing",
 									local : ['Yes (Concat/Substring/Insert/Remove/Replace, ToLower/ToUpper, Trim/TrimStart/TrimEnd, Compare, Contains/StartsWith/EndWith, Format, IndexOf/LastIndexOf, Pad/PadLeft/PadRight, Split/Join, regular expression functions and other .NET string functions)','?','Yes (through variable functions , extended environment variable processing, various string commands and  and )','No','Yes (:s and other editing operators)','Yes (through variable processing: e.g. substring extraction, various transformations via parameter expansion)','Partial (only through  and )','Yes (:s and other editing operators + substr, strlen, strindex, printf, reverse, upper, lower, concat and other builtin functions)','']
 								});
 						</script>

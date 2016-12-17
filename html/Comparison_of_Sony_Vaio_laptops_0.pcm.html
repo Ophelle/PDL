@@ -29,33 +29,6 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>STORAGE : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>BATTERY : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>OS : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>FINGER PRINT SENSOR :</label></br>
-								<input type="radio" name="FeatureFINGER PRINT SENSOR" value="oui">Yes <input type="radio" name="FeatureFINGER PRINT SENSOR" value = "non">No <input type="radio" name="FeatureFINGER PRINT SENSOR" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>CPU :</label></br>
-											<input type="checkbox" name="Feature" >2nd Gen Intel CoreTM i5-2520M Processor
-</br>	
-											<input type="checkbox" name="Feature" >2.50 GHz</br>	
-											<input type="checkbox" name="Feature" >2nd Gen Intel
- CoreTM i7-2620M Processor</br>	
-											<input type="checkbox" name="Feature" >
- 2.70 GHz</br>	
-											<input type="checkbox" name="Feature" >2nd Gen Intel
- CoreTM i7-2640M Processor</br>	
-											<input type="checkbox" name="Feature" >
- 2.80 GHz</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
 								<label>MODEL :</label></br>
 											<input type="checkbox" name="Feature" >VPC SA26GG</br>	
 											<input type="checkbox" name="Feature" >T</br>	
@@ -69,13 +42,25 @@
 											<input type="checkbox" name="Feature" >P</br>	
 											<input type="checkbox" name="Feature" >VPC SB38GG</br>	
 											<input type="checkbox" name="Feature" >VPC SE17GG</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
-								<label>GRAPHICS : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>RAM : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>DISPLAY : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>STORAGE : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>CPU :</label></br>
+											<input type="checkbox" name="Feature" >2nd Gen Intel CoreTM i5-2520M Processor
+</br>	
+											<input type="checkbox" name="Feature" >2.50 GHz</br>	
+											<input type="checkbox" name="Feature" >2nd Gen Intel
+ CoreTM i7-2620M Processor</br>	
+											<input type="checkbox" name="Feature" >
+ 2.70 GHz</br>	
+											<input type="checkbox" name="Feature" >2nd Gen Intel
+ CoreTM i7-2640M Processor</br>	
+											<input type="checkbox" name="Feature" >
+ 2.80 GHz</br>	
+							
 								</br>	
 								<label>WIRELESS :</label></br>
 											<input type="checkbox" name="Feature" >Integrated Wireless LAN
@@ -83,7 +68,11 @@
 											<input type="checkbox" name="Feature" >b</br>	
 											<input type="checkbox" name="Feature" >g</br>	
 											<input type="checkbox" name="Feature" >n</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
+								</br>	
+								<label>FINGER PRINT SENSOR :</label></br>
+								<input type="radio" name="FeatureFINGER PRINT SENSOR" value="oui">Yes <input type="radio" name="FeatureFINGER PRINT SENSOR" value = "non">No <input type="radio" name="FeatureFINGER PRINT SENSOR" value = "non">Partial </br>
+								
 								</br>	
 								<label>COLOR :</label></br>
 											<input type="checkbox" name="Feature" >BI-Matte</br>	
@@ -94,64 +83,51 @@
 											<input type="checkbox" name="Feature" >L-Blue
 P-Pink</br>	
 											<input type="checkbox" name="Feature" >S-Silver</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
-								<label>WEIGHT : </label></br> <input id="11" type="text" name="Feature"></br>
-								
+								<label>GRAPHICS : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>RAM : </label></br> <input id="12" type="text" name="Feature"></br>
-								
+								<label>BATTERY : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>OPTICAL DRIVE : </label></br> <input id="13" type="text" name="Feature"></br>
-								
+								<label>WEIGHT : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>DISPLAY : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>OPTICAL DRIVE : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>OS : </label></br> <input id="7" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"RAM",
+									local : ['6 GB DDR3 SDRAM','4 GB DDR3 SDRAM','8 GB DDR3 SDRAM','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['HDD 
- 750 GB','SSD 256GB','640 Gb','500 GB','']
+									name:"STORAGE",
+									local : ['HDD  750 GB','SSD 256GB','640 Gb','500 GB','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['6 hours*','5.5hours*','5 Hours*','']
+									name:"GRAPHICS",
+									local : ['Intel HD Graphics 3000(STAMINA MODE) /Radeon™ HD6470M (SPEED MODE)(512 MB)','Intel HD Graphics 3000 (STAMINA MODE) /Radeon™ HD 6630M (SPEED MODE) 1 GB)','Intel HD Graphics 3000(STAMINA MODE) /Radeon™ HD6630M (SPEED MODE)(1 GB)','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['Windows 7 Professional
- (64-bit)','Windows 7
- HomePremium','Windows 7 Professional','']
+									name:"BATTERY",
+									local : ['6 hours*','5.5hours*','5 Hours*','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['Intel HD Graphics 3000(STAMINA MODE) 
-/Radeon™ HD6470M (SPEED MODE)
-(512 MB)','Intel HD Graphics 3000
- (STAMINA MODE) /Radeon™ HD 6630M
- (SPEED MODE) 1 GB)','Intel HD Graphics 3000
-(STAMINA MODE) /Radeon™ HD6630M
- (SPEED MODE)(1 GB)','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['15.5(39.37cms) wide
-(Full HD:1920 x1080) (LED backlight)','13.3 (33.78cms)
- wide(WXGA:1600x900)
-(LED backlight)','13.3 (33.78cms) wide
-(WXGA:1366x768)
-(LED backlight)','']
-								});
-								$("#6").typeahead({
-									name:"list6",
+									name:"WEIGHT",
 									local : ['1.68 kg','1.72* Kg','1.96','1.61 kg','']
 								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['6 GB DDR3
- SDRAM','4 GB DDR3 SDRAM','8 GB DDR3 SDRAM','']
+								$("#5").typeahead({
+									name:"DISPLAY",
+									local : ['15.5(39.37cms) wide(Full HD:1920 x1080) (LED backlight)','13.3 (33.78cms) wide(WXGA:1600x900)(LED backlight)','13.3 (33.78cms) wide(WXGA:1366x768)(LED backlight)','']
 								});
-								$("#8").typeahead({
-									name:"list8",
-									local : ['DVD SuperMulti 
-Drive','']
+								$("#6").typeahead({
+									name:"OPTICAL DRIVE",
+									local : ['DVD SuperMulti Drive','']
+								});
+								$("#7").typeahead({
+									name:"OS",
+									local : ['Windows 7 Professional (64-bit)','Windows 7 HomePremium','Windows 7 Professional','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

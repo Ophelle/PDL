@@ -29,19 +29,16 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Languages : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Format : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Format : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Languages : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['RIGHT$(string,n)','strcpy(string2, string+n) (n must not be greater than the length of string)','Right(string,n)','string.sub(string, -n) 
- (string):sub(-n)','string.substring(string.length()-n)','right(string,n «,padchar»)','(string-take-right string n)','string last: n','string.Substring(string.Length()-n)','string[-n..-1]','string (string'Last - n + 1 .. string'Last)','string[-n:]','StringTake[string, -n]','string[$-n .. $]','string (1:n)','substr(string,-n)','right(string,n)','string.slice(-n)','String.sub string (String.length string - n) n','']
+								$("#0").typeahead({
+									name:"Format",
+									local : ['RIGHT$(string,n)','strcpy(string2, string+n) (n must not be greater than the length of string)','Right(string,n)','string.sub(string, -n)  (string):sub(-n)','string.substring(string.length()-n)','right(string,n «,padchar»)','(string-take-right string n)','string last: n','string.Substring(string.Length()-n)','string[-n..-1]','string (string'Last - n + 1 .. string'Last)','string[-n:]','StringTake[string, -n]','string[$-n .. $]','string (1:n)','substr(string,-n)','right(string,n)','string.slice(-n)','String.sub string (String.length string - n) n','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Languages",
 									local : ['BASIC','Perl, PHP','Smalltalk (Squeak, Pharo)','C','JavaScript','FreeBASIC, Ingres','VB','Cobra, Python','COBOL','OCaml','Ada','Scheme (SRFI 13)','REXX, Erlang','Ruby, Ya','Lua','Mathematica','D','C#','Java','']
 								});
 						</script>

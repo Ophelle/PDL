@@ -29,90 +29,77 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>RTM build : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Release date : </label></br> <input id="1" type="text" name="Feature"></br>
-								
 								</br>	
 								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Purpose : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Codename : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Based on (kernel) : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Operating environments : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Codename : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Short description : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>Kernel type : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Based on (kernel) : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
-								<label>Editions : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Kernel type : </label></br> <input id="7" type="text" name="Feature"></br>
 								</br>	
-								<label>Current version : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Editions : </label></br> <input id="8" type="text" name="Feature"></br>
 								</br>	
-								<label>Operating environments : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label>Purpose : </label></br> <input id="9" type="text" name="Feature"></br>
 								</br>	
-								<label>RTM build : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+								<label>Current version : </label></br> <input id="10" type="text" name="Feature"></br>
 								</br>	
-								<label>Short description : </label></br> <input id="11" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Status support : </label></br> <input id="12" type="text" name="Feature"></br>
-								
+								<label>Status support : </label></br> <input id="11" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['CE 2.0','CE 7.0','CE 1.0','CE 6.0','CE 4.0','CE 5.0','CE 3.0','']
+								$("#0").typeahead({
+									name:"RTM build",
+									local : ['','?','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Release date",
 									local : ['2000-04','2004-07-09','2006-11-01','1997-11','1996-11','2002-01-07','2011-03-01','']
 								});
+								$("#2").typeahead({
+									name:"License",
+									local : ['','Shared source','']
+								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Codename",
 									local : ['Talisker','Mercury, Apollo','Yamazaki','Cedar, Galileo, Rapier, Merlin, Stinger','?','Macallan','Pegasus, Alder','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['Hybrid kernel','Hybrid','Embedded kernel','','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['','N/A','2.1, 2.11','4.1, 4.2','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['','5.0 (2004-07-09)','?','']
-								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['','Shared source','']
-								});
-								$("#8").typeahead({
-									name:"list8",
+									name:"Operating environments",
 									local : ['','?','']
 								});
+								$("#5").typeahead({
+									name:"Short description",
+									local : ['','first release of Microsoft's Windows CE line for minimalistic computers and embedded systems','']
+								});
+								$("#6").typeahead({
+									name:"Based on (kernel)",
+									local : ['CE 2.0','CE 7.0','CE 1.0','CE 6.0','CE 4.0','CE 5.0','CE 3.0','']
+								});
+								$("#7").typeahead({
+									name:"Kernel type",
+									local : ['Hybrid kernel','Hybrid','Embedded kernel','','']
+								});
+								$("#8").typeahead({
+									name:"Editions",
+									local : ['','N/A','2.1, 2.11','4.1, 4.2','']
+								});
 								$("#9").typeahead({
-									name:"list9",
+									name:"Purpose",
 									local : ['Embedded','','']
 								});
 								$("#10").typeahead({
-									name:"list10",
-									local : ['','?','']
+									name:"Current version",
+									local : ['','5.0 (2004-07-09)','?','']
 								});
 								$("#11").typeahead({
-									name:"list11",
-									local : ['','first release of Microsoft's Windows CE line for minimalistic computers and embedded systems','']
-								});
-								$("#12").typeahead({
-									name:"list12",
-									local : ['Supported','Unsupported
-(2007-10-09)','','']
+									name:"Status support",
+									local : ['Supported','Unsupported(2007-10-09)','','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

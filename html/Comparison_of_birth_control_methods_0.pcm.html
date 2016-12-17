@@ -29,72 +29,44 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Type : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Type : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Perfect-use failure rate (%) : </label></br> <input id="2" type="number" name="Feature"></br>
+								<label>User action required : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Birth control method : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Brand/common name : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Typical-use failure rate (%) : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Implementation : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Perfect-use failure rate (%) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
-								</br>	
-								<label>User action required : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Birth control method : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Typical-use failure rate (%) : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Implementation : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Brand/common name : </label></br> <input id="7" type="text" name="Feature"></br>
-								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Type",
 									local : ['n/a','Progestogen','Barrier & spermicide','Behavioral','Estrogen & progestogen','Barrier + spermicide','Barrier','Sterilization','emergency contraception pill','Type','Testosterone','Spermicide','Estrogen + progestogen','SERM','Intrauterine & copper','Intrauterine & progestogen','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"User action required",
 									local : ['Every act of intercourse','12 weeks','Throughout day or daily','Daily','Monthly','5 years','n/a','Weekly','Every 4 weeks','Once','3 to 12+ years','Every few hours','3 years (4 years off-label)','In place 3 weeks / 1 week break','User action required','5-7 years','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#2").typeahead({
+									name:"Birth control method",
 									local : ['Today contraceptive sponge used by parous','Coitus interruptus','FemCap and spermicide','Depo Provera','Diaphragm and spermicide','IUD with progestogen','Essure','None (unprotected intercourse)','Tubal ligation','Contraceptive patch','NuvaRing','Spermicidal gel, foam, suppository, or film','Male latex condom','LAM for 6 months only; not applicable if menstruation resumes','Jadelle (lower-dose)','Implanon','Knaus-Ogino method','Today contraceptive sponge used by nulliparous','Lea's Shield and spermicide used by parous','Lea's Shield and spermicide used by nulliparous','Vasectomy','Testosterone injection','Birth control method','Combined oral contraceptive pill','Prentif cervical cap and spermicide used by nulliparous','Prentif cervical cap and spermicide used by parous','Symptoms-based fertility awareness','Ormeloxifene','Plan B One-Step®','Combined injectable','Standard Days Method','Female condom','Progestogen only pill','IUD with copper','']
 								});
+								$("#3").typeahead({
+									name:"Brand/common name",
+									local : ['the  implant','Lunelle, Cyclofem','','female sterilization','CycleBeads, iCycleBeads','Ortho Evra, the patch','the sponge','the rhythm method','the Pill','the implant','cervical cap','male sterilization','the shot','the ring','withdrawal method, pulling out','Testosterone Undecanoate','Mirena','Paragard, Copper T, the coil','basal body temperature, cervical mucus','POP, minipill','Condom','ecological breastfeeding','levonorgestrel','Saheli, Centron','Brand/common name','']
+								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['8 
-(1 of 12)','32 
-(1 of 3)','0.15 
-(1 of 666)','9 
-(1 of 11)','16','7.6 (estimated) 
-(1 of 13)','3 
-(1 of 33)','0.2 
-(1 of 500)','29 
-(1 of 3)','32','5 
-(1 of 20)','2 
-(1 of 50)','6.1 
-(1 of 16)','25','18 
-(1 of 5)','0.2','15 
-(1 of 6)','85 
-(6 of 7)','1.8  
-(1 of 55)','0.05','16 
-(1 of 6)','21 
-(1 of 4.7)','Typical-use failure rate (%)','9','0.05 
-(1 of 2000 women)','no data','25 
-(1 of 4)','0.8 
-(1 of 125)','0.26 
-(1 of 384)','0.5 
-(1 of 200)','']
+									name:"Typical-use failure rate (%)",
+									local : ['8 (1 of 12)','32 (1 of 3)','0.15 (1 of 666)','9 (1 of 11)','16','7.6 (estimated) (1 of 13)','3 (1 of 33)','0.2 (1 of 500)','29 (1 of 3)','32','5 (1 of 20)','2 (1 of 50)','6.1 (1 of 16)','25','18 (1 of 5)','0.2','15 (1 of 6)','85 (6 of 7)','1.8  (1 of 55)','0.05','16 (1 of 6)','21 (1 of 4.7)','Typical-use failure rate (%)','9','0.05 (1 of 2000 women)','no data','25 (1 of 4)','0.8 (1 of 125)','0.26 (1 of 384)','0.5 (1 of 200)','']
 								});
 								$("#5").typeahead({
-									name:"list5",
+									name:"Implementation",
 									local : ['Withdrawal','Vaginal insertion','n/a','Injection','Calendar-based','Surgical procedure','Intrauterine','Transdermal patch','Subdermal implant','Oral medication','Delivery','Observation and charting','Placed on erect penis','Intramuscular Injection','mouth','Breastfeeding','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['the  implant','Lunelle, Cyclofem','','female sterilization','CycleBeads, iCycleBeads','Ortho Evra, the patch','the sponge','the rhythm method','the Pill','the implant','cervical cap','male sterilization','the shot','the ring','withdrawal method, pulling out','Testosterone Undecanoate','Mirena','Paragard, Copper T, the coil','basal body temperature, cervical mucus','POP, minipill','Condom','ecological breastfeeding','levonorgestrel','Saheli, Centron','Brand/common name','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

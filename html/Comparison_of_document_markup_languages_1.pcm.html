@@ -29,41 +29,37 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Markup type : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Language : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Markup type : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Structural markup :</label></br>
 								<input type="radio" name="FeatureStructural markup" value="oui">Yes <input type="radio" name="FeatureStructural markup" value = "non">No <input type="radio" name="FeatureStructural markup" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
+								<label>Language : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
 								<label>Presentational markup :</label></br>
 								<input type="radio" name="FeaturePresentational markup" value="oui">Yes <input type="radio" name="FeaturePresentational markup" value = "non">No <input type="radio" name="FeaturePresentational markup" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Based on : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Major purpose : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Major purpose : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Based on : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Markup type",
 									local : ['Tag','Control code','Markup type','Pattern parsing','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Language",
 									local : ['Extensible HyperText Markup Language (XHTML)','The Music Encoding Initiative (MEI)','TeX','HyperText Markup Language (HTML)','AsciiDoc','Darwin Information Typing Architecture (DITA)','reStructuredText','Markdown','Wireless Markup Language (WML)','Encoded Archival Description (EAD)','Open Mathematical Document (OMDoc)','Org-mode','Script','Computable Document Format','Music Extensible Markup Language (MusicXML)','DocBook','Office Open XML (OOXML)','Text Encoding Initiative (TEI)','Maker Interchange Format (MIF)','OpenDocument Format (ODF)','Rich Text Format (RTF)','Language','Math Markup Language (MathML)','Scalable Vector Graphics (SVG)','Texinfo','troff (typesetter runoff), groff (GNU runoff)','']
 								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['XML','Text E-mail conventions','XML / ZIP','Based on','','RUNOFF','Functional expressions','SGML / XML','Structured Text and Setext','Text outliner','SGML','TeX','TeX, Scribe','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#2").typeahead({
+									name:"Major purpose",
 									local : ['Hypertext documents','Academic documents','Mathematical documents','Technical documents','Formatted Technical documents, Hypertext documents, E-mail','Finding aid','2D Vector graphics','Music notation','Multi-purpose','Major purpose','Multi-purpose (notes, project management, publishing, literate programming)','Academic, linguistic, literary and technical documents','Technical and Multi-purpose documents','Formatted documents','Interactive technical documents','']
+								});
+								$("#3").typeahead({
+									name:"Based on",
+									local : ['XML','Text E-mail conventions','XML / ZIP','Based on','','RUNOFF','Functional expressions','SGML / XML','Structured Text and Setext','Text outliner','SGML','TeX','TeX, Scribe','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

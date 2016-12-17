@@ -29,31 +29,29 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Game engine type : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Fully customizable user interface :</label></br>
 								<input type="radio" name="FeatureFully customizable user interface" value="oui">Yes <input type="radio" name="FeatureFully customizable user interface" value = "non">No <input type="radio" name="FeatureFully customizable user interface" value = "non">Partial </br>
-											<input type="text"/></br>								
+								
+								</br>	
+								<label>Custom UI Mods / Addons : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Windowable :</label></br>
 								<input type="radio" name="FeatureWindowable" value="oui">Yes <input type="radio" name="FeatureWindowable" value = "non">No <input type="radio" name="FeatureWindowable" value = "non">Partial </br>
-											<input type="text"/></br>								
+								
+								</br>	
+								<label>Game engine type : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Source code available? :</label></br>
 								<input type="radio" name="FeatureSource code available?" value="oui">Yes <input type="radio" name="FeatureSource code available?" value = "non">No <input type="radio" name="FeatureSource code available?" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Custom UI Mods / Addons : </label></br> <input id="5" type="text" name="Feature"></br>
 								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['3D','2D','2D, 3D','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Custom UI Mods / Addons",
 									local : ['','Yes','No','?','']
+								});
+								$("#1").typeahead({
+									name:"Game engine type",
+									local : ['3D','2D','2D, 3D','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

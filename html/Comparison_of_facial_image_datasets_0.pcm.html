@@ -29,19 +29,6 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>3D :</label></br>
-								<input type="radio" name="Feature3D" value="oui">Yes <input type="radio" name="Feature3D" value = "non">No <input type="radio" name="Feature3D" value = "non">Partial </br>
-								
-								</br>	
-								<label>Color : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Database : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Poses :</label></br>
 											<input type="checkbox" name="Feature" >head turning from left to right</br>	
 											<input type="checkbox" name="Feature" >head nodding</br>	
@@ -58,7 +45,16 @@
 											<input type="checkbox" name="Feature" >Slight left</br>	
 											<input type="checkbox" name="Feature" >right and up</br>	
 											<input type="checkbox" name="Feature" >down ?</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Subjects : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>3D :</label></br>
+								<input type="radio" name="Feature3D" value="oui">Yes <input type="radio" name="Feature3D" value = "non">No <input type="radio" name="Feature3D" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
 								<label>Expressions :</label></br>
 											<input type="checkbox" name="Feature" >neutral face</br>	
@@ -92,7 +88,9 @@
 											<input type="checkbox" name="Feature" >frontal random gesture</br>	
 											<input type="checkbox" name="Feature" >n</br>	
 											<input type="checkbox" name="Feature" >a?</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Samples per subject : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Institution :</label></br>
 											<input type="checkbox" name="Feature" >National Institute Of Standards and Technology</br>	
@@ -110,32 +108,30 @@
 											<input type="checkbox" name="Feature" >Turkey</br>	
 											<input type="checkbox" name="Feature" >Beijing University of Technology</br>	
 											<input type="checkbox" name="Feature" >University of Notre Dame</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Subjects : </label></br> <input id="8" type="number" name="Feature"></br>
-								
+								<label>Color : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Total images : </label></br> <input id="9" type="number" name="Feature"></br>
-								
+								<label>Database : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Samples per subject : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+								<label>Total images : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['?','Yes','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"License",
 									local : ['case-by-case, non-commercial, privacy protections','Immediate download possible, citation of paper is desired','case-by-case, non-commercial, publications must reference; available for download after email correspondence','?','publications must reference; available for immediate download','']
 								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['3D_RMA','PUT','MUCT','York-3DFace','BJUT-3D-R1','BU-3DFE','ND2006','FRAV3D','Bosphorus','FRGC v.2','GavabDB','CASIA','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Samples per subject",
 									local : ['20+','25','6','9','1-22','1-63','37-38','4','31-54','16','15','slightly different but unlabeled','']
+								});
+								$("#2").typeahead({
+									name:"Color",
+									local : ['?','Yes','']
+								});
+								$("#3").typeahead({
+									name:"Database",
+									local : ['3D_RMA','PUT','MUCT','York-3DFace','BJUT-3D-R1','BU-3DFE','ND2006','FRAV3D','Bosphorus','FRGC v.2','GavabDB','CASIA','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

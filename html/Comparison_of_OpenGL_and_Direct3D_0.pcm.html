@@ -29,19 +29,17 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Direct3D : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Direct3D : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>OpenGL : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>OpenGL : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Cross-platform','Open standard (some features patented)','Cross-platform through OpenGL ES','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Direct3D",
 									local : ['Microsoft Windows only','Proprietary','Windows Embedded and Windows CE (through Direct3D Mobile)','']
+								});
+								$("#1").typeahead({
+									name:"OpenGL",
+									local : ['Cross-platform','Open standard (some features patented)','Cross-platform through OpenGL ES','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

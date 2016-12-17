@@ -29,15 +29,6 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Design : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Camera model : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Adjustment : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Angles :</label></br>
 											<input type="checkbox" name="Feature" >stops every 15° between 30° and 135°</br>	
 											<input type="checkbox" name="Feature" >also stops at 11.2°</br>	
@@ -71,29 +62,34 @@
 											<input type="checkbox" name="Feature" >stops every 15° between 45° and 150°</br>	
 											<input type="checkbox" name="Feature" >also stops at 144°</br>	
 											<input type="checkbox" name="Feature" >160°; many conversions for different angles</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Adjustment : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Reflex? :</label></br>
 								<input type="radio" name="FeatureReflex?" value="oui">Yes <input type="radio" name="FeatureReflex?" value = "non">No <input type="radio" name="FeatureReflex?" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Location : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Camera model : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Design : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Location : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Half-moon','Butterfly','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Arriflex 435 Advanced','Moviecam SuperAmerica','Panaflex Platinum','Moviecam Compact','Arriflex 35BL-1','Arriflex 35BL-3','Arriflex 35-2C','Panaflex Gold II','Aaton 35-3P','Panaflex Millennium XL','Arriflex 435','Arricam ST','Arriflex 435ES','Aaton 35-III','Arriflex 35-3C','Arriflex 235','Panaflex-X','Panaflex Panastar II','Arricam LT','Arriflex 535B','Moviecam SL','Arriflex 35BL-4s','Panaflex Millennium','Arriflex 435 Xtreme','Arriflex 35BL-2','Arriflex 535','Eyemo 71K','Arriflex 35BL-4','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"Adjustment",
 									local : ['manual','electronic','manually while running or in standby','fixed','electronic or manually while running or in standby','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Camera model",
+									local : ['Arriflex 435 Advanced','Moviecam SuperAmerica','Panaflex Platinum','Moviecam Compact','Arriflex 35BL-1','Arriflex 35BL-3','Arriflex 35-2C','Panaflex Gold II','Aaton 35-3P','Panaflex Millennium XL','Arriflex 435','Arricam ST','Arriflex 435ES','Aaton 35-III','Arriflex 35-3C','Arriflex 235','Panaflex-X','Panaflex Panastar II','Arricam LT','Arriflex 535B','Moviecam SL','Arriflex 35BL-4s','Panaflex Millennium','Arriflex 435 Xtreme','Arriflex 35BL-2','Arriflex 535','Eyemo 71K','Arriflex 35BL-4','']
+								});
+								$("#2").typeahead({
+									name:"Design",
+									local : ['Half-moon','Butterfly','']
+								});
+								$("#3").typeahead({
+									name:"Location",
 									local : ['Underneath gate','Beside gate','']
 								});
 						</script>

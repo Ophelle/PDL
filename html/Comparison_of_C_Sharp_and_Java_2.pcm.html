@@ -29,35 +29,33 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Garbage collection :</label></br>
-								<input type="radio" name="FeatureGarbage collection" value="oui">Yes <input type="radio" name="FeatureGarbage collection" value = "non">No <input type="radio" name="FeatureGarbage collection" value = "non">Partial </br>
-								
-								</br>	
 								<label>Weak reference :</label></br>
 								<input type="radio" name="FeatureWeak reference" value="oui">Yes <input type="radio" name="FeatureWeak reference" value = "non">No <input type="radio" name="FeatureWeak reference" value = "non">Partial </br>
+								
+								</br>	
+								<label>Proxy support : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Reference types : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Reference queue (interaction with garbage collection) :</label></br>
+								<input type="radio" name="FeatureReference queue (interaction with garbage collection)" value="oui">Yes <input type="radio" name="FeatureReference queue (interaction with garbage collection)" value = "non">No <input type="radio" name="FeatureReference queue (interaction with garbage collection)" value = "non">Partial </br>
 								
 								</br>	
 								<label>Soft and Phantom references :</label></br>
 								<input type="radio" name="FeatureSoft and Phantom references" value="oui">Yes <input type="radio" name="FeatureSoft and Phantom references" value = "non">No <input type="radio" name="FeatureSoft and Phantom references" value = "non">Partial </br>
 								
 								</br>	
-								<label>Reference types : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Proxy support : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Reference queue (interaction with garbage collection) :</label></br>
-								<input type="radio" name="FeatureReference queue (interaction with garbage collection)" value="oui">Yes <input type="radio" name="FeatureReference queue (interaction with garbage collection)" value = "non">No <input type="radio" name="FeatureReference queue (interaction with garbage collection)" value = "non">Partial </br>
+								<label>Garbage collection :</label></br>
+								<input type="radio" name="FeatureGarbage collection" value="oui">Yes <input type="radio" name="FeatureGarbage collection" value = "non">No <input type="radio" name="FeatureGarbage collection" value = "non">Partial </br>
 								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['C#','Java','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Proxy support",
 									local : ['Yes; proxy generation','Yes; object contexts','']
+								});
+								$("#1").typeahead({
+									name:"Reference types",
+									local : ['C#','Java','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

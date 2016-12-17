@@ -29,27 +29,19 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Site : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Ignores DMCA : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Is a tracker :</label></br>
-								<input type="radio" name="FeatureIs a tracker" value="oui">Yes <input type="radio" name="FeatureIs a tracker" value = "non">No <input type="radio" name="FeatureIs a tracker" value = "non">Partial </br>
+								<label>Directory :</label></br>
+								<input type="radio" name="FeatureDirectory" value="oui">Yes <input type="radio" name="FeatureDirectory" value = "non">No <input type="radio" name="FeatureDirectory" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
 								<label>Comments :</label></br>
 								<input type="radio" name="FeatureComments" value="oui">Yes <input type="radio" name="FeatureComments" value = "non">No <input type="radio" name="FeatureComments" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Multi-tracker index :</label></br>
-								<input type="radio" name="FeatureMulti-tracker index" value="oui">Yes <input type="radio" name="FeatureMulti-tracker index" value = "non">No <input type="radio" name="FeatureMulti-tracker index" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
 								<label>Public :</label></br>
 								<input type="radio" name="FeaturePublic" value="oui">Yes <input type="radio" name="FeaturePublic" value = "non">No <input type="radio" name="FeaturePublic" value = "non">Partial </br>
 											<input type="text"/></br>								
+								</br>	
+								<label>Ignores DMCA : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Alexa Traffic Rank :</label></br>
 											<input type="checkbox" name="Feature" >8</br>	
@@ -133,41 +125,46 @@
 											<input type="checkbox" name="Feature" >687</br>	
 											<input type="checkbox" name="Feature" >52</br>	
 											<input type="checkbox" name="Feature" >574</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Specialization : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Sortable :</label></br>
+								<input type="radio" name="FeatureSortable" value="oui">Yes <input type="radio" name="FeatureSortable" value = "non">No <input type="radio" name="FeatureSortable" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Multi-tracker index :</label></br>
+								<input type="radio" name="FeatureMulti-tracker index" value="oui">Yes <input type="radio" name="FeatureMulti-tracker index" value = "non">No <input type="radio" name="FeatureMulti-tracker index" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
 								<label>One-click download :</label></br>
 								<input type="radio" name="FeatureOne-click download" value="oui">Yes <input type="radio" name="FeatureOne-click download" value = "non">No <input type="radio" name="FeatureOne-click download" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Site : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Is a tracker :</label></br>
+								<input type="radio" name="FeatureIs a tracker" value="oui">Yes <input type="radio" name="FeatureIs a tracker" value = "non">No <input type="radio" name="FeatureIs a tracker" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
 								<label>RSS :</label></br>
 								<input type="radio" name="FeatureRSS" value="oui">Yes <input type="radio" name="FeatureRSS" value = "non">No <input type="radio" name="FeatureRSS" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Sortable :</label></br>
-								<input type="radio" name="FeatureSortable" value="oui">Yes <input type="radio" name="FeatureSortable" value = "non">No <input type="radio" name="FeatureSortable" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Specialization : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>DHT search :</label></br>
 								<input type="radio" name="FeatureDHT search" value="oui">Yes <input type="radio" name="FeatureDHT search" value = "non">No <input type="radio" name="FeatureDHT search" value = "non">Partial </br>
 											<input type="text"/></br>								
-								</br>	
-								<label>Directory :</label></br>
-								<input type="radio" name="FeatureDirectory" value="oui">Yes <input type="radio" name="FeatureDirectory" value = "non">No <input type="radio" name="FeatureDirectory" value = "non">Partial </br>
-											<input type="text"/></br>								
 						<script>
+								$("#0").typeahead({
+									name:"Ignores DMCA",
+									local : ['','No','?','Ignores DMCA','Yes','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Site",
 									local : ['AniRena','KickassTorrents','T411','waffles.fm','Rarbg','torrentportal.com','coda.fm','YourExotic','Torlock','Tormovies','Torrent Reactor','ExtraTorrent','Torrentz','IPTorrents','TorrentUs','What.CD','Buhaypirata Networks','Mamega.com','isoHunt','Demonoid','YourBittorrent','TranceTraffic','bitmetv.org','MovieMagnet','YTS','etree','Site','blackcats-games.net','RevolutionTT','Legit Torrents','OpenBitTorrent','FullDLs','1337x','SceneAccess.eu','AnimeSuki','The Pirate Bay','HDBits.org','TorrentProject','broadcasthe.net','Seedpeer','myanonamouse.net','BitSnoop','Old Pirate Bay','h33t','Tamil Rockers','thegft.org','Bitme.org','zoozle.org','Nyaa Torrents','AsiaTorrents','Mininova','TorrentLeech.org','BTDigg','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['','No','?','Ignores DMCA','Yes','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Specialization",
 									local : ['None','?','Movies in Tamil','Anime','Music Albums','Asian Media','Legally redistributable media','HD Movies','Verified Torrents','Movies','Legally free media','Television shows','DHT Search Engine','Music','Search Engine','Live Concerts','Japanese/Asian media','Specialization','Scene Releases','Television','Asian Porn','Anime & otaku subculture','E-learning','Philippine Media','Books, Audiobooks','Video Games','']
 								});
 						</script>

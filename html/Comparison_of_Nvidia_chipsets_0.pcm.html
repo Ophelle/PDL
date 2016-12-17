@@ -29,80 +29,65 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Southbridge : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Processors Supported :</label></br>
 											<input type="checkbox" name="Feature" >Athlon XP</br>	
 											<input type="checkbox" name="Feature" >Athlon</br>	
 											<input type="checkbox" name="Feature" >Duron</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
-								<label>FSB/HT
-Frequency (MHz) :</label></br>
-											<input type="checkbox" name="Feature" >266 MHz</br>	
-											<input type="checkbox" name="Feature" >200 MHz</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								<label>Fabricationprocess (nm) : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Max. memory : </label></br> <input id="4" type="text" name="Feature"></br>
+								<label>Max. memory : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Notes : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Southbridge : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>AGP : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Features : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>FSB/HTFrequency (MHz) :</label></br>
+							
+								</br>	
+								<label>Model : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Release Date : </label></br> <input type="number" name="Feature"></br>
 								
-								</br>	
-								<label>Memory : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Model : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>AGP : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Features : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fabrication
-process (nm) : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Notes : </label></br> <input id="10" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Release Date : </label></br> <input id="11" type="number" name="Feature"></br>
-												<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['MCP
-MCP-D','']
+								$("#0").typeahead({
+									name:"Fabricationprocess (nm)",
+									local : ['','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Max. memory",
 									local : ['1.5 GB','']
 								});
+								$("#2").typeahead({
+									name:"Notes",
+									local : ['','']
+								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['DDR266
-dual channel','DDR266
-single channel','']
+									name:"Southbridge",
+									local : ['MCPMCP-D','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['nForce 215','nForce 220','nForce 415','nForce 420','']
-								});
-								$("#5").typeahead({
-									name:"list5",
+									name:"AGP",
 									local : ['AGP 4×','']
 								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#5").typeahead({
+									name:"Features",
 									local : ['Geforce 2 MX IGP','','']
 								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['','']
+								$("#6").typeahead({
+									name:"Memory",
+									local : ['DDR266dual channel','DDR266single channel','']
 								});
-								$("#8").typeahead({
-									name:"list8",
-									local : ['','']
+								$("#7").typeahead({
+									name:"Model",
+									local : ['nForce 215','nForce 220','nForce 415','nForce 420','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

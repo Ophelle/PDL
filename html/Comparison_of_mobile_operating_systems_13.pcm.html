@@ -29,31 +29,29 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Custom ringtones :</label></br>
-								<input type="radio" name="FeatureCustom ringtones" value="oui">Yes <input type="radio" name="FeatureCustom ringtones" value = "non">No <input type="radio" name="FeatureCustom ringtones" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
 								<label>Custom SMS/MMS tones :</label></br>
 								<input type="radio" name="FeatureCustom SMS/MMS tones" value="oui">Yes <input type="radio" name="FeatureCustom SMS/MMS tones" value = "non">No <input type="radio" name="FeatureCustom SMS/MMS tones" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
+								<label>Custom vibrate alert patterns : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Custom ringtones :</label></br>
+								<input type="radio" name="FeatureCustom ringtones" value="oui">Yes <input type="radio" name="FeatureCustom ringtones" value = "non">No <input type="radio" name="FeatureCustom ringtones" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
 								<label>Ringtones and Alerts :</label></br>
 											<input type="checkbox" name="Feature" >Ringtones and Alerts</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Feature : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Custom vibrate alert patterns : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Feature : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Windows Phone','Sailfish OS','Android','BlackBerry 10','iOS','Ubuntu Touch','Tizen','Firefox OS','Mer','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Custom vibrate alert patterns",
 									local : ['No','?','Yes','5+','No, possible on some Samsung devices such as Galaxy S III, but limited','']
+								});
+								$("#1").typeahead({
+									name:"Feature",
+									local : ['Windows Phone','Sailfish OS','Android','BlackBerry 10','iOS','Ubuntu Touch','Tizen','Firefox OS','Mer','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

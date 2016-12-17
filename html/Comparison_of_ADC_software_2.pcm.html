@@ -29,41 +29,37 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>CLI :</label></br>
-								<input type="radio" name="FeatureCLI" value="oui">Yes <input type="radio" name="FeatureCLI" value = "non">No <input type="radio" name="FeatureCLI" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Programming language : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Based on : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>GUI :</label></br>
 								<input type="radio" name="FeatureGUI" value="oui">Yes <input type="radio" name="FeatureGUI" value = "non">No <input type="radio" name="FeatureGUI" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>ADC hub : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>CLI :</label></br>
+								<input type="radio" name="FeatureCLI" value="oui">Yes <input type="radio" name="FeatureCLI" value = "non">No <input type="radio" name="FeatureCLI" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
-								<label>Other : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>ADC hub : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Based on : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Other : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Programming language : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['wxLua','C','Java','C++, Lua, Python, Ruby','Erlang','?','Lua','Programming language','Java, Python','C++, Python','C++, Lua','C++','C-Sharp','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['','Based on','ADCH++','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"ADC hub",
 									local : ['ADCH++','DSHub','RusHub','uhub','Starlet ADC Hub','ADCH++ GUI','FlexHub','Erlhub','Nexthub','StarHub','Qhub','ADC hub','Luadch GUI','Luadch','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Based on",
+									local : ['','Based on','ADCH++','']
+								});
+								$("#2").typeahead({
+									name:"Other",
 									local : ['?','Other','No','']
+								});
+								$("#3").typeahead({
+									name:"Programming language",
+									local : ['wxLua','C','Java','C++, Lua, Python, Ruby','Erlang','?','Lua','Programming language','Java, Python','C++, Python','C++, Lua','C++','C-Sharp','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

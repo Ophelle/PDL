@@ -29,54 +29,47 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Lexer algorithm : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Grammar, code : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Output languages : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Name : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Website : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Grammar, code : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Lexer algorithm : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Website : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Development platform : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>Development platform : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Name : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Output languages : </label></br> <input id="6" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Grammar, code",
+									local : ['mixed','','separate','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['DFA','DFA table driven','DFA direct code','DFA, NFA','']
+									name:"Name",
+									local : ['Quex','gplex','lex','JLex','CookCC','C# Flex','flex','AustenX','re2c','golex','Dolphin','gelex','lexertl','C# Lex','JFlex','Russ Cox's regular expression implementations','Alex','Ragel','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Java','C, C++','C, C++, D, Go, Java, Objective-C, Ruby','C#','Eiffel','C','Bytecode, x86 assembly language, interpreted','C++','Haskell','Go','']
+									name:"Website",
+									local : ['','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"License",
 									local : ['GNU LGPL','MIT','GNU GPL','BSD','BSD-like','Proprietary, CDDL','Public domain','Proprietary','BSD-style','?','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['mixed','','separate','']
+									name:"Lexer algorithm",
+									local : ['DFA','DFA table driven','DFA direct code','DFA, NFA','']
 								});
 								$("#5").typeahead({
-									name:"list5",
-									local : ['','']
-								});
-								$("#6").typeahead({
-									name:"list6",
+									name:"Development platform",
 									local : ['all','POSIX','Java Virtual Machine','.NET CLR','Eiffel','Go','']
 								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['Quex','gplex','lex','JLex','CookCC','C# Flex','flex','AustenX','re2c','golex','Dolphin','gelex','lexertl','C# Lex','JFlex','Russ Cox's regular expression implementations','Alex','Ragel','']
+								$("#6").typeahead({
+									name:"Output languages",
+									local : ['Java','C, C++','C, C++, D, Go, Java, Objective-C, Ruby','C#','Eiffel','C','Bytecode, x86 assembly language, interpreted','C++','Haskell','Go','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

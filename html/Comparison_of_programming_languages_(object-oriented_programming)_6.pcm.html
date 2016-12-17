@@ -29,26 +29,23 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>write-only : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>write-only : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>read-only : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>read-write : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>read-only : </label></br> <input id="3" type="text" name="Feature"></br>
-								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"write-only",
 									local : ['','N/A','level-number bar clauses PROPERTY «WITH» NO GET.','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['','N/A','level-number bar clauses PROPERTY.','and then inside','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"read-only",
 									local : ['','level-number bar clauses PROPERTY «WITH» NO SET.','and then inside','']
+								});
+								$("#2").typeahead({
+									name:"read-write",
+									local : ['','N/A','level-number bar clauses PROPERTY.','and then inside','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

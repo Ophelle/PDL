@@ -29,36 +29,31 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Attaching Emails to Business Objects : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Desktop Environment : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Office Integration :</label></br>
-								<input type="radio" name="FeatureOffice Integration" value="oui">Yes <input type="radio" name="FeatureOffice Integration" value = "non">No <input type="radio" name="FeatureOffice Integration" value = "non">Partial </br>
-								
-								</br>	
-								<label>LDAP Support : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Global Search : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Multi Lingual :</label></br>
-								<input type="radio" name="FeatureMulti Lingual" value="oui">Yes <input type="radio" name="FeatureMulti Lingual" value = "non">No <input type="radio" name="FeatureMulti Lingual" value = "non">Partial </br>
+								<label>Web-Based :</label></br>
+								<input type="radio" name="FeatureWeb-Based" value="oui">Yes <input type="radio" name="FeatureWeb-Based" value = "non">No <input type="radio" name="FeatureWeb-Based" value = "non">Partial </br>
 								
 								</br>	
 								<label>Time Tracking :</label></br>
 								<input type="radio" name="FeatureTime Tracking" value="oui">Yes <input type="radio" name="FeatureTime Tracking" value = "non">No <input type="radio" name="FeatureTime Tracking" value = "non">Partial </br>
 								
 								</br>	
-								<label>System : </label></br> <input id="8" type="text" name="Feature"></br>
+								<label>Office Integration :</label></br>
+								<input type="radio" name="FeatureOffice Integration" value="oui">Yes <input type="radio" name="FeatureOffice Integration" value = "non">No <input type="radio" name="FeatureOffice Integration" value = "non">Partial </br>
 								
 								</br>	
-								<label>Web-Based :</label></br>
-								<input type="radio" name="FeatureWeb-Based" value="oui">Yes <input type="radio" name="FeatureWeb-Based" value = "non">No <input type="radio" name="FeatureWeb-Based" value = "non">Partial </br>
+								<label>Attaching Emails to Business Objects : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Desktop Environment : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>LDAP Support : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Multi Lingual :</label></br>
+								<input type="radio" name="FeatureMulti Lingual" value="oui">Yes <input type="radio" name="FeatureMulti Lingual" value = "non">No <input type="radio" name="FeatureMulti Lingual" value = "non">Partial </br>
 								
+								</br>	
+								<label>Global Search : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>System : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Languages Supported :</label></br>
 											<input type="checkbox" name="Feature" >bg</br>	
@@ -99,26 +94,26 @@
 											<input type="checkbox" name="Feature" >tr</br>	
 											<input type="checkbox" name="Feature" >lat</br>	
 											<input type="checkbox" name="Feature" >but supports UTF8</br>	
-									
+							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Attaching Emails to Business Objects",
 									local : ['?','Yes','']
 								});
+								$("#1").typeahead({
+									name:"Desktop Environment",
+									local : ['?','No','Yes','']
+								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"LDAP Support",
 									local : ['?','No','Yes','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['?','No','Yes','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+									name:"Global Search",
 									local : ['?','Yes','No','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#4").typeahead({
+									name:"System",
 									local : ['Salesforce.com','Tryton','SugarCRM','SageCRM','SuperOfficeCRM','Casengo','Group-Office','WORKetc','Siebel','AddressTwo','WebCRM','EpesiCRM','Nutshell CRM','TeamLab','CiviCRM','Adempiere','Really Simple Systems','Odoo CRM','Base CRM','Microsoft Dynamics CRM','LeadMaster','Pivotal CRM','GNU Enterprise','TeamWox','Workbooks.com','Streak','Vtiger CRM','Zoho CRM','SuiteCRM','']
 								});
 						</script>

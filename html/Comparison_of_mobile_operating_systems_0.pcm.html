@@ -29,53 +29,46 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>3rd party : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Yes : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>No : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Beta : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>In later versions : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>3rd party : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Yes : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>No : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Limited : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Tablet-only : </label></br> <input id="5" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Limited : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Beta : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>In later versions : </label></br> <input id="6" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Yes",
+									local : ['']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Beta",
 									local : ['']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"3rd party",
 									local : ['']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"No",
 									local : ['']
 								});
 								$("#4").typeahead({
-									name:"list4",
+									name:"Limited",
 									local : ['']
 								});
 								$("#5").typeahead({
-									name:"list5",
+									name:"Tablet-only",
 									local : ['']
 								});
 								$("#6").typeahead({
-									name:"list6",
-									local : ['']
-								});
-								$("#7").typeahead({
-									name:"list7",
+									name:"In later versions",
 									local : ['']
 								});
 						</script>

@@ -29,8 +29,21 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Approximate number of source packages : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Approximate number of source packages : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Package format : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Graphical installation process :</label></br>
+								<input type="radio" name="FeatureGraphical installation process" value="oui">Yes <input type="radio" name="FeatureGraphical installation process" value = "non">No <input type="radio" name="FeatureGraphical installation process" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Distribution : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Default installer : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Netinstall : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Default package management tools : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>Approximate number of pre-compiled packages :</label></br>
 											<input type="checkbox" name="Feature" >20</br>	
@@ -79,56 +92,36 @@
 											<input type="checkbox" name="Feature" >50</br>	
 											<input type="checkbox" name="Feature" >781</br>	
 											<input type="checkbox" name="Feature" >10</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Default installer : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Default package management tools : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Distribution : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Netinstall : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Package format : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Graphical installation process :</label></br>
-								<input type="radio" name="FeatureGraphical installation process" value="oui">Yes <input type="radio" name="FeatureGraphical installation process" value = "non">No <input type="radio" name="FeatureGraphical installation process" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Netboot : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label>Netboot : </label></br> <input id="6" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Approximate number of source packages",
 									local : ['?','55,843 from AUR','','18,895','Approximate number of source packages','36,656','8,834','14,900','11,385','14,975','CCR: 3,374','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['tc-install, core2usb','','Default installer','None (install scripts only)','?','Ubiquity','-','DrakX','YaST','Debian-Installer','MEPIS Install','Anaconda','dpkg','tazinst','YALI','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['APT','Pacman','UTUTO Package Manager','myDSL, APT','?','DNF, yum, PackageKit','PiSi','Portage, Entropy','RPM, yum, APT','YaST, Zypper','slapt-get, gslapt, installpkg','RPM, yum/up2date','PupGet, DotPup','Web site','APT, RPM','Sorcery Package Manager','APT/yum','XBMCbuntu addon manager, own and 3rd party addons','opkg','Default package management tools','none','RPM, yum','urpmi, rpmdrake','Tazpkg','APT (APT-RPM), RPM','installpkg, upgradepkg','netpkg, installpkg, upgradepkg','Portage','Pacman (will be replaced by Akabei in future)','ab, tce-load','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['Ubuntu, Kubuntu, Xubuntu','Trisquel','Debian','Arch Linux','dyne:bolic','LibreCMC/LibreWRT','Tiny SliTaz','Slax','Musix GNU+Linux','Scientific','Gentoo','OpenWrt','Distribution','ClearOS','Puppy','MEPIS','BLAG','Dragora GNU/Linux-Libre','Rxart','Parabola GNU/Linux-libre','Zenwalk','Slackware','ALT Linux','CentOS','PCLinuxOS','Tiny Core Linux','Damn Small Linux','Fedora','Knoppix','Ututo','Sabayon Linux','Vector Linux','Source Mage GNU/Linux','Zentyal','openSUSE','Red Hat Enterprise Linux','gnuLinEx','Tor-ramdisk','Linux Mint','Mageia','Chakra','OpenELEC','Mandriva Linux','XBMC Live','CrunchBang Linux','Parsix','gNewSense','SliTaz GNU/Linux','SUSE Linux','Elive','Bodhi Linux','Pardus','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['?','Netinstall','Yes','MIPS64','No','']
-								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#1").typeahead({
+									name:"Package format",
 									local : ['.deb','RPM','.pup, .pet','ebuild','.ipk','.dsl, .tar.gz, .uci, .unc, .deb','.dpkg','.pkg.tar.xz','.tazpkg','src','tgz, .txz, .tlz, .tbz','tcz','none','tgz, txz','tazpkg','?','.lzm','.zip','.pisi','tgz','Package format','']
 								});
-								$("#7").typeahead({
-									name:"list7",
+								$("#2").typeahead({
+									name:"Distribution",
+									local : ['Ubuntu, Kubuntu, Xubuntu','Trisquel','Debian','Arch Linux','dyne:bolic','LibreCMC/LibreWRT','Tiny SliTaz','Slax','Musix GNU+Linux','Scientific','Gentoo','OpenWrt','Distribution','ClearOS','Puppy','MEPIS','BLAG','Dragora GNU/Linux-Libre','Rxart','Parabola GNU/Linux-libre','Zenwalk','Slackware','ALT Linux','CentOS','PCLinuxOS','Tiny Core Linux','Damn Small Linux','Fedora','Knoppix','Ututo','Sabayon Linux','Vector Linux','Source Mage GNU/Linux','Zentyal','openSUSE','Red Hat Enterprise Linux','gnuLinEx','Tor-ramdisk','Linux Mint','Mageia','Chakra','OpenELEC','Mandriva Linux','XBMC Live','CrunchBang Linux','Parsix','gNewSense','SliTaz GNU/Linux','SUSE Linux','Elive','Bodhi Linux','Pardus','']
+								});
+								$("#3").typeahead({
+									name:"Default installer",
+									local : ['tc-install, core2usb','','Default installer','None (install scripts only)','?','Ubiquity','-','DrakX','YaST','Debian-Installer','MEPIS Install','Anaconda','dpkg','tazinst','YALI','']
+								});
+								$("#4").typeahead({
+									name:"Netinstall",
+									local : ['?','Netinstall','Yes','MIPS64','No','']
+								});
+								$("#5").typeahead({
+									name:"Default package management tools",
+									local : ['APT','Pacman','UTUTO Package Manager','myDSL, APT','?','DNF, yum, PackageKit','PiSi','Portage, Entropy','RPM, yum, APT','YaST, Zypper','slapt-get, gslapt, installpkg','RPM, yum/up2date','PupGet, DotPup','Web site','APT, RPM','Sorcery Package Manager','APT/yum','XBMCbuntu addon manager, own and 3rd party addons','opkg','Default package management tools','none','RPM, yum','urpmi, rpmdrake','Tazpkg','APT (APT-RPM), RPM','installpkg, upgradepkg','netpkg, installpkg, upgradepkg','Portage','Pacman (will be replaced by Akabei in future)','ab, tce-load','']
+								});
+								$("#6").typeahead({
+									name:"Netboot",
 									local : ['Netboot','?','No','iPXE','PXE','']
 								});
 						</script>

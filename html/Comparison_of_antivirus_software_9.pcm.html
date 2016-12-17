@@ -29,13 +29,6 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Company : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>BullGuard :</label></br>
-								<input type="radio" name="FeatureBullGuard" value="oui">Yes <input type="radio" name="FeatureBullGuard" value = "non">No <input type="radio" name="FeatureBullGuard" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
 								<label>Kaspersky Lab :</label></br>
 								<input type="radio" name="FeatureKaspersky Lab" value="oui">Yes <input type="radio" name="FeatureKaspersky Lab" value = "non">No <input type="radio" name="FeatureKaspersky Lab" value = "non">Partial </br>
 											<input type="text"/></br>								
@@ -43,9 +36,15 @@
 								<label>McAfee :</label></br>
 								<input type="radio" name="FeatureMcAfee" value="oui">Yes <input type="radio" name="FeatureMcAfee" value = "non">No <input type="radio" name="FeatureMcAfee" value = "non">Partial </br>
 											<input type="text"/></br>								
+								</br>	
+								<label>Company : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>BullGuard :</label></br>
+								<input type="radio" name="FeatureBullGuard" value="oui">Yes <input type="radio" name="FeatureBullGuard" value = "non">No <input type="radio" name="FeatureBullGuard" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Company",
 									local : ['License','On-demand scan','Backup','Notes','Software','On-access scan','AntiSpam','First release','Support','Price','Country of origin','AntiTheft','Web protection','Parental Control','Firewall','Call/SMS Filtering','']
 								});
 						</script>

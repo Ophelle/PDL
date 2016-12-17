@@ -29,14 +29,18 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Synchronizer :</label></br>
-								<input type="radio" name="FeatureSynchronizer" value="oui">Yes <input type="radio" name="FeatureSynchronizer" value = "non">No <input type="radio" name="FeatureSynchronizer" value = "non">Partial </br>
+								<label>Directory Compare :</label></br>
+								<input type="radio" name="FeatureDirectory Compare" value="oui">Yes <input type="radio" name="FeatureDirectory Compare" value = "non">No <input type="radio" name="FeatureDirectory Compare" value = "non">Partial </br>
 								
 								</br>	
-								<label>File manager : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>For Directories, size column shows: : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>For Directories, size column shows: : </label></br> <input id="3" type="text" name="Feature"></br>
+								<label>File manager : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Symbolic link : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Slideshows :</label></br>
+								<input type="radio" name="FeatureSlideshows" value="oui">Yes <input type="radio" name="FeatureSlideshows" value = "non">No <input type="radio" name="FeatureSlideshows" value = "non">Partial </br>
 								
 								</br>	
 								<label>Browse compressed folders :</label></br>
@@ -47,38 +51,30 @@
 								<input type="radio" name="FeatureFind as you type (Type-ahead find)" value="oui">Yes <input type="radio" name="FeatureFind as you type (Type-ahead find)" value = "non">No <input type="radio" name="FeatureFind as you type (Type-ahead find)" value = "non">Partial </br>
 								
 								</br>	
-								<label>Symbolic link : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Shows combined Size of Selected Directories :</label></br>
 								<input type="radio" name="FeatureShows combined Size of Selected Directories" value="oui">Yes <input type="radio" name="FeatureShows combined Size of Selected Directories" value = "non">No <input type="radio" name="FeatureShows combined Size of Selected Directories" value = "non">Partial </br>
 								
 								</br>	
-								<label>Directory Compare :</label></br>
-								<input type="radio" name="FeatureDirectory Compare" value="oui">Yes <input type="radio" name="FeatureDirectory Compare" value = "non">No <input type="radio" name="FeatureDirectory Compare" value = "non">Partial </br>
-								
+								<label>Branch Sizes : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Slideshows :</label></br>
-								<input type="radio" name="FeatureSlideshows" value="oui">Yes <input type="radio" name="FeatureSlideshows" value = "non">No <input type="radio" name="FeatureSlideshows" value = "non">Partial </br>
-								
-								</br>	
-								<label>Branch Sizes : </label></br> <input id="10" type="text" name="Feature"></br>
+								<label>Synchronizer :</label></br>
+								<input type="radio" name="FeatureSynchronizer" value="oui">Yes <input type="radio" name="FeatureSynchronizer" value = "non">No <input type="radio" name="FeatureSynchronizer" value = "non">Partial </br>
 								
 						<script>
+								$("#0").typeahead({
+									name:"For Directories, size column shows:",
+									local : ['number of entries','?','Total size including subdirectories','Yes','literal*','Contents including subs','nothing','literal','DIR','--','folder only size (default) selectable to file count/total size','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"File manager",
 									local : ['Altap Salamander','Disk Order','Path Finder','emelFM2','Total Commander','Xandros File Manager','Xfm','PCManFM','Nautilus','FAR Manager','Konqueror','muCommander','Windows Explorer','Double Commander','ROX-Filer','Dolphin','xplorer²','Xfe','XYplorer','ZTreeWin','Finder','Xfile','Midnight Commander','File Commander','DOS Navigator','Krusader','GNOME Commander','Directory Opus','Thunar','Dired','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['number of entries','?','Total size including subdirectories','Yes','literal*','Contents including subs','nothing','literal','DIR','--','folder only size (default) selectable to file count/total size','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Symbolic link",
 									local : ['?','No','Partial','Yes','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#3").typeahead({
+									name:"Branch Sizes",
 									local : ['Yes','?','No','Partial','']
 								});
 						</script>

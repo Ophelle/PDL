@@ -29,29 +29,50 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Memory (MB) : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory clock (MHz) : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Core clock (MHz) : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
 								<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Memory clock (MHz) : </label></br> <input id="2" type="number" name="Feature"></br>
+								<label>Fab (nm) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>API support - DirectX : </label></br> <input id="3" type="number" name="Feature"></br>
+								<label>Core config : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>API support - OpenGL : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Memory - Bus width (bit) : </label></br> <input id="4" type="number" name="Feature"></br>
+								<label>API support - DirectX : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Core clock (MHz) : </label></br> <input id="5" type="number" name="Feature"></br>
+								<label>Code name : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Model : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bus width (bit) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Core config : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fillrate - MTexels/s : </label></br> <input id="7" type="number" name="Feature"></br>
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Memory (MB) : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Memory - Bus type : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Fillrate - MVertices/s : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Fillrate - MOperations/s : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Fillrate - MTexels/s : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Fillrate - MPixels/s : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 								</br>	
 								<label>Launch :</label></br>
 											<input type="checkbox" name="Feature" >March 15</br>	
@@ -64,57 +85,26 @@
 											<input type="checkbox" name="Feature" >March 22</br>	
 											<input type="checkbox" name="Feature" >February 23</br>	
 											<input type="checkbox" name="Feature" >October</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Fillrate - MPixels/s : </label></br> <input id="10" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Code name : </label></br> <input id="11" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>API support - OpenGL : </label></br> <input id="12" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Fillrate - MOperations/s : </label></br> <input id="13" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Model : </label></br> <input id="14" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Memory - Bus type : </label></br> <input id="15" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fab (nm) : </label></br> <input id="16" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="17" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Fillrate - MVertices/s : </label></br> <input id="18" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
+								$("#0").typeahead({
+									name:"Memory (MB)",
+									local : ['8, 1632','1632','816','8','4','16','24','32','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Bus interface",
 									local : ['AGP 2x, PCI','AGP 4x','AGP 4x, PCI','PCI','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Core config",
 									local : ['2:2:2','1:1:1','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['8, 16
-32','16
-32','8
-16','8','4','16','2
-4','32','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+									name:"Code name",
 									local : ['NV6','NV5','NV4','NV1','NV3','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#4").typeahead({
+									name:"Model",
 									local : ['Vanta','STG-2000','Riva TNT','Riva128ZX','Riva128','Riva TNT2 Ultra','Vanta LT','Riva TNT2','Riva TNT2 Pro','Riva TNT2 M64','']
 								});
 						</script>

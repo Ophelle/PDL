@@ -29,15 +29,17 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Screen shape : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Largest known diagonal - (in) : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Largest known diagonal - (cm) : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
 								<label>Usable in bright room :</label></br>
 								<input type="radio" name="FeatureUsable in bright room" value="oui">Yes <input type="radio" name="FeatureUsable in bright room" value = "non">No <input type="radio" name="FeatureUsable in bright room" value = "non">Partial </br>
 											<input type="text"/></br>								
-								</br>	
-								<label>Display technology : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Largest known diagonal - (cm) : </label></br> <input id="3" type="number" name="Feature"></br>
-												<input type="text"/></br>								
 								</br>	
 								<label>Typical use :</label></br>
 											<input type="checkbox" name="Feature" >Computer monitor</br>	
@@ -51,21 +53,17 @@ Radar display</br>
 											<input type="checkbox" name="Feature" >possibly
 virtual reality</br>	
 											<input type="checkbox" name="Feature" >Oscilloscope</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Largest known diagonal - (in) : </label></br> <input id="5" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Screen shape : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Display technology : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Laser Phosphor Display (LPD)','LCoS self-contained rear-projection','EPD (e-paper)','CRT self-contained rear-projection','LCD front-projection','FED','OLED','Virtual retinal display','LCD self-contained rear-projection','LCoS front-projection','Plasma display panel (PDP)','Direct view LCD','QDLED','Direct view Charactron CRT','DLP front-projection','Laser self-contained rear projection','LED','SED','Monochrome CRT','DLP self-contained rear-projection','IMOD','Shadow mask CRT','CRT front projection','Aperture grille CRT','Eidophor front projection','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Screen shape",
 									local : ['Spherical curve or Flat','Flat','Flat lenticular','N/A','Curved or Flat (flexible)','Cylindrical curve or Flat','Flat (flexible)','Spherical curve','Any shape','Flat / Box','']
+								});
+								$("#1").typeahead({
+									name:"Display technology",
+									local : ['Laser Phosphor Display (LPD)','LCoS self-contained rear-projection','EPD (e-paper)','CRT self-contained rear-projection','LCD front-projection','FED','OLED','Virtual retinal display','LCD self-contained rear-projection','LCoS front-projection','Plasma display panel (PDP)','Direct view LCD','QDLED','Direct view Charactron CRT','DLP front-projection','Laser self-contained rear projection','LED','SED','Monochrome CRT','DLP self-contained rear-projection','IMOD','Shadow mask CRT','CRT front projection','Aperture grille CRT','Eidophor front projection','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

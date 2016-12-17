@@ -29,23 +29,21 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>C# : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Platform support : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Java :</label></br>
 								<input type="radio" name="FeatureJava" value="oui">Yes <input type="radio" name="FeatureJava" value = "non">No <input type="radio" name="FeatureJava" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Platform support : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>C# : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['via Mono','via cross-compiler','Yes','No','Partial?','Deprecated','via Xamarin MonoTouch','via Xamarin MonoDroid','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Platform support",
 									local : ['Feature phones','Linux','Windows 8 Modern','Symbian','Windows','Windows Mobile','AIX','FreeBSD','iOS','Windows Phone','Blackberry','Solaris','Android','Mac OS X','']
+								});
+								$("#1").typeahead({
+									name:"C#",
+									local : ['via Mono','via cross-compiler','Yes','No','Partial?','Deprecated','via Xamarin MonoTouch','via Xamarin MonoDroid','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

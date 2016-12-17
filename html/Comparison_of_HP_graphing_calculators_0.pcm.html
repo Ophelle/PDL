@@ -29,26 +29,17 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Processor : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Stack : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Release year : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Predecessors : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Memory : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Programming languages : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Programming languages : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Release year : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Stack : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Display : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Model : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Predecessors : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Memory : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>Connectivity :</label></br>
 											<input type="checkbox" name="Feature" >1x4-pin RS-232</br>	
@@ -56,67 +47,65 @@
 											<input type="checkbox" name="Feature" >USB (Micro-B)</br>	
 											<input type="checkbox" name="Feature" >IrDA</br>	
 											<input type="checkbox" name="Feature" >2x5-pin RS-232</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Processor : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Input method : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Model : </label></br> <input id="8" type="text" name="Feature"></br>
 								</br>	
 								<label>Computer algebra system :</label></br>
 								<input type="radio" name="FeatureComputer algebra system" value="oui">Yes <input type="radio" name="FeatureComputer algebra system" value = "non">No <input type="radio" name="FeatureComputer algebra system" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 								</br>	
-								<label>Successors : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+								<label>Successors : </label></br> <input id="9" type="text" name="Feature"></br>
 								</br>	
-								<label>Character set : </label></br> <input id="11" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Input method : </label></br> <input id="12" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Display : </label></br> <input id="13" type="text" name="Feature"></br>
-								
+								<label>Character set : </label></br> <input id="10" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['640 kHz Saturn (Saturn 1LK7 core)','2 MHz Clarke (Saturn 1LT8 core)','75 MHz Samsung S3C2410X (ARM920T core)','80 MHz Freescale (formerly SigmaTel) STMP3770 (ARM926EJ-S core)','4 MHz Yorke (Saturn 1LT8 core)','Sunplus SPLB30A (aka Generalplus GPLB30A)','Samsung S3C2410 (ARM920T core)','48 MHz (203 MHz) Samsung S3C2410X01 (ARM920T core)','75 MHz Samsung S3C2410A (ARM920T core)','400 MHz Samsung S3C2416XH-40 (ARM926EJ core)','1 MHz Lewis (Saturn 1LT8 core)','3.68-4 MHz Yorke (Saturn 1LT8 core)','75 MHz (203 MHz) Samsung S3C2410X01 (ARM920T core)','75 MHz (203 MHz) Samsung S3C2410A (ARM920T core)','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['2000-2003','1991-1993','1998-2003','1988-1992','1995','2013','2003-2006','1999-2003','2003','2006','2006-2015','1990-1993','1987-1988','2011','2006-2011','1993-2003','?','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['512 KB RAM, 2 MB flash, expandable via 2 GB SD card','256 KB RAM','32 KB RAM','32 MB RAM, 256 MB flash','128 KB RAM','256 KB RAM (ca. 240 KB available to user), 128 MB flash (80-105 MB available to user)','2 KB RAM, 1709? bytes RAM available for user','?','512 KB RAM, 2 MB flash','712? bytes RAM available for user','128 KB RAM, expandable via 128 KB and 4 MB max. card slots','128 KB RAM (256 KB RAM - 2007 model only)','32 KB RAM, expandable via 2 card slots of 128 KB RAM/ROM each','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['Limited, 10 programmable "expression registers" that can reference other functions, registers, and memory','HP Basic','RPL, Algebraic RPL','RPL','HP Basic-variant or PPL-predecessor?','PPL','']
-								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#0").typeahead({
+									name:"Stack",
 									local : ['Dynamic','?','Fixed (128 level)','']
 								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['HP 50g (F2229A)','HP 49G (F1633A, F1896A)','HP 9g','HP 49gII','HP 48S','hp 39g+ (F2224A)','HP 39gs (F2223A)','HP 40G (F1907A)','HP 48GX (F1895A)','HP 39G (F1906A)','HP 48SX','HP 48G+ (F1630A, F1894A)','HP 48G','HP 39gII (NW249AA)','HP-28C','HP 48gII (F2226A)','hp 49g+ (F2228A)','HP Prime (NW280AA, G8X92AA)','HP 38G (F1200A, F1892A)','HP-28S','HP 40gs (F2225A)','']
-								});
-								$("#7").typeahead({
-									name:"list7",
+								$("#1").typeahead({
+									name:"Predecessors",
 									local : ['HP 48gII','HP 39G','HP 39gII, (HP 50g)','HP-28S','HP 38G','None','hp 49g+','HP-41C','HP 48S','HP 48GX, HP 48G+','HP-28C','hp 39g+','HP 49G','HP 40G','HP 48SX','HP 48G+','HP 39gs','HP 48G','']
 								});
-								$("#8").typeahead({
-									name:"list8",
-									local : ['HP 48G+, HP 49G','hp 49g+','HP 48GX','HP 49gII','HP 39gII, HP Prime','HP 39G, HP 40G','None','HP 48G','HP 40gs','hp 39g+','HP 49G','HP Prime','HP 48 series','(HP Prime)','HP 50g','HP 39gs','HP-28S','HP 40gs, HP 39gII','']
+								$("#2").typeahead({
+									name:"Programming languages",
+									local : ['Limited, 10 programmable "expression registers" that can reference other functions, registers, and memory','HP Basic','RPL, Algebraic RPL','RPL','HP Basic-variant or PPL-predecessor?','PPL','']
 								});
-								$("#9").typeahead({
-									name:"list9",
-									local : ['8-bit','Unicode','']
+								$("#3").typeahead({
+									name:"Release year",
+									local : ['2000-2003','1991-1993','1998-2003','1988-1992','1995','2013','2003-2006','1999-2003','2003','2006','2006-2015','1990-1993','1987-1988','2011','2006-2011','1993-2003','?','']
 								});
-								$("#10").typeahead({
-									name:"list10",
+								$("#4").typeahead({
+									name:"Display",
+									local : ['320x240 pixel 16-bit color multi-touch TFT LCD with backlight','131x64 pixel monochrome LCD','256x128 pixel monochrome gray-scale LCD','131x80 pixel monochrome LCD','4-line (137x32 pixel) monochrome LCD','35x23 pixel, 1-line 5-digit 5x7 dot matrix, 1-line 10+3-digit 7-segment monochrome LCD','4-line (131x64 pixel) monochrome LCD','']
+								});
+								$("#5").typeahead({
+									name:"Memory",
+									local : ['512 KB RAM, 2 MB flash, expandable via 2 GB SD card','256 KB RAM','32 KB RAM','32 MB RAM, 256 MB flash','128 KB RAM','256 KB RAM (ca. 240 KB available to user), 128 MB flash (80-105 MB available to user)','2 KB RAM, 1709? bytes RAM available for user','?','512 KB RAM, 2 MB flash','712? bytes RAM available for user','128 KB RAM, expandable via 128 KB and 4 MB max. card slots','128 KB RAM (256 KB RAM - 2007 model only)','32 KB RAM, expandable via 2 card slots of 128 KB RAM/ROM each','']
+								});
+								$("#6").typeahead({
+									name:"Processor",
+									local : ['640 kHz Saturn (Saturn 1LK7 core)','2 MHz Clarke (Saturn 1LT8 core)','75 MHz Samsung S3C2410X (ARM920T core)','80 MHz Freescale (formerly SigmaTel) STMP3770 (ARM926EJ-S core)','4 MHz Yorke (Saturn 1LT8 core)','Sunplus SPLB30A (aka Generalplus GPLB30A)','Samsung S3C2410 (ARM920T core)','48 MHz (203 MHz) Samsung S3C2410X01 (ARM920T core)','75 MHz Samsung S3C2410A (ARM920T core)','400 MHz Samsung S3C2416XH-40 (ARM926EJ core)','1 MHz Lewis (Saturn 1LT8 core)','3.68-4 MHz Yorke (Saturn 1LT8 core)','75 MHz (203 MHz) Samsung S3C2410X01 (ARM920T core)','75 MHz (203 MHz) Samsung S3C2410A (ARM920T core)','']
+								});
+								$("#7").typeahead({
+									name:"Input method",
 									local : ['Entry RPN, Algebraic','Entry RPN','Algebraic, Entry RPN','Algebraic','']
 								});
-								$("#11").typeahead({
-									name:"list11",
-									local : ['320x240 pixel 16-bit color multi-touch TFT LCD with backlight','131x64 pixel monochrome LCD','256x128 pixel monochrome gray-scale LCD','131x80 pixel monochrome LCD','4-line (137x32 pixel) monochrome LCD','35x23 pixel, 1-line 5-digit 5x7 dot matrix, 1-line 10+3-digit 7-segment monochrome LCD','4-line (131x64 pixel) monochrome LCD','']
+								$("#8").typeahead({
+									name:"Model",
+									local : ['HP 50g (F2229A)','HP 49G (F1633A, F1896A)','HP 9g','HP 49gII','HP 48S','hp 39g+ (F2224A)','HP 39gs (F2223A)','HP 40G (F1907A)','HP 48GX (F1895A)','HP 39G (F1906A)','HP 48SX','HP 48G+ (F1630A, F1894A)','HP 48G','HP 39gII (NW249AA)','HP-28C','HP 48gII (F2226A)','hp 49g+ (F2228A)','HP Prime (NW280AA, G8X92AA)','HP 38G (F1200A, F1892A)','HP-28S','HP 40gs (F2225A)','']
+								});
+								$("#9").typeahead({
+									name:"Successors",
+									local : ['HP 48G+, HP 49G','hp 49g+','HP 48GX','HP 49gII','HP 39gII, HP Prime','HP 39G, HP 40G','None','HP 48G','HP 40gs','hp 39g+','HP 49G','HP Prime','HP 48 series','(HP Prime)','HP 50g','HP 39gs','HP-28S','HP 40gs, HP 39gII','']
+								});
+								$("#10").typeahead({
+									name:"Character set",
+									local : ['8-bit','Unicode','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

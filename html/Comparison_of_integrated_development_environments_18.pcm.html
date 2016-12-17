@@ -29,35 +29,32 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Latest stable release :</label></br>
+											<input type="checkbox" name="Feature" >August 2013</br>	
+											<input type="checkbox" name="Feature" >v5.3.6</br>	
+							
+								</br>	
+								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Developer :</label></br>
 											<input type="checkbox" name="Feature" >PLT Design</br>	
 											<input type="checkbox" name="Feature" >Inc.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
-								<label>Latest stable release :</label></br>
-											<input type="checkbox" name="Feature" >August 2013</br>	
-											<input type="checkbox" name="Feature" >v5.3.6</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								<label>Platform : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>IDE : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Platform : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>IDE : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"License",
+									local : ['LGPL','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Platform",
 									local : ['Cross-platform','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['LGPL','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"IDE",
 									local : ['DrRacket','']
 								});
 						</script>

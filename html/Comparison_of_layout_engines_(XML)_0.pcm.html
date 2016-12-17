@@ -29,32 +29,30 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Associating CSS : </label></br> <input id="1" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>XML Events : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>xml:id :</label></br>
 								<input type="radio" name="Featurexml:id" value="oui">Yes <input type="radio" name="Featurexml:id" value = "non">No <input type="radio" name="Featurexml:id" value = "non">Partial </br>
 								
+								</br>	
+								<label>Associating CSS : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>XML Events : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>XInclude :</label></br>
 								<input type="radio" name="FeatureXInclude" value="oui">Yes <input type="radio" name="FeatureXInclude" value = "non">No <input type="radio" name="FeatureXInclude" value = "non">Partial </br>
 								
 								</br>	
-								<label>XML Fragment Interchange : </label></br> <input id="5" type="text" name="Feature"></br>
+								<label>XML namespace : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>XML namespace : </label></br> <input id="6" type="number" name="Feature"></br>
-								
+								<label>XML Fragment Interchange : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"XML Events",
 									local : ['?','1.0','1.8','No','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"XML Fragment Interchange",
 									local : ['?','']
 								});
 						</script>

@@ -29,45 +29,41 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>South Korea : </label></br> <input id="1" type="text" name="Feature"></br>
+								<label>Total : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Iran : </label></br> <input id="2" type="text" name="Feature"></br>
+								<label>North Korea : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>China : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>China : </label></br> <input id="3" type="number" name="Feature"></br>
+								<label>India : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Japan : </label></br> <input id="4" type="number" name="Feature"></br>
+								<label>Israel : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Japan : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Total : </label></br> <input id="5" type="number" name="Feature"></br>
-								
+								<label>South Korea : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Israel : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>North Korea : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>India : </label></br> <input id="8" type="number" name="Feature"></br>
-								
+								<label>Iran : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"North Korea",
+									local : ['1','-','3','2','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['1','-','3','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['-','1','7','3','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Israel",
 									local : ['-','1','5','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['1','-','3','2','']
+								$("#2").typeahead({
+									name:"South Korea",
+									local : ['1','-','3','']
+								});
+								$("#3").typeahead({
+									name:"Iran",
+									local : ['-','1','7','3','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

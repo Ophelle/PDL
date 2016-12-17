@@ -29,35 +29,34 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>File system : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Variable file block size :</label></br>
-								<input type="radio" name="FeatureVariable file block size" value="oui">Yes <input type="radio" name="FeatureVariable file block size" value = "non">No <input type="radio" name="FeatureVariable file block size" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Transparent compression :</label></br>
-								<input type="radio" name="FeatureTransparent compression" value="oui">Yes <input type="radio" name="FeatureTransparent compression" value = "non">No <input type="radio" name="FeatureTransparent compression" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
 								<label>Extent :</label></br>
 								<input type="radio" name="FeatureExtent" value="oui">Yes <input type="radio" name="FeatureExtent" value = "non">No <input type="radio" name="FeatureExtent" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Sparse file :</label></br>
-								<input type="radio" name="FeatureSparse file" value="oui">Yes <input type="radio" name="FeatureSparse file" value = "non">No <input type="radio" name="FeatureSparse file" value = "non">Partial </br>
+								<label>Variable file block size :</label></br>
+								<input type="radio" name="FeatureVariable file block size" value="oui">Yes <input type="radio" name="FeatureVariable file block size" value = "non">No <input type="radio" name="FeatureVariable file block size" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
 								<label>Allocate-on-flush :</label></br>
 								<input type="radio" name="FeatureAllocate-on-flush" value="oui">Yes <input type="radio" name="FeatureAllocate-on-flush" value = "non">No <input type="radio" name="FeatureAllocate-on-flush" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
+								<label>File system : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Transparent compression :</label></br>
+								<input type="radio" name="FeatureTransparent compression" value="oui">Yes <input type="radio" name="FeatureTransparent compression" value = "non">No <input type="radio" name="FeatureTransparent compression" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
 								<label>Block suballocation :</label></br>
 								<input type="radio" name="FeatureBlock suballocation" value="oui">Yes <input type="radio" name="FeatureBlock suballocation" value = "non">No <input type="radio" name="FeatureBlock suballocation" value = "non">Partial </br>
 											<input type="text"/></br>								
+								</br>	
+								<label>Sparse file :</label></br>
+								<input type="radio" name="FeatureSparse file" value="oui">Yes <input type="radio" name="FeatureSparse file" value = "non">No <input type="radio" name="FeatureSparse file" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"File system",
 									local : ['Reiser4','ZFS','Btrfs','ext3cow','File system','DOS (GEC)','UDF','NILFS','UFS2','ext4','PramFS','FAT16','HPFS','Level-D','GPFS','VMFS3','QFS','DECtape','GFS','NSS','Lustre','CP/M filesystem','VxFS','CBM DOS','Be File System','ReiserFS','JFS','exFAT','FAT32','NWFS','ext3','UFS1','ext2','Reliance Nitro','OS4000','V7FS','FAT12','FFS','VMFS2','ODS-5','Fossil','HFS Plus','NTFS','Reliance','OCFS','V6FS','LFS','XFS','OCFS2','']
 								});
 						</script>

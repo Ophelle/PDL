@@ -29,25 +29,22 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>3D Graphics/Animated pieces mode : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Multiplayer : </label></br> <input id="1" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>3D Graphics/Animated pieces mode : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Variants (rules, pieces, boards) : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Variants (rules, pieces, boards) : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"3D Graphics/Animated pieces mode",
+									local : ['','No','Yes','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Multiplayer",
 									local : ['','No','Yes','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['','No','Yes','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Variants (rules, pieces, boards)",
 									local : ['Yes Knightmate, Capablanca and Gothic Chess, Shatranj, Courier Chess, Cylinder chess, Berolina Chess under fairymax','','No','Chess960, Bird Chess, Capablanca Chess, Capablanca Random Chess, Carrera Chess, Embassy Chess, Janus Chess','']
 								});
 						</script>

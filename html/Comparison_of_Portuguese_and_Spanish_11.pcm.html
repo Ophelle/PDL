@@ -29,26 +29,23 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Spanish : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>English : </label></br> <input id="1" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Spanish : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Portuguese : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Portuguese : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Spanish",
+									local : ['nuevo   [ˈnwe̞βo̞]','nueva   [ˈnwe̞βa]','nuevos   [ˈnwe̞βo̞s]','nuevas   [ˈnwe̞βas]','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"English",
 									local : ['new (f. sg.)','new (f. pl.)','new (m. sg.)','new (m. pl.)','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Portuguese",
 									local : ['nova   [ˈnɔv�?]','novos   [ˈnɔvuʃ]','novo   [ˈnovu]','novas   [ˈnɔv�?ʃ]','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['nuevo   [ˈnwe̞βo̞]','nueva   [ˈnwe̞βa]','nuevos   [ˈnwe̞βo̞s]','nuevas   [ˈnwe̞βas]','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

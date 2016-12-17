@@ -29,33 +29,31 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Memory slots : </label></br> <input id="1" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>HDD bays : </label></br> <input id="2" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>Expansion slots :</label></br>
-								<input type="radio" name="FeatureExpansion slots" value="oui">Yes <input type="radio" name="FeatureExpansion slots" value = "non">No <input type="radio" name="FeatureExpansion slots" value = "non">Partial </br>
-								
-								</br>	
-								<label>Model : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Memory Max : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>User-replaceable HDD? :</label></br>
 								<input type="radio" name="FeatureUser-replaceable HDD?" value="oui">Yes <input type="radio" name="FeatureUser-replaceable HDD?" value = "non">No <input type="radio" name="FeatureUser-replaceable HDD?" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 								</br>	
-								<label>Memory Max : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>HDD bays : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Expansion slots :</label></br>
+								<input type="radio" name="FeatureExpansion slots" value="oui">Yes <input type="radio" name="FeatureExpansion slots" value = "non">No <input type="radio" name="FeatureExpansion slots" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Model : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory slots : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['MacBook Pro','Mac Pro','MacBook Air','iMac','Mac Mini','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Memory Max",
 									local : ['32 GB','8 GB','16GB','8 GB (21.5") 16 GB (27")','']
+								});
+								$("#1").typeahead({
+									name:"Model",
+									local : ['MacBook Pro','Mac Pro','MacBook Air','iMac','Mac Mini','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

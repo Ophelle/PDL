@@ -29,42 +29,38 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>residency : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>MLE, Step 2 : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Board Certification : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Medical School Application service :</label></br>
 											<input type="checkbox" name="Feature" >AMCAS</br>	
 											<input type="checkbox" name="Feature" >TMDSAS</br>	
 											<input type="checkbox" name="Feature" >AACOMAS</br>	
-									
+							
 								</br>	
-								<label>Medical Licensing Exam (MLE)  Step 1 : </label></br> <input id="5" type="text" name="Feature"></br>
+								<label>residency : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Years of medical school : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Years of medical school : </label></br> <input id="6" type="number" name="Feature"></br>
-								
+								<label>Board Certification : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Medical Licensing Exam (MLE)  Step 1 : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>MLE, Step 2 : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"residency",
 									local : ['','M.D. (ACGME)','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['USMLE required','COMLEX required','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Board Certification",
 									local : ['Medical specialty boards','Either M.D. or D.O. medical specialty boards','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#2").typeahead({
+									name:"Medical Licensing Exam (MLE)  Step 1",
 									local : ['','USMLE required','']
+								});
+								$("#3").typeahead({
+									name:"MLE, Step 2",
+									local : ['USMLE required','COMLEX required','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

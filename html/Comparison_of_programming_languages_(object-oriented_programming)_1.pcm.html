@@ -29,35 +29,23 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>namespace : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>namespace : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>class : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>protocol : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>class : </label></br> <input id="3" type="text" name="Feature"></br>
-								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['','INTERFACE-ID. name« INHERITS« FROM» interfaces».
-
-END INTERFACE name.','N/A','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"namespace",
 									local : ['','N/A','']
 								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['','class name «extends parentclass» { members }','CLASS-ID. name« INHERITS« FROM» parentclasses».
-
-
-
-
-
-
-END CLASS name.','N/A','']
+								$("#1").typeahead({
+									name:"class",
+									local : ['','class name «extends parentclass» { members }','CLASS-ID. name« INHERITS« FROM» parentclasses».END CLASS name.','N/A','']
+								});
+								$("#2").typeahead({
+									name:"protocol",
+									local : ['','INTERFACE-ID. name« INHERITS« FROM» interfaces».END INTERFACE name.','N/A','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

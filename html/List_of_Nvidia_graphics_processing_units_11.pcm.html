@@ -29,52 +29,44 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Products : </label></br> <input id="1" type="text" name="Feature"></br>
+								<label>Products : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Model : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>TDP (watts) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Transistors (Million) : </label></br> <input id="2" type="number" name="Feature"></br>
+								<label>Memory (MB) : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Processing Power (GFLOPS) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Die Size (mm) : </label></br> <input id="3" type="number" name="Feature"></br>
+								<label>Core config : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Clock rate - Core (MHz) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Core config : </label></br> <input id="4" type="text" name="Feature"></br>
+								<label>Clock rate - Memory (MHz) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Memory (MB) : </label></br> <input id="5" type="text" name="Feature"></br>
+								<label>Clock rate - Shader (MHz) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Clock rate - Core (MHz) : </label></br> <input id="6" type="number" name="Feature"></br>
+								<label>Fillrate - Pixel (GP/s) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Fab (nm) : </label></br> <input id="7" type="number" name="Feature"></br>
+								<label>Fillrate - Texture (GT/s) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="8" type="number" name="Feature"></br>
+								<label>API support (version) - OpenGL : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Clock rate - Memory (MHz) : </label></br> <input id="9" type="number" name="Feature"></br>
+								<label>API support (version) - DirectX : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Fillrate - Pixel (GP/s) : </label></br> <input id="10" type="number" name="Feature"></br>
-								
+								<label>Code name : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Bus interface : </label></br> <input id="11" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fillrate - Texture (GT/s) : </label></br> <input id="12" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>TDP (watts) : </label></br> <input id="13" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>Comments : </label></br> <input id="14" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Memory - Bus width (bit) : </label></br> <input id="15" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>Processing Power (GFLOPS) : </label></br> <input id="16" type="number" name="Feature"></br>
+								<label>Die Size (mm) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
 								<label>Launch :</label></br>
@@ -96,69 +88,56 @@ December 11</br>
 											<input type="checkbox" name="Feature" >2007 (256</br>	
 											<input type="checkbox" name="Feature" >1024)</br>	
 											<input type="checkbox" name="Feature" >June 15</br>	
-									
+							
 								</br>	
-								<label>API support (version) - DirectX : </label></br> <input id="18" type="number" name="Feature"></br>
+								<label>Fab (nm) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Code name : </label></br> <input id="19" type="text" name="Feature"></br>
+								<label>Memory - Bus type : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>API support (version) - OpenGL : </label></br> <input id="20" type="number" name="Feature"></br>
+								<label>Memory - Bus width (bit) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Model : </label></br> <input id="21" type="text" name="Feature"></br>
+								<label>Comments : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Transistors (Million) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Memory - Bus type : </label></br> <input id="22" type="text" name="Feature"></br>
-								
+								<label>Bus interface : </label></br> <input id="7" type="text" name="Feature"></br>
 								</br>	
-								<label>GFLOPS/W : </label></br> <input id="23" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>Clock rate - Shader (MHz) : </label></br> <input id="24" type="number" name="Feature"></br>
+								<label>GFLOPS/W : </label></br> <input type="number" name="Feature"></br>
 								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['PCIe 2.0 x16','PCIe 2.0 x16
-PCIe x1
-PCI','Bus interface','PCIe 1.0 x16
-PCI','PCIe 1.0 x16','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Products",
 									local : ['P8','P9','P2','P7','P18','P11','P19','P20','P17','P6','P1','P10','P14','P16','P5','P4','P15','P12','P3','P13','']
 								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['','PureVideo 3 with VP3','The block of decoding of HD-video PureVideo HD is disconnected','OEM only','only XFX, EVGA and BFG models, very short-lived','Comments','']
+								$("#1").typeahead({
+									name:"Model",
+									local : ['Model','GeForce 8800 GS','GeForce 8400 GS rev.3','GeForce 8100 mGPU','GeForce 8400 GS','GeForce 8600 GS','GeForce 8800 GTS (G92)','GeForce 8600 GTS','GeForce 8800 Ultra','GeForce 8300 mGPU','GeForce 8800 GT','GeForce 8800 GTX','GeForce 8400 GS rev.2','GeForce 8300 GS','GeForce 8600 GT','GeForce 8800 GTS 112 (G80)','GeForce 8800 GTS (G80)','GeForce 8500 GT','GeForce 8200 mGPU','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#2").typeahead({
+									name:"Memory (MB)",
+									local : ['640','384768','2565121024','128256512','512','Memory min (MB)','128512','768','Up to 512 from system memory','256512','5121024','320640','']
+								});
+								$("#3").typeahead({
+									name:"Core config",
 									local : ['16:8:4','96:48:12','112:56:16','8:8:4','32:16:8','Core config','128:64:16','96:24:20','128:32:24','8:4:4','112:28:20','']
 								});
+								$("#4").typeahead({
+									name:"Code name",
+									local : ['Code name','GT218','MCP78','G86','G98','G92','G80','G86G98','G84','']
+								});
 								$("#5").typeahead({
-									name:"list5",
-									local : ['640','384
-768','256
-512
-1024','128
-256
-512','512','Memory min (MB)','128
-512','768','Up to 512 from system memory','256
-512','512
-1024','320
-640','']
+									name:"Comments",
+									local : ['','PureVideo 3 with VP3','The block of decoding of HD-video PureVideo HD is disconnected','OEM only','only XFX, EVGA and BFG models, very short-lived','Comments','']
 								});
 								$("#6").typeahead({
-									name:"list6",
-									local : ['Code name','GT218','MCP78','G86','G98','G92','G80','G86
-G98','G84','']
-								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['Model','GeForce 8800 GS','GeForce 8400 GS rev.3','GeForce 8100 mGPU','GeForce 8400 GS','GeForce 8600 GS','GeForce 8800 GTS (G92)','GeForce 8600 GTS','GeForce 8800 Ultra','GeForce 8300 mGPU','GeForce 8800 GT','GeForce 8800 GTX','GeForce 8400 GS rev.2','GeForce 8300 GS','GeForce 8600 GT','GeForce 8800 GTS 112 (G80)','GeForce 8800 GTS (G80)','GeForce 8500 GT','GeForce 8200 mGPU','']
+									name:"Bus interface",
+									local : ['PCIe 2.0 x16','PCIe 2.0 x16PCIe x1PCI','Bus interface','PCIe 1.0 x16PCI','PCIe 1.0 x16','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

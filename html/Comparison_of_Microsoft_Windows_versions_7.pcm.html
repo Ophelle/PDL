@@ -29,68 +29,64 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Update management : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Architecture :</label></br>
-											<input type="checkbox" name="Feature" >x86</br>	
-											<input type="checkbox" name="Feature" >hybrid 16</br>	
-											<input type="checkbox" name="Feature" >32-bit</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Integrated firewall :</label></br>
-								<input type="radio" name="FeatureIntegrated firewall" value="oui">Yes <input type="radio" name="FeatureIntegrated firewall" value = "non">No <input type="radio" name="FeatureIntegrated firewall" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>APIs :</label></br>
-											<input type="checkbox" name="Feature" >Win16</br>	
-											<input type="checkbox" name="Feature" >Win32</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								<label>Kernel : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>LFN support :</label></br>
 								<input type="radio" name="FeatureLFN support" value="oui">Yes <input type="radio" name="FeatureLFN support" value = "non">No <input type="radio" name="FeatureLFN support" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>USB support :</label></br>
-								<input type="radio" name="FeatureUSB support" value="oui">Yes <input type="radio" name="FeatureUSB support" value = "non">No <input type="radio" name="FeatureUSB support" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Safe Mode :</label></br>
-								<input type="radio" name="FeatureSafe Mode" value="oui">Yes <input type="radio" name="FeatureSafe Mode" value = "non">No <input type="radio" name="FeatureSafe Mode" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Name : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>SMP support :</label></br>
 								<input type="radio" name="FeatureSMP support" value="oui">Yes <input type="radio" name="FeatureSMP support" value = "non">No <input type="radio" name="FeatureSMP support" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Kernel type : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+								<label>Architecture :</label></br>
+											<input type="checkbox" name="Feature" >x86</br>	
+											<input type="checkbox" name="Feature" >hybrid 16</br>	
+											<input type="checkbox" name="Feature" >32-bit</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Name : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Update management : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>APIs :</label></br>
+											<input type="checkbox" name="Feature" >Win16</br>	
+											<input type="checkbox" name="Feature" >Win32</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>USB support :</label></br>
+								<input type="radio" name="FeatureUSB support" value="oui">Yes <input type="radio" name="FeatureUSB support" value = "non">No <input type="radio" name="FeatureUSB support" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
 								<label>UDMA support :</label></br>
 								<input type="radio" name="FeatureUDMA support" value="oui">Yes <input type="radio" name="FeatureUDMA support" value = "non">No <input type="radio" name="FeatureUDMA support" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Kernel : </label></br> <input id="12" type="text" name="Feature"></br>
-								
+								<label>Kernel type : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Integrated firewall :</label></br>
+								<input type="radio" name="FeatureIntegrated firewall" value="oui">Yes <input type="radio" name="FeatureIntegrated firewall" value = "non">No <input type="radio" name="FeatureIntegrated firewall" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Safe Mode :</label></br>
+								<input type="radio" name="FeatureSafe Mode" value="oui">Yes <input type="radio" name="FeatureSafe Mode" value = "non">No <input type="radio" name="FeatureSafe Mode" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Windows Update','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Kernel",
 									local : ['MS-DOS 7.0 (Win95, Win95A), MS-DOS 7.1 (Win95B, Win95C)','MS-DOS 8.0','MS-DOS 7.1','']
 								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['Monolithic kernel','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Name",
 									local : ['Windows 95','Windows Me','Windows 98','Windows 98 Second Edition','']
+								});
+								$("#2").typeahead({
+									name:"Update management",
+									local : ['Windows Update','']
+								});
+								$("#3").typeahead({
+									name:"Kernel type",
+									local : ['Monolithic kernel','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

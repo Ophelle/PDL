@@ -29,35 +29,33 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Firefox Sync :</label></br>
-								<input type="radio" name="FeatureFirefox Sync" value="oui">Yes <input type="radio" name="FeatureFirefox Sync" value = "non">No <input type="radio" name="FeatureFirefox Sync" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Opera Link :</label></br>
-								<input type="radio" name="FeatureOpera Link" value="oui">Yes <input type="radio" name="FeatureOpera Link" value = "non">No <input type="radio" name="FeatureOpera Link" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>BookmarkSync :</label></br>
+								<input type="radio" name="FeatureBookmarkSync" value="oui">Yes <input type="radio" name="FeatureBookmarkSync" value = "non">No <input type="radio" name="FeatureBookmarkSync" value = "non">Partial </br>
+								
 								</br>	
 								<label>Xmarks :</label></br>
 								<input type="radio" name="FeatureXmarks" value="oui">Yes <input type="radio" name="FeatureXmarks" value = "non">No <input type="radio" name="FeatureXmarks" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>BookmarkSync :</label></br>
-								<input type="radio" name="FeatureBookmarkSync" value="oui">Yes <input type="radio" name="FeatureBookmarkSync" value = "non">No <input type="radio" name="FeatureBookmarkSync" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Client : </label></br> <input id="5" type="text" name="Feature"></br>
 								
 								</br>	
-								<label>PC operating system : </label></br> <input id="6" type="text" name="Feature"></br>
+								<label>PC operating system : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Firefox Sync :</label></br>
+								<input type="radio" name="FeatureFirefox Sync" value="oui">Yes <input type="radio" name="FeatureFirefox Sync" value = "non">No <input type="radio" name="FeatureFirefox Sync" value = "non">Partial </br>
 								
+								</br>	
+								<label>Opera Link :</label></br>
+								<input type="radio" name="FeatureOpera Link" value="oui">Yes <input type="radio" name="FeatureOpera Link" value = "non">No <input type="radio" name="FeatureOpera Link" value = "non">Partial </br>
+								
+								</br>	
+								<label>Client : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Symbian','Linux','other','Windows','Windows Phone','Android','iOS','FreeBSD','OS X','BlackBerry OS','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"PC operating system",
 									local : ['Mobile operating system','PC operating system','','']
+								});
+								$("#1").typeahead({
+									name:"Client",
+									local : ['Symbian','Linux','other','Windows','Windows Phone','Android','iOS','FreeBSD','OS X','BlackBerry OS','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

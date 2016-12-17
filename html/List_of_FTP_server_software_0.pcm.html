@@ -29,6 +29,26 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Platform :</label></br>
+											<input type="checkbox" name="Feature" >Windows 9X</br>	
+											<input type="checkbox" name="Feature" >2000</br>	
+											<input type="checkbox" name="Feature" >XP</br>	
+											<input type="checkbox" name="Feature" >2003</br>	
+											<input type="checkbox" name="Feature" >Windows only: XP or later</br>	
+											<input type="checkbox" name="Feature" >Mac OS X</br>	
+											<input type="checkbox" name="Feature" >Windows (all)</br>	
+											<input type="checkbox" name="Feature" >Linux (all)</br>	
+											<input type="checkbox" name="Feature" >*BSD</br>	
+											<input type="checkbox" name="Feature" >Solaris</br>	
+											<input type="checkbox" name="Feature" >IBM.</br>	
+											<input type="checkbox" name="Feature" >Windows</br>	
+											<input type="checkbox" name="Feature" >Linux</br>	
+											<input type="checkbox" name="Feature" >etc.</br>	
+											<input type="checkbox" name="Feature" >Windows Vista</br>	
+											<input type="checkbox" name="Feature" >7</br>	
+											<input type="checkbox" name="Feature" >8 and 8.1</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
 								<label>License :</label></br>
 											<input type="checkbox" name="Feature" >proprietary</br>	
 											<input type="checkbox" name="Feature" >trialware</br>	
@@ -37,7 +57,9 @@
 											<input type="checkbox" name="Feature" >free software</br>	
 											<input type="checkbox" name="Feature" >but freeware for any use</br>	
 											<input type="checkbox" name="Feature" >Free Personal Edition</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Name : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Details :</label></br>
 											<input type="checkbox" name="Feature" >Secure FTP Server that also supports Secure Shell Access and Web browser based secure file transfer. Protocols supported include FTP</br>	
@@ -120,20 +142,10 @@
 											<input type="checkbox" name="Feature" >which offers it with three different prices: an FTP server</br>	
 											<input type="checkbox" name="Feature" >an SFTP server</br>	
 											<input type="checkbox" name="Feature" >and the full Corporate version with encrypting and SCP2.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Platform : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Name : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Windows 9X/2000/XP/2003','Windows only: XP or later','Mac OS X, Windows (all), Linux (all), *BSD, Solaris, IBM.','Mac OS X, Windows, Linux, *BSD, Solaris, etc.','Windows only','Windows (All Editions)','Windows Vista, 7, 8 and 8.1','Linux based','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Name",
 									local : ['War FTP Daemon','WS FTP Server','FileZilla Server','LogicalDOC','ALFTP','Sysax Multi Server','Complete FTP Server','NASLite','Cerberus FTP Server','CrushFTP Server','Microsoft Internet Information Services','']
 								});
 						</script>

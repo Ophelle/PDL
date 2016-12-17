@@ -29,30 +29,29 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Frequency : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Focus : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Notes :</label></br>
 											<input type="checkbox" name="Feature" >The money that users spend goes into a "perk bank" and can be redeemed for creator-determined perks. Free subscriptions are available.</br>	
 											<input type="checkbox" name="Feature" >Subscribing to a project allows to view and post on its content stream. Patreon allows to set a monthly maximum to avoid going over a set budget.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
-								<label>Name : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Focus :</label></br>
+											<input type="checkbox" name="Feature" >Musicians</br>	
+											<input type="checkbox" name="Feature" >Podcasts</br>	
+											<input type="checkbox" name="Feature" >Vloggers</br>	
+											<input type="checkbox" name="Feature" >Youtubers</br>	
+											<input type="checkbox" name="Feature" >Webcomics</br>	
+							
+								</br>	
+								<label>Frequency : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Name : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Musicians, Podcasts, Vloggers, Youtubers, Webcomics','Web series (both entertainment- and education-oriented)','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Frequency",
 									local : ['Every time new content is released','Monthly or one-time donations','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Name",
 									local : ['Subbable','Patreon','']
 								});
 						</script>

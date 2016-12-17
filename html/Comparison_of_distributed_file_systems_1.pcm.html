@@ -29,26 +29,23 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Access API : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Name : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Run by : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Run by : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Name : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Access API : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['HTTP (REST/SOAP)','HTTP (REST)','']
+								$("#0").typeahead({
+									name:"Name",
+									local : ['Google Cloud Storage','Microsoft Azure','Amazon S3','SWIFT (part of OpenStack)','Cleversafe','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Run by",
 									local : ['Microsoft','Cleversafe','Google','Amazon.com','Rackspace, Hewlett-Packard, others','']
 								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['Google Cloud Storage','Microsoft Azure','Amazon S3','SWIFT (part of OpenStack)','Cleversafe','']
+								$("#2").typeahead({
+									name:"Access API",
+									local : ['HTTP (REST/SOAP)','HTTP (REST)','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

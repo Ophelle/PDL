@@ -29,44 +29,39 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Safe driving mode : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Maps and Navigation :</label></br>
 											<input type="checkbox" name="Feature" >Maps and Navigation</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
-								<label>Alternative routes in maps : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Safe driving mode : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Turn-by-turn navigation : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Offline maps : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Feature : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Turn-by-turn navigation : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Offline maps : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Feature : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Alternative routes in maps : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Safe driving mode",
 									local : ['3rd party software','8 GDR3+','?','No','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Yes','?','3rd party software','5+','']
+								$("#1").typeahead({
+									name:"Offline maps",
+									local : ['3rd party software','?','8+','Limited Google Maps','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#2").typeahead({
+									name:"Turn-by-turn navigation",
 									local : ['?','8+','6+','Yes','2+','10+','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#3").typeahead({
+									name:"Feature",
 									local : ['iOS','Windows Phone','Firefox OS','Android','Mer','Tizen','Sailfish OS','BlackBerry 10','Ubuntu Touch','']
 								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['3rd party software','?','8+','Limited Google Maps','']
+								$("#4").typeahead({
+									name:"Alternative routes in maps",
+									local : ['Yes','?','3rd party software','5+','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

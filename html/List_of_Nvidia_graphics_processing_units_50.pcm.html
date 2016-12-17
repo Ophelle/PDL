@@ -29,101 +29,81 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
+								<label>Processing PowerGFLOPS - Double Precision : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Processing PowerGFLOPS - Single Precision : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Fillrate - Texture (GT/s) : </label></br> <input id="2" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>TDP (watts) : </label></br> <input id="3" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Memory clock (MHz) : </label></br> <input id="4" type="text" name="Feature"></br>
+								<label>Core clock (MHz) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Memory - Bus width (bit) : </label></br> <input id="5" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Core clock (MHz) : </label></br> <input id="6" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Core config : </label></br> <input id="7" type="text" name="Feature"></br>
+								<label>Fab (nm) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Memory (MB) : </label></br> <input id="8" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>API support (version) - DirectX : </label></br> <input id="9" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Code name : </label></br> <input id="10" type="text" name="Feature"></br>
+								<label>API support (version) - OpenGL : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Processing Power
-GFLOPS - Single Precision : </label></br> <input id="11" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>API support (version) - OpenGL : </label></br> <input id="12" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Shader clock (MHz) : </label></br> <input id="13" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Model : </label></br> <input id="14" type="text" name="Feature"></br>
+								<label>API support (version) - DirectX : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Memory - Bus type : </label></br> <input id="15" type="text" name="Feature"></br>
+								<label>Fillrate - Texture (GT/s) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Processing Power
-GFLOPS - Double Precision : </label></br> <input id="16" type="text" name="Feature"></br>
+								<label>Fillrate - Pixel (GP/s) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Fab (nm) : </label></br> <input id="17" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="18" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Fillrate - Pixel (GP/s) : </label></br> <input id="19" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Notes : </label></br> <input id="20" type="text" name="Feature"></br>
+								<label>Shader clock (MHz) : </label></br> <input type="number" name="Feature"></br>
 								
+								</br>	
+								<label>TDP (watts) : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Code name : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Memory - Bus width (bit) : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Memory - Bus type : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Notes : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Model : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Core config : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Bus interface : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory (MB) : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Memory clock (MHz) : </label></br> <input id="7" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['PCIe 2.0 x16','PCIe 3.0 x16','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['','1250
-(5000)','1800','900
-(1800)','1350
-(5400)','1500
-(6000)','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['384:24:16
-(3 SMM)','640:40:16
-(5 SMM)','192:16:16
-(1 SMX)','1344:112:32
-(7 SMX)','2304:192:32
-(12 SMX)','512:32:16
-(4 SMM)','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#0").typeahead({
+									name:"Code name",
 									local : ['GM107','GK104','GK110B','GK107','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#1").typeahead({
+									name:"Notes",
+									local : ['7.97" Card','','9.5" Card','6.3" Card','10.5" Card','']
+								});
+								$("#2").typeahead({
+									name:"Model",
 									local : ['Quadro K620','Quadro K4200','Quadro K420','Quadro K2200','Quadro K5200','Quadro K1200','']
 								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['7.97" Card','','9.5" Card','6.3" Card','10.5" Card','']
+								$("#3").typeahead({
+									name:"Core config",
+									local : ['384:24:16(3 SMM)','640:40:16(5 SMM)','192:16:16(1 SMX)','1344:112:32(7 SMX)','2304:192:32(12 SMX)','512:32:16(4 SMM)','']
+								});
+								$("#4").typeahead({
+									name:"Bus interface",
+									local : ['PCIe 2.0 x16','PCIe 3.0 x16','']
+								});
+								$("#5").typeahead({
+									name:"Memory clock (MHz)",
+									local : ['','1250(5000)','1800','900(1800)','1350(5400)','1500(6000)','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

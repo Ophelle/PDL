@@ -29,6 +29,8 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Spanish : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Origin :</label></br>
 											<input type="checkbox" name="Feature" >Latin oblÄ«tare</br>	
 											<input type="checkbox" name="Feature" >
@@ -47,16 +49,11 @@
 											<input type="checkbox" name="Feature" >Latin ventvs</br>	
 											<input type="checkbox" name="Feature" >
  iÄ?nvellaÂ (iÄ?nva+ella)</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Spanish : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Meaning : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Portuguese : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Meaning : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Portuguese : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Notes :</label></br>
 											<input type="checkbox" name="Feature" >Latin ventvs means 'wind'</br>	
@@ -73,19 +70,19 @@
 											<input type="checkbox" name="Feature" >compare Spanish borroso 'blurry'); and Spanish apagar means 'to turn off' (a meaning that also exists in Portuguese</br>	
 											<input type="checkbox" name="Feature" >in expressions such as apagar a luz 'turn the light off').</br>	
 											<input type="checkbox" name="Feature" >RÃ³tula ('kneecap' in both Spanish and Portuguese) is etymologically related to Spanish rodilla ('little wheel').  The Spanish idiom de hinojos 'kneeling' has the same etymology as Portuguese joelho.</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['rua','loja','joelho','janela','apagar','esquecer','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Spanish",
 									local : ['borrar','rodilla','ventana','olvidar','tienda','calle','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Meaning",
 									local : [''knee'',''store, shop'',''window'',''to forget'',''street'',''to erase'','']
+								});
+								$("#2").typeahead({
+									name:"Portuguese",
+									local : ['rua','loja','joelho','janela','apagar','esquecer','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

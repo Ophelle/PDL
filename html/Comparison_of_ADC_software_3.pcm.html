@@ -29,8 +29,22 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Hash algorithms : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Plugin : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>ADC support :</label></br>
+											<input type="checkbox" name="Feature" >TIGR</br>	
+											<input type="checkbox" name="Feature" >PING</br>	
+											<input type="checkbox" name="Feature" >ADCS</br>	
+											<input type="checkbox" name="Feature" >KEYP</br>	
+											<input type="checkbox" name="Feature" >ASCH</br>	
+											<input type="checkbox" name="Feature" >SUDP</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>ADC hub : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Encryption :</label></br>
+								<input type="radio" name="FeatureEncryption" value="oui">Yes <input type="radio" name="FeatureEncryption" value = "non">No <input type="radio" name="FeatureEncryption" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
 								<label>IPv6 :</label></br>
 								<input type="radio" name="FeatureIPv6" value="oui">Yes <input type="radio" name="FeatureIPv6" value = "non">No <input type="radio" name="FeatureIPv6" value = "non">Partial </br>
@@ -40,43 +54,25 @@
 								<input type="radio" name="FeatureBloom filter" value="oui">Yes <input type="radio" name="FeatureBloom filter" value = "non">No <input type="radio" name="FeatureBloom filter" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>ADC support :</label></br>
-											<input type="checkbox" name="Feature" >TIGR</br>	
-											<input type="checkbox" name="Feature" >PING</br>	
-											<input type="checkbox" name="Feature" >ADCS</br>	
-											<input type="checkbox" name="Feature" >KEYP</br>	
-											<input type="checkbox" name="Feature" >ASCH</br>	
-											<input type="checkbox" name="Feature" >SUDP</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								<label>Other : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>ADC hub : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Encryption :</label></br>
-								<input type="radio" name="FeatureEncryption" value="oui">Yes <input type="radio" name="FeatureEncryption" value = "non">No <input type="radio" name="FeatureEncryption" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Plugin : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Other : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Hash algorithms : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Tiger tree hash','Hash algorithms','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Nexthub','Qhub','uhub','RusHub','DSHub','ADCH++','Starlet ADC Hub','Starhub','ADCH++ GUI','Luadch','ADC hub','FLexHub','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"Plugin",
 									local : ['Java, Python','No','Plugin','C#','?','Lua','C','Lua, Python, Ruby','Python','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"ADC hub",
+									local : ['Nexthub','Qhub','uhub','RusHub','DSHub','ADCH++','Starlet ADC Hub','Starhub','ADCH++ GUI','Luadch','ADC hub','FLexHub','']
+								});
+								$("#2").typeahead({
+									name:"Other",
 									local : ['','Other','']
+								});
+								$("#3").typeahead({
+									name:"Hash algorithms",
+									local : ['Tiger tree hash','Hash algorithms','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

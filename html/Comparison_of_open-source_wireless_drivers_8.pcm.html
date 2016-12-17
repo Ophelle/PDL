@@ -29,35 +29,27 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
+								<label>WEP :</label></br>
+								<input type="radio" name="FeatureWEP" value="oui">Yes <input type="radio" name="FeatureWEP" value = "non">No <input type="radio" name="FeatureWEP" value = "non">Partial </br>
 								
 								</br>	
 								<label>WPA2 :</label></br>
 								<input type="radio" name="FeatureWPA2" value="oui">Yes <input type="radio" name="FeatureWPA2" value = "non">No <input type="radio" name="FeatureWPA2" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>WEP :</label></br>
-								<input type="radio" name="FeatureWEP" value="oui">Yes <input type="radio" name="FeatureWEP" value = "non">No <input type="radio" name="FeatureWEP" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Master mode :</label></br>
-								<input type="radio" name="FeatureMaster mode" value="oui">Yes <input type="radio" name="FeatureMaster mode" value = "non">No <input type="radio" name="FeatureMaster mode" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Ad-Hoc mode :</label></br>
-								<input type="radio" name="FeatureAd-Hoc mode" value="oui">Yes <input type="radio" name="FeatureAd-Hoc mode" value = "non">No <input type="radio" name="FeatureAd-Hoc mode" value = "non">Partial </br>
-											<input type="text"/></br>								
+								
 								</br>	
 								<label>WPA :</label></br>
 								<input type="radio" name="FeatureWPA" value="oui">Yes <input type="radio" name="FeatureWPA" value = "non">No <input type="radio" name="FeatureWPA" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Driver : </label></br> <input id="7" type="text" name="Feature"></br>
 								
 								</br>	
-								<label>Monitor mode :</label></br>
-								<input type="radio" name="FeatureMonitor mode" value="oui">Yes <input type="radio" name="FeatureMonitor mode" value = "non">No <input type="radio" name="FeatureMonitor mode" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Master mode :</label></br>
+								<input type="radio" name="FeatureMaster mode" value="oui">Yes <input type="radio" name="FeatureMaster mode" value = "non">No <input type="radio" name="FeatureMaster mode" value = "non">Partial </br>
+								
+								</br>	
+								<label>Bus interface : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Ad-Hoc mode :</label></br>
+								<input type="radio" name="FeatureAd-Hoc mode" value="oui">Yes <input type="radio" name="FeatureAd-Hoc mode" value = "non">No <input type="radio" name="FeatureAd-Hoc mode" value = "non">Partial </br>
+								
 								</br>	
 								<label>802.11 :</label></br>
 											<input type="checkbox" name="Feature" >802.11a</br>	
@@ -65,14 +57,20 @@
 											<input type="checkbox" name="Feature" >802.11g</br>	
 											<input type="checkbox" name="Feature" >802.11n</br>	
 											<input type="checkbox" name="Feature" >802.11a?</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
+								</br>	
+								<label>Driver : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Monitor mode :</label></br>
+								<input type="radio" name="FeatureMonitor mode" value="oui">Yes <input type="radio" name="FeatureMonitor mode" value = "non">No <input type="radio" name="FeatureMonitor mode" value = "non">Partial </br>
+								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Bus interface",
 									local : ['Cardbus, PCI, Mini PCI','Cardbus, PCI','PCI','PC Card','USB','Cardbus, PCI, ISA','Mini PCI','PC Card, Cardbus, PCI','Cardbus','ISA','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Driver",
 									local : ['upgt','an','ural','ray','wpi','awi','uath','malo','run','iwi','acx','wi','bwi','arl','mwl','cnw','rum','ral','ath','iwn','urtw','zyd','ipw','']
 								});
 						</script>

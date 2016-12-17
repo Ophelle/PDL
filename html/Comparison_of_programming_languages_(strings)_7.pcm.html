@@ -29,26 +29,23 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Syntax : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Language(s) : </label></br> <input id="1" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Syntax : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Variant name : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Variant name : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Syntax",
+									local : ['','(indented with whitespace)','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Language(s)",
 									local : ['Fortran 66','Python','YAML','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Variant name",
 									local : ['Triple quoting','Hollerith notation','Indented with whitespace and newlines','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['','(indented with whitespace)','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

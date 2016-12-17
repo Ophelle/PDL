@@ -29,41 +29,39 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Specifiable base index :</label></br>
-								<input type="radio" name="FeatureSpecifiable base index" value="oui">Yes <input type="radio" name="FeatureSpecifiable base index" value = "non">No <input type="radio" name="FeatureSpecifiable base index" value = "non">Partial </br>
+								<label>Vectorized operations :</label></br>
+								<input type="radio" name="FeatureVectorized operations" value="oui">Yes <input type="radio" name="FeatureVectorized operations" value = "non">No <input type="radio" name="FeatureVectorized operations" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Dynamically-sized :</label></br>
-								<input type="radio" name="FeatureDynamically-sized" value="oui">Yes <input type="radio" name="FeatureDynamically-sized" value = "non">No <input type="radio" name="FeatureDynamically-sized" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Bound check : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Multidimensional :</label></br>
 								<input type="radio" name="FeatureMultidimensional" value="oui">Yes <input type="radio" name="FeatureMultidimensional" value = "non">No <input type="radio" name="FeatureMultidimensional" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Bound check : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Specifiable base index :</label></br>
+								<input type="radio" name="FeatureSpecifiable base index" value="oui">Yes <input type="radio" name="FeatureSpecifiable base index" value = "non">No <input type="radio" name="FeatureSpecifiable base index" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
-								<label>Programming language : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Programming language : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Default base index : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Dynamically-sized :</label></br>
+								<input type="radio" name="FeatureDynamically-sized" value="oui">Yes <input type="radio" name="FeatureDynamically-sized" value = "non">No <input type="radio" name="FeatureDynamically-sized" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
 								<label>Specifiable index type :</label></br>
 								<input type="radio" name="FeatureSpecifiable index type" value="oui">Yes <input type="radio" name="FeatureSpecifiable index type" value = "non">No <input type="radio" name="FeatureSpecifiable index type" value = "non">Partial </br>
 											<input type="text"/></br>								
-								</br>	
-								<label>Vectorized operations :</label></br>
-								<input type="radio" name="FeatureVectorized operations" value="oui">Yes <input type="radio" name="FeatureVectorized operations" value = "non">No <input type="radio" name="FeatureVectorized operations" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Default base index : </label></br> <input id="8" type="number" name="Feature"></br>
-												<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Bound check",
 									local : ['checked','checked by default','unchecked','varies','?','Bound check','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Programming language",
 									local : ['Scala','PL/I','Smalltalk','Visual Basic .NET','ALGOL 68','FoxPro','Cobra','Oberon-2','Ch','Pascal, Object Pascal','APL','IDL','Programming language','RPG','XPath','C#','Fortran','Java','MATLAB','COBOL','Lua','BASIC','Perl','Common Lisp','C++','Python','Xojo','D','Haskell','FreeBASIC','PHP','Scheme','Visual Basic','CFML','Julia','Oberon','Windows PowerShell','Swift','Ada','C','ISLISP','J','Perl 6','Ruby','S-Lang','JavaScript','Go','Mathematica','OCaml','Objective-C','F#','']
 								});
 						</script>

@@ -29,22 +29,20 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>DVD equivalent : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Speed : </label></br> <input id="1" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>MB/s : </label></br> <input id="2" type="number" name="Feature"></br>
+								<label>MB/s : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
-								</br>	
-								<label>DVD equivalent : </label></br> <input id="3" type="text" name="Feature"></br>
-								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['2x','4x','1x','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"DVD equivalent",
 									local : ['14x','7x','3x','']
+								});
+								$("#1").typeahead({
+									name:"Speed",
+									local : ['2x','4x','1x','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

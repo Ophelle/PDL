@@ -29,38 +29,36 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>CMYK :</label></br>
-								<input type="radio" name="FeatureCMYK" value="oui">Yes <input type="radio" name="FeatureCMYK" value = "non">No <input type="radio" name="FeatureCMYK" value = "non">Partial </br>
+								<label>Adobe RGB :</label></br>
+								<input type="radio" name="FeatureAdobe RGB" value="oui">Yes <input type="radio" name="FeatureAdobe RGB" value = "non">No <input type="radio" name="FeatureAdobe RGB" value = "non">Partial </br>
 											<input type="text"/></br>								
-								</br>	
-								<label>HSV : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>LAB : </label></br> <input id="3" type="text" name="Feature"></br>
-								
 								</br>	
 								<label>Indexed :</label></br>
 								<input type="radio" name="FeatureIndexed" value="oui">Yes <input type="radio" name="FeatureIndexed" value = "non">No <input type="radio" name="FeatureIndexed" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>HSV : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>sRGB :</label></br>
+								<input type="radio" name="FeaturesRGB" value="oui">Yes <input type="radio" name="FeaturesRGB" value = "non">No <input type="radio" name="FeaturesRGB" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>CMYK :</label></br>
+								<input type="radio" name="FeatureCMYK" value="oui">Yes <input type="radio" name="FeatureCMYK" value = "non">No <input type="radio" name="FeatureCMYK" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
 								<label>Grayscale :</label></br>
 								<input type="radio" name="FeatureGrayscale" value="oui">Yes <input type="radio" name="FeatureGrayscale" value = "non">No <input type="radio" name="FeatureGrayscale" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Adobe RGB :</label></br>
-								<input type="radio" name="FeatureAdobe RGB" value="oui">Yes <input type="radio" name="FeatureAdobe RGB" value = "non">No <input type="radio" name="FeatureAdobe RGB" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>sRGB :</label></br>
-								<input type="radio" name="FeaturesRGB" value="oui">Yes <input type="radio" name="FeaturesRGB" value = "non">No <input type="radio" name="FeaturesRGB" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>LAB : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"HSV",
 									local : ['','No','Partial','Yes','?','HSV','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"LAB",
 									local : ['No','Yes','','?','Curve editing only','Partial','LAB','']
 								});
 						</script>

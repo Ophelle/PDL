@@ -29,8 +29,15 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Office suite : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Developer : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Office suite : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>ISO/IEC 26300:2006 :</label></br>
+								<input type="radio" name="FeatureISO/IEC 26300:2006" value="oui">Yes <input type="radio" name="FeatureISO/IEC 26300:2006" value = "non">No <input type="radio" name="FeatureISO/IEC 26300:2006" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
 								<label>Operating systems :</label></br>
 											<input type="checkbox" name="Feature" >Client: any browser (open source or proprietary HTTP clients are compatible with GPLv3 web service interface). Server: Many.</br>	
@@ -39,42 +46,30 @@
 											<input type="checkbox" name="Feature" >Unix-based systems</br>	
 											<input type="checkbox" name="Feature" >Mac OS X</br>	
 											<input type="checkbox" name="Feature" >Desktop: Any (Web-based) Server: Linux</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>Version : </label></br> <input id="3" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Developer : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>ISO/IEC 26300:2006 :</label></br>
-								<input type="radio" name="FeatureISO/IEC 26300:2006" value="oui">Yes <input type="radio" name="FeatureISO/IEC 26300:2006" value = "non">No <input type="radio" name="FeatureISO/IEC 26300:2006" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Notes : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Notes : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Many','N/A','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['2.1.1','2.1','4.0b1','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['Proprietary','GPLv3','LGPL','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#0").typeahead({
+									name:"Developer",
 									local : ['Art of Solving','3BView','Matthew Holloway','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#1").typeahead({
+									name:"License",
+									local : ['Proprietary','GPLv3','LGPL','']
+								});
+								$("#2").typeahead({
+									name:"Office suite",
+									local : ['Many','N/A','']
+								});
+								$("#3").typeahead({
+									name:"Version",
+									local : ['2.1.1','2.1','4.0b1','']
+								});
+								$("#4").typeahead({
+									name:"Notes",
 									local : ['','Server based','']
 								});
 						</script>

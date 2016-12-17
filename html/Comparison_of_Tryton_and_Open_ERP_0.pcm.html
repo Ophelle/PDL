@@ -29,42 +29,37 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Software License : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Software License : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Project type : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Editor : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Professional Service Providers (November 2014) : </label></br> <input id="3" type="number" name="Feature"></br>
+								<label>Professional Service Providers (November 2014) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Editor : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Project type : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Subject : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Subject : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Partnership Eligibility : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Partnership Eligibility : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Software License",
 									local : ['GNU General Public License','GNU Affero General Public License (AGPLv3) Future: GNU Lesser General Public License with Contributor License Agreement','']
 								});
+								$("#1").typeahead({
+									name:"Editor",
+									local : ['Community','Odoo SA','']
+								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Project type",
 									local : ['Commercial Open Core','Free Software created by community','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['Community','Odoo SA','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+									name:"Subject",
 									local : ['Tryton','Odoo','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#4").typeahead({
+									name:"Partnership Eligibility",
 									local : ['Partner contract','Merit and contributions','']
 								});
 						</script>

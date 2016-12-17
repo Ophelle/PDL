@@ -29,11 +29,14 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>UTF-16 base64 : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>UTF-8 base64 : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>GB 18030 base64 : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>GB 18030 q.-p. :</label></br>
+											<input type="checkbox" name="Feature" >4–6 for characters inherited from GB2312</br>	
+											<input type="checkbox" name="Feature" >GBK (e.g.
+most Chinese characters) 8 for everything else.</br>	
+											<input type="checkbox" name="Feature" >1 or 3 depending on directness</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>UTF-7 :</label></br>
 											<input type="checkbox" name="Feature" >1 for "direct characters" (depends on the encoder setting for some code points)</br>	
@@ -44,53 +47,35 @@
 											<input type="checkbox" name="Feature" >5 for an isolated case inside a run of single byte characters. For runs 2  per character plus padding to make it a whole number of bytes plus two to start and finish the run</br>	
 											<input type="checkbox" name="Feature" >as above</br>	
 											<input type="checkbox" name="Feature" >depending on directness</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Code range (hexadecimal) : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>GB 18030 base64 : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>GB 18030 q.-p. :</label></br>
-											<input type="checkbox" name="Feature" >4–6 for characters inherited from GB2312</br>	
-											<input type="checkbox" name="Feature" >GBK (e.g.
-most Chinese characters) 8 for everything else.</br>	
-											<input type="checkbox" name="Feature" >1 or 3 depending on directness</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>UTF-8 base64 : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>UTF-8 quoted-
-printable : </label></br> <input id="7" type="number" name="Feature"></br>
+								<label>UTF-16 q.-p. : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>UTF-16 q.-p. : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Code range (hexadecimal) : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>UTF-8 quoted-printable : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>UTF-16 base64 : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['5 ','2 ','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['1 ','2  for characters inherited from GB2312/GBK (e.g.
-most Chinese characters) 5  for everything else.','5 ','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['010000 – 10FFFF','000800 – 00FFFF','00003D (equals sign)','000080 – 0007FF','ASCII
-control character:
-000000 – 00001F
-and 00007F','ASCII
-graphic character
-(except U+003D “=�?)','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#0").typeahead({
+									name:"UTF-8 base64",
 									local : ['4','1 ','2 ','5 ','']
 								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['6','2–6 depending on if the byte values need to be escaped','4','8–12 depending on if the low bytes of the surrogates need to be escaped.','']
+								$("#1").typeahead({
+									name:"GB 18030 base64",
+									local : ['1 ','2  for characters inherited from GB2312/GBK (e.g.most Chinese characters) 5  for everything else.','5 ','']
+								});
+								$("#2").typeahead({
+									name:"Code range (hexadecimal)",
+									local : ['010000 – 10FFFF','000800 – 00FFFF','00003D (equals sign)','000080 – 0007FF','ASCIIcontrol character:000000 – 00001Fand 00007F','ASCIIgraphic character(except U+003D “=�?)','']
+								});
+								$("#3").typeahead({
+									name:"UTF-16 base64",
+									local : ['5 ','2 ','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

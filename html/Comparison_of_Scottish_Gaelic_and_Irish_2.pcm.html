@@ -29,11 +29,11 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>English : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Scottish Gaelic : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Scottish Gaelic : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Irish : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>English : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Notes :</label></br>
 											<input type="checkbox" name="Feature" >A number of words are used in both languages for "ocean" and "sea"</br>	
@@ -43,22 +43,19 @@
 											<input type="checkbox" name="Feature" >Breatain (Britain) is the same in both</br>	
 											<input type="checkbox" name="Feature" >but "little" Breatain is different in each: Brittany in Scottish and Wales in Irish. The Scottish Gaelic equivalent for Wales is A' Chuimrigh</br>	
 											<input type="checkbox" name="Feature" >a Gaelicisation of an Anglicisation of the Welsh Cymru. The Irish for Brittany is An Bhriotáin from Latin "Britannia".</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Irish : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Brittany','ocean','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Scottish Gaelic",
 									local : ['A' Bhreatain Bheag','cuan','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Irish",
 									local : ['An Bhreatain Bheag','cuan','']
+								});
+								$("#2").typeahead({
+									name:"English",
+									local : ['Brittany','ocean','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

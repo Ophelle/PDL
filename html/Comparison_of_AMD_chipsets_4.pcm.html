@@ -29,46 +29,36 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>WNIC : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Released : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								</br>	
+								<label>Fab (nm) : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 								</br>	
 								<label>NIC :</label></br>
 											<input type="checkbox" name="Feature" >10</br>	
 											<input type="checkbox" name="Feature" >100</br>	
 											<input type="checkbox" name="Feature" >1000</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Package : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Model : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Codename : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>RAID :</label></br>
 											<input type="checkbox" name="Feature" >0</br>	
 											<input type="checkbox" name="Feature" >1</br>	
 											<input type="checkbox" name="Feature" >10</br>	
 											<input type="checkbox" name="Feature" >5</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>Features / Notes : </label></br> <input id="4" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Codename : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>TDP (W) : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Model : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>WNIC : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>USB
-2.0 + 1.1 : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fab (nm) : </label></br> <input id="10" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Package : </label></br> <input id="11" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>TDP (W) : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>Parallel ATA :</label></br>
 											<input type="checkbox" name="Feature" >0</br>	
@@ -77,7 +67,9 @@
 											<input type="checkbox" name="Feature" >10</br>	
 											<input type="checkbox" name="Feature" >1 × ATA</br>	
 											<input type="checkbox" name="Feature" >133</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>USB2.0 + 1.1 : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
 								<label>SATA :</label></br>
 											<input type="checkbox" name="Feature" >6 × 3 Gbit</br>	
@@ -89,43 +81,35 @@ AHCI 1.2 SATA Revision 3.0</br>
 											<input type="checkbox" name="Feature" >s
 AHCI 1.2 SATA Revision 2.0</br>	
 											<input type="checkbox" name="Feature" >4 × 3 Gbit</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
+								$("#0").typeahead({
+									name:"WNIC",
+									local : ['548-pinFC-BGA','605-pinFC-BGA','WNIC','No','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Released",
 									local : ['Q1 2008','Released','May 30, 2011','Q1 2010','2006','','Q4 2008','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['','Features / Notes','']
+									name:"Model",
+									local : ['AMD 700chipset series','AMD 480/570/580/690CrossFire Chipset','AMD 800chipset series','Model','AMD 700 chipset series','AMD 900chipset series','AMD 700Schipset series','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Codename",
 									local : ['SB750','SB950','SB920','SB820M','SB600','SB810','SB850','SB700S','Codename','SB700','SB710','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['','DASH 1.0','TDP (W)','4.0','']
+									name:"Features / Notes",
+									local : ['','Features / Notes','']
 								});
 								$("#5").typeahead({
-									name:"list5",
-									local : ['AMD 700
-chipset series','AMD 480/570/580/690
-CrossFire Chipset','AMD 800
-chipset series','Model','AMD 700 chipset series','AMD 900
-chipset series','AMD 700S
-chipset series','']
+									name:"TDP (W)",
+									local : ['','DASH 1.0','TDP (W)','4.0','']
 								});
 								$("#6").typeahead({
-									name:"list6",
-									local : ['548-pin
-FC-BGA','605-pin
-FC-BGA','WNIC','No','']
-								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['14 + 2','10 + 0','12 + 2','USB
-2.0 + 1.1','']
+									name:"USB2.0 + 1.1",
+									local : ['14 + 2','10 + 0','12 + 2','USB2.0 + 1.1','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

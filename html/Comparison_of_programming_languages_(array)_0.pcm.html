@@ -29,33 +29,29 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Last : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>First : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Languages : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Languages : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>First : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Size : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Size : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Last : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"First",
+									local : ['etc.','','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['','$','etc.','']
+									name:"Languages",
+									local : ['Object Pascal','Haskell','C#, Visual Basic .NET, Windows PowerShell, F#','PHP','Rust','Ada','Perl','Mathematica','J','Fortran','Perl 6','Visual Basic','MATLAB, GNU Octave, Julia','Java, JavaScript, D, Scala','Lua','Haxe','Smalltalk','Objective-C (NSArray * only)','Go','S-Lang','ALGOL 68','OCaml','Python','Xojo','Common Lisp','Ruby','ISLISP','CFML','Ch','Cobra','Scheme','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Size",
 									local : ['','$','etc.','@','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['Object Pascal','Haskell','C#, Visual Basic .NET, Windows PowerShell, F#','PHP','Rust','Ada','Perl','Mathematica','J','Fortran','Perl 6','Visual Basic','MATLAB, GNU Octave, Julia','Java, JavaScript, D, Scala','Lua','Haxe','Smalltalk','Objective-C (NSArray * only)','Go','S-Lang','ALGOL 68','OCaml','Python','Xojo','Common Lisp','Ruby','ISLISP','CFML','Ch','Cobra','Scheme','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['etc.','','']
+									name:"Last",
+									local : ['','$','etc.','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

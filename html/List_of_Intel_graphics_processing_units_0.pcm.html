@@ -29,89 +29,66 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Device id. : </label></br> <input id="1" type="number" name="Feature"></br>
+								<label>Graphics : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Hardware acceleration - AVC : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Hardware acceleration - MPEG-2 : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Hardware acceleration - VC-1 : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Pixel pipelines : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Chipset : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Code name : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Pixel 
-pipelines : </label></br> <input id="3" type="number" name="Feature"></br>
+								<label>Device id. : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>API support - DirectX : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Chipset : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>Hardware acceleration - VC-1 : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Shader model(vertex/pixel) :</label></br>
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Memory bandwidth 
-(GB/s) : </label></br> <input id="6" type="number" name="Feature"></br>
+								<label>Memory bandwidth (GB/s) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Shader model
-(vertex/pixel) :</label></br>
-											<input type="checkbox" name="Feature" >3.0 (SW)</br>	
-											<input type="checkbox" name="Feature" >No</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								<label>API support - OpenCL : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
-								<label>Market : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Launch : </label></br> <input id="9" type="number" name="Feature"></br>
+								<label>API support - OpenGL : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>DVMT 
-(MB) : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+								<label>API support - DirectX : </label></br> <input id="7" type="text" name="Feature"></br>
 								</br>	
-								<label>Graphics : </label></br> <input id="11" type="text" name="Feature"></br>
-								
+								<label>DVMT (MB) : </label></br> <input id="8" type="text" name="Feature"></br>
 								</br>	
-								<label>API support - OpenCL : </label></br> <input id="12" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Code name : </label></br> <input id="13" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>RAMDAC
-clock (MHz) : </label></br> <input id="14" type="number" name="Feature"></br>
+								<label>RAMDACclock (MHz) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>API support - OpenGL : </label></br> <input id="15" type="number" name="Feature"></br>
+								<label>Market : </label></br> <input id="9" type="text" name="Feature"></br>
+								</br>	
+								<label>Launch : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
-								</br>	
-								<label>Hardware acceleration - AVC : </label></br> <input id="16" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Hardware acceleration - MPEG-2 : </label></br> <input id="17" type="text" name="Feature"></br>
-								
 						<script>
+								$("#0").typeahead({
+									name:"Graphics",
+									local : ['752','Intel740','3D graphics with Direct AGP','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['stand-alone','810
-810-DC100
-810E
-810E2','815
-815E
-815G
-815EG','']
+									name:"Code name",
+									local : ['Solano','Whitney','Portola','Auburn','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Desktop','']
+									name:"Chipset",
+									local : ['stand-alone','810810-DC100810E810E2','815815E815G815EG','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"DVMT (MB)",
 									local : ['MC','2–8','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['752','Intel740','3D graphics with Direct AGP','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['Solano','Whitney','Portola','Auburn','']
+									name:"Market",
+									local : ['Desktop','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

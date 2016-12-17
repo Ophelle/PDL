@@ -29,11 +29,37 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>UDMA support :</label></br>
+								<input type="radio" name="FeatureUDMA support" value="oui">Yes <input type="radio" name="FeatureUDMA support" value = "non">No <input type="radio" name="FeatureUDMA support" value = "non">Partial </br>
+								
+								</br>	
+								<label>USB support : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Name : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
 								<label>Update management :</label></br>
 											<input type="checkbox" name="Feature" >Windows Update</br>	
 											<input type="checkbox" name="Feature" >WSUS</br>	
 											<input type="checkbox" name="Feature" >Windows Store</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
+								</br>	
+								<label>Long filename support :</label></br>
+								<input type="radio" name="FeatureLong filename support" value="oui">Yes <input type="radio" name="FeatureLong filename support" value = "non">No <input type="radio" name="FeatureLong filename support" value = "non">Partial </br>
+								
+								</br>	
+								<label>Integrated firewall :</label></br>
+								<input type="radio" name="FeatureIntegrated firewall" value="oui">Yes <input type="radio" name="FeatureIntegrated firewall" value = "non">No <input type="radio" name="FeatureIntegrated firewall" value = "non">Partial </br>
+								
+								</br>	
+								<label>Package management : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Data Execution Prevention :</label></br>
+								<input type="radio" name="FeatureData Execution Prevention" value="oui">Yes <input type="radio" name="FeatureData Execution Prevention" value = "non">No <input type="radio" name="FeatureData Execution Prevention" value = "non">Partial </br>
+								
+								</br>	
+								<label>SMP support :</label></br>
+								<input type="radio" name="FeatureSMP support" value="oui">Yes <input type="radio" name="FeatureSMP support" value = "non">No <input type="radio" name="FeatureSMP support" value = "non">Partial </br>
+								
 								</br>	
 								<label>Architecture :</label></br>
 											<input type="checkbox" name="Feature" >Itanium</br>	
@@ -42,11 +68,7 @@
 											<input type="checkbox" name="Feature" >DEC Alpha</br>	
 											<input type="checkbox" name="Feature" >MIPS</br>	
 											<input type="checkbox" name="Feature" >PowerPC</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Integrated firewall :</label></br>
-								<input type="radio" name="FeatureIntegrated firewall" value="oui">Yes <input type="radio" name="FeatureIntegrated firewall" value = "non">No <input type="radio" name="FeatureIntegrated firewall" value = "non">Partial </br>
-											<input type="text"/></br>								
+							
 								</br>	
 								<label>APIs :</label></br>
 											<input type="checkbox" name="Feature" >Win32</br>	
@@ -56,48 +78,23 @@
 											<input type="checkbox" name="Feature" >.NET</br>	
 											<input type="checkbox" name="Feature" >WinRT</br>	
 											<input type="checkbox" name="Feature" >POSIX (only Enterprise and Ultimate)</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>USB support : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Long filename support :</label></br>
-								<input type="radio" name="FeatureLong filename support" value="oui">Yes <input type="radio" name="FeatureLong filename support" value = "non">No <input type="radio" name="FeatureLong filename support" value = "non">Partial </br>
-											<input type="text"/></br>								
+							
 								</br>	
 								<label>Safe Mode :</label></br>
 								<input type="radio" name="FeatureSafe Mode" value="oui">Yes <input type="radio" name="FeatureSafe Mode" value = "non">No <input type="radio" name="FeatureSafe Mode" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Package management : </label></br> <input id="8" type="text" name="Feature"></br>
 								
-								</br>	
-								<label>Name : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>SMP support :</label></br>
-								<input type="radio" name="FeatureSMP support" value="oui">Yes <input type="radio" name="FeatureSMP support" value = "non">No <input type="radio" name="FeatureSMP support" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>UDMA support :</label></br>
-								<input type="radio" name="FeatureUDMA support" value="oui">Yes <input type="radio" name="FeatureUDMA support" value = "non">No <input type="radio" name="FeatureUDMA support" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Data Execution Prevention :</label></br>
-								<input type="radio" name="FeatureData Execution Prevention" value="oui">Yes <input type="radio" name="FeatureData Execution Prevention" value = "non">No <input type="radio" name="FeatureData Execution Prevention" value = "non">Partial </br>
-											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"USB support",
 									local : ['Yes (if the Ion USB update is installed)','Yes (USB 2.0)','No','Yes (USB 3.0)','Yes (USB 2.0 with update or SP4)','Yes','Yes (USB 2.0 with update or SP1+)','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['N/A','Windows Store, PowerShell','Windows Store','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Name",
 									local : ['Windows Server 2012','Windows NT 3.1','Windows Home Server 2011','Windows NT 3.51','Windows XP','Windows Fundamentals for Legacy PCs','Windows 7','Windows Vista','Windows 8.1','Windows NT 4.0','Windows 8','Windows Server 2012 R2','Windows Home Server','Windows Server 2008 R2','Windows 10','Windows Server 2008','Windows Server 2003','Windows 2000','Windows NT 3.5','']
+								});
+								$("#2").typeahead({
+									name:"Package management",
+									local : ['N/A','Windows Store, PowerShell','Windows Store','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -29,6 +29,8 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>John McCain : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>McCain is a strong proponent of free trade.  He supports the North American Free Trade Agreement (NAFTA), the existing General Agreement on Tariffs and Trade, and U.S. participation in the World Trade Organization (WTO).  He opposes including labor and environmental conditions to trade agreements. :</label></br>
 											<input type="checkbox" name="Feature" >McCain is a strong proponent of free trade.  He supports the North American Free Trade Agreement (NAFTA)</br>	
 											<input type="checkbox" name="Feature" >the existing General Agreement on Tariffs and Trade</br>	
@@ -36,10 +38,7 @@
 											<input type="checkbox" name="Feature" >Obama supports expanding trade only if the United States' trade partners place labor and environmental standards on their industries to "level the playing field" for American interests.  If elected President</br>	
 											<input type="checkbox" name="Feature" >Obama plans to renegotiate NAFTA to include stricter labor and environmental standards for Canada and Mexico. He has criticized the current agreement for not including such standards</br>	
 											<input type="checkbox" name="Feature" >and he also voted against and criticized the Central America Free Trade Agreement (CAFTA) for similar reasons.</br>	
-									
-								</br>	
-								<label>Chuck Baldwin : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>Baldwin would lead the US out of the North American and the Central America Free Trade Agreement. He would impose a revenue tariff. :</label></br>
 											<input type="checkbox" name="Feature" >Barr's campaign site states that America "should encourage private involvement around the world</br>	
@@ -51,18 +50,17 @@
 											<input type="checkbox" name="Feature" >and US-Peru FTA. She opposes the guest-worker program as riddled with abuses; supports justice for immigrant workers</br>	
 											<input type="checkbox" name="Feature" >and immigrant reform that includes amnesty and a path to legalization for undocumented people who have been living and working in the US for years.</br>	
 											<input type="checkbox" name="Feature" >Nader views NAFTA and the WTO as subverting national regulatory agencies. He blames them for diminishing standards of living (i.e. race to the bottom). Nader supports a constitutional amendment asserting the "sovereignty of people over the power of corporations."</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>John McCain : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Chuck Baldwin : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Bob Barr','Cynthia McKinney','Ralph Nader','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"John McCain",
 									local : ['Barack Obama','John McCain','']
+								});
+								$("#1").typeahead({
+									name:"Chuck Baldwin",
+									local : ['Bob Barr','Cynthia McKinney','Ralph Nader','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

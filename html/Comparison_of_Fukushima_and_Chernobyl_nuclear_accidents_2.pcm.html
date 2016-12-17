@@ -29,42 +29,35 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Report-
-date : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Report-date : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Period of
-dispersal : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Place : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Amount (TBq) : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Period ofdispersal : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Place : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Source : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Source : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Amount (TBq) : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Report-date",
 									local : ['12 April 2011','25 April 2011','17 August 2011','6–7 June 2011','April 2011','23 August 2011','7 June 2011','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['630.000','24','840 000','0.07','5 200 000','630 000','770 000','370 000','154','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['12 March - 5 April 2011','3–16 August 2011','24 April 2011','25 April – June 1986','11 – 17 March 2011','11 March – 5 April 2011','4 April 2011','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Place",
 									local : ['Fukushima','Chernobyl','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#2").typeahead({
+									name:"Period ofdispersal",
+									local : ['12 March - 5 April 2011','3–16 August 2011','24 April 2011','25 April – June 1986','11 – 17 March 2011','11 March – 5 April 2011','4 April 2011','']
+								});
+								$("#3").typeahead({
+									name:"Source",
 									local : ['NISA','NISA>','Government','NSC','NISA and published over press.','']
+								});
+								$("#4").typeahead({
+									name:"Amount (TBq)",
+									local : ['630.000','24','840 000','0.07','5 200 000','630 000','770 000','370 000','154','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

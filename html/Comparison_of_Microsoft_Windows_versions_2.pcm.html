@@ -29,12 +29,6 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Based on (kernel) : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Release date : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Editions :</label></br>
 											<input type="checkbox" name="Feature" >Starter Edition</br>	
 											<input type="checkbox" name="Feature" >
@@ -188,13 +182,7 @@ HPC</br>
 HyperV Core</br>	
 											<input type="checkbox" name="Feature" >
 Foundation</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Current version : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>Supported architectures :</label></br>
 											<input type="checkbox" name="Feature" >IA-32</br>	
@@ -204,10 +192,20 @@ Foundation</br>
 											<input type="checkbox" name="Feature" >MIPS</br>	
 											<input type="checkbox" name="Feature" >PowerPC</br>	
 											<input type="checkbox" name="Feature" >ARM architecture (ARMv7)</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>RTM build : </label></br> <input id="7" type="number" name="Feature"></br>
+								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Current version : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Codename, working name : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>RTM build : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
+								</br>	
+								<label>Based on (kernel) : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Release date : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>OS type :</label></br>
 											<input type="checkbox" name="Feature" >Workstation</br>	
@@ -226,60 +224,38 @@ Network Appliance</br>
 											<input type="checkbox" name="Feature" >
 HPC</br>	
 											<input type="checkbox" name="Feature" >Multi-Touch</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Codename, working name : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label>Status support : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>Status support : </label></br> <input id="10" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Name : </label></br> <input id="11" type="text" name="Feature"></br>
-								
+								<label>Name : </label></br> <input id="6" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"License",
+									local : ['Shared source','Closed source,Shared source','Closed source','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['NT 5.2','NT 6.1','NT 5.1; NT 5.2
-(64-bit 2003 and x64)','NT 4.0','NT 6.0','NT 6.3','NT 5.0','NT 3.51','NT 3.5','NT 6.2','NT 3.1','NT 5.1','']
+									name:"Current version",
+									local : ['6.2','6.1','6.0 SP2(2008-02-27)','4.00.1381 SP6a(1999-11-30)','5.0 SP4 Rollup 1 v2(2005-09-13)','5.2.3790 SP2(2007-03-13)','6.3','5.1.2600 SP3(2008-04-21)','3.10.528 SP3(1994-11-10)','3.50.807 SP3(1995-06-21)','RTM(2006-07-08)','6.0 SP2(2009-04-28)','5.2','3.51.1057 SP5(1996-09-19)','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['2009-10-22','2003-04-24','2000-02-17','1994-09-21','1995-05-30','2007-06-16','1993-07-27','2011-04-05','2012-9-4','2012-10-26','2013-10-18','1996-08-24','2006-11-08','2008-02-27','2001-10-25','2006-07-08','']
+									name:"Codename, working name",
+									local : ['Daytona','Memphis NT','Whistler','New Technology OS/2','?','Whistler Server, Windows .NET Server','Longhorn Server','"8" Server','Q, Quattro','"Blue" Server','CairoHydra (Terminal Server)','"7" Server','Eiger, Monch','"8"','Longhorn','Vail','"Blue"','"7", Vienna','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['6.2','6.1','6.0 SP2
-(2008-02-27)','4.00.1381 SP6a
-(1999-11-30)','5.0 SP4 Rollup 1 v2
-(2005-09-13)','5.2.3790 SP2
-(2007-03-13)','6.3','5.1.2600 SP3
-(2008-04-21)','3.10.528 SP3
-(1994-11-10)','3.50.807 SP3
-(1995-06-21)','RTM
-(2006-07-08)','6.0 SP2
-(2009-04-28)','5.2','3.51.1057 SP5
-(1996-09-19)','']
+									name:"Based on (kernel)",
+									local : ['NT 5.2','NT 6.1','NT 5.1; NT 5.2(64-bit 2003 and x64)','NT 4.0','NT 6.0','NT 6.3','NT 5.0','NT 3.51','NT 3.5','NT 6.2','NT 3.1','NT 5.1','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['Shared source','Closed source,
-Shared source','Closed source','']
+									name:"Release date",
+									local : ['2009-10-22','2003-04-24','2000-02-17','1994-09-21','1995-05-30','2007-06-16','1993-07-27','2011-04-05','2012-9-4','2012-10-26','2013-10-18','1996-08-24','2006-11-08','2008-02-27','2001-10-25','2006-07-08','']
 								});
 								$("#5").typeahead({
-									name:"list5",
-									local : ['Daytona','Memphis NT','Whistler','New Technology OS/2','?','Whistler Server, Windows .NET Server','Longhorn Server','"8" Server','Q, Quattro','"Blue" Server','Cairo
-Hydra (Terminal Server)','"7" Server','Eiger, Monch','"8"','Longhorn','Vail','"Blue"','"7", Vienna','']
+									name:"Status support",
+									local : ['Supported','Unsupported(2001-12-31)','Unsupported(2014-04-08)','Supported (Until 2015-07-15)','Unsupported (8 January 2013)','Unsupported(2004-12-31)','Unsupported(2010-07-13)','']
 								});
 								$("#6").typeahead({
-									name:"list6",
-									local : ['Supported','Unsupported
-(2001-12-31)','Unsupported
-(2014-04-08)','Supported (Until 2015-07-15)','Unsupported (8 January 2013)','Unsupported
-(2004-12-31)','Unsupported
-(2010-07-13)','']
-								});
-								$("#7").typeahead({
-									name:"list7",
+									name:"Name",
 									local : ['Windows Home Server','Windows Home Server 2011','Windows Server 2012','Windows XP','Windows NT 3.5','Windows 7','Windows 8.1','Windows NT 3.1','Windows 2000','Windows NT 4.0','Windows Server 2008 R2','Windows NT 3.51','Windows Server 2008','Windows Server 2012 R2','Windows Fundamentals for Legacy PCs','Windows Server 2003','Windows 8','Windows Vista','']
 								});
 						</script>

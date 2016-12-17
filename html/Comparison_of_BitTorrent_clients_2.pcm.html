@@ -29,15 +29,21 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>BitTorrent client : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>GUI :</label></br>
+								<input type="radio" name="FeatureGUI" value="oui">Yes <input type="radio" name="FeatureGUI" value = "non">No <input type="radio" name="FeatureGUI" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Based on : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>CLI :</label></br>
 								<input type="radio" name="FeatureCLI" value="oui">Yes <input type="radio" name="FeatureCLI" value = "non">No <input type="radio" name="FeatureCLI" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Programming language : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Other :</label></br>
+								<input type="radio" name="FeatureOther" value="oui">Yes <input type="radio" name="FeatureOther" value = "non">No <input type="radio" name="FeatureOther" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>BitTorrent client : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Web :</label></br>
 								<input type="radio" name="FeatureWeb" value="oui">Yes <input type="radio" name="FeatureWeb" value = "non">No <input type="radio" name="FeatureWeb" value = "non">Partial </br>
@@ -51,28 +57,19 @@
 								<input type="radio" name="FeatureIPv6" value="oui">Yes <input type="radio" name="FeatureIPv6" value = "non">No <input type="radio" name="FeatureIPv6" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Based on : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>GUI :</label></br>
-								<input type="radio" name="FeatureGUI" value="oui">Yes <input type="radio" name="FeatureGUI" value = "non">No <input type="radio" name="FeatureGUI" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Other :</label></br>
-								<input type="radio" name="FeatureOther" value="oui">Yes <input type="radio" name="FeatureOther" value = "non">No <input type="radio" name="FeatureOther" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Programming language : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Based on",
+									local : ['-','libtorrent (Rasterbar)','?','BitTorrent','LimeWire','Based on','Limewire','Azureus','BitTornado','libTorrent (Rakshasa)','µTorrent','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"BitTorrent client",
 									local : ['BitLord','Tixati','BitTorrent 5, Mainline','LimeWire','ABC','Acquisition','µTorrent','Tomato Torrent','BitTyrant','rTorrent','Transmission','KGet','Shareaza','TorrentFlux','OneSwarm','MLDonkey','Opera 12','Frostwire','KTorrent','Vuze (formerly Azureus)','BitTorrent client','BitTornado','BitComet','FlashGet','SymTorrent','Tribler','Free Download Manager','Deluge','BitTorrent 6','Blog Torrent','Miro','qBittorrent','BitLet','Meerkat Bittorrent Client','Tonido Torrent','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Programming language",
 									local : ['?','Python, C++','C++','Java','Programming language','Java, SWT','Java Applet','Python','Python,C++','OCaml','Objective-C, Cocoa','C++, Python','PHP','C','Cocoa','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['-','libtorrent (Rasterbar)','?','BitTorrent','LimeWire','Based on','Limewire','Azureus','BitTornado','libTorrent (Rakshasa)','µTorrent','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

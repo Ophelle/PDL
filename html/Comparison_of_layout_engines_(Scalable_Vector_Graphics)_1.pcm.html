@@ -29,38 +29,35 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Blink : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>KSVG : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>WebKit :</label></br>
 								<input type="radio" name="FeatureWebKit" value="oui">Yes <input type="radio" name="FeatureWebKit" value = "non">No <input type="radio" name="FeatureWebKit" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 								</br>	
-								<label>Presto : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Presto : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Blink : </label></br> <input id="3" type="number" name="Feature"></br>
-								
+								<label>Gecko : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 								</br>	
-								<label>Trident : </label></br> <input id="4" type="number" name="Feature"></br>
-								
+								<label>Amaya : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>KSVG : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Amaya : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Gecko : </label></br> <input id="7" type="number" name="Feature"></br>
-								
+								<label>Trident : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 						<script>
+								$("#0").typeahead({
+									name:"KSVG",
+									local : ['','No','?','5.2','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Presto",
 									local : ['Partial','?','2.1','No','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['','No','?','5.2','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Amaya",
 									local : ['5.1','','']
 								});
 						</script>

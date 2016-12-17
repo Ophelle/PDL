@@ -29,15 +29,6 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Updated : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Partitioned From : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Network : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Routes Carried :</label></br>
 											<input type="checkbox" name="Feature" >17</br>	
 											<input type="checkbox" name="Feature" >044</br>	
@@ -81,29 +72,35 @@
 											<input type="checkbox" name="Feature" >299</br>	
 											<input type="checkbox" name="Feature" >18</br>	
 											<input type="checkbox" name="Feature" >378</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
+								</br>	
+								<label>Updated : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Network : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Maximum Prefix Length :</label></br>
 											<input type="checkbox" name="Feature" >48</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
-								<label>ASN : </label></br> <input id="6" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Customer Routes : </label></br> <input type="number" name="Feature"></br>
+								
 								</br>	
-								<label>Customer Routes : </label></br> <input id="7" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>ASN : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Partitioned From : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Updated",
 									local : ['2010-12-22','2012-10-03','2013-01-10','2012-07-10','2011-12-31','2014-04-27','2013-07-29','2012-07-31','2012-10-12','2013-07-27','2014-08-25','2011-10-31','2012-12-29','2011-04-21','2013-01-28','2014-05-01','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['','AS6830, AS6939, AS20825, AS29562, AS30071','AS174','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Network",
 									local : ['Cable & Wireless Worldwide','XO Communications','Comcast','TeliaSonera International Carrier','Sprint','nLayer Communications (now Global Telecom & Technology)','Global Crossing','Internet 2','KPN','route-views6','Hurricane Electric','AT&T','IIJ','Tata Communications','Neotelecoms','Inteliquent (formerly Tinet)','Internode','NTT Communications','Cogent Communications','Liberty Global','Telecom Italia Sparkle','PIPE Networks','Init Seven AG','Verizon (USA)','Savvis','Internap','Level 3 Communications','Qwest','']
+								});
+								$("#2").typeahead({
+									name:"Partitioned From",
+									local : ['','AS6830, AS6939, AS20825, AS29562, AS30071','AS174','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

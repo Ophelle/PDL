@@ -29,38 +29,16 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Products : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Type : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Size : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Release : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Depth (mm) : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Dimensions (mm × mm) : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Name : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Type : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Storage : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Manufacturer : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>External : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Depth (mm) : </label></br> <input id="8" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>Firmware : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Dimensions (mm × mm) : </label></br> <input id="10" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Release : </label></br> <input id="11" type="text" name="Feature"></br>
-								
 								</br>	
 								<label>Capacity (GB) :</label></br>
 											<input type="checkbox" name="Feature" >4</br>	
@@ -76,50 +54,62 @@
 											<input type="checkbox" name="Feature" >500</br>	
 											<input type="checkbox" name="Feature" >2</br>	
 											<input type="checkbox" name="Feature" >40</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Weight (g) : </label></br> <input id="13" type="number" name="Feature"></br>
-								
+								<label>Size : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Firmware : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Storage : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Weight (g) : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Manufacturer : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>External : </label></br> <input id="8" type="text" name="Feature"></br>
+								</br>	
+								<label>Products : </label></br> <input id="9" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Type",
+									local : ['PMP','DAP','PMP fack','PMP, HGC','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['P4','P26','P34','P2','P11','P10','P21','P36','P33','P23','P8','P13','P20','P30','P31','P35','P22','P25','P7','P14','P12','P15','P5','P27','P29','P17','P6','P24','P28','P3','P32','P16','P9','P18','P19','P1','']
+									name:"Release",
+									local : ['2007-09-01','2007-09','2007-11-30','2007-11-13','2008-08-19','2007-08-30','2011-10-16','2007-09-07','2007-09-25','2006-11-14','2012-10-09','2006-12-05','2007-08-31','2010-09-08','2007-09-14','2008-07-10','2008-09-16','2008-03-28','2013-07-10','','2008-03-17','2007-10-28','2007-04-24','2007-11-14','2010-09-01','2009-09-15','2007-10-26','2007-07-17','2008-02-07','2007-11-27','2006-08-30','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Mid','Mega','','Micro','Mini','']
+									name:"Dimensions (mm × mm)",
+									local : ['100 × 78','99.6 × 78','83 mm × 55','122 mm × 81','108 mm × 61','104 mm × 53','96 × 41.4','91 mm × 41','170 mm × 74','133.4 × 78.5','123.7 x 64.2 (4.0), 141.3 x 78.2 (5.0)','112 mm × 61','96.5 × 50.7','134 mm × 75','106 mm × 65','127 × 78.8','138.8 × 88.5','144 mm × 83','38 mm × 41','42.1 x 92.1','182 × 128','78.0 × 55.4','123.4 x 58.6','80 mm × 47','100 × 52','104 mm × 61','85 × 45','109 mm × 50','119 mm × 73','78.7 × 48.3','2.13 × 3.38','89 mm × 43','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Name",
 									local : ['Cowon Q5W','Archos 405','Samsung T10','Zune 80','iPod classic 6G','Samsung P2','Zune HD','Archos 605 WiFi/GPS','Walkman NWZ-A820 series','Archos 5','Cowon D2','Archos 105','iPod nano 6G','Zvue 260','Walkman NWZ-E580 series','ZEN','Zune 4/8','Cowon O2PMP','Zune 16','Gigabeat T-Series','Zune 30','Sansa Fuze','Cowon A3','Sansa Fuze+','iPod touch 5G','Samsung Galaxy Player 4.0 & 5.0','Archos 705 WiFi','PSP Slim & Lite','ZEN X-Fi','GP2X F-200','Zune 120','Sansa View','ZEN Vision W','iriver clix 2G','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['PMP','DAP','PMP fack','PMP, HGC','']
+									name:"Size",
+									local : ['Mid','Mega','','Micro','Mini','']
 								});
 								$("#5").typeahead({
-									name:"list5",
-									local : ['Flash','','HDD','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['Toshiba','SanDisk','Microsoft','Archos','Cowon','GamePark Holdings','Apple','Creative','Samsung','Sony','ReignCom','Zvue','']
-								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['','SDHC','microSDHC','SD','Memory Stick','8–32 GB and Micro SD Slot (SDHC compatible)','microSD microSDHC','CF','']
-								});
-								$("#8").typeahead({
-									name:"list8",
+									name:"Firmware",
 									local : ['2.80 I_071012','1.8.03','2.57','3.06','','1.24','4.5','1.6.07','1.21.01','3.3','1.6.53','1.1.2','1.07','01.03.02a','4.0.0','8.1.1','5.10','01.02.28 & 02.03.33','1.02','2.3.5','1.10.01','No release','6.10','02.38.06','1.2','1.5','1.03.01','']
 								});
-								$("#9").typeahead({
-									name:"list9",
-									local : ['100 × 78','99.6 × 78','83 mm × 55','122 mm × 81','108 mm × 61','104 mm × 53','96 × 41.4','91 mm × 41','170 mm × 74','133.4 × 78.5','123.7 x 64.2 (4.0), 141.3 x 78.2 (5.0)','112 mm × 61','96.5 × 50.7','134 mm × 75','106 mm × 65','127 × 78.8','138.8 × 88.5','144 mm × 83','38 mm × 41','42.1 x 92.1','182 × 128','78.0 × 55.4','123.4 x 58.6','80 mm × 47','100 × 52','104 mm × 61','85 × 45','109 mm × 50','119 mm × 73','78.7 × 48.3','2.13 × 3.38','89 mm × 43','']
+								$("#6").typeahead({
+									name:"Storage",
+									local : ['Flash','','HDD','']
 								});
-								$("#10").typeahead({
-									name:"list10",
-									local : ['2007-09-01','2007-09','2007-11-30','2007-11-13','2008-08-19','2007-08-30','2011-10-16','2007-09-07','2007-09-25','2006-11-14','2012-10-09','2006-12-05','2007-08-31','2010-09-08','2007-09-14','2008-07-10','2008-09-16','2008-03-28','2013-07-10','','2008-03-17','2007-10-28','2007-04-24','2007-11-14','2010-09-01','2009-09-15','2007-10-26','2007-07-17','2008-02-07','2007-11-27','2006-08-30','']
+								$("#7").typeahead({
+									name:"Manufacturer",
+									local : ['Toshiba','SanDisk','Microsoft','Archos','Cowon','GamePark Holdings','Apple','Creative','Samsung','Sony','ReignCom','Zvue','']
+								});
+								$("#8").typeahead({
+									name:"External",
+									local : ['','SDHC','microSDHC','SD','Memory Stick','8–32 GB and Micro SD Slot (SDHC compatible)','microSD microSDHC','CF','']
+								});
+								$("#9").typeahead({
+									name:"Products",
+									local : ['P4','P26','P34','P2','P11','P10','P21','P36','P33','P23','P8','P13','P20','P30','P31','P35','P22','P25','P7','P14','P12','P15','P5','P27','P29','P17','P6','P24','P28','P3','P32','P16','P9','P18','P19','P1','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

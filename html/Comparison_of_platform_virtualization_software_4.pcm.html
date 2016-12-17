@@ -29,11 +29,11 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Maximum number of guest VM running : </label></br> <input id="1" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Name : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Maximum number of logical CPU per VM guest : </label></br> <input id="2" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Maximum host disk volume size : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Maximum amount of memory per VM guest : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Maximum number of SCSI + IDE disks per VM guest :</label></br>
 											<input type="checkbox" name="Feature" >4 IDE; 60 SCSI</br>	
@@ -41,19 +41,14 @@
 											<input type="checkbox" name="Feature" >SCSI</br>	
 											<input type="checkbox" name="Feature" >SAS</br>	
 											<input type="checkbox" name="Feature" >4 IDE; 256 SCSI</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Maximum amount of memory per VM guest : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Maximum disk size per VM guest : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Maximum disk size per VM guest : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Maximum host memory : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Maximum host memory : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Maximum host disk volume size : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Maximum number of guest VM running : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 								</br>	
 								<label>Maximum host cores / CPUs :</label></br>
 											<input type="checkbox" name="Feature" >144 cores </br>	
@@ -64,30 +59,30 @@
 											<input type="checkbox" name="Feature" >320 logical CPUs</br>	
 											<input type="checkbox" name="Feature" >64 cores </br>	
 											<input type="checkbox" name="Feature" >8 CPUs</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Name : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label>Maximum number of logical CPU per VM guest : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 						<script>
+								$("#0").typeahead({
+									name:"Name",
+									local : ['Containers, or Zones','Hyper-V Server 2008 R2','VMware vSphere Hypervisor (ESXi 5.5) (free)','VMware Player 4.0','VMware Server 2.0','VMware vSphere Hypervisor (ESXi 5.5)','VMware vSphere Hypervisor (ESXi) 4.1','Hyper-V Server 2012','VMware vSphere ESXi 5.0','VirtualBox 4.1.x','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['8 GB','1 TB','64 GB','No limit','255 GB','8 GB (32-bit); 64 GB (64-bit)','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['950 GB','2 TB minus 512 bytes','2 TB','64 TB','No limit','62 TB','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['4 TB','No limit','1 TB','2 TB','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+									name:"Maximum host disk volume size",
 									local : ['No limit','N/A','64 TB','Depending on filesystem','2 TB minus 512 bytes','']
 								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['Containers, or Zones','Hyper-V Server 2008 R2','VMware vSphere Hypervisor (ESXi 5.5) (free)','VMware Player 4.0','VMware Server 2.0','VMware vSphere Hypervisor (ESXi 5.5)','VMware vSphere Hypervisor (ESXi) 4.1','Hyper-V Server 2012','VMware vSphere ESXi 5.0','VirtualBox 4.1.x','']
+								$("#2").typeahead({
+									name:"Maximum amount of memory per VM guest",
+									local : ['8 GB','1 TB','64 GB','No limit','255 GB','8 GB (32-bit); 64 GB (64-bit)','']
+								});
+								$("#3").typeahead({
+									name:"Maximum disk size per VM guest",
+									local : ['950 GB','2 TB minus 512 bytes','2 TB','64 TB','No limit','62 TB','']
+								});
+								$("#4").typeahead({
+									name:"Maximum host memory",
+									local : ['4 TB','No limit','1 TB','2 TB','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

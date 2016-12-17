@@ -29,54 +29,51 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>SMP support :</label></br>
-								<input type="radio" name="FeatureSMP support" value="oui">Yes <input type="radio" name="FeatureSMP support" value = "non">No <input type="radio" name="FeatureSMP support" value = "non">Partial </br>
-								
+								<label>Name : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Update management :</label></br>
-								<input type="radio" name="FeatureUpdate management" value="oui">Yes <input type="radio" name="FeatureUpdate management" value = "non">No <input type="radio" name="FeatureUpdate management" value = "non">Partial </br>
-								
+								<label>Architecture : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Architecture : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>APIs : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Integrated firewall :</label></br>
 								<input type="radio" name="FeatureIntegrated firewall" value="oui">Yes <input type="radio" name="FeatureIntegrated firewall" value = "non">No <input type="radio" name="FeatureIntegrated firewall" value = "non">Partial </br>
-								
-								</br>	
-								<label>APIs : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+											<input type="text"/></br>								
 								</br>	
 								<label>UDMA support :</label></br>
 								<input type="radio" name="FeatureUDMA support" value="oui">Yes <input type="radio" name="FeatureUDMA support" value = "non">No <input type="radio" name="FeatureUDMA support" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 								</br>	
 								<label>LFN support :</label></br>
 								<input type="radio" name="FeatureLFN support" value="oui">Yes <input type="radio" name="FeatureLFN support" value = "non">No <input type="radio" name="FeatureLFN support" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 								</br>	
 								<label>Safe Mode :</label></br>
 								<input type="radio" name="FeatureSafe Mode" value="oui">Yes <input type="radio" name="FeatureSafe Mode" value = "non">No <input type="radio" name="FeatureSafe Mode" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
+								</br>	
+								<label>SMP support :</label></br>
+								<input type="radio" name="FeatureSMP support" value="oui">Yes <input type="radio" name="FeatureSMP support" value = "non">No <input type="radio" name="FeatureSMP support" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
 								<label>USB support :</label></br>
 								<input type="radio" name="FeatureUSB support" value="oui">Yes <input type="radio" name="FeatureUSB support" value = "non">No <input type="radio" name="FeatureUSB support" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 								</br>	
-								<label>Name : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+								<label>Update management :</label></br>
+								<input type="radio" name="FeatureUpdate management" value="oui">Yes <input type="radio" name="FeatureUpdate management" value = "non">No <input type="radio" name="FeatureUpdate management" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
+								$("#0").typeahead({
+									name:"Name",
+									local : ['Windows 2.0','Windows 3.1x','Windows 3.0','Windows 1.0','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Architecture",
 									local : ['x86 16-bit','x86 16-bit (partial 32-bit compatibility through Win32s)','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"APIs",
 									local : ['Win16','Win16, Win32s','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['Windows 2.0','Windows 3.1x','Windows 3.0','Windows 1.0','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

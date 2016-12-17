@@ -29,32 +29,23 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>  : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Schengen Area : </label></br> <input id="1" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>  : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>National speed limits : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>National speed limits : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:" ",
+									local : ['Finland','Switzerland','Greece','Poland','Turkey','Estonia','Norway','Netherlands','Austria','Czech  Republic','Slovakia','Ukraine','Iceland','United  Kingdom','Russia  &  Belarus','Italy','Belgium','Denmark','Sweden','France','Ireland','Spain','Germany','Hungary','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['','NOT 
- USED','or','']
+									name:"Schengen Area",
+									local : ['','NOT  USED','or','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['','NOT 
- USED','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['Finland','Switzerland','Greece','Poland','Turkey','Estonia','Norway','Netherlands','Austria','Czech 
- Republic','Slovakia','Ukraine','Iceland','United 
- Kingdom','Russia 
- & 
- Belarus','Italy','Belgium','Denmark','Sweden','France','Ireland','Spain','Germany','Hungary','']
+									name:"National speed limits",
+									local : ['','NOT  USED','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

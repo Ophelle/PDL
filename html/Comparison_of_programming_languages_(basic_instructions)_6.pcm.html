@@ -29,26 +29,23 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>type synonym : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>variable : </label></br> <input id="1" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>type synonym : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>constant : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>constant : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"type synonym",
 									local : ['','N/A','']
+								});
+								$("#1").typeahead({
+									name:"variable",
+									local : ['','(in some systems use  instead)','type name','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"constant",
 									local : ['','N/A','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['','(in some systems use  instead)','type name','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

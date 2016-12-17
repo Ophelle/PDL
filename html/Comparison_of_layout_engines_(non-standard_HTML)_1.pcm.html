@@ -29,19 +29,7 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>WebKit : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Presto : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Alternative solution : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>KHTML : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Attribute : </label></br> <input id="5" type="text" name="Feature"></br>
+								<label>Trident : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
 								<label>Element :</label></br>
@@ -72,37 +60,43 @@
 											<input type="checkbox" name="Feature" >body</br>	
 											<input type="checkbox" name="Feature" >tr</br>	
 											<input type="checkbox" name="Feature" >li</br>	
-									
+							
 								</br>	
-								<label>Trident : </label></br> <input id="7" type="number" name="Feature"></br>
-								
+								<label>Gecko : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Gecko : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Attribute : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Presto : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>WebKit : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Alternative solution : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>KHTML : </label></br> <input id="5" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Gecko",
+									local : ['','Yes','No','Partial','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['Yes','','Partial','No','']
+									name:"Attribute",
+									local : ['hspace','vlink','clear','link','height','version','type','size','align','start','border','alink','width','color','vspace','bgcolor','background','text','noshade','nowrap','language','compact','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Presto",
 									local : ['','Yes','No','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['CSS','None','DTD','The type attribute','']
+									name:"WebKit",
+									local : ['Yes','','Partial','No','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['','Yes','No','']
+									name:"Alternative solution",
+									local : ['CSS','None','DTD','The type attribute','']
 								});
 								$("#5").typeahead({
-									name:"list5",
-									local : ['hspace','vlink','clear','link','height','version','type','size','align','start','border','alink','width','color','vspace','bgcolor','background','text','noshade','nowrap','language','compact','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['','Yes','No','Partial','']
+									name:"KHTML",
+									local : ['','Yes','No','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -29,22 +29,20 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Solaris kernel : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Linux :</label></br>
 								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
 								
 								</br>	
-								<label>Kernel name : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Solaris kernel : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Kernel name : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Solaris kernel",
 									local : ['?','Yes','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Kernel name",
 									local : ['zlib','LZO','Deflate','LZJB','gzip','']
 								});
 						</script>

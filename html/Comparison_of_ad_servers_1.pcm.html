@@ -29,12 +29,11 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Ad Servering Platform : </label></br> <input id="1" type="text" name="Feature"></br>
+								<label>Targeting databases :</label></br>
+								<input type="radio" name="FeatureTargeting databases" value="oui">Yes <input type="radio" name="FeatureTargeting databases" value = "non">No <input type="radio" name="FeatureTargeting databases" value = "non">Partial </br>
 								
 								</br>	
-								<label>Mobile ad serving :</label></br>
-								<input type="radio" name="FeatureMobile ad serving" value="oui">Yes <input type="radio" name="FeatureMobile ad serving" value = "non">No <input type="radio" name="FeatureMobile ad serving" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Ad Servering Platform : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Creative types supported :</label></br>
 											<input type="checkbox" name="Feature" >Image</br>	
@@ -81,7 +80,7 @@
 											<input type="checkbox" name="Feature" >Email</br>	
 											<input type="checkbox" name="Feature" >MP3 (plugin)</br>	
 											<input type="checkbox" name="Feature" >TextLogo</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
 								<label>Campaigns optimization :</label></br>
 											<input type="checkbox" name="Feature" >CPM</br>	
@@ -108,11 +107,15 @@
 											<input type="checkbox" name="Feature" >Rev</br>	
 											<input type="checkbox" name="Feature" >CPMV</br>	
 											<input type="checkbox" name="Feature" >Event Tracking</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
-								<label>Targeting databases :</label></br>
-								<input type="radio" name="FeatureTargeting databases" value="oui">Yes <input type="radio" name="FeatureTargeting databases" value = "non">No <input type="radio" name="FeatureTargeting databases" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Video ad serving :</label></br>
+								<input type="radio" name="FeatureVideo ad serving" value="oui">Yes <input type="radio" name="FeatureVideo ad serving" value = "non">No <input type="radio" name="FeatureVideo ad serving" value = "non">Partial </br>
+								
+								</br>	
+								<label>Mobile ad serving :</label></br>
+								<input type="radio" name="FeatureMobile ad serving" value="oui">Yes <input type="radio" name="FeatureMobile ad serving" value = "non">No <input type="radio" name="FeatureMobile ad serving" value = "non">Partial </br>
+								
 								</br>	
 								<label>Reporting :</label></br>
 											<input type="checkbox" name="Feature" >Various built in and 3rd party via plugins include Realtime statistics</br>	
@@ -150,14 +153,10 @@
 											<input type="checkbox" name="Feature" >custom report</br>	
 											<input type="checkbox" name="Feature" >export report</br>	
 											<input type="checkbox" name="Feature" >automated email report</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Video ad serving :</label></br>
-								<input type="radio" name="FeatureVideo ad serving" value="oui">Yes <input type="radio" name="FeatureVideo ad serving" value = "non">No <input type="radio" name="FeatureVideo ad serving" value = "non">Partial </br>
-											<input type="text"/></br>								
+							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Ad Servering Platform",
 									local : ['AdSparx','Cxense','ADTECH','Atlas Solutions','Zedo','Viewzd Ad Server','DoubleClick','AdServer Solutions','AppNexus','Revive Adserver','24/7 Open AdStream','Adzerk','Mirago M3','Orbit Ad Server','Epom','Adform','Right Media','AudienceLogy','OpenX Ad Server','AdButler','']
 								});
 						</script>

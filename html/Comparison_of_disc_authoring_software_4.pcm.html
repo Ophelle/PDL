@@ -29,17 +29,11 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>ImgBurn :</label></br>
-								<input type="radio" name="FeatureImgBurn" value="oui">Yes <input type="radio" name="FeatureImgBurn" value = "non">No <input type="radio" name="FeatureImgBurn" value = "non">Partial </br>
-								
-								</br>	
 								<label>InfraRecorder :</label></br>
 								<input type="radio" name="FeatureInfraRecorder" value="oui">Yes <input type="radio" name="FeatureInfraRecorder" value = "non">No <input type="radio" name="FeatureInfraRecorder" value = "non">Partial </br>
 								
 								</br>	
-								<label>PowerISO :</label></br>
-								<input type="radio" name="FeaturePowerISO" value="oui">Yes <input type="radio" name="FeaturePowerISO" value = "non">No <input type="radio" name="FeaturePowerISO" value = "non">Partial </br>
-								
+								<label>DeepBurner : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>CDBurnerXP :</label></br>
 								<input type="radio" name="FeatureCDBurnerXP" value="oui">Yes <input type="radio" name="FeatureCDBurnerXP" value = "non">No <input type="radio" name="FeatureCDBurnerXP" value = "non">Partial </br>
@@ -49,15 +43,15 @@
 								<input type="radio" name="Featurecdrtools" value="oui">Yes <input type="radio" name="Featurecdrtools" value = "non">No <input type="radio" name="Featurecdrtools" value = "non">Partial </br>
 								
 								</br>	
-								<label>DeepBurner : </label></br> <input id="6" type="text" name="Feature"></br>
+								<label>PowerISO :</label></br>
+								<input type="radio" name="FeaturePowerISO" value="oui">Yes <input type="radio" name="FeaturePowerISO" value = "non">No <input type="radio" name="FeaturePowerISO" value = "non">Partial </br>
 								
 								</br>	
-								<label>X-CD-Roast : </label></br> <input id="7" type="text" name="Feature"></br>
+								<label>ImgBurn :</label></br>
+								<input type="radio" name="FeatureImgBurn" value="oui">Yes <input type="radio" name="FeatureImgBurn" value = "non">No <input type="radio" name="FeatureImgBurn" value = "non">Partial </br>
 								
 								</br>	
-								<label>UltraISO :</label></br>
-								<input type="radio" name="FeatureUltraISO" value="oui">Yes <input type="radio" name="FeatureUltraISO" value = "non">No <input type="radio" name="FeatureUltraISO" value = "non">Partial </br>
-								
+								<label>Application : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Alcohol 120% :</label></br>
 								<input type="radio" name="FeatureAlcohol 120%" value="oui">Yes <input type="radio" name="FeatureAlcohol 120%" value = "non">No <input type="radio" name="FeatureAlcohol 120%" value = "non">Partial </br>
@@ -67,24 +61,27 @@
 								<input type="radio" name="FeatureK3b" value="oui">Yes <input type="radio" name="FeatureK3b" value = "non">No <input type="radio" name="FeatureK3b" value = "non">Partial </br>
 								
 								</br>	
-								<label>Application : </label></br> <input id="11" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Nero Burning ROM :</label></br>
 								<input type="radio" name="FeatureNero Burning ROM" value="oui">Yes <input type="radio" name="FeatureNero Burning ROM" value = "non">No <input type="radio" name="FeatureNero Burning ROM" value = "non">Partial </br>
 								
+								</br>	
+								<label>UltraISO :</label></br>
+								<input type="radio" name="FeatureUltraISO" value="oui">Yes <input type="radio" name="FeatureUltraISO" value = "non">No <input type="radio" name="FeatureUltraISO" value = "non">Partial </br>
+								
+								</br>	
+								<label>X-CD-Roast : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"DeepBurner",
 									local : ['?','Yes','']
+								});
+								$("#1").typeahead({
+									name:"Application",
+									local : ['ISO image','Nero CD image','img','Apple disk image','bin/cue','Audio file/cue','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"X-CD-Roast",
 									local : ['?','Yes','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['ISO image','Nero CD image','img','Apple disk image','bin/cue','Audio file/cue','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

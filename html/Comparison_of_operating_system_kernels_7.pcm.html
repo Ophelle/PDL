@@ -29,35 +29,34 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Kernel Name : </label></br> <input id="1" type="text" name="Feature"></br>
+								<label>CIFS :</label></br>
+								<input type="radio" name="FeatureCIFS" value="oui">Yes <input type="radio" name="FeatureCIFS" value = "non">No <input type="radio" name="FeatureCIFS" value = "non">Partial </br>
+								
+								</br>	
+								<label>AFS :</label></br>
+								<input type="radio" name="FeatureAFS" value="oui">Yes <input type="radio" name="FeatureAFS" value = "non">No <input type="radio" name="FeatureAFS" value = "non">Partial </br>
+								
+								</br>	
+								<label>Coda :</label></br>
+								<input type="radio" name="FeatureCoda" value="oui">Yes <input type="radio" name="FeatureCoda" value = "non">No <input type="radio" name="FeatureCoda" value = "non">Partial </br>
+								
+								</br>	
+								<label>Kernel Name : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>NFS :</label></br>
+								<input type="radio" name="FeatureNFS" value="oui">Yes <input type="radio" name="FeatureNFS" value = "non">No <input type="radio" name="FeatureNFS" value = "non">Partial </br>
+								
+								</br>	
+								<label>9P :</label></br>
+								<input type="radio" name="Feature9P" value="oui">Yes <input type="radio" name="Feature9P" value = "non">No <input type="radio" name="Feature9P" value = "non">Partial </br>
 								
 								</br>	
 								<label>Ceph :</label></br>
 								<input type="radio" name="FeatureCeph" value="oui">Yes <input type="radio" name="FeatureCeph" value = "non">No <input type="radio" name="FeatureCeph" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>9P :</label></br>
-								<input type="radio" name="Feature9P" value="oui">Yes <input type="radio" name="Feature9P" value = "non">No <input type="radio" name="Feature9P" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Coda :</label></br>
-								<input type="radio" name="FeatureCoda" value="oui">Yes <input type="radio" name="FeatureCoda" value = "non">No <input type="radio" name="FeatureCoda" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>NFS :</label></br>
-								<input type="radio" name="FeatureNFS" value="oui">Yes <input type="radio" name="FeatureNFS" value = "non">No <input type="radio" name="FeatureNFS" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>CIFS :</label></br>
-								<input type="radio" name="FeatureCIFS" value="oui">Yes <input type="radio" name="FeatureCIFS" value = "non">No <input type="radio" name="FeatureCIFS" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>AFS :</label></br>
-								<input type="radio" name="FeatureAFS" value="oui">Yes <input type="radio" name="FeatureAFS" value = "non">No <input type="radio" name="FeatureAFS" value = "non">Partial </br>
-											<input type="text"/></br>								
+								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Kernel Name",
 									local : ['Windows NT kernel','XNU','Solaris kernel','DragonFly BSD kernel','Linux kernel','FreeBSD kernel','']
 								});
 						</script>

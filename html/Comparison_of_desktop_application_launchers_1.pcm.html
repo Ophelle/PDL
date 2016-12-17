@@ -29,9 +29,7 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Plugin Support :</label></br>
-								<input type="radio" name="FeaturePlugin Support" value="oui">Yes <input type="radio" name="FeaturePlugin Support" value = "non">No <input type="radio" name="FeaturePlugin Support" value = "non">Partial </br>
-								
+								<label>Creator : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Release date :</label></br>
 											<input type="checkbox" name="Feature" >January 24</br>	
@@ -56,50 +54,47 @@
 											<input type="checkbox" name="Feature" >March 18</br>	
 											<input type="checkbox" name="Feature" >June 19</br>	
 											<input type="checkbox" name="Feature" >July 9</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Programming language : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>OS : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Software license : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Free according to the FSF :</label></br>
 								<input type="radio" name="FeatureFree according to the FSF" value="oui">Yes <input type="radio" name="FeatureFree according to the FSF" value = "non">No <input type="radio" name="FeatureFree according to the FSF" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 								</br>	
-								<label>Software license : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Programming language : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Latest stable version : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Latest stable version : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Creator : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Plugin Support :</label></br>
+								<input type="radio" name="FeaturePlugin Support" value="oui">Yes <input type="radio" name="FeaturePlugin Support" value = "non">No <input type="radio" name="FeaturePlugin Support" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
 								<label>Open source :</label></br>
 								<input type="radio" name="FeatureOpen source" value="oui">Yes <input type="radio" name="FeatureOpen source" value = "non">No <input type="radio" name="FeatureOpen source" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
+								</br>	
+								<label>OS : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Creator",
+									local : ['xfce.org','N. Neumann','Canonical Ltd.','Synapse core-team','','Josh Karlin','Ulrik Sverdrup','Arnold Robbins','dwm developers','S.Chekanov and jWork.ORG','Katapult Developers','GNOME Do Developers','Neil J. Patel','Cardapio Team','warlock.cc','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['C','Python','C Sharp','C++','?','Java','Vala','C++ (Qt)','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Linux','Linux, FreeBSD','Ubuntu','Linux with KDE','Microsoft Windows, Linux, Mac OS X','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Software license",
 									local : ['GPL','GPL v3+','GPLv3','LGPL','MIT License','Proprietary','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#2").typeahead({
+									name:"Programming language",
+									local : ['C','Python','C Sharp','C++','?','Java','Vala','C++ (Qt)','']
+								});
+								$("#3").typeahead({
+									name:"Latest stable version",
 									local : ['0.69','0.3.2.1','0.9','0.4.2','0.95.1','7.3.0','2.3.4','4.10.1','4.5','1.8','v208 (latest)','2.5.0','0.2.10','1.2.0','0.3','']
 								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['xfce.org','N. Neumann','Canonical Ltd.','Synapse core-team','','Josh Karlin','Ulrik Sverdrup','Arnold Robbins','dwm developers','S.Chekanov and jWork.ORG','Katapult Developers','GNOME Do Developers','Neil J. Patel','Cardapio Team','warlock.cc','']
+								$("#4").typeahead({
+									name:"OS",
+									local : ['Linux','Linux, FreeBSD','Ubuntu','Linux with KDE','Microsoft Windows, Linux, Mac OS X','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

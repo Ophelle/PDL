@@ -29,12 +29,6 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Developer : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Latest stable release :</label></br>
 											<input type="checkbox" name="Feature" >4.3.1 </br>	
 											<input type="checkbox" name="Feature" >June 2009</br>	
@@ -52,10 +46,11 @@
 											<input type="checkbox" name="Feature" >2014</br>	
 											<input type="checkbox" name="Feature" >8.1 </br>	
 											<input type="checkbox" name="Feature" >Sep 26</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
-								<label>IDE : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Developer : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Platform :</label></br>
 											<input type="checkbox" name="Feature" >Windows</br>	
@@ -72,18 +67,20 @@
 											<input type="checkbox" name="Feature" >DragonFly BSD</br>	
 											<input type="checkbox" name="Feature" >NetBSD</br>	
 											<input type="checkbox" name="Feature" >JVM</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
+								</br>	
+								<label>IDE : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Developer",
+									local : ['OpenWatcom Community','Team','KDevelop Team','University of Illinois, Los Alamos National Laboratory','NetBeans Community','Code::Blocks Team','AdaCore','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"License",
 									local : ['CDDL','EPL','GPL','OSI Approved','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['OpenWatcom Community','Team','KDevelop Team','University of Illinois, Los Alamos National Laboratory','NetBeans Community','Code::Blocks Team','AdaCore','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"IDE",
 									local : ['Geany','KDevelop','Photran (Eclipse)','Code::Blocks','NetBeans','GNAT Programming Studio','OpenWatcom','']
 								});
 						</script>

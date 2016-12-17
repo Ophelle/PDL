@@ -29,78 +29,69 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Bus interface : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Memory clock (MHz) : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Memory - Bus width (bit) : </label></br> <input id="3" type="number" name="Feature"></br>
+								<label>Memory (MB) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
+								</br>	
+								<label>Memory - Bus type : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bus width (bit) : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Launch : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Core config : </label></br> <input id="4" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Core clock (MHz) : </label></br> <input id="5" type="number" name="Feature"></br>
+								<label>Code name : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Model : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Core clock (MHz) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Memory (MB) : </label></br> <input id="6" type="number" name="Feature"></br>
+								<label>Fab (nm) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Fillrate - MTextels/s : </label></br> <input id="7" type="number" name="Feature"></br>
+								<label>Memory clock (MHz) : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Fillrate - MVertices/s : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Launch : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fillrate - MPixels/s : </label></br> <input id="9" type="number" name="Feature"></br>
+								<label>Fillrate - MOperations/s : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Code name : </label></br> <input id="10" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fillrate - MOperations/s : </label></br> <input id="11" type="number" name="Feature"></br>
+								<label>Fillrate - MPixels/s : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Model : </label></br> <input id="12" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Memory - Bus type : </label></br> <input id="13" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fab (nm) : </label></br> <input id="14" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="15" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fillrate - MVertices/s : </label></br> <input id="16" type="number" name="Feature"></br>
+								<label>Fillrate - MTextels/s : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Bus interface",
 									local : ['PCI-E x16','HyperTransport','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['700','700
-1100','600','System Memory','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['8:3:8:4','4:3:4:2','12:5:12::12','2:1:2:1','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Launch",
 									local : ['November 8, 2004','Unknown','February 24, 2005','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#2").typeahead({
+									name:"Core config",
+									local : ['8:3:8:4','4:3:4:2','12:5:12::12','2:1:2:1','']
+								});
+								$("#3").typeahead({
+									name:"Code name",
 									local : ['NV44M','NV43M','NV41M','C51M','']
 								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#4").typeahead({
+									name:"Model",
 									local : ['GeForce Go 6200','GeForce Go 6400','GeForce Go 6800','GeForce Go 6100 + nForce Go 430','GeForce Go 6150 + nForce Go 430','GeForce Go 6800 Ultra','GeForce Go 6600','']
+								});
+								$("#5").typeahead({
+									name:"Memory clock (MHz)",
+									local : ['700','7001100','600','System Memory','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

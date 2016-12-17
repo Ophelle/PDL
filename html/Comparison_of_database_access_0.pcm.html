@@ -29,32 +29,28 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>PostgreSQL : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Database : </label></br> <input id="1" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Sqlite ver 3 : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>MySQL : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>PostgreSQL : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>MySQL : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Sqlite ver 3 : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"PostgreSQL",
 									local : ['','']
 								});
+								$("#1").typeahead({
+									name:"Database",
+									local : ['Create table','List table fields','Create database','List tables','Delete database','Use a db','Delete table','List databases','']
+								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"MySQL",
 									local : ['','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['Create table','List table fields','Create database','List tables','Delete database','Use a db','Delete table','List databases','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+									name:"Sqlite ver 3",
 									local : ['','']
 								});
 						</script>

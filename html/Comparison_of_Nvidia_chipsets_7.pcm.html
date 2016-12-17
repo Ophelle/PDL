@@ -29,25 +29,43 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Code Name : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Fabricationprocess (nm) : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>USB : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Features : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>PCI-Express : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Code Name : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Sound : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Sound : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Fabrication
-process (nm) : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>FSB/HTFrequency (MHz) : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Model : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>USB : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>LAN :</label></br>
+											<input type="checkbox" name="Feature" >100 Mbit</br>	
+											<input type="checkbox" name="Feature" >s</br>	
+											<input type="checkbox" name="Feature" >1000 Mbit</br>	
+											<input type="checkbox" name="Feature" >100 Mbit</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>PATA : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Release Date : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 								</br>	
 								<label>SLI :</label></br>
 								<input type="radio" name="FeatureSLI" value="oui">Yes <input type="radio" name="FeatureSLI" value = "non">No <input type="radio" name="FeatureSLI" value = "non">Partial </br>
 											<input type="text"/></br>								
+								</br>	
+								<label>PCI : </label></br> <input id="8" type="text" name="Feature"></br>
+								</br>	
+								<label>SATA :</label></br>
+											<input type="checkbox" name="Feature" >2 Ports 3.0Gbit</br>	
+											<input type="checkbox" name="Feature" >s</br>	
+											<input type="checkbox" name="Feature" >4 Ports 3.0Gbit</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>Processors Supported :</label></br>
 											<input type="checkbox" name="Feature" >Athlon 64 X2</br>	
@@ -56,90 +74,54 @@ process (nm) : </label></br> <input id="5" type="text" name="Feature"></br>
 Socket AM2</br>	
 											<input type="checkbox" name="Feature" >939</br>	
 											<input type="checkbox" name="Feature" >754</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>FSB/HT
-Frequency (MHz) : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>PCI-Express : </label></br> <input id="9" type="text" name="Feature"></br>
 								</br>	
-								<label>PCI : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Model : </label></br> <input id="10" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>LAN :</label></br>
-											<input type="checkbox" name="Feature" >100 Mbit</br>	
-											<input type="checkbox" name="Feature" >s</br>	
-											<input type="checkbox" name="Feature" >1000 Mbit</br>	
-											<input type="checkbox" name="Feature" >100 Mbit</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Features : </label></br> <input id="12" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>PATA : </label></br> <input id="13" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>SATA :</label></br>
-											<input type="checkbox" name="Feature" >2 Ports 3.0Gbit</br>	
-											<input type="checkbox" name="Feature" >s</br>	
-											<input type="checkbox" name="Feature" >4 Ports 3.0Gbit</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Notes : </label></br> <input id="15" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Release Date : </label></br> <input id="16" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Notes : </label></br> <input id="10" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['MCP61','MCP51','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['8 Ports Rev 2.0','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['6 Ports','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['1.0a
-10 lanes','1.0a
-18 lanes','1.0a
-2 lanes','1.0a
-18 lanes','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['HDA','']
-								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#0").typeahead({
+									name:"Fabricationprocess (nm)",
 									local : ['90 nm','','']
 								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['HT 1 GHz','HT 1 GHz
-(800 MHz s754)','']
-								});
-								$("#8").typeahead({
-									name:"list8",
-									local : ['nForce 400','nForce 405','nForce 410','nForce 430','']
-								});
-								$("#9").typeahead({
-									name:"list9",
+								$("#1").typeahead({
+									name:"Features",
 									local : ['','Onboard GeForce 6100 (C51G)','Onboard GeForce 6100','']
 								});
-								$("#10").typeahead({
-									name:"list10",
+								$("#2").typeahead({
+									name:"Code Name",
+									local : ['MCP61','MCP51','']
+								});
+								$("#3").typeahead({
+									name:"Sound",
+									local : ['HDA','']
+								});
+								$("#4").typeahead({
+									name:"FSB/HTFrequency (MHz)",
+									local : ['HT 1 GHz','HT 1 GHz(800 MHz s754)','']
+								});
+								$("#5").typeahead({
+									name:"Model",
+									local : ['nForce 400','nForce 405','nForce 410','nForce 430','']
+								});
+								$("#6").typeahead({
+									name:"USB",
+									local : ['8 Ports Rev 2.0','']
+								});
+								$("#7").typeahead({
+									name:"PATA",
 									local : ['2 Ports UDMA 133','1 Ports UDMA 133','']
 								});
-								$("#11").typeahead({
-									name:"list11",
+								$("#8").typeahead({
+									name:"PCI",
+									local : ['6 Ports','']
+								});
+								$("#9").typeahead({
+									name:"PCI-Express",
+									local : ['1.0a10 lanes','1.0a18 lanes','1.0a2 lanes','1.0a18 lanes','']
+								});
+								$("#10").typeahead({
+									name:"Notes",
 									local : ['','']
 								});
 						</script>

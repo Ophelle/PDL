@@ -29,73 +29,53 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Pharmacy : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Tunnel : </label></br> <input id="1" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>No through road : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>First aid : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>First aid : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Bus stop : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Pharmacy : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>No through road : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Parking place : </label></br> <input id="5" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Hospital : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>  : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
-								<label>Bus stop : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>  : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Hospital : </label></br> <input id="7" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Pharmacy",
+									local : ['','NOT  USED','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['NOT 
- USED','','or','']
+									name:"Tunnel",
+									local : ['NOT  USED','','or','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['','or','']
+									name:"First aid",
+									local : ['','NOT  USED','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['','NOT 
- USED','']
+									name:"Bus stop",
+									local : ['','Front:  or    Rear:','or','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['','NOT 
- USED','']
+									name:"No through road",
+									local : ['','or','']
 								});
 								$("#5").typeahead({
-									name:"list5",
+									name:"Parking place",
 									local : ['','or','']
 								});
 								$("#6").typeahead({
-									name:"list6",
-									local : ['','NOT 
- USED','or','']
+									name:" ",
+									local : ['Spain','Ukraine','Czech  Republic','Estonia','Turkey','France','Denmark','Hungary','Belgium','Iceland','Austria','Poland','Sweden','Slovakia','Greece','Ireland','Netherlands','Germany','Switzerland','Italy','Finland','Norway','United  Kingdom','Russia  &  Belarus','']
 								});
 								$("#7").typeahead({
-									name:"list7",
-									local : ['','Front:
- 
- or 
-  
- Rear:','or','']
-								});
-								$("#8").typeahead({
-									name:"list8",
-									local : ['Spain','Ukraine','Czech 
- Republic','Estonia','Turkey','France','Denmark','Hungary','Belgium','Iceland','Austria','Poland','Sweden','Slovakia','Greece','Ireland','Netherlands','Germany','Switzerland','Italy','Finland','Norway','United 
- Kingdom','Russia 
- & 
- Belarus','']
+									name:"Hospital",
+									local : ['','NOT  USED','or','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

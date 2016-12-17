@@ -29,8 +29,9 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Integration : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Development : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Original/Primary developer : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Chipset :</label></br>
 											<input type="checkbox" name="Feature" >Ralink RT2700U</br>	
@@ -91,43 +92,37 @@ Intel Centrino 6000</br>
 											<input type="checkbox" name="Feature" >RTL8192SU</br>	
 											<input type="checkbox" name="Feature" >Atheros AR5005UG</br>	
 											<input type="checkbox" name="Feature" >AR5005UX</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Original/Primary developer : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Development : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Driver : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Driver : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Non-free firmware required :</label></br>
 								<input type="radio" name="FeatureNon-free firmware required" value="oui">Yes <input type="radio" name="FeatureNon-free firmware required" value = "non">No <input type="radio" name="FeatureNon-free firmware required" value = "non">Partial </br>
 											<input type="text"/></br>								
+								</br>	
+								<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Integration : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Integrated since 8.0','Integrated / Removed in 8.0','Integrated','Separate project','Integrated since 8.0 / Available for 7.1 and above as separate patch','Integrated since 10.0','Integrated since 8.1','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Niall O'Higgins and Damien Bergamini','Weongyo Jeong (FreeBSD), Sam Leffler (FreeBSD)','Damien Bergamini (OpenBSD), Imported from OpenBSD by Rui Paulo','Florian Stoehr, Damien Bergamini and Jonathan Gray (OpenBSD)','Bill Paul (FreeBSD)','Sam Leffler (FreeBSD)','Damien Bergamini (OpenBSD/ FreeBSD)','Imported from NetBSD','Sepherosa Ziehau (DragonFly BSD), Andrew Thompson (FreeBSD), Sam Leffler (FreeBSD)','','Damien Bergamini (OpenBSD), Imported from OpenBSD by Akinori Furukoshi','Damien Bergamini, Benjamin Close','Damien Bergamini, Benjamin Close, Sam Leffler (OpenBSD/ FreeBSD)','Bill Sommerfeld (NetBSD) and Atsushi Onoe (NetBSD)','Damien Bergamini (OpenBSD/FreeBSD)','Imported from OpenBSD','Weongyo Jeong','Originally by Atheros via Sam Leffler (FreeBSD); supported by the community','Weongyo Jeong (FreeBSD)','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"Development",
 									local : ['Based on partial documentation','?','Documentation based','','Reverse engineering','Ported from DragonFly BSD','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Original/Primary developer",
+									local : ['Niall O'Higgins and Damien Bergamini','Weongyo Jeong (FreeBSD), Sam Leffler (FreeBSD)','Damien Bergamini (OpenBSD), Imported from OpenBSD by Rui Paulo','Florian Stoehr, Damien Bergamini and Jonathan Gray (OpenBSD)','Bill Paul (FreeBSD)','Sam Leffler (FreeBSD)','Damien Bergamini (OpenBSD/ FreeBSD)','Imported from NetBSD','Sepherosa Ziehau (DragonFly BSD), Andrew Thompson (FreeBSD), Sam Leffler (FreeBSD)','','Damien Bergamini (OpenBSD), Imported from OpenBSD by Akinori Furukoshi','Damien Bergamini, Benjamin Close','Damien Bergamini, Benjamin Close, Sam Leffler (OpenBSD/ FreeBSD)','Bill Sommerfeld (NetBSD) and Atsushi Onoe (NetBSD)','Damien Bergamini (OpenBSD/FreeBSD)','Imported from OpenBSD','Weongyo Jeong','Originally by Atheros via Sam Leffler (FreeBSD); supported by the community','Weongyo Jeong (FreeBSD)','']
+								});
+								$("#2").typeahead({
+									name:"Driver",
+									local : ['run','zyd','iwi','awi','ural','ath','acx','mwl','urtw','bwi','uath','an','ray','rum','wpi','bwn','ral','ipw','wi','cnw','urtwn','malo','upgt','arl','iwn','rsu','']
+								});
+								$("#3").typeahead({
+									name:"License",
 									local : ['BSD','']
 								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['run','zyd','iwi','awi','ural','ath','acx','mwl','urtw','bwi','uath','an','ray','rum','wpi','bwn','ral','ipw','wi','cnw','urtwn','malo','upgt','arl','iwn','rsu','']
+								$("#4").typeahead({
+									name:"Integration",
+									local : ['Integrated since 8.0','Integrated / Removed in 8.0','Integrated','Separate project','Integrated since 8.0 / Available for 7.1 and above as separate patch','Integrated since 10.0','Integrated since 8.1','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

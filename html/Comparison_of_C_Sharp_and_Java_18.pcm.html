@@ -29,45 +29,40 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Specialization :</label></br>
-								<input type="radio" name="FeatureSpecialization" value="oui">Yes <input type="radio" name="FeatureSpecialization" value = "non">No <input type="radio" name="FeatureSpecialization" value = "non">Partial </br>
+								<label>Named arguments :</label></br>
+								<input type="radio" name="FeatureNamed arguments" value="oui">Yes <input type="radio" name="FeatureNamed arguments" value = "non">No <input type="radio" name="FeatureNamed arguments" value = "non">Partial </br>
 								
 								</br>	
+								<label>Metadata : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Metadata annotations/attributes :</label></br>
+											<input type="checkbox" name="Feature" >Interface based; user-defined annotations can be created</br>	
+							
+								</br>	
 								<label>Positional arguments :</label></br>
-								<input type="radio" name="FeaturePositional arguments" value="oui">Yes <input type="radio" name="FeaturePositional arguments" value = "non">No <input type="radio" name="FeaturePositional arguments" value = "non">Partial </br>
+											<input type="checkbox" name="Feature" >No; unless a single argument</br>	
+							
+								</br>	
+								<label>Conditional metadata :</label></br>
+								<input type="radio" name="FeatureConditional metadata" value="oui">Yes <input type="radio" name="FeatureConditional metadata" value = "non">No <input type="radio" name="FeatureConditional metadata" value = "non">Partial </br>
 								
 								</br>	
 								<label>Nested types :</label></br>
 								<input type="radio" name="FeatureNested types" value="oui">Yes <input type="radio" name="FeatureNested types" value = "non">No <input type="radio" name="FeatureNested types" value = "non">Partial </br>
 								
 								</br>	
-								<label>Metadata : </label></br> <input id="4" type="text" name="Feature"></br>
+								<label>Specialization :</label></br>
+								<input type="radio" name="FeatureSpecialization" value="oui">Yes <input type="radio" name="FeatureSpecialization" value = "non">No <input type="radio" name="FeatureSpecialization" value = "non">Partial </br>
 								
 								</br>	
-								<label>Conditional metadata :</label></br>
-								<input type="radio" name="FeatureConditional metadata" value="oui">Yes <input type="radio" name="FeatureConditional metadata" value = "non">No <input type="radio" name="FeatureConditional metadata" value = "non">Partial </br>
-								
-								</br>	
-								<label>Named arguments :</label></br>
-								<input type="radio" name="FeatureNamed arguments" value="oui">Yes <input type="radio" name="FeatureNamed arguments" value = "non">No <input type="radio" name="FeatureNamed arguments" value = "non">Partial </br>
-								
-								</br>	
-								<label>Metadata annotations/attributes : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Default values : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Default values : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Metadata",
 									local : ['C#','Java','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Interface based; user-defined annotations can be created','Class based','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Default values",
 									local : ['Through initialization','At definition','']
 								});
 						</script>

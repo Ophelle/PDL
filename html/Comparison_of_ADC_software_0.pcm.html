@@ -33,30 +33,27 @@
 								<input type="radio" name="FeatureFOSS" value="oui">Yes <input type="radio" name="FeatureFOSS" value = "non">No <input type="radio" name="FeatureFOSS" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Software license : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>ADC hub : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Notes : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Active :</label></br>
 								<input type="radio" name="FeatureActive" value="oui">Yes <input type="radio" name="FeatureActive" value = "non">No <input type="radio" name="FeatureActive" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>ADC hub : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Notes : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Software license : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['GPL','source code available','MIT License','AGPL','Proprietary','Software license','GPLv2','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"ADC hub",
 									local : ['Nexthub','ADCH++','RusHub','DSHub','Starlet ADC Hub','Starhub','ErlHub','ADC hub','uhub','Luadch','ADCH++ GUI','Qhub','FlexHub','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Notes",
 									local : ['','In Debian and OpenWrt','']
+								});
+								$("#2").typeahead({
+									name:"Software license",
+									local : ['GPL','source code available','MIT License','AGPL','Proprietary','Software license','GPLv2','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

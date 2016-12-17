@@ -29,23 +29,7 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Language : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>WFS :</label></br>
-								<input type="radio" name="FeatureWFS" value="oui">Yes <input type="radio" name="FeatureWFS" value = "non">No <input type="radio" name="FeatureWFS" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>GeoRSS :</label></br>
-								<input type="radio" name="FeatureGeoRSS" value="oui">Yes <input type="radio" name="FeatureGeoRSS" value = "non">No <input type="radio" name="FeatureGeoRSS" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>WMS :</label></br>
-								<input type="radio" name="FeatureWMS" value="oui">Yes <input type="radio" name="FeatureWMS" value = "non">No <input type="radio" name="FeatureWMS" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Name : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Name : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Other :</label></br>
 											<input type="checkbox" name="Feature" >Java-based rules engine for detecting spatial and temporal conditions. Designed for a detect-response paradigm to monitor large populations of dynamic objects with spatial and temporal attributes.</br>	
@@ -68,15 +52,29 @@
 											<input type="checkbox" name="Feature" >draggable icons and content</br>	
 											<input type="checkbox" name="Feature" >geospatial queries (intersection</br>	
 											<input type="checkbox" name="Feature" >overlapping)</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Language : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>WMS :</label></br>
+								<input type="radio" name="FeatureWMS" value="oui">Yes <input type="radio" name="FeatureWMS" value = "non">No <input type="radio" name="FeatureWMS" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>GeoRSS :</label></br>
+								<input type="radio" name="FeatureGeoRSS" value="oui">Yes <input type="radio" name="FeatureGeoRSS" value = "non">No <input type="radio" name="FeatureGeoRSS" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>WFS :</label></br>
+								<input type="radio" name="FeatureWFS" value="oui">Yes <input type="radio" name="FeatureWFS" value = "non">No <input type="radio" name="FeatureWFS" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['JavaScript','Java and JavaScript','Java','JavaScript/HTML5','JavaScript, Flex, Silverlight, .NET, Java','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Name",
 									local : ['WMS-Map','OpenLayers','ArcGIS Server APIs','QuickWMS','MapDotNet','CivicMaps Tile Engine','SpatialFX','Leaflet','SpatialRules','']
+								});
+								$("#1").typeahead({
+									name:"Language",
+									local : ['JavaScript','Java and JavaScript','Java','JavaScript/HTML5','JavaScript, Flex, Silverlight, .NET, Java','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

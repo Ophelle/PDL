@@ -29,32 +29,28 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>WebKit : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Gecko : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Trident : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Trident : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>WebKit : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Presto : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Gecko : </label></br> <input id="4" type="text" name="Feature"></br>
-								
 						<script>
+								$("#0").typeahead({
+									name:"Gecko",
+									local : ['']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Trident",
 									local : ['']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"WebKit",
 									local : ['']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['']
-								});
-								$("#4").typeahead({
-									name:"list4",
+									name:"Presto",
 									local : ['']
 								});
 						</script>

@@ -29,16 +29,21 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>UTF-9 and UTF-18 : </label></br> <input id="1" type="number" name="Feature"></br>
+								<label>UTF-EBCDIC : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>UTF-8 : </label></br> <input id="2" type="number" name="Feature"></br>
+								<label>UTF-8 : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Code range (hexadecimal) : </label></br> <input id="3" type="text" name="Feature"></br>
+								<label>UTF-9 and UTF-18 : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>UTF-16 : </label></br> <input id="4" type="number" name="Feature"></br>
+								<label>Code range (hexadecimal) : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>UTF-16 : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>UTF-32 : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
 								<label>GB 18030 :</label></br>
@@ -47,16 +52,10 @@ GB 2312</br>
 											<input type="checkbox" name="Feature" >GBK (e.g. most
 Chinese characters) 32 for
 everything else.</br>	
-									
-								</br>	
-								<label>UTF-32 : </label></br> <input id="6" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>UTF-EBCDIC : </label></br> <input id="7" type="number" name="Feature"></br>
-								
+							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Code range (hexadecimal)",
 									local : ['000000 – 00007F','004000 – 00FFFF','000080 – 00009F','010000 – 03FFFF','000400 – 0007FF','0000A0 – 0003FF','040000 – 10FFFF','000800 – 003FFF','']
 								});
 						</script>

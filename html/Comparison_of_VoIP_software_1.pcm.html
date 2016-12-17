@@ -29,18 +29,40 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Protocols : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Codecs : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Protocols : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Open Source :</label></br>
 								<input type="radio" name="FeatureOpen Source" value="oui">Yes <input type="radio" name="FeatureOpen Source" value = "non">No <input type="radio" name="FeatureOpen Source" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Program : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Codecs : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Operating systems :</label></br>
+											<input type="checkbox" name="Feature" >Android v2.2+</br>	
+											<input type="checkbox" name="Feature" >iOS v7.0+</br>	
+											<input type="checkbox" name="Feature" >Symbian OS</br>	
+											<input type="checkbox" name="Feature" >Windows Mobile (version unknown)</br>	
+											<input type="checkbox" name="Feature" >iOS</br>	
+											<input type="checkbox" name="Feature" >Android</br>	
+											<input type="checkbox" name="Feature" >Microsoft Windows</br>	
+											<input type="checkbox" name="Feature" >OS X</br>	
+											<input type="checkbox" name="Feature" >Windows Phone</br>	
+											<input type="checkbox" name="Feature" >Windows Mobile 6 Professional</br>	
+											<input type="checkbox" name="Feature" >Standard</br>	
+											<input type="checkbox" name="Feature" >Symbian</br>	
+											<input type="checkbox" name="Feature" >Java ME</br>	
+											<input type="checkbox" name="Feature" >BlackBerry RIM</br>	
+											<input type="checkbox" name="Feature" >Windows Mobile 2003 SE and higher</br>	
+											<input type="checkbox" name="Feature" >Nokia-Symbian</br>	
+											<input type="checkbox" name="Feature" >BlackBerry</br>	
+											<input type="checkbox" name="Feature" >BlackBerry OS</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Program : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Encryption : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Latest release :</label></br>
 											<input type="checkbox" name="Feature" >Symbian 4.0</br>	
@@ -71,34 +93,7 @@ Category:Upptalk</br>
 											<input type="checkbox" name="Feature" >JusTex (iOS) 3.0.1 updated on 13 July. 2014; JusTex (Android) 3.0 updated on 9 July 2014</br>	
 											<input type="checkbox" name="Feature" >Acrobits Softphone (iOS) 5.2</br>	
 											<input type="checkbox" name="Feature" >Acrobits Softphone (Android) 3.20</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Operating systems :</label></br>
-											<input type="checkbox" name="Feature" >Android v2.2+</br>	
-											<input type="checkbox" name="Feature" >iOS v7.0+</br>	
-											<input type="checkbox" name="Feature" >Symbian OS</br>	
-											<input type="checkbox" name="Feature" >Windows Mobile (version unknown)</br>	
-											<input type="checkbox" name="Feature" >iOS</br>	
-											<input type="checkbox" name="Feature" >Android</br>	
-											<input type="checkbox" name="Feature" >Microsoft Windows</br>	
-											<input type="checkbox" name="Feature" >OS X</br>	
-											<input type="checkbox" name="Feature" >Windows Phone</br>	
-											<input type="checkbox" name="Feature" >Windows Mobile 6 Professional</br>	
-											<input type="checkbox" name="Feature" >Standard</br>	
-											<input type="checkbox" name="Feature" >Symbian</br>	
-											<input type="checkbox" name="Feature" >Java ME</br>	
-											<input type="checkbox" name="Feature" >BlackBerry RIM</br>	
-											<input type="checkbox" name="Feature" >Windows Mobile 2003 SE and higher</br>	
-											<input type="checkbox" name="Feature" >Nokia-Symbian</br>	
-											<input type="checkbox" name="Feature" >BlackBerry</br>	
-											<input type="checkbox" name="Feature" >BlackBerry OS</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>License : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Encryption : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>Other capabilities :</label></br>
 											<input type="checkbox" name="Feature" >Wi-Fi VoIP out & in</br>	
@@ -161,26 +156,26 @@ Category:Upptalk</br>
 											<input type="checkbox" name="Feature" >conference calls*</br>	
 											<input type="checkbox" name="Feature" >HD Voice</br>	
 											<input type="checkbox" name="Feature" >Bluetooth* (* Additional fees)</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Protocols",
 									local : ['Proprietary with SIP core','A custom signaling protocol.','SIP','Unknown','SIP, MSN, Skype, Yahoo, AOL, ICQ, Google Talk, Facebook & Twitter','SIP to publicly and non-publicly routable servers','','XMPP, RTP','SIP AIM ICQ XMPP, Facebook, Yahoo! Messenger, Windows Live.','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Codecs",
 									local : ['Unknown','G.711, G.722, iLBC, GSM, G.729','Speex, CELT, WebM','PCMA, PCMU, G.722, iLBC, iSAC, Opus, H.264, VP8, H.263','iLBC','PCMA, PCMU, G.722*, iLBC, iSAC*, G.729*','GSM','']
 								});
+								$("#2").typeahead({
+									name:"License",
+									local : ['GPLv3','Freeware / Proprietary','Proprietary','Proprietary, discontinued in April 2007','GPL','web based service, Call back,no download','Freeware','']
+								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Program",
 									local : ['Windows Mobile 6','Vopium','Truphone','Media5-fone','iCall Mobile','Line2','Sipdroid','Jajah Mobile Web','Acrobits Softphone','Yuilop','JusTex by Juphoon','Tango by TangoME Inc.,','RedPhone by Open Whisper Systems','Signal by Open Whisper Systems','X-PRO for Pocket PC','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['GPLv3','Freeware / Proprietary','Proprietary','Proprietary, discontinued in April 2007','GPL','web based service, Call back,no download','Freeware','']
-								});
-								$("#5").typeahead({
-									name:"list5",
+									name:"Encryption",
 									local : ['Unknown','TLS, SRTP, ZRTP, AES 128','TLS, TCP, UDP, SRTP','TLS, SRTP, ZRTP','TLS, ZRTP','TLS*, SRTP*','TLS','']
 								});
 						</script>

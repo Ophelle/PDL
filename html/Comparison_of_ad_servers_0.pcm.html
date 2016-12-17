@@ -29,15 +29,16 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Ad Servering Platform : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Company-owner : </label></br> <input id="2" type="text" name="Feature"></br>
+								<label>Mobile solution :</label></br>
+								<input type="radio" name="FeatureMobile solution" value="oui">Yes <input type="radio" name="FeatureMobile solution" value = "non">No <input type="radio" name="FeatureMobile solution" value = "non">Partial </br>
 								
 								</br>	
 								<label>Trial period :</label></br>
 								<input type="radio" name="FeatureTrial period" value="oui">Yes <input type="radio" name="FeatureTrial period" value = "non">No <input type="radio" name="FeatureTrial period" value = "non">Partial </br>
-											<input type="text"/></br>								
+								
+								</br>	
+								<label>First release date : </label></br> <input type="number" name="Feature"></br>
+								
 								</br>	
 								<label>Service and Support :</label></br>
 											<input type="checkbox" name="Feature" >24</br>	
@@ -68,46 +69,40 @@
 											<input type="checkbox" name="Feature" >Skype</br>	
 											<input type="checkbox" name="Feature" >Email</br>	
 											<input type="checkbox" name="Feature" >7 email and phone support</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Demo : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>First release date : </label></br> <input id="6" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+							
 								</br>	
 								<label>Real-time :</label></br>
 								<input type="radio" name="FeatureReal-time" value="oui">Yes <input type="radio" name="FeatureReal-time" value = "non">No <input type="radio" name="FeatureReal-time" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Pricing : </label></br> <input id="8" type="text" name="Feature"></br>
 								
 								</br>	
-								<label>Mobile solution :</label></br>
-								<input type="radio" name="FeatureMobile solution" value="oui">Yes <input type="radio" name="FeatureMobile solution" value = "non">No <input type="radio" name="FeatureMobile solution" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Demo : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Ad exchange : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+								<label>Pricing : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Ad Servering Platform : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Company-owner : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Ad exchange : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['AdSparx','Ad Server Solutions Adserver','Adform','Cxense','Viewzd','Right Media (Yield Manager)','Mirago M3','AdMediaWorks','AdExchange','AdButler','DoubleClick Premium Solution','Zedo','ADTECH','24/7 Open AdStream - Renamed XFP','Revive Adserver','Adzerk','epom','Orbit Ad Server','AdGear Advertiser Ad Server','DoubleClick Small Business','MADGIC','Djax Adserver','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['AdGear','ADTECH AG, subsidiary of AOL Networks.','Adform ApS','AudienceLogy LLC','AppNexus','Sparklit','Revive Adserver Project','Ad Server Solutions','Epom','Yahoo','Adzerk Inc.','OrbitSoft','AdSparx USA Inc.','AdServer','Hardsk','Madgic','Google Inc., since 2008','Cxense.','dJAX Adserver Technology Solutions.','Zedo Inc.','Mirago Ltd.','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"Demo",
 									local : ['Yes, upon request','Yes, Upon Request','Yes','No','YES','Yes, Installatron','Yes, upon request.','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Pricing",
 									local : ['Free up to 150 million impps per month','Free, Open Source','AdButler Plans','Available upon request','Viewzd Plans','Pricing table. Details available upon request.','Available upon Request','Available upon request, special pricing, also there are ADTECH lite (version for small publishers) free.','Available upon request or real time reporting API','On Website','One time set-up fee + monthly fee based on volume (available upon request)','Online pricing tool - Varies upon impression volume.','Licensed, Source codes and SaaS. White Label and Private Branding. Available upon request','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#2").typeahead({
+									name:"Ad Servering Platform",
+									local : ['AdSparx','Ad Server Solutions Adserver','Adform','Cxense','Viewzd','Right Media (Yield Manager)','Mirago M3','AdMediaWorks','AdExchange','AdButler','DoubleClick Premium Solution','Zedo','ADTECH','24/7 Open AdStream - Renamed XFP','Revive Adserver','Adzerk','epom','Orbit Ad Server','AdGear Advertiser Ad Server','DoubleClick Small Business','MADGIC','Djax Adserver','']
+								});
+								$("#3").typeahead({
+									name:"Company-owner",
+									local : ['AdGear','ADTECH AG, subsidiary of AOL Networks.','Adform ApS','AudienceLogy LLC','AppNexus','Sparklit','Revive Adserver Project','Ad Server Solutions','Epom','Yahoo','Adzerk Inc.','OrbitSoft','AdSparx USA Inc.','AdServer','Hardsk','Madgic','Google Inc., since 2008','Cxense.','dJAX Adserver Technology Solutions.','Zedo Inc.','Mirago Ltd.','']
+								});
+								$("#4").typeahead({
+									name:"Ad exchange",
 									local : ['Yes, Doubleclick Ad Exchange','Yes','Yes Open RTB 2.0','Yes, Emediate Exchange','Yes, via plugin','Yes, 24/7 Connect with 50+ adnetworks','Yes, Partnerships / Investments','NO','Yes, Right Media Exchange','Yes, non-exclusive','Yes, 24/7 Connect in exclusive partnership with Microsoft Ad Exchange','Yes, Marketplace by ADTECH','Yes, Mirago Ad Exchange','']
 								});
 						</script>

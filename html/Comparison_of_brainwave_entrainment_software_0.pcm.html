@@ -29,35 +29,31 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Operating systems : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Developer : </label></br> <input id="2" type="text" name="Feature"></br>
-								
 								</br>	
 								<label>Software : </label></br> <input id="3" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Operating systems : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Version : </label></br> <input id="5" type="number" name="Feature"></br>
+								<label>Version : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 						<script>
+								$("#0").typeahead({
+									name:"License",
+									local : ['GPL','Proprietary','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Operating systems",
 									local : ['FreeBSD, Linux, Mac OS X, Windows','iOS','Windows','Android','DOS, FreeBSD, Linux, Mac OS X, Windows, WinCE','Mac OS X, iOS','Linux','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['GPL','Proprietary','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Developer",
 									local : ['CMLStudio','isone','Transparent Corp.','Stan Lysiak','Tensai','gnaural','Volition','Hemi-Synths Explorers','Noromaa Solutions Oy.','RCS Software','Uazu','Steve Duell','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#3").typeahead({
+									name:"Software",
 									local : ['SBaGen','Neuro Sequencer Pro','BeeOne SMOD/HMS','Lux VST Brainwave Entrainment Instrument','Brainwave Studio','Neuro Entrainment','BrainIgniter Player','Discord','Isochronic Tone Generator','BrainWave Generator','Gnaural','Mind WorkStation','Neuro-Programmer 3','']
 								});
 						</script>

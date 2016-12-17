@@ -29,32 +29,28 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Spanish : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Origin : </label></br> <input id="1" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Spanish : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Portuguese : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Portuguese : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Meaning : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Meaning : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Spanish",
+									local : ['arcilla','queso','ojo','temblar','hombre','blando','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Origin",
 									local : ['argillam','cÄ?sevm','blandvm','ocvlvm â†’ oc'lu','tremvlÄ?re â†’ trem'lare','hominem â†’ hom'ne','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Portuguese",
 									local : ['homem','brando','olho','argila','queijo','tremer','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['arcilla','queso','ojo','temblar','hombre','blando','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+									name:"Meaning",
 									local : [''clay'',''to tremble'',''cheese'',''eye'',''man'',''soft'','']
 								});
 						</script>

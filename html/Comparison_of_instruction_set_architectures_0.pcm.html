@@ -29,87 +29,77 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Max # operand : </label></br> <input id="1" type="number" name="Feature"></br>
+								<label>Max # operand : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Instruction set : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Open : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Registers (excluding FP/vector) : </label></br> <input id="3" type="number" name="Feature"></br>
+								<label>Instruction encoding : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Design : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Extensions : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Bits : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Extensions : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Endianness : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Endianness : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Branch evaluation : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>Introduced : </label></br> <input id="6" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Version : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
-								<label>Open : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Royalty free : </label></br> <input id="7" type="text" name="Feature"></br>
 								</br>	
-								<label>Design : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Instruction set : </label></br> <input id="8" type="text" name="Feature"></br>
 								</br>	
 								<label>Type : </label></br> <input id="9" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Branch evaluation : </label></br> <input id="10" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Royalty free : </label></br> <input id="11" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Version : </label></br> <input id="12" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Bits : </label></br> <input id="13" type="number" name="Feature"></br>
+								<label>Registers (excluding FP/vector) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Instruction encoding : </label></br> <input id="14" type="text" name="Feature"></br>
-								
+								<label>Introduced : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Blackfin','ARM','PA-RISC (HP/PA)','6502','MIPS','PowerPC','RISC-V','SuperH (SH)','MMIX','Motorola 68k','Alpha','Transputer','VAX','System/360 / System/370 / z/Architecture','65k','Crusoe','ARMv8-A','SPARC','x86','AVR32','Z80','S+core','Mico32','DLX','Itanium (IA-64)','Architecture','OpenRISC','eSi-RISC','AVR','M32R','NS320xx','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['MVI, BWX, FIX, CIX','','User-defined instructions','NEON, Jazelle, VFP, TrustZone, LPAE','Extensions','MDMX, MIPS-3D','AltiVec, APU, VSX, Cell','Java Virtual Machine','Intel Virtualization Technology','VIS 1.0, 2.0, 3.0, 4.0','VAX Vector Architecture','None (all extensions of ARMv7 are non-optional)','Multimedia Acceleration eXtensions (MAX), MAX-2','BitBlt instructions','x87, IA-32, MMX, 3DNow!, SSE, SSE2, PAE, x86-64, SSE3, SSE4, SSE5, AVX, AES, FMA','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['Little','Bi','Big','Endianness','Bi (selectable)','Big → Bi','Big/Bi','','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#0").typeahead({
+									name:"Open",
 									local : ['Unknown','No','Open','','Yes','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#1").typeahead({
+									name:"Instruction encoding",
+									local : ['Fixed (32-bit)','','Variable','Variable (16- or 32-bit)','Fixed','Fixed (16- or 32-bit), Variable','Variable (mostly 16-bit, four instructions are 32-bit)','Variable Huffman coded, up to 23 bytes long','Variable (8 to 32 bits)','Fixed (16- or 32-bit)','Instruction encoding','Variable (8 ~ 120 bytes)','Fixed (32-bit), Variable','Fixed (32-bit), Thumb: Fixed (16-bit), Thumb-2: Variable (16- and 32-bit)','Fixed (32-bit). In ARMv7 compatibility mode: Thumb: Fixed (16-bit), Thumb-2: Variable (16- and 32-bit), A64','Variable (64- or 128-bit)','Variable (8-bit to 256 bytes)','Variable (8- to 32-bit)','']
+								});
+								$("#2").typeahead({
+									name:"Design",
 									local : ['CISC','RISC','EPIC','Design','MISC','VLIW','']
 								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['Register Memory / Memory Memory','','Register Memory','Memory Memory','Stack machine','Register Register','Type','Register Register / Register Memory','']
+								$("#3").typeahead({
+									name:"Extensions",
+									local : ['MVI, BWX, FIX, CIX','','User-defined instructions','NEON, Jazelle, VFP, TrustZone, LPAE','Extensions','MDMX, MIPS-3D','AltiVec, APU, VSX, Cell','Java Virtual Machine','Intel Virtualization Technology','VIS 1.0, 2.0, 3.0, 4.0','VAX Vector Architecture','None (all extensions of ARMv7 are non-optional)','Multimedia Acceleration eXtensions (MAX), MAX-2','BitBlt instructions','x87, IA-32, MMX, 3DNow!, SSE, SSE2, PAE, x86-64, SSE3, SSE4, SSE5, AVX, AES, FMA','']
 								});
-								$("#7").typeahead({
-									name:"list7",
+								$("#4").typeahead({
+									name:"Endianness",
+									local : ['Little','Bi','Big','Endianness','Bi (selectable)','Big → Bi','Big/Bi','','']
+								});
+								$("#5").typeahead({
+									name:"Branch evaluation",
 									local : ['','Condition register','Condition code','Compare and branch','Condition register, skip conditioned on an I/O or general purpose register bit, compare and skip','Condition Code (Single bit)','Branch evaluation','Compare and branch and condition register','']
 								});
-								$("#8").typeahead({
-									name:"list8",
-									local : ['No','Yes','','Unknown','Royalty free','']
-								});
-								$("#9").typeahead({
-									name:"list9",
+								$("#6").typeahead({
+									name:"Version",
 									local : ['','3','ARMv7 and earlier','Version','2.07','OSA2015','5','2.0','Rev 2','ARMv8-A','']
 								});
-								$("#10").typeahead({
-									name:"list10",
-									local : ['Fixed (32-bit)','','Variable','Variable (16- or 32-bit)','Fixed','Fixed (16- or 32-bit), Variable','Variable (mostly 16-bit, four instructions are 32-bit)','Variable Huffman coded, up to 23 bytes long','Variable (8 to 32 bits)','Fixed (16- or 32-bit)','Instruction encoding','Variable (8 ~ 120 bytes)','Fixed (32-bit), Variable','Fixed (32-bit), Thumb: Fixed (16-bit), Thumb-2: Variable (16- and 32-bit)','Fixed (32-bit). In ARMv7 compatibility mode: Thumb: Fixed (16-bit), Thumb-2: Variable (16- and 32-bit), A64','Variable (64- or 128-bit)','Variable (8-bit to 256 bytes)','Variable (8- to 32-bit)','']
+								$("#7").typeahead({
+									name:"Royalty free",
+									local : ['No','Yes','','Unknown','Royalty free','']
+								});
+								$("#8").typeahead({
+									name:"Instruction set",
+									local : ['Blackfin','ARM','PA-RISC (HP/PA)','6502','MIPS','PowerPC','RISC-V','SuperH (SH)','MMIX','Motorola 68k','Alpha','Transputer','VAX','System/360 / System/370 / z/Architecture','65k','Crusoe','ARMv8-A','SPARC','x86','AVR32','Z80','S+core','Mico32','DLX','Itanium (IA-64)','Architecture','OpenRISC','eSi-RISC','AVR','M32R','NS320xx','']
+								});
+								$("#9").typeahead({
+									name:"Type",
+									local : ['Register Memory / Memory Memory','','Register Memory','Memory Memory','Stack machine','Register Register','Type','Register Register / Register Memory','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

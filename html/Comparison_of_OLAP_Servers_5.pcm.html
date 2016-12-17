@@ -29,14 +29,6 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Data access - Cell security :</label></br>
-								<input type="radio" name="FeatureData access - Cell security" value="oui">Yes <input type="radio" name="FeatureData access - Cell security" value = "non">No <input type="radio" name="FeatureData access - Cell security" value = "non">Partial </br>
-								
-								</br>	
-								<label>Data access - Visual totals :</label></br>
-								<input type="radio" name="FeatureData access - Visual totals" value="oui">Yes <input type="radio" name="FeatureData access - Visual totals" value = "non">No <input type="radio" name="FeatureData access - Visual totals" value = "non">Partial </br>
-								
-								</br>	
 								<label>Authentication :</label></br>
 											<input type="checkbox" name="Feature" >Host authentication</br>	
 											<input type="checkbox" name="Feature" >SAS token authentication</br>	
@@ -61,28 +53,34 @@ Microsoft Active Directory</br>
 											<input type="checkbox" name="Feature" >Infor Federation Services</br>	
 											<input type="checkbox" name="Feature" >Builtin</br>	
 											<input type="checkbox" name="Feature" >IBM Cognos BI authentication</br>	
-									
-								</br>	
-								<label>Data access - Dimension security :</label></br>
-								<input type="radio" name="FeatureData access - Dimension security" value="oui">Yes <input type="radio" name="FeatureData access - Dimension security" value = "non">No <input type="radio" name="FeatureData access - Dimension security" value = "non">Partial </br>
-								
-								</br>	
-								<label>Network encryption : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>OLAP Server : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>On-the-Fly :</label></br>
 								<input type="radio" name="FeatureOn-the-Fly" value="oui">Yes <input type="radio" name="FeatureOn-the-Fly" value = "non">No <input type="radio" name="FeatureOn-the-Fly" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
+								</br>	
+								<label>Network encryption : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>OLAP Server : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Data access - Visual totals :</label></br>
+								<input type="radio" name="FeatureData access - Visual totals" value="oui">Yes <input type="radio" name="FeatureData access - Visual totals" value = "non">No <input type="radio" name="FeatureData access - Visual totals" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Data access - Dimension security :</label></br>
+								<input type="radio" name="FeatureData access - Dimension security" value="oui">Yes <input type="radio" name="FeatureData access - Dimension security" value = "non">No <input type="radio" name="FeatureData access - Dimension security" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Data access - Cell security :</label></br>
+								<input type="radio" name="FeatureData access - Cell security" value="oui">Yes <input type="radio" name="FeatureData access - Cell security" value = "non">No <input type="radio" name="FeatureData access - Cell security" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Network encryption",
 									local : ['SSL','SSL, AES','Yes','SSL and SSPI','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"OLAP Server",
 									local : ['SAS OLAP Server','MicroStrategy Intelligence Server','Oracle Database OLAP Option','Infor BI OLAP Server','TM1','Microsoft Analysis Services','Essbase','icCube','Jedox OLAP Server','']
 								});
 						</script>

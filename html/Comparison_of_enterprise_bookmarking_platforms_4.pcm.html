@@ -29,64 +29,59 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Access permissions :</label></br>
-								<input type="radio" name="FeatureAccess permissions" value="oui">Yes <input type="radio" name="FeatureAccess permissions" value = "non">No <input type="radio" name="FeatureAccess permissions" value = "non">Partial </br>
-								
-								</br>	
-								<label>LDAP integration :</label></br>
-								<input type="radio" name="FeatureLDAP integration" value="oui">Yes <input type="radio" name="FeatureLDAP integration" value = "non">No <input type="radio" name="FeatureLDAP integration" value = "non">Partial </br>
-								
-								</br>	
-								<label>Role-level permissions : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Encryption level : </label></br> <input id="4" type="text" name="Feature"></br>
+								<label>On-Premises Platform :</label></br>
+								<input type="radio" name="FeatureOn-Premises Platform" value="oui">Yes <input type="radio" name="FeatureOn-Premises Platform" value = "non">No <input type="radio" name="FeatureOn-Premises Platform" value = "non">Partial </br>
 								
 								</br>	
 								<label>Hosted Platform :</label></br>
 								<input type="radio" name="FeatureHosted Platform" value="oui">Yes <input type="radio" name="FeatureHosted Platform" value = "non">No <input type="radio" name="FeatureHosted Platform" value = "non">Partial </br>
 								
 								</br>	
-								<label>Software : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Software : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Workspace-level permissions : </label></br> <input id="7" type="text" name="Feature"></br>
+								<label>Role-level permissions : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Access permissions :</label></br>
+								<input type="radio" name="FeatureAccess permissions" value="oui">Yes <input type="radio" name="FeatureAccess permissions" value = "non">No <input type="radio" name="FeatureAccess permissions" value = "non">Partial </br>
 								
 								</br>	
 								<label>Information-level permissions :</label></br>
 								<input type="radio" name="FeatureInformation-level permissions" value="oui">Yes <input type="radio" name="FeatureInformation-level permissions" value = "non">No <input type="radio" name="FeatureInformation-level permissions" value = "non">Partial </br>
 								
 								</br>	
-								<label>On-Premises Platform :</label></br>
-								<input type="radio" name="FeatureOn-Premises Platform" value="oui">Yes <input type="radio" name="FeatureOn-Premises Platform" value = "non">No <input type="radio" name="FeatureOn-Premises Platform" value = "non">Partial </br>
-								
+								<label>Notes : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Notes : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+								<label>Encryption level : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Multi-user support :</label></br>
 								<input type="radio" name="FeatureMulti-user support" value="oui">Yes <input type="radio" name="FeatureMulti-user support" value = "non">No <input type="radio" name="FeatureMulti-user support" value = "non">Partial </br>
 								
+								</br>	
+								<label>LDAP integration :</label></br>
+								<input type="radio" name="FeatureLDAP integration" value="oui">Yes <input type="radio" name="FeatureLDAP integration" value = "non">No <input type="radio" name="FeatureLDAP integration" value = "non">Partial </br>
+								
+								</br>	
+								<label>Workspace-level permissions : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Software",
+									local : ['Jumper 2.0','Scuttle','Connectbeam','Licorize','Knowledge Plaza','Dogear','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Role-level permissions",
 									local : ['','?','Yes','No','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['HTTPS optionally available','HTTPS is available','?','HTTPS with high-grade 256-bit AES','']
+									name:"Notes",
+									local : ['LDAP integration is available','none','The Lotus Connection Suite with Dogear runs on the AIX (Unix) operating system','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['Jumper 2.0','Scuttle','Connectbeam','Licorize','Knowledge Plaza','Dogear','']
+									name:"Encryption level",
+									local : ['HTTPS optionally available','HTTPS is available','?','HTTPS with high-grade 256-bit AES','']
 								});
 								$("#4").typeahead({
-									name:"list4",
+									name:"Workspace-level permissions",
 									local : ['?','Yes','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['LDAP integration is available','none','The Lotus Connection Suite with Dogear runs on the AIX (Unix) operating system','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

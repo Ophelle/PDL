@@ -29,21 +29,18 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>GeoNetwork - Yes :</label></br>
-								<input type="radio" name="FeatureGeoNetwork - Yes" value="oui">Yes <input type="radio" name="FeatureGeoNetwork - Yes" value = "non">No <input type="radio" name="FeatureGeoNetwork - Yes" value = "non">Partial </br>
-								
+								<label>Name - As a server : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Name - Z39.50 : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Products : </label></br> <input id="2" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Name - As a server : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Name - Z39.50 : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>GeoNetwork - Yes :</label></br>
+								<input type="radio" name="FeatureGeoNetwork - Yes" value="oui">Yes <input type="radio" name="FeatureGeoNetwork - Yes" value = "non">No <input type="radio" name="FeatureGeoNetwork - Yes" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Products",
 									local : ['P1','P5','P15','P3','P7','P4','P12','P2','P11','P13','P10','P8','P9','P6','P14','']
 								});
 						</script>

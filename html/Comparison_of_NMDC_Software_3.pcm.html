@@ -29,33 +29,30 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Software type : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Software type : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Software license : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>FOSS :</label></br>
 								<input type="radio" name="FeatureFOSS" value="oui">Yes <input type="radio" name="FeatureFOSS" value = "non">No <input type="radio" name="FeatureFOSS" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Software license : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Active :</label></br>
 								<input type="radio" name="FeatureActive" value="oui">Yes <input type="radio" name="FeatureActive" value = "non">No <input type="radio" name="FeatureActive" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Other software : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Other software : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Software type",
 									local : ['General library','Link','Bot','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Software license",
 									local : ['GNU GPL','Unknown','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#2").typeahead({
+									name:"Other software",
 									local : ['Hub-Link','MyIrcDcLinks','DC-hublink','Net::DirectConnect','jDCBot','NetChatLink','FlowLib','Kitty','']
 								});
 						</script>

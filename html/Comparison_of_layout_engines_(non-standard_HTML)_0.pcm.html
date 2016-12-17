@@ -29,20 +29,22 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Deprecated in HTML version : </label></br> <input id="1" type="number" name="Feature"></br>
-								
+								<label>Element : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>WebKit : </label></br> <input id="2" type="number" name="Feature"></br>
-								
+								<label>Gecko : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 								</br>	
-								<label>Function : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>KHTML : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Presto : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Trident : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 								</br>	
-								<label>KHTML : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Presto : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Supported first by : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Deprecated in HTML version : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 								</br>	
 								<label>Alternative solution :</label></br>
 											<input type="checkbox" name="Feature" >ul</br>	
@@ -56,39 +58,32 @@
 											<input type="checkbox" name="Feature" >object</br>	
 											<input type="checkbox" name="Feature" >The text</br>	
 											<input type="checkbox" name="Feature" >plain MIME type</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Element : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>WebKit : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 								</br>	
-								<label>Trident : </label></br> <input id="8" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>Supported first by : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Gecko : </label></br> <input id="10" type="number" name="Feature"></br>
-								
+								<label>Function : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Element",
+									local : ['xmp','basefont','listing','center','menu','s','applet','font','strike','u','plaintext','dir','isindex','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['Sets font styles','Menu list','Strike-through','Displays preformatted text','Applies font styles','Centers contents','Designates that all HTML be ignored, and to display the page as is','Underline','Similar to pre and plaintext, but ignores all HTML within and displays as is','Directory list','Insert an applet','Adds a search field','']
+									name:"KHTML",
+									local : ['Yes','Partial','','125','3.3','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Presto",
 									local : ['','Yes','1.0','3.3','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['Yes','Partial','','125','3.3','']
+									name:"Supported first by",
+									local : ['?','Internet Explorer','HotJava','Netscape','IETF','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['xmp','basefont','listing','center','menu','s','applet','font','strike','u','plaintext','dir','isindex','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['?','Internet Explorer','HotJava','Netscape','IETF','']
+									name:"Function",
+									local : ['Sets font styles','Menu list','Strike-through','Displays preformatted text','Applies font styles','Centers contents','Designates that all HTML be ignored, and to display the page as is','Underline','Similar to pre and plaintext, but ignores all HTML within and displays as is','Directory list','Insert an applet','Adds a search field','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

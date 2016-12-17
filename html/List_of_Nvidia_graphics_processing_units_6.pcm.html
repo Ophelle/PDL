@@ -29,26 +29,16 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Memory (MB) : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Memory clock (MHz) : </label></br> <input id="2" type="number" name="Feature"></br>
+								<label>Core clock (MHz) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Memory - Bus width (bit) : </label></br> <input id="3" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Core config : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Core clock (MHz) : </label></br> <input id="4" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Bus interface : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Core config : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Memory (MB) : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fillrate - MTextels/s : </label></br> <input id="7" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Model : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Launch :</label></br>
 											<input type="checkbox" name="Feature" >January 27</br>	
@@ -61,58 +51,55 @@
 											<input type="checkbox" name="Feature" >March 15</br>	
 											<input type="checkbox" name="Feature" >May 12</br>	
 											<input type="checkbox" name="Feature" >February 17</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Fillrate - MPixels/s : </label></br> <input id="9" type="number" name="Feature"></br>
+								<label>Memory clock (MHz) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Code name : </label></br> <input id="10" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fillrate - MOperations/s : </label></br> <input id="11" type="number" name="Feature"></br>
+								<label>Fab (nm) : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Model : </label></br> <input id="12" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Memory - Bus type : </label></br> <input id="13" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fab (nm) : </label></br> <input id="14" type="number" name="Feature"></br>
+								<label>Fillrate - MPixels/s : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Fillrate - MVertices/s : </label></br> <input id="15" type="number" name="Feature"></br>
+								<label>Fillrate - MOperations/s : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="16" type="number" name="Feature"></br>
+								<label>Fillrate - MTextels/s : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
+								</br>	
+								<label>Fillrate - MVertices/s : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Code name : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Memory - Bus width (bit) : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Memory - Bus type : </label></br> <input id="5" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['AGP 8X
-AGP 4X
-PCI','AGP 8X
-PCI','AGP 8X','PCI-E x16','']
+								$("#0").typeahead({
+									name:"Memory (MB)",
+									local : ['128256','128','64128256','64128','256','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Core config",
 									local : ['4:1:4:4','4:3:4:4','4:2:8:4','4:3:8:4','']
 								});
+								$("#2").typeahead({
+									name:"Bus interface",
+									local : ['AGP 8XAGP 4XPCI','AGP 8XPCI','AGP 8X','PCI-E x16','']
+								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['128
-256','128','64
-128
-256','64
-128','256','']
+									name:"Model",
+									local : ['GeForce FX 5700 Ultra','GeForce FX 5700 VE','GeForce FX 5700','GeForce FX 5600 XT','GeForce FX 5200 Ultra','GeForce FX 5600 Ultra','GeForce PCX 5950','GeForce FX 5800 Ultra','GeForce FX 5600','GeForce PCX 5300','GeForce FX 5200','GeForce FX 5700 LE','GeForce FX 5900 ZT','GeForce FX 5900','GeForce PCX 5750','GeForce FX 5600 Ultra Rev.2','GeForce FX 5800','GeForce FX 5500','GeForce FX 5900 XT','GeForce PCX 5900','GeForce FX 5950 Ultra','GeForce FX 5900 Ultra','GeForce FX 5700 Ultra GDDR3','']
 								});
 								$("#4").typeahead({
-									name:"list4",
+									name:"Code name",
 									local : ['NV35','NV30','NV34','NV36','NV31','NV38','NV34B','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['GeForce FX 5700 Ultra','GeForce FX 5700 VE','GeForce FX 5700','GeForce FX 5600 XT','GeForce FX 5200 Ultra','GeForce FX 5600 Ultra','GeForce PCX 5950','GeForce FX 5800 Ultra','GeForce FX 5600','GeForce PCX 5300','GeForce FX 5200','GeForce FX 5700 LE','GeForce FX 5900 ZT','GeForce FX 5900','GeForce PCX 5750','GeForce FX 5600 Ultra Rev.2','GeForce FX 5800','GeForce FX 5500','GeForce FX 5900 XT','GeForce PCX 5900','GeForce FX 5950 Ultra','GeForce FX 5900 Ultra','GeForce FX 5700 Ultra GDDR3','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

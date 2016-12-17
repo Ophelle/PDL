@@ -29,25 +29,22 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>official or officially supported extensions and libraries : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>official or officially supported extensions and libraries : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>basic system capabilities : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>third-party software component or not supported : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>basic system capabilities : </label></br> <input id="3" type="text" name="Feature"></br>
-								
 						<script>
+								$("#0").typeahead({
+									name:"official or officially supported extensions and libraries",
+									local : ['']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"basic system capabilities",
 									local : ['']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"third-party software component or not supported",
 									local : ['']
 								});
 						</script>

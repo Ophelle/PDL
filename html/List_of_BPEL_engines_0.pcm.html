@@ -29,17 +29,19 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Edition : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Product : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Release Date : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Vendor : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Framework : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Product Page : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								</br>	
+								<label>Product : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Vendor : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
 								<label>Compatibility :</label></br>
 											<input type="checkbox" name="Feature" >BPEL4WS 1.1</br>	
@@ -61,51 +63,35 @@
 											<input type="checkbox" name="Feature" >WS-BPEL 2.0</br>	
 											<input type="checkbox" name="Feature" >BPMN 2.0</br>	
 											<input type="checkbox" name="Feature" >WSDL 1.1 and 2.0</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Edition : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Framework : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Release Date : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
+								$("#0").typeahead({
+									name:"Edition",
+									local : ['1.3.61.0.164','1.1','6.0.1','11g','8.0','','6.0.1.3','2.3.1','4.5','5.16.4','5.0.1','1.0.1','4.9.0','3.0','Biztalk 2010','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['Apache 2.0','LGPL','CDDL','Proprietary','GPL and Proprietary','Apache','']
+									name:"Release Date",
+									local : ['2010-04','2012-13','2013-10-01','','2012-01-23','2010-02-25','2013-10-122006-06-07','2009-12-08','2006-09-29','2014-01-27','2014-10-16','2010','2006','2010-09','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['BizTalk Server','iBolt Server','jBPM','Open ESB','ExpressBPEL','Parasoft BPEL Maestro','WebSphere Process Server','SAP Exchange Infrastructure','Oracle BPEL Process Manager
-(formerly Collaxa BPEL Orchestration Server)','OW2 Orchestra','Petals BPEL Engine','ActiveVOS','Virtuoso Universal Server','Activiti','Apache ODE','']
+									name:"Framework",
+									local : ['Apache Axis, JBIJava EE','ApacheAxis','Servlet or Java EE','Java EE, JBI','Java EE','Apache AxisApache CXFOSGiJava EE','Java','.NET','Servlet','','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['OW2','OpenESB Community','CodeBrew Technologies Pvt.','SAP AG','Magic Software Enterprises','ASF','Alfresco and the Activiti community','jBoss','IBM','Petals Link','Parasoft','Active Endpoints','Oracle Corporation','OpenLink Software','Microsoft','']
+									name:"License",
+									local : ['Apache 2.0','LGPL','CDDL','Proprietary','GPL and Proprietary','Apache','']
 								});
 								$("#4").typeahead({
-									name:"list4",
+									name:"Product Page",
 									local : ['','']
 								});
 								$("#5").typeahead({
-									name:"list5",
-									local : ['1.3.6
-1.0.164','1.1','6.0.1','11g','8.0','','6.0.1.3','2.3.1','4.5','5.16.4','5.0.1','1.0.1','4.9.0','3.0','Biztalk 2010','']
+									name:"Product",
+									local : ['BizTalk Server','iBolt Server','jBPM','Open ESB','ExpressBPEL','Parasoft BPEL Maestro','WebSphere Process Server','SAP Exchange Infrastructure','Oracle BPEL Process Manager(formerly Collaxa BPEL Orchestration Server)','OW2 Orchestra','Petals BPEL Engine','ActiveVOS','Virtuoso Universal Server','Activiti','Apache ODE','']
 								});
 								$("#6").typeahead({
-									name:"list6",
-									local : ['Apache Axis, JBI
-Java EE','ApacheAxis','Servlet or Java EE','Java EE, JBI','Java EE','Apache Axis
-Apache CXF
-OSGi
-Java EE','Java','.NET','Servlet','','']
-								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['2010-04','2012-13','2013-10-01','','2012-01-23','2010-02-25','2013-10-12
-2006-06-07','2009-12-08','2006-09-29','2014-01-27','2014-10-16','2010','2006','2010-09','']
+									name:"Vendor",
+									local : ['OW2','OpenESB Community','CodeBrew Technologies Pvt.','SAP AG','Magic Software Enterprises','ASF','Alfresco and the Activiti community','jBoss','IBM','Petals Link','Parasoft','Active Endpoints','Oracle Corporation','OpenLink Software','Microsoft','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

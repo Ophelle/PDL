@@ -29,32 +29,28 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Assembler : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Instruction set : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Host platform : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Host platform : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Instruction set : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Assembler : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['various','IBM AIX','Apple Power Macintosh','PowerPC Amiga','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['PowerPC','POWER','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"License",
 									local : ['Proprietary','Free','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Instruction set",
+									local : ['PowerPC','POWER','']
+								});
+								$("#2").typeahead({
+									name:"Host platform",
+									local : ['various','IBM AIX','Apple Power Macintosh','PowerPC Amiga','']
+								});
+								$("#3").typeahead({
+									name:"Assembler",
 									local : ['MPW Power Assembler','IBM AIX assembler','Power Fantasm','StormPowerASM','vasm','']
 								});
 						</script>

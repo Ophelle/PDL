@@ -29,47 +29,41 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>KHTML - Presto : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>KHTML - Presto : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label> - No :</label></br>
 								<input type="radio" name="Feature - No" value="oui">Yes <input type="radio" name="Feature - No" value = "non">No <input type="radio" name="Feature - No" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
+								<label>Interface CharacterDataEditVAL : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Exception ExceptionVAL : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
 								<label>Interface ElementEditVAL : </label></br> <input id="3" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Exception ExceptionVAL : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Interface DocumentEditVAL : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Interface CharacterDataEditVAL : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Interface NodeEditVAL : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Interface DocumentEditVAL : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Interface NodeEditVAL : </label></br> <input id="5" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Interface ElementEditVAL','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Exception ExceptionVAL','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"Interface CharacterDataEditVAL",
 									local : ['Interface CharacterDataEditVAL','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['Interface NodeEditVAL','']
+								$("#1").typeahead({
+									name:"Exception ExceptionVAL",
+									local : ['Exception ExceptionVAL','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#2").typeahead({
+									name:"Interface ElementEditVAL",
+									local : ['Interface ElementEditVAL','']
+								});
+								$("#3").typeahead({
+									name:"Interface DocumentEditVAL",
 									local : ['Interface DocumentEditVAL','']
+								});
+								$("#4").typeahead({
+									name:"Interface NodeEditVAL",
+									local : ['Interface NodeEditVAL','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

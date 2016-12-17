@@ -29,134 +29,89 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Profiling/Debugging : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Used in : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Used in : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Security : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Soft real-time support : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Virtualization : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Integrated firewall : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Integrated firewall : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Multiple architecture
-support
-(also see
-section below). :</label></br>
-								<input type="radio" name="FeatureMultiple architecture
-support
-(also see
-section below)." value="oui">Yes <input type="radio" name="FeatureMultiple architecture
-support
-(also see
-section below)." value = "non">No <input type="radio" name="FeatureMultiple architecture
-support
-(also see
-section below)." value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Type : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Kernel name : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Executable
-format
-(also see
-section
-below) : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Can keep RTC in UT : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>Multitasking :</label></br>
 								<input type="radio" name="FeatureMultitasking" value="oui">Yes <input type="radio" name="FeatureMultitasking" value = "non">No <input type="radio" name="FeatureMultitasking" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Creator : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label>Executableformat(also seesectionbelow) : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
-								<label>Security : </label></br> <input id="10" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Type : </label></br> <input id="11" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Can keep RTC in UT : </label></br> <input id="12" type="text" name="Feature"></br>
-								
+								<label>Multiple architecturesupport(also seesection below). :</label></br>
+								<input type="radio" name="FeatureMultiple architecturesupport(also seesection below)." value="oui">Yes <input type="radio" name="FeatureMultiple architecturesupport(also seesection below)." value = "non">No <input type="radio" name="FeatureMultiple architecturesupport(also seesection below)." value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
 								<label>SMP support :</label></br>
 								<input type="radio" name="FeatureSMP support" value="oui">Yes <input type="radio" name="FeatureSMP support" value = "non">No <input type="radio" name="FeatureSMP support" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Hard real-time support : </label></br> <input id="14" type="text" name="Feature"></br>
-								
+								<label>Kernel name : </label></br> <input id="7" type="text" name="Feature"></br>
 								</br>	
-								<label>Virtualization : </label></br> <input id="15" type="text" name="Feature"></br>
-								
+								<label>Profiling/Debugging : </label></br> <input id="8" type="text" name="Feature"></br>
+								</br>	
+								<label>Soft real-time support : </label></br> <input id="9" type="text" name="Feature"></br>
+								</br>	
+								<label>Creator : </label></br> <input id="10" type="text" name="Feature"></br>
+								</br>	
+								<label>Hard real-time support : </label></br> <input id="11" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Used in",
+									local : ['MINIX 3','SunOS','Solaris,OpenSolaris,GNU/kOpenSolaris (Nexenta OS)','OpenBSD','?','Trix, GNU/kTrix','OS/2 version 2 and above','AmigaOS 4','Linux, Android, webOS, Firefox OS, Chrome OS, Syllable Server, Mastodon Linux, OpenBSD/Linux, Plan 9/Linux, Sailfish OS, Tizen, others','L4','Mac OS X, iOS,OpenDarwin,PureDarwinGNU/Darwin','Rockbox','NeXTSTEP and OPENSTEP for Mach','FreeBSD,Debian GNU/kFreeBSD,Gentoo/FreeBSD,Orbis OS','AmigaOS','HelenOS','GNU/Hurd (Arch Hurd, Debian GNU/Hurd, NixOS)','Compute Node Linux','Inferno','DragonFly BSD','NetBSD,GNU/kNetBSD (Debian GNU/NetBSD),','Plan 9 from Bell Labs','part of GNU Hurd, used in GNU/Hurd','ReactOS','NetWare','Windows NT, 2000,XP, 2003, Vista, Windows 7, Windows 8','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['?','Yes','KDB, DDB, KGDB, DTrace, hwpmc','OProfile, kprobe, SystemTap, JProbe, ftrace, KDB, KGDB, kernel marker, perf tools','DDB, KGDB, tprof','Call profiling, statistical profiling, Minix Debugger (mdb)','DDB, KGDB','L4/Fiasco','Event Tracing','DTrace, CPU profiling, microstate accounting, perf counters, kernel lock stats, kstats, mdb, kmdb','DTrace','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['MINIX 3','SunOS','Solaris,
-OpenSolaris,
-GNU/kOpenSolaris (Nexenta OS)','OpenBSD','?','Trix, GNU/kTrix','OS/2 version 2 and above','AmigaOS 4','Linux, Android, webOS, Firefox OS, Chrome OS, Syllable Server, Mastodon Linux, OpenBSD/Linux, Plan 9/Linux, Sailfish OS, Tizen, others','L4','Mac OS X, iOS,
-OpenDarwin,
-PureDarwin
-GNU/Darwin','Rockbox','NeXTSTEP and OPENSTEP for Mach','FreeBSD,
-Debian GNU/kFreeBSD,
-Gentoo/FreeBSD,
-Orbis OS','AmigaOS','HelenOS','GNU/Hurd (Arch Hurd, Debian GNU/Hurd, NixOS)','Compute Node Linux','Inferno','DragonFly BSD','NetBSD,
-GNU/kNetBSD (Debian GNU/NetBSD),','Plan 9 from Bell Labs','part of GNU Hurd, used in GNU/Hurd','ReactOS','NetWare','Windows NT, 2000,
-XP, 2003, Vista, Windows 7, Windows 8','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['?','No','Yes','POSIX real-time scheduling extensions','CONFIG_PREEMPT','Real-time scheduler','L4/Fiasco','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['?','No','IPFilter, PF, NPF','Yes','IPFilter, Ipfirewall,
-PF','ipmux','*ipfwadm (2.0 –)
- ipchains (2.2 –)
- Netfilter (2.4 – 3.x)
- nftables (3.13 –)','IPFilter','Ipfirewall,
-PF','Ipfirewall,
-PF (starting in Lion)','PF','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['XNU (Darwin kernel)','Rockbox kernel','Mach','OS/2 kernel','Plan 9 kernel','SunOS kernel','DragonFly BSD kernel','Linux kernel','GNU Mach','Agnix','Solaris kernel','FreeBSD kernel','MkLinux','OpenBSD kernel','NetWare kernel','Windows NT kernel','Amiga Exec SG (2nd Generation)','L4','Inferno kernel','NetBSD kernel','Amiga Exec','MINIX 3 kernel','ReactOS kernel','GNU Hurd','Compute Node Linux','SPARTAN kernel','Trix kernel','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['?','HUNK','ELF, others - platform dependent','ELF/HUNK','ELF, others','ELF','Mach-O','LX','a.out','ELF, a.out','NLM','PE, others?','ELF (32-bit only until
-Solaris 7 in 1998)','No','']
-								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['Novell','The NetBSD Project','Matt Dillon','Commodore International','The Rockbox Project','Hyperion Entertainment','?','GNU Project/Free Software Foundation','OpenBSD developers','Jakub Jermar','Cray Inc.','Bell Labs / Vita Nuova Holdings','IBM','Massachusetts Institute of Technology','OSF Research Institute and Apple Computer','Carnegie Mellon University','Andrew S. Tanenbaum','Jochen Liedtke','Apple Computer','Microsoft','ReactOS Foundation','Sun Microsystems','The FreeBSD Project','Linus Torvalds','Bell Labs','']
-								});
-								$("#8").typeahead({
-									name:"list8",
+									name:"Security",
 									local : ['No','?','Unix permissions, ACL, RBAC, Auditing, Privileges, Zones, Trusted Extensions','Unix permissions, POSIX ACL, POSIX Capabilities, keyctl, LSM(SELinux, SMACK, TOMOYO Linux, AppArmor)','ACL','Unix permissions, POSIX ACL, POSIX Capabilities','Afterburner/L4 , Marzipan , capabilities in L4/Fiasco','Unix permissions, POSIX.1e and NFSv4 ACLs, Capsicum, TrustedBSD MAC, OpenBSM','Yes','Unix permissions','kauth, Unix permissions','Unix permissions, ACL','']
 								});
-								$("#9").typeahead({
-									name:"list9",
+								$("#2").typeahead({
+									name:"Virtualization",
+									local : ['?','chroot, jail, vkernel','chroot, Xen','No','cgroups, chroot, Lguest, Xen, KVM, kvm-lite, LXC','Yes','Zones, chroot','Xen, chroot','Hyper-V','chroot, jail, bhyve','']
+								});
+								$("#3").typeahead({
+									name:"Integrated firewall",
+									local : ['?','No','IPFilter, PF, NPF','Yes','IPFilter, Ipfirewall,PF','ipmux','*ipfwadm (2.0 –) ipchains (2.2 –) Netfilter (2.4 – 3.x) nftables (3.13 –)','IPFilter','Ipfirewall,PF','Ipfirewall,PF (starting in Lion)','PF','']
+								});
+								$("#4").typeahead({
+									name:"Type",
 									local : ['Exokernel (atypical)','multiserver microkernel','monolithic','hybrid','?','microkernel','virtual machine','monolithic, anykernel using rump kernel architecture','']
 								});
-								$("#10").typeahead({
-									name:"list10",
+								$("#5").typeahead({
+									name:"Can keep RTC in UT",
 									local : ['?','Yes','No','Unofficial','']
 								});
-								$("#11").typeahead({
-									name:"list11",
-									local : ['?','No','Kernel preemption','(CONFIG_PREEMPT_RT Patch)','']
+								$("#6").typeahead({
+									name:"Executableformat(also seesectionbelow)",
+									local : ['?','HUNK','ELF, others - platform dependent','ELF/HUNK','ELF, others','ELF','Mach-O','LX','a.out','ELF, a.out','NLM','PE, others?','ELF (32-bit only untilSolaris 7 in 1998)','No','']
 								});
-								$("#12").typeahead({
-									name:"list12",
-									local : ['?','chroot, jail, vkernel','chroot, Xen','No','cgroups, chroot, Lguest, Xen, KVM, kvm-lite, LXC','Yes','Zones, chroot','Xen, chroot','Hyper-V','chroot, jail, bhyve','']
+								$("#7").typeahead({
+									name:"Kernel name",
+									local : ['XNU (Darwin kernel)','Rockbox kernel','Mach','OS/2 kernel','Plan 9 kernel','SunOS kernel','DragonFly BSD kernel','Linux kernel','GNU Mach','Agnix','Solaris kernel','FreeBSD kernel','MkLinux','OpenBSD kernel','NetWare kernel','Windows NT kernel','Amiga Exec SG (2nd Generation)','L4','Inferno kernel','NetBSD kernel','Amiga Exec','MINIX 3 kernel','ReactOS kernel','GNU Hurd','Compute Node Linux','SPARTAN kernel','Trix kernel','']
+								});
+								$("#8").typeahead({
+									name:"Profiling/Debugging",
+									local : ['?','Yes','KDB, DDB, KGDB, DTrace, hwpmc','OProfile, kprobe, SystemTap, JProbe, ftrace, KDB, KGDB, kernel marker, perf tools','DDB, KGDB, tprof','Call profiling, statistical profiling, Minix Debugger (mdb)','DDB, KGDB','L4/Fiasco','Event Tracing','DTrace, CPU profiling, microstate accounting, perf counters, kernel lock stats, kstats, mdb, kmdb','DTrace','']
+								});
+								$("#9").typeahead({
+									name:"Soft real-time support",
+									local : ['?','No','Yes','POSIX real-time scheduling extensions','CONFIG_PREEMPT','Real-time scheduler','L4/Fiasco','']
+								});
+								$("#10").typeahead({
+									name:"Creator",
+									local : ['Novell','The NetBSD Project','Matt Dillon','Commodore International','The Rockbox Project','Hyperion Entertainment','?','GNU Project/Free Software Foundation','OpenBSD developers','Jakub Jermar','Cray Inc.','Bell Labs / Vita Nuova Holdings','IBM','Massachusetts Institute of Technology','OSF Research Institute and Apple Computer','Carnegie Mellon University','Andrew S. Tanenbaum','Jochen Liedtke','Apple Computer','Microsoft','ReactOS Foundation','Sun Microsystems','The FreeBSD Project','Linus Torvalds','Bell Labs','']
+								});
+								$("#11").typeahead({
+									name:"Hard real-time support",
+									local : ['?','No','Kernel preemption','(CONFIG_PREEMPT_RT Patch)','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

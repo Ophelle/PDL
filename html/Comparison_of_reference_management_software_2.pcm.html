@@ -29,8 +29,18 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Medline :</label></br>
+								<input type="radio" name="FeatureMedline" value="oui">Yes <input type="radio" name="FeatureMedline" value = "non">No <input type="radio" name="FeatureMedline" value = "non">Partial </br>
+								
+								</br>	
+								<label>Other : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Endnote/Refer/BibIX :</label></br>
 								<input type="radio" name="FeatureEndnote/Refer/BibIX" value="oui">Yes <input type="radio" name="FeatureEndnote/Refer/BibIX" value = "non">No <input type="radio" name="FeatureEndnote/Refer/BibIX" value = "non">Partial </br>
+								
+								</br>	
+								<label>RIS :</label></br>
+								<input type="radio" name="FeatureRIS" value="oui">Yes <input type="radio" name="FeatureRIS" value = "non">No <input type="radio" name="FeatureRIS" value = "non">Partial </br>
 								
 								</br>	
 								<label>BibTeX :</label></br>
@@ -41,27 +51,15 @@
 								<input type="radio" name="FeatureMODS XML" value="oui">Yes <input type="radio" name="FeatureMODS XML" value = "non">No <input type="radio" name="FeatureMODS XML" value = "non">Partial </br>
 								
 								</br>	
-								<label>Software : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Medline :</label></br>
-								<input type="radio" name="FeatureMedline" value="oui">Yes <input type="radio" name="FeatureMedline" value = "non">No <input type="radio" name="FeatureMedline" value = "non">Partial </br>
-								
-								</br>	
-								<label>RIS :</label></br>
-								<input type="radio" name="FeatureRIS" value="oui">Yes <input type="radio" name="FeatureRIS" value = "non">No <input type="radio" name="FeatureRIS" value = "non">Partial </br>
-								
-								</br>	
-								<label>Other : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Software : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['BibSonomy','CiteULike','Bookends','Paperpile','Bibus','Biblioscape','refbase','Zotero','BibBase','Sente','Qiqqa','Referencer','RefWorks','RefDB','KBibTeX','Wikindx','Mendeley','Pybliographer','Papers','Aigaion','ReadCube','JabRef','Docear','WizFolio','SciRef','Bebop','BibDesk','colwiz','Citavi','EndNote','Reference Manager','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Other",
 									local : ['PDF, PostScript, HTML, XML, RTF','Plain text, RTF','COinS, Delicious','Ovid','none','No','BibTeXML, DocBook, OpenDocument for OO.o, SQL database, user-customizable','unAPI','RDF, TEI, Wikipedia citation templates, Endnote XML','various','user-customizable','SQLite','COinS, OpenDocument for OO.o, SRW XML via SRU, unAPI, Word XML','EndNote XML, CSL formatted HTML','SRW XML via SRU web service, DocBook, TEI','MEDLARS, TSV, CSV, Reference Manager XML, user-customizable','Endnote XML','Bookends, CSV, Endnote XML, PDF','various user-customizable','COinS','Endnote XML, user customizable','']
+								});
+								$("#1").typeahead({
+									name:"Software",
+									local : ['BibSonomy','CiteULike','Bookends','Paperpile','Bibus','Biblioscape','refbase','Zotero','BibBase','Sente','Qiqqa','Referencer','RefWorks','RefDB','KBibTeX','Wikindx','Mendeley','Pybliographer','Papers','Aigaion','ReadCube','JabRef','Docear','WizFolio','SciRef','Bebop','BibDesk','colwiz','Citavi','EndNote','Reference Manager','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

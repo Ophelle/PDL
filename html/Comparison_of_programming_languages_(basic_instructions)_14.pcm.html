@@ -29,26 +29,23 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Argument values : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Argument counts : </label></br> <input id="1" type="text" name="Feature"></br>
-								
 								</br>	
 								<label>Program name / Script name : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Argument values : </label></br> <input id="3" type="text" name="Feature"></br>
-								
 						<script>
+								$("#0").typeahead({
+									name:"Argument values",
+									local : ['','}','(all arguments)','or','N/A','?','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Argument counts",
 									local : ['or','','N/A','(string parsing)','}','?','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Program name / Script name",
 									local : ['first argument','','N/A','Application.ExecutableFile.Name','?','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['','}','(all arguments)','or','N/A','?','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

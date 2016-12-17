@@ -29,64 +29,58 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Infor BI OLAP Server : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>TM1 : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Jedox OLAP Server : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>OLAP Server : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Essbase : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>SAS OLAP Server : </label></br> <input id="6" type="number" name="Feature"></br>
-								
+								<label>Jedox OLAP Server : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Microsoft Analysis Services :</label></br>
 											<input type="checkbox" name="Feature" >2</br>	
 											<input type="checkbox" name="Feature" >147</br>	
 											<input type="checkbox" name="Feature" >483</br>	
 											<input type="checkbox" name="Feature" >647</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>MicroStrategy Intelligence Server : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>MicroStrategy Intelligence Server : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Essbase : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>icCube :</label></br>
 											<input type="checkbox" name="Feature" >2</br>	
 											<input type="checkbox" name="Feature" >147</br>	
 											<input type="checkbox" name="Feature" >483</br>	
 											<input type="checkbox" name="Feature" >647</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>OLAP Server : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Infor BI OLAP Server : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>TM1 : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>SAS OLAP Server : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 						<script>
+								$("#0").typeahead({
+									name:"Jedox OLAP Server",
+									local : ['2^32','2^32 (32 bits) / 2^64 (64 bits)','250','?','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"OLAP Server",
 									local : ['# levels in hierarchy','# dimension members','# hierarchies in dimension','# cubes','# measures','# dimensions','# dimensions in cube','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['10,000,000','?','30','']
+									name:"MicroStrategy Intelligence Server",
+									local : ['?','Unrestricted','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['Unrestricted','?','256','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['2^32','2^32 (32 bits) / 2^64 (64 bits)','250','?','']
-								});
-								$("#5").typeahead({
-									name:"list5",
+									name:"Essbase",
 									local : ['?','256','20,000,000 (ASO), 1,000,000 (BSO)','24','']
 								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['?','Unrestricted','']
+								$("#4").typeahead({
+									name:"Infor BI OLAP Server",
+									local : ['10,000,000','?','30','']
+								});
+								$("#5").typeahead({
+									name:"TM1",
+									local : ['Unrestricted','?','256','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

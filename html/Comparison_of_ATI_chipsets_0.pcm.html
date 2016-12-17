@@ -29,28 +29,10 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Codename : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Model : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Southbridge :</label></br>
-											<input type="checkbox" name="Feature" >SB450</br>	
-											<input type="checkbox" name="Feature" >SB460</br>	
-											<input type="checkbox" name="Feature" >SB600</br>	
-											<input type="checkbox" name="Feature" >ULi M1575</br>	
-											<input type="checkbox" name="Feature" >
-ULi M1575</br>	
-											<input type="checkbox" name="Feature" >SB400</br>	
-											<input type="checkbox" name="Feature" >ULi M1573</br>	
-											<input type="checkbox" name="Feature" >ATI IXP200</br>	
-											<input type="checkbox" name="Feature" >IXP250</br>	
-											<input type="checkbox" name="Feature" >VIA VT82C686B</br>	
-											<input type="checkbox" name="Feature" >ALI M1535D+</br>	
-											<input type="checkbox" name="Feature" >SB300C</br>	
-											<input type="checkbox" name="Feature" >SB380</br>	
-											<input type="checkbox" name="Feature" >SB210
-(IXP200</br>	
-											<input type="checkbox" name="Feature" >250)</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								<label>Fabrication process (nm) : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 								</br>	
 								<label>Processors Supported :</label></br>
 											<input type="checkbox" name="Feature" >Athlon 64</br>	
@@ -77,23 +59,11 @@ Sempron
  Mobile Sempron</br>	
 											<input type="checkbox" name="Feature" >
  Turion 64</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Year : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>NB-SB Interface : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fabrication process (nm) : </label></br> <input id="6" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>Crossfire Enabled :</label></br>
 								<input type="radio" name="FeatureCrossfire Enabled" value="oui">Yes <input type="radio" name="FeatureCrossfire Enabled" value = "non">No <input type="radio" name="FeatureCrossfire Enabled" value = "non">Partial </br>
 											<input type="text"/></br>								
-								</br>	
-								<label>Model : </label></br> <input id="8" type="text" name="Feature"></br>
-								
 								</br>	
 								<label>Features :</label></br>
 											<input type="checkbox" name="Feature" >Radeon 9000 
@@ -105,43 +75,61 @@ IGP</br>
 IGP</br>	
 											<input type="checkbox" name="Feature" >300 MHz</br>	
 											<input type="checkbox" name="Feature" >400 MHz</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>FSB/HT Frequency (MHz) : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+								<label>Codename : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Notes : </label></br> <input id="11" type="text" name="Feature"></br>
-								
+								<label>FSB/HT Frequency (MHz) : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Southbridge :</label></br>
+											<input type="checkbox" name="Feature" >SB450</br>	
+											<input type="checkbox" name="Feature" >SB460</br>	
+											<input type="checkbox" name="Feature" >SB600</br>	
+											<input type="checkbox" name="Feature" >ULi M1575</br>	
+											<input type="checkbox" name="Feature" >
+ULi M1575</br>	
+											<input type="checkbox" name="Feature" >SB400</br>	
+											<input type="checkbox" name="Feature" >ULi M1573</br>	
+											<input type="checkbox" name="Feature" >ATI IXP200</br>	
+											<input type="checkbox" name="Feature" >IXP250</br>	
+											<input type="checkbox" name="Feature" >VIA VT82C686B</br>	
+											<input type="checkbox" name="Feature" >ALI M1535D+</br>	
+											<input type="checkbox" name="Feature" >SB300C</br>	
+											<input type="checkbox" name="Feature" >SB380</br>	
+											<input type="checkbox" name="Feature" >SB210
+(IXP200</br>	
+											<input type="checkbox" name="Feature" >250)</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Notes : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Year : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>NB-SB Interface : </label></br> <input id="5" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Model",
+									local : ['ATI Radeon  Xpress 200','ATI Radeon  Xpress 200M(1100/1150)','IGP 320M','IGP 320','ATI Radeon Xpress 1150(ATI Radeon Xpress 200)','ATI CrossFire Xpress 1600(ATI Radeon  Xpress 200 Crossfire Edition)','ATI Radeon Xpress 3200','ATI Radeon  Xpress 200P','','ATI Radeon 380M IGP','ATI Radeon Xpress 1100(ATI Radeon Xpress 200)','ATI Radeon 380 IGP','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Codename",
 									local : ['RS480','RS485','RS380M','ATI A3','RX380','RD480','RS480M','RS482','ATI U1','RS380','RX480','RD580','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['2002','May 23, 2006','Sep 27 2005','Nov 8 2004','','March 1, 2006','2005','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['A-Link Express II','','A-Link/PCI','A-Link Express','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['ATI Radeon  Xpress 200','ATI Radeon  Xpress 200M
-(1100/1150)','IGP 320M','IGP 320','ATI Radeon Xpress 1150
-(ATI Radeon Xpress 200)','ATI CrossFire Xpress 1600
-(ATI Radeon  Xpress 200 Crossfire Edition)','ATI Radeon Xpress 3200','ATI Radeon  Xpress 200P','','ATI Radeon 380M IGP','ATI Radeon Xpress 1100
-(ATI Radeon Xpress 200)','ATI Radeon 380 IGP','']
-								});
-								$("#5").typeahead({
-									name:"list5",
+									name:"FSB/HT Frequency (MHz)",
 									local : ['266/200 (FSB)','1000 BI-DIRECTIONAL','800? BI-DIRECTIONAL','800 BI-DIRECTIONAL','']
 								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['','HydraVision, Video Immersion, TV-out','Mobile chipset 
-powerplay 5.0','Mobile chipset 
- powerplay 4.0','ATI PowerPlay, HydraVision, Video Immersion, TV-out','No sideport memory','']
+								$("#3").typeahead({
+									name:"Notes",
+									local : ['','HydraVision, Video Immersion, TV-out','Mobile chipset powerplay 5.0','Mobile chipset  powerplay 4.0','ATI PowerPlay, HydraVision, Video Immersion, TV-out','No sideport memory','']
+								});
+								$("#4").typeahead({
+									name:"Year",
+									local : ['2002','May 23, 2006','Sep 27 2005','Nov 8 2004','','March 1, 2006','2005','']
+								});
+								$("#5").typeahead({
+									name:"NB-SB Interface",
+									local : ['A-Link Express II','','A-Link/PCI','A-Link Express','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

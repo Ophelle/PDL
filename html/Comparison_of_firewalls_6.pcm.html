@@ -29,51 +29,45 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>IDS (Intrusion Detection System) : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Sniffer : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>VPN (Virtual Private Network) : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Profile selection : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>IDS (Intrusion Detection System) : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Can: : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Profile selection : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Sniffer : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>AV  (Anti-Virus) : </label></br> <input id="6" type="text" name="Feature"></br>
-								
 								</br>	
 								<label>NAT (static, dynamic w/o ports, PAT) :</label></br>
 								<input type="radio" name="FeatureNAT (static, dynamic w/o ports, PAT)" value="oui">Yes <input type="radio" name="FeatureNAT (static, dynamic w/o ports, PAT)" value = "non">No <input type="radio" name="FeatureNAT (static, dynamic w/o ports, PAT)" value = "non">Partial </br>
 								
+								</br>	
+								<label>AV  (Anti-Virus) : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>VPN (Virtual Private Network) : </label></br> <input id="5" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Sniffer",
+									local : ['Yes (tcpdump)','Yes (with wireshark or tcpdump)','Yes (filtered capturing to pcap format)','Yes (with tcpdump)','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['Yes (with Snort)','Yes (with NetPatrol)','Yes (with integrated Snort)','Yes (integrated Snort)','Yes','']
+									name:"Profile selection",
+									local : ['?','No','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Yes (OpenVPN, IPsec, L2TP, IKEv2, Tinc, PPTP)','Yes (IPsec and OpenVPN)','Yes (proprietary)','']
+									name:"IDS (Intrusion Detection System)",
+									local : ['Yes (with Snort)','Yes (with NetPatrol)','Yes (with integrated Snort)','Yes (integrated Snort)','Yes','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Can:",
 									local : ['pfSense','OPNsense','IPFire','Untangle','Vyatta','WinGate','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['?','No','']
+									name:"AV  (Anti-Virus)",
+									local : ['Yes (with clamav)','Yes (with clamav,Sophos Antivirus (optional) )','Yes (Kaspersky Labs)','Yes (clamav,commtouch (optional) )','']
 								});
 								$("#5").typeahead({
-									name:"list5",
-									local : ['Yes (tcpdump)','Yes (with wireshark or tcpdump)','Yes (filtered capturing to pcap format)','Yes (with tcpdump)','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['Yes (with clamav)','Yes (with clamav,Sophos Antivirus (optional) )','Yes (Kaspersky Labs)','Yes (clamav,commtouch (optional) )','']
+									name:"VPN (Virtual Private Network)",
+									local : ['Yes (OpenVPN, IPsec, L2TP, IKEv2, Tinc, PPTP)','Yes (IPsec and OpenVPN)','Yes (proprietary)','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

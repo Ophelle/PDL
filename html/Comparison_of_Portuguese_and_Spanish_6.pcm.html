@@ -29,26 +29,23 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Person who likes : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Person who likes : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Thing that is liked : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Form : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Thing that is liked : </label></br> <input id="3" type="text" name="Feature"></br>
-								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Person who likes",
 									local : ['Subject','Indirect object','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Me gusta escuchar música.','I like to listen to music.','(Eu) gosto de ouvir música.','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Thing that is liked",
 									local : ['Subject','Object of preposition de','Direct object','']
+								});
+								$("#2").typeahead({
+									name:"Form",
+									local : ['Me gusta escuchar música.','I like to listen to music.','(Eu) gosto de ouvir música.','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

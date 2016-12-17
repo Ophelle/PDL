@@ -29,40 +29,35 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Roadmap : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>OLAP Server : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>OLAP Server : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Issue Tracking System : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Issue Tracking System : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Roadmap : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Source code : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Source code : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Forum/Blog : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Forum/Blog : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['','-','Available upon request','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['myOracle Support','OSS','Cubes – Github Issues','MicroStrategy Resource Center','Connect','IBM Service Request','Support','Infor Xtreme','YouTrack','Jira','Mantis','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#0").typeahead({
+									name:"OLAP Server",
 									local : ['Microsoft Analysis Services','Infor BI OLAP Server','SAP NetWeaver BW','MicroStrategy Intelligence Server','icCube','Essbase','TM1','Cubes','SAS OLAP Server','Mondrian OLAP server','Jedox OLAP Server','Oracle Database OLAP Option','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#1").typeahead({
+									name:"Issue Tracking System",
+									local : ['myOracle Support','OSS','Cubes – Github Issues','MicroStrategy Resource Center','Connect','IBM Service Request','Support','Infor Xtreme','YouTrack','Jira','Mantis','']
+								});
+								$("#2").typeahead({
+									name:"Roadmap",
+									local : ['','-','Available upon request','']
+								});
+								$("#3").typeahead({
+									name:"Source code",
 									local : ['Open','Closed','']
+								});
+								$("#4").typeahead({
+									name:"Forum/Blog",
+									local : ['','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

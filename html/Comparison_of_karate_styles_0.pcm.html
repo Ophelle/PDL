@@ -29,30 +29,6 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Origin : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Stances : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Derived from :</label></br>
-											<input type="checkbox" name="Feature" >ShÅ?rei-ryÅ«</br>	
-											<input type="checkbox" name="Feature" >ShÅ?rin-ryÅ«</br>	
-											<input type="checkbox" name="Feature" >Naha-te</br>	
-											<input type="checkbox" name="Feature" >Shuri-te.</br>	
-											<input type="checkbox" name="Feature" >Yoshin-ryu Jujitsu and Shotokan</br>	
-											<input type="checkbox" name="Feature" >primarily Shuri-te like ShitÅ?-ryÅ«</br>	
-											<input type="checkbox" name="Feature" >but also Naha-te and Tomari-te</br>	
-											<input type="checkbox" name="Feature" >Shotokan</br>	
-											<input type="checkbox" name="Feature" >GÅ?jÅ«-ryÅ«</br>	
-											<input type="checkbox" name="Feature" >Shuri-te</br>	
-											<input type="checkbox" name="Feature" >Tomari-te</br>	
-											<input type="checkbox" name="Feature" >Chinese martial arts</br>	
-											<input type="checkbox" name="Feature" >ShÅ?rei-ryÅ« Naha-te</br>	
-											<input type="checkbox" name="Feature" >KobudÅ?</br>	
-											<input type="checkbox" name="Feature" >Hsing-yi</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
 								<label>Representative kata :</label></br>
 											<input type="checkbox" name="Feature" >Anan</br>	
 											<input type="checkbox" name="Feature" >Paiku</br>	
@@ -108,7 +84,29 @@
 											<input type="checkbox" name="Feature" >Seienchin</br>	
 											<input type="checkbox" name="Feature" >RÅ?hai</br>	
 											<input type="checkbox" name="Feature" >Nipaipo</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Stances : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Derived from :</label></br>
+											<input type="checkbox" name="Feature" >ShÅ?rei-ryÅ«</br>	
+											<input type="checkbox" name="Feature" >ShÅ?rin-ryÅ«</br>	
+											<input type="checkbox" name="Feature" >Naha-te</br>	
+											<input type="checkbox" name="Feature" >Shuri-te.</br>	
+											<input type="checkbox" name="Feature" >Yoshin-ryu Jujitsu and Shotokan</br>	
+											<input type="checkbox" name="Feature" >primarily Shuri-te like ShitÅ?-ryÅ«</br>	
+											<input type="checkbox" name="Feature" >but also Naha-te and Tomari-te</br>	
+											<input type="checkbox" name="Feature" >Shotokan</br>	
+											<input type="checkbox" name="Feature" >GÅ?jÅ«-ryÅ«</br>	
+											<input type="checkbox" name="Feature" >Shuri-te</br>	
+											<input type="checkbox" name="Feature" >Tomari-te</br>	
+											<input type="checkbox" name="Feature" >Chinese martial arts</br>	
+											<input type="checkbox" name="Feature" >ShÅ?rei-ryÅ« Naha-te</br>	
+											<input type="checkbox" name="Feature" >KobudÅ?</br>	
+											<input type="checkbox" name="Feature" >Hsing-yi</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label># of kata : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Hard/soft :</label></br>
 											<input type="checkbox" name="Feature" >both</br>	
@@ -122,22 +120,21 @@
 											<input type="checkbox" name="Feature" >50 percent soft techniques</br>	
 											<input type="checkbox" name="Feature" >60 percent hard</br>	
 											<input type="checkbox" name="Feature" >40 percent soft techniques</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label># of kata : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Origin : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Okinawa','Japan and Okinawa','Japan','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Stances",
 									local : ['mainly natural','natural','deep/natural','deep (beginner), natural (advanced)','natural stride (beginner), shorter/narrower (advanced)','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"# of kata",
 									local : ['15','15 kata not including kihon and Bo kihon/kata','about 16','18','More than 60 counting all kobudo kata','8','12','23 (+ ura)','46 including weapons kata','15 including weapons kata','21','more than 80','26 + additional','15 (one hidden)','']
+								});
+								$("#2").typeahead({
+									name:"Origin",
+									local : ['Okinawa','Japan and Okinawa','Japan','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

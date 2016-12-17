@@ -29,34 +29,29 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>First success : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>First success : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>GTO / GEO : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>GTO / GEO : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Notes : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Notes : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>LEO : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>LEO : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"First success",
 									local : ['11 Feb 1970','10 Sep 2009','planned (2015)','18 Dec 2006','20 Aug 1997','24 Apr 1970','26 Jul 1975','16 Jul 1990','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['L-4S (26 kg)','FB-1 (2.5 t)','CZ-5 (LEO 25 t / GTO 14 t)','H-IIA204 (LEO 15 t / GTO 5.8 t)','CZ-1 (0.3 t)','H-IIB (LEO 19 t / GTO 8 t)','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"GTO / GEO",
 									local : ['H-IIA204 (LEO 15 t / GTO 5.8 t)','CZ-3B (LEO 12 t / GTO 5.2 t)','','CZ-5 (LEO 25 t / GTO 14 t)','H-IIB (LEO 19 t / GTO 8 t)','CZ-2E (LEO 9.2 t / GTO 3.5 t)','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['First launch failed in 1969.','','Suborbital flight was performed in 1972.
-CZ-2A (LEO 2t) failed in 1974.','CZ-3B (LEO 12 t / GTO 5.2 t)','First launch was 1966 (failed 4 times).','CZ-2E (LEO 9.2 t / GTO 3.5 t)','']
+								$("#2").typeahead({
+									name:"Notes",
+									local : ['First launch failed in 1969.','','Suborbital flight was performed in 1972.CZ-2A (LEO 2t) failed in 1974.','CZ-3B (LEO 12 t / GTO 5.2 t)','First launch was 1966 (failed 4 times).','CZ-2E (LEO 9.2 t / GTO 3.5 t)','']
+								});
+								$("#3").typeahead({
+									name:"LEO",
+									local : ['L-4S (26 kg)','FB-1 (2.5 t)','CZ-5 (LEO 25 t / GTO 14 t)','H-IIA204 (LEO 15 t / GTO 5.8 t)','CZ-1 (0.3 t)','H-IIB (LEO 19 t / GTO 8 t)','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

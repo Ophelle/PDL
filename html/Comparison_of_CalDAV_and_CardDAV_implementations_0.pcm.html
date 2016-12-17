@@ -29,11 +29,13 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Platform : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Platform : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Client name : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>CalDAV Events :</label></br>
+								<input type="radio" name="FeatureCalDAV Events" value="oui">Yes <input type="radio" name="FeatureCalDAV Events" value = "non">No <input type="radio" name="FeatureCalDAV Events" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Client name : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>CalDAV Tasks :</label></br>
 								<input type="radio" name="FeatureCalDAV Tasks" value="oui">Yes <input type="radio" name="FeatureCalDAV Tasks" value = "non">No <input type="radio" name="FeatureCalDAV Tasks" value = "non">Partial </br>
@@ -43,23 +45,18 @@
 								<input type="radio" name="FeatureCardDAV" value="oui">Yes <input type="radio" name="FeatureCardDAV" value = "non">No <input type="radio" name="FeatureCardDAV" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>CalDAV Events :</label></br>
-								<input type="radio" name="FeatureCalDAV Events" value="oui">Yes <input type="radio" name="FeatureCalDAV Events" value = "non">No <input type="radio" name="FeatureCalDAV Events" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Platform",
 									local : ['Cross-platform JavaScript Web application','Microsoft Windows','Android App','Cross-platform','Mac OS X','MS Outlook add-in, Microsoft Windows','Cross-platform Thunderbird Add-on','Cross-platform Python','iOS and Mac OS X','Command-line','Cross-platform Kontact add-on','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Client name",
 									local : ['OpenProtocols Connector for Outlook','KCardDAV (discontinued)','CalDAV Tasksync free','Chandler Desktop','CardDavMATE','Evolution','AndroidCaldavSyncAdapater','Lightning','aCal','Mulberry','CardDAV-Sync','AgenDAV','CalendarSync','SurGATE Outlook Sync Client','pyCardDAV','Fantastical','iCal Import/Export CalDAV','CalDAV-Sync','Calendars/Reminders/Contacts/Mail','cadaver','Inverse SOGo Connector/Integrator','cFos Outlook DAV','ContactSync','InfCloud (CalDavZAP+CardDavMATE)','CalDavZAP','eM Client','BusyCal','Daylite','Contacts CardDAV Sync 2 Cloud','DAVdroid','jqCalDAV','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#2").typeahead({
+									name:"License",
 									local : ['Proprietary','?','GPL','MPL/GPL/LGPL','AGPL','MIT','Apache','']
 								});
 						</script>

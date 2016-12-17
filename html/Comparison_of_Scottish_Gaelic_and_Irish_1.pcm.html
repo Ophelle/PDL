@@ -29,33 +29,34 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>English : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Irish :</label></br>
+											<input type="checkbox" name="Feature" >Meiriceá</br>	
+											<input type="checkbox" name="Feature" >Meirice</br>	
+											<input type="checkbox" name="Feature" >i</br>	
+											<input type="checkbox" name="Feature" >in</br>	
+											<input type="checkbox" name="Feature" >bóthar</br>	
+											<input type="checkbox" name="Feature" >ród</br>	
+											<input type="checkbox" name="Feature" >ministir</br>	
+											<input type="checkbox" name="Feature" >ministéir</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Scottish Gaelic : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Notes : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Notes : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Scottish Gaelic : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Irish : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>English : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['America','minister','in','Germany','talking','road','cold (sickness)','London','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['cnatan','A' Ghearmailt','Ameireaga','Lunnain','ministear','bruidhinn','rathad','(ann) an','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"Notes",
 									local : ['','Also, cainnt in Scottish Gaelic. Bruíon (formerly bruighean) in Irish means "fighting", "quarrelling"','In Classical Irish the forms were "i", "a", "in", "an" – "i/in" when the following sound was slender, and "a/an" when the following sound was broad.  In both Irish and Scottish, in the spoken language, the four forms of "i", "a", "in", "an" still exist.','Meaning illness','In Irish, aire for a government minister','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['Meiriceá, Meirice','Londain','i, in','An Ghearmáin','slaghdán','bóthar/ród','ministir, ministéir','ag caint','']
+								$("#1").typeahead({
+									name:"Scottish Gaelic",
+									local : ['cnatan','A' Ghearmailt','Ameireaga','Lunnain','ministear','bruidhinn','rathad','(ann) an','']
+								});
+								$("#2").typeahead({
+									name:"English",
+									local : ['America','minister','in','Germany','talking','road','cold (sickness)','London','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

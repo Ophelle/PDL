@@ -29,11 +29,26 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Arrays cannot be resized (though use of the System.arraycopy() method can allow for multi-step array resizing) : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Java : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Java : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Arrays are implicitly direct specializations of Object. They are not unified with collection types. : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Arrays and collections are completely separate with no unification. Arrays cannot be passed where sequences or collections are expected :</label></br>
+											<input type="checkbox" name="Feature" >Arrays can be passed where sequences (IEnumerables) or collections</br>	
+											<input type="checkbox" name="Feature" >list interfaces are expected. However</br>	
+											<input type="checkbox" name="Feature" >the collection operations that alter the number of elements (insert</br>	
+											<input type="checkbox" name="Feature" >add</br>	
+											<input type="checkbox" name="Feature" >remove) will throw exceptions as these operations are not supported by arrays.</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>In both languages arrays are covariant. This means that a String[] array is assignable to variables of Object[] because String is a specialization of (assignable to) Object. In both languages the arrays will perform a type check when inserting new values because type-safety would otherwise be compromised. This is in contrast to how generic collections have been implemented in both languages. : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Arrays cannot be resized (though use of the System.arraycopy() method can allow for multi-step array resizing) : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>The for statement accepts either arrays or Iterables. All collections implement Iterable. This means that the same short syntax can be used in for-loops. :</label></br>
+											<input type="checkbox" name="Feature" >The foreach statement iterates through a sequence using the IEnumerable orIEnumerableT interface. Because arrays always implicitly implement these interfaces</br>	
+											<input type="checkbox" name="Feature" >the loop will iterate through arrays as well.</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>Implemented as a retrofit for the java.util library having extra features, like data structures like sets and linked sets, and has a number of algorithms to manipulate elements of a collection, like finding the largest element based on some Comparator object, finding the smallest element, finding sublists within a list, reverse the contents of a list, shuffle the contents of a list, create immutable versions of a collection, performs sorts, and make binary searches. :</label></br>
 											<input type="checkbox" name="Feature" >The C# collections framework consists of classes from the System.Collections and the System.Collections.Generic namespaces with a number of useful interfaces</br>	
@@ -45,47 +60,28 @@
 											<input type="checkbox" name="Feature" >All</br>	
 											<input type="checkbox" name="Feature" >Average</br>	
 											<input type="checkbox" name="Feature" >Aggregate and many others. Queries using these methods are called LINQ queries.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>In both languages arrays are covariant. This means that a String[] array is assignable to variables of Object[] because String is a specialization of (assignable to) Object. In both languages the arrays will perform a type check when inserting new values because type-safety would otherwise be compromised. This is in contrast to how generic collections have been implemented in both languages. : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Arrays and collections are completely separate with no unification. Arrays cannot be passed where sequences or collections are expected :</label></br>
-											<input type="checkbox" name="Feature" >Arrays can be passed where sequences (IEnumerables) or collections</br>	
-											<input type="checkbox" name="Feature" >list interfaces are expected. However</br>	
-											<input type="checkbox" name="Feature" >the collection operations that alter the number of elements (insert</br>	
-											<input type="checkbox" name="Feature" >add</br>	
-											<input type="checkbox" name="Feature" >remove) will throw exceptions as these operations are not supported by arrays.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>The for statement accepts either arrays or Iterables. All collections implement Iterable. This means that the same short syntax can be used in for-loops. :</label></br>
-											<input type="checkbox" name="Feature" >The foreach statement iterates through a sequence using the IEnumerable orIEnumerableT interface. Because arrays always implicitly implement these interfaces</br>	
-											<input type="checkbox" name="Feature" >the loop will iterate through arrays as well.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>No multidimensional arrays (rectangular arrays), but arrays of references to arrays (jagged array). :</label></br>
 											<input type="checkbox" name="Feature" >Multidimensional arrays (rectangular arrays)</br>	
 											<input type="checkbox" name="Feature" >as well as arrays of references to arrays (jagged array).</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Arrays are implicitly direct specializations of Object. They are not unified with collection types. : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Arrays can be resized while preserving existing values using the Array.Resize() static array method.','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Java",
 									local : ['C#','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Arrays are implicitly direct specializations of Object. They are not unified with collection types.",
+									local : ['Arrays in C# are implicit specializations of the System.Array class that implements a number of collection interfaces.','']
+								});
+								$("#2").typeahead({
+									name:"In both languages arrays are covariant. This means that a String[] array is assignable to variables of Object[] because String is a specialization of (assignable to) Object. In both languages the arrays will perform a type check when inserting new values because type-safety would otherwise be compromised. This is in contrast to how generic collections have been implemented in both languages.",
 									local : ['In both languages arrays are covariant. This means that a String[] array is assignable to variables of Object[] because String is a specialization of (assignable to) Object. In both languages the arrays will perform a type check when inserting new values because type-safety would otherwise be compromised. This is in contrast to how generic collections have been implemented in both languages.','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['Arrays in C# are implicit specializations of the System.Array class that implements a number of collection interfaces.','']
+								$("#3").typeahead({
+									name:"Arrays cannot be resized (though use of the System.arraycopy() method can allow for multi-step array resizing)",
+									local : ['Arrays can be resized while preserving existing values using the Array.Resize() static array method.','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

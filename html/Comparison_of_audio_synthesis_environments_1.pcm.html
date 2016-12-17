@@ -29,30 +29,27 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Type system : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Object-oriented :</label></br>
 								<input type="radio" name="FeatureObject-oriented" value="oui">Yes <input type="radio" name="FeatureObject-oriented" value = "non">No <input type="radio" name="FeatureObject-oriented" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Textual/graphical : </label></br> <input id="3" type="text" name="Feature"></br>
 								
 								</br>	
-								<label>Name : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Type system : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Name : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Textual/graphical : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Textual/Graphical (FLTK/Qt/HTML5)','Graphical','Textual','Mostly textual','Textual/Graphical (Cocoa/Swing/Qt)','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Type system",
 									local : ['Dynamic','','In development','Dynamic & static','No','Static','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Name",
 									local : ['Csound','Reaktor','Pure Data','Max/MSP','Impromptu','SuperCollider','MPEG-4/SA','ChucK','']
+								});
+								$("#2").typeahead({
+									name:"Textual/graphical",
+									local : ['Textual/Graphical (FLTK/Qt/HTML5)','Graphical','Textual','Mostly textual','Textual/Graphical (Cocoa/Swing/Qt)','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

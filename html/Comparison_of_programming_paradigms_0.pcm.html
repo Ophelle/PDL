@@ -29,17 +29,37 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Paradigm : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Critics : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Description :</label></br>
-											<input type="checkbox" name="Feature" >Program flow is determined mainly by events</br>	
-											<input type="checkbox" name="Feature" >such as mouse click or interrupts including timer</br>	
-											<input type="checkbox" name="Feature" >Treats programs as a model of a finite state machine or any other formal automata</br>	
-											<input type="checkbox" name="Feature" >Derived from structured programming</br>	
-											<input type="checkbox" name="Feature" >based on the concept of modular programming or the procedure call</br>	
-											<input type="checkbox" name="Feature" >Treats computation as the evaluation of mathematical functions avoiding state and mutable data</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								<label>Examples :</label></br>
+											<input type="checkbox" name="Feature" >Common Lisp</br>	
+											<input type="checkbox" name="Feature" >C++</br>	
+											<input type="checkbox" name="Feature" >C#</br>	
+											<input type="checkbox" name="Feature" >Eiffel</br>	
+											<input type="checkbox" name="Feature" >Java</br>	
+											<input type="checkbox" name="Feature" >PHP</br>	
+											<input type="checkbox" name="Feature" >Python</br>	
+											<input type="checkbox" name="Feature" >Ruby</br>	
+											<input type="checkbox" name="Feature" >Scala</br>	
+											<input type="checkbox" name="Feature" >Erlang</br>	
+											<input type="checkbox" name="Feature" >Haskell</br>	
+											<input type="checkbox" name="Feature" >Lisp</br>	
+											<input type="checkbox" name="Feature" >Clojure</br>	
+											<input type="checkbox" name="Feature" >SML</br>	
+											<input type="checkbox" name="Feature" >F#</br>	
+											<input type="checkbox" name="Feature" >SequenceL</br>	
+											<input type="checkbox" name="Feature" >ActionScript</br>	
+											<input type="checkbox" name="Feature" >Visual Basic</br>	
+											<input type="checkbox" name="Feature" >C</br>	
+											<input type="checkbox" name="Feature" >SQL</br>	
+											<input type="checkbox" name="Feature" >regular expressions</br>	
+											<input type="checkbox" name="Feature" >CSS</br>	
+											<input type="checkbox" name="Feature" >Prolog</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Paradigm : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Related paradigm(s) : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Main characteristics :</label></br>
 											<input type="checkbox" name="Feature" >Lambda calculus</br>	
@@ -81,50 +101,27 @@
 											<input type="checkbox" name="Feature" >state changes</br>	
 											<input type="checkbox" name="Feature" >isomorphism</br>	
 											<input type="checkbox" name="Feature" >state transition table</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Critics : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Related paradigm(s) : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Examples :</label></br>
-											<input type="checkbox" name="Feature" >Common Lisp</br>	
-											<input type="checkbox" name="Feature" >C++</br>	
-											<input type="checkbox" name="Feature" >C#</br>	
-											<input type="checkbox" name="Feature" >Eiffel</br>	
-											<input type="checkbox" name="Feature" >Java</br>	
-											<input type="checkbox" name="Feature" >PHP</br>	
-											<input type="checkbox" name="Feature" >Python</br>	
-											<input type="checkbox" name="Feature" >Ruby</br>	
-											<input type="checkbox" name="Feature" >Scala</br>	
-											<input type="checkbox" name="Feature" >Erlang</br>	
-											<input type="checkbox" name="Feature" >Haskell</br>	
-											<input type="checkbox" name="Feature" >Lisp</br>	
-											<input type="checkbox" name="Feature" >Clojure</br>	
-											<input type="checkbox" name="Feature" >SML</br>	
-											<input type="checkbox" name="Feature" >F#</br>	
-											<input type="checkbox" name="Feature" >SequenceL</br>	
-											<input type="checkbox" name="Feature" >ActionScript</br>	
-											<input type="checkbox" name="Feature" >Visual Basic</br>	
-											<input type="checkbox" name="Feature" >C</br>	
-											<input type="checkbox" name="Feature" >SQL</br>	
-											<input type="checkbox" name="Feature" >regular expressions</br>	
-											<input type="checkbox" name="Feature" >CSS</br>	
-											<input type="checkbox" name="Feature" >Prolog</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								<label>Description :</label></br>
+											<input type="checkbox" name="Feature" >Program flow is determined mainly by events</br>	
+											<input type="checkbox" name="Feature" >such as mouse click or interrupts including timer</br>	
+											<input type="checkbox" name="Feature" >Treats programs as a model of a finite state machine or any other formal automata</br>	
+											<input type="checkbox" name="Feature" >Derived from structured programming</br>	
+											<input type="checkbox" name="Feature" >based on the concept of modular programming or the procedure call</br>	
+											<input type="checkbox" name="Feature" >Treats computation as the evaluation of mathematical functions avoiding state and mutable data</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
+								$("#0").typeahead({
+									name:"Critics",
+									local : ['Edsger W. Dijkstra, Michael A. Jackson','','See here and','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Paradigm",
 									local : ['Structured','Procedural','Imperative','Automata-based programming','Event-driven including time driven','Object-oriented','Functional','Declarative','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Edsger W. Dijkstra, Michael A. Jackson','','See here and','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Related paradigm(s)",
 									local : ['','Procedural, dataflow','Imperative','Declarative','Imperative, event-driven','Structured, imperative','']
 								});
 						</script>

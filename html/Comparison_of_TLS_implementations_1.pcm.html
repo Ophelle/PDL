@@ -29,43 +29,41 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>DTLS 1.2 :</label></br>
-								<input type="radio" name="FeatureDTLS 1.2" value="oui">Yes <input type="radio" name="FeatureDTLS 1.2" value = "non">No <input type="radio" name="FeatureDTLS 1.2" value = "non">Partial </br>
+								<label>TLS 1.1 :</label></br>
+								<input type="radio" name="FeatureTLS 1.1" value="oui">Yes <input type="radio" name="FeatureTLS 1.1" value = "non">No <input type="radio" name="FeatureTLS 1.1" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
 								<label>TLS 1.0 :</label></br>
 								<input type="radio" name="FeatureTLS 1.0" value="oui">Yes <input type="radio" name="FeatureTLS 1.0" value = "non">No <input type="radio" name="FeatureTLS 1.0" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>SSL 3.0 (insecure) : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>TLS 1.1 :</label></br>
-								<input type="radio" name="FeatureTLS 1.1" value="oui">Yes <input type="radio" name="FeatureTLS 1.1" value = "non">No <input type="radio" name="FeatureTLS 1.1" value = "non">Partial </br>
-											<input type="text"/></br>								
+								<label>Implementation : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>DTLS 1.0 :</label></br>
 								<input type="radio" name="FeatureDTLS 1.0" value="oui">Yes <input type="radio" name="FeatureDTLS 1.0" value = "non">No <input type="radio" name="FeatureDTLS 1.0" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>TLS 1.2 :</label></br>
-								<input type="radio" name="FeatureTLS 1.2" value="oui">Yes <input type="radio" name="FeatureTLS 1.2" value = "non">No <input type="radio" name="FeatureTLS 1.2" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
 								<label>SSL 2.0 (insecure) :</label></br>
 								<input type="radio" name="FeatureSSL 2.0 (insecure)" value="oui">Yes <input type="radio" name="FeatureSSL 2.0 (insecure)" value = "non">No <input type="radio" name="FeatureSSL 2.0 (insecure)" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Implementation : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>TLS 1.2 :</label></br>
+								<input type="radio" name="FeatureTLS 1.2" value="oui">Yes <input type="radio" name="FeatureTLS 1.2" value = "non">No <input type="radio" name="FeatureTLS 1.2" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>DTLS 1.2 :</label></br>
+								<input type="radio" name="FeatureDTLS 1.2" value="oui">Yes <input type="radio" name="FeatureDTLS 1.2" value = "non">No <input type="radio" name="FeatureDTLS 1.2" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>SSL 3.0 (insecure) : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Enabled by default','Disabled by default in MSIE 11','Yes','SSL 3.0 (insecure)','Disabled by default','No','Disabled by default at compile time','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Implementation",
 									local : ['Botan','SChannel 8 / 2012','Secure Transport OS X 10.2-10.7 / iOS 1-4','JSSE','SChannel XP / 2003','SharkSSL','mbed TLS','wolfSSL','LibreSSL','MatrixSSL','Implementation','RSA BSAFE','OpenSSL','SChannel 8.1 / 2012R2, 10 Technical Preview','Secure Transport OS X 10.8-10.10 / iOS 5-8','SChannel Vista / 2008','SChannel 7 / 2008R2','cryptlib','GnuTLS','NSS','']
+								});
+								$("#1").typeahead({
+									name:"SSL 3.0 (insecure)",
+									local : ['Enabled by default','Disabled by default in MSIE 11','Yes','SSL 3.0 (insecure)','Disabled by default','No','Disabled by default at compile time','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

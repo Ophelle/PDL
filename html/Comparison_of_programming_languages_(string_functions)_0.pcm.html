@@ -29,23 +29,21 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Description : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Equivalent : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
 								<label>Definition :</label></br>
 											<input type="checkbox" name="Feature" >charAt(string</br>	
 											<input type="checkbox" name="Feature" >integer) returns character.</br>	
-									
-								</br>	
-								<label>Description : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Equivalent : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Description",
 									local : ['Returns character at index in the string.','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Equivalent",
 									local : ['See substring of length 1 character.','']
 								});
 						</script>

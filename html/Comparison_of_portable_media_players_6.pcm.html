@@ -29,46 +29,43 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>HDMI out : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>HDMI out : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Name : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>DVR recording :</label></br>
 								<input type="radio" name="FeatureDVR recording" value="oui">Yes <input type="radio" name="FeatureDVR recording" value = "non">No <input type="radio" name="FeatureDVR recording" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Microphone :</label></br>
-								<input type="radio" name="FeatureMicrophone" value="oui">Yes <input type="radio" name="FeatureMicrophone" value = "non">No <input type="radio" name="FeatureMicrophone" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>FM radio :</label></br>
-								<input type="radio" name="FeatureFM radio" value="oui">Yes <input type="radio" name="FeatureFM radio" value = "non">No <input type="radio" name="FeatureFM radio" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
 								<label>Line-in recording :</label></br>
 								<input type="radio" name="FeatureLine-in recording" value="oui">Yes <input type="radio" name="FeatureLine-in recording" value = "non">No <input type="radio" name="FeatureLine-in recording" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
+								<label>USB host : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>FM radio :</label></br>
+								<input type="radio" name="FeatureFM radio" value="oui">Yes <input type="radio" name="FeatureFM radio" value = "non">No <input type="radio" name="FeatureFM radio" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
 								<label>Playback while charging :</label></br>
 								<input type="radio" name="FeaturePlayback while charging" value="oui">Yes <input type="radio" name="FeaturePlayback while charging" value = "non">No <input type="radio" name="FeaturePlayback while charging" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>USB host : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Name : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Microphone :</label></br>
+								<input type="radio" name="FeatureMicrophone" value="oui">Yes <input type="radio" name="FeatureMicrophone" value = "non">No <input type="radio" name="FeatureMicrophone" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"HDMI out",
 									local : ['','Yes, Zune HD','Korean version only','iPod Touch only','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['','Yes','No','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Name",
 									local : ['Archos 105','Sansa Fuze','Samsung P2','PSP 1000 Series','Archos 705 WiFi','Cowon Q5W','GP2X F-200','ZEN Vision W','Walkman NWZ-A810 series','Archos 5','Archos 605 WiFi / GPS','iPod','Sansa View','PSP Slim & Lite 2000 Series','PSP Slim & Lite 3000 Series','ZEN','Zune','Cowon A3','Gigabeat T-Series','iriver clix 2G','Sansa Fuze+','Samsung Galaxy Player','Archos 405','Cowon D2','Zvue 260','Samsung T10','']
+								});
+								$("#2").typeahead({
+									name:"USB host",
+									local : ['','Yes','No','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

@@ -29,48 +29,43 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Product : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Web radio/TV : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Manufacturer : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
 								<label>Ad hoc :</label></br>
 								<input type="radio" name="FeatureAd hoc" value="oui">Yes <input type="radio" name="FeatureAd hoc" value = "non">No <input type="radio" name="FeatureAd hoc" value = "non">Partial </br>
-								
-								</br>	
-								<label>Web radio/TV : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Web browser : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>On-demand : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Manufacturer : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Product : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+											<input type="text"/></br>								
 								</br>	
 								<label>Wireless synching :</label></br>
 								<input type="radio" name="FeatureWireless synching" value="oui">Yes <input type="radio" name="FeatureWireless synching" value = "non">No <input type="radio" name="FeatureWireless synching" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
+								</br>	
+								<label>On-demand : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Web browser : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Product",
+									local : ['Archos PMA400','Archos 5, 7','Archos 605 WiFi, 705 WiFi','iPod Touch','Sony PSP','Cowon Q5W','Samsung Galaxy Player','Zune 30','ZEN X-Fi','Ibiza Rhapsody','Zune 80, 120','Sansa Connect','Zune HD','Archos 604 WiFi, 704 WiFi','Sony Walkman X Series','Zune 4, 8','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Web radio/TV",
 									local : ['','Yes','No','radio only','Yes (using Flash-based Internet Radio sites)','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Opera 9','Webkit','IE Mobile','No','Opera 8.5','Minimo','NetFront','Opera','IE Mobile 6','']
+									name:"Manufacturer",
+									local : ['Creative','Microsoft','Sony','Archos','SanDisk','Apple Inc.','Samsung','Haier','Cowon','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"On-demand",
 									local : ['Rhapsody','','Yahoo! Music','Zune Marketplace','No','iTunes, Spotify','Creative MediaBox','PlayStation Store','Content Portals','Android Marketplace','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['Creative','Microsoft','Sony','Archos','SanDisk','Apple Inc.','Samsung','Haier','Cowon','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['Archos PMA400','Archos 5, 7','Archos 605 WiFi, 705 WiFi','iPod Touch','Sony PSP','Cowon Q5W','Samsung Galaxy Player','Zune 30','ZEN X-Fi','Ibiza Rhapsody','Zune 80, 120','Sansa Connect','Zune HD','Archos 604 WiFi, 704 WiFi','Sony Walkman X Series','Zune 4, 8','']
+									name:"Web browser",
+									local : ['Opera 9','Webkit','IE Mobile','No','Opera 8.5','Minimo','NetFront','Opera','IE Mobile 6','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

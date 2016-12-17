@@ -29,25 +29,22 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Spanish : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Spanish : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Portuguese : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Portuguese : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Meaning : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Meaning : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Spanish",
+									local : ['mantenerlo','manténgalo','lo mantienen','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Portuguese",
 									local : ['mantenha-o','mantêm-no','mantê-lo','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['mantenerlo','manténgalo','lo mantienen','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Meaning",
 									local : [''keep it'',''to keep it'',''they keep it'','']
 								});
 						</script>

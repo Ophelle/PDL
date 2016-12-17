@@ -29,8 +29,9 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Software license : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Software license : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Client : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Latest release :</label></br>
 											<input type="checkbox" name="Feature" >Opera: ; Windows</br>	
@@ -47,25 +48,21 @@ Opera Mini:</br>
 											<input type="checkbox" name="Feature" >N</br>	
 											<input type="checkbox" name="Feature" >A (part of Firefox)</br>	
 											<input type="checkbox" name="Feature" >A (part of Pale Moon)</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Creator : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Client : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Creator : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Software license",
 									local : ['Proprietary','GPL','Mozilla Public License','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Opera Software','Jack Dean','Ondrej Brablc','Mozilla Foundation','Xmarks','M.C. Straver','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Client",
 									local : ['SiteBar Server','Firefox Sync','BookmarkSync','Pale Moon Sync','Xmarks','Opera Link','']
+								});
+								$("#2").typeahead({
+									name:"Creator",
+									local : ['Opera Software','Jack Dean','Ondrej Brablc','Mozilla Foundation','Xmarks','M.C. Straver','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

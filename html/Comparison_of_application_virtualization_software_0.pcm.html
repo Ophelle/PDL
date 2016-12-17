@@ -29,18 +29,6 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Code security :</label></br>
-								<input type="radio" name="FeatureCode security" value="oui">Yes <input type="radio" name="FeatureCode security" value = "non">No <input type="radio" name="FeatureCode security" value = "non">Partial </br>
-								
-								</br>	
-								<label>Shared libraries :</label></br>
-								<input type="radio" name="FeatureShared libraries" value="oui">Yes <input type="radio" name="FeatureShared libraries" value = "non">No <input type="radio" name="FeatureShared libraries" value = "non">Partial </br>
-								
-								</br>	
-								<label>Interpreter :</label></br>
-								<input type="radio" name="FeatureInterpreter" value="oui">Yes <input type="radio" name="FeatureInterpreter" value = "non">No <input type="radio" name="FeatureInterpreter" value = "non">Partial </br>
-								
-								</br>	
 								<label>JIT :</label></br>
 								<input type="radio" name="FeatureJIT" value="oui">Yes <input type="radio" name="FeatureJIT" value = "non">No <input type="radio" name="FeatureJIT" value = "non">Partial </br>
 								
@@ -49,14 +37,23 @@
 								<input type="radio" name="FeaturePrecompilation" value="oui">Yes <input type="radio" name="FeaturePrecompilation" value = "non">No <input type="radio" name="FeaturePrecompilation" value = "non">Partial </br>
 								
 								</br>	
-								<label>Memory management : </label></br> <input id="6" type="text" name="Feature"></br>
+								<label>Interpreter :</label></br>
+								<input type="radio" name="FeatureInterpreter" value="oui">Yes <input type="radio" name="FeatureInterpreter" value = "non">No <input type="radio" name="FeatureInterpreter" value = "non">Partial </br>
 								
 								</br>	
-								<label>Virtual machine : </label></br> <input id="7" type="text" name="Feature"></br>
+								<label>Virtual machine : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory management : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Code security :</label></br>
+								<input type="radio" name="FeatureCode security" value="oui">Yes <input type="radio" name="FeatureCode security" value = "non">No <input type="radio" name="FeatureCode security" value = "non">Partial </br>
 								
 								</br>	
-								<label>Machine model : </label></br> <input id="8" type="text" name="Feature"></br>
+								<label>Shared libraries :</label></br>
+								<input type="radio" name="FeatureShared libraries" value="oui">Yes <input type="radio" name="FeatureShared libraries" value = "non">No <input type="radio" name="FeatureShared libraries" value = "non">Partial </br>
 								
+								</br>	
+								<label>Machine model : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Common Language Object Model :</label></br>
 								<input type="radio" name="FeatureCommon Language Object Model" value="oui">Yes <input type="radio" name="FeatureCommon Language Object Model" value = "non">No <input type="radio" name="FeatureCommon Language Object Model" value = "non">Partial </br>
@@ -66,16 +63,16 @@
 								<input type="radio" name="FeatureDynamic typing" value="oui">Yes <input type="radio" name="FeatureDynamic typing" value = "non">No <input type="radio" name="FeatureDynamic typing" value = "non">Partial </br>
 								
 						<script>
+								$("#0").typeahead({
+									name:"Virtual machine",
+									local : ['JikesRVM','Dalvik','DotGNU Portable.NET','CLR','Dis (Inferno)','Java Virtual Machine (JVM)','LLVM','Squeak','Parrot','Mono','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Memory management",
 									local : ['automatic','automatic or manual','manual','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['JikesRVM','Dalvik','DotGNU Portable.NET','CLR','Dis (Inferno)','Java Virtual Machine (JVM)','LLVM','Squeak','Parrot','Mono','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Machine model",
 									local : ['register','stack','']
 								});
 						</script>

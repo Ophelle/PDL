@@ -29,26 +29,23 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Limit on IA-32 : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Limit on IA-32 : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Operating system : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Limit on x64 : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Operating system : </label></br> <input id="3" type="text" name="Feature"></br>
-								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Limit on IA-32",
 									local : ['4 GB','N/A','1 GB','2 GB','64 GB','512 MB','32 GB','8 GB','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['32 GB','8 GB','128 GB','N/A','2 TB','1 TB','4 TB','192 GB','512 GB','64 GB','16 GB','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Operating system",
 									local : ['Windows HPC Server 2008','Windows Server 2012 Essentials','Windows 2000 Datacenter','Windows 7 Home Basic','Windows 7 Home Premium','Windows XP Home','Windows Vista Home Premium','Windows 8','Windows Storage Server 2012 Workgroup','Windows Server 2008 R2 Web Server/Standard','Windows Server 2003 R2/SP1 Enterprise/Datacenter','Windows Server 2003 RTM Enterprise/Datacenter','Windows XP Professional','Windows 8 Pro/Enterprise','Windows Storage Server 2012 Standard','Windows Server 2008 R2 Enterprise/Datacenter','Windows Home Server','Windows Vista Starter','Windows 7 Professional/Enterprise/Ultimate','Windows 2000 Professional/Server','Windows Server 2008 R2 Foundation','Windows Server 2012 Standard/Datacenter','Windows 2000 Advanced Server','Windows Server 2003 RTM Web','Windows Server 2008 Enterprise/Datacenter','Windows 7 Starter','Windows Server 2008 Web Server/Standard/Small Business','Windows Server 2003 R2/SP1 Standard','Windows Server 2003 RTM Standard/Small Business','Windows Vista Business/Enterprise/Ultimate','Windows XP Starter','Windows NT 4.0','Windows Vista Home Basic','Windows Server 2012 Foundation','Windows HPC Server 2008 R2','']
+								});
+								$("#2").typeahead({
+									name:"Limit on x64",
+									local : ['32 GB','8 GB','128 GB','N/A','2 TB','1 TB','4 TB','192 GB','512 GB','64 GB','16 GB','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

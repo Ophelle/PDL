@@ -29,27 +29,6 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Network requirements :</label></br>
-											<input type="checkbox" name="Feature" >POSIX send() and recv(). API to supply your own replacement.</br>	
-											<input type="checkbox" name="Feature" >POSIX read() and write(). API to supply your own replacement.</br>	
-											<input type="checkbox" name="Feature" >NSPR PR_Send() and PR_Recv(). API to supply your own replacement.</br>	
-											<input type="checkbox" name="Feature" >POSIX send() and recv(). API to supply your own replacement</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Thread safety : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Random seed : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>No OS (bare metal) :</label></br>
-								<input type="radio" name="FeatureNo OS (bare metal)" value="oui">Yes <input type="radio" name="FeatureNo OS (bare metal)" value = "non">No <input type="radio" name="FeatureNo OS (bare metal)" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Able to cross-compile :</label></br>
-								<input type="radio" name="FeatureAble to cross-compile" value="oui">Yes <input type="radio" name="FeatureAble to cross-compile" value = "non">No <input type="radio" name="FeatureAble to cross-compile" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
 								<label>Supported operating systems :</label></br>
 											<input type="checkbox" name="Feature" >INTEGRITY</br>	
 											<input type="checkbox" name="Feature" >MQX</br>	
@@ -142,28 +121,45 @@
 											<input type="checkbox" name="Feature" >Generally any POSIX platforms or Windows</br>	
 											<input type="checkbox" name="Feature" >commonly tested platforms include GNU</br>	
 											<input type="checkbox" name="Feature" >OpenBSD.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Platform requirements : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Platform requirements : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Implementation : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Network requirements :</label></br>
+											<input type="checkbox" name="Feature" >POSIX send() and recv(). API to supply your own replacement.</br>	
+											<input type="checkbox" name="Feature" >POSIX read() and write(). API to supply your own replacement.</br>	
+											<input type="checkbox" name="Feature" >NSPR PR_Send() and PR_Recv(). API to supply your own replacement.</br>	
+											<input type="checkbox" name="Feature" >POSIX send() and recv(). API to supply your own replacement</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Thread safety : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Random seed : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Implementation : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Able to cross-compile :</label></br>
+								<input type="radio" name="FeatureAble to cross-compile" value="oui">Yes <input type="radio" name="FeatureAble to cross-compile" value = "non">No <input type="radio" name="FeatureAble to cross-compile" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>No OS (bare metal) :</label></br>
+								<input type="radio" name="FeatureNo OS (bare metal)" value="oui">Yes <input type="radio" name="FeatureNo OS (bare metal)" value = "non">No <input type="radio" name="FeatureNo OS (bare metal)" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
+								$("#0").typeahead({
+									name:"Platform requirements",
+									local : ['C89','C++11','C89, NSPR','C89?','Java','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Thread safety",
 									local : ['Thread-safe','Threading layer available (POSIX or own hooks)','Thread-safe: multiple ports','Needs mutex callbacks','Thread-safe, needs mutex hooks if PThreads or WinThreads not available, can be turned off','Thread-safe, needs custom mutex hooks if neither POSIX nor Windows threads are available.','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Random seed",
 									local : ['Depends on java.security.SecureRandom','Random seed set through CTaoCrypt','Platform dependent','Set through native API','Platform-dependent, including hardware sources','Random seed set through entropy pool and/or HW','Random seed set through entropy pool','Platform-dependent','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['C89','C++11','C89, NSPR','C89?','Java','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+									name:"Implementation",
 									local : ['NSS','SharkSSL','cryptlib','GnuTLS','MatrixSSL','OpenSSL','JSSE','Botan','mbed TLS','wolfSSL','']
 								});
 						</script>

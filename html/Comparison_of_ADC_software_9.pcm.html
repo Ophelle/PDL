@@ -29,30 +29,28 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>OS X :</label></br>
-								<input type="radio" name="FeatureOS X" value="oui">Yes <input type="radio" name="FeatureOS X" value = "non">No <input type="radio" name="FeatureOS X" value = "non">Partial </br>
+								<label>Linux :</label></br>
+								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
 											<input type="text"/></br>								
+								</br>	
+								<label>Other software : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Windows :</label></br>
 								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Linux :</label></br>
-								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
+								<label>OS X :</label></br>
+								<input type="radio" name="FeatureOS X" value="oui">Yes <input type="radio" name="FeatureOS X" value = "non">No <input type="radio" name="FeatureOS X" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Other software : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Other : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Other : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Other software",
 									local : ['ADCCore','DCWatch','Announcer Bot','SerieBot','DC-Hublink','Certmanager','FlowLib','DCBouncer','NetChatLink','Other software','Embla','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Other",
 									local : ['Any Java enabled platform','Any C# enabled platform','Runs under Wine','No','Any .NET4 enabled platform','Other','']
 								});
 						</script>

@@ -29,85 +29,74 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Difficulty of production : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Difficulty of repair : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Maximum lift height : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Efficiency : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Fabrication requirements : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
 								<label>Suction lift ? :</label></br>
 								<input type="radio" name="FeatureSuction lift ?" value="oui">Yes <input type="radio" name="FeatureSuction lift ?" value = "non">No <input type="radio" name="FeatureSuction lift ?" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 								</br>	
-								<label>Fabrication requirements : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Output : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>Cyclic/continuous ? : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Production cost : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
-								<label>Durability : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Pump type : </label></br> <input id="7" type="text" name="Feature"></br>
 								</br>	
-								<label>Difficulty of repair : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Cyclic/continuous ? : </label></br> <input id="8" type="text" name="Feature"></br>
 								</br>	
-								<label>Size of device : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Durability : </label></br> <input id="9" type="text" name="Feature"></br>
 								</br>	
-								<label>Difficulty of production : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Maximum lift height : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Efficiency : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Output : </label></br> <input id="10" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Production cost : </label></br> <input id="11" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Pump type : </label></br> <input id="12" type="text" name="Feature"></br>
-								
+								<label>Size of device : </label></br> <input id="10" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Difficulty of production",
+									local : ['industrial','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Difficulty of repair",
 									local : ['?','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['?','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['industrial','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+									name:"Maximum lift height",
 									local : ['5m-50m','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#3").typeahead({
+									name:"Efficiency",
 									local : ['low-medium','']
 								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#4").typeahead({
+									name:"Fabrication requirements",
+									local : ['?','']
+								});
+								$("#5").typeahead({
+									name:"Output",
 									local : ['medium','']
 								});
-								$("#7").typeahead({
-									name:"list7",
+								$("#6").typeahead({
+									name:"Production cost",
 									local : ['medium-high','']
 								});
-								$("#8").typeahead({
-									name:"list8",
+								$("#7").typeahead({
+									name:"Pump type",
 									local : ['Air lift','']
 								});
+								$("#8").typeahead({
+									name:"Cyclic/continuous ?",
+									local : ['?','']
+								});
 								$("#9").typeahead({
-									name:"list9",
+									name:"Durability",
 									local : ['?','']
 								});
 								$("#10").typeahead({
-									name:"list10",
-									local : ['?','']
-								});
-								$("#11").typeahead({
-									name:"list11",
+									name:"Size of device",
 									local : ['?','']
 								});
 						</script>

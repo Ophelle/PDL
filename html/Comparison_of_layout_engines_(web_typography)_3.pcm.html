@@ -29,29 +29,25 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>WebKit : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Format : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Gecko : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 								</br>	
 								<label>Trident :</label></br>
 								<input type="radio" name="FeatureTrident" value="oui">Yes <input type="radio" name="FeatureTrident" value = "non">No <input type="radio" name="FeatureTrident" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 								</br>	
 								<label>Presto :</label></br>
 								<input type="radio" name="FeaturePresto" value="oui">Yes <input type="radio" name="FeaturePresto" value = "non">No <input type="radio" name="FeaturePresto" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 								</br>	
-								<label>Format : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Gecko : </label></br> <input id="5" type="number" name="Feature"></br>
-								
+								<label>WebKit :</label></br>
+								<input type="radio" name="FeatureWebKit" value="oui">Yes <input type="radio" name="FeatureWebKit" value = "non">No <input type="radio" name="FeatureWebKit" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Yes','','Partial','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Format",
 									local : ['OpenType liga ligatures','ZWNJ and ZWJ (Unicode characters used for ligature control)','OpenType rlig ligatures','']
 								});
 						</script>

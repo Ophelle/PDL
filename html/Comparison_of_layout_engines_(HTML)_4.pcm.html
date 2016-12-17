@@ -29,49 +29,44 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Trident : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Gecko : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>KHTML : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>WebKit : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Tasman : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Presto : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Presto : </label></br> <input id="2" type="number" name="Feature"></br>
-								
+								<label>iCab : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Products : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>KHTML : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Tasman : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Trident : </label></br> <input id="6" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>iCab : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Gecko : </label></br> <input id="8" type="number" name="Feature"></br>
-								
+								<label>Products : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"KHTML",
+									local : ['','Yes','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"WebKit",
 									local : ['','Yes','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['P3','P1','P2','']
+									name:"Tasman",
+									local : ['Yes','','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"iCab",
 									local : ['','Yes','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['Yes','','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['','Yes','']
+									name:"Products",
+									local : ['P3','P1','P2','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

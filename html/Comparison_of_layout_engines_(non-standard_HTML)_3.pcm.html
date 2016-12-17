@@ -29,8 +29,7 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>WebKit : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Attribute : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Function :</label></br>
 											<input type="checkbox" name="Feature" >Uses the img element to place video or audio clips</br>	
@@ -40,47 +39,44 @@
 											<input type="checkbox" name="Feature" >td</br>	
 											<input type="checkbox" name="Feature" >th</br>	
 											<input type="checkbox" name="Feature" >and tr elements</br>	
-									
-								</br>	
-								<label>Presto :</label></br>
-								<input type="radio" name="FeaturePresto" value="oui">Yes <input type="radio" name="FeaturePresto" value = "non">No <input type="radio" name="FeaturePresto" value = "non">Partial </br>
-								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>KHTML :</label></br>
 								<input type="radio" name="FeatureKHTML" value="oui">Yes <input type="radio" name="FeatureKHTML" value = "non">No <input type="radio" name="FeatureKHTML" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 								</br>	
-								<label>Attribute : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Trident : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 								</br>	
-								<label>Deprecated for : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Supported first by : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Trident : </label></br> <input id="7" type="number" name="Feature"></br>
-								
+								<label>Presto :</label></br>
+								<input type="radio" name="FeaturePresto" value="oui">Yes <input type="radio" name="FeaturePresto" value = "non">No <input type="radio" name="FeaturePresto" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
-								<label>Supported first by : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>WebKit : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Deprecated for : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Gecko :</label></br>
 								<input type="radio" name="FeatureGecko" value="oui">Yes <input type="radio" name="FeatureGecko" value = "non">No <input type="radio" name="FeatureGecko" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['No','?','Yes','','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Attribute",
 									local : ['start','bgproperties','for','rightmargin','bordercolordark','leftmargin','controls','frame','framespacing','target','valign','bordercolor','event','loop','dynsrc','bordercolorlight','']
 								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['img','body','table','caption','frameset','form','script','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Supported first by",
 									local : ['Internet Explorer','']
+								});
+								$("#2").typeahead({
+									name:"WebKit",
+									local : ['No','?','Yes','','']
+								});
+								$("#3").typeahead({
+									name:"Deprecated for",
+									local : ['img','body','table','caption','frameset','form','script','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

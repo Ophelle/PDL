@@ -29,62 +29,52 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>MATLAB /
-GNU Octave : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>NumPy : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Ch : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>S-Lang : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>S-Lang : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Language/Library : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Ch : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Mathematica : </label></br> <input id="4" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Language/
-Library : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>MATLAB /GNU Octave : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>SymPy : </label></br> <input id="6" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>NumPy : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fortran : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Fortran : </label></br> <input id="7" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"NumPy",
+									local : ['','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"S-Lang",
 									local : ['','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['','']
+									name:"Language/Library",
+									local : ['Create','Element','Column','Eigenvalues','Determinant','Row','Transpose','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"Ch",
 									local : ['','']
 								});
 								$("#4").typeahead({
-									name:"list4",
+									name:"Mathematica",
 									local : ['','']
 								});
 								$("#5").typeahead({
-									name:"list5",
-									local : ['Create','Element','Column','Eigenvalues','Determinant','Row','Transpose','']
+									name:"MATLAB /GNU Octave",
+									local : ['','']
 								});
 								$("#6").typeahead({
-									name:"list6",
+									name:"SymPy",
 									local : ['','']
 								});
 								$("#7").typeahead({
-									name:"list7",
-									local : ['','']
-								});
-								$("#8").typeahead({
-									name:"list8",
+									name:"Fortran",
 									local : ['','']
 								});
 						</script>

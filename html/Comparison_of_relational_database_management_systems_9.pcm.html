@@ -29,8 +29,14 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Expression : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>List :</label></br>
 								<input type="radio" name="FeatureList" value="oui">Yes <input type="radio" name="FeatureList" value = "non">No <input type="radio" name="FeatureList" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Composite (Range+Hash) :</label></br>
+								<input type="radio" name="FeatureComposite (Range+Hash)" value="oui">Yes <input type="radio" name="FeatureComposite (Range+Hash)" value = "non">No <input type="radio" name="FeatureComposite (Range+Hash)" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
 								<label>Range :</label></br>
@@ -40,16 +46,9 @@
 								<label>Hash :</label></br>
 								<input type="radio" name="FeatureHash" value="oui">Yes <input type="radio" name="FeatureHash" value = "non">No <input type="radio" name="FeatureHash" value = "non">Partial </br>
 											<input type="text"/></br>								
-								</br>	
-								<label>Expression : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Composite (Range+Hash) :</label></br>
-								<input type="radio" name="FeatureComposite (Range+Hash)" value="oui">Yes <input type="radio" name="FeatureComposite (Range+Hash)" value = "non">No <input type="radio" name="FeatureComposite (Range+Hash)" value = "non">Partial </br>
-											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Expression",
 									local : ['?','No','Yes','Expression','']
 								});
 						</script>

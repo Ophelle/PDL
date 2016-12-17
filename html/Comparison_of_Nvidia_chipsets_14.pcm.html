@@ -29,25 +29,37 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Code Name : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>PATA : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>PCI-Express : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Fabricationprocess (nm) : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>USB : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Code Name : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Sound : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>LAN :</label></br>
+											<input type="checkbox" name="Feature" >1000 Mbit</br>	
+											<input type="checkbox" name="Feature" >s</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Fabrication
-process (nm) : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>FSB/HTFrequency (MHz) : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>SLI :</label></br>
 								<input type="radio" name="FeatureSLI" value="oui">Yes <input type="radio" name="FeatureSLI" value = "non">No <input type="radio" name="FeatureSLI" value = "non">Partial </br>
 											<input type="text"/></br>								
+								</br>	
+								<label>PCI-Express : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Sound : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Notes : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>PCI : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Features : </label></br> <input id="8" type="text" name="Feature"></br>
+								</br>	
+								<label>SATA :</label></br>
+											<input type="checkbox" name="Feature" >6 Ports 3.0Gbit</br>	
+											<input type="checkbox" name="Feature" >s</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>Processors Supported :</label></br>
 											<input type="checkbox" name="Feature" >Phenom</br>	
@@ -55,84 +67,58 @@ process (nm) : </label></br> <input id="5" type="text" name="Feature"></br>
 											<input type="checkbox" name="Feature" >Athlon 64</br>	
 											<input type="checkbox" name="Feature" >Sempron 64
 Socket AM2+</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>FSB/HT
-Frequency (MHz) : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>PCI : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>LAN :</label></br>
-											<input type="checkbox" name="Feature" >1000 Mbit</br>	
-											<input type="checkbox" name="Feature" >s</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Model : </label></br> <input id="11" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Features : </label></br> <input id="12" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>PATA : </label></br> <input id="13" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>SATA :</label></br>
-											<input type="checkbox" name="Feature" >6 Ports 3.0Gbit</br>	
-											<input type="checkbox" name="Feature" >s</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Notes : </label></br> <input id="15" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Release Date : </label></br> <input id="16" type="number" name="Feature"></br>
+								<label>Release Date : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
+								</br>	
+								<label>Model : </label></br> <input id="9" type="text" name="Feature"></br>
+								</br>	
+								<label>USB : </label></br> <input id="10" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['MCP78','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['2.0
-19 lanes','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['5 Ports','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['12 Ports Rev 2.0','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['HDA','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['','']
-								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['HT3.0 2.6 GHz','']
-								});
-								$("#8").typeahead({
-									name:"list8",
-									local : ['GeForce 8100','GeForce 8300','GeForce 8200','']
-								});
-								$("#9").typeahead({
-									name:"list9",
-									local : ['Onboard GeForce 8100','Onboard GeForce 8200','Onboard GeForce 8300','']
-								});
-								$("#10").typeahead({
-									name:"list10",
+								$("#0").typeahead({
+									name:"PATA",
 									local : ['1 Ports UDMA 133','']
 								});
-								$("#11").typeahead({
-									name:"list11",
+								$("#1").typeahead({
+									name:"Fabricationprocess (nm)",
 									local : ['','']
+								});
+								$("#2").typeahead({
+									name:"Code Name",
+									local : ['MCP78','']
+								});
+								$("#3").typeahead({
+									name:"FSB/HTFrequency (MHz)",
+									local : ['HT3.0 2.6 GHz','']
+								});
+								$("#4").typeahead({
+									name:"PCI-Express",
+									local : ['2.019 lanes','']
+								});
+								$("#5").typeahead({
+									name:"PCI",
+									local : ['5 Ports','']
+								});
+								$("#6").typeahead({
+									name:"Sound",
+									local : ['HDA','']
+								});
+								$("#7").typeahead({
+									name:"Notes",
+									local : ['','']
+								});
+								$("#8").typeahead({
+									name:"Features",
+									local : ['Onboard GeForce 8100','Onboard GeForce 8200','Onboard GeForce 8300','']
+								});
+								$("#9").typeahead({
+									name:"Model",
+									local : ['GeForce 8100','GeForce 8300','GeForce 8200','']
+								});
+								$("#10").typeahead({
+									name:"USB",
+									local : ['12 Ports Rev 2.0','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

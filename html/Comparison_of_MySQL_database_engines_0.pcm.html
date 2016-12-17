@@ -29,34 +29,31 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Name : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Under active development :</label></br>
-								<input type="radio" name="FeatureUnder active development" value="oui">Yes <input type="radio" name="FeatureUnder active development" value = "non">No <input type="radio" name="FeatureUnder active development" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Vendor : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Name : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Vendor : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Transactional :</label></br>
 								<input type="radio" name="FeatureTransactional" value="oui">Yes <input type="radio" name="FeatureTransactional" value = "non">No <input type="radio" name="FeatureTransactional" value = "non">Partial </br>
 											<input type="text"/></br>								
+								</br>	
+								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Under active development :</label></br>
+								<input type="radio" name="FeatureUnder active development" value="oui">Yes <input type="radio" name="FeatureUnder active development" value = "non">No <input type="radio" name="FeatureUnder active development" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['GPL','AGPLv3','Modified GPL','GPLv2','']
+								$("#0").typeahead({
+									name:"Name",
+									local : ['TokuDB','XtraDB','mroonga','Berkeley DB','CSV','sequence','Aria','BlitzDB','InfiniDB','MyISAM','NDB','FederatedX','Falcon','InnoDB','SphinxSE','CONNECT','WiredTiger','Archive','CassandraSE','Federated','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Vendor",
 									local : ['Sphinx Technologies','MariaDB','Oracle','?','WiredTiger','Calpont','TokuTek','Percona','']
 								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['TokuDB','XtraDB','mroonga','Berkeley DB','CSV','sequence','Aria','BlitzDB','InfiniDB','MyISAM','NDB','FederatedX','Falcon','InnoDB','SphinxSE','CONNECT','WiredTiger','Archive','CassandraSE','Federated','']
+								$("#2").typeahead({
+									name:"License",
+									local : ['GPL','AGPLv3','Modified GPL','GPLv2','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

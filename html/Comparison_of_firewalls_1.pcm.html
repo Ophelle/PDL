@@ -29,45 +29,29 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Firewall : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>OS : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Cost : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Cost : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Firewall : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>OS : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['FreeBSD/NanoBSD-based appliance
-firewall distribution','Proprietary, FortiOS','Linux-based appliance','Proprietary, runs only 
-on CISCO hardware','Proprietary operating system','Proprietary operating system ScreenOS','Proprietary operating system PANOS','Proprietary operating system Junos','Linux-based, with optional web filtering / auditing.','FreeBSD-based appliance
-embedded firewall distribution','Proprietary operating system Check Point IPSO
-and Gaia (Linux-based)','']
+								$("#0").typeahead({
+									name:"Firewall",
+									local : ['Zeroshell','Juniper SRX','IPFire','CISCO ACLs','Sophos UTM','OPNsense','Opendium Iceni','Palo Alto Networks','FortiGate','Juniper SSG','IPCop','Check Point VPN-1','Monowall','pfsense','CISCO ASA','Untangle','Smoothwall','CISCO PIX','Vyatta','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"License",
 									local : ['GPL','Proprietary','various','GPL version 2','BSD','GPL and Proprietary','ESF License Agreement, v1.0','BSD (2-clause)','']
 								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['Included on Check Point
-security gateways','Free','Free / Paid','Included on all CISCO
-switches and routers','Included on Netscreen
-security gateways','Included on SRX
-security gateways','Included on Palo Alto
-Networks firewalls','Included on all CISCO
-PIX devices','Paid','Included on all CISCO
-ASA devices','?','Included on all Fortigate
-devices','']
+								$("#2").typeahead({
+									name:"Cost",
+									local : ['Included on Check Pointsecurity gateways','Free','Free / Paid','Included on all CISCOswitches and routers','Included on Netscreensecurity gateways','Included on SRXsecurity gateways','Included on Palo AltoNetworks firewalls','Included on all CISCOPIX devices','Paid','Included on all CISCOASA devices','?','Included on all Fortigatedevices','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['Zeroshell','Juniper SRX','IPFire','CISCO ACLs','Sophos UTM','OPNsense','Opendium Iceni','Palo Alto Networks','FortiGate','Juniper SSG','IPCop','Check Point VPN-1','Monowall','pfsense','CISCO ASA','Untangle','Smoothwall','CISCO PIX','Vyatta','']
+								$("#3").typeahead({
+									name:"OS",
+									local : ['FreeBSD/NanoBSD-based appliancefirewall distribution','Proprietary, FortiOS','Linux-based appliance','Proprietary, runs only on CISCO hardware','Proprietary operating system','Proprietary operating system ScreenOS','Proprietary operating system PANOS','Proprietary operating system Junos','Linux-based, with optional web filtering / auditing.','FreeBSD-based applianceembedded firewall distribution','Proprietary operating system Check Point IPSOand Gaia (Linux-based)','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

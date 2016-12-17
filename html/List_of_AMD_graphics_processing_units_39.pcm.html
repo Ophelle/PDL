@@ -29,68 +29,62 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Shared Memory - Bus width (bit) : </label></br> <input id="1" type="number" name="Feature"></br>
+								<label>GFLOPS : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Core Clock (MHz) : </label></br> <input id="2" type="number" name="Feature"></br>
+								<label>Max. Combined TDP (W) : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>APU : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Config core : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Code name : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Fab (nm) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>GFLOPS : </label></br> <input id="3" type="number" name="Feature"></br>
+								<label>Shared Memory - Bus type : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Shared Memory - Bandwidth (GB/s) : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Shared Memory - Bus width (bit) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
 								<label>Released :</label></br>
 											<input type="checkbox" name="Feature" >June 14</br>	
 											<input type="checkbox" name="Feature" >2011</br>	
-									
+							
 								</br>	
-								<label>Fillrate - Texture (GT/s) : </label></br> <input id="5" type="number" name="Feature"></br>
+								<label>Core Clock (MHz) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Max. Combined TDP (W) : </label></br> <input id="6" type="text" name="Feature"></br>
+								<label>Model : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Fillrate - Pixel (GP/s) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>APU : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Config core : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Shared Memory - Bandwidth (GB/s) : </label></br> <input id="9" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>Code name : </label></br> <input id="10" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Model : </label></br> <input id="11" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fab (nm) : </label></br> <input id="12" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>Shared Memory - Bus type : </label></br> <input id="13" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fillrate - Pixel (GP/s) : </label></br> <input id="14" type="number" name="Feature"></br>
+								<label>Fillrate - Texture (GT/s) : </label></br> <input type="number" name="Feature"></br>
 								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Max. Combined TDP (W)",
 									local : ['35 - 45','35','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"APU",
 									local : ['A4-3300M A4-3310MX','E2-3000M','A8-3500M A8-3510MX A8-3530MX','A6-3400M A6-3410MX','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#2").typeahead({
+									name:"Config core",
 									local : ['160:8:4','240:12:4','320:16:8','400:20:8','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#3").typeahead({
+									name:"Code name",
 									local : ['WinterPark','BeaverCreek','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#4").typeahead({
+									name:"Model",
 									local : ['Radeon HD 6480G','Radeon HD 6620G','Radeon HD 6380G','Radeon HD 6520G','']
 								});
 						</script>

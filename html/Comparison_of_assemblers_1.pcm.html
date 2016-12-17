@@ -29,41 +29,37 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Host platform : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Instruction set : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Active Development :</label></br>
-								<input type="radio" name="FeatureActive Development" value="oui">Yes <input type="radio" name="FeatureActive Development" value = "non">No <input type="radio" name="FeatureActive Development" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Assembler : </label></br> <input id="5" type="text" name="Feature"></br>
-								
 								</br>	
 								<label>Open source :</label></br>
 								<input type="radio" name="FeatureOpen source" value="oui">Yes <input type="radio" name="FeatureOpen source" value = "non">No <input type="radio" name="FeatureOpen source" value = "non">Partial </br>
 											<input type="text"/></br>								
+								</br>	
+								<label>Assembler : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Instruction set : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Active Development :</label></br>
+								<input type="radio" name="FeatureActive Development" value="oui">Yes <input type="radio" name="FeatureActive Development" value = "non">No <input type="radio" name="FeatureActive Development" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
+								$("#0").typeahead({
+									name:"License",
+									local : ['Proprietary','Free','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Host platform",
 									local : ['Commodore Amiga','Commodore Amiga, Atari ST','Atari ST','Apple Macintosh','various','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Motorola 680x0','']
+									name:"Assembler",
+									local : ['ASM-One Macro Assembler','TurboAss','Mac Assembler','GFA-Assembler','Digital Research Assembler','Fantasm','Seka Assembler','GST Macro Assembler','MaxonASM','vasm','A68K','PhxAss','HiSoft DevPac Assembler','Pure Assembler','Metacomco Macro Assembler','OMA','Data Becker Profimat','MPW Assembler','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['Proprietary','Free','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['ASM-One Macro Assembler','TurboAss','Mac Assembler','GFA-Assembler','Digital Research Assembler','Fantasm','Seka Assembler','GST Macro Assembler','MaxonASM','vasm','A68K','PhxAss','HiSoft DevPac Assembler','Pure Assembler','Metacomco Macro Assembler','OMA','Data Becker Profimat','MPW Assembler','']
+									name:"Instruction set",
+									local : ['Motorola 680x0','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

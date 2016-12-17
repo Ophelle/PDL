@@ -29,14 +29,7 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Latin : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Spanish : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Portuguese : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Latin : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Examples :</label></br>
 											<input type="checkbox" name="Feature" >caelvm → S. cielo</br>	
@@ -95,52 +88,29 @@ pectvm → S. pecho</br>
 
 filivm → S. hijo</br>	
 											<input type="checkbox" name="Feature" >P. filho</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Meaning : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Portuguese : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Meaning : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Spanish : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Latin",
+									local : ['-li-','-ll-','-l-','-nn-','-lt-,','-n-','cl-, fl-, pl-','-ni-','f-','j(a)-','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Portuguese",
 									local : ['-it-','-lh-','-nh-','ja-','ch-','-l-','(elided)','-n-','f-','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['-li-','-ll-','-l-','-nn-','-lt-,','-n-','cl-, fl-, pl-','-ni-','f-','j(a)-','']
+									name:"Meaning",
+									local : [''much' 'night' 'chest'',''to call' 'lead' (metal) 'flame' 'full'',''sky'  'to fly'',''June'',''year' 'reed'',''to speak'  'son' 'fire'',''garlic' 'son'',''already' 'to lie, as in a grave'',''castle'',''general' (adj.) 'to have'','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['-j-','ll- or pl','h- 
- (later silent) 
- or f-','-n-','-l-','-ñ-','-ch-','ya-','-ll-','-ni-','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : [''much' 
-
-'night' 
-
-'chest'',''to call' 
-
-'lead' (metal) 
-
-'flame' 
-
-'full'',''sky' 
- 
-'to fly'',''June'',''year' 
-
-'reed'',''to speak' 
- 
-'son' 
-
-'fire'',''garlic' 
-
-'son'',''already' 
-
-'to lie, as in a grave'',''castle'',''general' (adj.) 
-
-'to have'','']
+									name:"Spanish",
+									local : ['-j-','ll- or pl','h-  (later silent)  or f-','-n-','-l-','-ñ-','-ch-','ya-','-ll-','-ni-','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

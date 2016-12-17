@@ -29,87 +29,74 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
+								<label>Fillrate - MVertices/s : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Memory clock (MHz) : </label></br> <input id="2" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Memory - Bus width (bit) : </label></br> <input id="3" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>API support - DirectX : </label></br> <input id="4" type="text" name="Feature"></br>
+								<label>Fillrate - MOperations/s : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Core clock (MHz) : </label></br> <input id="5" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Core config : </label></br> <input id="6" type="text" name="Feature"></br>
+								<label>Fillrate - MTextels/s : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Memory (MB) : </label></br> <input id="7" type="text" name="Feature"></br>
+								<label>Fillrate - MPixels/s : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Fillrate - MTextels/s : </label></br> <input id="8" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Memory clock (MHz) : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>Bus interface : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Core clock (MHz) : </label></br> <input type="number" name="Feature"></br>
+								
 								</br>	
 								<label>Launch :</label></br>
 											<input type="checkbox" name="Feature" >November 15</br>	
 											<input type="checkbox" name="Feature" >2001</br>	
 											<input type="checkbox" name="Feature" >November 11</br>	
 											<input type="checkbox" name="Feature" >2006</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
-								<label>Fillrate - MPixels/s : </label></br> <input id="10" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Core config : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Code name : </label></br> <input id="11" type="text" name="Feature"></br>
+								<label>Memory - Bus type : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bus width (bit) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>API support - OpenGL :</label></br>
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Fillrate - MOperations/s : </label></br> <input id="13" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
-								<label>Model : </label></br> <input id="14" type="text" name="Feature"></br>
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Memory - Bus type : </label></br> <input id="15" type="text" name="Feature"></br>
+								<label>Memory (MB) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Fab (nm) :</label></br>
-											<input type="checkbox" name="Feature" >90</br>	
-											<input type="checkbox" name="Feature" >65</br>	
-											<input type="checkbox" name="Feature" >40</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								<label>Model : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Fillrate - MVertices/s : </label></br> <input id="17" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Fab (nm) : </label></br> <input type="number" name="Feature"></br>
+								
 								</br>	
-								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="18" type="text" name="Feature"></br>
+								<label>Code name : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>API support - DirectX : </label></br> <input type="number" name="Feature"></br>
+								
+								</br>	
+								<label>API support - OpenGL : </label></br> <input type="number" name="Feature"></br>
 								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Bus interface",
 									local : ['FlexIO','Integrated','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Core config",
 									local : ['4:2:8:4','24:8:24:8','']
 								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['64','256
-256','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['G70','NV2A','']
-								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#2").typeahead({
+									name:"Model",
 									local : ['RSX(PS3)','XGPU(Xbox)','']
+								});
+								$("#3").typeahead({
+									name:"Code name",
+									local : ['G70','NV2A','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

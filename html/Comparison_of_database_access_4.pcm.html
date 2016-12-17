@@ -29,26 +29,23 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Prog Language : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>raw MySQL access : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>PHP : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>PHP : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>raw MySQL access : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Prog Language : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"raw MySQL access",
+									local : ['','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['Describe','Search','List table content','']
+									name:"PHP",
+									local : ['','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['','']
+									name:"Prog Language",
+									local : ['Describe','Search','List table content','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

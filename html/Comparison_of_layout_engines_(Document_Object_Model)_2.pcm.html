@@ -29,68 +29,59 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label> - 1.0 : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Interface CDATASection : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label> - 2.0 : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Interface Notation : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>? - No :</label></br>
 								<input type="radio" name="Feature? - No" value="oui">Yes <input type="radio" name="Feature? - No" value = "non">No <input type="radio" name="Feature? - No" value = "non">Partial </br>
 								
 								</br>	
-								<label>? - 2.0 :</label></br>
-								<input type="radio" name="Feature? - 2.0" value="oui">Yes <input type="radio" name="Feature? - 2.0" value = "non">No <input type="radio" name="Feature? - 2.0" value = "non">Partial </br>
-								
+								<label>KHTML - Presto : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Interface ProcessingInstruction : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Interface DocumentType : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>KHTML - Presto : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>Interface Notation : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Interface EntityReference : </label></br> <input id="9" type="text" name="Feature"></br>
-								
+								<label> - 1.0 : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>? - 1.0 :</label></br>
 								<input type="radio" name="Feature? - 1.0" value="oui">Yes <input type="radio" name="Feature? - 1.0" value = "non">No <input type="radio" name="Feature? - 1.0" value = "non">Partial </br>
 								
 								</br>	
-								<label>Interface DocumentType : </label></br> <input id="11" type="text" name="Feature"></br>
+								<label>Interface ProcessingInstruction : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label> - 2.0 : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>? - 2.0 :</label></br>
+								<input type="radio" name="Feature? - 2.0" value="oui">Yes <input type="radio" name="Feature? - 2.0" value = "non">No <input type="radio" name="Feature? - 2.0" value = "non">Partial </br>
 								
 								</br>	
-								<label>Interface Entity : </label></br> <input id="12" type="text" name="Feature"></br>
-								
+								<label>Interface EntityReference : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Interface CDATASection : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Interface Entity : </label></br> <input id="8" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Interface DocumentType",
+									local : ['Interface DocumentType','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['Interface ProcessingInstruction','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['Interface EntityReference','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['Interface Entity','']
-								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['Interface CDATASection','']
-								});
-								$("#5").typeahead({
-									name:"list5",
+									name:"Interface Notation",
 									local : ['Interface Notation','']
 								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['Interface DocumentType','']
+								$("#2").typeahead({
+									name:"Interface ProcessingInstruction",
+									local : ['Interface ProcessingInstruction','']
+								});
+								$("#3").typeahead({
+									name:"Interface EntityReference",
+									local : ['Interface EntityReference','']
+								});
+								$("#4").typeahead({
+									name:"Interface Entity",
+									local : ['Interface Entity','']
+								});
+								$("#5").typeahead({
+									name:"Interface CDATASection",
+									local : ['Interface CDATASection','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

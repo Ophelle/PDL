@@ -29,47 +29,45 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Unix :</label></br>
-								<input type="radio" name="FeatureUnix" value="oui">Yes <input type="radio" name="FeatureUnix" value = "non">No <input type="radio" name="FeatureUnix" value = "non">Partial </br>
+								<label>Linux :</label></br>
+								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
+								
+								</br>	
+								<label>Notes : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Mac OS X :</label></br>
+								<input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </br>
 								
 								</br>	
 								<label>IIS :</label></br>
 								<input type="radio" name="FeatureIIS" value="oui">Yes <input type="radio" name="FeatureIIS" value = "non">No <input type="radio" name="FeatureIIS" value = "non">Partial </br>
 								
 								</br>	
-								<label>BSD :</label></br>
-								<input type="radio" name="FeatureBSD" value="oui">Yes <input type="radio" name="FeatureBSD" value = "non">No <input type="radio" name="FeatureBSD" value = "non">Partial </br>
-								
-								</br>	
-								<label>Mac OS X :</label></br>
-								<input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </br>
-								
-								</br>	
-								<label>Linux :</label></br>
-								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
-								
-								</br>	
-								<label>Software : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Windows :</label></br>
-								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
-								
-								</br>	
 								<label>Apache :</label></br>
 								<input type="radio" name="FeatureApache" value="oui">Yes <input type="radio" name="FeatureApache" value = "non">No <input type="radio" name="FeatureApache" value = "non">Partial </br>
 								
 								</br>	
-								<label>Notes : </label></br> <input id="9" type="text" name="Feature"></br>
+								<label>Unix :</label></br>
+								<input type="radio" name="FeatureUnix" value="oui">Yes <input type="radio" name="FeatureUnix" value = "non">No <input type="radio" name="FeatureUnix" value = "non">Partial </br>
+								
+								</br>	
+								<label>BSD :</label></br>
+								<input type="radio" name="FeatureBSD" value="oui">Yes <input type="radio" name="FeatureBSD" value = "non">No <input type="radio" name="FeatureBSD" value = "non">Partial </br>
+								
+								</br>	
+								<label>Software : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Windows :</label></br>
+								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
 								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Dogear','Knowledge Plaza','Licorize','Jumper 2.0','Scuttle','Connectbeam','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Notes",
 									local : ['none','requires IBM WebSphere Application Server 6.1.0.13 for the web server','Written in Java 6, runs on Apache Tomcat and compatible servers.','No OS management required. Infrastructure-as-a-Service for on-premises installation.','']
+								});
+								$("#1").typeahead({
+									name:"Software",
+									local : ['Dogear','Knowledge Plaza','Licorize','Jumper 2.0','Scuttle','Connectbeam','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

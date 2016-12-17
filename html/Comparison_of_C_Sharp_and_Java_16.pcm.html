@@ -29,43 +29,16 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Static members are shared across all generic realizations (during type erasure all realizations are folded into a single class) : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Java : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Cannot create an array where the component type is a generic realization (concrete parameterized type) :</label></br>
-											<input type="checkbox" name="Feature" >A generic realization is a 1st class citizen and can be used as any other class; also an array component</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Type information is erased during compilation. Special extensions to reflection must be used to discover the original type. :</label></br>
-											<input type="checkbox" name="Feature" >Type information about C# generic types is fully preserved at runtime</br>	
-											<input type="checkbox" name="Feature" >and allows complete reflection support as well as instantiation of generic types.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Reflection cannot be used to construct new generic realizations. During compilation extra code (typecasts) are injected into the client code of generics. This precludes creating new realizations later. : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>instanceof is not allowed with type parameters or concrete generic realizations :</label></br>
-											<input type="checkbox" name="Feature" >The is and as operators work the same for type parameters as for any other type.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>There is no class literal for a concrete realization of a generic type : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>Cannot create an array where the component type is a type parameter :</label></br>
 											<input type="checkbox" name="Feature" >Type parameters represent actual</br>	
 											<input type="checkbox" name="Feature" >discrete classes and can be used like any other type within the generic definition.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
-								<label>Cannot create new instances using a type parameter as the type :</label></br>
-											<input type="checkbox" name="Feature" >With a constructor constraint</br>	
-											<input type="checkbox" name="Feature" >generic methods or methods of generic classes can create instances of classes that have default constructors.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Type parameters cannot be used in declarations of static fields/methods or in definitions of static inner classes : </label></br> <input id="10" type="text" name="Feature"></br>
-								
+								<label>Cannot use primitive types as type parameters; instead, the developer must use the wrapper type corresponding to the primitive type. This incurs extra performance overhead by requiring boxing and unboxing conversions as well a memory and garbage collection pressure, as the wrappers will be heap-allocated as opposed to stack-allocated. :</label></br>
+											<input type="checkbox" name="Feature" >Primitive and value types are allowed as type parameters in generic realizations. At runtime code will be synthesized and compiled for each unique combination of type parameters upon first use. Generics that are realized with primitive</br>	
+											<input type="checkbox" name="Feature" >value type do not require boxing</br>	
+											<input type="checkbox" name="Feature" >unboxing conversions.</br>	
+							
 								</br>	
 								<label>Type checks and downcasts are injected into client code (the code referencing the generics). Compared to non-generic code with manual casts, these casts will be the same, but compared to compile-time verified code that would not need runtime casts and checks, these operations represent a performance overhead. :</label></br>
 											<input type="checkbox" name="Feature" >C#</br>	
@@ -73,37 +46,59 @@
 											<input type="checkbox" name="Feature" >making extra checks</br>	
 											<input type="checkbox" name="Feature" >casts are unnecessary at runtime. Hence</br>	
 											<input type="checkbox" name="Feature" >generic code will run faster than non-generic (or type-erased) code that require casts when handling non-generic or type-erased objects.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>Cannot use primitive types as type parameters; instead, the developer must use the wrapper type corresponding to the primitive type. This incurs extra performance overhead by requiring boxing and unboxing conversions as well a memory and garbage collection pressure, as the wrappers will be heap-allocated as opposed to stack-allocated. :</label></br>
-											<input type="checkbox" name="Feature" >Primitive and value types are allowed as type parameters in generic realizations. At runtime code will be synthesized and compiled for each unique combination of type parameters upon first use. Generics that are realized with primitive</br>	
-											<input type="checkbox" name="Feature" >value type do not require boxing</br>	
-											<input type="checkbox" name="Feature" >unboxing conversions.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
 								</br>	
 								<label>Generic exceptions are not allowed and a type parameter cannot be used in a catch clause :</label></br>
 											<input type="checkbox" name="Feature" >Can both define generic exceptions and use those in catch clauses</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+							
+								</br>	
+								<label>Type information is erased during compilation. Special extensions to reflection must be used to discover the original type. :</label></br>
+											<input type="checkbox" name="Feature" >Type information about C# generic types is fully preserved at runtime</br>	
+											<input type="checkbox" name="Feature" >and allows complete reflection support as well as instantiation of generic types.</br>	
+							
+								</br>	
+								<label>Cannot create new instances using a type parameter as the type :</label></br>
+											<input type="checkbox" name="Feature" >With a constructor constraint</br>	
+											<input type="checkbox" name="Feature" >generic methods or methods of generic classes can create instances of classes that have default constructors.</br>	
+							
+								</br>	
+								<label>instanceof is not allowed with type parameters or concrete generic realizations :</label></br>
+											<input type="checkbox" name="Feature" >The is and as operators work the same for type parameters as for any other type.</br>	
+							
+								</br>	
+								<label>Reflection cannot be used to construct new generic realizations. During compilation extra code (typecasts) are injected into the client code of generics. This precludes creating new realizations later. : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Type parameters cannot be used in declarations of static fields/methods or in definitions of static inner classes : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Cannot create an array where the component type is a generic realization (concrete parameterized type) :</label></br>
+											<input type="checkbox" name="Feature" >A generic realization is a 1st class citizen and can be used as any other class; also an array component</br>	
+							
+								</br>	
+								<label>There is no class literal for a concrete realization of a generic type : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Java : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Static members are shared across all generic realizations (during type erasure all realizations are folded into a single class) : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Static members are separate for each generic realization. A generic realization is a unique class.','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['C#','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"Reflection cannot be used to construct new generic realizations. During compilation extra code (typecasts) are injected into the client code of generics. This precludes creating new realizations later.",
 									local : ['Reflection can be used to create new realizations for new combinations of type parameters.','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Type parameters cannot be used in declarations of static fields/methods or in definitions of static inner classes",
+									local : ['No restrictions on use of type parameters','']
+								});
+								$("#2").typeahead({
+									name:"There is no class literal for a concrete realization of a generic type",
 									local : ['A generic realization is an actual class.','']
 								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['No restrictions on use of type parameters','']
+								$("#3").typeahead({
+									name:"Java",
+									local : ['C#','']
+								});
+								$("#4").typeahead({
+									name:"Static members are shared across all generic realizations (during type erasure all realizations are folded into a single class)",
+									local : ['Static members are separate for each generic realization. A generic realization is a unique class.','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

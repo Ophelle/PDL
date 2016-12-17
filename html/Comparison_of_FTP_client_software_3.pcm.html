@@ -29,6 +29,15 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Creator : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>First public release date : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
+								</br>	
+								<label>Copy files over 2 GB :</label></br>
+								<input type="radio" name="FeatureCopy files over 2 GB" value="oui">Yes <input type="radio" name="FeatureCopy files over 2 GB" value = "non">No <input type="radio" name="FeatureCopy files over 2 GB" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
 								<label>Latest stable version :</label></br>
 											<input type="checkbox" name="Feature" >3.3.01 (build 009) July 11</br>	
 											<input type="checkbox" name="Feature" >2014; 10 months ago</br>	
@@ -60,34 +69,22 @@
 											<input type="checkbox" name="Feature" >2009; 6 years ago</br>	
 											<input type="checkbox" name="Feature" >1.9.0 May 10</br>	
 											<input type="checkbox" name="Feature" >2011; 4 years ago</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Software license : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Software license : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Creator : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Copy files over 2 GB :</label></br>
-								<input type="radio" name="FeatureCopy files over 2 GB" value="oui">Yes <input type="radio" name="FeatureCopy files over 2 GB" value = "non">No <input type="radio" name="FeatureCopy files over 2 GB" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Client : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>First public release date : </label></br> <input id="6" type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Client : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Creator",
+									local : ['Serengeti Systems Incorporated','SiteDesigner Technologies, Inc.','GPSoftware','Linoma Software','Celestial Software','South River Technologies, Inc.','Yummy Software','Scooter Software','Alex Kunadze/Globalscape','BulletProof Software LLC','LeapWare','Brightek Software','SmartSoft Ltd','Ipswitch, Inc.','NCH Software.','PrimaSoft PC','Stack-Its','Christian Ghisler','OpenSight Software, LLC','Automated Programming Technologies','Actysoft Inc','Vicomsoft','ENSware LLC.','']
+								});
 								$("#1").typeahead({
-									name:"list1",
+									name:"Software license",
 									local : ['Proprietary','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Serengeti Systems Incorporated','SiteDesigner Technologies, Inc.','GPSoftware','Linoma Software','Celestial Software','South River Technologies, Inc.','Yummy Software','Scooter Software','Alex Kunadze/Globalscape','BulletProof Software LLC','LeapWare','Brightek Software','SmartSoft Ltd','Ipswitch, Inc.','NCH Software.','PrimaSoft PC','Stack-Its','Christian Ghisler','OpenSight Software, LLC','Automated Programming Technologies','Actysoft Inc','Vicomsoft','ENSware LLC.','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+									name:"Client",
 									local : ['Global Downloader','AbsoluteTelnet','WS_FTP','Yummy FTP','ClassicFTP','Directory Opus','Beyond Compare','SmartFTP','Total Commander','FTP Client','BatchFTP','LeapFTP','3D-FTP','UploadFTP','Beyond FTP','CuteFTP','FlashFXP','rwBackup','BulletProof FTP aka BPFTP','AutoFTP','GoAnywhere Director','WebDrive','Robo-FTP','']
 								});
 						</script>

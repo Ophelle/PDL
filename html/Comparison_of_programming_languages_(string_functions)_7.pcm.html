@@ -49,58 +49,33 @@
 											<input type="checkbox" name="Feature" >Turing</br>	
 											<input type="checkbox" name="Feature" >VB</br>	
 											<input type="checkbox" name="Feature" >Ya</br>	
-									
+							
+								</br>	
+								<label>string <> string : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>string .. string : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>string  string :</label></br>
 											<input type="checkbox" name="Feature" >REXX</br>	
 											<input type="checkbox" name="Feature" >SQL</br>	
 											<input type="checkbox" name="Feature" >PL</br>	
 											<input type="checkbox" name="Feature" >I</br>	
-									
+							
 								</br>	
-								<label>string . string :</label></br>
-											<input type="checkbox" name="Feature" >Perl</br>	
-											<input type="checkbox" name="Feature" >PHP</br>	
-									
+								<label>string // string : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>strcat(string, string) :</label></br>
 											<input type="checkbox" name="Feature" >C</br>	
 											<input type="checkbox" name="Feature" >C++ (char * only)</br>	
-									
+							
 								</br>	
-								<label>string, string : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>string ~ string : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>(concatenate 'string string string) : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>string, string : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>string <> string : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Format : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>string ++ string :</label></br>
-											<input type="checkbox" name="Feature" >Erlang</br>	
-											<input type="checkbox" name="Feature" >Haskell</br>	
-									
-								</br>	
-								<label>stringstring : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>(string-append string string) :</label></br>
-											<input type="checkbox" name="Feature" >Scheme</br>	
-											<input type="checkbox" name="Feature" >ISLISP</br>	
-									
-								</br>	
-								<label>string string : </label></br> <input id="11" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>string ^ string :</label></br>
-											<input type="checkbox" name="Feature" >OCaml</br>	
-											<input type="checkbox" name="Feature" >Standard ML</br>	
-											<input type="checkbox" name="Feature" >F#</br>	
-									
-								</br>	
-								<label>Format : </label></br> <input id="13" type="text" name="Feature"></br>
-								
+								<label>(str string string) : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
 								<label>string & string :</label></br>
 											<input type="checkbox" name="Feature" >Ada</br>	
@@ -110,66 +85,80 @@
 											<input type="checkbox" name="Feature" >VB</br>	
 											<input type="checkbox" name="Feature" >VB .NET</br>	
 											<input type="checkbox" name="Feature" >COBOL (between literals only)</br>	
-									
+							
 								</br>	
-								<label>string ~ string : </label></br> <input id="15" type="text" name="Feature"></br>
-								
+								<label>string ++ string :</label></br>
+											<input type="checkbox" name="Feature" >Erlang</br>	
+											<input type="checkbox" name="Feature" >Haskell</br>	
+							
 								</br>	
-								<label>string .. string : </label></br> <input id="16" type="text" name="Feature"></br>
-								
+								<label>string ^ string :</label></br>
+											<input type="checkbox" name="Feature" >OCaml</br>	
+											<input type="checkbox" name="Feature" >Standard ML</br>	
+											<input type="checkbox" name="Feature" >F#</br>	
+							
 								</br>	
-								<label>string // string : </label></br> <input id="17" type="text" name="Feature"></br>
-								
+								<label>string . string :</label></br>
+											<input type="checkbox" name="Feature" >Perl</br>	
+											<input type="checkbox" name="Feature" >PHP</br>	
+							
 								</br>	
-								<label>[string stringByAppendingString:string] : </label></br> <input id="18" type="text" name="Feature"></br>
-								
+								<label>(string-append string string) :</label></br>
+											<input type="checkbox" name="Feature" >Scheme</br>	
+											<input type="checkbox" name="Feature" >ISLISP</br>	
+							
 								</br>	
-								<label>(str string string) : </label></br> <input id="19" type="text" name="Feature"></br>
-								
+								<label>stringstring : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>[string stringByAppendingString:string] : </label></br> <input id="8" type="text" name="Feature"></br>
+								</br>	
+								<label>string string : </label></br> <input id="9" type="text" name="Feature"></br>
+								</br>	
+								<label>(concatenate 'string string string) : </label></br> <input id="10" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Smalltalk','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['SNOBOL','']
-								});
-								$("#3").typeahead({
-									name:"list3",
-									local : ['Common Lisp','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#0").typeahead({
+									name:"string <> string",
 									local : ['Mathematica','']
 								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['Bash shell','']
-								});
-								$("#6").typeahead({
-									name:"list6",
-									local : ['Languages','']
-								});
-								$("#7").typeahead({
-									name:"list7",
-									local : ['D','']
-								});
-								$("#8").typeahead({
-									name:"list8",
+								$("#1").typeahead({
+									name:"string .. string",
 									local : ['Lua','']
 								});
-								$("#9").typeahead({
-									name:"list9",
+								$("#2").typeahead({
+									name:"string // string",
 									local : ['Fortran','']
 								});
-								$("#10").typeahead({
-									name:"list10",
+								$("#3").typeahead({
+									name:"string ~ string",
+									local : ['D','']
+								});
+								$("#4").typeahead({
+									name:"string, string",
+									local : ['Smalltalk','']
+								});
+								$("#5").typeahead({
+									name:"Format",
+									local : ['Languages','']
+								});
+								$("#6").typeahead({
+									name:"(str string string)",
+									local : ['Clojure','']
+								});
+								$("#7").typeahead({
+									name:"string string",
+									local : ['SNOBOL','']
+								});
+								$("#8").typeahead({
+									name:"stringstring",
+									local : ['Bash shell','']
+								});
+								$("#9").typeahead({
+									name:"[string stringByAppendingString:string]",
 									local : ['Objective-C (NSString * only)','']
 								});
-								$("#11").typeahead({
-									name:"list11",
-									local : ['Clojure','']
+								$("#10").typeahead({
+									name:"(concatenate 'string string string)",
+									local : ['Common Lisp','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

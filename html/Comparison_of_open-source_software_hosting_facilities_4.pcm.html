@@ -29,39 +29,37 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>CVS :</label></br>
-								<input type="radio" name="FeatureCVS" value="oui">Yes <input type="radio" name="FeatureCVS" value = "non">No <input type="radio" name="FeatureCVS" value = "non">Partial </br>
-								
+								<label>Name : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Git :</label></br>
-								<input type="radio" name="FeatureGit" value="oui">Yes <input type="radio" name="FeatureGit" value = "non">No <input type="radio" name="FeatureGit" value = "non">Partial </br>
-								
+								<label>Notes : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Ad-free :</label></br>
 								<input type="radio" name="FeatureAd-free" value="oui">Yes <input type="radio" name="FeatureAd-free" value = "non">No <input type="radio" name="FeatureAd-free" value = "non">Partial </br>
-								
-								</br>	
-								<label>Arch :</label></br>
-								<input type="radio" name="FeatureArch" value="oui">Yes <input type="radio" name="FeatureArch" value = "non">No <input type="radio" name="FeatureArch" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 								</br>	
 								<label>SVN :</label></br>
 								<input type="radio" name="FeatureSVN" value="oui">Yes <input type="radio" name="FeatureSVN" value = "non">No <input type="radio" name="FeatureSVN" value = "non">Partial </br>
-								
+											<input type="text"/></br>								
 								</br>	
-								<label>Notes : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Arch :</label></br>
+								<input type="radio" name="FeatureArch" value="oui">Yes <input type="radio" name="FeatureArch" value = "non">No <input type="radio" name="FeatureArch" value = "non">Partial </br>
+											<input type="text"/></br>								
 								</br>	
-								<label>Name : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>CVS :</label></br>
+								<input type="radio" name="FeatureCVS" value="oui">Yes <input type="radio" name="FeatureCVS" value = "non">No <input type="radio" name="FeatureCVS" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>Git :</label></br>
+								<input type="radio" name="FeatureGit" value="oui">Yes <input type="radio" name="FeatureGit" value = "non">No <input type="radio" name="FeatureGit" value = "non">Partial </br>
+											<input type="text"/></br>								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Only for Drupal related projects.','Only for interoperability and shared base technology for free software desktop environments on Linux and other Unix-like operating systems, including the X Window System (X11) and cairo (graphics).','Only for Ruby related projects. Closed down as of May 15, 2014.','Only for GNOME related projects.','Only for Ocaml related projects','Only for Mozilla related projects.','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Name",
 									local : ['mozdev','RubyForge','OCamlForge','freedesktop.org','GNOME Git Repositories','Drupal','']
+								});
+								$("#1").typeahead({
+									name:"Notes",
+									local : ['Only for Drupal related projects.','Only for interoperability and shared base technology for free software desktop environments on Linux and other Unix-like operating systems, including the X Window System (X11) and cairo (graphics).','Only for Ruby related projects. Closed down as of May 15, 2014.','Only for GNOME related projects.','Only for Ocaml related projects','Only for Mozilla related projects.','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

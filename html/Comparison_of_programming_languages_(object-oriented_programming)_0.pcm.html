@@ -29,21 +29,17 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>construction : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>destruction : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>destruction : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>construction : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['"The class is an Object.
-Just send a message to a class, usually  or , and many others, for example:"','','INVOKE class "NEW" RETURNING variable or 
- MOVE class::"NEW" TO variable','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"destruction",
 									local : ['','']
+								});
+								$("#1").typeahead({
+									name:"construction",
+									local : ['"The class is an Object.Just send a message to a class, usually  or , and many others, for example:"','','INVOKE class "NEW" RETURNING variable or  MOVE class::"NEW" TO variable','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

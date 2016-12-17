@@ -29,60 +29,56 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>MP4 :</label></br>
-								<input type="radio" name="FeatureMP4" value="oui">Yes <input type="radio" name="FeatureMP4" value = "non">No <input type="radio" name="FeatureMP4" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>QuickTime :</label></br>
-								<input type="radio" name="FeatureQuickTime" value="oui">Yes <input type="radio" name="FeatureQuickTime" value = "non">No <input type="radio" name="FeatureQuickTime" value = "non">Partial </br>
-											<input type="text"/></br>								
-								</br>	
-								<label>Audio player : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>FLV : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
 								<label>OGM :</label></br>
 								<input type="radio" name="FeatureOGM" value="oui">Yes <input type="radio" name="FeatureOGM" value = "non">No <input type="radio" name="FeatureOGM" value = "non">Partial </br>
 											<input type="text"/></br>								
+								</br>	
+								<label>Audio player : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>AVI :</label></br>
 								<input type="radio" name="FeatureAVI" value="oui">Yes <input type="radio" name="FeatureAVI" value = "non">No <input type="radio" name="FeatureAVI" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
+								<label>Ogg :</label></br>
+								<input type="radio" name="FeatureOgg" value="oui">Yes <input type="radio" name="FeatureOgg" value = "non">No <input type="radio" name="FeatureOgg" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>MP4 :</label></br>
+								<input type="radio" name="FeatureMP4" value="oui">Yes <input type="radio" name="FeatureMP4" value = "non">No <input type="radio" name="FeatureMP4" value = "non">Partial </br>
+											<input type="text"/></br>								
+								</br>	
+								<label>MPEG-21 : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
 								<label>ASF :</label></br>
 								<input type="radio" name="FeatureASF" value="oui">Yes <input type="radio" name="FeatureASF" value = "non">No <input type="radio" name="FeatureASF" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>MPEG-21 : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+								<label>FLV : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>NUT : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Ogg :</label></br>
-								<input type="radio" name="FeatureOgg" value="oui">Yes <input type="radio" name="FeatureOgg" value = "non">No <input type="radio" name="FeatureOgg" value = "non">Partial </br>
+								<label>QuickTime :</label></br>
+								<input type="radio" name="FeatureQuickTime" value="oui">Yes <input type="radio" name="FeatureQuickTime" value = "non">No <input type="radio" name="FeatureQuickTime" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
 								<label>Matroska :</label></br>
 								<input type="radio" name="FeatureMatroska" value="oui">Yes <input type="radio" name="FeatureMatroska" value = "non">No <input type="radio" name="FeatureMatroska" value = "non">Partial </br>
 											<input type="text"/></br>								
+								</br>	
+								<label>NUT : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Audio player",
 									local : ['foobar2000','Sonique','AIMP','Audacious','Rhapsody','XMMS','MediaMonkey','Media Jukebox','MPXPLAY','Amarok','JuK','Cog','Rhythmbox','Musicmatch Jukebox','musikCube','Zinf','Audion','MusicBee','cmus','Audio player','']
 								});
+								$("#1").typeahead({
+									name:"MPEG-21",
+									local : ['?','No','MPEG-21','']
+								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"FLV",
 									local : ['?','No','Yes','FLV','Audio only','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['?','No','MPEG-21','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+									name:"NUT",
 									local : ['?','No','NUT','']
 								});
 						</script>

@@ -29,50 +29,31 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Derived from : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Function : </label></br> <input id="1" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Designer : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Year : </label></br> <input id="3" type="number" name="Feature"></br>
+								<label>Year : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Derived from : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Designer : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Reference : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Reference : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Derived from",
+									local : ['GOST 28147-89','','SHA-0','MD4RFC 1321 page 1','RIPEMD','MD4','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['MD5','Tiger','RIPEMD-128
-RIPEMD-256
-RIPEMD-160
-RIPEMD-320','MD4','SHA-1','HAVAL','SHA-224','Whirlpool','SHA-0','SHA-256
-SHA-512
-SHA-384','SHA-3 (Keccak)','RIPEMD','MD2','GOST R 34.11-94','MD6','']
+									name:"Function",
+									local : ['MD5','Tiger','RIPEMD-128RIPEMD-256RIPEMD-160RIPEMD-320','MD4','SHA-1','HAVAL','SHA-224','Whirlpool','SHA-0','SHA-256SHA-512SHA-384','SHA-3 (Keccak)','RIPEMD','MD2','GOST R 34.11-94','MD6','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['Vincent Rijmen
-Paulo Barreto','Ronald Rivest','NSA','Guido Bertoni
-Joan Daemen
-Michaël Peeters
-Gilles Van Assche','Ross Anderson
-Eli Biham','The RIPE Consortium','Hans Dobbertin
-Antoon Bosselaers
-Bart Preneel','Yuliang Zheng
-Josef Pieprzyk
-Jennifer Seberry','FAPSI and VNIIstandart','']
+									name:"Designer",
+									local : ['Vincent RijmenPaulo Barreto','Ronald Rivest','NSA','Guido BertoniJoan DaemenMichaël PeetersGilles Van Assche','Ross AndersonEli Biham','The RIPE Consortium','Hans DobbertinAntoon BosselaersBart Preneel','Yuliang ZhengJosef PieprzykJennifer Seberry','FAPSI and VNIIstandart','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['GOST 28147-89','','SHA-0','MD4
-RFC 1321 page 1','RIPEMD','MD4','']
-								});
-								$("#4").typeahead({
-									name:"list4",
+									name:"Reference",
 									local : ['RFC 1321','Website','RFC 5831, RFC 4357','','RFC 1319','SHA-0','RFC 1320','md6_report.pdf','']
 								});
 						</script>

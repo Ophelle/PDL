@@ -29,25 +29,22 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Execute program : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Execute program : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Replace current program with new executed program : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Replace current program with new executed program : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Shell command : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Shell command : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Execute program",
 									local : ['','N/A','Not part of the language standard. Commonly done by compiler provided packages or by interfacing to C or Posix.','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Replace current program with new executed program",
 									local : ['','Not part of the language standard. Commonly done by compiler provided packages or by interfacing to C or Posix.','N/A','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#2").typeahead({
+									name:"Shell command",
 									local : ['','N/A','Not part of the language standard. Commonly done by compiler provided packages or by interfacing to C or Posix.','or','']
 								});
 						</script>

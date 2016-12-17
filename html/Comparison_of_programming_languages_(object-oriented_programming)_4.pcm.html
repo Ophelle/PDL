@@ -29,41 +29,17 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>basic/void method : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>basic/void method : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>value-returning method : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>value-returning method : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['','METHOD-ID. foo.
-
-DATA DIVISION.
-
-LINKAGE SECTION.
-
-«parameter declarations»
-
-result-var declaration
-
-PROCEDURE DIVISION« USING parameters» RETURNING result-var.
-
-END METHOD foo.','']
+								$("#0").typeahead({
+									name:"basic/void method",
+									local : ['METHOD-ID. foo.«DATA DIVISION.LINKAGE SECTION.parameter declarations»PROCEDURE DIVISION« USING parameters».END METHOD foo.','','N/A','']
 								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['METHOD-ID. foo.
-
-«DATA DIVISION.
-
-LINKAGE SECTION.
-
-parameter declarations»
-
-PROCEDURE DIVISION« USING parameters».
-
-END METHOD foo.','','N/A','']
+								$("#1").typeahead({
+									name:"value-returning method",
+									local : ['','METHOD-ID. foo.DATA DIVISION.LINKAGE SECTION.«parameter declarations»result-var declarationPROCEDURE DIVISION« USING parameters» RETURNING result-var.END METHOD foo.','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

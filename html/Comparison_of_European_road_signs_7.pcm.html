@@ -29,48 +29,35 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Customs : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Toll : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Other Control : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>  : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Toll : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Customs : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Police : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Police : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>  : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Other Control : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
+								$("#0").typeahead({
+									name:"Toll",
+									local : ['NOT  USED','','or','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['NOT 
- USED','or','','']
+									name:" ",
+									local : ['Italy','Turkey','United  Kingdom','Hungary','Spain','Austria','Belgium','Poland','Finland','Ireland','Iceland','Ukraine','Germany','Norway','Sweden','Denmark','Netherlands','Slovakia','Czech  Republic','Estonia','Greece','Russia  &  Belarus','Switzerland','France','']
 								});
 								$("#2").typeahead({
-									name:"list2",
-									local : ['','NOT 
- USED','']
+									name:"Customs",
+									local : ['NOT  USED','or','','']
 								});
 								$("#3").typeahead({
-									name:"list3",
-									local : ['NOT 
- USED','','or','']
+									name:"Police",
+									local : ['','NOT  USED','or','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['','NOT 
- USED','or','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['Italy','Turkey','United 
- Kingdom','Hungary','Spain','Austria','Belgium','Poland','Finland','Ireland','Iceland','Ukraine','Germany','Norway','Sweden','Denmark','Netherlands','Slovakia','Czech 
- Republic','Estonia','Greece','Russia 
- & 
- Belarus','Switzerland','France','']
+									name:"Other Control",
+									local : ['','NOT  USED','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

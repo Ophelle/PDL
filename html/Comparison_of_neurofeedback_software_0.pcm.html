@@ -29,15 +29,6 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Type : </label></br> <input id="1" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Operating systems : </label></br> <input id="2" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Version : </label></br> <input id="3" type="number" name="Feature"></br>
-												<input type="text"/></br>								
-								</br>	
 								<label>Supported Devices :</label></br>
 											<input type="checkbox" name="Feature" >Pocket Neurobics</br>	
 											<input type="checkbox" name="Feature" >BrainQuiry</br>	
@@ -97,48 +88,44 @@
 											<input type="checkbox" name="Feature" >NeuroAmp plus add-ons: NeuroAmp x23</br>	
 											<input type="checkbox" name="Feature" >pIRx3</br>	
 											<input type="checkbox" name="Feature" >tactile feedback</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Software : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Developer : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Developer : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Software : </label></br> <input id="7" type="text" name="Feature"></br>
-								
+								<label>Operating systems : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>FDA cleared :</label></br>
 								<input type="radio" name="FeatureFDA cleared" value="oui">Yes <input type="radio" name="FeatureFDA cleared" value = "non">No <input type="radio" name="FeatureFDA cleared" value = "non">Partial </br>
 											<input type="text"/></br>								
+								</br>	
+								<label>Type : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Version : </label></br> <input type="number" name="Feature"></br>
+												<input type="text"/></br>								
 						<script>
+								$("#0").typeahead({
+									name:"Software",
+									local : ['Brainathalon','SmartMind','ElectricGuru','NeuroRT Suite','NeuroServer','MindReflector','BioGraph Infiniti','Cygnet','Dual Drive Pro','EventIDE','Mind WorkStation','BrainPaint','OpenViBE','BrainBay','NeurOptimal','EEGer4','BioEra','BioTrace+','eBioo','BrainFeedback Pro','BioExplorer','BrainMaster','BWView','']
+								});
 								$("#1").typeahead({
-									name:"list1",
-									local : ['Neurofeedback & Biofeedback','Neurofeedback, Biofeedback, and QEEG; optional live z-scores (ANI or BrainDX), Live sLORETA Projector.','Brainwave viewer','Neurofeedback/Biofeedback','Visual environment for designing behavioral experiments and mental games with real-time neurofeedback control and signal processing.','BCI, Visual Designer, Analysis, Neurofeedback','Neurofeedback: one- and two channel frequency band training and ILF (SCP) training according to Othmer, Alpha-Theta training. With additional Mitsar device or x23 accessory also tomographic (sLoreta) neurofeedback. Add-ons for sLoreta feedback and flexible system configuration fully approved but not available to clinicians. For research institutions only. Biofeedback: pIR far-infrared triple-sensor feedback','Neurofeedback, Biofeedback, and EEG-Driven Entrainment','Neurofeedback','Biofeedback GSR & Temp','Real-time Processing, Self Neuromodulation, Bio/Neurofeedback','Neurofeedback & Analysis','Neurofeedback: MIDI, particle display','Biofeedback: visual designer','Neurofeedback & Analysis
-
-one-, two- and four channel training, 
-
-Amplitude-, relative Amplitude-, Coherence-,
-
-Band-Ratio-, Asymmetry-inhibit-Training 
-
-and more ..','Raw EEG to TCP/IP + EDF converter','Game','Evidence Based Neurofeedback, with a validated ] and replicated ] symptom based evaluation tool.','']
+									name:"Developer",
+									local : ['BrainPaint, Inc.   William C. Scott','PROATECH LLC','Chris Veigl and Jeremy Wilkerson','BEE Systems LLC / Corscience','Cyberevolution, Larry Janow','Okazolab Ltd','Thought Technology Ltd, Dr. Hal Myers','Mind Media Netherlands','Amy Palke','BrainTrain, Inc.','INRIA','Soft-dynamics, Geoffrey Arens','Jim Peters','Rob Sacks','Valdeane W. Brown, Ph.D.','EEG Software LLC','MindReflector Technologies, LLC','[Rudi Cilibrasi]','Transparent Corporation','Mensia Technologies','Deymed Diagnostic','BrainMaster Technologies, Inc.      Thomas F. Collura','Somatic Vision Inc.','']
 								});
 								$("#2").typeahead({
-									name:"list2",
+									name:"Operating systems",
 									local : ['Windows','Java','Linux, Windows','Windows, Linux, Mac OS, Android','N/A','Windows, Android','']
 								});
 								$("#3").typeahead({
-									name:"list3",
+									name:"License",
 									local : ['Proprietary','GPL','Open source','AGPL-3','Proprietary; includes optional no-cost Application Programming Interfaces (API)','']
 								});
 								$("#4").typeahead({
-									name:"list4",
-									local : ['BrainPaint, Inc.   William C. Scott','PROATECH LLC','Chris Veigl and Jeremy Wilkerson','BEE Systems LLC / Corscience','Cyberevolution, Larry Janow','Okazolab Ltd','Thought Technology Ltd, Dr. Hal Myers','Mind Media Netherlands','Amy Palke','BrainTrain, Inc.','INRIA','Soft-dynamics, Geoffrey Arens','Jim Peters','Rob Sacks','Valdeane W. Brown, Ph.D.','EEG Software LLC','MindReflector Technologies, LLC','[Rudi Cilibrasi]','Transparent Corporation','Mensia Technologies','Deymed Diagnostic','BrainMaster Technologies, Inc.      Thomas F. Collura','Somatic Vision Inc.','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['Brainathalon','SmartMind','ElectricGuru','NeuroRT Suite','NeuroServer','MindReflector','BioGraph Infiniti','Cygnet','Dual Drive Pro','EventIDE','Mind WorkStation','BrainPaint','OpenViBE','BrainBay','NeurOptimal','EEGer4','BioEra','BioTrace+','eBioo','BrainFeedback Pro','BioExplorer','BrainMaster','BWView','']
+									name:"Type",
+									local : ['Neurofeedback & Biofeedback','Neurofeedback, Biofeedback, and QEEG; optional live z-scores (ANI or BrainDX), Live sLORETA Projector.','Brainwave viewer','Neurofeedback/Biofeedback','Visual environment for designing behavioral experiments and mental games with real-time neurofeedback control and signal processing.','BCI, Visual Designer, Analysis, Neurofeedback','Neurofeedback: one- and two channel frequency band training and ILF (SCP) training according to Othmer, Alpha-Theta training. With additional Mitsar device or x23 accessory also tomographic (sLoreta) neurofeedback. Add-ons for sLoreta feedback and flexible system configuration fully approved but not available to clinicians. For research institutions only. Biofeedback: pIR far-infrared triple-sensor feedback','Neurofeedback, Biofeedback, and EEG-Driven Entrainment','Neurofeedback','Biofeedback GSR & Temp','Real-time Processing, Self Neuromodulation, Bio/Neurofeedback','Neurofeedback & Analysis','Neurofeedback: MIDI, particle display','Biofeedback: visual designer','Neurofeedback & Analysisone-, two- and four channel training, Amplitude-, relative Amplitude-, Coherence-,Band-Ratio-, Asymmetry-inhibit-Training and more ..','Raw EEG to TCP/IP + EDF converter','Game','Evidence Based Neurofeedback, with a validated ] and replicated ] symptom based evaluation tool.','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

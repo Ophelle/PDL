@@ -29,15 +29,21 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
+								<label>Skipped macroblock : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
 								<label>Frame :</label></br>
 											<input type="checkbox" name="Feature" >Used for progressive or interlaced content</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Skipped macroblock : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Integer transform :</label></br>
+											<input type="checkbox" name="Feature" >8×8</br>	
+											<input type="checkbox" name="Feature" >4×8</br>	
+											<input type="checkbox" name="Feature" >8×4</br>	
+											<input type="checkbox" name="Feature" >and 4×4</br>	
+											<input type="checkbox" name="Feature" >4×4; 8×8 available in High Profile only</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Motion vector : </label></br> <input id="3" type="text" name="Feature"></br>
-								
+								<label>Motion vector : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Partition sizes :</label></br>
 											<input type="checkbox" name="Feature" >16×16 and 8×8</br>	
@@ -48,40 +54,30 @@
 											<input type="checkbox" name="Feature" >8×4</br>	
 											<input type="checkbox" name="Feature" >4×8</br>	
 											<input type="checkbox" name="Feature" >and 4×4</br>	
-									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Integer transform :</label></br>
-											<input type="checkbox" name="Feature" >8×8</br>	
-											<input type="checkbox" name="Feature" >4×8</br>	
-											<input type="checkbox" name="Feature" >8×4</br>	
-											<input type="checkbox" name="Feature" >and 4×4</br>	
-											<input type="checkbox" name="Feature" >4×4; 8×8 available in High Profile only</br>	
-									
+								<label>Feature : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Macroblock sizes : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Picture :</label></br>
 											<input type="checkbox" name="Feature" >A field or frame</br>	
-									
-								</br>	
-								<label>Feature : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Macroblock sizes : </label></br> <input id="8" type="text" name="Feature"></br>
-								
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
+								$("#0").typeahead({
+									name:"Skipped macroblock",
 									local : ['No data is encoded for macroblock','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"Motion vector",
 									local : ['Two dimensional vector offset from current position to reference frame','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#2").typeahead({
+									name:"Feature",
 									local : ['H.264','VC-1','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#3").typeahead({
+									name:"Macroblock sizes",
 									local : ['16×16 only','']
 								});
 						</script>

@@ -29,40 +29,35 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Charity receives : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Charity receives : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Card processing fee : </label></br> <input id="2" type="text" name="Feature"></br>
-								
+								<label>Card processing fee : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Tax reclaimed (Gift Aid) : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Commission : </label></br> <input id="3" type="text" name="Feature"></br>
-								
 								</br>	
-								<label>Tax reclaimed (Gift Aid) : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Donation : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Donation : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['£10.00','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Charity receives",
 									local : ['£12.34','£11.73','£12.08','£12.35','£9.66 (£12.16 including directly reclaimed Gift Aid)','£11.55','£12.14','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Card processing fee",
 									local : ['£0.15','£0.20','£0.32','£0.16','£0.13','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#2").typeahead({
+									name:"Tax reclaimed (Gift Aid)",
+									local : ['£2.50','£0.00 (Charities may reclaim directly with HMRC)','']
+								});
+								$("#3").typeahead({
+									name:"Commission",
 									local : ['None','£0.64 (= 5% of 10 + 2.5)','£0.20 (= 2% of 10)','£0.14 (=1.4% of 10)','£0.42 (=4.25% of 10)','£0.63 (= 5% of 10 + 2.5)','£0.00','']
 								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['£2.50','£0.00 (Charities may reclaim directly with HMRC)','']
+								$("#4").typeahead({
+									name:"Donation",
+									local : ['£10.00','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

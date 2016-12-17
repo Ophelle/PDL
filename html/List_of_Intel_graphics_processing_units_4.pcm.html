@@ -29,48 +29,38 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Device id. : </label></br> <input id="1" type="number" name="Feature"></br>
+								<label>Device id. : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>API support - DirectX : </label></br> <input id="2" type="number" name="Feature"></br>
+								<label>Market : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Graphics : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Launch : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>CPU : </label></br> <input id="3" type="text" name="Feature"></br>
+								<label>API support - DirectX : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Core clock (MHz) : </label></br> <input id="4" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Market : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Launch : </label></br> <input id="6" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>Memory bandwidth
-(GB/s) : </label></br> <input id="7" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>DVMT 
-(MB) : </label></br> <input id="8" type="number" name="Feature"></br>
-								
-								</br>	
-								<label>Graphics : </label></br> <input id="9" type="text" name="Feature"></br>
+								<label>API support - OpenGL : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
 								<label>API support - OpenCL :</label></br>
 								<input type="radio" name="FeatureAPI support - OpenCL" value="oui">Yes <input type="radio" name="FeatureAPI support - OpenCL" value = "non">No <input type="radio" name="FeatureAPI support - OpenCL" value = "non">Partial </br>
 								
 								</br>	
-								<label>Code name : </label></br> <input id="11" type="text" name="Feature"></br>
+								<label>CPU : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Shader model : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>API support - OpenGL : </label></br> <input id="12" type="number" name="Feature"></br>
+								<label>DVMT (MB) : </label></br> <input type="number" name="Feature"></br>
 								
 								</br>	
-								<label>Shader 
-model : </label></br> <input id="13" type="number" name="Feature"></br>
+								<label>Memory bandwidth(GB/s) : </label></br> <input type="number" name="Feature"></br>
 								
+								</br>	
+								<label>Core clock (MHz) : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Hardware acceleration - QSV :</label></br>
 								<input type="radio" name="FeatureHardware acceleration - QSV" value="oui">Yes <input type="radio" name="FeatureHardware acceleration - QSV" value = "non">No <input type="radio" name="FeatureHardware acceleration - QSV" value = "non">Partial </br>
@@ -80,42 +70,29 @@ model : </label></br> <input id="13" type="number" name="Feature"></br>
 								<input type="radio" name="FeatureHardware acceleration - CVT HD" value="oui">Yes <input type="radio" name="FeatureHardware acceleration - CVT HD" value = "non">No <input type="radio" name="FeatureHardware acceleration - CVT HD" value = "non">Partial </br>
 								
 								</br>	
-								<label>Execution 
-units : </label></br> <input id="16" type="number" name="Feature"></br>
+								<label>Code name : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Execution units : </label></br> <input type="number" name="Feature"></br>
 								
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['Core i3-5x0
-Core i5-6x0
-Core i5-655K','Core i3-330E
-Core i3-3x0M','Core i5-661','Celeron G1101
-Pentium G69xx','Core i5-4x0M
-Core i5-520E
-Core i5-5x0M
-Core i7-610E
-Core i7-6x0M','Core i7-620LE
-Core i7-6x0LM','Core i3-3x0UM
-Core i5-5x0UM
-Core i7-6x0UE
-Core i7-6x0UM','Celeron U3xxx
-Pentium U5xxx','Celeron P4xxx
-Pentium P6xxx','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['166–500','500–667','900','500–766','533','733','266–566','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#0").typeahead({
+									name:"Market",
 									local : ['Mobile','Desktop','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"Graphics",
 									local : ['HD Graphics','']
 								});
-								$("#5").typeahead({
-									name:"list5",
+								$("#2").typeahead({
+									name:"CPU",
+									local : ['Core i3-5x0Core i5-6x0Core i5-655K','Core i3-330ECore i3-3x0M','Core i5-661','Celeron G1101Pentium G69xx','Core i5-4x0MCore i5-520ECore i5-5x0MCore i7-610ECore i7-6x0M','Core i7-620LECore i7-6x0LM','Core i3-3x0UMCore i5-5x0UMCore i7-6x0UECore i7-6x0UM','Celeron U3xxxPentium U5xxx','Celeron P4xxxPentium P6xxx','']
+								});
+								$("#3").typeahead({
+									name:"Core clock (MHz)",
+									local : ['166–500','500–667','900','500–766','533','733','266–566','']
+								});
+								$("#4").typeahead({
+									name:"Code name",
 									local : ['Ironlake (Clarkdale)','Ironlake (Arrandale)','']
 								});
 						</script>

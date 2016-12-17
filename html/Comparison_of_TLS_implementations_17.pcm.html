@@ -29,31 +29,27 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Hardware token support : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Objects identified via : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Implementation : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>TPM support :</label></br>
 								<input type="radio" name="FeatureTPM support" value="oui">Yes <input type="radio" name="FeatureTPM support" value = "non">No <input type="radio" name="FeatureTPM support" value = "non">Partial </br>
 											<input type="text"/></br>								
 								</br>	
-								<label>Objects identified via : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Implementation : </label></br> <input id="4" type="text" name="Feature"></br>
-								
+								<label>Hardware token support : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['PKCS11 (via 3rd party module)','Hardware token support','','PKCS11','No','PKCS11 (via libpkcs11-helper) or standard hooks','Microsoft CryptoAPI','PKCS11 Java Cryptography Architecture/
-Java Cryptography Extension','']
-								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#0").typeahead({
+									name:"Objects identified via",
 									local : ['Custom method','Objects identified via','User-defined label','UUID, User-defined label','','RFC7512 PKCS #11 URLs','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#1").typeahead({
+									name:"Implementation",
 									local : ['mbed TLS','SChannel','SharkSSL','OpenSSL','wolfSSL','cryptlib','Implementation','JSSE','RSA BSAFE MES','Secure Transport','NSS','Botan','RSA BSAFE SSL-J','MatrixSSL','GnuTLS','LibreSSL','']
+								});
+								$("#2").typeahead({
+									name:"Hardware token support",
+									local : ['PKCS11 (via 3rd party module)','Hardware token support','','PKCS11','No','PKCS11 (via libpkcs11-helper) or standard hooks','Microsoft CryptoAPI','PKCS11 Java Cryptography Architecture/Java Cryptography Extension','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

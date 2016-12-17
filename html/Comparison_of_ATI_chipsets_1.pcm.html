@@ -29,29 +29,33 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Codename : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Audio : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>SATA Ports : </label></br> <input id="2" type="number" name="Feature"></br>
+								<label>IDE Channels (2 Devices/Channel) : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Codename :</label></br>
+											<input type="checkbox" name="Feature" >IXP400</br>	
+											<input type="checkbox" name="Feature" >SB400</br>	
+											<input type="checkbox" name="Feature" >IXP460</br>	
+											<input type="checkbox" name="Feature" >SB460</br>	
+											<input type="checkbox" name="Feature" >IXP450</br>	
+											<input type="checkbox" name="Feature" >SB450</br>	
+											<input type="checkbox" name="Feature" >IXP380</br>	
+											<input type="checkbox" name="Feature" >SB380</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>SATA Ports : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>IDE Channels (2 Devices/Channel) : </label></br> <input id="3" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Year : </label></br> <input id="4" type="number" name="Feature"></br>
+								<label>Year : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
 								</br>	
-								<label>Fabrication process (nm) : </label></br> <input id="5" type="text" name="Feature"></br>
-								
+								<label>Fabrication process (nm) : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Model : </label></br> <input id="6" type="text" name="Feature"></br>
-								
+								<label>Model : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>USB Ports : </label></br> <input id="7" type="number" name="Feature"></br>
+								<label>USB Ports : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
-								</br>	
-								<label>Audio : </label></br> <input id="8" type="text" name="Feature"></br>
-								
 								</br>	
 								<label>Notes :</label></br>
 											<input type="checkbox" name="Feature" >10</br>	
@@ -71,30 +75,23 @@ eSATA</br>
 											<input type="checkbox" name="Feature" >ASF 2.0</br>	
 											<input type="checkbox" name="Feature" >
 8-bit HyperTransport links</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['IXP400/SB400','SB600','IXP460/SB460','SB300C','IXP250','IXP450/SB450','IXP380/SB380','IXP200','']
+								$("#0").typeahead({
+									name:"Audio",
+									local : ['HD','AC'97','']
 								});
-								$("#2").typeahead({
-									name:"list2",
+								$("#1").typeahead({
+									name:"IDE Channels (2 Devices/Channel)",
 									local : ['2 (ATA 133)','2 (UDMA 100/133)','1 (ATA 133)','2 (ATA133)','1','2','2 ATA100','']
 								});
-								$("#3").typeahead({
-									name:"list3",
+								$("#2").typeahead({
+									name:"Fabrication process (nm)",
 									local : ['','130','']
 								});
-								$("#4").typeahead({
-									name:"list4",
-									local : ['Radeon Xpress 200
-Radeon Xpress 1150','Radeon 320(M)/330/34x(M)/350M/360 IGP','Radeon Xpress 1600
-Radeon Xpress 1150','','AMD 480/570/580 
-CrossFire Chipset','']
-								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['HD','AC'97','']
+								$("#3").typeahead({
+									name:"Model",
+									local : ['Radeon Xpress 200Radeon Xpress 1150','Radeon 320(M)/330/34x(M)/350M/360 IGP','Radeon Xpress 1600Radeon Xpress 1150','','AMD 480/570/580 CrossFire Chipset','']
 								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />

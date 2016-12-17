@@ -29,23 +29,9 @@
 					<form action="" method="post">
 						<legend style="color:red" >Formulaire</legend>
 								</br>	
-								<label>Southbridge : </label></br> <input id="1" type="text" name="Feature"></br>
-								
+								<label>Model : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Processors Supported :</label></br>
-											<input type="checkbox" name="Feature" >Athlon XP</br>	
-											<input type="checkbox" name="Feature" >Athlon</br>	
-											<input type="checkbox" name="Feature" >Sempron</br>	
-											<input type="checkbox" name="Feature" >Duron</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
-								</br>	
-								<label>FSB/HT
-Frequency (MHz) :</label></br>
-											<input type="checkbox" name="Feature" >333 MHz</br>	
-											<input type="checkbox" name="Feature" >266 MHz</br>	
-											<input type="checkbox" name="Feature" >200 MHz</br>	
-											<input type="checkbox" name="Feature" >400 MHz</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+								<label>AGP : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Memory :</label></br>
 											<input type="checkbox" name="Feature" >DDR266</br>	
@@ -56,59 +42,59 @@ dual channel</br>
 dual channel</br>	
 											<input type="checkbox" name="Feature" >400
 single channel</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 									
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Max. memory : </label></br> <input id="5" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Model : </label></br> <input id="6" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>AGP : </label></br> <input id="7" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Features : </label></br> <input id="8" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Notes : </label></br> <input id="9" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Fabrication
-process (nm) : </label></br> <input id="10" type="text" name="Feature"></br>
-								
-								</br>	
-								<label>Release Date : </label></br> <input id="11" type="number" name="Feature"></br>
+								<label>Release Date : </label></br> <input type="number" name="Feature"></br>
 												<input type="text"/></br>								
-						<script>
-								$("#1").typeahead({
-									name:"list1",
-									local : ['MCP2
+								</br>	
+								<label>Notes : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Processors Supported :</label></br>
+											<input type="checkbox" name="Feature" >Athlon XP</br>	
+											<input type="checkbox" name="Feature" >Athlon</br>	
+											<input type="checkbox" name="Feature" >Sempron</br>	
+											<input type="checkbox" name="Feature" >Duron</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Features : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Max. memory : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Southbridge :</label></br>
+											<input type="checkbox" name="Feature" >MCP2
 MCP2-T
-MCP2-S/R/GB','MCP2
-MCP2-T','']
-								});
-								$("#2").typeahead({
-									name:"list2",
-									local : ['3 GB','']
-								});
-								$("#3").typeahead({
-									name:"list3",
+MCP2-S</br>	
+											<input type="checkbox" name="Feature" >R</br>	
+											<input type="checkbox" name="Feature" >GB</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Fabricationprocess (nm) : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>FSB/HTFrequency (MHz) :</label></br>
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+						<script>
+								$("#0").typeahead({
+									name:"Model",
 									local : ['nForce2 SPP','nForce2 400','nForce2 IGP','nForce2 Ultra 400','']
 								});
-								$("#4").typeahead({
-									name:"list4",
+								$("#1").typeahead({
+									name:"AGP",
 									local : ['AGP 8×','']
 								});
-								$("#5").typeahead({
-									name:"list5",
-									local : ['GeForce 4 MX IGP','','']
-								});
-								$("#6").typeahead({
-									name:"list6",
+								$("#2").typeahead({
+									name:"Notes",
 									local : ['','']
 								});
-								$("#7").typeahead({
-									name:"list7",
+								$("#3").typeahead({
+									name:"Features",
+									local : ['GeForce 4 MX IGP','','']
+								});
+								$("#4").typeahead({
+									name:"Max. memory",
+									local : ['3 GB','']
+								});
+								$("#5").typeahead({
+									name:"Fabricationprocess (nm)",
 									local : ['','']
 								});
 						</script>
