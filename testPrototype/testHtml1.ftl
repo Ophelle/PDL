@@ -88,9 +88,9 @@
 						</#list>
 						<script>
 							<#assign j=0>
-							<#list allContentsCell as key, value>
+							<#list allContentsCell as key2, value>
 								$("#${j}").typeahead({
-									name:"${key}",
+									name:"${key2}",
 									local : [<#list value as  values>'${values}',</#list>'']
 								});
 								<#assign j++>

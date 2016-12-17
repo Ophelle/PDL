@@ -241,12 +241,13 @@ public class TraitementPcm {
 		for (String type : this.bestTypeForEachFeature.keySet()) {
 			if (bestTypeForEachFeature.get(type) == "text") {
 				for (Feature feat : listFeatures) {
-					if (type.contains(feat.getName())) {
+					String featName = feat.getName().replaceAll("\n", "");
+					if (type.contains(featName)) {
 						List<String> listContents = new LinkedList<String>();
 
 						// Si le feature existe ou n'est pas vide
-						if (feat.getName() != null && !feat.getName().equals("")
-								&& bestTypeForEachFeature.get(feat.getName()) == "text") {
+						if (featName != null && !featName.equals("")
+								&& bestTypeForEachFeature.get(featName) == "text") {
 							for (Cell cell : feat.getCells()) {
 								// Obtenir le contenu de la case
 								currentContent = cell.getContent();
@@ -259,14 +260,13 @@ public class TraitementPcm {
 							}
 							// Ajout dans la map le feature et sa liste de
 							// contenus disponible
-							feat_content.put(feat.getName(), listContents);
+							feat_content.put(featName, listContents);
 						}
 					}
 				}
 
 			}
 		}
-		System.out.println(feat_content);
 		return feat_content;
 	}
 	
@@ -359,7 +359,7 @@ public class TraitementPcm {
 					//bestType = setTypeForHtml(bestType);
 				}
 			}
-			bestTypes.put(feat, setTypeForHtml(bestType));
+			bestTypes.put(feat.replaceAll("\n", ""), setTypeForHtml(bestType));
 			// Reinitialisation du nbOccurence pour les prochains features a
 			// traiter
 			nbOccurrence = new LinkedHashMap<String, Integer>();
