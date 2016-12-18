@@ -24,7 +24,7 @@ public class Main {
 				generator.generatAllHtml();
 			} else if(str.equals("1")) {
 				while(!str.equals("q")) {
-					System.out.println("- Tapez le chemin de votre fichier pcm \n- Tapez d pour générer le pcm par défaut \n- Tapez q pour quitter");
+					System.out.println("- Tapez le chemin de votre fichier pcm \n- Tapez q pour quitter");
 					str = sc.nextLine();
 					if(str.equals("d")) {
 						// Creation d'un properties file pour faciliter le chargement et generation d'un fichier html
