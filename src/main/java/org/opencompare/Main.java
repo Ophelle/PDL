@@ -20,13 +20,10 @@ public class Main {
 			prop.load(input);
 			
 			String str = "";
-			int nb = 0;
 			Scanner sc = new Scanner(System.in);
-			Scanner sc2 = new Scanner(System.in);
 			
-			//
-			while(!str.equals("1") && !str.equals("2") && !str.equals("q")) {
-				System.out.println("Voulez-vous générer tous les formulaires ou un formulaire à partir du pcm de votre choix ? \n- Tapez 1 : Pour un formulaire\n- Tapez 2 : Pour tous les formulaires");
+			while(!str.equals("1") && !str.equals("2")) {
+				System.out.println("Voulez-vous générer tous les formulaires ou un formulaire à partir du pcm de votre choix ? \n- Tapez 1 : Pour un formulaire\n- Tapez 2 : Pour tous les formulaires\n- Tapez q : Pour quitter");
 				str = sc.nextLine();
 				if(str.equals("2")) {
 					TraitementPcm trait = new TraitementPcm(new File("template/example0.pcm"));
@@ -46,12 +43,13 @@ public class Main {
 							generator.generateHtml();
 						}
 					}
+				} else if(str.equals("q")) {
+					break;
 				} else {
 					System.out.println("mauvaise valeur !");
 				}
 			}
 			sc.close();
-			sc2.close();
 			input.close();
 		} catch (IOException ex) {
 			ex.printStackTrace();
