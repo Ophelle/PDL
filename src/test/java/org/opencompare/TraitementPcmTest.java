@@ -288,14 +288,13 @@ public class TraitementPcmTest {
 		List<String> listMultiple = new ArrayList<String>();
 		listMultiple.add("COMMAND.COM");
 		listMultiple.add("CMD.EXE");
-		listMultiple.add("\nPowerShell (optional)");
-		listMultiple.add("\nPowerShell v3.0");
-		listMultiple.add("\nPowerShell v2.0");
-		listMultiple.add("\nPowerShell v4.0");
+		listMultiple.add("PowerShell (optional)");
+		listMultiple.add("PowerShell v3.0");
+		listMultiple.add("PowerShell v2.0");
+		listMultiple.add("PowerShell v4.0");
 
 		Map<String, List<String>> listMultipleemap = new HashMap<String, List<String>>();
 		listMultipleemap.put("Command-line interpreter", listMultiple);
-
 		assertEquals(
 				listMultiple,
 				traitementpcm.contentsTypeMultiple(listFeatures).get(
