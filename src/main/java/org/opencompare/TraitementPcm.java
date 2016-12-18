@@ -169,11 +169,9 @@ public class TraitementPcm {
 			// Si le feature existe ou n'est pas vide
 			if (feat.getName() != null && !feat.getName().equals("")) {
 				for (Cell cell : feat.getCells()) {
-					// si le nom du abstractFeature n'est pas null, alors on le
-					// recupere
+					// si le nom du abstractFeature n'est pas null, alors on le recupere
 					if (cell.getFeature().getParentGroup() != null) {
-						// ajout d'un separateur "-" pour reperer plus
-						// facilement le abstractFeature et concretFeature
+						// ajout d'un separateur "-" pour reperer plus facilement le abstractFeature et concretFeature
 						abstractFeature = cell.getFeature().getParentGroup().getName() + " - ";
 					}
 					// Obtenir le type de la case courante
@@ -191,31 +189,32 @@ public class TraitementPcm {
 
 	public Map<String, List<String>> contentsTypeMultiple(List<Feature> listFeatures) {
 		String currentType = "";
-		// Traite le cas du type multiple avec pas de doublon de content pour
-		// chaque feature
-		// Map qui contient tous les choix possible pour chaque feature du type
-		// multiple
+		// Traite le cas du type multiple avec pas de doublon de content pour chaque feature
+		// Map qui contient tous les choix possible pour chaque feature du type multiple
 		List<String> listMultiple = new LinkedList<String>();
 		Map<String, List<String>> feat_contentMultiple = new LinkedHashMap<String, List<String>>();
-		for (Feature feat : listFeatures) {
-			if (!feat_contentMultiple.containsKey(feat)) {
-				
+		for(Feature feat : listFeatures) {
+			
+			if(!feat_contentMultiple.containsKey(feat)) {
 				// Si le feature existe ou n'est pas vide
-				if (feat.getName() != null && !feat.getName().equals("")) {
+				if(feat.getName() != null && !feat.getName().equals("")) {
 					String[] currentContent = null;
-
-					for (Cell cell : feat.getCells()) {
-
+					
+					// Parcours de chaque case d'un feature
+					for(Cell cell : feat.getCells()) {
 						currentType = valueToString(cell.getInterpretation());
-
+						// Si la case est type multiple, alors split pour recuperer les valeurs posssibles
 						if (currentType == "multiple") {
 							currentContent = cell.getContent().split("[,/]");
 							for (String contenu : currentContent) {
 								if(!contenu.equals("") && !contenu.equals(null)) {
+									// Si il y a un espace au debut de chaque valeur, on le supprime
 									if(contenu.charAt(0) == ' ') {
 										contenu = contenu.substring(1);
+										// Si il y a un retour a la ligne entre chaque valeur, on le supprime pour que le js ne bogue pas
 										contenu = contenu.replaceAll("\n", "");
 										if(!listMultiple.contains(contenu)) {
+											// ajout d'une valeur separee par la virgule dans la liste
 											listMultiple.add(contenu);
 										}
 									} else {
@@ -228,8 +227,11 @@ public class TraitementPcm {
 							}
 						}
 					}
+					// Si la liste qui contient les valeurs multiples n'est pas vide
 					if(!listMultiple.isEmpty()) {
+						// Ajout dans la map du nom feature multiple et sa liste valeur
 						feat_contentMultiple.put(feat.getName(), listMultiple);
+						// Reinitialisation de la liste pour les autres features
 						listMultiple = new LinkedList<>();
 					}
 				}
@@ -241,33 +243,33 @@ public class TraitementPcm {
 	private Map<String, List<String>> getAllContentsOfEachCell(List<Feature> listFeatures) {
 		// Cette méthode servira pour l'auto-completion en javascript
 		String currentContent = "";
-
 		Map<String, List<String>> feat_content = new LinkedHashMap<String, List<String>>();
-
-		for (String type : this.bestTypeForEachFeature.keySet()) {
-			if (bestTypeForEachFeature.get(type) == "text") {
-				for (Feature feat : listFeatures) {
+		
+		// Parcours de la map bestTypeForEachFeature
+		for(String type : this.bestTypeForEachFeature.keySet()) {
+			// Si une feature a un type dominant text, alors on recupere toutes les valeurs disponibles pour l'autocompletion 
+			if(bestTypeForEachFeature.get(type) == "text") {
+				for(Feature feat : listFeatures) {
+					// Supprime les saut de ligne au milieu du nom de feature pour du code html propre
 					String featName = feat.getName().replaceAll("\n", "");
-					if (type.contains(featName)) {
+					if(type.contains(featName)) {
 						List<String> listContents = new LinkedList<String>();
 
 						// Si le feature existe ou n'est pas vide
-						if (featName != null && !featName.equals("")
-								&& bestTypeForEachFeature.get(featName) == "text") {
-							for (Cell cell : feat.getCells()) {
+						if(featName != null && !featName.equals("") && bestTypeForEachFeature.get(featName) == "text") {
+							for(Cell cell : feat.getCells()) {
 								// Obtenir le contenu de la case
 								currentContent = cell.getContent();
+								// Supprime tous les problemes pour le js
 								currentContent = currentContent.replaceAll("\n", "");
 								currentContent = currentContent.replaceAll("'", "`");
 								
-								if (!listContents.contains(currentContent)) {
-									// Ajout dans la liste le contenu de la case
-									// courante
+								if(!listContents.contains(currentContent)) {
+									// Ajout dans la liste le contenu de la case courante
 									listContents.add(currentContent);
 								}
 							}
-							// Ajout dans la map le feature et sa liste de
-							// contenus disponible
+							// Ajout dans la map le feature et sa liste de contenus disponible
 							feat_content.put(featName, listContents);
 						}
 					}
@@ -329,46 +331,39 @@ public class TraitementPcm {
 		Map<String, Integer> nbOccurrence = new LinkedHashMap<String, Integer>();
 		Map<String, String> bestTypes = new LinkedHashMap<String, String>();
 		Integer max = 0;
-		for (Entry<String, List<String>> entry1 : allTypes.entrySet()) {
+		for(Entry<String, List<String>> entry1 : allTypes.entrySet()) {
 			// Clé : feature
 			String feat = entry1.getKey();
 			// Valeur : liste de type
 			List<String> type = entry1.getValue();
 
-			// Compte le nombre d'occurrence pour chaque type dans la liste
-			// courante
-			for (String value : type) {
-				// Si le type n'existe pas dans le nbOccurrence, on l'ajoute et
-				// la valeur attribuee a 1
-				if (!nbOccurrence.containsKey(value)) {
+			// Compte le nombre d'occurrence pour chaque type dans la liste courante
+			for(String value : type) {
+				// Si le type n'existe pas dans le nbOccurrence, on l'ajoute et la valeur attribuee a 1
+				if(!nbOccurrence.containsKey(value)) {
 					nbOccurrence.put(value, 1);
 				} else {
-					// Si le type existe deja, incrementation la valeur associe
-					// a sa cle
+					// Si le type existe deja, incrementation la valeur associe a sa cle
 					Integer cpt = nbOccurrence.get(value) + 1;
 					nbOccurrence.put(value, cpt);
 				}
 			}
 			
-			// Cherche le type dominant dans la map nbOccurrence en fonction de
-			// sa valeur, cad son nombre d'occurrence
+			// Cherche le type dominant dans la map nbOccurrence en fonction de sa valeur, cad son nombre d'occurrence
 			String bestType = "";
 			for (Entry<String, Integer> entry2 : nbOccurrence.entrySet()) {
 				String currentFeat = entry2.getKey();
 				Integer currentNb = entry2.getValue();
 				
-
+				// Si un nb est plus grand qu'un max, alors mise a jour du max et du string bestType
 				if (max < currentNb) {
 					max = currentNb;
 					bestType = currentFeat;
-					
-					// attribut le type Html en fonction du type dominant trouvé
-					//bestType = setTypeForHtml(bestType);
 				}
 			}
+			// Supprime les sauts de ligne pour les key et pour value le type input html associe a son feature
 			bestTypes.put(feat.replaceAll("\n", ""), setTypeForHtml(bestType));
-			// Reinitialisation du nbOccurence pour les prochains features a
-			// traiter
+			// Reinitialisation du nbOccurence et max pour les prochains features a traiter
 			nbOccurrence = new LinkedHashMap<String, Integer>();
 			max = 0;
 		}

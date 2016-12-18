@@ -11,17 +11,18 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		// creation d'un properties file pour faciliter le chargement et generation d'un fichier html
+		// Creation d'un properties file pour faciliter le chargement et generation d'un fichier html
 		Properties prop = new Properties();
 		InputStream input;
 		try {
 			input = new FileInputStream("properties/config.properties");
-			// charge le properties file
+			// Charge le properties file
 			prop.load(input);
 			
 			String str = "";
 			Scanner sc = new Scanner(System.in);
 			
+			// Repete la demande tant que le scanner ne recoit pas 1/2/q
 			while(!str.equals("1") && !str.equals("2")) {
 				System.out.println("Voulez-vous générer tous les formulaires ou un formulaire à partir du pcm de votre choix ? \n- Tapez 1 : Pour un formulaire\n- Tapez 2 : Pour tous les formulaires\n- Tapez q : Pour quitter");
 				str = sc.nextLine();
