@@ -7,7 +7,7 @@
 	<script type="text/javascript" src="js/typeahead.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/formulaire.js"></script>
-	<title>${name} Version 0.5</title>
+	<title>${name}</title>
 	<meta charset="utf-8">
 </head>
 

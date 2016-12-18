@@ -41,7 +41,7 @@ public class GenerationHtml {
 		// Attribution des variables au code html source template
 		Map<String, Object> ajoutVar = new HashMap<String, Object>();
 		ajoutVar.put("titre", this.traitPcm.getNamePcm());
-		ajoutVar.put("name", "Prototype de formulaire");
+		ajoutVar.put("name", this.traitPcm.getNamePcm());
 		ajoutVar.put("bestType", this.traitPcm.getBestTypeForEachFeature());
 		ajoutVar.put("allContentsCell", this.traitPcm.getAllContentsOfEachCell());
 		ajoutVar.put("ListMultiple",this.traitPcm.getContentsTypeMultiple());
@@ -91,7 +91,7 @@ public class GenerationHtml {
 				getTraitPcm().loadPcm(filesPcm[i]);
 				// Attribution des variables au code html source template
 				ajoutVar.put("titre", this.traitPcm.getNamePcm());
-				ajoutVar.put("name", "Prototype de formulaire");
+				ajoutVar.put("name", this.traitPcm.getNamePcm());
 				ajoutVar.put("bestType", this.traitPcm.getBestTypeForEachFeature());
 				ajoutVar.put("allContentsCell", this.traitPcm.getAllContentsOfEachCell());
 				ajoutVar.put("ListMultiple",this.traitPcm.getContentsTypeMultiple());
