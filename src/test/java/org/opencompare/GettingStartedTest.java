@@ -21,7 +21,7 @@ public class GettingStartedTest {
     public void testGettingStarted() throws IOException {
 
         // Define a file representing a PCM to load
-        File pcmFile = new File("testPrototype/example0.pcm");
+        File pcmFile = new File("pcms/Comparison_of_layout_engines_(Cascading_Style_Sheets)_2.pcm");
 
         // Create a loader that can handle the file format
         PCMLoader loader = new KMFJSONLoader();

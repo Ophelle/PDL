@@ -29,7 +29,9 @@
 					<form action="" method="post">
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
-								<label>XLink : </label></br> <input id="0" type="text" name="Feature"></br>
+								<label>XLink :</label></br>
+								<input type="radio" name="FeatureXLink" value="oui">Yes <input type="radio" name="FeatureXLink" value = "non">No <input type="radio" name="FeatureXLink" value = "non">Partial </br>
+								
 								</br>	
 								<label>XML Base :</label></br>
 								<input type="radio" name="FeatureXML Base" value="oui">Yes <input type="radio" name="FeatureXML Base" value = "non">No <input type="radio" name="FeatureXML Base" value = "non">Partial </br>
@@ -39,10 +41,6 @@
 								<input type="radio" name="FeatureXPointer" value="oui">Yes <input type="radio" name="FeatureXPointer" value = "non">No <input type="radio" name="FeatureXPointer" value = "non">Partial </br>
 								
 						<script>
-								$("#0").typeahead({
-									name:"XLink",
-									local : ['No','5.0','Partial','']
-								});
 						</script>
 						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>

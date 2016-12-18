@@ -312,7 +312,7 @@ public class TraitementPcm {
 			str = "text";
 			break;
 		case "partial":
-			str = "text";
+			str = "radio";
 			break;
 		default:
 			str = "text";
