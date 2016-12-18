@@ -214,10 +214,12 @@ public class TraitementPcm {
 								if(!contenu.equals("") && !contenu.equals(null)) {
 									if(contenu.charAt(0) == ' ') {
 										contenu = contenu.substring(1);
+										contenu = contenu.replaceAll("\n", "");
 										if(!listMultiple.contains(contenu)) {
 											listMultiple.add(contenu);
 										}
 									} else {
+										contenu = contenu.replaceAll("\n", "");
 										if(!listMultiple.contains(contenu)) {
 											listMultiple.add(contenu);
 										}
@@ -256,6 +258,8 @@ public class TraitementPcm {
 								// Obtenir le contenu de la case
 								currentContent = cell.getContent();
 								currentContent = currentContent.replaceAll("\n", "");
+								currentContent = currentContent.replaceAll("'", "`");
+								
 								if (!listContents.contains(currentContent)) {
 									// Ajout dans la liste le contenu de la case
 									// courante

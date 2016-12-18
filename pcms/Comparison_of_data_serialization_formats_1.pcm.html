@@ -51,11 +51,9 @@
 								</br>	
 								<label>Netstring :</label></br>
 											<input type="checkbox" name="Feature" >0:</br>	
-											<input type="checkbox" name="Feature" >
-4:null</br>	
+											<input type="checkbox" name="Feature" >4:null</br>	
 											<input type="checkbox" name="Feature" >1:0</br>	
-											<input type="checkbox" name="Feature" >
-5:false</br>	
+											<input type="checkbox" name="Feature" >5:false</br>	
 											<input type="checkbox" name="Feature" >41:9:2:42</br>	
 											<input type="checkbox" name="Feature" >1:1</br>	
 											<input type="checkbox" name="Feature" >25:6:A to Z</br>	
@@ -65,8 +63,7 @@
 											<input type="checkbox" name="Feature" >29:4:true</br>	
 											<input type="checkbox" name="Feature" >7:-42.1e7</br>	
 											<input type="checkbox" name="Feature" >6:A to Z</br>	
-											<input type="checkbox" name="Feature" >
-4:true</br>	
+											<input type="checkbox" name="Feature" >4:true</br>	
 											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
 								<label>YAML : </label></br> <input id="10" type="text" name="Feature"></br>
@@ -78,59 +75,59 @@
 								<label>CSV : </label></br> <input id="13" type="text" name="Feature"></br>
 						<script>
 								$("#0").typeahead({
-									name:"Candle Markup",
+									name:"list0",
 									local : ['685230-685230','(), ""','true','(true, (), -42.1e7, "A to Z")','false','"A to Z""""A to Z"""','or','6.8523015e+5','']
 								});
 								$("#1").typeahead({
-									name:"S-expression",
+									name:"list1",
 									local : ['abc"abc"#616263#3:abc{MzphYmM=}','NILnil','6.8523015e+5','685230','T#ttrue','(T NIL -42.1e7 "A to Z")','NIL#ffalse','((42 T) ("A to Z" (1 2 3)))','']
 								});
 								$("#2").typeahead({
-									name:"XML",
+									name:"list2",
 									local : ['a','','A to Z','']
 								});
 								$("#3").typeahead({
-									name:"PHP's serialize() & unserialize()",
+									name:"list3",
 									local : ['b:0;','a:4:{i:0;b:1;i:1;N;i:2;d:-421000000;i:3;s:6:"A to Z";}','N;','i:685230;i:-685230;','s:6:"A to Z";','b:1;','Associative array:a:2:{i:42;b:1;s:6:"A to Z";a:3:{i:0;i:1;i:1;i:2;i:2;i:3;}}Object:O:8:"stdClass":2:{s:4:"John";d:3.140000000000000124344978758017532527446746826171875;s:4:"Jane";d:2.717999999999999971578290569595992565155029296875;}','d:685230.150000000023283064365386962890625;d:INF;d:-INF;d:NAN;','']
 								});
 								$("#4").typeahead({
-									name:"XML-RPC",
+									name:"list4",
 									local : ['','']
 								});
 								$("#5").typeahead({
-									name:"JSON",
+									name:"list5",
 									local : ['{"42": true, "A to Z": [1, 2, 3]}','true','[true, null, -42.1e7, "A to Z"]','null','"A to Z"','685230-685230','false','6.8523015e+5','']
 								});
 								$("#6").typeahead({
-									name:"Property list(XML format)",
+									name:"list6",
 									local : ['','N/A','']
 								});
 								$("#7").typeahead({
-									name:"OpenDDL",
+									name:"list7",
 									local : ['int32 {685230}int32 {0x74AE}int32 {0b111010010101110}','float {6.8523015e+5}','ref {null}','Homogeneous array:Heterogeneous array:','','string {"A to Z"}','bool {false}','bool {true}','']
 								});
 								$("#8").typeahead({
-									name:"Format",
+									name:"list8",
 									local : ['Floating-point','Associative array/Object','String','Null','Boolean true','Integer','Boolean false','Array','']
 								});
 								$("#9").typeahead({
-									name:"Property list(plain text format)",
+									name:"list9",
 									local : ['<*BN>','<*I685230>','N/A','','"A to Z"','( <*BY>, <*R-42.1e7>, "A to Z" )','<*BY>','<*R6.8523015e+5>','']
 								});
 								$("#10").typeahead({
-									name:"YAML",
-									local : ['A to Z"A to Z"'A to Z'','685230+685_230-685230024722560x_0A_74_AE0b1010_0111_0100_1010_1110190:20:30','nNnoNoNOoffOffOFFfalseFalseFALSE','[y, ~, -42.1e7, "A to Z"]','{"John":3.14, "Jane":2.718}','6.8523015e+5685.230_15e+03685_230.15190:20:30.15.inf-.inf.Inf.INF.NaN.nan.NAN','yYyesYesYESonOnONtrueTrueTRUE','~nullNullNULL','']
+									name:"list10",
+									local : ['A to Z"A to Z"`A to Z`','685230+685_230-685230024722560x_0A_74_AE0b1010_0111_0100_1010_1110190:20:30','nNnoNoNOoffOffOFFfalseFalseFALSE','[y, ~, -42.1e7, "A to Z"]','{"John":3.14, "Jane":2.718}','6.8523015e+5685.230_15e+03685_230.15190:20:30.15.inf-.inf.Inf.INF.NaN.nan.NAN','yYyesYesYESonOnONtrueTrueTRUE','~nullNullNULL','']
 								});
 								$("#11").typeahead({
-									name:"OGDL",
-									local : ['true','685230','6.8523015e+5','false','null','','"A to Z"'A to Z'NoSpaces','(true, null, -42.1e7, "A to Z")','']
+									name:"list11",
+									local : ['true','685230','6.8523015e+5','false','null','','"A to Z"`A to Z`NoSpaces','(true, null, -42.1e7, "A to Z")','']
 								});
 								$("#12").typeahead({
-									name:"ASN.1(XML Encoding Rules)",
+									name:"list12",
 									local : ['','An object (the key is a field name):     A data mapping (the key is a data value):','']
 								});
 								$("#13").typeahead({
-									name:"CSV",
+									name:"list13",
 									local : ['0false','6.8523015e+5','A to Z"We said, ""no""."','','null(or an empty element in the row)','685230-685230','1true','true,,-42.1e7,"A to Z"','']
 								});
 						</script>

@@ -147,19 +147,19 @@
 											<input type="text"/></br>								
 						<script>
 								$("#0").typeahead({
-									name:"Platform requirements",
+									name:"list0",
 									local : ['C89','C++11','C89, NSPR','C89?','Java','']
 								});
 								$("#1").typeahead({
-									name:"Thread safety",
+									name:"list1",
 									local : ['Thread-safe','Threading layer available (POSIX or own hooks)','Thread-safe: multiple ports','Needs mutex callbacks','Thread-safe, needs mutex hooks if PThreads or WinThreads not available, can be turned off','Thread-safe, needs custom mutex hooks if neither POSIX nor Windows threads are available.','']
 								});
 								$("#2").typeahead({
-									name:"Random seed",
+									name:"list2",
 									local : ['Depends on java.security.SecureRandom','Random seed set through CTaoCrypt','Platform dependent','Set through native API','Platform-dependent, including hardware sources','Random seed set through entropy pool and/or HW','Random seed set through entropy pool','Platform-dependent','']
 								});
 								$("#3").typeahead({
-									name:"Implementation",
+									name:"list3",
 									local : ['NSS','SharkSSL','cryptlib','GnuTLS','MatrixSSL','OpenSSL','JSSE','Botan','mbed TLS','wolfSSL','']
 								});
 						</script>

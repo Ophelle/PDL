@@ -38,7 +38,7 @@ public class GenerationHtml {
 		} catch (IOException e) {
 			System.out.println("Le chargement du template a échoué : " + e);
 		}
-		// Attribution des variables au code html source
+		// Attribution des variables au code html source template
 		Map<String, Object> ajoutVar = new HashMap<String, Object>();
 		ajoutVar.put("titre", this.traitPcm.getNamePcm());
 		ajoutVar.put("name", "Prototype de formulaire");
@@ -57,13 +57,13 @@ public class GenerationHtml {
 				} catch (TemplateException e) {
 					System.out.println("La génération du HTML a échoué : " + e);
 				}
-				System.out.println("HTML CREE au dossier : " + this.output);
+				System.out.println("HTML créé au dossier : " + this.output);
 				writer.close();
 			} catch (IOException e) {
 				System.out.println("Le fichier n'a pas été chargé : " + e);
 			}
 		} else {
-			System.out.println("Le fichier n'existe pas");
+			System.out.println("Le fichier n'a pas pu été récupéré");
 		}
 	}
 	
@@ -79,16 +79,17 @@ public class GenerationHtml {
 			System.out.println("Le chargement du template a échoué : " + e);
 		}
 		
-		// Création html
+		// Création htmls
 		File repertoryPcm = new File("pcms");
 		File[] filesPcm = repertoryPcm.listFiles();
 		Map<String, Object> ajoutVar = new HashMap<String, Object>();
 		
-		
+		// Parcours du dossier cotnenant les fichiers pcm
 		for(int i = 0; i < filesPcm.length; i++) {
 			if(filesPcm[i].getPath().endsWith(".pcm")) {
+				// pour chaque fichier pcm, chargement du pcm au TraitementPcm
 				getTraitPcm().loadPcm(filesPcm[i]);
-				// Attribution des variables au code html source
+				// Attribution des variables au code html source template
 				ajoutVar.put("titre", this.traitPcm.getNamePcm());
 				ajoutVar.put("name", "Prototype de formulaire");
 				ajoutVar.put("bestType", this.traitPcm.getBestTypeForEachFeature());
@@ -96,6 +97,7 @@ public class GenerationHtml {
 				ajoutVar.put("ListMultiple",this.traitPcm.getContentsTypeMultiple());
 				ajoutVar.put("getAllTypesValue", this.traitPcm.getAllTypesOfFeature());
 				
+				// chaque html est cree dans le dossier ou se trouve le pcm
 				setOutput(filesPcm[i].getPath() + ".html");
 				FileWriter writer;
 				try {
@@ -110,7 +112,8 @@ public class GenerationHtml {
 				} catch (IOException e) {
 					System.out.println("Le fichier n'existe pas : " + e);
 				}
-				System.out.println("HTML CREE au dossier : " + this.output);
+				System.out.println("HTML créé au dossier : " + this.output);
+				// Reinitialisation des variables a ajouter au template pour chaque pcm
 				ajoutVar = new HashMap<String, Object>();
 			}
 		}
