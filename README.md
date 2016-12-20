@@ -1,4 +1,4 @@
-# Project PDL : OpenCompare Form
+# Project PDL : Form OpenCompare
 
 ## Objective
   The purpose of this project is to generate, from a product comparison matrices (PCM), a form to add an entry (ie, a product). Rather than filling the cells of an array to create a new product, we propose to use a form. 	
