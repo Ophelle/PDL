@@ -15,7 +15,7 @@
 ## License
 Free use, free reproduction and free distribution.
 	
-## Technology used
+## Technologies used
 * Java
 * Junit
 * FreeMarker
@@ -42,4 +42,4 @@ In Eclipse or others Java IDE, to run the application, you have just to run The 
 
 When the application is running, you can tap "1" to generate one form, "2" to generate alls available forms or "q" to quit the application.
 
-If you tap "1", just tap the path file of a PCM file. For developpers, you can also after tap "1", tap "d" to generate a form from a default PCM defined by a properties file, in the properties folder of the Maven project.
+If you tap "1", just tap the path of a PCM file. For developpers, you can also after tap "1", tap "d" to generate a form from a default PCM defined by a properties file, in the properties folder of the Maven project.
