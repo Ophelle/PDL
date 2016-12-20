@@ -32,9 +32,13 @@
 								<label>Format: : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>OpenXPS :</label></br>
+									  <p id="id1OpenXPS">
 											<input type="checkbox" name="Feature" >.oxps</br>	
 											<input type="checkbox" name="Feature" >.xps</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2OpenXPS"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1OpenXPS','id2OpenXPS');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

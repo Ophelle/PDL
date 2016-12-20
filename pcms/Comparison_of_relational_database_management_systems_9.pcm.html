@@ -32,20 +32,24 @@
 								<label>Expression : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>List :</label></br>
-								<input type="radio" name="FeatureList" value="oui">Yes <input type="radio" name="FeatureList" value = "non">No <input type="radio" name="FeatureList" value = "non">Partial </br>
-											<input name="FeatureList" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1List"> <input type="radio" name="FeatureList" value="oui">Yes <input type="radio" name="FeatureList" value = "non">No <input type="radio" name="FeatureList" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2List"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1List','id2List');">Changer type</button> </br>								
 								</br>	
 								<label>Composite (Range+Hash) :</label></br>
-								<input type="radio" name="FeatureComposite (Range+Hash)" value="oui">Yes <input type="radio" name="FeatureComposite (Range+Hash)" value = "non">No <input type="radio" name="FeatureComposite (Range+Hash)" value = "non">Partial </br>
-											<input name="FeatureComposite (Range+Hash)" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Composite (Range+Hash)"> <input type="radio" name="FeatureComposite (Range+Hash)" value="oui">Yes <input type="radio" name="FeatureComposite (Range+Hash)" value = "non">No <input type="radio" name="FeatureComposite (Range+Hash)" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Composite (Range+Hash)"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Composite (Range+Hash)','id2Composite (Range+Hash)');">Changer type</button> </br>								
 								</br>	
 								<label>Range :</label></br>
-								<input type="radio" name="FeatureRange" value="oui">Yes <input type="radio" name="FeatureRange" value = "non">No <input type="radio" name="FeatureRange" value = "non">Partial </br>
-											<input name="FeatureRange" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Range"> <input type="radio" name="FeatureRange" value="oui">Yes <input type="radio" name="FeatureRange" value = "non">No <input type="radio" name="FeatureRange" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Range"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Range','id2Range');">Changer type</button> </br>								
 								</br>	
 								<label>Hash :</label></br>
-								<input type="radio" name="FeatureHash" value="oui">Yes <input type="radio" name="FeatureHash" value = "non">No <input type="radio" name="FeatureHash" value = "non">Partial </br>
-											<input name="FeatureHash" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Hash"> <input type="radio" name="FeatureHash" value="oui">Yes <input type="radio" name="FeatureHash" value = "non">No <input type="radio" name="FeatureHash" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Hash"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Hash','id2Hash');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

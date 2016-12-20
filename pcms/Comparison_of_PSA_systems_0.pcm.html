@@ -30,6 +30,7 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Integration :</label></br>
+									  <p id="id1Integration">
 											<input type="checkbox" name="Feature" >Microsoft Dynamics GP</br>	
 											<input type="checkbox" name="Feature" >QuickBooks</br>	
 											<input type="checkbox" name="Feature" >QuoteWerks</br>	
@@ -180,13 +181,17 @@
 											<input type="checkbox" name="Feature" >and Business Catalyst</br>	
 											<input type="checkbox" name="Feature" >ODBC</br>	
 											<input type="checkbox" name="Feature" >CSV</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Integration"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Integration','id2Integration');">Changer type</button></br>
+							
 								</br>	
 								<label>System : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Platform : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Features :</label></br>
+									  <p id="id1Features">
 											<input type="checkbox" name="Feature" >All-in-one CRM</br>	
 											<input type="checkbox" name="Feature" >Project Management</br>	
 											<input type="checkbox" name="Feature" >Knowledge Management</br>	
@@ -396,12 +401,14 @@
 											<input type="checkbox" name="Feature" >Dispatching</br>	
 											<input type="checkbox" name="Feature" >Automated Reports</br>	
 											<input type="checkbox" name="Feature" >and built-in Knowledge Base.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Features"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Features','id2Features');">Changer type</button></br>
+							
 								</br>	
 								<label>First Release Date : </label></br> <input style="display:block;" id="id1First Release Date" type="number" name="Feature">
 												<input style="display:none;" id="id2First Release Date" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First Release Date','id2First Release Date');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First Release Date','id2First Release Date');">Changer type</button></br>								</br>	
 								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Creator : </label></br> <input id="3" type="text" name="Feature"></br>

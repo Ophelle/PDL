@@ -30,6 +30,7 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>File system supported :</label></br>
+									  <p id="id1File system supported">
 											<input type="checkbox" name="Feature" >FAT</br>	
 											<input type="checkbox" name="Feature" >NTFS (read only)</br>	
 											<input type="checkbox" name="Feature" >NTFS</br>	
@@ -102,7 +103,10 @@
 											<input type="checkbox" name="Feature" >GPFS</br>	
 											<input type="checkbox" name="Feature" >fossil</br>	
 											<input type="checkbox" name="Feature" >venti</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2File system supported"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1File system supported','id2File system supported');">Changer type</button></br>
+							
 								</br>	
 								<label>Kernel type : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
@@ -111,6 +115,7 @@
 								<label>Update management : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Computer architecture supported :</label></br>
+									  <p id="id1Computer architecture supported">
 											<input type="checkbox" name="Feature" >PowerPC</br>	
 											<input type="checkbox" name="Feature" >x86</br>	
 											<input type="checkbox" name="Feature" >x86-64</br>	
@@ -133,17 +138,22 @@
 											<input type="checkbox" name="Feature" >z</br>	
 											<input type="checkbox" name="Feature" >Architecture</br>	
 											<input type="checkbox" name="Feature" >SPARC64</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Computer architecture supported"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Computer architecture supported','id2Computer architecture supported');">Changer type</button></br>
+							
 								</br>	
 								<label>GUI default is on :</label></br>
-								<input type="radio" name="FeatureGUI default is on" value="oui">Yes <input type="radio" name="FeatureGUI default is on" value = "non">No <input type="radio" name="FeatureGUI default is on" value = "non">Partial </br>
-											<input name="FeatureGUI default is on" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1GUI default is on"> <input type="radio" name="FeatureGUI default is on" value="oui">Yes <input type="radio" name="FeatureGUI default is on" value = "non">No <input type="radio" name="FeatureGUI default is on" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2GUI default is on"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1GUI default is on','id2GUI default is on');">Changer type</button> </br>								
 								</br>	
 								<label>Source lines of code : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Non-native APIs supported through subsystems : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Native API :</label></br>
+									  <p id="id1Native API">
 											<input type="checkbox" name="Feature" >Win32</br>	
 											<input type="checkbox" name="Feature" >NT API</br>	
 											<input type="checkbox" name="Feature" >SysV</br>	
@@ -167,9 +177,13 @@
 											<input type="checkbox" name="Feature" >Carbon</br>	
 											<input type="checkbox" name="Feature" >Toolbox</br>	
 											<input type="checkbox" name="Feature" >Carbon (from version 8.1)</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Native API"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Native API','id2Native API');">Changer type</button></br>
+							
 								</br>	
 								<label>Package management :</label></br>
+									  <p id="id1Package management">
 											<input type="checkbox" name="Feature" >MSI</br>	
 											<input type="checkbox" name="Feature" >custom installers</br>	
 											<input type="checkbox" name="Feature" >Ports collection</br>	
@@ -193,7 +207,10 @@
 											<input type="checkbox" name="Feature" >installp</br>	
 											<input type="checkbox" name="Feature" >PCSI</br>	
 											<input type="checkbox" name="Feature" >VMSINSTAL</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Package management"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Package management','id2Package management');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

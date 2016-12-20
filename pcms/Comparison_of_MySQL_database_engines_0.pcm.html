@@ -34,14 +34,16 @@
 								<label>Vendor : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Transactional :</label></br>
-								<input type="radio" name="FeatureTransactional" value="oui">Yes <input type="radio" name="FeatureTransactional" value = "non">No <input type="radio" name="FeatureTransactional" value = "non">Partial </br>
-											<input name="FeatureTransactional" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Transactional"> <input type="radio" name="FeatureTransactional" value="oui">Yes <input type="radio" name="FeatureTransactional" value = "non">No <input type="radio" name="FeatureTransactional" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Transactional"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Transactional','id2Transactional');">Changer type</button> </br>								
 								</br>	
 								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Under active development :</label></br>
-								<input type="radio" name="FeatureUnder active development" value="oui">Yes <input type="radio" name="FeatureUnder active development" value = "non">No <input type="radio" name="FeatureUnder active development" value = "non">Partial </br>
-											<input name="FeatureUnder active development" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Under active development"> <input type="radio" name="FeatureUnder active development" value="oui">Yes <input type="radio" name="FeatureUnder active development" value = "non">No <input type="radio" name="FeatureUnder active development" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Under active development"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Under active development','id2Under active development');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

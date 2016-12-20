@@ -40,9 +40,13 @@
 								<label>USB : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>LAN :</label></br>
+									  <p id="id1LAN">
 											<input type="checkbox" name="Feature" >1000 Mbit</br>	
 											<input type="checkbox" name="Feature" >s</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2LAN"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1LAN','id2LAN');">Changer type</button></br>
+							
 								</br>	
 								<label>PCI-Express : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
@@ -53,27 +57,37 @@
 								<label>PATA : </label></br> <input id="8" type="text" name="Feature"></br>
 								</br>	
 								<label>Release Date :</label></br>
+									  <p id="id1Release Date">
 											<input type="checkbox" name="Feature" >November</br>	
 											<input type="checkbox" name="Feature" >2005</br>	
 											<input type="checkbox" name="Feature" >October</br>	
 											<input type="checkbox" name="Feature" >2004</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Release Date"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Release Date','id2Release Date');">Changer type</button></br>
+							
 								</br>	
 								<label>SATA :</label></br>
+									  <p id="id1SATA">
 											<input type="checkbox" name="Feature" >4 Ports 3.0 Gbit</br>	
 											<input type="checkbox" name="Feature" >s</br>	
 											<input type="checkbox" name="Feature" >4 Ports 1.5 Gbit</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2SATA"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1SATA','id2SATA');">Changer type</button></br>
+							
 								</br>	
 								<label>Features : </label></br> <input id="9" type="text" name="Feature"></br>
 								</br>	
 								<label>SLI :</label></br>
-								<input type="radio" name="FeatureSLI" value="oui">Yes <input type="radio" name="FeatureSLI" value = "non">No <input type="radio" name="FeatureSLI" value = "non">Partial </br>
-											<input name="FeatureSLI" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1SLI"> <input type="radio" name="FeatureSLI" value="oui">Yes <input type="radio" name="FeatureSLI" value = "non">No <input type="radio" name="FeatureSLI" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2SLI"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1SLI','id2SLI');">Changer type</button> </br>								
 								</br>	
 								<label>Model : </label></br> <input id="10" type="text" name="Feature"></br>
 								</br>	
 								<label>Processors Supported :</label></br>
+									  <p id="id1Processors Supported">
 											<input type="checkbox" name="Feature" >Athlon 64 FX</br>	
 											<input type="checkbox" name="Feature" >Athlon 64 X2</br>	
 											<input type="checkbox" name="Feature" >Athlon 64</br>	
@@ -81,7 +95,10 @@
 											<input type="checkbox" name="Feature" >939</br>	
 											<input type="checkbox" name="Feature" >754</br>	
 											<input type="checkbox" name="Feature" >Sempron 64Socket 939</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Processors Supported"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Processors Supported','id2Processors Supported');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

@@ -32,20 +32,23 @@
 								<label>Other software : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>GUI :</label></br>
-								<input type="radio" name="FeatureGUI" value="oui">Yes <input type="radio" name="FeatureGUI" value = "non">No <input type="radio" name="FeatureGUI" value = "non">Partial </br>
-											<input name="FeatureGUI" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1GUI"> <input type="radio" name="FeatureGUI" value="oui">Yes <input type="radio" name="FeatureGUI" value = "non">No <input type="radio" name="FeatureGUI" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2GUI"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1GUI','id2GUI');">Changer type</button> </br>								
 								</br>	
 								<label>Programming language : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Other :</label></br>
-								<input type="radio" name="FeatureOther" value="oui">Yes <input type="radio" name="FeatureOther" value = "non">No <input type="radio" name="FeatureOther" value = "non">Partial </br>
-											<input name="FeatureOther" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Other"> <input type="radio" name="FeatureOther" value="oui">Yes <input type="radio" name="FeatureOther" value = "non">No <input type="radio" name="FeatureOther" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Other"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Other','id2Other');">Changer type</button> </br>								
 								</br>	
 								<label>Based on : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>CLI :</label></br>
-								<input type="radio" name="FeatureCLI" value="oui">Yes <input type="radio" name="FeatureCLI" value = "non">No <input type="radio" name="FeatureCLI" value = "non">Partial </br>
-											<input name="FeatureCLI" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1CLI"> <input type="radio" name="FeatureCLI" value="oui">Yes <input type="radio" name="FeatureCLI" value = "non">No <input type="radio" name="FeatureCLI" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2CLI"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1CLI','id2CLI');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

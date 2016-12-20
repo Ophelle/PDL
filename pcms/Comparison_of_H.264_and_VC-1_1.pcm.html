@@ -32,20 +32,29 @@
 								<label>Skipped macroblock : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Frame :</label></br>
+									  <p id="id1Frame">
 											<input type="checkbox" name="Feature" >Used for progressive or interlaced content</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Frame"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Frame','id2Frame');">Changer type</button></br>
+							
 								</br>	
 								<label>Integer transform :</label></br>
+									  <p id="id1Integer transform">
 											<input type="checkbox" name="Feature" >8×8</br>	
 											<input type="checkbox" name="Feature" >4×8</br>	
 											<input type="checkbox" name="Feature" >8×4</br>	
 											<input type="checkbox" name="Feature" >and 4×4</br>	
 											<input type="checkbox" name="Feature" >4×4; 8×8 available in High Profile only</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Integer transform"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Integer transform','id2Integer transform');">Changer type</button></br>
+							
 								</br>	
 								<label>Motion vector : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Partition sizes :</label></br>
+									  <p id="id1Partition sizes">
 											<input type="checkbox" name="Feature" >16×16 and 8×8</br>	
 											<input type="checkbox" name="Feature" >16×16</br>	
 											<input type="checkbox" name="Feature" >16×8</br>	
@@ -54,15 +63,22 @@
 											<input type="checkbox" name="Feature" >8×4</br>	
 											<input type="checkbox" name="Feature" >4×8</br>	
 											<input type="checkbox" name="Feature" >and 4×4</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Partition sizes"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Partition sizes','id2Partition sizes');">Changer type</button></br>
+							
 								</br>	
 								<label>Feature : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Macroblock sizes : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Picture :</label></br>
+									  <p id="id1Picture">
 											<input type="checkbox" name="Feature" >A field or frame</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Picture"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Picture','id2Picture');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

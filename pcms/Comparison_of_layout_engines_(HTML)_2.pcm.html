@@ -34,12 +34,17 @@
 								<label>Presto - iCab : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Unordered and ordered lists :</label></br>
+									  <p id="id1Unordered and ordered lists">
 											<input type="checkbox" name="Feature" >Unordered and ordered lists</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Unordered and ordered lists"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Unordered and ordered lists','id2Unordered and ordered lists');">Changer type</button></br>
+							
 								</br>	
 								<label>1.0 - Yes :</label></br>
-								<input type="radio" name="Feature1.0 - Yes" value="oui">Yes <input type="radio" name="Feature1.0 - Yes" value = "non">No <input type="radio" name="Feature1.0 - Yes" value = "non">Partial </br>
-											<input name="Feature1.0 - Yes" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id11.0 - Yes"> <input type="radio" name="Feature1.0 - Yes" value="oui">Yes <input type="radio" name="Feature1.0 - Yes" value = "non">No <input type="radio" name="Feature1.0 - Yes" value = "non">Partial </p>
+											<input  style="display:none;" id ="id21.0 - Yes"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id11.0 - Yes','id21.0 - Yes');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

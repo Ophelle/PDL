@@ -30,20 +30,24 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>POP before SMTP :</label></br>
-								<input type="radio" name="FeaturePOP before SMTP" value="oui">Yes <input type="radio" name="FeaturePOP before SMTP" value = "non">No <input type="radio" name="FeaturePOP before SMTP" value = "non">Partial </br>
-											<input name="FeaturePOP before SMTP" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1POP before SMTP"> <input type="radio" name="FeaturePOP before SMTP" value="oui">Yes <input type="radio" name="FeaturePOP before SMTP" value = "non">No <input type="radio" name="FeaturePOP before SMTP" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2POP before SMTP"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1POP before SMTP','id2POP before SMTP');">Changer type</button> </br>								
 								</br>	
 								<label>Database :</label></br>
-								<input type="radio" name="FeatureDatabase" value="oui">Yes <input type="radio" name="FeatureDatabase" value = "non">No <input type="radio" name="FeatureDatabase" value = "non">Partial </br>
-											<input name="FeatureDatabase" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Database"> <input type="radio" name="FeatureDatabase" value="oui">Yes <input type="radio" name="FeatureDatabase" value = "non">No <input type="radio" name="FeatureDatabase" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Database"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Database','id2Database');">Changer type</button> </br>								
 								</br>	
 								<label>Mail server : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Filesystem :</label></br>
-								<input type="radio" name="FeatureFilesystem" value="oui">Yes <input type="radio" name="FeatureFilesystem" value = "non">No <input type="radio" name="FeatureFilesystem" value = "non">Partial </br>
-											<input name="FeatureFilesystem" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Filesystem"> <input type="radio" name="FeatureFilesystem" value="oui">Yes <input type="radio" name="FeatureFilesystem" value = "non">No <input type="radio" name="FeatureFilesystem" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Filesystem"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Filesystem','id2Filesystem');">Changer type</button> </br>								
 								</br>	
 								<label>Other :</label></br>
+									  <p id="id1Other">
 											<input type="checkbox" name="Feature" >Proxy to other server</br>	
 											<input type="checkbox" name="Feature" >any other mechanism via AUTH plugins.</br>	
 											<input type="checkbox" name="Feature" >PLAIN</br>	
@@ -131,19 +135,25 @@
 											<input type="checkbox" name="Feature" >Certificate</br>	
 											<input type="checkbox" name="Feature" >Any LDAPv3-compliant source</br>	
 											<input type="checkbox" name="Feature" >Local Directory</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Other"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Other','id2Other');">Changer type</button></br>
+							
 								</br>	
 								<label>APOP :</label></br>
-								<input type="radio" name="FeatureAPOP" value="oui">Yes <input type="radio" name="FeatureAPOP" value = "non">No <input type="radio" name="FeatureAPOP" value = "non">Partial </br>
-											<input name="FeatureAPOP" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1APOP"> <input type="radio" name="FeatureAPOP" value="oui">Yes <input type="radio" name="FeatureAPOP" value = "non">No <input type="radio" name="FeatureAPOP" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2APOP"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1APOP','id2APOP');">Changer type</button> </br>								
 								</br>	
 								<label>SMTP AUTH :</label></br>
-								<input type="radio" name="FeatureSMTP AUTH" value="oui">Yes <input type="radio" name="FeatureSMTP AUTH" value = "non">No <input type="radio" name="FeatureSMTP AUTH" value = "non">Partial </br>
-											<input name="FeatureSMTP AUTH" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1SMTP AUTH"> <input type="radio" name="FeatureSMTP AUTH" value="oui">Yes <input type="radio" name="FeatureSMTP AUTH" value = "non">No <input type="radio" name="FeatureSMTP AUTH" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2SMTP AUTH"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1SMTP AUTH','id2SMTP AUTH');">Changer type</button> </br>								
 								</br>	
 								<label>LDAP :</label></br>
-								<input type="radio" name="FeatureLDAP" value="oui">Yes <input type="radio" name="FeatureLDAP" value = "non">No <input type="radio" name="FeatureLDAP" value = "non">Partial </br>
-											<input name="FeatureLDAP" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1LDAP"> <input type="radio" name="FeatureLDAP" value="oui">Yes <input type="radio" name="FeatureLDAP" value = "non">No <input type="radio" name="FeatureLDAP" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2LDAP"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1LDAP','id2LDAP');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

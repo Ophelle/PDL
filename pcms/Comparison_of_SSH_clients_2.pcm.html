@@ -32,18 +32,22 @@
 								<label>User interface : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Sessionmultiplexing :</label></br>
-								<input type="radio" name="FeatureSessionmultiplexing" value="oui">Yes <input type="radio" name="FeatureSessionmultiplexing" value = "non">No <input type="radio" name="FeatureSessionmultiplexing" value = "non">Partial </br>
-											<input name="FeatureSessionmultiplexing" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Sessionmultiplexing"> <input type="radio" name="FeatureSessionmultiplexing" value="oui">Yes <input type="radio" name="FeatureSessionmultiplexing" value = "non">No <input type="radio" name="FeatureSessionmultiplexing" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Sessionmultiplexing"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Sessionmultiplexing','id2Sessionmultiplexing');">Changer type</button> </br>								
 								</br>	
 								<label>SSH1 :</label></br>
-								<input type="radio" name="FeatureSSH1" value="oui">Yes <input type="radio" name="FeatureSSH1" value = "non">No <input type="radio" name="FeatureSSH1" value = "non">Partial </br>
-											<input name="FeatureSSH1" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1SSH1"> <input type="radio" name="FeatureSSH1" value="oui">Yes <input type="radio" name="FeatureSSH1" value = "non">No <input type="radio" name="FeatureSSH1" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2SSH1"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1SSH1','id2SSH1');">Changer type</button> </br>								
 								</br>	
 								<label>Terminal :</label></br>
-								<input type="radio" name="FeatureTerminal" value="oui">Yes <input type="radio" name="FeatureTerminal" value = "non">No <input type="radio" name="FeatureTerminal" value = "non">Partial </br>
-											<input name="FeatureTerminal" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Terminal"> <input type="radio" name="FeatureTerminal" value="oui">Yes <input type="radio" name="FeatureTerminal" value = "non">No <input type="radio" name="FeatureTerminal" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Terminal"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Terminal','id2Terminal');">Changer type</button> </br>								
 								</br>	
 								<label>Proxy client :</label></br>
+									  <p id="id1Proxy client">
 											<input type="checkbox" name="Feature" >SOCKS 4</br>	
 											<input type="checkbox" name="Feature" >5; HTTP; Telnet</br>	
 											<input type="checkbox" name="Feature" >5; HTTP; Generic</br>	
@@ -55,45 +59,57 @@
 											<input type="checkbox" name="Feature" >5; HTTP; SSH</br>	
 											<input type="checkbox" name="Feature" >5</br>	
 											<input type="checkbox" name="Feature" >5; HTTP; Telnet; Generic</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Proxy client"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Proxy client','id2Proxy client');">Changer type</button></br>
+							
 								</br>	
 								<label>Name : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>IPv6 :</label></br>
-								<input type="radio" name="FeatureIPv6" value="oui">Yes <input type="radio" name="FeatureIPv6" value = "non">No <input type="radio" name="FeatureIPv6" value = "non">Partial </br>
-											<input name="FeatureIPv6" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1IPv6"> <input type="radio" name="FeatureIPv6" value="oui">Yes <input type="radio" name="FeatureIPv6" value = "non">No <input type="radio" name="FeatureIPv6" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2IPv6"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1IPv6','id2IPv6');">Changer type</button> </br>								
 								</br>	
 								<label>SSH2 :</label></br>
-								<input type="radio" name="FeatureSSH2" value="oui">Yes <input type="radio" name="FeatureSSH2" value = "non">No <input type="radio" name="FeatureSSH2" value = "non">Partial </br>
-											<input name="FeatureSSH2" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1SSH2"> <input type="radio" name="FeatureSSH2" value="oui">Yes <input type="radio" name="FeatureSSH2" value = "non">No <input type="radio" name="FeatureSSH2" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2SSH2"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1SSH2','id2SSH2');">Changer type</button> </br>								
 								</br>	
 								<label>Kerberos :</label></br>
-								<input type="radio" name="FeatureKerberos" value="oui">Yes <input type="radio" name="FeatureKerberos" value = "non">No <input type="radio" name="FeatureKerberos" value = "non">Partial </br>
-											<input name="FeatureKerberos" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Kerberos"> <input type="radio" name="FeatureKerberos" value="oui">Yes <input type="radio" name="FeatureKerberos" value = "non">No <input type="radio" name="FeatureKerberos" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Kerberos"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Kerberos','id2Kerberos');">Changer type</button> </br>								
 								</br>	
 								<label>SFTP/SCP :</label></br>
-								<input type="radio" name="FeatureSFTP/SCP" value="oui">Yes <input type="radio" name="FeatureSFTP/SCP" value = "non">No <input type="radio" name="FeatureSFTP/SCP" value = "non">Partial </br>
-											<input name="FeatureSFTP/SCP" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1SFTP/SCP"> <input type="radio" name="FeatureSFTP/SCP" value="oui">Yes <input type="radio" name="FeatureSFTP/SCP" value = "non">No <input type="radio" name="FeatureSFTP/SCP" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2SFTP/SCP"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1SFTP/SCP','id2SFTP/SCP');">Changer type</button> </br>								
 								</br>	
 								<label>Additional protocols - rlogin :</label></br>
-								<input type="radio" name="FeatureAdditional protocols - rlogin" value="oui">Yes <input type="radio" name="FeatureAdditional protocols - rlogin" value = "non">No <input type="radio" name="FeatureAdditional protocols - rlogin" value = "non">Partial </br>
-											<input name="FeatureAdditional protocols - rlogin" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Additional protocols - rlogin"> <input type="radio" name="FeatureAdditional protocols - rlogin" value="oui">Yes <input type="radio" name="FeatureAdditional protocols - rlogin" value = "non">No <input type="radio" name="FeatureAdditional protocols - rlogin" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Additional protocols - rlogin"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Additional protocols - rlogin','id2Additional protocols - rlogin');">Changer type</button> </br>								
 								</br>	
 								<label>Additional protocols - TELNET :</label></br>
-								<input type="radio" name="FeatureAdditional protocols - TELNET" value="oui">Yes <input type="radio" name="FeatureAdditional protocols - TELNET" value = "non">No <input type="radio" name="FeatureAdditional protocols - TELNET" value = "non">Partial </br>
-											<input name="FeatureAdditional protocols - TELNET" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Additional protocols - TELNET"> <input type="radio" name="FeatureAdditional protocols - TELNET" value="oui">Yes <input type="radio" name="FeatureAdditional protocols - TELNET" value = "non">No <input type="radio" name="FeatureAdditional protocols - TELNET" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Additional protocols - TELNET"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Additional protocols - TELNET','id2Additional protocols - TELNET');">Changer type</button> </br>								
 								</br>	
 								<label>Tunneling - VPN :</label></br>
-								<input type="radio" name="FeatureTunneling - VPN" value="oui">Yes <input type="radio" name="FeatureTunneling - VPN" value = "non">No <input type="radio" name="FeatureTunneling - VPN" value = "non">Partial </br>
-											<input name="FeatureTunneling - VPN" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Tunneling - VPN"> <input type="radio" name="FeatureTunneling - VPN" value="oui">Yes <input type="radio" name="FeatureTunneling - VPN" value = "non">No <input type="radio" name="FeatureTunneling - VPN" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Tunneling - VPN"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Tunneling - VPN','id2Tunneling - VPN');">Changer type</button> </br>								
 								</br>	
 								<label>Tunneling - SOCKS :</label></br>
-								<input type="radio" name="FeatureTunneling - SOCKS" value="oui">Yes <input type="radio" name="FeatureTunneling - SOCKS" value = "non">No <input type="radio" name="FeatureTunneling - SOCKS" value = "non">Partial </br>
-											<input name="FeatureTunneling - SOCKS" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Tunneling - SOCKS"> <input type="radio" name="FeatureTunneling - SOCKS" value="oui">Yes <input type="radio" name="FeatureTunneling - SOCKS" value = "non">No <input type="radio" name="FeatureTunneling - SOCKS" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Tunneling - SOCKS"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Tunneling - SOCKS','id2Tunneling - SOCKS');">Changer type</button> </br>								
 								</br>	
 								<label>Tunneling - Portforwarding :</label></br>
-								<input type="radio" name="FeatureTunneling - Portforwarding" value="oui">Yes <input type="radio" name="FeatureTunneling - Portforwarding" value = "non">No <input type="radio" name="FeatureTunneling - Portforwarding" value = "non">Partial </br>
-											<input name="FeatureTunneling - Portforwarding" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Tunneling - Portforwarding"> <input type="radio" name="FeatureTunneling - Portforwarding" value="oui">Yes <input type="radio" name="FeatureTunneling - Portforwarding" value = "non">No <input type="radio" name="FeatureTunneling - Portforwarding" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Tunneling - Portforwarding"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Tunneling - Portforwarding','id2Tunneling - Portforwarding');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

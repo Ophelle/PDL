@@ -30,30 +30,41 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Other platforms :</label></br>
+									  <p id="id1Other platforms">
 											<input type="checkbox" name="Feature" >FreeBSD</br>	
 											<input type="checkbox" name="Feature" >OpenBSD</br>	
 											<input type="checkbox" name="Feature" >Solaris</br>	
 											<input type="checkbox" name="Feature" >JVM</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Other platforms"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Other platforms','id2Other platforms');">Changer type</button></br>
+							
 								</br>	
 								<label>Mac OS X :</label></br>
-								<input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </br>
-											<input name="FeatureMac OS X" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Mac OS X"> <input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Mac OS X"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Mac OS X','id2Mac OS X');">Changer type</button> </br>								
 								</br>	
 								<label>Linux :</label></br>
-								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
-											<input name="FeatureLinux" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Linux"> <input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Linux"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Linux','id2Linux');">Changer type</button> </br>								
 								</br>	
 								<label>License :</label></br>
+									  <p id="id1License">
 											<input type="checkbox" name="Feature" >ASLv2</br>	
 											<input type="checkbox" name="Feature" >proprietary</br>	
 											<input type="checkbox" name="Feature" >CDDL</br>	
 											<input type="checkbox" name="Feature" >GPL2</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2License"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1License','id2License');">Changer type</button></br>
+							
 								</br>	
 								<label>Windows :</label></br>
-								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
-											<input name="FeatureWindows" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Windows"> <input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Windows"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Windows','id2Windows');">Changer type</button> </br>								
 								</br>	
 								<label>IDE : </label></br> <input id="0" type="text" name="Feature"></br>
 						<script>

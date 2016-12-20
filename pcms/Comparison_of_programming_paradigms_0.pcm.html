@@ -32,6 +32,7 @@
 								<label>Critics : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Examples :</label></br>
+									  <p id="id1Examples">
 											<input type="checkbox" name="Feature" >Common Lisp</br>	
 											<input type="checkbox" name="Feature" >C++</br>	
 											<input type="checkbox" name="Feature" >C#</br>	
@@ -55,13 +56,17 @@
 											<input type="checkbox" name="Feature" >regular expressions</br>	
 											<input type="checkbox" name="Feature" >CSS</br>	
 											<input type="checkbox" name="Feature" >Prolog</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Examples"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Examples','id2Examples');">Changer type</button></br>
+							
 								</br>	
 								<label>Paradigm : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Related paradigm(s) : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Main characteristics :</label></br>
+									  <p id="id1Main characteristics">
 											<input type="checkbox" name="Feature" >Lambda calculus</br>	
 											<input type="checkbox" name="Feature" >compositionality</br>	
 											<input type="checkbox" name="Feature" >formula</br>	
@@ -101,16 +106,23 @@
 											<input type="checkbox" name="Feature" >state changes</br>	
 											<input type="checkbox" name="Feature" >isomorphism</br>	
 											<input type="checkbox" name="Feature" >state transition table</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Main characteristics"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Main characteristics','id2Main characteristics');">Changer type</button></br>
+							
 								</br>	
 								<label>Description :</label></br>
+									  <p id="id1Description">
 											<input type="checkbox" name="Feature" >Program flow is determined mainly by events</br>	
 											<input type="checkbox" name="Feature" >such as mouse click or interrupts including timer</br>	
 											<input type="checkbox" name="Feature" >Treats programs as a model of a finite state machine or any other formal automata</br>	
 											<input type="checkbox" name="Feature" >Derived from structured programming</br>	
 											<input type="checkbox" name="Feature" >based on the concept of modular programming or the procedure call</br>	
 											<input type="checkbox" name="Feature" >Treats computation as the evaluation of mathematical functions avoiding state and mutable data</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Description"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Description','id2Description');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

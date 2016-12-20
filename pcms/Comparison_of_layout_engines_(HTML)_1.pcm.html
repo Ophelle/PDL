@@ -36,18 +36,27 @@
 								<label>Marking document changes : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Subscripts and superscripts :</label></br>
+									  <p id="id1Subscripts and superscripts">
 											<input type="checkbox" name="Feature" >Subscripts and superscripts</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Subscripts and superscripts"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Subscripts and superscripts','id2Subscripts and superscripts');">Changer type</button></br>
+							
 								</br>	
 								<label>1.0 - Yes :</label></br>
-								<input type="radio" name="Feature1.0 - Yes" value="oui">Yes <input type="radio" name="Feature1.0 - Yes" value = "non">No <input type="radio" name="Feature1.0 - Yes" value = "non">Partial </br>
-											<input name="Feature1.0 - Yes" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id11.0 - Yes"> <input type="radio" name="Feature1.0 - Yes" value="oui">Yes <input type="radio" name="Feature1.0 - Yes" value = "non">No <input type="radio" name="Feature1.0 - Yes" value = "non">Partial </p>
+											<input  style="display:none;" id ="id21.0 - Yes"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id11.0 - Yes','id21.0 - Yes');">Changer type</button> </br>								
 								</br>	
 								<label>Presto - iCab : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Lines and paragraphs :</label></br>
+									  <p id="id1Lines and paragraphs">
 											<input type="checkbox" name="Feature" >Lines and paragraphs</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Lines and paragraphs"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Lines and paragraphs','id2Lines and paragraphs');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

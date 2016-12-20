@@ -30,6 +30,7 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>CrossFire :</label></br>
+									  <p id="id1CrossFire">
 											<input type="checkbox" name="Feature" >PowerXpressAXIOM</br>	
 											<input type="checkbox" name="Feature" >MXMmodule(s)</br>	
 											<input type="checkbox" name="Feature" >Hybrid</br>	
@@ -37,11 +38,15 @@
 											<input type="checkbox" name="Feature" >x8 + x8</br>	
 											<input type="checkbox" name="Feature" >x16 + x16or x8 quad</br>	
 											<input type="checkbox" name="Feature" >x16 + x16or x16 + x8 + x8or x8 quad</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2CrossFire"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1CrossFire','id2CrossFire');">Changer type</button></br>
+							
 								</br>	
 								<label>SLI :</label></br>
-								<input type="radio" name="FeatureSLI" value="oui">Yes <input type="radio" name="FeatureSLI" value = "non">No <input type="radio" name="FeatureSLI" value = "non">Partial </br>
-											<input name="FeatureSLI" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1SLI"> <input type="radio" name="FeatureSLI" value="oui">Yes <input type="radio" name="FeatureSLI" value = "non">No <input type="radio" name="FeatureSLI" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2SLI"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1SLI','id2SLI');">Changer type</button> </br>								
 								</br>	
 								<label>IGP : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
@@ -52,6 +57,7 @@
 								<label>Products : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Features / Notes :</label></br>
+									  <p id="id1Features / Notes">
 											<input type="checkbox" name="Feature" >DirectX 10.1</br>	
 											<input type="checkbox" name="Feature" >UVD2</br>	
 											<input type="checkbox" name="Feature" >HDMI</br>	
@@ -73,11 +79,15 @@
 											<input type="checkbox" name="Feature" >IOMMUAM3+ socket support</br>	
 											<input type="checkbox" name="Feature" >Side-port memory</br>	
 											<input type="checkbox" name="Feature" >OR two PCIe 2.0 x16</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Features / Notes"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Features / Notes','id2Features / Notes');">Changer type</button></br>
+							
 								</br>	
 								<label>Code name : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>CPU support :</label></br>
+									  <p id="id1CPU support">
 											<input type="checkbox" name="Feature" >Bulldozer</br>	
 											<input type="checkbox" name="Feature" >PiledriverPhenom II</br>	
 											<input type="checkbox" name="Feature" >Athlon II</br>	
@@ -92,25 +102,31 @@
 											<input type="checkbox" name="Feature" >Athlon 64</br>	
 											<input type="checkbox" name="Feature" >Mobile Phenom II</br>	
 											<input type="checkbox" name="Feature" >Mobile SempronV-Series</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2CPU support"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1CPU support','id2CPU support');">Changer type</button></br>
+							
 								</br>	
 								<label>HT (MHz) : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>TDP (W) : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
 								<label>Southbridge :</label></br>
+									  <p id="id1Southbridge">
 											<input type="checkbox" name="Feature" >SB710</br>	
 											<input type="checkbox" name="Feature" >SB750</br>	
 											<input type="checkbox" name="Feature" >SB810</br>	
 											<input type="checkbox" name="Feature" >SB850</br>	
 											<input type="checkbox" name="Feature" >SB920</br>	
 											<input type="checkbox" name="Feature" >SB950</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Southbridge"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Southbridge','id2Southbridge');">Changer type</button></br>
+							
 								</br>	
 								<label>Fab (nm) : </label></br> <input style="display:block;" id="id1Fab (nm)" type="number" name="Feature">
 												<input style="display:none;" id="id2Fab (nm)" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fab (nm)','id2Fab (nm)');">Changer type</button></br>								
-						<script>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fab (nm)','id2Fab (nm)');">Changer type</button></br>						<script>
 								$("#0").typeahead({
 									name:"list0",
 									local : ['Radeon HD 4250','Radeon HD 4200','x16 + x16or x8 quad','Radeon HD 4290','No','x8 + x8','Radeon HD 4225','Radeon HD 4250Radeon HD 4270','IGP','']

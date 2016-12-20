@@ -52,6 +52,7 @@
 								<label>Nodeclipse NTS : </label></br> <input id="10" type="text" name="Feature"></br>
 								</br>	
 								<label>Komodo IDE / Edit :</label></br>
+									  <p id="id1Komodo IDE / Edit">
 											<input type="checkbox" name="Feature" >IDE:Proprietary</br>	
 											<input type="checkbox" name="Feature" >Edit:MPL 1.1</br>	
 											<input type="checkbox" name="Feature" >November 19</br>	
@@ -63,16 +64,23 @@
 											<input type="checkbox" name="Feature" >Python</br>	
 											<input type="checkbox" name="Feature" >JavaScript</br>	
 											<input type="checkbox" name="Feature" >Tcl</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Komodo IDE / Edit"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Komodo IDE / Edit','id2Komodo IDE / Edit');">Changer type</button></br>
+							
 								</br>	
 								<label>Aptana Studio :</label></br>
+									  <p id="id1Aptana Studio">
 											<input type="checkbox" name="Feature" >GPL</br>	
 											<input type="checkbox" name="Feature" >proprietary</br>	
 											<input type="checkbox" name="Feature" >Java</br>	
 											<input type="checkbox" name="Feature" >JavaScript</br>	
 											<input type="checkbox" name="Feature" >Aptana</br>	
 											<input type="checkbox" name="Feature" >Inc.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Aptana Studio"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Aptana Studio','id2Aptana Studio');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

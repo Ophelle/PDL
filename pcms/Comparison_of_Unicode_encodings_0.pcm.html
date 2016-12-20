@@ -33,25 +33,25 @@
 								</br>	
 								<label>UTF-EBCDIC : </label></br> <input style="display:block;" id="id1UTF-EBCDIC" type="number" name="Feature">
 												<input style="display:none;" id="id2UTF-EBCDIC" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1UTF-EBCDIC','id2UTF-EBCDIC');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1UTF-EBCDIC','id2UTF-EBCDIC');">Changer type</button></br>								</br>	
 								<label>GB 18030 :</label></br>
+									  <p id="id1GB 18030">
 											<input type="checkbox" name="Feature" >2 for characters inherited fromGB 2312</br>	
 											<input type="checkbox" name="Feature" >GBK (e.g. mostChinese characters) 4 foreverything else.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2GB 18030"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1GB 18030','id2GB 18030');">Changer type</button></br>
+							
 								</br>	
 								<label>UTF-8 : </label></br> <input style="display:block;" id="id1UTF-8" type="number" name="Feature">
 												<input style="display:none;" id="id2UTF-8" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1UTF-8','id2UTF-8');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1UTF-8','id2UTF-8');">Changer type</button></br>								</br>	
 								<label>UTF-32 : </label></br> <input style="display:block;" id="id1UTF-32" type="number" name="Feature">
 												<input style="display:none;" id="id2UTF-32" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1UTF-32','id2UTF-32');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1UTF-32','id2UTF-32');">Changer type</button></br>								</br>	
 								<label>UTF-16 : </label></br> <input style="display:block;" id="id1UTF-16" type="number" name="Feature">
 												<input style="display:none;" id="id2UTF-16" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1UTF-16','id2UTF-16');">Changer type</button></br>								
-						<script>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1UTF-16','id2UTF-16');">Changer type</button></br>						<script>
 								$("#0").typeahead({
 									name:"list0",
 									local : ['000000 – 00007F','010000 – 03FFFF','000400 – 0007FF','000800 – 003FFF','000080 – 00009F','0000A0 – 0003FF','004000 – 00FFFF','040000 – 10FFFF','']

@@ -32,6 +32,7 @@
 								<label>Creator : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Latest stable version :</label></br>
+									  <p id="id1Latest stable version">
 											<input type="checkbox" name="Feature" >0.7.0 July 30</br>	
 											<input type="checkbox" name="Feature" >2012; 2 years ago</br>	
 											<input type="checkbox" name="Feature" >4.6.1 December 18</br>	
@@ -45,7 +46,10 @@
 											<input type="checkbox" name="Feature" >3.2.5  January 17</br>	
 											<input type="checkbox" name="Feature" >2011; 4 years ago</br>	
 											<input type="checkbox" name="Feature" >20130505 May 5</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Latest stable version"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Latest stable version','id2Latest stable version');">Changer type</button></br>
+							
 								</br>	
 								<label>Client : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
@@ -55,11 +59,11 @@
 								</br>	
 								<label>First public release date : </label></br> <input style="display:block;" id="id1First public release date" type="number" name="Feature">
 												<input style="display:none;" id="id2First public release date" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First public release date','id2First public release date');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First public release date','id2First public release date');">Changer type</button></br>								</br>	
 								<label>Copy files over 2 GB limit :</label></br>
-								<input type="radio" name="FeatureCopy files over 2 GB limit" value="oui">Yes <input type="radio" name="FeatureCopy files over 2 GB limit" value = "non">No <input type="radio" name="FeatureCopy files over 2 GB limit" value = "non">Partial </br>
-											<input name="FeatureCopy files over 2 GB limit" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Copy files over 2 GB limit"> <input type="radio" name="FeatureCopy files over 2 GB limit" value="oui">Yes <input type="radio" name="FeatureCopy files over 2 GB limit" value = "non">No <input type="radio" name="FeatureCopy files over 2 GB limit" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Copy files over 2 GB limit"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Copy files over 2 GB limit','id2Copy files over 2 GB limit');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

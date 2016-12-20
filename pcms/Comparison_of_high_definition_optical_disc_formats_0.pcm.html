@@ -30,7 +30,9 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>lossy - Dolby Digital :</label></br>
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input  style="display:none;" id ="id2lossy - Dolby Digital"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1lossy - Dolby Digital','id2lossy - Dolby Digital');">Changer type</button></br>
+							
 								</br>	
 								<label>lossy - DTS : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
@@ -45,22 +47,32 @@
 								<label>lossless - Dolby TrueHD : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>Frame rate at maximum resolution :</label></br>
+									  <p id="id1Frame rate at maximum resolution">
 											<input type="checkbox" name="Feature" >24</br>	
 											<input type="checkbox" name="Feature" >25</br>	
 											<input type="checkbox" name="Feature" >30p</br>	
 											<input type="checkbox" name="Feature" >50</br>	
 											<input type="checkbox" name="Feature" >60i</br>	
 											<input type="checkbox" name="Feature" >30p 50</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Frame rate at maximum resolution"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Frame rate at maximum resolution','id2Frame rate at maximum resolution');">Changer type</button></br>
+							
 								</br>	
 								<label>Maximumbitrate - Audio+Video+Subtitles :</label></br>
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input  style="display:none;" id ="id2Maximumbitrate - Audio+Video+Subtitles"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Maximumbitrate - Audio+Video+Subtitles','id2Maximumbitrate - Audio+Video+Subtitles');">Changer type</button></br>
+							
 								</br>	
 								<label>Maximumbitrate - Video :</label></br>
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input  style="display:none;" id ="id2Maximumbitrate - Video"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Maximumbitrate - Video','id2Maximumbitrate - Video');">Changer type</button></br>
+							
 								</br>	
 								<label>Maximumbitrate - Raw data transfer :</label></br>
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input  style="display:none;" id ="id2Maximumbitrate - Raw data transfer"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Maximumbitrate - Raw data transfer','id2Maximumbitrate - Raw data transfer');">Changer type</button></br>
+							
 								</br>	
 								<label>Region codes : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
@@ -69,7 +81,9 @@
 								<label>Laser wavelength : </label></br> <input id="8" type="text" name="Feature"></br>
 								</br>	
 								<label>Storage capacity(single side) - per layer/maximum :</label></br>
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input  style="display:none;" id ="id2Storage capacity(single side) - per layer/maximum"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Storage capacity(single side) - per layer/maximum','id2Storage capacity(single side) - per layer/maximum');">Changer type</button></br>
+							
 								</br>	
 								<label>Video resolution(maximum) : </label></br> <input id="9" type="text" name="Feature"></br>
 								</br>	
@@ -80,6 +94,7 @@
 								<label>Interactivity : </label></br> <input id="12" type="text" name="Feature"></br>
 								</br>	
 								<label>Mandatory video codec :</label></br>
+									  <p id="id1Mandatory video codec">
 											<input type="checkbox" name="Feature" >H.264</br>	
 											<input type="checkbox" name="Feature" >MPEG-4 AVCMPEG-2</br>	
 											<input type="checkbox" name="Feature" >China's AVS </br>	
@@ -88,7 +103,10 @@
 											<input type="checkbox" name="Feature" >MPEG-2</br>	
 											<input type="checkbox" name="Feature" >MPEG-4 AVC</br>	
 											<input type="checkbox" name="Feature" >MPEG-1 </br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Mandatory video codec"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Mandatory video codec','id2Mandatory video codec');">Changer type</button></br>
+							
 								</br>	
 								<label>Digital Rights Management : </label></br> <input id="13" type="text" name="Feature"></br>
 								</br>	
@@ -96,8 +114,7 @@
 								</br>	
 								<label>Numerical aperture : </label></br> <input style="display:block;" id="id1Numerical aperture" type="number" name="Feature">
 												<input style="display:none;" id="id2Numerical aperture" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Numerical aperture','id2Numerical aperture');">Changer type</button></br>								
-						<script>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Numerical aperture','id2Numerical aperture');">Changer type</button></br>						<script>
 								$("#0").typeahead({
 									name:"list0",
 									local : ['Three region codes','None','8 regions (6 commercial)','Unknown','Region codes','']

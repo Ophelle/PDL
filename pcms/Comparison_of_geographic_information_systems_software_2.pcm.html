@@ -30,6 +30,7 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Other :</label></br>
+									  <p id="id1Other">
 											<input type="checkbox" name="Feature" >Including WMTS</br>	
 											<input type="checkbox" name="Feature" >WMS</br>	
 											<input type="checkbox" name="Feature" >Open source</br>	
@@ -41,20 +42,28 @@
 											<input type="checkbox" name="Feature" >TMS</br>	
 											<input type="checkbox" name="Feature" >KML</br>	
 											<input type="checkbox" name="Feature" >Virtual Earth</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Other"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Other','id2Other');">Changer type</button></br>
+							
 								</br>	
 								<label>Language :</label></br>
+									  <p id="id1Language">
 											<input type="checkbox" name="Feature" >.NET</br>	
 											<input type="checkbox" name="Feature" >C++</br>	
 											<input type="checkbox" name="Feature" >Java</br>	
 											<input type="checkbox" name="Feature" >C#</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Language"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Language','id2Language');">Changer type</button></br>
+							
 								</br>	
 								<label>Name : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>WMS-C :</label></br>
-								<input type="radio" name="FeatureWMS-C" value="oui">Yes <input type="radio" name="FeatureWMS-C" value = "non">No <input type="radio" name="FeatureWMS-C" value = "non">Partial </br>
-											<input name="FeatureWMS-C" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1WMS-C"> <input type="radio" name="FeatureWMS-C" value="oui">Yes <input type="radio" name="FeatureWMS-C" value = "non">No <input type="radio" name="FeatureWMS-C" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2WMS-C"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1WMS-C','id2WMS-C');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

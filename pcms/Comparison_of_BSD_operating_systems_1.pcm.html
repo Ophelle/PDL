@@ -34,6 +34,7 @@
 								<label>GUI on by default : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Primary APIs :</label></br>
+									  <p id="id1Primary APIs">
 											<input type="checkbox" name="Feature" >BSD</br>	
 											<input type="checkbox" name="Feature" >POSIX (4.0 onwards)</br>	
 											<input type="checkbox" name="Feature" >POSIX</br>	
@@ -47,11 +48,15 @@
 											<input type="checkbox" name="Feature" >Cocoa</br>	
 											<input type="checkbox" name="Feature" >CF</br>	
 											<input type="checkbox" name="Feature" >X11 (since 10.3)</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Primary APIs"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Primary APIs','id2Primary APIs');">Changer type</button></br>
+							
 								</br>	
 								<label>Kernel type : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Supported architectures :</label></br>
+									  <p id="id1Supported architectures">
 											<input type="checkbox" name="Feature" >x86</br>	
 											<input type="checkbox" name="Feature" >x86-64</br>	
 											<input type="checkbox" name="Feature" >PC98</br>	
@@ -67,9 +72,13 @@
 											<input type="checkbox" name="Feature" >VAX</br>	
 											<input type="checkbox" name="Feature" >PowerPC</br>	
 											<input type="checkbox" name="Feature" >PDP-11</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Supported architectures"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Supported architectures','id2Supported architectures');">Changer type</button></br>
+							
 								</br>	
 								<label>Supported file system :</label></br>
+									  <p id="id1Supported file system">
 											<input type="checkbox" name="Feature" >UFS</br>	
 											<input type="checkbox" name="Feature" >UFS2</br>	
 											<input type="checkbox" name="Feature" >FAT</br>	
@@ -105,16 +114,23 @@
 											<input type="checkbox" name="Feature" >Coda (experimental)</br>	
 											<input type="checkbox" name="Feature" >HAMMER</br>	
 											<input type="checkbox" name="Feature" >NTFS</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Supported file system"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Supported file system','id2Supported file system');">Changer type</button></br>
+							
 								</br>	
 								<label>Package management :</label></br>
+									  <p id="id1Package management">
 											<input type="checkbox" name="Feature" >graphical installation wizard</br>	
 											<input type="checkbox" name="Feature" >ports tree</br>	
 											<input type="checkbox" name="Feature" >pkgsrc</br>	
 											<input type="checkbox" name="Feature" >packages</br>	
 											<input type="checkbox" name="Feature" >dports</br>	
 											<input type="checkbox" name="Feature" >pkgng</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Package management"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Package management','id2Package management');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

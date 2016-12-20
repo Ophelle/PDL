@@ -46,11 +46,16 @@
 								<label>--[[ ~ ]],--[=[ ~ ]=] : </label></br> <input id="7" type="text" name="Feature"></br>
 								</br>	
 								<label>{ ~ } :</label></br>
+									  <p id="id1{ ~ }">
 											<input type="checkbox" name="Feature" >Object Pascal (Delphi)</br>	
 											<input type="checkbox" name="Feature" >Pascal</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2{ ~ }"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1{ ~ }','id2{ ~ }');">Changer type</button></br>
+							
 								</br>	
 								<label>/* ~ */ :</label></br>
+									  <p id="id1/* ~ */">
 											<input type="checkbox" name="Feature" >ActionScript</br>	
 											<input type="checkbox" name="Feature" >AutoHotkey</br>	
 											<input type="checkbox" name="Feature" >C</br>	
@@ -71,7 +76,10 @@
 											<input type="checkbox" name="Feature" >Swift</br>	
 											<input type="checkbox" name="Feature" >Visual Prolog</br>	
 											<input type="checkbox" name="Feature" >CSS</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2/* ~ */"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1/* ~ */','id2/* ~ */');">Changer type</button></br>
+							
 								</br>	
 								<label>(comment ~ ) : </label></br> <input id="8" type="text" name="Feature"></br>
 								</br>	
@@ -88,12 +96,17 @@
 								<label># ~ # : </label></br> <input id="14" type="text" name="Feature"></br>
 								</br>	
 								<label>~ :</label></br>
+									  <p id="id1~">
 											<input type="checkbox" name="Feature" >Lisp</br>	
 											<input type="checkbox" name="Feature" >Scheme</br>	
 											<input type="checkbox" name="Feature" >Racket (can be nested in all three).</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2~"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1~','id2~');">Changer type</button></br>
+							
 								</br>	
 								<label>(* ~ *) :</label></br>
+									  <p id="id1(* ~ *)">
 											<input type="checkbox" name="Feature" >Object Pascal (Delphi)</br>	
 											<input type="checkbox" name="Feature" >ML</br>	
 											<input type="checkbox" name="Feature" >Mathematica</br>	
@@ -104,7 +117,10 @@
 											<input type="checkbox" name="Feature" >Standard ML (can be nested)</br>	
 											<input type="checkbox" name="Feature" >Maple</br>	
 											<input type="checkbox" name="Feature" >Newspeak</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2(* ~ *)"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1(* ~ *)','id2(* ~ *)');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

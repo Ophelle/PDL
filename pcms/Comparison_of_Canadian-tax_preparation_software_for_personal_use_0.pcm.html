@@ -40,8 +40,9 @@
 								<label>Owner : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Approved Forms :</label></br>
-								<input type="radio" name="FeatureApproved Forms" value="oui">Yes <input type="radio" name="FeatureApproved Forms" value = "non">No <input type="radio" name="FeatureApproved Forms" value = "non">Partial </br>
-											<input name="FeatureApproved Forms" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Approved Forms"> <input type="radio" name="FeatureApproved Forms" value="oui">Yes <input type="radio" name="FeatureApproved Forms" value = "non">No <input type="radio" name="FeatureApproved Forms" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Approved Forms"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Approved Forms','id2Approved Forms');">Changer type</button> </br>								
 								</br>	
 								<label>NetFile Certified(tax years) : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
@@ -50,13 +51,13 @@
 								<label>Name : </label></br> <input id="7" type="text" name="Feature"></br>
 								</br>	
 								<label>2D Bar Coded :</label></br>
-								<input type="radio" name="Feature2D Bar Coded" value="oui">Yes <input type="radio" name="Feature2D Bar Coded" value = "non">No <input type="radio" name="Feature2D Bar Coded" value = "non">Partial </br>
-											<input name="Feature2D Bar Coded" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id12D Bar Coded"> <input type="radio" name="Feature2D Bar Coded" value="oui">Yes <input type="radio" name="Feature2D Bar Coded" value = "non">No <input type="radio" name="Feature2D Bar Coded" value = "non">Partial </p>
+											<input  style="display:none;" id ="id22D Bar Coded"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id12D Bar Coded','id22D Bar Coded');">Changer type</button> </br>								
 								</br>	
 								<label># of Returns : </label></br> <input style="display:block;" id="id1# of Returns" type="number" name="Feature">
 												<input style="display:none;" id="id2# of Returns" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1# of Returns','id2# of Returns');">Changer type</button></br>								
-						<script>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1# of Returns','id2# of Returns');">Changer type</button></br>						<script>
 								$("#0").typeahead({
 									name:"list0",
 									local : ['Rare','No prov return for QC,YT,NU,NT, No self-employment or business income','Netfile based restrictions only','No prov return for QC','No NB, NL, NT, NU, PE, QC, SK, YT','See www.taxtron.ca/products for list','No QC prov part','?','No QC','standardinvestments, rental incomebusiness','No AgriStability, QC','Supports all Canadian Provinces and Territories.','']

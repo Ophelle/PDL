@@ -32,6 +32,7 @@
 								<label>Image processor : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Display :</label></br>
+									  <p id="id1Display">
 											<input type="checkbox" name="Feature" >3.0"</br>	
 											<input type="checkbox" name="Feature" >460k pixels</br>	
 											<input type="checkbox" name="Feature" >2.5"</br>	
@@ -53,11 +54,15 @@
 											<input type="checkbox" name="Feature" >articulated</br>	
 											<input type="checkbox" name="Feature" >114k pixels</br>	
 											<input type="checkbox" name="Feature" > 920k pixels</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Display"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Display','id2Display');">Changer type</button></br>
+							
 								</br>	
 								<label>Release date : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Dimensions, WxHxD (mm) :</label></br>
+									  <p id="id1Dimensions, WxHxD (mm)">
 											<input type="checkbox" name="Feature" >152 × 113 × 75</br>	
 											<input type="checkbox" name="Feature" >158 × 164 × 83</br>	
 											<input type="checkbox" name="Feature" >108.6 × 66.5 × 32.3</br>	
@@ -90,9 +95,13 @@
 											<input type="checkbox" name="Feature" >156 × 160 × 80</br>	
 											<input type="checkbox" name="Feature" >108 × 67 × 35</br>	
 											<input type="checkbox" name="Feature" >145 × 111 × 71</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Dimensions, WxHxD (mm)"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Dimensions, WxHxD (mm)','id2Dimensions, WxHxD (mm)');">Changer type</button></br>
+							
 								</br>	
 								<label>Max ISO :</label></br>
+									  <p id="id1Max ISO">
 											<input type="checkbox" name="Feature" >204</br>	
 											<input type="checkbox" name="Feature" >800</br>	
 											<input type="checkbox" name="Feature" >51</br>	
@@ -103,15 +112,18 @@
 											<input type="checkbox" name="Feature" >600</br>	
 											<input type="checkbox" name="Feature" >12</br>	
 											<input type="checkbox" name="Feature" >409</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Max ISO"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Max ISO','id2Max ISO');">Changer type</button></br>
+							
 								</br>	
 								<label>Model : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Autofocus points : </label></br> <input style="display:block;" id="id1Autofocus points" type="number" name="Feature">
 												<input style="display:none;" id="id2Autofocus points" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Autofocus points','id2Autofocus points');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Autofocus points','id2Autofocus points');">Changer type</button></br>								</br>	
 								<label>Viewfinder magnification, coverage :</label></br>
+									  <p id="id1Viewfinder magnification, coverage">
 											<input type="checkbox" name="Feature" >0.85×</br>	
 											<input type="checkbox" name="Feature" >95%</br>	
 											<input type="checkbox" name="Feature" >0.76×</br>	
@@ -130,23 +142,24 @@
 											<input type="checkbox" name="Feature" >0.88×</br>	
 											<input type="checkbox" name="Feature" >0.81×</br>	
 											<input type="checkbox" name="Feature" >1.0×</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Viewfinder magnification, coverage"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Viewfinder magnification, coverage','id2Viewfinder magnification, coverage');">Changer type</button></br>
+							
 								</br>	
 								<label>Weight (kg) : </label></br> <input style="display:block;" id="id1Weight (kg)" type="number" name="Feature">
 												<input style="display:none;" id="id2Weight (kg)" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Weight (kg)','id2Weight (kg)');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Weight (kg)','id2Weight (kg)');">Changer type</button></br>								</br>	
 								<label>Main Battery : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Megapixels : </label></br> <input style="display:block;" id="id1Megapixels" type="number" name="Feature">
 												<input style="display:none;" id="id2Megapixels" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Megapixels','id2Megapixels');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Megapixels','id2Megapixels');">Changer type</button></br>								</br>	
 								<label>Min ISO : </label></br> <input style="display:block;" id="id1Min ISO" type="number" name="Feature">
 												<input style="display:none;" id="id2Min ISO" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Min ISO','id2Min ISO');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Min ISO','id2Min ISO');">Changer type</button></br>								</br>	
 								<label>Video :</label></br>
+									  <p id="id1Video">
 											<input type="checkbox" name="Feature" >1080p30</br>	
 											<input type="checkbox" name="Feature" >720p60</br>	
 											<input type="checkbox" name="Feature" >1080p25</br>	
@@ -158,11 +171,15 @@
 											<input type="checkbox" name="Feature" >480p30</br>	
 											<input type="checkbox" name="Feature" >4Kp60</br>	
 											<input type="checkbox" name="Feature" >1080p120</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Video"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Video','id2Video');">Changer type</button></br>
+							
 								</br>	
 								<label>Live view :</label></br>
-								<input type="radio" name="FeatureLive view" value="oui">Yes <input type="radio" name="FeatureLive view" value = "non">No <input type="radio" name="FeatureLive view" value = "non">Partial </br>
-											<input name="FeatureLive view" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Live view"> <input type="radio" name="FeatureLive view" value="oui">Yes <input type="radio" name="FeatureLive view" value = "non">No <input type="radio" name="FeatureLive view" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Live view"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Live view','id2Live view');">Changer type</button> </br>								
 								</br>	
 								<label>Storage : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
@@ -170,8 +187,7 @@
 								</br>	
 								<label>Max FPS : </label></br> <input style="display:block;" id="id1Max FPS" type="number" name="Feature">
 												<input style="display:none;" id="id2Max FPS" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Max FPS','id2Max FPS');">Changer type</button></br>								
-						<script>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Max FPS','id2Max FPS');">Changer type</button></br>						<script>
 								$("#0").typeahead({
 									name:"list0",
 									local : ['DIGIC III','DIGIC 4+','DIGIC 6','DIGIC II','DIGIC 4','Dual DIGIC 6+','DIGIC','Dual DIGIC 6','Dual DIGIC 5+','DIGIC 5+','Dual DIGIC 4','Dual DIGIC III','DIGIC 5','','']

@@ -34,16 +34,18 @@
 								<label>Host platform : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Open source :</label></br>
-								<input type="radio" name="FeatureOpen source" value="oui">Yes <input type="radio" name="FeatureOpen source" value = "non">No <input type="radio" name="FeatureOpen source" value = "non">Partial </br>
-											<input name="FeatureOpen source" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Open source"> <input type="radio" name="FeatureOpen source" value="oui">Yes <input type="radio" name="FeatureOpen source" value = "non">No <input type="radio" name="FeatureOpen source" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Open source"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Open source','id2Open source');">Changer type</button> </br>								
 								</br>	
 								<label>Assembler : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Instruction set : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Active Development :</label></br>
-								<input type="radio" name="FeatureActive Development" value="oui">Yes <input type="radio" name="FeatureActive Development" value = "non">No <input type="radio" name="FeatureActive Development" value = "non">Partial </br>
-											<input name="FeatureActive Development" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Active Development"> <input type="radio" name="FeatureActive Development" value="oui">Yes <input type="radio" name="FeatureActive Development" value = "non">No <input type="radio" name="FeatureActive Development" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Active Development"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Active Development','id2Active Development');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

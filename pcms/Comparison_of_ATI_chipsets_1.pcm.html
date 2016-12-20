@@ -34,6 +34,7 @@
 								<label>IDE Channels (2 Devices/Channel) : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Codename :</label></br>
+									  <p id="id1Codename">
 											<input type="checkbox" name="Feature" >IXP400</br>	
 											<input type="checkbox" name="Feature" >SB400</br>	
 											<input type="checkbox" name="Feature" >IXP460</br>	
@@ -42,25 +43,26 @@
 											<input type="checkbox" name="Feature" >SB450</br>	
 											<input type="checkbox" name="Feature" >IXP380</br>	
 											<input type="checkbox" name="Feature" >SB380</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Codename"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Codename','id2Codename');">Changer type</button></br>
+							
 								</br>	
 								<label>SATA Ports : </label></br> <input style="display:block;" id="id1SATA Ports" type="number" name="Feature">
 												<input style="display:none;" id="id2SATA Ports" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1SATA Ports','id2SATA Ports');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1SATA Ports','id2SATA Ports');">Changer type</button></br>								</br>	
 								<label>Year : </label></br> <input style="display:block;" id="id1Year" type="number" name="Feature">
 												<input style="display:none;" id="id2Year" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Year','id2Year');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Year','id2Year');">Changer type</button></br>								</br>	
 								<label>Fabrication process (nm) : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Model : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>USB Ports : </label></br> <input style="display:block;" id="id1USB Ports" type="number" name="Feature">
 												<input style="display:none;" id="id2USB Ports" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1USB Ports','id2USB Ports');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1USB Ports','id2USB Ports');">Changer type</button></br>								</br>	
 								<label>Notes :</label></br>
+									  <p id="id1Notes">
 											<input type="checkbox" name="Feature" >10</br>	
 											<input type="checkbox" name="Feature" >100 Ethernet</br>	
 											<input type="checkbox" name="Feature" >APM</br>	
@@ -76,7 +78,10 @@
 											<input type="checkbox" name="Feature" >10eSATA</br>	
 											<input type="checkbox" name="Feature" >ASF 2.0</br>	
 											<input type="checkbox" name="Feature" >8-bit HyperTransport links</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Notes"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Notes','id2Notes');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

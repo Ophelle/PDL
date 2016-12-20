@@ -30,6 +30,7 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Adobe Flash features :</label></br>
+									  <p id="id1Adobe Flash features">
 											<input type="checkbox" name="Feature" >JSON</br>	
 											<input type="checkbox" name="Feature" >XML</br>	
 											<input type="checkbox" name="Feature" >Subset of CSS 1</br>	
@@ -71,9 +72,13 @@
 											<input type="checkbox" name="Feature" >BlackBerry 10 v10.0 - 10.3.0 (10.3.1 unofficially supported)</br>	
 											<input type="checkbox" name="Feature" >Windows RT</br>	
 											<input type="checkbox" name="Feature" >Installed fonts and embedded fonts</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Adobe Flash features"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Adobe Flash features','id2Adobe Flash features');">Changer type</button></br>
+							
 								</br>	
 								<label>HTML web browser features :</label></br>
+									  <p id="id1HTML web browser features">
 											<input type="checkbox" name="Feature" >Varying support of H.264</br>	
 											<input type="checkbox" name="Feature" >WebM and Ogg Theora (see HTML5 video)</br>	
 											<input type="checkbox" name="Feature" >Varying support of MP3</br>	
@@ -120,11 +125,15 @@
 											<input type="checkbox" name="Feature" >Apple iOS 6+</br>	
 											<input type="checkbox" name="Feature" >Symbian Belle+</br>	
 											<input type="checkbox" name="Feature" >BlackBerry OS 7+</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2HTML web browser features"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1HTML web browser features','id2HTML web browser features');">Changer type</button></br>
+							
 								</br>	
 								<label>HTML5 standard :</label></br>
-								<input type="radio" name="FeatureHTML5 standard" value="oui">Yes <input type="radio" name="FeatureHTML5 standard" value = "non">No <input type="radio" name="FeatureHTML5 standard" value = "non">Partial </br>
-											<input name="FeatureHTML5 standard" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1HTML5 standard"> <input type="radio" name="FeatureHTML5 standard" value="oui">Yes <input type="radio" name="FeatureHTML5 standard" value = "non">No <input type="radio" name="FeatureHTML5 standard" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2HTML5 standard"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1HTML5 standard','id2HTML5 standard');">Changer type</button> </br>								
 						<script>
 						</script>
 						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />

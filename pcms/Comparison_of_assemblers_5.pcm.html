@@ -30,18 +30,21 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Active Development :</label></br>
-								<input type="radio" name="FeatureActive Development" value="oui">Yes <input type="radio" name="FeatureActive Development" value = "non">No <input type="radio" name="FeatureActive Development" value = "non">Partial </br>
-											<input name="FeatureActive Development" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Active Development"> <input type="radio" name="FeatureActive Development" value="oui">Yes <input type="radio" name="FeatureActive Development" value = "non">No <input type="radio" name="FeatureActive Development" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Active Development"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Active Development','id2Active Development');">Changer type</button> </br>								
 								</br>	
 								<label>Assembler : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Open source :</label></br>
-								<input type="radio" name="FeatureOpen source" value="oui">Yes <input type="radio" name="FeatureOpen source" value = "non">No <input type="radio" name="FeatureOpen source" value = "non">Partial </br>
-											<input name="FeatureOpen source" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Open source"> <input type="radio" name="FeatureOpen source" value="oui">Yes <input type="radio" name="FeatureOpen source" value = "non">No <input type="radio" name="FeatureOpen source" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Open source"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Open source','id2Open source');">Changer type</button> </br>								
 								</br>	
 								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>OS :</label></br>
+									  <p id="id1OS">
 											<input type="checkbox" name="Feature" >Windows</br>	
 											<input type="checkbox" name="Feature" >Linux</br>	
 											<input type="checkbox" name="Feature" >Unix-like</br>	
@@ -62,11 +65,15 @@
 											<input type="checkbox" name="Feature" >16-bit part in Linux</br>	
 											<input type="checkbox" name="Feature" >86-DOS</br>	
 											<input type="checkbox" name="Feature" >DOS DEBUG</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2OS"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1OS','id2OS');">Changer type</button></br>
+							
 								</br>	
 								<label>x86-64 :</label></br>
-								<input type="radio" name="Featurex86-64" value="oui">Yes <input type="radio" name="Featurex86-64" value = "non">No <input type="radio" name="Featurex86-64" value = "non">Partial </br>
-											<input name="Featurex86-64" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1x86-64"> <input type="radio" name="Featurex86-64" value="oui">Yes <input type="radio" name="Featurex86-64" value = "non">No <input type="radio" name="Featurex86-64" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2x86-64"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1x86-64','id2x86-64');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

@@ -30,48 +30,58 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>FTP over SSH :</label></br>
-								<input type="radio" name="FeatureFTP over SSH" value="oui">Yes <input type="radio" name="FeatureFTP over SSH" value = "non">No <input type="radio" name="FeatureFTP over SSH" value = "non">Partial </br>
-											<input name="FeatureFTP over SSH" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1FTP over SSH"> <input type="radio" name="FeatureFTP over SSH" value="oui">Yes <input type="radio" name="FeatureFTP over SSH" value = "non">No <input type="radio" name="FeatureFTP over SSH" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2FTP over SSH"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1FTP over SSH','id2FTP over SSH');">Changer type</button> </br>								
 								</br>	
 								<label>DAV / HTTP(S) :</label></br>
-								<input type="radio" name="FeatureDAV / HTTP(S)" value="oui">Yes <input type="radio" name="FeatureDAV / HTTP(S)" value = "non">No <input type="radio" name="FeatureDAV / HTTP(S)" value = "non">Partial </br>
-											<input name="FeatureDAV / HTTP(S)" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1DAV / HTTP(S)"> <input type="radio" name="FeatureDAV / HTTP(S)" value="oui">Yes <input type="radio" name="FeatureDAV / HTTP(S)" value = "non">No <input type="radio" name="FeatureDAV / HTTP(S)" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2DAV / HTTP(S)"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1DAV / HTTP(S)','id2DAV / HTTP(S)');">Changer type</button> </br>								
 								</br>	
 								<label>API / Commandline available :</label></br>
-								<input type="radio" name="FeatureAPI / Commandline available" value="oui">Yes <input type="radio" name="FeatureAPI / Commandline available" value = "non">No <input type="radio" name="FeatureAPI / Commandline available" value = "non">Partial </br>
-											<input name="FeatureAPI / Commandline available" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1API / Commandline available"> <input type="radio" name="FeatureAPI / Commandline available" value="oui">Yes <input type="radio" name="FeatureAPI / Commandline available" value = "non">No <input type="radio" name="FeatureAPI / Commandline available" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2API / Commandline available"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1API / Commandline available','id2API / Commandline available');">Changer type</button> </br>								
 								</br>	
 								<label>FTPS (FTP over SSL) :</label></br>
-								<input type="radio" name="FeatureFTPS (FTP over SSL)" value="oui">Yes <input type="radio" name="FeatureFTPS (FTP over SSL)" value = "non">No <input type="radio" name="FeatureFTPS (FTP over SSL)" value = "non">Partial </br>
-											<input name="FeatureFTPS (FTP over SSL)" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1FTPS (FTP over SSL)"> <input type="radio" name="FeatureFTPS (FTP over SSL)" value="oui">Yes <input type="radio" name="FeatureFTPS (FTP over SSL)" value = "non">No <input type="radio" name="FeatureFTPS (FTP over SSL)" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2FTPS (FTP over SSL)"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1FTPS (FTP over SSL)','id2FTPS (FTP over SSL)');">Changer type</button> </br>								
 								</br>	
 								<label>Remote Compression :</label></br>
-								<input type="radio" name="FeatureRemote Compression" value="oui">Yes <input type="radio" name="FeatureRemote Compression" value = "non">No <input type="radio" name="FeatureRemote Compression" value = "non">Partial </br>
-											<input name="FeatureRemote Compression" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Remote Compression"> <input type="radio" name="FeatureRemote Compression" value="oui">Yes <input type="radio" name="FeatureRemote Compression" value = "non">No <input type="radio" name="FeatureRemote Compression" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Remote Compression"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Remote Compression','id2Remote Compression');">Changer type</button> </br>								
 								</br>	
 								<label>FTP :</label></br>
-								<input type="radio" name="FeatureFTP" value="oui">Yes <input type="radio" name="FeatureFTP" value = "non">No <input type="radio" name="FeatureFTP" value = "non">Partial </br>
-											<input name="FeatureFTP" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1FTP"> <input type="radio" name="FeatureFTP" value="oui">Yes <input type="radio" name="FeatureFTP" value = "non">No <input type="radio" name="FeatureFTP" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2FTP"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1FTP','id2FTP');">Changer type</button> </br>								
 								</br>	
 								<label>Compression :</label></br>
-								<input type="radio" name="FeatureCompression" value="oui">Yes <input type="radio" name="FeatureCompression" value = "non">No <input type="radio" name="FeatureCompression" value = "non">Partial </br>
-											<input name="FeatureCompression" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Compression"> <input type="radio" name="FeatureCompression" value="oui">Yes <input type="radio" name="FeatureCompression" value = "non">No <input type="radio" name="FeatureCompression" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Compression"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Compression','id2Compression');">Changer type</button> </br>								
 								</br>	
 								<label>FXP (Site2site transfer) :</label></br>
-								<input type="radio" name="FeatureFXP (Site2site transfer)" value="oui">Yes <input type="radio" name="FeatureFXP (Site2site transfer)" value = "non">No <input type="radio" name="FeatureFXP (Site2site transfer)" value = "non">Partial </br>
-											<input name="FeatureFXP (Site2site transfer)" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1FXP (Site2site transfer)"> <input type="radio" name="FeatureFXP (Site2site transfer)" value="oui">Yes <input type="radio" name="FeatureFXP (Site2site transfer)" value = "non">No <input type="radio" name="FeatureFXP (Site2site transfer)" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2FXP (Site2site transfer)"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1FXP (Site2site transfer)','id2FXP (Site2site transfer)');">Changer type</button> </br>								
 								</br>	
 								<label>Passive mode : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Resume Download :</label></br>
-								<input type="radio" name="FeatureResume Download" value="oui">Yes <input type="radio" name="FeatureResume Download" value = "non">No <input type="radio" name="FeatureResume Download" value = "non">Partial </br>
-											<input name="FeatureResume Download" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Resume Download"> <input type="radio" name="FeatureResume Download" value="oui">Yes <input type="radio" name="FeatureResume Download" value = "non">No <input type="radio" name="FeatureResume Download" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Resume Download"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Resume Download','id2Resume Download');">Changer type</button> </br>								
 								</br>	
 								<label>Client : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>SFTP :</label></br>
-								<input type="radio" name="FeatureSFTP" value="oui">Yes <input type="radio" name="FeatureSFTP" value = "non">No <input type="radio" name="FeatureSFTP" value = "non">Partial </br>
-											<input name="FeatureSFTP" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1SFTP"> <input type="radio" name="FeatureSFTP" value="oui">Yes <input type="radio" name="FeatureSFTP" value = "non">No <input type="radio" name="FeatureSFTP" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2SFTP"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1SFTP','id2SFTP');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

@@ -38,8 +38,9 @@
 								<label>Creator : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Public source code :</label></br>
-								<input type="radio" name="FeaturePublic source code" value="oui">Yes <input type="radio" name="FeaturePublic source code" value = "non">No <input type="radio" name="FeaturePublic source code" value = "non">Partial </br>
-											<input name="FeaturePublic source code" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Public source code"> <input type="radio" name="FeaturePublic source code" value="oui">Yes <input type="radio" name="FeaturePublic source code" value = "non">No <input type="radio" name="FeaturePublic source code" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Public source code"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Public source code','id2Public source code');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

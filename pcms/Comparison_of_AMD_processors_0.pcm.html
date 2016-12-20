@@ -32,6 +32,7 @@
 								<label>Family : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Supported Features :</label></br>
+									  <p id="id1Supported Features">
 											<input type="checkbox" name="Feature" >MMX</br>	
 											<input type="checkbox" name="Feature" >SSE</br>	
 											<input type="checkbox" name="Feature" >SSE2</br>	
@@ -57,20 +58,21 @@
 											<input type="checkbox" name="Feature" >XOP</br>	
 											<input type="checkbox" name="Feature" >FMA4</br>	
 											<input type="checkbox" name="Feature" >CVT16</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Supported Features"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Supported Features','id2Supported Features');">Changer type</button></br>
+							
 								</br>	
 								<label>Socket : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Process (nm) : </label></br> <input style="display:block;" id="id1Process (nm)" type="number" name="Feature">
 												<input style="display:none;" id="id2Process (nm)" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Process (nm)','id2Process (nm)');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Process (nm)','id2Process (nm)');">Changer type</button></br>								</br>	
 								<label>Code Name : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Cache (KiB) - L2 : </label></br> <input style="display:block;" id="id1Cache (KiB) - L2" type="number" name="Feature">
 												<input style="display:none;" id="id2Cache (KiB) - L2" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Cache (KiB) - L2','id2Cache (KiB) - L2');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Cache (KiB) - L2','id2Cache (KiB) - L2');">Changer type</button></br>								</br>	
 								<label>Cache (KiB) - L1 : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Cache (KiB) - L3 : </label></br> <input id="4" type="text" name="Feature"></br>
@@ -79,16 +81,14 @@
 								</br>	
 								<label>FSB/HT(MHz) : </label></br> <input style="display:block;" id="id1FSB/HT(MHz)" type="number" name="Feature">
 												<input style="display:none;" id="id2FSB/HT(MHz)" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1FSB/HT(MHz)','id2FSB/HT(MHz)');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1FSB/HT(MHz)','id2FSB/HT(MHz)');">Changer type</button></br>								</br>	
 								<label>Speed (MHz) : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
 								<label>Architecture : </label></br> <input id="7" type="text" name="Feature"></br>
 								</br>	
 								<label>Cores : </label></br> <input style="display:block;" id="id1Cores" type="number" name="Feature">
 												<input style="display:none;" id="id2Cores" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Cores','id2Cores');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Cores','id2Cores');">Changer type</button></br>								</br>	
 								<label>Model Group : </label></br> <input id="8" type="text" name="Feature"></br>
 								</br>	
 								<label>Products : </label></br> <input id="9" type="text" name="Feature"></br>

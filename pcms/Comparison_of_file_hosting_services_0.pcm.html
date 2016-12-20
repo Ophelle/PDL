@@ -32,6 +32,7 @@
 								<label>File expiration : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Misc. notes :</label></br>
+									  <p id="id1Misc. notes">
 											<input type="checkbox" name="Feature" >Subscription costs US$6</br>	
 											<input type="checkbox" name="Feature" >year</br>	
 											<input type="checkbox" name="Feature" >Unlimited and encrypted peer to peer file sharing application with pause and resume.</br>	
@@ -73,13 +74,18 @@
 											<input type="checkbox" name="Feature" >audit logs</br>	
 											<input type="checkbox" name="Feature" >granular security control</br>	
 											<input type="checkbox" name="Feature" >embedable on website.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Misc. notes"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Misc. notes','id2Misc. notes');">Changer type</button></br>
+							
 								</br>	
 								<label>FTP upload possible? :</label></br>
-								<input type="radio" name="FeatureFTP upload possible?" value="oui">Yes <input type="radio" name="FeatureFTP upload possible?" value = "non">No <input type="radio" name="FeatureFTP upload possible?" value = "non">Partial </br>
-											<input name="FeatureFTP upload possible?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1FTP upload possible?"> <input type="radio" name="FeatureFTP upload possible?" value="oui">Yes <input type="radio" name="FeatureFTP upload possible?" value = "non">No <input type="radio" name="FeatureFTP upload possible?" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2FTP upload possible?"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1FTP upload possible?','id2FTP upload possible?');">Changer type</button> </br>								
 								</br>	
 								<label>Storage size :</label></br>
+									  <p id="id1Storage size">
 											<input type="checkbox" name="Feature" >2 GB free</br>	
 											<input type="checkbox" name="Feature" > 100 GB paid increments</br>	
 											<input type="checkbox" name="Feature" >15 GB free</br>	
@@ -127,36 +133,42 @@
 											<input type="checkbox" name="Feature" >+500 MB for referrals up to 16 GB</br>	
 											<input type="checkbox" name="Feature" >500 GB paid</br>	
 											<input type="checkbox" name="Feature" >5  GB free</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Storage size"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Storage size','id2Storage size');">Changer type</button></br>
+							
 								</br>	
 								<label>Direct access :</label></br>
-								<input type="radio" name="FeatureDirect access" value="oui">Yes <input type="radio" name="FeatureDirect access" value = "non">No <input type="radio" name="FeatureDirect access" value = "non">Partial </br>
-											<input name="FeatureDirect access" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Direct access"> <input type="radio" name="FeatureDirect access" value="oui">Yes <input type="radio" name="FeatureDirect access" value = "non">No <input type="radio" name="FeatureDirect access" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Direct access"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Direct access','id2Direct access');">Changer type</button> </br>								
 								</br>	
 								<label>Traffic or bandwidth limit : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>File versioning :</label></br>
-								<input type="radio" name="FeatureFile versioning" value="oui">Yes <input type="radio" name="FeatureFile versioning" value = "non">No <input type="radio" name="FeatureFile versioning" value = "non">Partial </br>
-											<input name="FeatureFile versioning" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1File versioning"> <input type="radio" name="FeatureFile versioning" value="oui">Yes <input type="radio" name="FeatureFile versioning" value = "non">No <input type="radio" name="FeatureFile versioning" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2File versioning"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1File versioning','id2File versioning');">Changer type</button> </br>								
 								</br>	
 								<label>Max. file size : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Follows symlinks : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Remote upload? :</label></br>
-								<input type="radio" name="FeatureRemote upload?" value="oui">Yes <input type="radio" name="FeatureRemote upload?" value = "non">No <input type="radio" name="FeatureRemote upload?" value = "non">Partial </br>
-											<input name="FeatureRemote upload?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Remote upload?"> <input type="radio" name="FeatureRemote upload?" value="oui">Yes <input type="radio" name="FeatureRemote upload?" value = "non">No <input type="radio" name="FeatureRemote upload?" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Remote upload?"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Remote upload?','id2Remote upload?');">Changer type</button> </br>								
 								</br>	
 								<label>Developer API? :</label></br>
-								<input type="radio" name="FeatureDeveloper API?" value="oui">Yes <input type="radio" name="FeatureDeveloper API?" value = "non">No <input type="radio" name="FeatureDeveloper API?" value = "non">Partial </br>
-											<input name="FeatureDeveloper API?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Developer API?"> <input type="radio" name="FeatureDeveloper API?" value="oui">Yes <input type="radio" name="FeatureDeveloper API?" value = "non">No <input type="radio" name="FeatureDeveloper API?" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Developer API?"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Developer API?','id2Developer API?');">Changer type</button> </br>								
 								</br>	
 								<label>Client-side encryption : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Free GB (number only) : </label></br> <input style="display:block;" id="id1Free GB (number only)" type="number" name="Feature">
 												<input style="display:none;" id="id2Free GB (number only)" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Free GB (number only)','id2Free GB (number only)');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Free GB (number only)','id2Free GB (number only)');">Changer type</button></br>								</br>	
 								<label>Web host : </label></br> <input id="5" type="text" name="Feature"></br>
 						<script>
 								$("#0").typeahead({

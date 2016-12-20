@@ -36,8 +36,9 @@
 								<label>Cost (USD) : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Windows :</label></br>
-								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
-											<input name="FeatureWindows" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Windows"> <input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Windows"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Windows','id2Windows');">Changer type</button> </br>								
 								</br>	
 								<label>Latest stable date (version) : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
@@ -46,21 +47,23 @@
 								<label>Framework : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>Open source :</label></br>
-								<input type="radio" name="FeatureOpen source" value="oui">Yes <input type="radio" name="FeatureOpen source" value = "non">No <input type="radio" name="FeatureOpen source" value = "non">Partial </br>
-											<input name="FeatureOpen source" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Open source"> <input type="radio" name="FeatureOpen source" value="oui">Yes <input type="radio" name="FeatureOpen source" value = "non">No <input type="radio" name="FeatureOpen source" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Open source"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Open source','id2Open source');">Changer type</button> </br>								
 								</br>	
 								<label>Mac OS X :</label></br>
-								<input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </br>
-											<input name="FeatureMac OS X" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Mac OS X"> <input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Mac OS X"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Mac OS X','id2Mac OS X');">Changer type</button> </br>								
 								</br>	
 								<label>Linux :</label></br>
-								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
-											<input name="FeatureLinux" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Linux"> <input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Linux"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Linux','id2Linux');">Changer type</button> </br>								
 								</br>	
 								<label>First public release : </label></br> <input style="display:block;" id="id1First public release" type="number" name="Feature">
 												<input style="display:none;" id="id2First public release" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First public release','id2First public release');">Changer type</button></br>								
-						<script>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First public release','id2First public release');">Changer type</button></br>						<script>
 								$("#0").typeahead({
 									name:"list0",
 									local : ['ilSFV','DeepDigest','HashCheck','Checksum Compare','SafeFileManager','CHK','MD5 & SHA Checksum Utility','MD5 Win Verifier','TeraCopy','FCIV','RekSFV','WinHasher','MD5summer','Fsum Frontend','CDCheck','cfv','Febooti Hash & CRC','AccuHash','FileVerifier++','SFV Checker','Cobynsoft`s Hash Calculator','HashCalc','sha1sum','md5deep (and HashDeep)','Get-FileHash','RapidCRC','jHashCalc','Jacksum','RHash','QuickSFV','BeaverSFV','wxChecksums','DySFV','SuperSFV','FSUM','IntactFile','Software','cksum','md5sum','Toolsley Hash & Validate','Data Digester','FastSum','MD5 File Hasher','eXpress CheckSum Calculator','jdigest','ExactFile','FlashSFV','']

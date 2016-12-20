@@ -30,18 +30,21 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Downloadable without paying? :</label></br>
-								<input type="radio" name="FeatureDownloadable without paying?" value="oui">Yes <input type="radio" name="FeatureDownloadable without paying?" value = "non">No <input type="radio" name="FeatureDownloadable without paying?" value = "non">Partial </br>
-											<input name="FeatureDownloadable without paying?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Downloadable without paying?"> <input type="radio" name="FeatureDownloadable without paying?" value="oui">Yes <input type="radio" name="FeatureDownloadable without paying?" value = "non">No <input type="radio" name="FeatureDownloadable without paying?" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Downloadable without paying?"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Downloadable without paying?','id2Downloadable without paying?');">Changer type</button> </br>								
 								</br>	
 								<label>Latest stable version : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Mac OS X :</label></br>
-								<input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </br>
-											<input name="FeatureMac OS X" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Mac OS X"> <input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Mac OS X"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Mac OS X','id2Mac OS X');">Changer type</button> </br>								
 								</br>	
 								<label>Windows :</label></br>
-								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
-											<input name="FeatureWindows" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Windows"> <input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Windows"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Windows','id2Windows');">Changer type</button> </br>								
 								</br>	
 								<label>Manager : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
@@ -52,8 +55,9 @@
 								<label>First public release date : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Linux :</label></br>
-								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
-											<input name="FeatureLinux" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Linux"> <input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Linux"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Linux','id2Linux');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

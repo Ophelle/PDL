@@ -33,32 +33,32 @@
 								</br>	
 								<label>Memory - Bus width (bit) : </label></br> <input style="display:block;" id="id1Memory - Bus width (bit)" type="number" name="Feature">
 												<input style="display:none;" id="id2Memory - Bus width (bit)" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Memory - Bus width (bit)','id2Memory - Bus width (bit)');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Memory - Bus width (bit)','id2Memory - Bus width (bit)');">Changer type</button></br>								</br>	
 								<label>Memory - Bus type : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Bus interface :</label></br>
+									  <p id="id1Bus interface">
 											<input type="checkbox" name="Feature" >PC</br>	
 											<input type="checkbox" name="Feature" >XT</br>	
 											<input type="checkbox" name="Feature" >ISA</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Bus interface"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Bus interface','id2Bus interface');">Changer type</button></br>
+							
 								</br>	
 								<label>Launch : </label></br> <input style="display:block;" id="id1Launch" type="number" name="Feature">
 												<input style="display:none;" id="id2Launch" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Launch','id2Launch');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Launch','id2Launch');">Changer type</button></br>								</br>	
 								<label>Model : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>API compliance : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Memory (KB) : </label></br> <input style="display:block;" id="id1Memory (KB)" type="number" name="Feature">
 												<input style="display:none;" id="id2Memory (KB)" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Memory (KB)','id2Memory (KB)');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Memory (KB)','id2Memory (KB)');">Changer type</button></br>								</br>	
 								<label>Fab (µm) : </label></br> <input style="display:block;" id="id1Fab (µm)" type="number" name="Feature">
 												<input style="display:none;" id="id2Fab (µm)" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fab (µm)','id2Fab (µm)');">Changer type</button></br>								
-						<script>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fab (µm)','id2Fab (µm)');">Changer type</button></br>						<script>
 								$("#0").typeahead({
 									name:"list0",
 									local : ['1:1','']

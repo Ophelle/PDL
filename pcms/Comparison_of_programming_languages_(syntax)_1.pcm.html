@@ -32,6 +32,7 @@
 								<label>Symbol : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Languages :</label></br>
+									  <p id="id1Languages">
 											<input type="checkbox" name="Feature" >TeX</br>	
 											<input type="checkbox" name="Feature" >Prolog</br>	
 											<input type="checkbox" name="Feature" >MATLAB</br>	
@@ -96,7 +97,10 @@
 											<input type="checkbox" name="Feature" >Rebol</br>	
 											<input type="checkbox" name="Feature" >Scheme</br>	
 											<input type="checkbox" name="Feature" >many assemblers</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Languages"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Languages','id2Languages');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

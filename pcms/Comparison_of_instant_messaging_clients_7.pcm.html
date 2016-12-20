@@ -34,8 +34,9 @@
 								<label>OTR : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Encryption :</label></br>
-								<input type="radio" name="FeatureEncryption" value="oui">Yes <input type="radio" name="FeatureEncryption" value = "non">No <input type="radio" name="FeatureEncryption" value = "non">Partial </br>
-											<input name="FeatureEncryption" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Encryption"> <input type="radio" name="FeatureEncryption" value="oui">Yes <input type="radio" name="FeatureEncryption" value = "non">No <input type="radio" name="FeatureEncryption" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Encryption"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Encryption','id2Encryption');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

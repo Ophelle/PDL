@@ -31,19 +31,20 @@
 								</br>	
 								<label>Introduced in : </label></br> <input style="display:block;" id="id1Introduced in" type="number" name="Feature">
 												<input style="display:none;" id="id2Introduced in" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Introduced in','id2Introduced in');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Introduced in','id2Introduced in');">Changer type</button></br>								</br>	
 								<label>Recovery record :</label></br>
-								<input type="radio" name="FeatureRecovery record" value="oui">Yes <input type="radio" name="FeatureRecovery record" value = "non">No <input type="radio" name="FeatureRecovery record" value = "non">Partial </br>
-											<input name="FeatureRecovery record" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Recovery record"> <input type="radio" name="FeatureRecovery record" value="oui">Yes <input type="radio" name="FeatureRecovery record" value = "non">No <input type="radio" name="FeatureRecovery record" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Recovery record"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Recovery record','id2Recovery record');">Changer type</button> </br>								
 								</br>	
 								<label>Filename extension : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Created by : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Encryption supported :</label></br>
-								<input type="radio" name="FeatureEncryption supported" value="oui">Yes <input type="radio" name="FeatureEncryption supported" value = "non">No <input type="radio" name="FeatureEncryption supported" value = "non">Partial </br>
-											<input name="FeatureEncryption supported" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Encryption supported"> <input type="radio" name="FeatureEncryption supported" value="oui">Yes <input type="radio" name="FeatureEncryption supported" value = "non">No <input type="radio" name="FeatureEncryption supported" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Encryption supported"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Encryption supported','id2Encryption supported');">Changer type</button> </br>								
 								</br>	
 								<label>Format : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
@@ -52,12 +53,14 @@
 								<label>Modification date resolution : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Unicode filenames :</label></br>
-								<input type="radio" name="FeatureUnicode filenames" value="oui">Yes <input type="radio" name="FeatureUnicode filenames" value = "non">No <input type="radio" name="FeatureUnicode filenames" value = "non">Partial </br>
-											<input name="FeatureUnicode filenames" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Unicode filenames"> <input type="radio" name="FeatureUnicode filenames" value="oui">Yes <input type="radio" name="FeatureUnicode filenames" value = "non">No <input type="radio" name="FeatureUnicode filenames" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Unicode filenames"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Unicode filenames','id2Unicode filenames');">Changer type</button> </br>								
 								</br>	
 								<label>Integrity check :</label></br>
-								<input type="radio" name="FeatureIntegrity check" value="oui">Yes <input type="radio" name="FeatureIntegrity check" value = "non">No <input type="radio" name="FeatureIntegrity check" value = "non">Partial </br>
-											<input name="FeatureIntegrity check" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Integrity check"> <input type="radio" name="FeatureIntegrity check" value="oui">Yes <input type="radio" name="FeatureIntegrity check" value = "non">No <input type="radio" name="FeatureIntegrity check" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Integrity check"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Integrity check','id2Integrity check');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

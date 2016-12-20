@@ -30,6 +30,7 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Supported Devices :</label></br>
+									  <p id="id1Supported Devices">
 											<input type="checkbox" name="Feature" >Pocket Neurobics</br>	
 											<input type="checkbox" name="Feature" >BrainQuiry</br>	
 											<input type="checkbox" name="Feature" >NeuroAmp</br>	
@@ -69,7 +70,10 @@
 											<input type="checkbox" name="Feature" >NeuroAmp plus add-ons: NeuroAmp x23</br>	
 											<input type="checkbox" name="Feature" >pIRx3</br>	
 											<input type="checkbox" name="Feature" >tactile feedback</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Supported Devices"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Supported Devices','id2Supported Devices');">Changer type</button></br>
+							
 								</br>	
 								<label>Software : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
@@ -80,15 +84,15 @@
 								<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>FDA cleared :</label></br>
-								<input type="radio" name="FeatureFDA cleared" value="oui">Yes <input type="radio" name="FeatureFDA cleared" value = "non">No <input type="radio" name="FeatureFDA cleared" value = "non">Partial </br>
-											<input name="FeatureFDA cleared" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1FDA cleared"> <input type="radio" name="FeatureFDA cleared" value="oui">Yes <input type="radio" name="FeatureFDA cleared" value = "non">No <input type="radio" name="FeatureFDA cleared" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2FDA cleared"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1FDA cleared','id2FDA cleared');">Changer type</button> </br>								
 								</br>	
 								<label>Type : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Version : </label></br> <input style="display:block;" id="id1Version" type="number" name="Feature">
 												<input style="display:none;" id="id2Version" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Version','id2Version');">Changer type</button></br>								
-						<script>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Version','id2Version');">Changer type</button></br>						<script>
 								$("#0").typeahead({
 									name:"list0",
 									local : ['Brainathalon','SmartMind','ElectricGuru','NeuroRT Suite','NeuroServer','MindReflector','BioGraph Infiniti','Cygnet','Dual Drive Pro','EventIDE','Mind WorkStation','BrainPaint','OpenViBE','BrainBay','NeurOptimal','EEGer4','BioEra','BioTrace+','eBioo','BrainFeedback Pro','BioExplorer','BrainMaster','BWView','']

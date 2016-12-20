@@ -30,14 +30,16 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Eclipse w/ AonixADT :</label></br>
-								<input type="radio" name="FeatureEclipse w/ AonixADT" value="oui">Yes <input type="radio" name="FeatureEclipse w/ AonixADT" value = "non">No <input type="radio" name="FeatureEclipse w/ AonixADT" value = "non">Partial </br>
-											<input name="FeatureEclipse w/ AonixADT" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Eclipse w/ AonixADT"> <input type="radio" name="FeatureEclipse w/ AonixADT" value="oui">Yes <input type="radio" name="FeatureEclipse w/ AonixADT" value = "non">No <input type="radio" name="FeatureEclipse w/ AonixADT" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Eclipse w/ AonixADT"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Eclipse w/ AonixADT','id2Eclipse w/ AonixADT');">Changer type</button> </br>								
 								</br>	
 								<label>IDE : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>GNAT Programming Studio :</label></br>
-								<input type="radio" name="FeatureGNAT Programming Studio" value="oui">Yes <input type="radio" name="FeatureGNAT Programming Studio" value = "non">No <input type="radio" name="FeatureGNAT Programming Studio" value = "non">Partial </br>
-											<input name="FeatureGNAT Programming Studio" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1GNAT Programming Studio"> <input type="radio" name="FeatureGNAT Programming Studio" value="oui">Yes <input type="radio" name="FeatureGNAT Programming Studio" value = "non">No <input type="radio" name="FeatureGNAT Programming Studio" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2GNAT Programming Studio"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1GNAT Programming Studio','id2GNAT Programming Studio');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

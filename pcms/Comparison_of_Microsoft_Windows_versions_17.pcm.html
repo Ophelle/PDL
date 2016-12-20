@@ -30,29 +30,42 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Resource access control :</label></br>
+									  <p id="id1Resource access control">
 											<input type="checkbox" name="Feature" >ACLs</br>	
 											<input type="checkbox" name="Feature" >Privilege</br>	
 											<input type="checkbox" name="Feature" >RBAC</br>	
 											<input type="checkbox" name="Feature" >Privileges</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Resource access control"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Resource access control','id2Resource access control');">Changer type</button></br>
+							
 								</br>	
 								<label>Subsystem isolation mechanisms :</label></br>
+									  <p id="id1Subsystem isolation mechanisms">
 											<input type="checkbox" name="Feature" >Win32 WindowStation</br>	
 											<input type="checkbox" name="Feature" >Desktop</br>	
 											<input type="checkbox" name="Feature" >Job objects</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Subsystem isolation mechanisms"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Subsystem isolation mechanisms','id2Subsystem isolation mechanisms');">Changer type</button></br>
+							
 								</br>	
 								<label>Integrated firewall :</label></br>
+									  <p id="id1Integrated firewall">
 											<input type="checkbox" name="Feature" >Windows Firewall</br>	
 											<input type="checkbox" name="Feature" >TCP</br>	
 											<input type="checkbox" name="Feature" >IP Filtering</br>	
 											<input type="checkbox" name="Feature" >IPSec</br>	
 											<input type="checkbox" name="Feature" >Windows Firewall (from SP2)</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Integrated firewall"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Integrated firewall','id2Integrated firewall');">Changer type</button></br>
+							
 								</br>	
 								<label>Encrypted file systems :</label></br>
-								<input type="radio" name="FeatureEncrypted file systems" value="oui">Yes <input type="radio" name="FeatureEncrypted file systems" value = "non">No <input type="radio" name="FeatureEncrypted file systems" value = "non">Partial </br>
-											<input name="FeatureEncrypted file systems" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Encrypted file systems"> <input type="radio" name="FeatureEncrypted file systems" value="oui">Yes <input type="radio" name="FeatureEncrypted file systems" value = "non">No <input type="radio" name="FeatureEncrypted file systems" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Encrypted file systems"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Encrypted file systems','id2Encrypted file systems');">Changer type</button> </br>								
 						<script>
 						</script>
 						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />

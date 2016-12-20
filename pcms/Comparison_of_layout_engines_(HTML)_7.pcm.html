@@ -32,8 +32,9 @@
 								<label>3.4.2groupnote - 1.0 : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>1.0 - Yes :</label></br>
-								<input type="radio" name="Feature1.0 - Yes" value="oui">Yes <input type="radio" name="Feature1.0 - Yes" value = "non">No <input type="radio" name="Feature1.0 - Yes" value = "non">Partial </br>
-											<input name="Feature1.0 - Yes" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id11.0 - Yes"> <input type="radio" name="Feature1.0 - Yes" value="oui">Yes <input type="radio" name="Feature1.0 - Yes" value = "non">No <input type="radio" name="Feature1.0 - Yes" value = "non">Partial </p>
+											<input  style="display:none;" id ="id21.0 - Yes"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id11.0 - Yes','id21.0 - Yes');">Changer type</button> </br>								
 								</br>	
 								<label>Basic structure : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
@@ -42,8 +43,12 @@
 								<label>List boxes (combo boxes) : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Form controls and labels :</label></br>
+									  <p id="id1Form controls and labels">
 											<input type="checkbox" name="Feature" >Form controls and labels</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Form controls and labels"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Form controls and labels','id2Form controls and labels');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

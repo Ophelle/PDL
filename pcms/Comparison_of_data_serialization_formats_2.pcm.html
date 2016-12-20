@@ -36,6 +36,7 @@
 								<label>Binn : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>MessagePack :</label></br>
+									  <p id="id1MessagePack">
 											<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE single</br>	
 											<input type="checkbox" name="Feature" >double</br>	
 											<input type="checkbox" name="Feature" >As "fixmap" (single-byte prefix + up to 15 key-value pairs) ortypecode (one byte) + 2-4 bytes length + key-value pairs</br>	
@@ -46,13 +47,17 @@
 											<input type="checkbox" name="Feature" >Typecode + up to 15 bytesortypecode + length as uint8</br>	
 											<input type="checkbox" name="Feature" >32 + bytes;encoding is unspecified</br>	
 											<input type="checkbox" name="Feature" >As "fixarray" (single-byte prefix + up to 15 array items) ortypecode (one byte) + 2-4 bytes length + array items</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2MessagePack"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1MessagePack','id2MessagePack');">Changer type</button></br>
+							
 								</br>	
 								<label>Thrift : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Protocol Buffers : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Smile :</label></br>
+									  <p id="id1Smile">
 											<input type="checkbox" name="Feature" >Arbitrary-length key</br>	
 											<input type="checkbox" name="Feature" >value pairs with end-marker</br>	
 											<input type="checkbox" name="Feature" >Single byte "small" (values -16..15 encoded using \xc0 - \xdf)</br>	
@@ -63,9 +68,13 @@
 											<input type="checkbox" name="Feature" >IEEE single</br>	
 											<input type="checkbox" name="Feature" >double</br>	
 											<input type="checkbox" name="Feature" >BigDecimal</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Smile"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Smile','id2Smile');">Changer type</button></br>
+							
 								</br>	
 								<label>Concise Binary Object Representation (CBOR) :</label></br>
+									  <p id="id1Concise Binary Object Representation (CBOR)">
 											<input type="checkbox" name="Feature" >Typecode with count (like integer coding) and items</br>	
 											<input type="checkbox" name="Feature" >Typecode (one byte) + IEEE half</br>	
 											<input type="checkbox" name="Feature" >single</br>	
@@ -78,27 +87,37 @@
 											<input type="checkbox" name="Feature" >negative \x3A64bit: positive \x1B</br>	
 											<input type="checkbox" name="Feature" >negative \x3BNegative number x encoded as ~x (binary inversion) or as (-x-1)Byte order - Big-endian</br>	
 											<input type="checkbox" name="Feature" >Typecode with length (like integer coding) and content.Bytestring and UTF-8 have different typecode</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Concise Binary Object Representation (CBOR)"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Concise Binary Object Representation (CBOR)','id2Concise Binary Object Representation (CBOR)');">Changer type</button></br>
+							
 								</br>	
 								<label>Netstring : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>OGDL Binary : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
 								<label>ASN.1(BER, PER or OER encoding) :</label></br>
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input  style="display:none;" id ="id2ASN.1(BER, PER or OER encoding)"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1ASN.1(BER, PER or OER encoding)','id2ASN.1(BER, PER or OER encoding)');">Changer type</button></br>
+							
 								</br>	
 								<label>Structured Data eXchange Formats (SDXF) :</label></br>
+									  <p id="id1Structured Data eXchange Formats (SDXF)">
 											<input type="checkbox" name="Feature" >list of elements with identical ID and size</br>	
 											<input type="checkbox" name="Feature" >preceded by array header with int16 length</br>	
 											<input type="checkbox" name="Feature" >either UTF-8 or ISO 8859-1 encoded</br>	
 											<input type="checkbox" name="Feature" >big-endian signed 24bit or 32bit integer</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Structured Data eXchange Formats (SDXF)"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Structured Data eXchange Formats (SDXF)','id2Structured Data eXchange Formats (SDXF)');">Changer type</button></br>
+							
 								</br>	
 								<label>Format : </label></br> <input id="7" type="text" name="Feature"></br>
 								</br>	
 								<label>BSON : </label></br> <input id="8" type="text" name="Feature"></br>
 								</br>	
 								<label>Sereal :</label></br>
+									  <p id="id1Sereal">
 											<input type="checkbox" name="Feature" >As "SHORT_BINARY" (single-byte prefix + up to 31 raw bytes) ortypecode (one byte</br>	
 											<input type="checkbox" name="Feature" >including boolean UTF8-encoding flag) + "varint" encoded length + raw bytes</br>	
 											<input type="checkbox" name="Feature" >As "ARRAYREF" (single-byte prefix + up to 15 array items) ortypecode (one byte) + "varint" encoded length + array items</br>	
@@ -109,7 +128,10 @@
 											<input type="checkbox" name="Feature" >quad</br>	
 											<input type="checkbox" name="Feature" >Single byte POS</br>	
 											<input type="checkbox" name="Feature" >NEG (values -16..15) ortypecode (one byte) + "varint" encoded variable length integerortypecode (one byte) + "zigzag" encoded variable length integer</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Sereal"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Sereal','id2Sereal');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

@@ -34,13 +34,17 @@
 								<label>Spanish : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Meaning and description :</label></br>
+									  <p id="id1Meaning and description">
 											<input type="checkbox" name="Feature" >'himself' </br>	
 											<input type="checkbox" name="Feature" >'herself' </br>	
 											<input type="checkbox" name="Feature" >'itself' </br>	
 											<input type="checkbox" name="Feature" >'themselves'  (stressed reflexive pronoun</br>	
 											<input type="checkbox" name="Feature" >object of preposition)</br>	
 											<input type="checkbox" name="Feature" >'themselves'  (unstressed reflexive pronoun)</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Meaning and description"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Meaning and description','id2Meaning and description');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

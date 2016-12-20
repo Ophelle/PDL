@@ -37,13 +37,13 @@
 								</br>	
 								<label>S No. : </label></br> <input style="display:block;" id="id1S No." type="number" name="Feature">
 												<input style="display:none;" id="id2S No." type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1S No.','id2S No.');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1S No.','id2S No.');">Changer type</button></br>								</br>	
 								<label>Warhead/Payload : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Operator : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Missile mass :</label></br>
+									  <p id="id1Missile mass">
 											<input type="checkbox" name="Feature" >211</br>	
 											<input type="checkbox" name="Feature" >100 kg</br>	
 											<input type="checkbox" name="Feature" >42</br>	
@@ -87,17 +87,20 @@
 											<input type="checkbox" name="Feature" >183</br>	
 											<input type="checkbox" name="Feature" >79</br>	
 											<input type="checkbox" name="Feature" >189 kg</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Missile mass"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Missile mass','id2Missile mass');">Changer type</button></br>
+							
 								</br>	
 								<label>Accuracy (CEP) : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>First flight : </label></br> <input style="display:block;" id="id1First flight" type="number" name="Feature">
 												<input style="display:none;" id="id2First flight" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First flight','id2First flight');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First flight','id2First flight');">Changer type</button></br>								</br>	
 								<label>Manufacturer : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
 								<label>Max Range :</label></br>
+									  <p id="id1Max Range">
 											<input type="checkbox" name="Feature" >6</br>	
 											<input type="checkbox" name="Feature" >000 km(Speculated)</br>	
 											<input type="checkbox" name="Feature" >10</br>	
@@ -128,11 +131,15 @@
 											<input type="checkbox" name="Feature" >14</br>	
 											<input type="checkbox" name="Feature" >13</br>	
 											<input type="checkbox" name="Feature" >700 km</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Max Range"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Max Range','id2Max Range');">Changer type</button></br>
+							
 								</br>	
 								<label>MIRV :</label></br>
-								<input type="radio" name="FeatureMIRV" value="oui">Yes <input type="radio" name="FeatureMIRV" value = "non">No <input type="radio" name="FeatureMIRV" value = "non">Partial </br>
-											<input name="FeatureMIRV" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1MIRV"> <input type="radio" name="FeatureMIRV" value="oui">Yes <input type="radio" name="FeatureMIRV" value = "non">No <input type="radio" name="FeatureMIRV" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2MIRV"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1MIRV','id2MIRV');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

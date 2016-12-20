@@ -32,16 +32,19 @@
 								<label>Kernel name : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Linux :</label></br>
-								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
-											<input name="FeatureLinux" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Linux"> <input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Linux"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Linux','id2Linux');">Changer type</button> </br>								
 								</br>	
 								<label>Windows NT kernel :</label></br>
-								<input type="radio" name="FeatureWindows NT kernel" value="oui">Yes <input type="radio" name="FeatureWindows NT kernel" value = "non">No <input type="radio" name="FeatureWindows NT kernel" value = "non">Partial </br>
-											<input name="FeatureWindows NT kernel" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Windows NT kernel"> <input type="radio" name="FeatureWindows NT kernel" value="oui">Yes <input type="radio" name="FeatureWindows NT kernel" value = "non">No <input type="radio" name="FeatureWindows NT kernel" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Windows NT kernel"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Windows NT kernel','id2Windows NT kernel');">Changer type</button> </br>								
 								</br>	
 								<label>FreeBSD kernel :</label></br>
-								<input type="radio" name="FeatureFreeBSD kernel" value="oui">Yes <input type="radio" name="FeatureFreeBSD kernel" value = "non">No <input type="radio" name="FeatureFreeBSD kernel" value = "non">Partial </br>
-											<input name="FeatureFreeBSD kernel" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1FreeBSD kernel"> <input type="radio" name="FeatureFreeBSD kernel" value="oui">Yes <input type="radio" name="FeatureFreeBSD kernel" value = "non">No <input type="radio" name="FeatureFreeBSD kernel" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2FreeBSD kernel"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1FreeBSD kernel','id2FreeBSD kernel');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

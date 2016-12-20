@@ -32,8 +32,12 @@
 								<label>Format: : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Mobipocket :</label></br>
+									  <p id="id1Mobipocket">
 											<input type="checkbox" name="Feature" >.prc; .mobi</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Mobipocket"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Mobipocket','id2Mobipocket');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

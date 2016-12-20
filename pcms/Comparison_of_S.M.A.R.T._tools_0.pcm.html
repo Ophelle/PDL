@@ -30,6 +30,7 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Fixed drives :</label></br>
+									  <p id="id1Fixed drives">
 											<input type="checkbox" name="Feature" >IDE(PATA)</br>	
 											<input type="checkbox" name="Feature" >SATA</br>	
 											<input type="checkbox" name="Feature" >All for Linux</br>	
@@ -38,28 +39,36 @@
 											<input type="checkbox" name="Feature" >SCSI</br>	
 											<input type="checkbox" name="Feature" >SAT; Areca</br>	
 											<input type="checkbox" name="Feature" >3ware</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Fixed drives"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fixed drives','id2Fixed drives');">Changer type</button></br>
+							
 								</br>	
 								<label>RAID support : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Operating system : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Hard driveself-testing :</label></br>
-								<input type="radio" name="FeatureHard driveself-testing" value="oui">Yes <input type="radio" name="FeatureHard driveself-testing" value = "non">No <input type="radio" name="FeatureHard driveself-testing" value = "non">Partial </br>
-											<input name="FeatureHard driveself-testing" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Hard driveself-testing"> <input type="radio" name="FeatureHard driveself-testing" value="oui">Yes <input type="radio" name="FeatureHard driveself-testing" value = "non">No <input type="radio" name="FeatureHard driveself-testing" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Hard driveself-testing"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Hard driveself-testing','id2Hard driveself-testing');">Changer type</button> </br>								
 								</br>	
 								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Notification :</label></br>
-								<input type="radio" name="FeatureNotification" value="oui">Yes <input type="radio" name="FeatureNotification" value = "non">No <input type="radio" name="FeatureNotification" value = "non">Partial </br>
-											<input name="FeatureNotification" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Notification"> <input type="radio" name="FeatureNotification" value="oui">Yes <input type="radio" name="FeatureNotification" value = "non">No <input type="radio" name="FeatureNotification" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Notification"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Notification','id2Notification');">Changer type</button> </br>								
 								</br>	
 								<label>User interface : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>USB, eSATA andremovable drives :</label></br>
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input  style="display:none;" id ="id2USB, eSATA andremovable drives"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1USB, eSATA andremovable drives','id2USB, eSATA andremovable drives');">Changer type</button></br>
+							
 								</br>	
 								<label>Notes :</label></br>
+									  <p id="id1Notes">
 											<input type="checkbox" name="Feature" >Also shows temperature of CPU</br>	
 											<input type="checkbox" name="Feature" >GPU</br>	
 											<input type="checkbox" name="Feature" >CPU core speed</br>	
@@ -73,11 +82,15 @@
 											<input type="checkbox" name="Feature" >Primarily a defragmenter; support basic S.M.A.R.T. stat display</br>	
 											<input type="checkbox" name="Feature" >includes the one-word summary of drive-health.</br>	
 											<input type="checkbox" name="Feature" >allowing the user to use GNOME Disks without any changes to the computer.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Notes"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Notes','id2Notes');">Changer type</button></br>
+							
 								</br>	
 								<label>Shows S.M.A.R.T. attributes :</label></br>
-								<input type="radio" name="FeatureShows S.M.A.R.T. attributes" value="oui">Yes <input type="radio" name="FeatureShows S.M.A.R.T. attributes" value = "non">No <input type="radio" name="FeatureShows S.M.A.R.T. attributes" value = "non">Partial </br>
-											<input name="FeatureShows S.M.A.R.T. attributes" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Shows S.M.A.R.T. attributes"> <input type="radio" name="FeatureShows S.M.A.R.T. attributes" value="oui">Yes <input type="radio" name="FeatureShows S.M.A.R.T. attributes" value = "non">No <input type="radio" name="FeatureShows S.M.A.R.T. attributes" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Shows S.M.A.R.T. attributes"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Shows S.M.A.R.T. attributes','id2Shows S.M.A.R.T. attributes');">Changer type</button> </br>								
 								</br>	
 								<label>Name : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>

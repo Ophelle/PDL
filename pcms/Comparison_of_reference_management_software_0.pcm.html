@@ -36,6 +36,7 @@
 								<label>Software : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Notes :</label></br>
+									  <p id="id1Notes">
 											<input type="checkbox" name="Feature" >web-application</br>	
 											<input type="checkbox" name="Feature" >integrates with Google Docs</br>	
 											<input type="checkbox" name="Feature" >collaboration & sharing features</br>	
@@ -80,15 +81,19 @@
 											<input type="checkbox" name="Feature" >synching</br>	
 											<input type="checkbox" name="Feature" >The web version EndNote Basic (formerly</br>	
 											<input type="checkbox" name="Feature" >EndNote Web) is free of charge</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Notes"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Notes','id2Notes');">Changer type</button></br>
+							
 								</br>	
 								<label>Developer : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Cost (USD) : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Free software :</label></br>
-								<input type="radio" name="FeatureFree software" value="oui">Yes <input type="radio" name="FeatureFree software" value = "non">No <input type="radio" name="FeatureFree software" value = "non">Partial </br>
-											<input name="FeatureFree software" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Free software"> <input type="radio" name="FeatureFree software" value="oui">Yes <input type="radio" name="FeatureFree software" value = "non">No <input type="radio" name="FeatureFree software" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Free software"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Free software','id2Free software');">Changer type</button> </br>								
 								</br>	
 								<label>Latest stable version : </label></br> <input id="5" type="text" name="Feature"></br>
 						<script>

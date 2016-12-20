@@ -32,6 +32,7 @@
 								<label>Manufacturer : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Vacuum thrust (N) :</label></br>
+									  <p id="id1Vacuum thrust (N)">
 											<input type="checkbox" name="Feature" >922</br>	
 											<input type="checkbox" name="Feature" >140</br>	
 											<input type="checkbox" name="Feature" >1</br>	
@@ -98,12 +99,14 @@
 											<input type="checkbox" name="Feature" >480</br>	
 											<input type="checkbox" name="Feature" >279</br>	
 											<input type="checkbox" name="Feature" >521</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Vacuum thrust (N)"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Vacuum thrust (N)','id2Vacuum thrust (N)');">Changer type</button></br>
+							
 								</br>	
 								<label>Specific impulse, vac. (s) : </label></br> <input style="display:block;" id="id1Specific impulse, vac. (s)" type="number" name="Feature">
 												<input style="display:none;" id="id2Specific impulse, vac. (s)" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Specific impulse, vac. (s)','id2Specific impulse, vac. (s)');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Specific impulse, vac. (s)','id2Specific impulse, vac. (s)');">Changer type</button></br>								</br>	
 								<label>Thrust-to-weight ratio : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Status : </label></br> <input id="2" type="text" name="Feature"></br>
@@ -114,11 +117,11 @@
 								</br>	
 								<label>Combustion chamber pressure (bar) : </label></br> <input style="display:block;" id="id1Combustion chamber pressure (bar)" type="number" name="Feature">
 												<input style="display:none;" id="id2Combustion chamber pressure (bar)" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Combustion chamber pressure (bar)','id2Combustion chamber pressure (bar)');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Combustion chamber pressure (bar)','id2Combustion chamber pressure (bar)');">Changer type</button></br>								</br>	
 								<label>Engine : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>Mass (kg) :</label></br>
+									  <p id="id1Mass (kg)">
 											<input type="checkbox" name="Feature" >2</br>	
 											<input type="checkbox" name="Feature" >200</br>	
 											<input type="checkbox" name="Feature" >1</br>	
@@ -154,11 +157,15 @@
 											<input type="checkbox" name="Feature" >824 with fuel</br>	
 											<input type="checkbox" name="Feature" >260</br>	
 											<input type="checkbox" name="Feature" >222</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Mass (kg)"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Mass (kg)','id2Mass (kg)');">Changer type</button></br>
+							
 								</br>	
 								<label>Vehicle : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
 								<label>Propellant :</label></br>
+									  <p id="id1Propellant">
 											<input type="checkbox" name="Feature" >RP-1</br>	
 											<input type="checkbox" name="Feature" >LOX</br>	
 											<input type="checkbox" name="Feature" >LH2</br>	
@@ -169,7 +176,10 @@
 											<input type="checkbox" name="Feature" >Kerosene</br>	
 											<input type="checkbox" name="Feature" >N2O4</br>	
 											<input type="checkbox" name="Feature" >MMH</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Propellant"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Propellant','id2Propellant');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

@@ -34,6 +34,7 @@
 								<label>Original/Primary developer : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Chipset :</label></br>
+									  <p id="id1Chipset">
 											<input type="checkbox" name="Feature" >Ralink RT2700U</br>	
 											<input type="checkbox" name="Feature" >RT2800U</br>	
 											<input type="checkbox" name="Feature" >RT3000U</br>	
@@ -91,13 +92,17 @@
 											<input type="checkbox" name="Feature" >RTL8192SU</br>	
 											<input type="checkbox" name="Feature" >Atheros AR5005UG</br>	
 											<input type="checkbox" name="Feature" >AR5005UX</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Chipset"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Chipset','id2Chipset');">Changer type</button></br>
+							
 								</br>	
 								<label>Driver : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Non-free firmware required :</label></br>
-								<input type="radio" name="FeatureNon-free firmware required" value="oui">Yes <input type="radio" name="FeatureNon-free firmware required" value = "non">No <input type="radio" name="FeatureNon-free firmware required" value = "non">Partial </br>
-											<input name="FeatureNon-free firmware required" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Non-free firmware required"> <input type="radio" name="FeatureNon-free firmware required" value="oui">Yes <input type="radio" name="FeatureNon-free firmware required" value = "non">No <input type="radio" name="FeatureNon-free firmware required" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Non-free firmware required"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Non-free firmware required','id2Non-free firmware required');">Changer type</button> </br>								
 								</br>	
 								<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	

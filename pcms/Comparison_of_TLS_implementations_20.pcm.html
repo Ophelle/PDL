@@ -30,6 +30,7 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Supported operating systems :</label></br>
+									  <p id="id1Supported operating systems">
 											<input type="checkbox" name="Feature" >INTEGRITY</br>	
 											<input type="checkbox" name="Feature" >MQX</br>	
 											<input type="checkbox" name="Feature" >SMX</br>	
@@ -121,16 +122,23 @@
 											<input type="checkbox" name="Feature" >Generally any POSIX platforms or Windows</br>	
 											<input type="checkbox" name="Feature" >commonly tested platforms include GNU</br>	
 											<input type="checkbox" name="Feature" >OpenBSD.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Supported operating systems"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Supported operating systems','id2Supported operating systems');">Changer type</button></br>
+							
 								</br>	
 								<label>Platform requirements : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Network requirements :</label></br>
+									  <p id="id1Network requirements">
 											<input type="checkbox" name="Feature" >POSIX send() and recv(). API to supply your own replacement.</br>	
 											<input type="checkbox" name="Feature" >POSIX read() and write(). API to supply your own replacement.</br>	
 											<input type="checkbox" name="Feature" >NSPR PR_Send() and PR_Recv(). API to supply your own replacement.</br>	
 											<input type="checkbox" name="Feature" >POSIX send() and recv(). API to supply your own replacement</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Network requirements"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Network requirements','id2Network requirements');">Changer type</button></br>
+							
 								</br>	
 								<label>Thread safety : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
@@ -139,12 +147,14 @@
 								<label>Implementation : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Able to cross-compile :</label></br>
-								<input type="radio" name="FeatureAble to cross-compile" value="oui">Yes <input type="radio" name="FeatureAble to cross-compile" value = "non">No <input type="radio" name="FeatureAble to cross-compile" value = "non">Partial </br>
-											<input name="FeatureAble to cross-compile" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Able to cross-compile"> <input type="radio" name="FeatureAble to cross-compile" value="oui">Yes <input type="radio" name="FeatureAble to cross-compile" value = "non">No <input type="radio" name="FeatureAble to cross-compile" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Able to cross-compile"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Able to cross-compile','id2Able to cross-compile');">Changer type</button> </br>								
 								</br>	
 								<label>No OS (bare metal) :</label></br>
-								<input type="radio" name="FeatureNo OS (bare metal)" value="oui">Yes <input type="radio" name="FeatureNo OS (bare metal)" value = "non">No <input type="radio" name="FeatureNo OS (bare metal)" value = "non">Partial </br>
-											<input name="FeatureNo OS (bare metal)" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1No OS (bare metal)"> <input type="radio" name="FeatureNo OS (bare metal)" value="oui">Yes <input type="radio" name="FeatureNo OS (bare metal)" value = "non">No <input type="radio" name="FeatureNo OS (bare metal)" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2No OS (bare metal)"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1No OS (bare metal)','id2No OS (bare metal)');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

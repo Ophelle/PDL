@@ -32,6 +32,7 @@
 								<label>Package : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Database :</label></br>
+									  <p id="id1Database">
 											<input type="checkbox" name="Feature" >PostgreSQL</br>	
 											<input type="checkbox" name="Feature" >MySQL</br>	
 											<input type="checkbox" name="Feature" >SQLite</br>	
@@ -47,12 +48,19 @@
 											<input type="checkbox" name="Feature" >IBM DB2</br>	
 											<input type="checkbox" name="Feature" >Proprietary</br>	
 											<input type="checkbox" name="Feature" >Object Oriented</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Database"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Database','id2Database');">Changer type</button></br>
+							
 								</br>	
 								<label>Development Status :</label></br>
+									  <p id="id1Development Status">
 											<input type="checkbox" name="Feature" >5 - Production </br>	
 											<input type="checkbox" name="Feature" >Stable</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Development Status"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Development Status','id2Development Status');">Changer type</button></br>
+							
 								</br>	
 								<label>Stable release date (YYYY-MM-DD) : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
@@ -61,6 +69,7 @@
 								<label>First public release date (YYYY-MM-DD) : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Supported languages :</label></br>
+									  <p id="id1Supported languages">
 											<input type="checkbox" name="Feature" >+40:English development</br>	
 											<input type="checkbox" name="Feature" >Multilingual (.po files Gettext#Translating )</br>	
 											<input type="checkbox" name="Feature" >English</br>	
@@ -95,7 +104,10 @@
 											<input type="checkbox" name="Feature" >Greek</br>	
 											<input type="checkbox" name="Feature" >Germany</br>	
 											<input type="checkbox" name="Feature" >Indonesia</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Supported languages"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Supported languages','id2Supported languages');">Changer type</button></br>
+							
 								</br>	
 								<label>Programming Language : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>

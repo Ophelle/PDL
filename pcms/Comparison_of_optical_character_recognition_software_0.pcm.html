@@ -30,6 +30,7 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Output Formats :</label></br>
+									  <p id="id1Output Formats">
 											<input type="checkbox" name="Feature" >PDF</br>	
 											<input type="checkbox" name="Feature" >TXT</br>	
 											<input type="checkbox" name="Feature" >For working with localized interfaces</br>	
@@ -74,45 +75,53 @@
 											<input type="checkbox" name="Feature" >DOCX XLS</br>	
 											<input type="checkbox" name="Feature" >XLSX PPTX RTF PDF PDF</br>	
 											<input type="checkbox" name="Feature" >A Searchable PDF HTML Text XML ePUB MP3</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Output Formats"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Output Formats','id2Output Formats');">Changer type</button></br>
+							
 								</br>	
 								<label>Windows :</label></br>
-								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
-											<input name="FeatureWindows" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Windows"> <input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Windows"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Windows','id2Windows');">Changer type</button> </br>								
 								</br>	
 								<label>BSD :</label></br>
-								<input type="radio" name="FeatureBSD" value="oui">Yes <input type="radio" name="FeatureBSD" value = "non">No <input type="radio" name="FeatureBSD" value = "non">Partial </br>
-											<input name="FeatureBSD" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1BSD"> <input type="radio" name="FeatureBSD" value="oui">Yes <input type="radio" name="FeatureBSD" value = "non">No <input type="radio" name="FeatureBSD" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2BSD"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1BSD','id2BSD');">Changer type</button> </br>								
 								</br>	
 								<label>SDK? :</label></br>
-								<input type="radio" name="FeatureSDK?" value="oui">Yes <input type="radio" name="FeatureSDK?" value = "non">No <input type="radio" name="FeatureSDK?" value = "non">Partial </br>
-											<input name="FeatureSDK?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1SDK?"> <input type="radio" name="FeatureSDK?" value="oui">Yes <input type="radio" name="FeatureSDK?" value = "non">No <input type="radio" name="FeatureSDK?" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2SDK?"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1SDK?','id2SDK?');">Changer type</button> </br>								
 								</br>	
 								<label>Online :</label></br>
-								<input type="radio" name="FeatureOnline" value="oui">Yes <input type="radio" name="FeatureOnline" value = "non">No <input type="radio" name="FeatureOnline" value = "non">Partial </br>
-											<input name="FeatureOnline" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Online"> <input type="radio" name="FeatureOnline" value="oui">Yes <input type="radio" name="FeatureOnline" value = "non">No <input type="radio" name="FeatureOnline" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Online"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Online','id2Online');">Changer type</button> </br>								
 								</br>	
 								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Release year : </label></br> <input style="display:block;" id="id1Release year" type="number" name="Feature">
 												<input style="display:none;" id="id2Release year" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Release year','id2Release year');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Release year','id2Release year');">Changer type</button></br>								</br>	
 								<label>Fonts : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Mac OS X :</label></br>
-								<input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </br>
-											<input name="FeatureMac OS X" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Mac OS X"> <input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Mac OS X"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Mac OS X','id2Mac OS X');">Changer type</button> </br>								
 								</br>	
 								<label>Latest stable version : </label></br> <input style="display:block;" id="id1Latest stable version" type="number" name="Feature">
 												<input style="display:none;" id="id2Latest stable version" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Latest stable version','id2Latest stable version');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Latest stable version','id2Latest stable version');">Changer type</button></br>								</br>	
 								<label>Linux :</label></br>
-								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
-											<input name="FeatureLinux" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Linux"> <input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Linux"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Linux','id2Linux');">Changer type</button> </br>								
 								</br>	
 								<label>Programming language :</label></br>
+									  <p id="id1Programming language">
 											<input type="checkbox" name="Feature" >C</br>	
 											<input type="checkbox" name="Feature" >C++</br>	
 											<input type="checkbox" name="Feature" >C#</br>	
@@ -122,14 +131,16 @@
 											<input type="checkbox" name="Feature" >JavaScript</br>	
 											<input type="checkbox" name="Feature" >VB.NET</br>	
 											<input type="checkbox" name="Feature" >Delphi</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Programming language"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Programming language','id2Programming language');">Changer type</button></br>
+							
 								</br>	
 								<label>Notes : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Founded year : </label></br> <input style="display:block;" id="id1Founded year" type="number" name="Feature">
 												<input style="display:none;" id="id2Founded year" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Founded year','id2Founded year');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Founded year','id2Founded year');">Changer type</button></br>								</br>	
 								<label>Languages : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Name : </label></br> <input id="4" type="text" name="Feature"></br>

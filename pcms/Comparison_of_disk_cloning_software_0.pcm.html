@@ -34,14 +34,16 @@
 								<label>Operating system : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Sector by sector :</label></br>
-								<input type="radio" name="FeatureSector by sector" value="oui">Yes <input type="radio" name="FeatureSector by sector" value = "non">No <input type="radio" name="FeatureSector by sector" value = "non">Partial </br>
-											<input name="FeatureSector by sector" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Sector by sector"> <input type="radio" name="FeatureSector by sector" value="oui">Yes <input type="radio" name="FeatureSector by sector" value = "non">No <input type="radio" name="FeatureSector by sector" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Sector by sector"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Sector by sector','id2Sector by sector');">Changer type</button> </br>								
 								</br>	
 								<label>User interface : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Name : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>File by file :</label></br>
+									  <p id="id1File by file">
 											<input type="checkbox" name="Feature" >FAT32</br>	
 											<input type="checkbox" name="Feature" >btrfs</br>	
 											<input type="checkbox" name="Feature" >ext2</br>	
@@ -57,27 +59,35 @@
 											<input type="checkbox" name="Feature" >XFS;UFS (beta)</br>	
 											<input type="checkbox" name="Feature" >HFS (beta)</br>	
 											<input type="checkbox" name="Feature" >NTFS (experimental)</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2File by file"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1File by file','id2File by file');">Changer type</button></br>
+							
 								</br>	
 								<label>Mount or extract :</label></br>
-								<input type="radio" name="FeatureMount or extract" value="oui">Yes <input type="radio" name="FeatureMount or extract" value = "non">No <input type="radio" name="FeatureMount or extract" value = "non">Partial </br>
-											<input name="FeatureMount or extract" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Mount or extract"> <input type="radio" name="FeatureMount or extract" value="oui">Yes <input type="radio" name="FeatureMount or extract" value = "non">No <input type="radio" name="FeatureMount or extract" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Mount or extract"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Mount or extract','id2Mount or extract');">Changer type</button> </br>								
 								</br>	
 								<label>Hot transfer :</label></br>
-								<input type="radio" name="FeatureHot transfer" value="oui">Yes <input type="radio" name="FeatureHot transfer" value = "non">No <input type="radio" name="FeatureHot transfer" value = "non">Partial </br>
-											<input name="FeatureHot transfer" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Hot transfer"> <input type="radio" name="FeatureHot transfer" value="oui">Yes <input type="radio" name="FeatureHot transfer" value = "non">No <input type="radio" name="FeatureHot transfer" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Hot transfer"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Hot transfer','id2Hot transfer');">Changer type</button> </br>								
 								</br>	
 								<label>Operation model - Standalone :</label></br>
-								<input type="radio" name="FeatureOperation model - Standalone" value="oui">Yes <input type="radio" name="FeatureOperation model - Standalone" value = "non">No <input type="radio" name="FeatureOperation model - Standalone" value = "non">Partial </br>
-											<input name="FeatureOperation model - Standalone" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Operation model - Standalone"> <input type="radio" name="FeatureOperation model - Standalone" value="oui">Yes <input type="radio" name="FeatureOperation model - Standalone" value = "non">No <input type="radio" name="FeatureOperation model - Standalone" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Operation model - Standalone"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Operation model - Standalone','id2Operation model - Standalone');">Changer type</button> </br>								
 								</br>	
 								<label>Operation model - Client–server :</label></br>
-								<input type="radio" name="FeatureOperation model - Client–server" value="oui">Yes <input type="radio" name="FeatureOperation model - Client–server" value = "non">No <input type="radio" name="FeatureOperation model - Client–server" value = "non">Partial </br>
-											<input name="FeatureOperation model - Client–server" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Operation model - Client–server"> <input type="radio" name="FeatureOperation model - Client–server" value="oui">Yes <input type="radio" name="FeatureOperation model - Client–server" value = "non">No <input type="radio" name="FeatureOperation model - Client–server" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Operation model - Client–server"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Operation model - Client–server','id2Operation model - Client–server');">Changer type</button> </br>								
 								</br>	
 								<label>Operation model - Offline(From a Live OS) :</label></br>
-								<input type="radio" name="FeatureOperation model - Offline(From a Live OS)" value="oui">Yes <input type="radio" name="FeatureOperation model - Offline(From a Live OS)" value = "non">No <input type="radio" name="FeatureOperation model - Offline(From a Live OS)" value = "non">Partial </br>
-											<input name="FeatureOperation model - Offline(From a Live OS)" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Operation model - Offline(From a Live OS)"> <input type="radio" name="FeatureOperation model - Offline(From a Live OS)" value="oui">Yes <input type="radio" name="FeatureOperation model - Offline(From a Live OS)" value = "non">No <input type="radio" name="FeatureOperation model - Offline(From a Live OS)" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Operation model - Offline(From a Live OS)"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Operation model - Offline(From a Live OS)','id2Operation model - Offline(From a Live OS)');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

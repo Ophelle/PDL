@@ -38,16 +38,19 @@
 								<label>Integration : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Free software :</label></br>
-								<input type="radio" name="FeatureFree software" value="oui">Yes <input type="radio" name="FeatureFree software" value = "non">No <input type="radio" name="FeatureFree software" value = "non">Partial </br>
-											<input name="FeatureFree software" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Free software"> <input type="radio" name="FeatureFree software" value="oui">Yes <input type="radio" name="FeatureFree software" value = "non">No <input type="radio" name="FeatureFree software" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Free software"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Free software','id2Free software');">Changer type</button> </br>								
 								</br>	
 								<label>Free firmware :</label></br>
-								<input type="radio" name="FeatureFree firmware" value="oui">Yes <input type="radio" name="FeatureFree firmware" value = "non">No <input type="radio" name="FeatureFree firmware" value = "non">Partial </br>
-											<input name="FeatureFree firmware" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Free firmware"> <input type="radio" name="FeatureFree firmware" value="oui">Yes <input type="radio" name="FeatureFree firmware" value = "non">No <input type="radio" name="FeatureFree firmware" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Free firmware"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Free firmware','id2Free firmware');">Changer type</button> </br>								
 								</br>	
 								<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Chipset :</label></br>
+									  <p id="id1Chipset">
 											<input type="checkbox" name="Feature" >Broadcom BCM430x</br>	
 											<input type="checkbox" name="Feature" >4318</br>	
 											<input type="checkbox" name="Feature" >Ralink RT2500</br>	
@@ -108,7 +111,10 @@
 											<input type="checkbox" name="Feature" >Raytheon Raylink</br>	
 											<input type="checkbox" name="Feature" >WebGear Aviator IEEE 802.11FH</br>	
 											<input type="checkbox" name="Feature" >Wireless 3945ABG</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Chipset"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Chipset','id2Chipset');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

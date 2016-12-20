@@ -44,6 +44,7 @@
 								<label>Vendor : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
 								<label>Compatibility :</label></br>
+									  <p id="id1Compatibility">
 											<input type="checkbox" name="Feature" >BPEL4WS 1.1</br>	
 											<input type="checkbox" name="Feature" >WS-BPEL 2.0( WS-HumanTask with Apache HISE )</br>	
 											<input type="checkbox" name="Feature" >WS-BPEL 2.0; BPEL4People;</br>	
@@ -61,7 +62,10 @@
 											<input type="checkbox" name="Feature" >WS-BPEL 2.0</br>	
 											<input type="checkbox" name="Feature" >BPMN 2.0</br>	
 											<input type="checkbox" name="Feature" >WSDL 1.1 and 2.0</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Compatibility"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Compatibility','id2Compatibility');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

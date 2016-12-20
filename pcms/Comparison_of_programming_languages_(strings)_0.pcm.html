@@ -32,6 +32,7 @@
 								<label>Operator : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Languages :</label></br>
+									  <p id="id1Languages">
 											<input type="checkbox" name="Feature" >Perl (before version 6)</br>	
 											<input type="checkbox" name="Feature" >PHP</br>	
 											<input type="checkbox" name="Feature" >and Maple (up to version 5)</br>	
@@ -78,7 +79,10 @@
 											<input type="checkbox" name="Feature" >OCaml</br>	
 											<input type="checkbox" name="Feature" >Standard ML</br>	
 											<input type="checkbox" name="Feature" >rc</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Languages"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Languages','id2Languages');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

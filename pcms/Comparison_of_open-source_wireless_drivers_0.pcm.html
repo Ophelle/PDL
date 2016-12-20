@@ -38,6 +38,7 @@
 								<label>Driver : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Chipsets :</label></br>
+									  <p id="id1Chipsets">
 											<input type="checkbox" name="Feature" >Marvell TOPDOG 802.11 Wireless cards: 88W8366</br>	
 											<input type="checkbox" name="Feature" >88W8863</br>	
 											<input type="checkbox" name="Feature" >88W8687</br>	
@@ -154,15 +155,20 @@
 											<input type="checkbox" name="Feature" >8688 (SDIO) 802.11b</br>	
 											<input type="checkbox" name="Feature" >8686 (SPI) 802.11b</br>	
 											<input type="checkbox" name="Feature" >g 88W8388</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Chipsets"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Chipsets','id2Chipsets');">Changer type</button></br>
+							
 								</br>	
 								<label>Non-free firmware required :</label></br>
-								<input type="radio" name="FeatureNon-free firmware required" value="oui">Yes <input type="radio" name="FeatureNon-free firmware required" value = "non">No <input type="radio" name="FeatureNon-free firmware required" value = "non">Partial </br>
-											<input name="FeatureNon-free firmware required" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Non-free firmware required"> <input type="radio" name="FeatureNon-free firmware required" value="oui">Yes <input type="radio" name="FeatureNon-free firmware required" value = "non">No <input type="radio" name="FeatureNon-free firmware required" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Non-free firmware required"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Non-free firmware required','id2Non-free firmware required');">Changer type</button> </br>								
 								</br>	
 								<label>Integration in mainline :</label></br>
-								<input type="radio" name="FeatureIntegration in mainline" value="oui">Yes <input type="radio" name="FeatureIntegration in mainline" value = "non">No <input type="radio" name="FeatureIntegration in mainline" value = "non">Partial </br>
-											<input name="FeatureIntegration in mainline" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Integration in mainline"> <input type="radio" name="FeatureIntegration in mainline" value="oui">Yes <input type="radio" name="FeatureIntegration in mainline" value = "non">No <input type="radio" name="FeatureIntegration in mainline" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Integration in mainline"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Integration in mainline','id2Integration in mainline');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

@@ -38,6 +38,7 @@
 								<label>Manufacturer : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Weight :</label></br>
+									  <p id="id1Weight">
 											<input type="checkbox" name="Feature" >12.1 lb (5.5 kg)</br>	
 											<input type="checkbox" name="Feature" >with full magazine</br>	
 											<input type="checkbox" name="Feature" >13 lb (5.9 kg)</br>	
@@ -48,12 +49,14 @@
 											<input type="checkbox" name="Feature" >with empty magazine</br>	
 											<input type="checkbox" name="Feature" >16.6 lb (7.5 kg)</br>	
 											<input type="checkbox" name="Feature" >with eyepiece</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Weight"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Weight','id2Weight');">Changer type</button></br>
+							
 								</br>	
 								<label>Introduced : </label></br> <input style="display:block;" id="id1Introduced" type="number" name="Feature">
 												<input style="display:none;" id="id2Introduced" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Introduced','id2Introduced');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Introduced','id2Introduced');">Changer type</button></br>								</br>	
 								<label>MOS/Sync : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
 								$("#0").typeahead({

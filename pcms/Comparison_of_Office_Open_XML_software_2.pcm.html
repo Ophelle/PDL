@@ -34,8 +34,9 @@
 								<label>Developer : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>ECMA-376 :</label></br>
-								<input type="radio" name="FeatureECMA-376" value="oui">Yes <input type="radio" name="FeatureECMA-376" value = "non">No <input type="radio" name="FeatureECMA-376" value = "non">Partial </br>
-											<input name="FeatureECMA-376" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1ECMA-376"> <input type="radio" name="FeatureECMA-376" value="oui">Yes <input type="radio" name="FeatureECMA-376" value = "non">No <input type="radio" name="FeatureECMA-376" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2ECMA-376"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1ECMA-376','id2ECMA-376');">Changer type</button> </br>								
 								</br>	
 								<label>Office suite : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
@@ -46,6 +47,7 @@
 								<label>Version : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>Operating systems :</label></br>
+									  <p id="id1Operating systems">
 											<input type="checkbox" name="Feature" >Windows</br>	
 											<input type="checkbox" name="Feature" >OS X</br>	
 											<input type="checkbox" name="Feature" >Linux</br>	
@@ -57,7 +59,10 @@
 											<input type="checkbox" name="Feature" >Windows Mobile</br>	
 											<input type="checkbox" name="Feature" >Symbian (UIQ</br>	
 											<input type="checkbox" name="Feature" >S80)</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Operating systems"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Operating systems','id2Operating systems');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

@@ -32,13 +32,17 @@
 								<label>Codec used to encode the video : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Technique employed :</label></br>
+									  <p id="id1Technique employed">
 											<input type="checkbox" name="Feature" >VLD</br>	
 											<input type="checkbox" name="Feature" >iMDCT</br>	
 											<input type="checkbox" name="Feature" >MC</br>	
 											<input type="checkbox" name="Feature" >and LF</br>	
 											<input type="checkbox" name="Feature" >iDCT</br>	
 											<input type="checkbox" name="Feature" >and MC</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Technique employed"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Technique employed','id2Technique employed');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

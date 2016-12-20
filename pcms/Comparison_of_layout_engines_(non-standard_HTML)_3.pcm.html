@@ -32,6 +32,7 @@
 								<label>Attribute : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Function :</label></br>
+									  <p id="id1Function">
 											<input type="checkbox" name="Feature" >Uses the img element to place video or audio clips</br>	
 											<input type="checkbox" name="Feature" >Specifies a target window or frame for the output of a form</br>	
 											<input type="checkbox" name="Feature" >Sets the margin between the browser window and the contents of the page</br>	
@@ -39,29 +40,34 @@
 											<input type="checkbox" name="Feature" >td</br>	
 											<input type="checkbox" name="Feature" >th</br>	
 											<input type="checkbox" name="Feature" >and tr elements</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Function"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Function','id2Function');">Changer type</button></br>
+							
 								</br>	
 								<label>KHTML :</label></br>
-								<input type="radio" name="FeatureKHTML" value="oui">Yes <input type="radio" name="FeatureKHTML" value = "non">No <input type="radio" name="FeatureKHTML" value = "non">Partial </br>
-											<input name="FeatureKHTML" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1KHTML"> <input type="radio" name="FeatureKHTML" value="oui">Yes <input type="radio" name="FeatureKHTML" value = "non">No <input type="radio" name="FeatureKHTML" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2KHTML"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1KHTML','id2KHTML');">Changer type</button> </br>								
 								</br>	
 								<label>Trident : </label></br> <input style="display:block;" id="id1Trident" type="number" name="Feature">
 												<input style="display:none;" id="id2Trident" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Trident','id2Trident');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Trident','id2Trident');">Changer type</button></br>								</br>	
 								<label>Supported first by : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Presto :</label></br>
-								<input type="radio" name="FeaturePresto" value="oui">Yes <input type="radio" name="FeaturePresto" value = "non">No <input type="radio" name="FeaturePresto" value = "non">Partial </br>
-											<input name="FeaturePresto" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Presto"> <input type="radio" name="FeaturePresto" value="oui">Yes <input type="radio" name="FeaturePresto" value = "non">No <input type="radio" name="FeaturePresto" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Presto"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Presto','id2Presto');">Changer type</button> </br>								
 								</br>	
 								<label>WebKit : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Deprecated for : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Gecko :</label></br>
-								<input type="radio" name="FeatureGecko" value="oui">Yes <input type="radio" name="FeatureGecko" value = "non">No <input type="radio" name="FeatureGecko" value = "non">Partial </br>
-											<input name="FeatureGecko" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Gecko"> <input type="radio" name="FeatureGecko" value="oui">Yes <input type="radio" name="FeatureGecko" value = "non">No <input type="radio" name="FeatureGecko" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Gecko"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Gecko','id2Gecko');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

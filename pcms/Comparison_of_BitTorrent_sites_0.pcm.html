@@ -30,20 +30,24 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Directory :</label></br>
-								<input type="radio" name="FeatureDirectory" value="oui">Yes <input type="radio" name="FeatureDirectory" value = "non">No <input type="radio" name="FeatureDirectory" value = "non">Partial </br>
-											<input name="FeatureDirectory" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Directory"> <input type="radio" name="FeatureDirectory" value="oui">Yes <input type="radio" name="FeatureDirectory" value = "non">No <input type="radio" name="FeatureDirectory" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Directory"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Directory','id2Directory');">Changer type</button> </br>								
 								</br>	
 								<label>Comments :</label></br>
-								<input type="radio" name="FeatureComments" value="oui">Yes <input type="radio" name="FeatureComments" value = "non">No <input type="radio" name="FeatureComments" value = "non">Partial </br>
-											<input name="FeatureComments" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Comments"> <input type="radio" name="FeatureComments" value="oui">Yes <input type="radio" name="FeatureComments" value = "non">No <input type="radio" name="FeatureComments" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Comments"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Comments','id2Comments');">Changer type</button> </br>								
 								</br>	
 								<label>Public :</label></br>
-								<input type="radio" name="FeaturePublic" value="oui">Yes <input type="radio" name="FeaturePublic" value = "non">No <input type="radio" name="FeaturePublic" value = "non">Partial </br>
-											<input name="FeaturePublic" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Public"> <input type="radio" name="FeaturePublic" value="oui">Yes <input type="radio" name="FeaturePublic" value = "non">No <input type="radio" name="FeaturePublic" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Public"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Public','id2Public');">Changer type</button> </br>								
 								</br>	
 								<label>Ignores DMCA : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Alexa Traffic Rank :</label></br>
+									  <p id="id1Alexa Traffic Rank">
 											<input type="checkbox" name="Feature" >8</br>	
 											<input type="checkbox" name="Feature" >555</br>	
 											<input type="checkbox" name="Feature" >42</br>	
@@ -125,35 +129,44 @@
 											<input type="checkbox" name="Feature" >687</br>	
 											<input type="checkbox" name="Feature" >52</br>	
 											<input type="checkbox" name="Feature" >574</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Alexa Traffic Rank"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Alexa Traffic Rank','id2Alexa Traffic Rank');">Changer type</button></br>
+							
 								</br>	
 								<label>Sortable :</label></br>
-								<input type="radio" name="FeatureSortable" value="oui">Yes <input type="radio" name="FeatureSortable" value = "non">No <input type="radio" name="FeatureSortable" value = "non">Partial </br>
-											<input name="FeatureSortable" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Sortable"> <input type="radio" name="FeatureSortable" value="oui">Yes <input type="radio" name="FeatureSortable" value = "non">No <input type="radio" name="FeatureSortable" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Sortable"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Sortable','id2Sortable');">Changer type</button> </br>								
 								</br>	
 								<label>Multi-tracker index :</label></br>
-								<input type="radio" name="FeatureMulti-tracker index" value="oui">Yes <input type="radio" name="FeatureMulti-tracker index" value = "non">No <input type="radio" name="FeatureMulti-tracker index" value = "non">Partial </br>
-											<input name="FeatureMulti-tracker index" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Multi-tracker index"> <input type="radio" name="FeatureMulti-tracker index" value="oui">Yes <input type="radio" name="FeatureMulti-tracker index" value = "non">No <input type="radio" name="FeatureMulti-tracker index" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Multi-tracker index"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Multi-tracker index','id2Multi-tracker index');">Changer type</button> </br>								
 								</br>	
 								<label>One-click download :</label></br>
-								<input type="radio" name="FeatureOne-click download" value="oui">Yes <input type="radio" name="FeatureOne-click download" value = "non">No <input type="radio" name="FeatureOne-click download" value = "non">Partial </br>
-											<input name="FeatureOne-click download" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1One-click download"> <input type="radio" name="FeatureOne-click download" value="oui">Yes <input type="radio" name="FeatureOne-click download" value = "non">No <input type="radio" name="FeatureOne-click download" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2One-click download"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1One-click download','id2One-click download');">Changer type</button> </br>								
 								</br>	
 								<label>Site : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Is a tracker :</label></br>
-								<input type="radio" name="FeatureIs a tracker" value="oui">Yes <input type="radio" name="FeatureIs a tracker" value = "non">No <input type="radio" name="FeatureIs a tracker" value = "non">Partial </br>
-											<input name="FeatureIs a tracker" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Is a tracker"> <input type="radio" name="FeatureIs a tracker" value="oui">Yes <input type="radio" name="FeatureIs a tracker" value = "non">No <input type="radio" name="FeatureIs a tracker" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Is a tracker"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Is a tracker','id2Is a tracker');">Changer type</button> </br>								
 								</br>	
 								<label>RSS :</label></br>
-								<input type="radio" name="FeatureRSS" value="oui">Yes <input type="radio" name="FeatureRSS" value = "non">No <input type="radio" name="FeatureRSS" value = "non">Partial </br>
-											<input name="FeatureRSS" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1RSS"> <input type="radio" name="FeatureRSS" value="oui">Yes <input type="radio" name="FeatureRSS" value = "non">No <input type="radio" name="FeatureRSS" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2RSS"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1RSS','id2RSS');">Changer type</button> </br>								
 								</br>	
 								<label>Specialization : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>DHT search :</label></br>
-								<input type="radio" name="FeatureDHT search" value="oui">Yes <input type="radio" name="FeatureDHT search" value = "non">No <input type="radio" name="FeatureDHT search" value = "non">Partial </br>
-											<input name="FeatureDHT search" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1DHT search"> <input type="radio" name="FeatureDHT search" value="oui">Yes <input type="radio" name="FeatureDHT search" value = "non">No <input type="radio" name="FeatureDHT search" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2DHT search"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1DHT search','id2DHT search');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

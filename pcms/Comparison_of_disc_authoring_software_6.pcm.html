@@ -30,18 +30,21 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Graphical user interface :</label></br>
-								<input type="radio" name="FeatureGraphical user interface" value="oui">Yes <input type="radio" name="FeatureGraphical user interface" value = "non">No <input type="radio" name="FeatureGraphical user interface" value = "non">Partial </br>
-											<input name="FeatureGraphical user interface" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Graphical user interface"> <input type="radio" name="FeatureGraphical user interface" value="oui">Yes <input type="radio" name="FeatureGraphical user interface" value = "non">No <input type="radio" name="FeatureGraphical user interface" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Graphical user interface"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Graphical user interface','id2Graphical user interface');">Changer type</button> </br>								
 								</br>	
 								<label>Application : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Command line interface :</label></br>
-								<input type="radio" name="FeatureCommand line interface" value="oui">Yes <input type="radio" name="FeatureCommand line interface" value = "non">No <input type="radio" name="FeatureCommand line interface" value = "non">Partial </br>
-											<input name="FeatureCommand line interface" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Command line interface"> <input type="radio" name="FeatureCommand line interface" value="oui">Yes <input type="radio" name="FeatureCommand line interface" value = "non">No <input type="radio" name="FeatureCommand line interface" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Command line interface"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Command line interface','id2Command line interface');">Changer type</button> </br>								
 								</br>	
 								<label>Text user interface :</label></br>
-								<input type="radio" name="FeatureText user interface" value="oui">Yes <input type="radio" name="FeatureText user interface" value = "non">No <input type="radio" name="FeatureText user interface" value = "non">Partial </br>
-											<input name="FeatureText user interface" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Text user interface"> <input type="radio" name="FeatureText user interface" value="oui">Yes <input type="radio" name="FeatureText user interface" value = "non">No <input type="radio" name="FeatureText user interface" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Text user interface"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Text user interface','id2Text user interface');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

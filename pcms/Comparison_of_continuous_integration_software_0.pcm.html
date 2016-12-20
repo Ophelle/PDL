@@ -30,16 +30,19 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Windows builders :</label></br>
-								<input type="radio" name="FeatureWindows builders" value="oui">Yes <input type="radio" name="FeatureWindows builders" value = "non">No <input type="radio" name="FeatureWindows builders" value = "non">Partial </br>
-											<input name="FeatureWindows builders" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Windows builders"> <input type="radio" name="FeatureWindows builders" value="oui">Yes <input type="radio" name="FeatureWindows builders" value = "non">No <input type="radio" name="FeatureWindows builders" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Windows builders"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Windows builders','id2Windows builders');">Changer type</button> </br>								
 								</br>	
 								<label>IDE Integration :</label></br>
-								<input type="radio" name="FeatureIDE Integration" value="oui">Yes <input type="radio" name="FeatureIDE Integration" value = "non">No <input type="radio" name="FeatureIDE Integration" value = "non">Partial </br>
-											<input name="FeatureIDE Integration" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1IDE Integration"> <input type="radio" name="FeatureIDE Integration" value="oui">Yes <input type="radio" name="FeatureIDE Integration" value = "non">No <input type="radio" name="FeatureIDE Integration" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2IDE Integration"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1IDE Integration','id2IDE Integration');">Changer type</button> </br>								
 								</br>	
 								<label>Platform : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Java builders :</label></br>
+									  <p id="id1Java builders">
 											<input type="checkbox" name="Feature" >Ant</br>	
 											<input type="checkbox" name="Feature" >Maven 1</br>	
 											<input type="checkbox" name="Feature" >Maven 2</br>	
@@ -57,9 +60,13 @@
 											<input type="checkbox" name="Feature" >Apache Ant</br>	
 											<input type="checkbox" name="Feature" >2</br>	
 											<input type="checkbox" name="Feature" >& 3</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Java builders"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Java builders','id2Java builders');">Changer type</button></br>
+							
 								</br>	
 								<label>Notification :</label></br>
+									  <p id="id1Notification">
 											<input type="checkbox" name="Feature" >E-mail</br>	
 											<input type="checkbox" name="Feature" >CCTray</br>	
 											<input type="checkbox" name="Feature" >RSS</br>	
@@ -100,11 +107,15 @@
 											<input type="checkbox" name="Feature" >Possibly any way with User Interface</br>	
 											<input type="checkbox" name="Feature" >CCtray</br>	
 											<input type="checkbox" name="Feature" >Jabber</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Notification"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Notification','id2Notification');">Changer type</button></br>
+							
 								</br>	
 								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Other Integration :</label></br>
+									  <p id="id1Other Integration">
 											<input type="checkbox" name="Feature" >GitHub</br>	
 											<input type="checkbox" name="Feature" >Bitbucket</br>	
 											<input type="checkbox" name="Feature" >Kiln</br>	
@@ -156,11 +167,15 @@
 											<input type="checkbox" name="Feature" >AWS</br>	
 											<input type="checkbox" name="Feature" >Dotcloud</br>	
 											<input type="checkbox" name="Feature" >Mercurial</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Other Integration"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Other Integration','id2Other Integration');">Changer type</button></br>
+							
 								</br>	
 								<label>Name : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Other builders :</label></br>
+									  <p id="id1Other builders">
 											<input type="checkbox" name="Feature" >Custom Script</br>	
 											<input type="checkbox" name="Feature" >Command-Line Tool</br>	
 											<input type="checkbox" name="Feature" >Bash</br>	
@@ -204,7 +219,10 @@
 											<input type="checkbox" name="Feature" >Grails</br>	
 											<input type="checkbox" name="Feature" >SCons</br>	
 											<input type="checkbox" name="Feature" >Shell script and Command Line</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Other builders"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Other builders','id2Other builders');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

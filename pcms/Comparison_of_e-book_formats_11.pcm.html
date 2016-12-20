@@ -32,9 +32,13 @@
 								<label>Format: : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Hypertext :</label></br>
+									  <p id="id1Hypertext">
 											<input type="checkbox" name="Feature" >.htm; .html and typically auxiliary images</br>	
 											<input type="checkbox" name="Feature" >js and css</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Hypertext"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Hypertext','id2Hypertext');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

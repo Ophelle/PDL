@@ -30,14 +30,19 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Pulldown :</label></br>
+									  <p id="id1Pulldown">
 											<input type="checkbox" name="Feature" >4 perf; 3 perf available for Mk 2</br>	
 											<input type="checkbox" name="Feature" >4 and 3 perf</br>	
 											<input type="checkbox" name="Feature" >4</br>	
 											<input type="checkbox" name="Feature" >3</br>	
 											<input type="checkbox" name="Feature" >and 2 perf</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Pulldown"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Pulldown','id2Pulldown');">Changer type</button></br>
+							
 								</br>	
 								<label>Motor :</label></br>
+									  <p id="id1Motor">
 											<input type="checkbox" name="Feature" >DC quartz-controlled</br>	
 											<input type="checkbox" name="Feature" >Xtal at all speeds</br>	
 											<input type="checkbox" name="Feature" >24V DC microprocessor-controlled</br>	
@@ -65,13 +70,18 @@
 											<input type="checkbox" name="Feature" >24</br>	
 											<input type="checkbox" name="Feature" >29.97</br>	
 											<input type="checkbox" name="Feature" >s forwards</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Motor"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Motor','id2Motor');">Changer type</button></br>
+							
 								</br>	
 								<label>Pitch control? :</label></br>
-								<input type="radio" name="FeaturePitch control?" value="oui">Yes <input type="radio" name="FeaturePitch control?" value = "non">No <input type="radio" name="FeaturePitch control?" value = "non">Partial </br>
-											<input name="FeaturePitch control?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Pitch control?"> <input type="radio" name="FeaturePitch control?" value="oui">Yes <input type="radio" name="FeaturePitch control?" value = "non">No <input type="radio" name="FeaturePitch control?" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Pitch control?"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Pitch control?','id2Pitch control?');">Changer type</button> </br>								
 								</br>	
 								<label>Frame rate (reverse) :</label></br>
+									  <p id="id1Frame rate (reverse)">
 											<input type="checkbox" name="Feature" >12-32 frame</br>	
 											<input type="checkbox" name="Feature" >s in 0.001 frame</br>	
 											<input type="checkbox" name="Feature" >s increments with speedbox</br>	
@@ -95,9 +105,13 @@
 											<input type="checkbox" name="Feature" >0.1-150 frame</br>	
 											<input type="checkbox" name="Feature" >25 frame</br>	
 											<input type="checkbox" name="Feature" >s (can't be used with shoulder mags or older 200' mags)</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Frame rate (reverse)"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Frame rate (reverse)','id2Frame rate (reverse)');">Changer type</button></br>
+							
 								</br>	
 								<label>Frame rate (forward) :</label></br>
+									  <p id="id1Frame rate (forward)">
 											<input type="checkbox" name="Feature" >3-50 frame</br>	
 											<input type="checkbox" name="Feature" >s in 0.001 frame</br>	
 											<input type="checkbox" name="Feature" >s increments; 1 frame</br>	
@@ -136,16 +150,17 @@
 											<input type="checkbox" name="Feature" >4-34 frame</br>	
 											<input type="checkbox" name="Feature" >3-40 frame</br>	
 											<input type="checkbox" name="Feature" >2-40 frame</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Frame rate (forward)"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Frame rate (forward)','id2Frame rate (forward)');">Changer type</button></br>
+							
 								</br>	
 								<label>Pulldown claws : </label></br> <input style="display:block;" id="id1Pulldown claws" type="number" name="Feature">
 												<input style="display:none;" id="id2Pulldown claws" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Pulldown claws','id2Pulldown claws');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Pulldown claws','id2Pulldown claws');">Changer type</button></br>								</br>	
 								<label>Registration pins : </label></br> <input style="display:block;" id="id1Registration pins" type="number" name="Feature">
 												<input style="display:none;" id="id2Registration pins" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Registration pins','id2Registration pins');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Registration pins','id2Registration pins');">Changer type</button></br>								</br>	
 								<label>Movement type : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Camera model : </label></br> <input id="1" type="text" name="Feature"></br>

@@ -34,6 +34,7 @@
 								<label>Features: : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Remote Access: Web (HTTP), Telnet, SSH, RDP, Serial COM RS232, ... :</label></br>
+									  <p id="id1Remote Access: Web (HTTP), Telnet, SSH, RDP, Serial COM RS232, ...">
 											<input type="checkbox" name="Feature" >Web (HTTPS)</br>	
 											<input type="checkbox" name="Feature" >SSH</br>	
 											<input type="checkbox" name="Feature" >RS232</br>	
@@ -42,15 +43,20 @@
 											<input type="checkbox" name="Feature" >SSH (Not enabeld by default)</br>	
 											<input type="checkbox" name="Feature" >Web GUI</br>	
 											<input type="checkbox" name="Feature" >WebConfig</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Remote Access: Web (HTTP), Telnet, SSH, RDP, Serial COM RS232, ..."type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Remote Access: Web (HTTP), Telnet, SSH, RDP, Serial COM RS232, ...','id2Remote Access: Web (HTTP), Telnet, SSH, RDP, Serial COM RS232, ...');">Changer type</button></br>
+							
 								</br>	
 								<label>Ability to centrally manage all firewalls together :</label></br>
-								<input type="radio" name="FeatureAbility to centrally manage all firewalls together" value="oui">Yes <input type="radio" name="FeatureAbility to centrally manage all firewalls together" value = "non">No <input type="radio" name="FeatureAbility to centrally manage all firewalls together" value = "non">Partial </br>
-											<input name="FeatureAbility to centrally manage all firewalls together" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Ability to centrally manage all firewalls together"> <input type="radio" name="FeatureAbility to centrally manage all firewalls together" value="oui">Yes <input type="radio" name="FeatureAbility to centrally manage all firewalls together" value = "non">No <input type="radio" name="FeatureAbility to centrally manage all firewalls together" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Ability to centrally manage all firewalls together"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Ability to centrally manage all firewalls together','id2Ability to centrally manage all firewalls together');">Changer type</button> </br>								
 								</br>	
 								<label>Change rules without requiring restart? :</label></br>
-								<input type="radio" name="FeatureChange rules without requiring restart?" value="oui">Yes <input type="radio" name="FeatureChange rules without requiring restart?" value = "non">No <input type="radio" name="FeatureChange rules without requiring restart?" value = "non">Partial </br>
-											<input name="FeatureChange rules without requiring restart?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Change rules without requiring restart?"> <input type="radio" name="FeatureChange rules without requiring restart?" value="oui">Yes <input type="radio" name="FeatureChange rules without requiring restart?" value = "non">No <input type="radio" name="FeatureChange rules without requiring restart?" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Change rules without requiring restart?"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Change rules without requiring restart?','id2Change rules without requiring restart?');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

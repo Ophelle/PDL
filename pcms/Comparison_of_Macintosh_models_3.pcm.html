@@ -32,23 +32,23 @@
 								<label>Memory Max : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>User-replaceable HDD? :</label></br>
-								<input type="radio" name="FeatureUser-replaceable HDD?" value="oui">Yes <input type="radio" name="FeatureUser-replaceable HDD?" value = "non">No <input type="radio" name="FeatureUser-replaceable HDD?" value = "non">Partial </br>
-											<input name="FeatureUser-replaceable HDD?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1User-replaceable HDD?"> <input type="radio" name="FeatureUser-replaceable HDD?" value="oui">Yes <input type="radio" name="FeatureUser-replaceable HDD?" value = "non">No <input type="radio" name="FeatureUser-replaceable HDD?" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2User-replaceable HDD?"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1User-replaceable HDD?','id2User-replaceable HDD?');">Changer type</button> </br>								
 								</br>	
 								<label>HDD bays : </label></br> <input style="display:block;" id="id1HDD bays" type="number" name="Feature">
 												<input style="display:none;" id="id2HDD bays" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1HDD bays','id2HDD bays');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1HDD bays','id2HDD bays');">Changer type</button></br>								</br>	
 								<label>Expansion slots :</label></br>
-								<input type="radio" name="FeatureExpansion slots" value="oui">Yes <input type="radio" name="FeatureExpansion slots" value = "non">No <input type="radio" name="FeatureExpansion slots" value = "non">Partial </br>
-											<input name="FeatureExpansion slots" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Expansion slots"> <input type="radio" name="FeatureExpansion slots" value="oui">Yes <input type="radio" name="FeatureExpansion slots" value = "non">No <input type="radio" name="FeatureExpansion slots" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Expansion slots"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Expansion slots','id2Expansion slots');">Changer type</button> </br>								
 								</br>	
 								<label>Model : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Memory slots : </label></br> <input style="display:block;" id="id1Memory slots" type="number" name="Feature">
 												<input style="display:none;" id="id2Memory slots" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Memory slots','id2Memory slots');">Changer type</button></br>								
-						<script>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Memory slots','id2Memory slots');">Changer type</button></br>						<script>
 								$("#0").typeahead({
 									name:"list0",
 									local : ['32 GB','8 GB','16GB','8 GB (21.5") 16 GB (27")','']

@@ -30,6 +30,7 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Host platform :</label></br>
+									  <p id="id1Host platform">
 											<input type="checkbox" name="Feature" >IBM OS</br>	
 											<input type="checkbox" name="Feature" >360 and CP-67</br>	
 											<input type="checkbox" name="Feature" >CMS</br>	
@@ -37,20 +38,27 @@
 											<input type="checkbox" name="Feature" >360</br>	
 											<input type="checkbox" name="Feature" >IBM BPS</br>	
 											<input type="checkbox" name="Feature" >360 and successors</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Host platform"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Host platform','id2Host platform');">Changer type</button></br>
+							
 								</br>	
 								<label>Assembler : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Instruction set :</label></br>
+									  <p id="id1Instruction set">
 											<input type="checkbox" name="Feature" >IBM System</br>	
 											<input type="checkbox" name="Feature" >360</br>	
 											<input type="checkbox" name="Feature" >z</br>	
 											<input type="checkbox" name="Feature" >Architecture</br>	
 											<input type="checkbox" name="Feature" >370</br>	
 											<input type="checkbox" name="Feature" >360 and System</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Instruction set"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Instruction set','id2Instruction set');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

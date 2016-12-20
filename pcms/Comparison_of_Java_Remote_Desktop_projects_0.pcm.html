@@ -30,22 +30,25 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Authentication :</label></br>
-								<input type="radio" name="FeatureAuthentication" value="oui">Yes <input type="radio" name="FeatureAuthentication" value = "non">No <input type="radio" name="FeatureAuthentication" value = "non">Partial </br>
-											<input name="FeatureAuthentication" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Authentication"> <input type="radio" name="FeatureAuthentication" value="oui">Yes <input type="radio" name="FeatureAuthentication" value = "non">No <input type="radio" name="FeatureAuthentication" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Authentication"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Authentication','id2Authentication');">Changer type</button> </br>								
 								</br>	
 								<label>Relay : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Server :</label></br>
-								<input type="radio" name="FeatureServer" value="oui">Yes <input type="radio" name="FeatureServer" value = "non">No <input type="radio" name="FeatureServer" value = "non">Partial </br>
-											<input name="FeatureServer" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Server"> <input type="radio" name="FeatureServer" value="oui">Yes <input type="radio" name="FeatureServer" value = "non">No <input type="radio" name="FeatureServer" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Server"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Server','id2Server');">Changer type</button> </br>								
 								</br>	
 								<label>File Transfer : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Data Compression : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Image Quality :</label></br>
-								<input type="radio" name="FeatureImage Quality" value="oui">Yes <input type="radio" name="FeatureImage Quality" value = "non">No <input type="radio" name="FeatureImage Quality" value = "non">Partial </br>
-											<input name="FeatureImage Quality" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Image Quality"> <input type="radio" name="FeatureImage Quality" value="oui">Yes <input type="radio" name="FeatureImage Quality" value = "non">No <input type="radio" name="FeatureImage Quality" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Image Quality"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Image Quality','id2Image Quality');">Changer type</button> </br>								
 								</br>	
 								<label>Proxy : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
@@ -53,15 +56,16 @@
 								</br>	
 								<label>Version : </label></br> <input style="display:block;" id="id1Version" type="number" name="Feature">
 												<input style="display:none;" id="id2Version" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Version','id2Version');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Version','id2Version');">Changer type</button></br>								</br>	
 								<label>Web Client :</label></br>
-								<input type="radio" name="FeatureWeb Client" value="oui">Yes <input type="radio" name="FeatureWeb Client" value = "non">No <input type="radio" name="FeatureWeb Client" value = "non">Partial </br>
-											<input name="FeatureWeb Client" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Web Client"> <input type="radio" name="FeatureWeb Client" value="oui">Yes <input type="radio" name="FeatureWeb Client" value = "non">No <input type="radio" name="FeatureWeb Client" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Web Client"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Web Client','id2Web Client');">Changer type</button> </br>								
 								</br>	
 								<label>Project : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>Date :</label></br>
+									  <p id="id1Date">
 											<input type="checkbox" name="Feature" >May 15</br>	
 											<input type="checkbox" name="Feature" >2007</br>	
 											<input type="checkbox" name="Feature" >February 6</br>	
@@ -80,11 +84,15 @@
 											<input type="checkbox" name="Feature" >January 3</br>	
 											<input type="checkbox" name="Feature" >February 15</br>	
 											<input type="checkbox" name="Feature" >2005</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Date"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Date','id2Date');">Changer type</button></br>
+							
 								</br>	
 								<label>Client :</label></br>
-								<input type="radio" name="FeatureClient" value="oui">Yes <input type="radio" name="FeatureClient" value = "non">No <input type="radio" name="FeatureClient" value = "non">Partial </br>
-											<input name="FeatureClient" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Client"> <input type="radio" name="FeatureClient" value="oui">Yes <input type="radio" name="FeatureClient" value = "non">No <input type="radio" name="FeatureClient" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Client"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Client','id2Client');">Changer type</button> </br>								
 								</br>	
 								<label>Clipboard Transfer : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
@@ -95,14 +103,16 @@
 								<label>License : </label></br> <input id="9" type="text" name="Feature"></br>
 								</br>	
 								<label>Color Quality :</label></br>
-								<input type="radio" name="FeatureColor Quality" value="oui">Yes <input type="radio" name="FeatureColor Quality" value = "non">No <input type="radio" name="FeatureColor Quality" value = "non">Partial </br>
-											<input name="FeatureColor Quality" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Color Quality"> <input type="radio" name="FeatureColor Quality" value="oui">Yes <input type="radio" name="FeatureColor Quality" value = "non">No <input type="radio" name="FeatureColor Quality" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Color Quality"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Color Quality','id2Color Quality');">Changer type</button> </br>								
 								</br>	
 								<label>Technology : </label></br> <input id="10" type="text" name="Feature"></br>
 								</br>	
 								<label>Multiple Sessions :</label></br>
-								<input type="radio" name="FeatureMultiple Sessions" value="oui">Yes <input type="radio" name="FeatureMultiple Sessions" value = "non">No <input type="radio" name="FeatureMultiple Sessions" value = "non">Partial </br>
-											<input name="FeatureMultiple Sessions" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Multiple Sessions"> <input type="radio" name="FeatureMultiple Sessions" value="oui">Yes <input type="radio" name="FeatureMultiple Sessions" value = "non">No <input type="radio" name="FeatureMultiple Sessions" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Multiple Sessions"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Multiple Sessions','id2Multiple Sessions');">Changer type</button> </br>								
 								</br>	
 								<label>HTTP Tunnel : </label></br> <input id="11" type="text" name="Feature"></br>
 						<script>

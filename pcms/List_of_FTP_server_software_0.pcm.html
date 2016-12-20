@@ -30,6 +30,7 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Platform :</label></br>
+									  <p id="id1Platform">
 											<input type="checkbox" name="Feature" >Windows 9X</br>	
 											<input type="checkbox" name="Feature" >2000</br>	
 											<input type="checkbox" name="Feature" >XP</br>	
@@ -47,9 +48,13 @@
 											<input type="checkbox" name="Feature" >Windows Vista</br>	
 											<input type="checkbox" name="Feature" >7</br>	
 											<input type="checkbox" name="Feature" >8 and 8.1</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Platform"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Platform','id2Platform');">Changer type</button></br>
+							
 								</br>	
 								<label>License :</label></br>
+									  <p id="id1License">
 											<input type="checkbox" name="Feature" >proprietary</br>	
 											<input type="checkbox" name="Feature" >trialware</br>	
 											<input type="checkbox" name="Feature" >open source</br>	
@@ -57,11 +62,15 @@
 											<input type="checkbox" name="Feature" >free software</br>	
 											<input type="checkbox" name="Feature" >but freeware for any use</br>	
 											<input type="checkbox" name="Feature" >Free Personal Edition</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2License"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1License','id2License');">Changer type</button></br>
+							
 								</br>	
 								<label>Name : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Details :</label></br>
+									  <p id="id1Details">
 											<input type="checkbox" name="Feature" >Secure FTP Server that also supports Secure Shell Access and Web browser based secure file transfer. Protocols supported include FTP</br>	
 											<input type="checkbox" name="Feature" >FTPS</br>	
 											<input type="checkbox" name="Feature" >SFTP</br>	
@@ -141,7 +150,10 @@
 											<input type="checkbox" name="Feature" >which offers it with three different prices: an FTP server</br>	
 											<input type="checkbox" name="Feature" >an SFTP server</br>	
 											<input type="checkbox" name="Feature" >and the full Corporate version with encrypting and SCP2.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Details"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Details','id2Details');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

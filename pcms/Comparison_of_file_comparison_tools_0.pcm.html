@@ -36,20 +36,26 @@
 								<label>Year of latest stable version : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Linux :</label></br>
-								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
-											<input name="FeatureLinux" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Linux"> <input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Linux"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Linux','id2Linux');">Changer type</button> </br>								
 								</br>	
 								<label>Windows :</label></br>
-								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
-											<input name="FeatureWindows" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Windows"> <input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Windows"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Windows','id2Windows');">Changer type</button> </br>								
 								</br>	
 								<label>FOSS :</label></br>
+									  <p id="id1FOSS">
 											<input type="checkbox" name="Feature" >No; Proprietary</br>	
 											<input type="checkbox" name="Feature" >No; GPL-compatible</br>	
 											<input type="checkbox" name="Feature" >No; Revised BSD license</br>	
 											<input type="checkbox" name="Feature" >No; MIT-compatible</br>	
 											<input type="checkbox" name="Feature" >No; USC-CSSE Limited Public License</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2FOSS"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1FOSS','id2FOSS');">Changer type</button></br>
+							
 								</br>	
 								<label>Max Supported File Size : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
@@ -57,15 +63,16 @@
 								</br>	
 								<label>First public release date : </label></br> <input style="display:block;" id="id1First public release date" type="number" name="Feature">
 												<input style="display:none;" id="id2First public release date" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First public release date','id2First public release date');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First public release date','id2First public release date');">Changer type</button></br>								</br>	
 								<label>Free :</label></br>
-								<input type="radio" name="FeatureFree" value="oui">Yes <input type="radio" name="FeatureFree" value = "non">No <input type="radio" name="FeatureFree" value = "non">Partial </br>
-											<input name="FeatureFree" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Free"> <input type="radio" name="FeatureFree" value="oui">Yes <input type="radio" name="FeatureFree" value = "non">No <input type="radio" name="FeatureFree" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Free"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Free','id2Free');">Changer type</button> </br>								
 								</br>	
 								<label>Macintosh :</label></br>
-								<input type="radio" name="FeatureMacintosh" value="oui">Yes <input type="radio" name="FeatureMacintosh" value = "non">No <input type="radio" name="FeatureMacintosh" value = "non">Partial </br>
-											<input name="FeatureMacintosh" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Macintosh"> <input type="radio" name="FeatureMacintosh" value="oui">Yes <input type="radio" name="FeatureMacintosh" value = "non">No <input type="radio" name="FeatureMacintosh" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Macintosh"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Macintosh','id2Macintosh');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

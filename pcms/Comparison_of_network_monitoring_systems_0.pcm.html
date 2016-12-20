@@ -30,24 +30,29 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Inventory :</label></br>
-								<input type="radio" name="FeatureInventory" value="oui">Yes <input type="radio" name="FeatureInventory" value = "non">No <input type="radio" name="FeatureInventory" value = "non">Partial </br>
-											<input name="FeatureInventory" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Inventory"> <input type="radio" name="FeatureInventory" value="oui">Yes <input type="radio" name="FeatureInventory" value = "non">No <input type="radio" name="FeatureInventory" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Inventory"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Inventory','id2Inventory');">Changer type</button> </br>								
 								</br>	
 								<label>Access Control :</label></br>
-								<input type="radio" name="FeatureAccess Control" value="oui">Yes <input type="radio" name="FeatureAccess Control" value = "non">No <input type="radio" name="FeatureAccess Control" value = "non">Partial </br>
-											<input name="FeatureAccess Control" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Access Control"> <input type="radio" name="FeatureAccess Control" value="oui">Yes <input type="radio" name="FeatureAccess Control" value = "non">No <input type="radio" name="FeatureAccess Control" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Access Control"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Access Control','id2Access Control');">Changer type</button> </br>								
 								</br>	
 								<label>Auto Discovery :</label></br>
-								<input type="radio" name="FeatureAuto Discovery" value="oui">Yes <input type="radio" name="FeatureAuto Discovery" value = "non">No <input type="radio" name="FeatureAuto Discovery" value = "non">Partial </br>
-											<input name="FeatureAuto Discovery" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Auto Discovery"> <input type="radio" name="FeatureAuto Discovery" value="oui">Yes <input type="radio" name="FeatureAuto Discovery" value = "non">No <input type="radio" name="FeatureAuto Discovery" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Auto Discovery"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Auto Discovery','id2Auto Discovery');">Changer type</button> </br>								
 								</br>	
 								<label>Agentless :</label></br>
-								<input type="radio" name="FeatureAgentless" value="oui">Yes <input type="radio" name="FeatureAgentless" value = "non">No <input type="radio" name="FeatureAgentless" value = "non">Partial </br>
-											<input name="FeatureAgentless" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Agentless"> <input type="radio" name="FeatureAgentless" value="oui">Yes <input type="radio" name="FeatureAgentless" value = "non">No <input type="radio" name="FeatureAgentless" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Agentless"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Agentless','id2Agentless');">Changer type</button> </br>								
 								</br>	
 								<label>Triggers / Alerts :</label></br>
-								<input type="radio" name="FeatureTriggers / Alerts" value="oui">Yes <input type="radio" name="FeatureTriggers / Alerts" value = "non">No <input type="radio" name="FeatureTriggers / Alerts" value = "non">Partial </br>
-											<input name="FeatureTriggers / Alerts" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Triggers / Alerts"> <input type="radio" name="FeatureTriggers / Alerts" value="oui">Yes <input type="radio" name="FeatureTriggers / Alerts" value = "non">No <input type="radio" name="FeatureTriggers / Alerts" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Triggers / Alerts"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Triggers / Alerts','id2Triggers / Alerts');">Changer type</button> </br>								
 								</br>	
 								<label>Platform : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
@@ -60,48 +65,58 @@
 								<label>WebApp : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Logical Grouping :</label></br>
-								<input type="radio" name="FeatureLogical Grouping" value="oui">Yes <input type="radio" name="FeatureLogical Grouping" value = "non">No <input type="radio" name="FeatureLogical Grouping" value = "non">Partial </br>
-											<input name="FeatureLogical Grouping" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Logical Grouping"> <input type="radio" name="FeatureLogical Grouping" value="oui">Yes <input type="radio" name="FeatureLogical Grouping" value = "non">No <input type="radio" name="FeatureLogical Grouping" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Logical Grouping"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Logical Grouping','id2Logical Grouping');">Changer type</button> </br>								
 								</br>	
 								<label>Syslog :</label></br>
-								<input type="radio" name="FeatureSyslog" value="oui">Yes <input type="radio" name="FeatureSyslog" value = "non">No <input type="radio" name="FeatureSyslog" value = "non">Partial </br>
-											<input name="FeatureSyslog" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Syslog"> <input type="radio" name="FeatureSyslog" value="oui">Yes <input type="radio" name="FeatureSyslog" value = "non">No <input type="radio" name="FeatureSyslog" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Syslog"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Syslog','id2Syslog');">Changer type</button> </br>								
 								</br>	
 								<label>Trend Prediction :</label></br>
-								<input type="radio" name="FeatureTrend Prediction" value="oui">Yes <input type="radio" name="FeatureTrend Prediction" value = "non">No <input type="radio" name="FeatureTrend Prediction" value = "non">Partial </br>
-											<input name="FeatureTrend Prediction" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Trend Prediction"> <input type="radio" name="FeatureTrend Prediction" value="oui">Yes <input type="radio" name="FeatureTrend Prediction" value = "non">No <input type="radio" name="FeatureTrend Prediction" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Trend Prediction"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Trend Prediction','id2Trend Prediction');">Changer type</button> </br>								
 								</br>	
 								<label>IP SLA Reports :</label></br>
-								<input type="radio" name="FeatureIP SLA Reports" value="oui">Yes <input type="radio" name="FeatureIP SLA Reports" value = "non">No <input type="radio" name="FeatureIP SLA Reports" value = "non">Partial </br>
-											<input name="FeatureIP SLA Reports" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1IP SLA Reports"> <input type="radio" name="FeatureIP SLA Reports" value="oui">Yes <input type="radio" name="FeatureIP SLA Reports" value = "non">No <input type="radio" name="FeatureIP SLA Reports" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2IP SLA Reports"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1IP SLA Reports','id2IP SLA Reports');">Changer type</button> </br>								
 								</br>	
 								<label>Trending :</label></br>
-								<input type="radio" name="FeatureTrending" value="oui">Yes <input type="radio" name="FeatureTrending" value = "non">No <input type="radio" name="FeatureTrending" value = "non">Partial </br>
-											<input name="FeatureTrending" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Trending"> <input type="radio" name="FeatureTrending" value="oui">Yes <input type="radio" name="FeatureTrending" value = "non">No <input type="radio" name="FeatureTrending" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Trending"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Trending','id2Trending');">Changer type</button> </br>								
 								</br>	
 								<label>SNMP :</label></br>
-								<input type="radio" name="FeatureSNMP" value="oui">Yes <input type="radio" name="FeatureSNMP" value = "non">No <input type="radio" name="FeatureSNMP" value = "non">Partial </br>
-											<input name="FeatureSNMP" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1SNMP"> <input type="radio" name="FeatureSNMP" value="oui">Yes <input type="radio" name="FeatureSNMP" value = "non">No <input type="radio" name="FeatureSNMP" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2SNMP"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1SNMP','id2SNMP');">Changer type</button> </br>								
 								</br>	
 								<label>Distributed Monitoring :</label></br>
-								<input type="radio" name="FeatureDistributed Monitoring" value="oui">Yes <input type="radio" name="FeatureDistributed Monitoring" value = "non">No <input type="radio" name="FeatureDistributed Monitoring" value = "non">Partial </br>
-											<input name="FeatureDistributed Monitoring" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Distributed Monitoring"> <input type="radio" name="FeatureDistributed Monitoring" value="oui">Yes <input type="radio" name="FeatureDistributed Monitoring" value = "non">No <input type="radio" name="FeatureDistributed Monitoring" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Distributed Monitoring"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Distributed Monitoring','id2Distributed Monitoring');">Changer type</button> </br>								
 								</br>	
 								<label>Name : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>Latest release version : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
 								<label>Plugins :</label></br>
-								<input type="radio" name="FeaturePlugins" value="oui">Yes <input type="radio" name="FeaturePlugins" value = "non">No <input type="radio" name="FeaturePlugins" value = "non">Partial </br>
-											<input name="FeaturePlugins" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Plugins"> <input type="radio" name="FeaturePlugins" value="oui">Yes <input type="radio" name="FeaturePlugins" value = "non">No <input type="radio" name="FeaturePlugins" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Plugins"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Plugins','id2Plugins');">Changer type</button> </br>								
 								</br>	
 								<label>Maps :</label></br>
-								<input type="radio" name="FeatureMaps" value="oui">Yes <input type="radio" name="FeatureMaps" value = "non">No <input type="radio" name="FeatureMaps" value = "non">Partial </br>
-											<input name="FeatureMaps" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Maps"> <input type="radio" name="FeatureMaps" value="oui">Yes <input type="radio" name="FeatureMaps" value = "non">No <input type="radio" name="FeatureMaps" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Maps"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Maps','id2Maps');">Changer type</button> </br>								
 								</br>	
 								<label>IPv6 :</label></br>
-								<input type="radio" name="FeatureIPv6" value="oui">Yes <input type="radio" name="FeatureIPv6" value = "non">No <input type="radio" name="FeatureIPv6" value = "non">Partial </br>
-											<input name="FeatureIPv6" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1IPv6"> <input type="radio" name="FeatureIPv6" value="oui">Yes <input type="radio" name="FeatureIPv6" value = "non">No <input type="radio" name="FeatureIPv6" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2IPv6"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1IPv6','id2IPv6');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

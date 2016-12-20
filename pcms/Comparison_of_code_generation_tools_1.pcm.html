@@ -42,6 +42,7 @@
 								<label>Other input : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>Typical output :</label></br>
+									  <p id="id1Typical output">
 											<input type="checkbox" name="Feature" >Application and Code in ASP.Net</br>	
 											<input type="checkbox" name="Feature" >ASP.Net MVC</br>	
 											<input type="checkbox" name="Feature" >C#</br>	
@@ -154,7 +155,10 @@
 											<input type="checkbox" name="Feature" >Any code; Java</br>	
 											<input type="checkbox" name="Feature" >JSP</br>	
 											<input type="checkbox" name="Feature" >C++ and CoffeeScript classes</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Typical output"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Typical output','id2Typical output');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

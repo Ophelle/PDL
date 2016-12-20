@@ -30,6 +30,7 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Host OS :</label></br>
+									  <p id="id1Host OS">
 											<input type="checkbox" name="Feature" >Windows</br>	
 											<input type="checkbox" name="Feature" >Linux</br>	
 											<input type="checkbox" name="Feature" >Microsoft Windows</br>	
@@ -93,11 +94,15 @@
 											<input type="checkbox" name="Feature" >AmigaOS</br>	
 											<input type="checkbox" name="Feature" >Maemo</br>	
 											<input type="checkbox" name="Feature" >Symbian</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Host OS"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Host OS','id2Host OS');">Changer type</button></br>
+							
 								</br>	
 								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Host CPU :</label></br>
+									  <p id="id1Host CPU">
 											<input type="checkbox" name="Feature" >z</br>	
 											<input type="checkbox" name="Feature" >Architecture</br>	
 											<input type="checkbox" name="Feature" >x86</br>	
@@ -150,11 +155,15 @@
 											<input type="checkbox" name="Feature" >HPPA</br>	
 											<input type="checkbox" name="Feature" >M68K</br>	
 											<input type="checkbox" name="Feature" >MIPSel</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Host CPU"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Host CPU','id2Host CPU');">Changer type</button></br>
+							
 								</br>	
 								<label>Name : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Guest OS :</label></br>
+									  <p id="id1Guest OS">
 											<input type="checkbox" name="Feature" >Depends on target machine</br>	
 											<input type="checkbox" name="Feature" >for example includes MIPS Malta that runs Linux or SMP-Linux; and includes public API which enables users to write custom peripheral and system models</br>	
 											<input type="checkbox" name="Feature" >Supported: Solaris. Without Oracle support: Linux</br>	
@@ -309,7 +318,10 @@
 											<input type="checkbox" name="Feature" >Linux ABI</br>	
 											<input type="checkbox" name="Feature" >Windows Server 2003</br>	
 											<input type="checkbox" name="Feature" >Windows Server 2008</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Guest OS"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Guest OS','id2Guest OS');">Changer type</button></br>
+							
 								</br>	
 								<label>Creator : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	

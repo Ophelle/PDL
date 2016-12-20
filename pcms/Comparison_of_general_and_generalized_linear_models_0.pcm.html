@@ -32,22 +32,34 @@
 								<label>Function in R : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Typical estimation method :</label></br>
+									  <p id="id1Typical estimation method">
 											<input type="checkbox" name="Feature" >Least squares</br>	
 											<input type="checkbox" name="Feature" >best linear unbiased prediction</br>	
 											<input type="checkbox" name="Feature" >Maximum likelihood or Bayesian</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Typical estimation method"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Typical estimation method','id2Typical estimation method');">Changer type</button></br>
+							
 								</br>	
 								<label>Command in SPSS :</label></br>
+									  <p id="id1Command in SPSS">
 											<input type="checkbox" name="Feature" >regression</br>	
 											<input type="checkbox" name="Feature" >glm</br>	
 											<input type="checkbox" name="Feature" >genlin</br>	
 											<input type="checkbox" name="Feature" >logistic regression</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Command in SPSS"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Command in SPSS','id2Command in SPSS');">Changer type</button></br>
+							
 								</br>	
 								<label>Procedure in SAS :</label></br>
+									  <p id="id1Procedure in SAS">
 											<input type="checkbox" name="Feature" >PROC GLM</br>	
 											<input type="checkbox" name="Feature" >PROC MIXED</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Procedure in SAS"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Procedure in SAS','id2Procedure in SAS');">Changer type</button></br>
+							
 								</br>	
 								<label>Command in Stata : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
@@ -58,6 +70,7 @@
 								<label>Command in EViews : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Special cases :</label></br>
+									  <p id="id1Special cases">
 											<input type="checkbox" name="Feature" >linear regression</br>	
 											<input type="checkbox" name="Feature" >logistic regression</br>	
 											<input type="checkbox" name="Feature" >Poisson regression</br>	
@@ -67,7 +80,10 @@
 											<input type="checkbox" name="Feature" >MANOVA</br>	
 											<input type="checkbox" name="Feature" >MANCOVA</br>	
 											<input type="checkbox" name="Feature" >mixed model</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+									   </p>
+										<input  style="display:none;" id ="id2Special cases"type="text"/> 
+										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Special cases','id2Special cases');">Changer type</button></br>
+							
 						<script>
 								$("#0").typeahead({
 									name:"list0",
