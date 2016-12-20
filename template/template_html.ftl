@@ -53,19 +53,15 @@
 								<label>${key} :</label></br>
 								 <#list ListMultiple as keys, valueMultiple>
 									<#if key == keys>
-									  <p id="id1${key}">
 										<#list valueMultiple as valuemiltipe>
 											<input type="${value}" name="Feature" >${valuemiltipe}</br>	
 										</#list>
-									   </p>
 									</#if>
 								 </#list>
 								<#list getAllTypesValue as keys, valueAll>
 									<#list valueAll as valueAll>
 										<#if valueAll=="string" >
-										<input  style="display:none;" id ="id2${key}"type="text"/> 
-										<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1${key}','id2${key}');">Changer type</button></br>
-										<#break>
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br><#break>
 										</#if>		
 									</#list>
 									<#break>

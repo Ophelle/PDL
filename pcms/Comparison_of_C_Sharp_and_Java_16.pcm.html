@@ -30,54 +30,40 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Cannot create an array where the component type is a type parameter :</label></br>
-									  <p id="id1Cannot create an array where the component type is a type parameter">
 											<input type="checkbox" name="Feature" >Type parameters represent actual</br>	
 											<input type="checkbox" name="Feature" >discrete classes and can be used like any other type within the generic definition.</br>	
-									   </p>
 							
 								</br>	
 								<label>Cannot use primitive types as type parameters; instead, the developer must use the wrapper type corresponding to the primitive type. This incurs extra performance overhead by requiring boxing and unboxing conversions as well a memory and garbage collection pressure, as the wrappers will be heap-allocated as opposed to stack-allocated. :</label></br>
-									  <p id="id1Cannot use primitive types as type parameters; instead, the developer must use the wrapper type corresponding to the primitive type. This incurs extra performance overhead by requiring boxing and unboxing conversions as well a memory and garbage collection pressure, as the wrappers will be heap-allocated as opposed to stack-allocated.">
 											<input type="checkbox" name="Feature" >Primitive and value types are allowed as type parameters in generic realizations. At runtime code will be synthesized and compiled for each unique combination of type parameters upon first use. Generics that are realized with primitive</br>	
 											<input type="checkbox" name="Feature" >value type do not require boxing</br>	
 											<input type="checkbox" name="Feature" >unboxing conversions.</br>	
-									   </p>
 							
 								</br>	
 								<label>Type checks and downcasts are injected into client code (the code referencing the generics). Compared to non-generic code with manual casts, these casts will be the same, but compared to compile-time verified code that would not need runtime casts and checks, these operations represent a performance overhead. :</label></br>
-									  <p id="id1Type checks and downcasts are injected into client code (the code referencing the generics). Compared to non-generic code with manual casts, these casts will be the same, but compared to compile-time verified code that would not need runtime casts and checks, these operations represent a performance overhead.">
 											<input type="checkbox" name="Feature" >C#</br>	
 											<input type="checkbox" name="Feature" >.NET generics guarantee type-safety and are verified at compile time</br>	
 											<input type="checkbox" name="Feature" >making extra checks</br>	
 											<input type="checkbox" name="Feature" >casts are unnecessary at runtime. Hence</br>	
 											<input type="checkbox" name="Feature" >generic code will run faster than non-generic (or type-erased) code that require casts when handling non-generic or type-erased objects.</br>	
-									   </p>
 							
 								</br>	
 								<label>Generic exceptions are not allowed and a type parameter cannot be used in a catch clause :</label></br>
-									  <p id="id1Generic exceptions are not allowed and a type parameter cannot be used in a catch clause">
 											<input type="checkbox" name="Feature" >Can both define generic exceptions and use those in catch clauses</br>	
-									   </p>
 							
 								</br>	
 								<label>Type information is erased during compilation. Special extensions to reflection must be used to discover the original type. :</label></br>
-									  <p id="id1Type information is erased during compilation. Special extensions to reflection must be used to discover the original type.">
 											<input type="checkbox" name="Feature" >Type information about C# generic types is fully preserved at runtime</br>	
 											<input type="checkbox" name="Feature" >and allows complete reflection support as well as instantiation of generic types.</br>	
-									   </p>
 							
 								</br>	
 								<label>Cannot create new instances using a type parameter as the type :</label></br>
-									  <p id="id1Cannot create new instances using a type parameter as the type">
 											<input type="checkbox" name="Feature" >With a constructor constraint</br>	
 											<input type="checkbox" name="Feature" >generic methods or methods of generic classes can create instances of classes that have default constructors.</br>	
-									   </p>
 							
 								</br>	
 								<label>instanceof is not allowed with type parameters or concrete generic realizations :</label></br>
-									  <p id="id1instanceof is not allowed with type parameters or concrete generic realizations">
 											<input type="checkbox" name="Feature" >The is and as operators work the same for type parameters as for any other type.</br>	
-									   </p>
 							
 								</br>	
 								<label>Reflection cannot be used to construct new generic realizations. During compilation extra code (typecasts) are injected into the client code of generics. This precludes creating new realizations later. : </label></br> <input id="0" type="text" name="Feature"></br>
@@ -85,9 +71,7 @@
 								<label>Type parameters cannot be used in declarations of static fields/methods or in definitions of static inner classes : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Cannot create an array where the component type is a generic realization (concrete parameterized type) :</label></br>
-									  <p id="id1Cannot create an array where the component type is a generic realization (concrete parameterized type)">
 											<input type="checkbox" name="Feature" >A generic realization is a 1st class citizen and can be used as any other class; also an array component</br>	
-									   </p>
 							
 								</br>	
 								<label>There is no class literal for a concrete realization of a generic type : </label></br> <input id="2" type="text" name="Feature"></br>
