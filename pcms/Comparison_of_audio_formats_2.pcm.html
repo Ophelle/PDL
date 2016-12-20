@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of audio formats -  Multimedia frameworks support </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of audio formats -  Multimedia frameworks support </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>FFmpeg :</label></br>
+								<input type="radio" name="FeatureFFmpeg" value="oui">Yes <input type="radio" name="FeatureFFmpeg" value = "non">No <input type="radio" name="FeatureFFmpeg" value = "non">Partial </br>
+								
+								</br>	
+								<label>DirectShow : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>QuickTime : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>ACM : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>GStreamer : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Audio compression format : </label></br> <input id="4" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Yes (ffdshow)','No','Yes','Yes (ffdshow, Monogram)','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Yes (Perian)','No','Yes','Yes (flip4mac)','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Yes (ffdshow)','No','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Yes (GStreamer FFmpeg plug-in)','Yes (GStreamer Base Plug-ins, GStreamer FFmpeg plug-in)','No','Yes (GStreamer Ugly Plug-ins)','Yes (GStreamer FFmpeg plug-in, GStreamer DLL loader plugin + Binary Codec Packages)','Yes (GStreamer Ugly, GStreamer FFmpeg plug-in)','Yes (GStramer Good Plug-ins, GStreamer FFmpeg plug-in)','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['LPAC','QCELP','OptimFROG','Windows Media Audio v1','Meridian Lossless Packing','ATRAC3','Musepack','AAC','RealAudio','Monkey`s Audio','Cook Codec','True Audio (TTA)','Shorten','E-AC-3','8SVX','WavPack','Windows Media Audio v2','DTS-HD','AC3','Truespeech','HE-AAC','AMR','Speex','La','FLAC','Apple Lossless','DCA aka DTS','ATRAC3plus','MP3','Nellymoser Asao Codec in Flash','Sonic Audio','Vorbis','Windows Media Audio Lossless','Windows Media Audio Voice','Windows Media Audio Pro','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

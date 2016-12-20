@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of Symbian devices</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of Symbian devices</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Type of device : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Comment : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Release year : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>OS version : </label></br> <input style="display:block;" id="id1OS version" type="number" name="Feature">
+												<input style="display:none;" id="id2OS version" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1OS version','id2OS version');">Changer type</button></br>								
+								</br>	
+								<label>UI and version :</label></br>
+											<input type="checkbox" name="Feature" >S60 3rd Edition</br>	
+											<input type="checkbox" name="Feature" >Feature Pack 1</br>	
+											<input type="checkbox" name="Feature" >version 3.1</br>	
+											<input type="checkbox" name="Feature" >S60 2nd Edition</br>	
+											<input type="checkbox" name="Feature" >version 2</br>	
+											<input type="checkbox" name="Feature" >S60 5th Edition</br>	
+											<input type="checkbox" name="Feature" >version 5</br>	
+											<input type="checkbox" name="Feature" >S60 1st Edition</br>	
+											<input type="checkbox" name="Feature" >version 1.2</br>	
+											<input type="checkbox" name="Feature" >version 2.1</br>	
+											<input type="checkbox" name="Feature" >Feature Pack 2</br>	
+											<input type="checkbox" name="Feature" >version 3.2</br>	
+											<input type="checkbox" name="Feature" >version 3</br>	
+											<input type="checkbox" name="Feature" >Symbian^3</br>	
+											<input type="checkbox" name="Feature" >version 5.2</br>	
+											<input type="checkbox" name="Feature" >Feature Pack 3</br>	
+											<input type="checkbox" name="Feature" >version 2.8</br>	
+											<input type="checkbox" name="Feature" >Feature Pack 1 version</br>	
+											<input type="checkbox" name="Feature" >1.2</br>	
+											<input type="checkbox" name="Feature" >version 2.6</br>	
+											<input type="checkbox" name="Feature" >version 0.9</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Model : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Kernel : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Brand : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Operating System : </label></br> <input id="6" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Smartphone','Feature phone','Smartphone and game console','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','First model with UIQ 2.0','First model with UIQ 3.0','canceled, because Sendo went into administration','only model on S90','First model with UIQ 3.2','First S60 capacative touchscreen','First S60 touchscreen.First S60 5th','First model with UIQ 3.1','First Nokia with Symbian OS; first Series 60 (Now S60)) platform device; first Nokia with built-in camera.','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['','2009','2010','2005','2007','2002','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Motorola A925','Nokia 6670','Motorola RIZR Z8','Nokia 9210i','Sony Ericsson M600','Nokia C7-00','Nokia N80','Nokia E52','Nokia N92','Sony Ericsson P910','Nokia N71','Samsung SGH-i568','Nokia 6720 classic','Nokia 6260','Nokia N97 mini','Nokia 6730 classic','Nokia N73','Nokia N93i','Nokia E73','Nokia 5530 XpressMusic','Nokia E55','Nokia E70','Nokia E66','Samsung SGH-i458','Nokia 6290','Nokia C5-00','Nokia C5-03','Nokia N70','Nokia N95','Sony Ericsson Vivaz Pro','Nokia 3600','Nokia 6600','Samsung i8910','Nokia 5500 Sport','Nokia 6220 classic','Nokia 6788','Nokia 5800 Navigation Edition','DoCoMo F-08B','Nokia E61','Nokia 6121 classic','Sony Ericsson G700','Lenovo P930','Nokia 6681','Nokia 6790 surge','Nokia E72','Benq P30','Nokia 5700 XpressMusic','Nokia 6630','Motorola RIZR Z10','Samsung SGH-i450','Sony Ericsson W960','Nokia 6620','Nokia N-Gage','Siemens SX1','Motorola A1000','Nokia E51','Motorola M1000','Nokia 6788i','Nokia X6-00','Nokia N75','Nokia 9290','Nokia 6710 Navigator','LG KT615','Sony Ericsson P900','LG KT610','Nokia N78','Benq P31','DoCoMo SH-07B','Nokia X5-01','Panasonic X800','Nokia N86 8MP','Nokia 3230','Arima U300','Nokia N96','Samsung SGH-D720','Sony Ericsson Satio','Nokia 5320','Nokia N79','Sendo X2','Nokia N95 8GB','Nokia 9500','Sony Ericsson P1','LG KS10','Nokia C6-01','Nokia E50','Samsung SGH-i570','Nokia 6210 Navigator','Nokia 7650','Nokia N82','Nokia 9300i','Samsung SGH-D728','Sony Ericsson G900','Sony Ericsson Vivaz','Nokia 6124 classic','Nokia N91','Nokia 3660','Nokia 6700 slide','Nokia 5630 XpressMusic','Samsung SGH-Z600','Nokia E61i','Nokia E65','Nokia 5730 XpressMusic','Samsung SGH-i550','Nokia 6708','Nokia C6-00','Nokia 6110 Navigator','Motorola A920','Nokia 5233','Nokia 6682','Samsung SGH-G810','Nokia 3650','Nokia 7610','Nokia E60','Nokia N81','Nokia N81 8GB','DoCoMo F-07B','Nokia N91 8GB','Sony Ericsson W950','Nokia 5228','Nokia 6790 slide','Nokia N97','Nokia N8','Nokia 9300','Nokia 3620','Nokia 6760 slide','Nokia N77','Samsung SGH-i400','Nokia 5230','Nokia 9210','Arima U308','Nokia N90','Nokia 7710','Nokia N85','Nokia E5-00','Nokia E7-00','Nokia E75','Nokia E90 Communicator','Sony Ericsson P800','Nokia N76','Nokia 5800 XpressMusic','DoCoMo F-06B','Samsung SGH-D730','Nokia C5-01','Nokia E63','Samsung SGH-i550w','Nokia 5250','Panasonic X700','Nokia N72','Nokia N93','Nokia 3250','Samsung SGH-i408','Nokia 6650 fold','Samsung SGH-i520','Samsung SGH-i560','Nokia E71','Nokia X5-00','Sendo X','Nokia 6120 classic','Nokia 6680','Nokia E62','Nokia N-Gage QD','Sony Ericsson P990','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['','EKA2','EKA1','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['Nokia','Fujitsu','Motorola','LG','Sendo','Samsung','Sony Ericsson','Benq','Lenovo','Siemens','Panasonic','Arima','Sharp','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['Symbian OS','Symbian^1','Symbian^2','Symbian^3','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of EDA software - Free and Open Source Software (FOSS)</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of EDA software - Free and Open Source Software (FOSS)</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Comment :</label></br>
+											<input type="checkbox" name="Feature" >A printed circuit board design program for Microsoft Windows. FreePCB allows for up to 16 copper layers</br>	
+											<input type="checkbox" name="Feature" >both metric and English units</br>	
+											<input type="checkbox" name="Feature" >and export of designs in Gerber format. Boards can be partially or fully autorouted with the FreeRouting autorouter by using the FpcROUTE Specctra DSN file translator.</br>	
+											<input type="checkbox" name="Feature" >Verilator is the fastest free Verilog HDL simulator. It compiles synthesizable Verilog into cycle accurate C++ or SystemC code following 2-state synthesis (zero delay) semantics. Benchmarks reported on its website suggest it is several times faster than commercial event driven simulators such as ModelSim</br>	
+											<input type="checkbox" name="Feature" >NC-Verilog and VCS</br>	
+											<input type="checkbox" name="Feature" >while not quite as fast as commercial cycle accurate modeling tools such as Carbon ModelStudio and ARC VTOC.</br>	
+											<input type="checkbox" name="Feature" >KTechLab is a schematic capture and simulator. It is specifically geared toward mixed signal simulation of analog components and small digital processors.</br>	
+											<input type="checkbox" name="Feature" >schematic</br>	
+											<input type="checkbox" name="Feature" >simulation</br>	
+											<input type="checkbox" name="Feature" >PCB editor</br>	
+											<input type="checkbox" name="Feature" >gerber view</br>	
+											<input type="checkbox" name="Feature" >Full package for schematic and board design</br>	
+											<input type="checkbox" name="Feature" >etc. Design rule checking. User-defined symbols and footprints. Gerber</br>	
+											<input type="checkbox" name="Feature" >drill file creation. Sophisticated graphic interface. Active user community.</br>	
+											<input type="checkbox" name="Feature" >Used to produce netlists and publish high-quality drawings.</br>	
+											<input type="checkbox" name="Feature" >VLSI circuit design tool with connectivity at all levels. Can also be used for schematic entry and PCB design.</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Autorouter : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Architecture : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Name : </label></br> <input id="3" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Yes','','Built-in, or FreeRouting','no','n/a','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['w32','*BSD, Java','*BSD, Linux, Mac','Linux','*BSD, Windows, Linux, Mac','Posix','Linux, Solaris, Mac, NetBSD, FreeBSD, w32','','Unix','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['GPL','GNU GPL','BSD license','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Oregano','Icarus Verilog','Quite Universal Circuit Simulator','KTechLab','Verilator','gEDA','Electric','KiCad','XCircuit','FreePCB','Magic','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

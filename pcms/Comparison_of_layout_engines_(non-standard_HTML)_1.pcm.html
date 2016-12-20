@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of layout engines (non-standard HTML) - Deprecated HTML attributes</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of layout engines (non-standard HTML) - Deprecated HTML attributes</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Trident : </label></br> <input style="display:block;" id="id1Trident" type="number" name="Feature">
+								
+								</br>	
+								<label>Element :</label></br>
+											<input type="checkbox" name="Feature" >hr</br>	
+											<input type="checkbox" name="Feature" >pre</br>	
+											<input type="checkbox" name="Feature" >td</br>	
+											<input type="checkbox" name="Feature" >th</br>	
+											<input type="checkbox" name="Feature" >caption</br>	
+											<input type="checkbox" name="Feature" >div</br>	
+											<input type="checkbox" name="Feature" >fieldset</br>	
+											<input type="checkbox" name="Feature" >h1</br>	
+											<input type="checkbox" name="Feature" >h2</br>	
+											<input type="checkbox" name="Feature" >h3</br>	
+											<input type="checkbox" name="Feature" >h4</br>	
+											<input type="checkbox" name="Feature" >h5</br>	
+											<input type="checkbox" name="Feature" >h6</br>	
+											<input type="checkbox" name="Feature" >img</br>	
+											<input type="checkbox" name="Feature" >input</br>	
+											<input type="checkbox" name="Feature" >legend</br>	
+											<input type="checkbox" name="Feature" >p</br>	
+											<input type="checkbox" name="Feature" >object</br>	
+											<input type="checkbox" name="Feature" >table</br>	
+											<input type="checkbox" name="Feature" >dl</br>	
+											<input type="checkbox" name="Feature" >ul</br>	
+											<input type="checkbox" name="Feature" >ol</br>	
+											<input type="checkbox" name="Feature" >basefont</br>	
+											<input type="checkbox" name="Feature" >font</br>	
+											<input type="checkbox" name="Feature" >body</br>	
+											<input type="checkbox" name="Feature" >tr</br>	
+											<input type="checkbox" name="Feature" >li</br>	
+							
+								</br>	
+								<label>Gecko : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Attribute : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Presto : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>WebKit : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Alternative solution : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>KHTML : </label></br> <input id="5" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['','Yes','No','Partial','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['hspace','vlink','clear','link','height','version','type','size','align','start','border','alink','width','color','vspace','bgcolor','background','text','noshade','nowrap','language','compact','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['','Yes','No','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Yes','','Partial','No','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['CSS','None','DTD','The type attribute','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['','Yes','No','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

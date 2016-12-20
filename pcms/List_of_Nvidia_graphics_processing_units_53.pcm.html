@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>List of Nvidia graphics processing units - Tesla</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>List of Nvidia graphics processing units - Tesla</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Shaders - Clock (MHz) : </label></br> <input style="display:block;" id="id1Shaders - Clock (MHz)" type="number" name="Feature">
+								
+								</br>	
+								<label>Shaders - Thread Processors(total) : </label></br> <input style="display:block;" id="id1Shaders - Thread Processors(total)" type="number" name="Feature">
+								
+								</br>	
+								<label>Model : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Processing Power (peak)  GFLOPS - Double Precision(DP) FMA : </label></br> <input style="display:block;" id="id1Processing Power (peak)  GFLOPS - Double Precision(DP) FMA" type="number" name="Feature">
+								
+								</br>	
+								<label>Processing Power (peak)  GFLOPS - Single Precision(SP) MAD(MUL+ADD) : </label></br> <input style="display:block;" id="id1Processing Power (peak)  GFLOPS - Single Precision(SP) MAD(MUL+ADD)" type="number" name="Feature">
+								
+								</br>	
+								<label>Processing Power (peak)  GFLOPS - Single Precision(SP) Total(MUL+ADD+SF) : </label></br> <input style="display:block;" id="id1Processing Power (peak)  GFLOPS - Single Precision(SP) Total(MUL+ADD+SF)" type="number" name="Feature">
+								
+								</br>	
+								<label>Notes/Form factor : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Compute capability : </label></br> <input style="display:block;" id="id1Compute capability" type="number" name="Feature">
+								
+								</br>	
+								<label>Archi-tecture : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label># of GPUs : </label></br> <input style="display:block;" id="id1# of GPUs" type="number" name="Feature">
+								
+								</br>	
+								<label>Configuration : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Core clock(MHz) : </label></br> <input style="display:block;" id="id1Core clock(MHz)" type="number" name="Feature">
+								
+								</br>	
+								<label>TDP (watts) : </label></br> <input style="display:block;" id="id1TDP (watts)" type="number" name="Feature">
+								
+								</br>	
+								<label>Memory - Bus type : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Memory(MB) : </label></br> <input style="display:block;" id="id1Memory - Memory(MB)" type="number" name="Feature">
+								
+								</br>	
+								<label>Memory - Bus width(bit) : </label></br> <input style="display:block;" id="id1Memory - Bus width(bit)" type="number" name="Feature">
+								
+								</br>	
+								<label>Memory - Bandwidth(total)(GB/s) : </label></br> <input style="display:block;" id="id1Memory - Bandwidth(total)(GB/s)" type="number" name="Feature">
+								
+								</br>	
+								<label>Memory - Clock (MHz) : </label></br> <input style="display:block;" id="id1Memory - Clock (MHz)" type="number" name="Feature">
+								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['M2050','K10','M2070/M2070Q','C1060','K20','S1070','K80','2200 S4','M2090','C2075','C2050','C870','C2070','K20X','K40','S1075','D870','S870','2200 D2','S2050','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Full-height video cardIEEE 754-2008 FMA capabilities','display readback Via PCI-Express Gen 2.01U server','1U Rackmount External GPUsconnect via 2x PCIe (x8 or x16)','Internal GPU(Full-height card)','Internal GPU  (Full-height card)','Computing ModuleIEEE 754-2008 FMA capabilities','1U RackIEEE 754-2008 FMA capabilities','Computing Module IEEE 754-2008 FMA capabilities','4 dual-link DVIDeskside or 3U rackmount','1U Rackmount External GPUs','Deskside External GPUs','1U Rackmount External GPUsconnect via 1x PCIe (x8 or x16)','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['GT200','GT200GL','GF100','GF110','G80','GK110B','GK104','GK110','GK210','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['S1075GPU Computing Server','C2050GPU Computing Module','C870GPU Computing Module','C2070GPU Computing Module','Quadro Plex Visual Computing System','S2050GPU Computing Server','K20XGPU Computing Module','S870GPU Computing Server','C1060GPU Computing Module','M2070/M2070QGPU Computing Module','K80GPU Computing Module','K20GPU Computing Module','D870Deskside Computer','C2075GPU Computing Module','M2090GPU Computing Module','K40GPU Computing Module','K10GPU Computing Module','M2050GPU Computing Module','S1070GPU Computing Server','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of programming languages (string functions) - CharAt</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of programming languages (string functions) - CharAt</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Format : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Base index : </label></br> <input style="display:block;" id="id1Base index" type="number" name="Feature">
+												<input style="display:none;" id="id2Base index" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Base index','id2Base index');">Changer type</button></br>								
+								</br>	
+								<label>Languages : </label></br> <input id="1" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['(get string i)','string.at(i)','lists:nth(i, string)','string index string i','(elt string i)','string[i]','Mid(string,i,1)','string{i}','string at: i','string (i:1)','MID$(string,i,1)','string.Chars(i)','String.sub (string, i)','string(i:i)','(char string i)','StringTake[string, {i}]','(string-ref string i)','string(i)','[string characterAtIndex:i]','string@i','string !! i','substr(string, i, 1)','string.[i]','string.sub(string, i, i)  (string):sub(i, i)','string.charAt(i)','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['VB.NET','VB','Perl','PHP (deprecated in 5.3)','Mathematica','COBOL','Tcl','Erlang','OCaml, F#','PL/I','Standard ML','Ada','C++ (STL) (w/ bounds checking)','C, C++, C#, Cobra, D, FreeBASIC, Go, Python, PHP, Ruby, Windows PowerShell, JavaScript, Ya','Lua','BASIC','Smalltalk (w/ bounds checking)','Scheme','Eiffel','Fortran','Common Lisp','Objective-C (NSString * only)','ALGOL 68, Pascal, Object Pascal (Delphi), Seed7','ISLISP','Java, JavaScript','Haskell','Clojure','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

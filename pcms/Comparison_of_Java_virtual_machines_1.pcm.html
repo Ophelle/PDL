@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of Java virtual machines - Technical information</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of Java virtual machines - Technical information</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Status : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Performance - Interpretation :</label></br>
+								<input type="radio" name="FeaturePerformance - Interpretation" value="oui">Yes <input type="radio" name="FeaturePerformance - Interpretation" value = "non">No <input type="radio" name="FeaturePerformance - Interpretation" value = "non">Partial </br>
+											<input name="FeaturePerformance - Interpretation" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Performance - AOT :</label></br>
+								<input type="radio" name="FeaturePerformance - AOT" value="oui">Yes <input type="radio" name="FeaturePerformance - AOT" value = "non">No <input type="radio" name="FeaturePerformance - AOT" value = "non">Partial </br>
+											<input name="FeaturePerformance - AOT" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Performance - JIT :</label></br>
+								<input type="radio" name="FeaturePerformance - JIT" value="oui">Yes <input type="radio" name="FeaturePerformance - JIT" value = "non">No <input type="radio" name="FeaturePerformance - JIT" value = "non">Partial </br>
+											<input name="FeaturePerformance - JIT" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>JVM : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Supported class libraries - OpenJDK :</label></br>
+								<input type="radio" name="FeatureSupported class libraries - OpenJDK" value="oui">Yes <input type="radio" name="FeatureSupported class libraries - OpenJDK" value = "non">No <input type="radio" name="FeatureSupported class libraries - OpenJDK" value = "non">Partial </br>
+											<input name="FeatureSupported class libraries - OpenJDK" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Supported class libraries - GNU Classpath :</label></br>
+								<input type="radio" name="FeatureSupported class libraries - GNU Classpath" value="oui">Yes <input type="radio" name="FeatureSupported class libraries - GNU Classpath" value = "non">No <input type="radio" name="FeatureSupported class libraries - GNU Classpath" value = "non">Partial </br>
+											<input name="FeatureSupported class libraries - GNU Classpath" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Supported class libraries - Other : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Latest supported Java version : </label></br> <input style="display:block;" id="id1Latest supported Java version" type="number" name="Feature">
+												<input style="display:none;" id="id2Latest supported Java version" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Latest supported Java version','id2Latest supported Java version');">Changer type</button></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Commercially available','','Interpreter-only port of OpenJDK using almost no assembly language and designed to be very portable.','Available free, commercial support optional','Unmaintained','Reference implementation.','Translates Java to C and compiles it with a C compiler.','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['VMKit J3','Jato VM','Zing','Skelmir','IKVM.NET','JAmiga','CACAO','JC virtual machine','GCJ','HotSpot, Java SE embedded edition','JamVM','HotSpot, Oracle JDK edition','Jikes RVM','Mysaifu JVM','Avian','SableVM','HotSpot, OpenJDK edition','HotSpot, Zero port','Kaffe','Zulu','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

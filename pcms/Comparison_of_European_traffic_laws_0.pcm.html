@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of European traffic laws -  General </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of European traffic laws -  General </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Country : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Triangle required :</label></br>
+								<input type="radio" name="FeatureTriangle required" value="oui">Yes <input type="radio" name="FeatureTriangle required" value = "non">No <input type="radio" name="FeatureTriangle required" value = "non">Partial </br>
+											<input name="FeatureTriangle required" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Spare bulb required :</label></br>
+								<input type="radio" name="FeatureSpare bulb required" value="oui">Yes <input type="radio" name="FeatureSpare bulb required" value = "non">No <input type="radio" name="FeatureSpare bulb required" value = "non">Partial </br>
+											<input name="FeatureSpare bulb required" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Tow rope required :</label></br>
+								<input type="radio" name="FeatureTow rope required" value="oui">Yes <input type="radio" name="FeatureTow rope required" value = "non">No <input type="radio" name="FeatureTow rope required" value = "non">Partial </br>
+											<input name="FeatureTow rope required" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Speed limit on single carriageway (km/h) : </label></br> <input style="display:block;" id="id1Speed limit on single carriageway (km/h)" type="number" name="Feature">
+												<input style="display:none;" id="id2Speed limit on single carriageway (km/h)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Speed limit on single carriageway (km/h)','id2Speed limit on single carriageway (km/h)');">Changer type</button></br>								
+								</br>	
+								<label>Speed limit in urban area : </label></br> <input style="display:block;" id="id1Speed limit in urban area" type="number" name="Feature">
+												<input style="display:none;" id="id2Speed limit in urban area" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Speed limit in urban area','id2Speed limit in urban area');">Changer type</button></br>								
+								</br>	
+								<label>Toll roads : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Minimum driver's age : </label></br> <input style="display:block;" id="id1Minimum driver's age" type="number" name="Feature">
+												<input style="display:none;" id="id2Minimum driver's age" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Minimum driver's age','id2Minimum driver's age');">Changer type</button></br>								
+								</br>	
+								<label>Speed limit on motorway (km/h) : </label></br> <input style="display:block;" id="id1Speed limit on motorway (km/h)" type="number" name="Feature">
+												<input style="display:none;" id="id2Speed limit on motorway (km/h)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Speed limit on motorway (km/h)','id2Speed limit on motorway (km/h)');">Changer type</button></br>								
+								</br>	
+								<label>Permitted alcohol level (%) : </label></br> <input style="display:block;" id="id1Permitted alcohol level (%)" type="number" name="Feature">
+												<input style="display:none;" id="id2Permitted alcohol level (%)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Permitted alcohol level (%)','id2Permitted alcohol level (%)');">Changer type</button></br>								
+								</br>	
+								<label>Minimum child age (front seat) : </label></br> <input style="display:block;" id="id1Minimum child age (front seat)" type="number" name="Feature">
+												<input style="display:none;" id="id2Minimum child age (front seat)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Minimum child age (front seat)','id2Minimum child age (front seat)');">Changer type</button></br>								
+								</br>	
+								<label>Country code : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Seatbelt required : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>First aid required : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Fire extinguisher required : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Speed limit on dual carriageway (km/h) : </label></br> <input id="6" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Belarus','Greece','Lithuania','Finland','Liechtenstein','Iceland','Cyprus','Spain','France','Croatia','Ireland','Russia','Slovakia','Austria','Denmark','Estonia','Macedonia','Czech Republic','United Kingdom','Sweden','Latvia','Malta','Norway','Germany','Netherlands','Albania','Italy','Andorra','San Marino','Moldova','Ukraine','Montenegro','Bosnia and Herzegovina','Country','Slovenia','Turkey','Belgium','Portugal','Romania','Hungary','Serbia','Luxembourg','Switzerland','Bulgaria','Monaco','Poland','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['No','','Yes','Toll roads','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['AND','L','M','NL','FL','LT','AL','EST','MK','PT','PL','MC','CZ','HR','MNE','I','SLO','SRB','TR','B','FIN','RO','CY','F','N','IS','DK','H','RUS','BY','LV','MD','BIH','UA','A','GB','GR','SK','D','BG','Country code','RSM','S','CH','E','IRL','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['All','Front','N/A','Seatbelt required','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Recommended','Yes','First aid required','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['Yes','Recommended','Fire extinguisher required','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['110','N/A','120','100','130','100 (120 on expressways)','110 (rain/wet 100)','112','130 (urban 80)','Speed limit on dual carriageway (km/h)','no (130 recommended)','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

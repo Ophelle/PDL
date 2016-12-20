@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of HTML editors - Early HTML comparisons</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of HTML editors - Early HTML comparisons</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Author : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Program : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Integrated Browser :</label></br>
+								<input type="radio" name="FeatureIntegrated Browser" value="oui">Yes <input type="radio" name="FeatureIntegrated Browser" value = "non">No <input type="radio" name="FeatureIntegrated Browser" value = "non">Partial </br>
+											<input name="FeatureIntegrated Browser" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Version : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>HTML Compliant : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>System : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Cost : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Forms :</label></br>
+								<input type="radio" name="FeatureForms" value="oui">Yes <input type="radio" name="FeatureForms" value = "non">No <input type="radio" name="FeatureForms" value = "non">Partial </br>
+											<input name="FeatureForms" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Display : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Tables :</label></br>
+								<input type="radio" name="FeatureTables" value="oui">Yes <input type="radio" name="FeatureTables" value = "non">No <input type="radio" name="FeatureTables" value = "non">Partial </br>
+											<input name="FeatureTables" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Andrzej Stochniol','MediaTech','SoftQuad','Liem Bahenmann','SiliconGraphics','University of Chicago','Jochen Schales','GRIF','DART Software','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['WebMagic','Live Markup','Symposia','asWedit','Phoenix','HoTMetaL','HoTMetaL pro','Webtor','Tkhtml','WebPages','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['0.1.7','1.7','1','1.1','.91prealpha2','1.0+','0.8','2.3','16b4a','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['No','HTML 2','HTML 3','HTML 1','HTML2','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Unix','NextStep','Windows','Unix,Windows','Irix','Unix, Windows, Macintosh','Macintosh','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['commercial','freeware','beta','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['WYSIWYG','source','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

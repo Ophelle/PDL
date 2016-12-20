@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of cluster software -  Technical information </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of cluster software -  Technical information </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>CPU scavenging :</label></br>
+								<input type="radio" name="FeatureCPU scavenging" value="oui">Yes <input type="radio" name="FeatureCPU scavenging" value = "non">No <input type="radio" name="FeatureCPU scavenging" value = "non">Partial </br>
+								
+								</br>	
+								<label>programation language : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Integrity : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Authentification :</label></br>
+											<input type="checkbox" name="Feature" >SSH</br>	
+											<input type="checkbox" name="Feature" >munge</br>	
+											<input type="checkbox" name="Feature" >Munge</br>	
+											<input type="checkbox" name="Feature" >None</br>	
+											<input type="checkbox" name="Feature" >Kerberos</br>	
+											<input type="checkbox" name="Feature" >GSI</br>	
+											<input type="checkbox" name="Feature" >SSL</br>	
+											<input type="checkbox" name="Feature" >Password</br>	
+											<input type="checkbox" name="Feature" >File System</br>	
+											<input type="checkbox" name="Feature" >Remote File System</br>	
+											<input type="checkbox" name="Feature" >Windows</br>	
+											<input type="checkbox" name="Feature" >Claim To Be</br>	
+											<input type="checkbox" name="Feature" >Anonymous</br>	
+							
+								</br>	
+								<label>Heterogeneous/ Homogeneous exec node : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Jobs priority :</label></br>
+								<input type="radio" name="FeatureJobs priority" value="oui">Yes <input type="radio" name="FeatureJobs priority" value = "non">No <input type="radio" name="FeatureJobs priority" value = "non">Partial </br>
+								
+								</br>	
+								<label>Global File System + Kerberos : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Max exec node : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Job checkpointing : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Queue type : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Global File System :</label></br>
+											<input type="checkbox" name="Feature" >None</br>	
+											<input type="checkbox" name="Feature" >NFS</br>	
+											<input type="checkbox" name="Feature" >AFS</br>	
+											<input type="checkbox" name="Feature" >Arbitrary</br>	
+											<input type="checkbox" name="Feature" >e.g. NFS</br>	
+											<input type="checkbox" name="Feature" >Lustre</br>	
+											<input type="checkbox" name="Feature" >HDFS</br>	
+											<input type="checkbox" name="Feature" >any</br>	
+							
+								</br>	
+								<label>Encryption : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Software : </label></br> <input id="8" type="text" name="Feature"></br>
+								</br>	
+								<label>SMP aware :</label></br>
+								<input type="radio" name="FeatureSMP aware" value="oui">Yes <input type="radio" name="FeatureSMP aware" value = "non">No <input type="radio" name="FeatureSMP aware" value = "non">Partial </br>
+								
+								</br>	
+								<label>Max job submitted : </label></br> <input id="9" type="text" name="Feature"></br>
+								</br>	
+								<label>Parallel job :</label></br>
+								<input type="radio" name="FeatureParallel job" value="oui">Yes <input type="radio" name="FeatureParallel job" value = "non">No <input type="radio" name="FeatureParallel job" value = "non">Partial </br>
+								
+								</br>	
+								<label>Group priority :</label></br>
+								<input type="radio" name="FeatureGroup priority" value="oui">Yes <input type="radio" name="FeatureGroup priority" value = "non">No <input type="radio" name="FeatureGroup priority" value = "non">Partial </br>
+								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['C','C/C++','C++','Perl, Ocaml, Ruby','','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','Integrity','None, MD5','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Fully heterogeneous','Heterogeneous Linux','','Heterogeneous','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Not official, hack with ACL and NFS4','','AFS','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['','tested 120k','commercial deployments with many tens of thousands hosts','tested 80k','tested','tested ~10000?','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['','Yes','Yes, with support for user, kernel or library level checkpointing environments','Yes (blcr)','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['Multifactor Fair-share','Programmable','Batch, interactive, checkpointing, parallel and combinations','','Configurable','Fair-share with some programmability','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['None','None, Triple DES, BLOWFISH','','Encryption','']
+								});
+								$("#8").typeahead({
+									name:"list8",
+									local : ['Slurm','Condor','Torque','OAR','Univa Grid Engine','OpenLava','Platform LSF','']
+								});
+								$("#9").typeahead({
+									name:"list9",
+									local : ['tested ~100000?','','tested','tested >20k','>300K tested in commercial deployments','tested 100k','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

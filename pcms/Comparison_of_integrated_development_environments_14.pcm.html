@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of integrated development environments -  {{anchor|Pascal|Object Pascal}}Pascal, Object Pascal </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of integrated development environments -  {{anchor|Pascal|Object Pascal}}Pascal, Object Pascal </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Windows :</label></br>
+								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
+								
+								</br>	
+								<label>Other platforms :</label></br>
+											<input type="checkbox" name="Feature" >FreeBSD</br>	
+											<input type="checkbox" name="Feature" >OpenBSD</br>	
+											<input type="checkbox" name="Feature" >NetBSD</br>	
+											<input type="checkbox" name="Feature" >Solaris</br>	
+											<input type="checkbox" name="Feature" >other Unix</br>	
+											<input type="checkbox" name="Feature" >JVM</br>	
+											<input type="checkbox" name="Feature" >Mono</br>	
+											<input type="checkbox" name="Feature" >Cocoa</br>	
+											<input type="checkbox" name="Feature" >Cocoa Touch</br>	
+											<input type="checkbox" name="Feature" >cross-compile to Android</br>	
+											<input type="checkbox" name="Feature" >iOS</br>	
+											<input type="checkbox" name="Feature" >AmigaOS</br>	
+											<input type="checkbox" name="Feature" >Android</br>	
+											<input type="checkbox" name="Feature" >Game Boy Advance</br>	
+											<input type="checkbox" name="Feature" >Haiku</br>	
+											<input type="checkbox" name="Feature" >IBM AIX</br>	
+											<input type="checkbox" name="Feature" >MorphOS</br>	
+											<input type="checkbox" name="Feature" >MS-DOS</br>	
+											<input type="checkbox" name="Feature" >Nintendo DS</br>	
+											<input type="checkbox" name="Feature" >Nintendo Wii</br>	
+											<input type="checkbox" name="Feature" >OS</br>	
+											<input type="checkbox" name="Feature" >2</br>	
+											<input type="checkbox" name="Feature" >Windows CE</br>	
+							
+								</br>	
+								<label>Debugger :</label></br>
+								<input type="radio" name="FeatureDebugger" value="oui">Yes <input type="radio" name="FeatureDebugger" value = "non">No <input type="radio" name="FeatureDebugger" value = "non">Partial </br>
+								
+								</br>	
+								<label>Latest stable release :</label></br>
+											<input type="checkbox" name="Feature" >5.0 </br>	
+											<input type="checkbox" name="Feature" >August 2011</br>	
+											<input type="checkbox" name="Feature" >1.4.0 </br>	
+											<input type="checkbox" name="Feature" >April 19</br>	
+											<input type="checkbox" name="Feature" >2015</br>	
+											<input type="checkbox" name="Feature" >2.6.4 </br>	
+											<input type="checkbox" name="Feature" >March 11</br>	
+											<input type="checkbox" name="Feature" >2014</br>	
+											<input type="checkbox" name="Feature" >3.4a </br>	
+											<input type="checkbox" name="Feature" >2014-08-15</br>	
+											<input type="checkbox" name="Feature" >XE8 </br>	
+											<input type="checkbox" name="Feature" >April 7</br>	
+											<input type="checkbox" name="Feature" >3.3 CANDIDATE </br>	
+											<input type="checkbox" name="Feature" >April 9</br>	
+											<input type="checkbox" name="Feature" >2011</br>	
+							
+								</br>	
+								<label>Linux :</label></br>
+								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
+								
+								</br>	
+								<label>Mobiles :</label></br>
+								<input type="radio" name="FeatureMobiles" value="oui">Yes <input type="radio" name="FeatureMobiles" value = "non">No <input type="radio" name="FeatureMobiles" value = "non">Partial </br>
+								
+								</br>	
+								<label>GUI builder :</label></br>
+								<input type="radio" name="FeatureGUI builder" value="oui">Yes <input type="radio" name="FeatureGUI builder" value = "non">No <input type="radio" name="FeatureGUI builder" value = "non">Partial </br>
+								
+								</br>	
+								<label>IDE : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Developer : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Mac OS X :</label></br>
+								<input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </br>
+								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Lazarus','PocketStudio','MSEide','Delphi','Free Pascal IDE','Visual Studio via Oxygene','MIDletPascal','KDevelop','Morfik','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['RemObjects Software','Volunteers','Code Research Laboratories','KDevelop Team','winsoft','Martin Schreiber','Embarcadero Technologies','Morfik Technology Pty Ltd.','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['GPL','Proprietary','Proprietary; free compiler','LGPL with static linking exception','GPL; LGPL with static linking exception for the library MSEgui','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

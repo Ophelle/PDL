@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of Macintosh models - Expansion</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of Macintosh models - Expansion</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Memory Max : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>User-replaceable HDD? :</label></br>
+								<input type="radio" name="FeatureUser-replaceable HDD?" value="oui">Yes <input type="radio" name="FeatureUser-replaceable HDD?" value = "non">No <input type="radio" name="FeatureUser-replaceable HDD?" value = "non">Partial </br>
+											<input name="FeatureUser-replaceable HDD?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>HDD bays : </label></br> <input style="display:block;" id="id1HDD bays" type="number" name="Feature">
+												<input style="display:none;" id="id2HDD bays" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1HDD bays','id2HDD bays');">Changer type</button></br>								
+								</br>	
+								<label>Expansion slots :</label></br>
+								<input type="radio" name="FeatureExpansion slots" value="oui">Yes <input type="radio" name="FeatureExpansion slots" value = "non">No <input type="radio" name="FeatureExpansion slots" value = "non">Partial </br>
+											<input name="FeatureExpansion slots" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Model : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory slots : </label></br> <input style="display:block;" id="id1Memory slots" type="number" name="Feature">
+												<input style="display:none;" id="id2Memory slots" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Memory slots','id2Memory slots');">Changer type</button></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['32 GB','8 GB','16GB','8 GB (21.5") 16 GB (27")','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['MacBook Pro','Mac Pro','MacBook Air','iMac','Mac Mini','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

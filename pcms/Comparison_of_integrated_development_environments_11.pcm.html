@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of integrated development environments -  Java </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of integrated development environments -  Java </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Written in Java :</label></br>
+								<input type="radio" name="FeatureWritten in Java" value="oui">Yes <input type="radio" name="FeatureWritten in Java" value = "non">No <input type="radio" name="FeatureWritten in Java" value = "non">Partial </br>
+								
+								</br>	
+								<label>GUI builder :</label></br>
+								<input type="radio" name="FeatureGUI builder" value="oui">Yes <input type="radio" name="FeatureGUI builder" value = "non">No <input type="radio" name="FeatureGUI builder" value = "non">Partial </br>
+								
+								</br>	
+								<label>Windows :</label></br>
+								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
+								
+								</br>	
+								<label>IDE : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Mac OS X :</label></br>
+								<input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </br>
+								
+								</br>	
+								<label>Linux :</label></br>
+								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
+								
+								</br>	
+								<label>Other platforms : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['JDeveloper','Geany','BlueJ','IntelliJ IDEA','jGRASP','Xcode (Apple)','Eclipse JDT IBM','JCreator','Rational Application Developer','Servoy','Codenvy','DrJava','JBuilder','Greenfoot','NetBeans','KDevelop','MyEclipse','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','FreeBSD, IBM AIX, OpenBSD, Solaris, other Unix','generic JVM','Solaris','IBM AIX, Solaris','FreeBSD, JVM, Solaris','FreeBSD, OpenBSD, Solaris','OpenBSD, Solaris','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['GPL','Proprietary (freeware)','Proprietary','Proprietary OTN JDeveloper License (freeware)','EPL','Community Edition:  Apache License v2.0, Ultimate Edition: proprietary','Permissive','Cloud IDE','CDDL, GPL2','GPL2+GNU linking exception','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

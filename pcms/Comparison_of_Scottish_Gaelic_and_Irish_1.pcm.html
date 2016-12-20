@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of Scottish Gaelic and Irish - Differences in vocabulary</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of Scottish Gaelic and Irish - Differences in vocabulary</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Irish :</label></br>
+											<input type="checkbox" name="Feature" >Meiriceá</br>	
+											<input type="checkbox" name="Feature" >Meirice</br>	
+											<input type="checkbox" name="Feature" >i</br>	
+											<input type="checkbox" name="Feature" >in</br>	
+											<input type="checkbox" name="Feature" >bóthar</br>	
+											<input type="checkbox" name="Feature" >ród</br>	
+											<input type="checkbox" name="Feature" >ministir</br>	
+											<input type="checkbox" name="Feature" >ministéir</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Notes : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Scottish Gaelic : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>English : </label></br> <input id="2" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['','Also, cainnt in Scottish Gaelic. Bruíon (formerly bruighean) in Irish means "fighting", "quarrelling"','In Classical Irish the forms were "i", "a", "in", "an" – "i/in" when the following sound was slender, and "a/an" when the following sound was broad.  In both Irish and Scottish, in the spoken language, the four forms of "i", "a", "in", "an" still exist.','Meaning illness','In Irish, aire for a government minister','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['cnatan','A` Ghearmailt','Ameireaga','Lunnain','ministear','bruidhinn','rathad','(ann) an','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['America','minister','in','Germany','talking','road','cold (sickness)','London','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

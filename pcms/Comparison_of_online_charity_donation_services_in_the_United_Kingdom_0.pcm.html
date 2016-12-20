@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of online charity donation services in the United Kingdom</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of online charity donation services in the United Kingdom</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Other Fees : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Profit-making Activity? :</label></br>
+								<input type="radio" name="FeatureProfit-making Activity?" value="oui">Yes <input type="radio" name="FeatureProfit-making Activity?" value = "non">No <input type="radio" name="FeatureProfit-making Activity?" value = "non">Partial </br>
+											<input name="FeatureProfit-making Activity?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Source : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Company : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Commission : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Card Processing Fee : </label></br> <input id="4" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['£100+VAT start-up fee','£15+VAT/month','None','£150 (+VAT?) start-up fee','£60+VAT/year','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Total Giving','Bmycharity','Justgiving','everydayhero','PayPal','UK Toremet','Virgin Money Giving','Localgiving.com','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['4.25% excluding gift aid','2% excluding gift aid','0%','1.4% (on domestic donations to non-profits)','5% including on gift aid','5% including on GiftAid','5% including Gift Aid','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['PayPal fees','Charity PayPal fees (1.4%+20p)','£0.20','£0.16','£0.13','£0.32','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

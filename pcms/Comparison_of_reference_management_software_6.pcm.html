@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of reference management software -  Word processor integration </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of reference management software -  Word processor integration </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Microsoft Word :</label></br>
+								<input type="radio" name="FeatureMicrosoft Word" value="oui">Yes <input type="radio" name="FeatureMicrosoft Word" value = "non">No <input type="radio" name="FeatureMicrosoft Word" value = "non">Partial </br>
+											<input name="FeatureMicrosoft Word" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Apache OpenOffice / LibreOffice :</label></br>
+								<input type="radio" name="FeatureApache OpenOffice / LibreOffice" value="oui">Yes <input type="radio" name="FeatureApache OpenOffice / LibreOffice" value = "non">No <input type="radio" name="FeatureApache OpenOffice / LibreOffice" value = "non">Partial </br>
+											<input name="FeatureApache OpenOffice / LibreOffice" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Kile/LyX :</label></br>
+								<input type="radio" name="FeatureKile/LyX" value="oui">Yes <input type="radio" name="FeatureKile/LyX" value = "non">No <input type="radio" name="FeatureKile/LyX" value = "non">Partial </br>
+											<input name="FeatureKile/LyX" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Software : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>RTF scan :</label></br>
+								<input type="radio" name="FeatureRTF scan" value="oui">Yes <input type="radio" name="FeatureRTF scan" value = "non">No <input type="radio" name="FeatureRTF scan" value = "non">Partial </br>
+											<input name="FeatureRTF scan" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Other : </label></br> <input id="1" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['refbase','Qiqqa','ReadCube','BibBase','colwiz','Sente','BibSonomy','Citavi','Bookends','Reference Manager','Docear','RefDB','WizFolio','RefWorks','Referencer','BibDesk','Bebop','JabRef','Zotero','Paperpile','Pybliographer','Wikindx','SciRef','Bibus','EndNote','CiteULike','KBibTeX','Aigaion','Biblioscape','Mendeley','Papers','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['NeoOffice','none','NeoOffice, Google Docs','Integrated WYSIWYG word processor (RTF output for Word/OpenOffice)','OpenDocument Text scan, LEd, Texmaker, TeXnicCenter, TeXstudio, TeXworks, WinEdt, WinShell','Pages','Mellel, Nisus','PIRA, MediaWiki, SPIP','Pages 4, Mellel, TextEdit; HTML','Google Docs, Zoho Writer','Google Docs','?','No','Emacs, Vim, WinEdt','WordPerfect','NeoOffice , Star Office','Pages, Mellel, Nisus, TextEdit; HTML and plain text scan','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

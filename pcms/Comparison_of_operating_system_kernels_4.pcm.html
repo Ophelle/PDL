@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of operating system kernels -  In-kernel server support </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of operating system kernels -  In-kernel server support </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Solaris kernel : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Kernel Name : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>XNU :</label></br>
+								<input type="radio" name="FeatureXNU" value="oui">Yes <input type="radio" name="FeatureXNU" value = "non">No <input type="radio" name="FeatureXNU" value = "non">Partial </br>
+											<input name="FeatureXNU" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Windows NT kernel :</label></br>
+								<input type="radio" name="FeatureWindows NT kernel" value="oui">Yes <input type="radio" name="FeatureWindows NT kernel" value = "non">No <input type="radio" name="FeatureWindows NT kernel" value = "non">Partial </br>
+											<input name="FeatureWindows NT kernel" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Linux kernel : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>FreeBSD kernel :</label></br>
+								<input type="radio" name="FeatureFreeBSD kernel" value="oui">Yes <input type="radio" name="FeatureFreeBSD kernel" value = "non">No <input type="radio" name="FeatureFreeBSD kernel" value = "non">Partial </br>
+											<input name="FeatureFreeBSD kernel" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>DragonFly BSD kernel :</label></br>
+								<input type="radio" name="FeatureDragonFly BSD kernel" value="oui">Yes <input type="radio" name="FeatureDragonFly BSD kernel" value = "non">No <input type="radio" name="FeatureDragonFly BSD kernel" value = "non">Partial </br>
+											<input name="FeatureDragonFly BSD kernel" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['?','KSSL','Yes','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['HTTP','FTP','NFS','9P','SSL proxy','CIFS','Name server','Transport-layer load balancer','Application-layer load balancer','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['No','IP Virtual Server','knfsd','(patch available)','?','(TUX web server patch)','(KTCPVS)','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

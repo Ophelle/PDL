@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of AMD chipsets -  AMD-xxx </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of AMD chipsets -  AMD-xxx </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Code name : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Fab (nm) : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>FSB/HT (MHz) : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Released : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Model : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Southbridge : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>CPU support :</label></br>
+											<input type="checkbox" name="Feature" >Athlon</br>	
+											<input type="checkbox" name="Feature" >Athlon XP</br>	
+											<input type="checkbox" name="Feature" >Duron (Socket&nbsp;A)</br>	
+											<input type="checkbox" name="Feature" >Alpha&nbsp;21264</br>	
+											<input type="checkbox" name="Feature" >Athlon&nbsp;MP</br>	
+											<input type="checkbox" name="Feature" >Duron (Slot&nbsp;A</br>	
+											<input type="checkbox" name="Feature" >Socket&nbsp;A)</br>	
+											<input type="checkbox" name="Feature" >K6</br>	
+											<input type="checkbox" name="Feature" >Cyrix 6x86</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Features / Notes :</label></br>
+											<input type="checkbox" name="Feature" >AMD licensed VIA Technologies' Apollo VP2</br>	
+											<input type="checkbox" name="Feature" >97</br>	
+											<input type="checkbox" name="Feature" >AGP 2×</br>	
+											<input type="checkbox" name="Feature" >SDRAMIrongate chipset family; early steppings had issues with AGP 2×; drivers often limited support to AGP 1×; later fixed with "super bypass" memory access adjustment.</br>	
+											<input type="checkbox" name="Feature" >AGP 4×</br>	
+											<input type="checkbox" name="Feature" >Hardware RNGMost initial boards shipped without USB headers due to a fault with the integrated USB controller. Manufacturers included PCI USB cards to cover this shortcoming. A later refresh of the chipset had the USB problem remedied.</br>	
+											<input type="checkbox" name="Feature" >DDR SDRAM</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['AMD-640','AMD-8111','AMD-762','AMD-751','AMD-761','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['66 (FSB)','100 (FSB)','133 (FSB)','800 (HT 1.x)','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['May 2001','','Nov 2000','1999','Apr 2004','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['AMD-750 chipset','AMD-640 chipset','AMD-760MP chipset','AMD-760 chipset','AMD-760MPX chipset','AMD-8000 series chipset','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['AMD-766, VIA-VT82C686B','AMD-645','AMD-8131 AMD-8132','AMD-756, VIA-VT82C686A','AMD-766','AMD-768','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

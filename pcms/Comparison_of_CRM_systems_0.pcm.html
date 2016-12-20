@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of CRM systems -  General </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of CRM systems -  General </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Release Date : </label></br> <input style="display:block;" id="id1Release Date" type="number" name="Feature">
+												<input style="display:none;" id="id2Release Date" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Release Date','id2Release Date');">Changer type</button></br>								
+								</br>	
+								<label>Implementation language(s) : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Database backend : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>System : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Creator : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Last Stable Version : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Server Operating System : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>First Release Date : </label></br> <input style="display:block;" id="id1First Release Date" type="number" name="Feature">
+												<input style="display:none;" id="id2First Release Date" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First Release Date','id2First Release Date');">Changer type</button></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['PHP 5.3.x','.NET, ASP.NET','PHP','C++','Ruby on Rails, Python','ASP/VBScript','ASP.NET, ASP','.NET','Python','APEX (Proprietary Language Java-like)','C++, JavaScript','Java','C++,C# and ASP.NET','C#, .NET','ASP.NET','PHP 5.x','VBScript, JavaScript, ASP','PHP/Javascript','Ruby on Rails','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['PostgreSQL','Proprietary','Microsoft SQL Server, Amazon Server','MySQL','Firebird/Interbase, MySQL, MaxDB, MS ADO (MS SQL-Server/MS Access), Oracle, PostgreSQL, SQLite, SQLite3, CSV files,DBF files (DBase, XBase etc.), INI style configuration files','MS SQL','MySQL, Microsoft SQL Server, IBM DB2, and Oracle ( IBM DB2 and Oracle only in Sugar Enterprise edition )','MySQL, PostgreSQL, AdoDB, others','Firebird','MS SQL, Oracle','MariaDB, MySQL, Microsoft SQL Server','MS SQL, Oracle, PostgreSQL, MySQL','','SQL Server','PostgreSQL, MySQL, SQLite','MS SQL, ORACLE, DB2','Google App Engine','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Neolane','Really Simple Systems','Casengo','SuperOfficeCRM','Dynamics CRM','Streak','Workbooks.com','SageCRM','Odoo','CiviCRM','Tryton','Zoho CRM','SugarCRM','Base CRM','SuiteCRM','Adempiere','Nutshell CRM','Pivotal CRM','TeamWox','WORKetc','EpesiCRM','LeadMaster','Group-Office','Salesforce.com','GNU Enterprise','Vtiger CRM','TeamLab','AddressTwo','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Zoho CRM','Rauno Uusitalo','Nutshell CRM','Jorg Janke','SalesAgility','Casengo','John Paterson','John Roberts, Clint Oram, Jacob Taylor','Telaxus LLC','Base CRM','Nick Carter','Aptean','Intermesh BV','Odoo SA','Ascensio System SIA','Vtiger CRM','Marc Benioff','Microsoft','Sage Group','Aleem Mawani, Omar Ismail','Adobe','MetaQuotes Software Corp.','FSF','Daniel Barnett','Dave Greenberg, Donald Lobo, Michal Mach','Tryton','Workbooks.com','Russell King','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['SaaS','Proprietary','GPLv3','GPLv2','vtiger Public License 1.2 or SaaS','AGPL3','Proprietary or SaaS','AGPL3, SaaS and proprietary','MIT','GPLv3, SaaS','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['2013','2014','6.2.0','4.4.5','v6','v4.0','2015','1.5.6','v4.0.142','v8.0','N/A','','7.2.2','?','7.5','3.2','2.0','v6.0.10','2012','v7.3','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['Cross-platform','Windows, Linux, Unix, Mac','Windows','Windows, Linux, Unix, Mac OS','Cloud Computing','Cloud Computing, iOS, Android, Windows Phone','Linux, Unix, Mac OS X, Windows','Web, iOS, Android','Windows, Linux','Windows, Mac','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of open-source wireless drivers - OpenBSD</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of open-source wireless drivers - OpenBSD</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>WPA :</label></br>
+								<input type="radio" name="FeatureWPA" value="oui">Yes <input type="radio" name="FeatureWPA" value = "non">No <input type="radio" name="FeatureWPA" value = "non">Partial </br>
+								
+								</br>	
+								<label>Ad-Hoc mode :</label></br>
+								<input type="radio" name="FeatureAd-Hoc mode" value="oui">Yes <input type="radio" name="FeatureAd-Hoc mode" value = "non">No <input type="radio" name="FeatureAd-Hoc mode" value = "non">Partial </br>
+								
+								</br>	
+								<label>Master mode :</label></br>
+								<input type="radio" name="FeatureMaster mode" value="oui">Yes <input type="radio" name="FeatureMaster mode" value = "non">No <input type="radio" name="FeatureMaster mode" value = "non">Partial </br>
+								
+								</br>	
+								<label>Monitor mode :</label></br>
+								<input type="radio" name="FeatureMonitor mode" value="oui">Yes <input type="radio" name="FeatureMonitor mode" value = "non">No <input type="radio" name="FeatureMonitor mode" value = "non">Partial </br>
+								
+								</br>	
+								<label>802.11 :</label></br>
+											<input type="checkbox" name="Feature" >802.11b</br>	
+											<input type="checkbox" name="Feature" >802.11g</br>	
+											<input type="checkbox" name="Feature" >802.11a</br>	
+							
+								</br>	
+								<label>Bus interface : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>WPA2 :</label></br>
+								<input type="radio" name="FeatureWPA2" value="oui">Yes <input type="radio" name="FeatureWPA2" value = "non">No <input type="radio" name="FeatureWPA2" value = "non">Partial </br>
+								
+								</br>	
+								<label>WEP :</label></br>
+								<input type="radio" name="FeatureWEP" value="oui">Yes <input type="radio" name="FeatureWEP" value = "non">No <input type="radio" name="FeatureWEP" value = "non">Partial </br>
+								
+								</br>	
+								<label>Driver : </label></br> <input id="1" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Cardbus, PCI','PC Card','USB','Cardbus, PC Card, PCI','PCI','PC Card, PCI, USB','PC Card, PCI, ISA','Cardbus, PCI, Mini PCI','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['ray','atu','wpi','otus','run','wi','ipw','ral','an','urtwn','zyd','cnw','iwi','iwn','ural','rtw','bwi','rum','acx','ath','malo','urtw','athn','pgt','atw','uath','upgt','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

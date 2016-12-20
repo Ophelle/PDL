@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of layout engines (ECMAScript) - Boolean object</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of layout engines (ECMAScript) - Boolean object</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>constructor :</label></br>
+								<input type="radio" name="Featureconstructor" value="oui">Yes <input type="radio" name="Featureconstructor" value = "non">No <input type="radio" name="Featureconstructor" value = "non">Partial </br>
+								
+								</br>	
+								<label>Called as constructor : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>prototype :</label></br>
+								<input type="radio" name="Featureprototype" value="oui">Yes <input type="radio" name="Featureprototype" value = "non">No <input type="radio" name="Featureprototype" value = "non">Partial </br>
+								
+								</br>	
+								<label>Properties : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Properties of prototype : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>valueOf() :</label></br>
+								<input type="radio" name="FeaturevalueOf()" value="oui">Yes <input type="radio" name="FeaturevalueOf()" value = "non">No <input type="radio" name="FeaturevalueOf()" value = "non">Partial </br>
+								
+								</br>	
+								<label>new Boolean([value]) :</label></br>
+								<input type="radio" name="Featurenew Boolean([value])" value="oui">Yes <input type="radio" name="Featurenew Boolean([value])" value = "non">No <input type="radio" name="Featurenew Boolean([value])" value = "non">Partial </br>
+								
+								</br>	
+								<label>Boolean([value]) :</label></br>
+								<input type="radio" name="FeatureBoolean([value])" value="oui">Yes <input type="radio" name="FeatureBoolean([value])" value = "non">No <input type="radio" name="FeatureBoolean([value])" value = "non">Partial </br>
+								
+								</br>	
+								<label>Called as function : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>toString() :</label></br>
+								<input type="radio" name="FeaturetoString()" value="oui">Yes <input type="radio" name="FeaturetoString()" value = "non">No <input type="radio" name="FeaturetoString()" value = "non">Partial </br>
+								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Called as constructor','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Properties','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Properties of prototype','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Called as function','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

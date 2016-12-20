@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of Internet Relay Chat daemons -  Operating system support </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of Internet Relay Chat daemons -  Operating system support </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>/dev/poll :</label></br>
+								<input type="radio" name="Feature/dev/poll" value="oui">Yes <input type="radio" name="Feature/dev/poll" value = "non">No <input type="radio" name="Feature/dev/poll" value = "non">Partial </br>
+								
+								</br>	
+								<label>Linux :</label></br>
+								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
+								
+								</br>	
+								<label>HP-UX :</label></br>
+								<input type="radio" name="FeatureHP-UX" value="oui">Yes <input type="radio" name="FeatureHP-UX" value = "non">No <input type="radio" name="FeatureHP-UX" value = "non">Partial </br>
+								
+								</br>	
+								<label>DOS :</label></br>
+								<input type="radio" name="FeatureDOS" value="oui">Yes <input type="radio" name="FeatureDOS" value = "non">No <input type="radio" name="FeatureDOS" value = "non">Partial </br>
+								
+								</br>	
+								<label>kqueue :</label></br>
+								<input type="radio" name="Featurekqueue" value="oui">Yes <input type="radio" name="Featurekqueue" value = "non">No <input type="radio" name="Featurekqueue" value = "non">Partial </br>
+								
+								</br>	
+								<label>Mac OS :</label></br>
+								<input type="radio" name="FeatureMac OS" value="oui">Yes <input type="radio" name="FeatureMac OS" value = "non">No <input type="radio" name="FeatureMac OS" value = "non">Partial </br>
+								
+								</br>	
+								<label>poll() :</label></br>
+								<input type="radio" name="Featurepoll()" value="oui">Yes <input type="radio" name="Featurepoll()" value = "non">No <input type="radio" name="Featurepoll()" value = "non">Partial </br>
+								
+								</br>	
+								<label>BSD :</label></br>
+								<input type="radio" name="FeatureBSD" value="oui">Yes <input type="radio" name="FeatureBSD" value = "non">No <input type="radio" name="FeatureBSD" value = "non">Partial </br>
+								
+								</br>	
+								<label>Solaris :</label></br>
+								<input type="radio" name="FeatureSolaris" value="oui">Yes <input type="radio" name="FeatureSolaris" value = "non">No <input type="radio" name="FeatureSolaris" value = "non">Partial </br>
+								
+								</br>	
+								<label>AIX :</label></br>
+								<input type="radio" name="FeatureAIX" value="oui">Yes <input type="radio" name="FeatureAIX" value = "non">No <input type="radio" name="FeatureAIX" value = "non">Partial </br>
+								
+								</br>	
+								<label>Solaris IOCP :</label></br>
+								<input type="radio" name="FeatureSolaris IOCP" value="oui">Yes <input type="radio" name="FeatureSolaris IOCP" value = "non">No <input type="radio" name="FeatureSolaris IOCP" value = "non">Partial </br>
+								
+								</br>	
+								<label>threads : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>RT signals :</label></br>
+								<input type="radio" name="FeatureRT signals" value="oui">Yes <input type="radio" name="FeatureRT signals" value = "non">No <input type="radio" name="FeatureRT signals" value = "non">Partial </br>
+								
+								</br>	
+								<label>Windows :</label></br>
+								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
+								
+								</br>	
+								<label>Windows IOCP :</label></br>
+								<input type="radio" name="FeatureWindows IOCP" value="oui">Yes <input type="radio" name="FeatureWindows IOCP" value = "non">No <input type="radio" name="FeatureWindows IOCP" value = "non">Partial </br>
+								
+								</br>	
+								<label>IRC daemon : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>epoll :</label></br>
+								<input type="radio" name="Featureepoll" value="oui">Yes <input type="radio" name="Featureepoll" value = "non">No <input type="radio" name="Featureepoll" value = "non">Partial </br>
+								
+								</br>	
+								<label>select() :</label></br>
+								<input type="radio" name="Featureselect()" value="oui">Yes <input type="radio" name="Featureselect()" value = "non">No <input type="radio" name="Featureselect()" value = "non">Partial </br>
+								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Yes','Unknown','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['ngIRCd','ircd-hybrid','pureIRCd','IRCD','ircd-ratbox','Synchronet IRCd','ithildin','RockIRCd','snircd','Charybdis','ShadowIRCd','ConferenceRoom','OfficeIRC Server','solid-ircd','RubIRCd','UnrealIRCd','bIRCd','Bahamut','InspIRCd','ircu','Nefarious IRCu','miniircd','PleXusIRCd','WeIRCd','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

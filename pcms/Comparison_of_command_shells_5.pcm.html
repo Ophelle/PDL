@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of command shells - Security features</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of command shells - Security features</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Encrypted variables/ parameters :</label></br>
+								<input type="radio" name="FeatureEncrypted variables/ parameters" value="oui">Yes <input type="radio" name="FeatureEncrypted variables/ parameters" value = "non">No <input type="radio" name="FeatureEncrypted variables/ parameters" value = "non">Partial </br>
+								
+								</br>	
+								<label>Restricted shell subset :</label></br>
+								<input type="radio" name="FeatureRestricted shell subset" value="oui">Yes <input type="radio" name="FeatureRestricted shell subset" value = "non">No <input type="radio" name="FeatureRestricted shell subset" value = "non">Partial </br>
+								
+								</br>	
+								<label>Execute permission :</label></br>
+								<input type="radio" name="FeatureExecute permission" value="oui">Yes <input type="radio" name="FeatureExecute permission" value = "non">No <input type="radio" name="FeatureExecute permission" value = "non">Partial </br>
+								
+								</br>	
+								<label>Multilevel execution policies :</label></br>
+								<input type="radio" name="FeatureMultilevel execution policies" value="oui">Yes <input type="radio" name="FeatureMultilevel execution policies" value = "non">No <input type="radio" name="FeatureMultilevel execution policies" value = "non">Partial </br>
+								
+								</br>	
+								<label>Safe data subset :</label></br>
+								<input type="radio" name="FeatureSafe data subset" value="oui">Yes <input type="radio" name="FeatureSafe data subset" value = "non">No <input type="radio" name="FeatureSafe data subset" value = "non">Partial </br>
+								
+								</br>	
+								<label>Script origin execution restriction :</label></br>
+								<input type="radio" name="FeatureScript origin execution restriction" value="oui">Yes <input type="radio" name="FeatureScript origin execution restriction" value = "non">No <input type="radio" name="FeatureScript origin execution restriction" value = "non">Partial </br>
+								
+								</br>	
+								<label>Secure (password) prompt : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Non-password credentials prompt :</label></br>
+								<input type="radio" name="FeatureNon-password credentials prompt" value="oui">Yes <input type="radio" name="FeatureNon-password credentials prompt" value = "non">No <input type="radio" name="FeatureNon-password credentials prompt" value = "non">Partial </br>
+								
+								</br>	
+								<label>Signed script restriction :</label></br>
+								<input type="radio" name="FeatureSigned script restriction" value="oui">Yes <input type="radio" name="FeatureSigned script restriction" value = "non">No <input type="radio" name="FeatureSigned script restriction" value = "non">Partial </br>
+								
+								</br>	
+								<label>File/directory passwords : </label></br> <input id="1" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['via','No','Yes (via ,  or )','?','Yes','','Partial (only under DR-DOS, prompts for password if file/directory is protected)','Yes (via  or )','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Partial (only under DR-DOS via  syntax)','?','No','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

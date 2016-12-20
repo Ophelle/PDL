@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of U.S. state governments - Executive</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of U.S. state governments - Executive</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Governor term limit : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>First in line of succession : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Governor term length : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Lieutenant Governor :</label></br>
+								<input type="radio" name="FeatureLieutenant Governor" value="oui">Yes <input type="radio" name="FeatureLieutenant Governor" value = "non">No <input type="radio" name="FeatureLieutenant Governor" value = "non">Partial </br>
+											<input name="FeatureLieutenant Governor" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>State : </label></br> <input id="3" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['None','Two terms','Two consecutive terms','Mayor: None','Two terms in a 12-year period','No limit on number, but terms cannot be consecutive','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Lieutenant Governor','Secretary of State','District of Columbia Council Chairman','President of the Senate','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Four years','Two years','Mayor: Four years','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Wyoming','Louisiana','Pennsylvania','New York','Puerto Rico','Massachusetts','North Carolina','Ohio','Florida','Colorado','California','New Mexico','Arizona','Minnesota','Maine','New Jersey','Oregon','Connecticut','Vermont','Michigan','Virginia','Texas','Mississippi','Alaska','Maryland','Tennessee','Utah','Illinois','Washington','Alabama','Indiana','Hawaii','Oklahoma','Nebraska','West Virginia','North Dakota','Arkansas','Montana','South Dakota','Idaho','Missouri','Kansas','Kentucky','Georgia','Iowa','New Hampshire','Delaware','Rhode Island','South Carolina','District of Columbia','Wisconsin','Nevada','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

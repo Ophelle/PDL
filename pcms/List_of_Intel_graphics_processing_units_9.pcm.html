@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>List of Intel graphics processing units -  Notes </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>List of Intel graphics processing units -  Notes </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Codec used to encode the video : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Technique employed :</label></br>
+											<input type="checkbox" name="Feature" >VLD</br>	
+											<input type="checkbox" name="Feature" >iMDCT</br>	
+											<input type="checkbox" name="Feature" >MC</br>	
+											<input type="checkbox" name="Feature" >and LF</br>	
+											<input type="checkbox" name="Feature" >iDCT</br>	
+											<input type="checkbox" name="Feature" >and MC</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['MPEG-2 Part 2','H.264/MPEG-4 AVC','VC-1','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

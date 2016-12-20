@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of layout engines (Document Object Model) - Traversal</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of layout engines (Document Object Model) - Traversal</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Interface NodeIterator - 1.0 : </label></br> <input style="display:block;" id="id1Interface NodeIterator - 1.0" type="number" name="Feature">
+												<input style="display:none;" id="id2Interface NodeIterator - 1.0" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Interface NodeIterator - 1.0','id2Interface NodeIterator - 1.0');">Changer type</button></br>								
+								</br>	
+								<label>Interface NodeIterator - No : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>KHTML - Interface NodeIterator : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Products : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Interface NodeIterator - ? : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Interface NodeIterator - DOM2 : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Interface NodeIterator - 1.9.1 : </label></br> <input style="display:block;" id="id1Interface NodeIterator - 1.9.1" type="number" name="Feature">
+												<input style="display:none;" id="id2Interface NodeIterator - 1.9.1" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Interface NodeIterator - 1.9.1','id2Interface NodeIterator - 1.9.1');">Changer type</button></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['P1','P15','P6','P11','P8','P23','P3','P4','P5','P9','P10','P25','P24','P2','P22','P13','P20','P18','P16','P12','P7','P21','P19','P17','P14','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

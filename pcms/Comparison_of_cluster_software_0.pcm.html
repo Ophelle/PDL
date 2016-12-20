@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of cluster software -  General information </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of cluster software -  General information </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Cost : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Category : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>ArchitectureOCS : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Software : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Platforms supported :</label></br>
+											<input type="checkbox" name="Feature" >Windows</br>	
+											<input type="checkbox" name="Feature" >Linux</br>	
+											<input type="checkbox" name="Feature" >Mac OS X</br>	
+											<input type="checkbox" name="Feature" >AIX</br>	
+											<input type="checkbox" name="Feature" >OSF</br>	
+											<input type="checkbox" name="Feature" >Tru-64</br>	
+											<input type="checkbox" name="Feature" >Solaris</br>	
+											<input type="checkbox" name="Feature" >HP-UX</br>	
+											<input type="checkbox" name="Feature" >IRIX</br>	
+											<input type="checkbox" name="Feature" >FreeBSD & other UNIX platforms</br>	
+											<input type="checkbox" name="Feature" >*nix</br>	
+											<input type="checkbox" name="Feature" >Unix-like</br>	
+											<input type="checkbox" name="Feature" >Unix</br>	
+											<input type="checkbox" name="Feature" >Oracle Unbreakable Linux</br>	
+											<input type="checkbox" name="Feature" >RHEL</br>	
+											<input type="checkbox" name="Feature" >and Cent Os</br>	
+											<input type="checkbox" name="Feature" >Windows NT</br>	
+											<input type="checkbox" name="Feature" >XP</br>	
+											<input type="checkbox" name="Feature" >2000</br>	
+											<input type="checkbox" name="Feature" >2003</br>	
+											<input type="checkbox" name="Feature" >2008</br>	
+											<input type="checkbox" name="Feature" > FreeBSD</br>	
+											<input type="checkbox" name="Feature" >NetBSD</br>	
+											<input type="checkbox" name="Feature" >OpenBSD</br>	
+											<input type="checkbox" name="Feature" >DragonflyBSD</br>	
+											<input type="checkbox" name="Feature" >Tru64</br>	
+											<input type="checkbox" name="Feature" >HPUX.</br>	
+											<input type="checkbox" name="Feature" >BSD</br>	
+											<input type="checkbox" name="Feature" > & UNIX platforms</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>High-Performance/ High-Throughput Computing : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Products : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Maintainer : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Development status : </label></br> <input id="8" type="text" name="Feature"></br>
+								</br>	
+								<label>Paid support available : </label></br> <input id="9" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['','Free','Cost','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','Job Scheduler/Monitoring','Job Scheduler','R&D Technology provider','All in one','Monitoring','Category','Job/Data Scheduler','All in One','All in One (dynamic cluster creation/re-sizing, cloud bursting, etc.)','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['','Master/Worker, SPMD, Distributed Component Model, Skeletons','distributed master/worker and P2P','Architecture','master/worker','SOA Grid','Master node/exec clients, multiple admin/submit nodes','Master/Worker, multiple admin/submit nodes','Distributed master/worker','Cross-Platform, Distributed Computing Architecture','GridRPC, SPMD, Hierarchical and distributed architecture, CORBA','Distributed master/executions/submits node','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['GPL','Apache license v2.0','MIT','Proprietary','SISSL (only for forks of former FOSS Grid Engine project)','','License','custom','CeCILL','OpenSource','BSD','MIT License','?','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['OAR','PBS Professional','UniCluster','GreenTea Software','Globus Toolkit','SynfiniWay','Software','Platform LSF','Platform Cluster Manager','UNICORE','Xgrid','RPyC','SLURM','Amoeba','UniCloud','Grid MP','Moab Cluster Suite','Rocks Cluster Distribution','PRUN','DIET','Gridbus Toolkit','‌Maui Cluster Scheduler followup?','LanderCluster','Vaakya','Base One Foundation Component Library','JPPF','JSTM','Alchemi','Popular Power','TORQUE Resource Manager Torque','HTCondor','grun','ProActive','Ganglia','OpenLava','formerly Sun Grid Engine now Oracle Grid Engine','Univa Grid Engine','XGE','NetworkComputer ‌RTDA','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['HPC/HTC','HTC/HPC','','HPC','High-Performance/ High-Throughput Computing','HTC','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['P21','P36','P11','P15','P26','P22','P24','P33','P23','P29','P8','P13','P14','P7','P20','P37','P2','P19','P28','P12','P32','P17','P18','P35','P6','P3','P5','P10','P34','P16','P25','P31','P40','P39','P4','P27','P30','P1','P38','P9','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['','Vaakya Technologies Pvt Ltd','Laurent Cohen (founder)','Platform Computing','Runtime Design Automation','Cluster Resources, Inc.','Lander Software Technology Co. Ltd','Univa','Globus Alliance, Argonne National Laboratory','Tomer Filiba','INRIA, SysFera, Open Source','PBS Works (A division of Altair)','formerly Sun Microsystems now Oracle','Andrey Budnik','INRIA and LIG','Apple Computer','Fujitsu','Erik Aronesty (Expression Analysis)','INRIA, ActiveEon, Open Source','University Of Wisconsin CS dep','Teraproc','Maintainer','SchedMD','Open Source/NSF grant','Univa (formerly United Devices)','']
+								});
+								$("#8").typeahead({
+									name:"list8",
+									local : ['','Actively Developed','actively developed','Functionality and development moved to UniCloud (see above)','Development status','']
+								});
+								$("#9").typeahead({
+									name:"list9",
+									local : ['','Yes','Paid support available','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

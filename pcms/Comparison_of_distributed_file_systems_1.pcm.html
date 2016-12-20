@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of distributed file systems - Remote access</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of distributed file systems - Remote access</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Name : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Run by : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Access API : </label></br> <input id="2" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Google Cloud Storage','Microsoft Azure','Amazon S3','SWIFT (part of OpenStack)','Cleversafe','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Microsoft','Cleversafe','Google','Amazon.com','Rackspace, Hewlett-Packard, others','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['HTTP (REST/SOAP)','HTTP (REST)','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of eDonkey software -  General </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of eDonkey software -  General </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>FLOSS : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Client : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Runs on - Mac OS X :</label></br>
+								<input type="radio" name="FeatureRuns on - Mac OS X" value="oui">Yes <input type="radio" name="FeatureRuns on - Mac OS X" value = "non">No <input type="radio" name="FeatureRuns on - Mac OS X" value = "non">Partial </br>
+											<input name="FeatureRuns on - Mac OS X" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Runs on - Linux :</label></br>
+								<input type="radio" name="FeatureRuns on - Linux" value="oui">Yes <input type="radio" name="FeatureRuns on - Linux" value = "non">No <input type="radio" name="FeatureRuns on - Linux" value = "non">Partial </br>
+											<input name="FeatureRuns on - Linux" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Runs on - Windows :</label></br>
+								<input type="radio" name="FeatureRuns on - Windows" value="oui">Yes <input type="radio" name="FeatureRuns on - Windows" value = "non">No <input type="radio" name="FeatureRuns on - Windows" value = "non">Partial </br>
+											<input name="FeatureRuns on - Windows" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Unicode :</label></br>
+								<input type="radio" name="FeatureUnicode" value="oui">Yes <input type="radio" name="FeatureUnicode" value = "non">No <input type="radio" name="FeatureUnicode" value = "non">Partial </br>
+											<input name="FeatureUnicode" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Kad :</label></br>
+								<input type="radio" name="FeatureKad" value="oui">Yes <input type="radio" name="FeatureKad" value = "non">No <input type="radio" name="FeatureKad" value = "non">Partial </br>
+											<input name="FeatureKad" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Languages supp : </label></br> <input style="display:block;" id="id1Languages supp" type="number" name="Feature">
+												<input style="display:none;" id="id2Languages supp" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Languages supp','id2Languages supp');">Changer type</button></br>								
+								</br>	
+								<label>Fork from : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Development Status : </label></br> <input id="3" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['GPL','No','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['eMule Plus','Shareaza','eMule and its Mods','xMule','eDonkey2000','MLDonkey','aMule','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['eMule','-','xMule','lMule','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Active','Abandoned','Discontinued','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

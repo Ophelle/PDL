@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of image viewers - Basic Features</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of image viewers - Basic Features</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>thumbnail caching : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Program : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>cache decoded images : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Fullscreen :</label></br>
+								<input type="radio" name="FeatureFullscreen" value="oui">Yes <input type="radio" name="FeatureFullscreen" value = "non">No <input type="radio" name="FeatureFullscreen" value = "non">Partial </br>
+											<input name="FeatureFullscreen" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>thumbnails (sizes) : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>navigation views :</label></br>
+											<input type="checkbox" name="Feature" >directory-tree</br>	
+											<input type="checkbox" name="Feature" >albums</br>	
+											<input type="checkbox" name="Feature" >calendar</br>	
+											<input type="checkbox" name="Feature" >favourites</br>	
+											<input type="checkbox" name="Feature" >search results</br>	
+											<input type="checkbox" name="Feature" >dir-tree</br>	
+											<input type="checkbox" name="Feature" >categories</br>	
+											<input type="checkbox" name="Feature" >timeline</br>	
+											<input type="checkbox" name="Feature" >list</br>	
+											<input type="checkbox" name="Feature" >file-tree</br>	
+											<input type="checkbox" name="Feature" >collection</br>	
+											<input type="checkbox" name="Feature" >Thumbs</br>	
+											<input type="checkbox" name="Feature" >Events (dates)</br>	
+											<input type="checkbox" name="Feature" >tags</br>	
+											<input type="checkbox" name="Feature" >icon</br>	
+											<input type="checkbox" name="Feature" >subfolders</br>	
+											<input type="checkbox" name="Feature" >thumbs</br>	
+											<input type="checkbox" name="Feature" >events</br>	
+											<input type="checkbox" name="Feature" >CD compilations</br>	
+											<input type="checkbox" name="Feature" >media archive</br>	
+											<input type="checkbox" name="Feature" >web albums</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>sort(schemes) : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>print :</label></br>
+								<input type="radio" name="Featureprint" value="oui">Yes <input type="radio" name="Featureprint" value = "non">No <input type="radio" name="Featureprint" value = "non">Partial </br>
+											<input name="Featureprint" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>zoom(styles) : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>slideshow :</label></br>
+								<input type="radio" name="Featureslideshow" value="oui">Yes <input type="radio" name="Featureslideshow" value = "non">No <input type="radio" name="Featureslideshow" value = "non">Partial </br>
+											<input name="Featureslideshow" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['No','Partial Newer versions cache in a central directory','Yes','thumbnail caching','YesDatabase','Yes in subdirectory (.xvpics)','Yes database','','Yesdatabase','Yes(uses OS-managed cache on Windows Vista or later)','Yes as png-files centrally or in sub-dir','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['ImageAXS','FastStone Image Viewer','Program','FastPictureViewer','Geeqie','IrfanView','xv','Simple Comic','Photos','ResourceSpace','STDU Viewer','ACDSee','digiKam','Windows Picture and Fax Viewer','Picasa','F-Spot','Comix','XnView','CDisplay','Phase One Media Pro','Gwenview','Zoner Photo Studio','Shotwell','KPhotoAlbum','Eye of gnome','gThumb','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['No','Yes','Yesdynamic, adaptive','','Yes previous, next','Yes in Viewer, previous and next','cache decoded images','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Yes','image collection pane, only one row','Yes fixed size','Yesuser defined','Yes 48x48 - 256x256, 9 sizes','No','thumbnails (sizes)','Yes user-defined','Yes adjustable size','YesFixed, with scroll','Yes 5 predefined sizes','Yes 24x24 - 256x256','Yes user defined','Yes96x96px, shown on navigation slider (Vista or later)','Yes 18 predefined sizes: 50×50–800×800','Yes Yes, user-defined','','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Yes user-defined, name, date, size, type, ...','Yesdate, relevance, colour','Yes Title, Exposure Date','No','','Only by ascending file name.','Partial name, date, size, type, etc.; no user-defined order','Yes tags, date, keywords, metadata','Yes catalogs, categories','Yes collections, keywords, directory','Partial name, date, size, user-defined','sort (schemes)','Yes Filenames, file creation/modification date, Exif date taken, GPS timestamp','Yes name, size, date','Yes name, date, file size, image width/height, type, user-defined','Yes user-defined, name, date, file size, image size, type','Yes keywords','Yes name, date, size, user-defined','Yes name, date, size, type, etc.; user-defined order','Partial name','Yes','by date','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['','Yes 1:1, fit width and/or height, lock','Yes 1:1, fit over/under width/height, fullscreen, doublepage','Yes fit, 1:1, remember, fit-if-larger, in/out','Yes 1:1, fit, 50%-6400% magnifier, click-and-hold zooming','YesMagnifying loupe on cursor','Yes fit, in/out, presets','YesFit to viewing area/height/width, 1:1, zoom to 1600%','Yes','Yes +/-, 1:1, best fit','Yes fit, in/out','Yes fit, 1:1, fit-if-larger, zoom to 1600%','Yesfit to width, fit to height, fit to size','Yes 1:1, fit, in/out','Partial no view window, fit to viewing area, 1:1, zoom to 400%','Yes fit, 1:1, in/out','zoom (styles)','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

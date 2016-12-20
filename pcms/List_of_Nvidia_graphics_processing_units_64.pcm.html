@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>List of Nvidia graphics processing units - Comparison table: Grid GPUs</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>List of Nvidia graphics processing units - Comparison table: Grid GPUs</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Model : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Archi-tecture : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bus type : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Memory(GB) : </label></br> <input style="display:block;" id="id1Memory - Memory(GB)" type="number" name="Feature">
+												<input style="display:none;" id="id2Memory - Memory(GB)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Memory - Memory(GB)','id2Memory - Memory(GB)');">Changer type</button></br>								
+								</br>	
+								<label># of GPUs : </label></br> <input style="display:block;" id="id1# of GPUs" type="number" name="Feature">
+												<input style="display:none;" id="id2# of GPUs" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1# of GPUs','id2# of GPUs');">Changer type</button></br>								
+								</br>	
+								<label>Bus Interface : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Thread Processors(total) : </label></br> <input style="display:block;" id="id1Thread Processors(total)" type="number" name="Feature">
+												<input style="display:none;" id="id2Thread Processors(total)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Thread Processors(total)','id2Thread Processors(total)');">Changer type</button></br>								
+								</br>	
+								<label>TDP (watts) : </label></br> <input style="display:block;" id="id1TDP (watts)" type="number" name="Feature">
+												<input style="display:none;" id="id2TDP (watts)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1TDP (watts)','id2TDP (watts)');">Changer type</button></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['GRID K2','GRID K1','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['GK104-895','GK107','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['PCIe 3.0 x16','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

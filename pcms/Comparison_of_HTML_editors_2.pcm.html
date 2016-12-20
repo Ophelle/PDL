@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of HTML editors -  Editor features </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of HTML editors -  Editor features </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>WYSIWYG :</label></br>
+								<input type="radio" name="FeatureWYSIWYG" value="oui">Yes <input type="radio" name="FeatureWYSIWYG" value = "non">No <input type="radio" name="FeatureWYSIWYG" value = "non">Partial </br>
+											<input name="FeatureWYSIWYG" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>WebDAV Upload :</label></br>
+								<input type="radio" name="FeatureWebDAV Upload" value="oui">Yes <input type="radio" name="FeatureWebDAV Upload" value = "non">No <input type="radio" name="FeatureWebDAV Upload" value = "non">Partial </br>
+											<input name="FeatureWebDAV Upload" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>FTP Upload :</label></br>
+								<input type="radio" name="FeatureFTP Upload" value="oui">Yes <input type="radio" name="FeatureFTP Upload" value = "non">No <input type="radio" name="FeatureFTP Upload" value = "non">Partial </br>
+											<input name="FeatureFTP Upload" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Shared editing :</label></br>
+								<input type="radio" name="FeatureShared editing" value="oui">Yes <input type="radio" name="FeatureShared editing" value = "non">No <input type="radio" name="FeatureShared editing" value = "non">Partial </br>
+											<input name="FeatureShared editing" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Editor : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Templates :</label></br>
+								<input type="radio" name="FeatureTemplates" value="oui">Yes <input type="radio" name="FeatureTemplates" value = "non">No <input type="radio" name="FeatureTemplates" value = "non">Partial </br>
+											<input name="FeatureTemplates" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Form Handler : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Page Preview :</label></br>
+								<input type="radio" name="FeaturePage Preview" value="oui">Yes <input type="radio" name="FeaturePage Preview" value = "non">No <input type="radio" name="FeaturePage Preview" value = "non">Partial </br>
+											<input name="FeaturePage Preview" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Spell checking :</label></br>
+								<input type="radio" name="FeatureSpell checking" value="oui">Yes <input type="radio" name="FeatureSpell checking" value = "non">No <input type="radio" name="FeatureSpell checking" value = "non">Partial </br>
+											<input name="FeatureSpell checking" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Server-side scripting :</label></br>
+								<input type="radio" name="FeatureServer-side scripting" value="oui">Yes <input type="radio" name="FeatureServer-side scripting" value = "non">No <input type="radio" name="FeatureServer-side scripting" value = "non">Partial </br>
+											<input name="FeatureServer-side scripting" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Templates Update Sync : </label></br> <input id="2" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Dreamweaver','Bluefish','KompoZer','Microsoft Expression Web','Amaya','CoffeeCup HTML Editor','openElement','Quanta Plus','Maqetta','EZGenerator','OpenOffice.org','Microsoft Visual Web Developer','Web Architect','Nvu','OpenBEXI','Editor','Freeway','Microsoft SharePoint Designer','Claris Homepage','HTML-Kit','Arachnophilia','Microsoft FrontPage','RapidWeaver','BlueGriffon','GoLive','SeaMonkey Composer','TOWeb','Aptana','Brackets','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Yes','?','Form Handler','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['?','No','Yes','Templates Update Sync','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

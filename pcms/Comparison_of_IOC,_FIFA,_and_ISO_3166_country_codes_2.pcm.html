@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of IOC, FIFA, and ISO 3166 country codes -  Former countries and former country names </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of IOC, FIFA, and ISO 3166 country codes -  Former countries and former country names </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>IOC : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Flag : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Country : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>FIFA : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>ISO : </label></br> <input id="4" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['HBR1972','FRG1988','DAH1972','YAR1988','NRH1964','?1956','VOL1984','ZAI1996','MAL1960','AHO2011','VNM1976','YMD1988','BIR1988','GDR1988','SCG2006','YUG1992','CEY1972','TCH1992','VNO1975VDR1977','URS1988','YUG2002','KHM1976','RHO1972','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Rhodesia','Malaya','East Germany','North Yemen','South Yemen','British Honduras','Netherlands Antilles','Yugoslavia, Federal Republic of','Czechoslovakia','Viet Nam, Republic of','West Germany','Dahomey','Yugoslavia, Socialist Federal Republic of','Zaïre','Upper Volta','Ceylon','North Borneo','Viet-Nam, Democratic Republic of','Soviet Union','Northern Rhodesia','Khmer Republic','Serbia and Montenegro','Burma','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['DAH1975','UPV1984','BUR1989','SYE1990','','RHO1980','YUG2003','YUG1992','NRH1964','ANT2011','SCG2006','?1963','NYE1990','DDR1989','CEY1972','?1975','URS1991','VSO1975','ZAI1997','FRG1989','NBO1963','TCH1993','BHO ','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['','SCG2006','SUN1992','YUG2003','VNM1977','BUR1989','ANT2010','RHO1980','DDR1989','YUG1992','HVO1984','DEU1989','ZAR1997','YEM1990','YMD1990','CSK1993','DHY1977','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

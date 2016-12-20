@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>List of AMD graphics processing units -  IGP (HD 6xxx) </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>List of AMD graphics processing units -  IGP (HD 6xxx) </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Fillrate - Pixel (GP/s) : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Fillrate - Texture (GT/s) : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Model : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Config core : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Released :</label></br>
+											<input type="checkbox" name="Feature" >Nov 9</br>	
+											<input type="checkbox" name="Feature" >2010</br>	
+											<input type="checkbox" name="Feature" >Aug 15</br>	
+											<input type="checkbox" name="Feature" >2011</br>	
+											<input type="checkbox" name="Feature" >Jan 7</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Shared Memory - Bus width (bit) : </label></br> <input style="display:block;" id="id1Shared Memory - Bus width (bit)" type="number" name="Feature">
+												<input style="display:none;" id="id2Shared Memory - Bus width (bit)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Shared Memory - Bus width (bit)','id2Shared Memory - Bus width (bit)');">Changer type</button></br>								
+								</br>	
+								<label>Shared Memory - Bus type : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Shared Memory - Bandwidth (GB/s) : </label></br> <input style="display:block;" id="id1Shared Memory - Bandwidth (GB/s)" type="number" name="Feature">
+												<input style="display:none;" id="id2Shared Memory - Bandwidth (GB/s)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Shared Memory - Bandwidth (GB/s)','id2Shared Memory - Bandwidth (GB/s)');">Changer type</button></br>								
+								</br>	
+								<label>Code name : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Fab (nm) : </label></br> <input style="display:block;" id="id1Fab (nm)" type="number" name="Feature">
+												<input style="display:none;" id="id2Fab (nm)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fab (nm)','id2Fab (nm)');">Changer type</button></br>								
+								</br>	
+								<label>GFLOPS/W : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Core Clock (MHz) : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Max. Combined TDP (W) : </label></br> <input style="display:block;" id="id1Max. Combined TDP (W)" type="number" name="Feature">
+												<input style="display:none;" id="id2Max. Combined TDP (W)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Max. Combined TDP (W)','id2Max. Combined TDP (W)');">Changer type</button></br>								
+								</br>	
+								<label>APU : </label></br> <input id="8" type="text" name="Feature"></br>
+								</br>	
+								<label>GFLOPS : </label></br> <input id="9" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Radeon HD 6290','Radeon HD 6320','Radeon HD 6310','Radeon HD 6250','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['80:8:4','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Wrestler','Ontario','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['4.44','4.56 - 5.39','4.98 - ?','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['44.8 - 64','82 - 97','80','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['276 - 400','508 - 600','280 - 400','492','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['E-240E-300E-350','Z-60C-30C-50','E-450','C-60','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

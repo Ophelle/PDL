@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>List of AMD graphics processing units -  IGP (HD 6xxx) </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>List of AMD graphics processing units -  IGP (HD 6xxx) </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Model : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Code name : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Max. Combined TDP (W) : </label></br> <input style="display:block;" id="id1Max. Combined TDP (W)" type="number" name="Feature">
+												<input style="display:none;" id="id2Max. Combined TDP (W)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Max. Combined TDP (W)','id2Max. Combined TDP (W)');">Changer type</button></br>								
+								</br>	
+								<label>AMD APU : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Fillrate - Texture (GT/s) : </label></br> <input style="display:block;" id="id1Fillrate - Texture (GT/s)" type="number" name="Feature">
+												<input style="display:none;" id="id2Fillrate - Texture (GT/s)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fillrate - Texture (GT/s)','id2Fillrate - Texture (GT/s)');">Changer type</button></br>								
+								</br>	
+								<label>Fillrate - Pixel (GP/s) : </label></br> <input style="display:block;" id="id1Fillrate - Pixel (GP/s)" type="number" name="Feature">
+												<input style="display:none;" id="id2Fillrate - Pixel (GP/s)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fillrate - Pixel (GP/s)','id2Fillrate - Pixel (GP/s)');">Changer type</button></br>								
+								</br>	
+								<label>GFLOPS : </label></br> <input style="display:block;" id="id1GFLOPS" type="number" name="Feature">
+												<input style="display:none;" id="id2GFLOPS" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1GFLOPS','id2GFLOPS');">Changer type</button></br>								
+								</br>	
+								<label>Core Clock (MHz) : </label></br> <input style="display:block;" id="id1Core Clock (MHz)" type="number" name="Feature">
+												<input style="display:none;" id="id2Core Clock (MHz)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Core Clock (MHz)','id2Core Clock (MHz)');">Changer type</button></br>								
+								</br>	
+								<label>Released :</label></br>
+											<input type="checkbox" name="Feature" >Jun 20</br>	
+											<input type="checkbox" name="Feature" >2011</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>GFLOPS/W : </label></br> <input style="display:block;" id="id1GFLOPS/W" type="number" name="Feature">
+												<input style="display:none;" id="id2GFLOPS/W" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1GFLOPS/W','id2GFLOPS/W');">Changer type</button></br>								
+								</br>	
+								<label>Config core : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Shared Memory - Bus width (bit) : </label></br> <input style="display:block;" id="id1Shared Memory - Bus width (bit)" type="number" name="Feature">
+												<input style="display:none;" id="id2Shared Memory - Bus width (bit)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Shared Memory - Bus width (bit)','id2Shared Memory - Bus width (bit)');">Changer type</button></br>								
+								</br>	
+								<label>Shared Memory - Bandwidth (GB/s) : </label></br> <input style="display:block;" id="id1Shared Memory - Bandwidth (GB/s)" type="number" name="Feature">
+												<input style="display:none;" id="id2Shared Memory - Bandwidth (GB/s)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Shared Memory - Bandwidth (GB/s)','id2Shared Memory - Bandwidth (GB/s)');">Changer type</button></br>								
+								</br>	
+								<label>Shared Memory - Bus type : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Fab (nm) : </label></br> <input style="display:block;" id="id1Fab (nm)" type="number" name="Feature">
+												<input style="display:none;" id="id2Fab (nm)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fab (nm)','id2Fab (nm)');">Changer type</button></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Radeon HD 6410D','Radeon HD 6550D','Radeon HD 6370D','Radeon HD 6530D','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['BeaverCreek','WinterPark','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['A6-3500 A6-3600 A6-3620 A6-3650 A6-3670K','E2-3200','A8-3800 A8-3820 A8-3850 A8-3870K','A4-3300 A4-3400','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['160:8:4','320:16:8','400:20:8','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

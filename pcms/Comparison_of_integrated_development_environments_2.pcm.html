@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of integrated development environments -  BASIC </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of integrated development environments -  BASIC </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Windows :</label></br>
+								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
+								
+								</br>	
+								<label>Mac OS X :</label></br>
+								<input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </br>
+								
+								</br>	
+								<label>IDE : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Linux :</label></br>
+								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
+								
+								</br>	
+								<label>Latest stable release : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Other platforms : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Developer : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['FreeBASIC','Gambas','Basic4android','MonoDevelop','PureBasic','SharpDevelop','PBASIC Stamp Editor','Xojo','Microsoft Visual Studio','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['2 July 2014','3 July 2014','5 November 2012','17 September 2013','17 July 2013','18 November 2012','4 June 2014','2 August 2012','27 January 2014','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['cross-compile from Windows to Android','FreeBSD','Web','','FreeBSD, OpenBSD, Solaris','AmigaOS','Windows, FreeBSD','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Xamarin and the Mono community','Microsoft','Parallax Inc','?','Fantaisie Software','Anywhere Software','Xojo, Inc.','Benoît Minisini','ICSharpCode Team','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Proprietary','GPL','LGPL','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

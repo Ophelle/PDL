@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of data modeling tools -  Features </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of data modeling tools -  Features </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Reverse engineering :</label></br>
+								<input type="radio" name="FeatureReverse engineering" value="oui">Yes <input type="radio" name="FeatureReverse engineering" value = "non">No <input type="radio" name="FeatureReverse engineering" value = "non">Partial </br>
+								
+								</br>	
+								<label>Forward engineering :</label></br>
+								<input type="radio" name="FeatureForward engineering" value="oui">Yes <input type="radio" name="FeatureForward engineering" value = "non">No <input type="radio" name="FeatureForward engineering" value = "non">Partial </br>
+								
+								</br>	
+								<label>Supported data models (conceptual, logical, physical) :</label></br>
+											<input type="checkbox" name="Feature" >Conceptual</br>	
+											<input type="checkbox" name="Feature" >logical</br>	
+											<input type="checkbox" name="Feature" >physical</br>	
+											<input type="checkbox" name="Feature" >Logical</br>	
+											<input type="checkbox" name="Feature" >Logical & Physical + MDA Transform of Logical to Physical</br>	
+											<input type="checkbox" name="Feature" >ETL</br>	
+							
+								</br>	
+								<label>Tool : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Model/database comparison and synchronization :</label></br>
+											<input type="checkbox" name="Feature" >Update database and</br>	
+											<input type="checkbox" name="Feature" >or update model</br>	
+							
+								</br>	
+								<label>Teamwork/repository :</label></br>
+								<input type="radio" name="FeatureTeamwork/repository" value="oui">Yes <input type="radio" name="FeatureTeamwork/repository" value = "non">No <input type="radio" name="FeatureTeamwork/repository" value = "non">Partial </br>
+								
+								</br>	
+								<label>Supported notations :</label></br>
+											<input type="checkbox" name="Feature" >IDEF1X</br>	
+											<input type="checkbox" name="Feature" >IE (Crows feet)</br>	
+											<input type="checkbox" name="Feature" >and more</br>	
+											<input type="checkbox" name="Feature" >UML DDL</br>	
+											<input type="checkbox" name="Feature" >Information Engineering & ERD</br>	
+											<input type="checkbox" name="Feature" >UML</br>	
+							
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['CA ERwin Data Modeler','PowerDesigner','Enterprise Architect','MySQL Workbench','Oracle SQL Developer Data Modeler','Toad Data Modeler','MagicDraw','Navicat Data Modeler','Database Workbench','Open ModelSphere','ER/Studio','DeZign for Databases','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

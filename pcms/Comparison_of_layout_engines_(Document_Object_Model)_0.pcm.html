@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of layout engines (Document Object Model) - General overview</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of layout engines (Document Object Model) - General overview</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>DOM1 : </label></br> <input style="display:block;" id="id1DOM1" type="number" name="Feature">
+								
+								</br>	
+								<label>DOM2 : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>DOM3 :</label></br>
+								<input type="radio" name="FeatureDOM3" value="oui">Yes <input type="radio" name="FeatureDOM3" value = "non">No <input type="radio" name="FeatureDOM3" value = "non">Partial </br>
+								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Mostly','Partial','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of Unicode encodings -  Bit environments </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of Unicode encodings -  Bit environments </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>UTF-EBCDIC : </label></br> <input style="display:block;" id="id1UTF-EBCDIC" type="number" name="Feature">
+								
+								</br>	
+								<label>UTF-8 : </label></br> <input style="display:block;" id="id1UTF-8" type="number" name="Feature">
+								
+								</br>	
+								<label>UTF-9 and UTF-18 : </label></br> <input style="display:block;" id="id1UTF-9 and UTF-18" type="number" name="Feature">
+								
+								</br>	
+								<label>Code range (hexadecimal) : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>UTF-16 : </label></br> <input style="display:block;" id="id1UTF-16" type="number" name="Feature">
+								
+								</br>	
+								<label>UTF-32 : </label></br> <input style="display:block;" id="id1UTF-32" type="number" name="Feature">
+								
+								</br>	
+								<label>GB 18030 :</label></br>
+											<input type="checkbox" name="Feature" >16 for characters inherited fromGB 2312</br>	
+											<input type="checkbox" name="Feature" >GBK (e.g. mostChinese characters) 32 foreverything else.</br>	
+							
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['000000 – 00007F','004000 – 00FFFF','000080 – 00009F','010000 – 03FFFF','000400 – 0007FF','0000A0 – 0003FF','040000 – 10FFFF','000800 – 003FFF','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of Norwegian BokmÃ¥l and Standard Danish -  Vowels </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of Norwegian BokmÃ¥l and Standard Danish -  Vowels </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Quantity : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Danish - /V/ : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Danish - /rV/ : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Danish - /Vr/ : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Products : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Grapheme : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Norwegian : </label></br> <input id="6" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['short','long','unstressed','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['P14','P1','P17','P5','P2','P3','P12','P4','P16','P19','P6','P9','P15','P8','P18','P10','P13','P11','P7','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['e','u','y','a','Ã¥','Ã¸','o','Ã¦','i','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['[Ê‰Ë?]','[oË?]','[Ã¦Ë?]','[Ê‰], [u]','[eË?]','[Ã¸Ë?]','[É”]','[uË?]','[É›]','[Éª]','[É‘]','[yË?]','[É‘Ë?]','[y]','[É™]','[Ã¦]','[Å“]','[iË?]','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

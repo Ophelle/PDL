@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of iSCSI targets - Comparison chart</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of iSCSI targets - Comparison chart</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>FalconStor :</label></br>
+								<input type="radio" name="FeatureFalconStor" value="oui">Yes <input type="radio" name="FeatureFalconStor" value = "non">No <input type="radio" name="FeatureFalconStor" value = "non">Partial </br>
+											<input name="FeatureFalconStor" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>FreeNAS :</label></br>
+								<input type="radio" name="FeatureFreeNAS" value="oui">Yes <input type="radio" name="FeatureFreeNAS" value = "non">No <input type="radio" name="FeatureFreeNAS" value = "non">Partial </br>
+											<input name="FeatureFreeNAS" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Open-E :</label></br>
+								<input type="radio" name="FeatureOpen-E" value="oui">Yes <input type="radio" name="FeatureOpen-E" value = "non">No <input type="radio" name="FeatureOpen-E" value = "non">Partial </br>
+											<input name="FeatureOpen-E" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Microsoft Windows Storage Server :</label></br>
+								<input type="radio" name="FeatureMicrosoft Windows Storage Server" value="oui">Yes <input type="radio" name="FeatureMicrosoft Windows Storage Server" value = "non">No <input type="radio" name="FeatureMicrosoft Windows Storage Server" value = "non">Partial </br>
+											<input name="FeatureMicrosoft Windows Storage Server" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Openfiler :</label></br>
+								<input type="radio" name="FeatureOpenfiler" value="oui">Yes <input type="radio" name="FeatureOpenfiler" value = "non">No <input type="radio" name="FeatureOpenfiler" value = "non">Partial </br>
+											<input name="FeatureOpenfiler" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Function : </label></br> <input id="0" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Unlimited Network Interface Controller Support','Storage limits','I/O caching','Microsoft Windows Server Core Support','Virtual tape library','Mirroring and Replication','Thin Provisioning','Virtual Optical Drive','Microsoft Management Console support','MPIO','EventViewer support','PerfMon support','Remote management','Windows Volume Snapshot Service','High availability support','Software RAID','Continuous Data Protection (CDP)','Virtual Burner support','Snapshot','VHD support','Multi-user mutual CHAP authorization','IPsec tunnelling','Dynamically expanding file support','VMware integration toolkit','Challenge-handshake authentication protocol','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

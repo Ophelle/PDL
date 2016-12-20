@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of netbook-oriented Linux distributions - Specific features</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of netbook-oriented Linux distributions - Specific features</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Target boot time : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Specific supported hardware : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>SSD write optimization (SSD degradation, I/O optimization, etc.) : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Distribution : </label></br> <input id="3" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['','5 seconds','30s (900 MHz)','30s','40 seconds','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','Lightweight kernel compiled for EeePCs only','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['','Yes','Layered filesystem - caches writes in RAM','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Eeedora','Kuki Linux 2.0','EasyPeasy 1.6','Ubuntu Netbook Edition 10.10','Firefly Linux 1.0 Beta 1','Puppeee Linux 4.3X','Leeenux Linux v6','Moblin 2.0','OpenGeeeU 8.10','Joli OS 1.2','Aurora 3.0','Linux4One 1.5','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

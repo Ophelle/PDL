@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of microblogging services -  General information </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of microblogging services -  General information </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Primary service : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Service : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Multilingual :</label></br>
+								<input type="radio" name="FeatureMultilingual" value="oui">Yes <input type="radio" name="FeatureMultilingual" value = "non">No <input type="radio" name="FeatureMultilingual" value = "non">Partial </br>
+											<input name="FeatureMultilingual" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Owner :</label></br>
+											<input type="checkbox" name="Feature" >Status Net</br>	
+											<input type="checkbox" name="Feature" >Inc.</br>	
+											<input type="checkbox" name="Feature" >Yammer</br>	
+											<input type="checkbox" name="Feature" >Google</br>	
+											<input type="checkbox" name="Feature" >Facebook</br>	
+											<input type="checkbox" name="Feature" >Twitter</br>	
+											<input type="checkbox" name="Feature" >Instapray</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Ad-free :</label></br>
+								<input type="radio" name="FeatureAd-free" value="oui">Yes <input type="radio" name="FeatureAd-free" value = "non">No <input type="radio" name="FeatureAd-free" value = "non">Partial </br>
+											<input name="FeatureAd-free" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Content license : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Software license : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Launched : </label></br> <input id="4" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['social network','micro-blogging','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Twitter','identi.ca','Tout','Yammer','Google+','Facebook','Instapray','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['own TOS','CC-BY 3.0','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['proprietary','Apache v2 (pump.io)','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['2011-06','2013-03','2004-02','2008-09','2010-04','2008-07','2006-08','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

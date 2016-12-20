@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>List of Intel graphics processing units -  First generation </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>List of Intel graphics processing units -  First generation </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Graphics : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Hardware acceleration - AVC : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Hardware acceleration - MPEG-2 : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Hardware acceleration - VC-1 : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Pixel pipelines : </label></br> <input style="display:block;" id="id1Pixel pipelines" type="number" name="Feature">
+												<input style="display:none;" id="id2Pixel pipelines" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Pixel pipelines','id2Pixel pipelines');">Changer type</button></br>								
+								</br>	
+								<label>Code name : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Device id. : </label></br> <input style="display:block;" id="id1Device id." type="number" name="Feature">
+												<input style="display:none;" id="id2Device id." type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Device id.','id2Device id.');">Changer type</button></br>								
+								</br>	
+								<label>Chipset : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Shader model(vertex/pixel) :</label></br>
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Memory bandwidth (GB/s) : </label></br> <input style="display:block;" id="id1Memory bandwidth (GB/s)" type="number" name="Feature">
+												<input style="display:none;" id="id2Memory bandwidth (GB/s)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Memory bandwidth (GB/s)','id2Memory bandwidth (GB/s)');">Changer type</button></br>								
+								</br>	
+								<label>API support - OpenCL : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>API support - OpenGL : </label></br> <input style="display:block;" id="id1API support - OpenGL" type="number" name="Feature">
+												<input style="display:none;" id="id2API support - OpenGL" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1API support - OpenGL','id2API support - OpenGL');">Changer type</button></br>								
+								</br>	
+								<label>API support - DirectX : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>DVMT (MB) : </label></br> <input id="8" type="text" name="Feature"></br>
+								</br>	
+								<label>RAMDACclock (MHz) : </label></br> <input style="display:block;" id="id1RAMDACclock (MHz)" type="number" name="Feature">
+												<input style="display:none;" id="id2RAMDACclock (MHz)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1RAMDACclock (MHz)','id2RAMDACclock (MHz)');">Changer type</button></br>								
+								</br>	
+								<label>Market : </label></br> <input id="9" type="text" name="Feature"></br>
+								</br>	
+								<label>Launch : </label></br> <input style="display:block;" id="id1Launch" type="number" name="Feature">
+												<input style="display:none;" id="id2Launch" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Launch','id2Launch');">Changer type</button></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['752','Intel740','3D graphics with Direct AGP','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Solano','Whitney','Portola','Auburn','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['stand-alone','810810-DC100810E810E2','815815E815G815EG','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['MC','2–8','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Desktop','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of layout engines (HTML5) - Global</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of layout engines (HTML5) - Global</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>spellcheck : </label></br> <input style="display:block;" id="id1spellcheck" type="number" name="Feature">
+												<input style="display:none;" id="id2spellcheck" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1spellcheck','id2spellcheck');">Changer type</button></br>								
+								</br>	
+								<label>translate : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>draggable : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>contextmenu :</label></br>
+								<input type="radio" name="Featurecontextmenu" value="oui">Yes <input type="radio" name="Featurecontextmenu" value = "non">No <input type="radio" name="Featurecontextmenu" value = "non">Partial </br>
+											<input name="Featurecontextmenu" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Datasets (data-*) : </label></br> <input style="display:block;" id="id1Datasets (data-*)" type="number" name="Feature">
+												<input style="display:none;" id="id2Datasets (data-*)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Datasets (data-*)','id2Datasets (data-*)');">Changer type</button></br>								
+								</br>	
+								<label>hidden :</label></br>
+								<input type="radio" name="Featurehidden" value="oui">Yes <input type="radio" name="Featurehidden" value = "non">No <input type="radio" name="Featurehidden" value = "non">Partial </br>
+											<input name="Featurehidden" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>contenteditable : </label></br> <input style="display:block;" id="id1contenteditable" type="number" name="Feature">
+												<input style="display:none;" id="id2contenteditable" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1contenteditable','id2contenteditable');">Changer type</button></br>								
+								</br>	
+								<label>dropzone :</label></br>
+								<input type="radio" name="Featuredropzone" value="oui">Yes <input type="radio" name="Featuredropzone" value = "non">No <input type="radio" name="Featuredropzone" value = "non">Partial </br>
+											<input name="Featuredropzone" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['','No','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['533','6.0','2.10.270','1.9.1','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of Portuguese and Spanish - Contractions</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of Portuguese and Spanish - Contractions</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Preposition +demonstrative(Portuguese) : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>em : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>de : </label></br> <input id="2" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['este (masc.sing.)esta (fem.sing.)estes (masc.pl.)estas (fem.pl.)','esse (masc.sing.)essa (fem.sing.)esses (masc.pl.)essas (fem.pl.)','aquele (masc.sing.)aquela (fem.sing.)aqueles (masc.pl.)aquelas (fem.pl.)','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['nessenessanessesnessas','nestenestanestesnestas','naquelenaquelanaquelesnaquelas','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['daqueledaqueladaquelesdaquelas','destedestadestesdestas','dessedessadessesdessas','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

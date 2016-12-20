@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of Windows Vista and Windows XP - Security</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of Windows Vista and Windows XP - Security</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Windows Vista :</label></br>
+								<input type="radio" name="FeatureWindows Vista" value="oui">Yes <input type="radio" name="FeatureWindows Vista" value = "non">No <input type="radio" name="FeatureWindows Vista" value = "non">Partial </br>
+								
+								</br>	
+								<label>Feature : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Windows 7 :</label></br>
+								<input type="radio" name="FeatureWindows 7" value="oui">Yes <input type="radio" name="FeatureWindows 7" value = "non">No <input type="radio" name="FeatureWindows 7" value = "non">Partial </br>
+								
+								</br>	
+								<label>Windows XP : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Windows 8 : </label></br> <input id="2" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Windows Security Center','Windows Firewall','Data Execution Prevention','User Account Control','Windows Defender','BitLocker Drive Encryption','Parental controls','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Yes (starting w/ SP2)','No','Yes','Available as a free download','Some (Internet Explorer allows parental control of web browsing)','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Yes (replaced by Family Safety)','Yes','Yes (replaced by Action Center)','Yes (Pro and Enterprise only)','Yes (added antivirus capabilities, available in older versions as the Microsoft Security Essentials download)','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

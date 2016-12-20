@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of layout engines (HTML) -  Multimedia elements </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of layout engines (HTML) -  Multimedia elements </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Images : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Generic inclusion : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label> - 5.0 : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label> - 3.1 : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label> - 4.0 :</label></br>
+								<input type="radio" name="Feature - 4.0" value="oui">Yes <input type="radio" name="Feature - 4.0" value = "non">No <input type="radio" name="Feature - 4.0" value = "non">Partial </br>
+											<input name="Feature - 4.0" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label> - Trident : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Image maps : </label></br> <input id="5" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Images','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Generic inclusion','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Image maps','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

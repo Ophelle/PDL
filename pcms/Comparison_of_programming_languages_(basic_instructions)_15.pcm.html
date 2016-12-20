@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of programming languages (basic instructions) -  Execution of commands </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of programming languages (basic instructions) -  Execution of commands </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Execute program : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Replace current program with new executed program : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Shell command : </label></br> <input id="2" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['','N/A','Not part of the language standard. Commonly done by compiler provided packages or by interfacing to C or Posix.','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','Not part of the language standard. Commonly done by compiler provided packages or by interfacing to C or Posix.','N/A','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['','N/A','Not part of the language standard. Commonly done by compiler provided packages or by interfacing to C or Posix.','or','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of chess video games - General information</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of chess video games - General information</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Developer : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>First release : </label></br> <input style="display:block;" id="id1First release" type="number" name="Feature">
+												<input style="display:none;" id="id2First release" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First release','id2First release');">Changer type</button></br>								
+								</br>	
+								<label>Chess engine : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Latest release : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Platform : </label></br> <input id="4" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Commercial','Free','GPL','Free GPL','','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['VooFoo Studios','David Horne','GNU Project','','InterplaySilicon & Synapse (C64)','Tim Mann','Nintendo','Sierra Entertainment','Robert Ancell, GNOME Team','Reinhard Scharnagl','Chessbase','Slam Games','Targem GamesZuxxez Entertainment','Vasik Rajlich','AgeTec','Ubisoft RomaniaZonic Limited (Mac OS X)','Amir Ban and Shay Bushinsky','Oberon Games','Mastertronic','Interplay','Gregory Strong','System 3','PyChess Project','Stefan Meyer-Kahlen','Peter R. Jennings','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['n/a','','Silver Star Chess','Pure Chess','Deep Fritz','third-party','N/A','Loop Express','Chessmaster, Combat Chess, Grandmaster Chess','Microchess','WChess','Deep Junior','ChessV','Rybka','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['2002','','n/a','1998','2013','N/A','2007','2010','1994','2009','2012','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Amiga, 3DO, Acorn Archimedes, Amiga CD32,  Amiga CDTV, Apple IIGS, Apple IIe, Atari ST, Commodore 64, DOS, FM Towns, NES, Mac OS, PC-98, Sharp X68000, Windows 3.x','','Microsoft Windows, Mac OS X, Windows Mobile, Freescale DragonBall, ARM-based Palm OS, iPhone and iPod Touch','Microsoft Windows 3.11, Microsoft Windows','Unix-like','PC, DOS','Windows Vista, Windows XP, Mac, Nintendo DS','Microsoft Windows','Windows Vista, Windows XP, PlayStation 3, Wii, Nintendo DS, Windows 7','Microsoft Windows, Mac OS X, Nintendo DS, PlayStation 3, PlayStation Portable, Xbox 360, Wii','PlayStation 3, PlayStation Vita','ZX Spectrum','Windows Vista, Windows 7','MS Windows, MS-DOS, PlayStation Xbox 360 (XBLA), PSP, PS2','Nintendo Wii','Wii, Nintendo DS, PlayStation 2, Microsoft Windows, iPad','Steam (software)','Unix-like X11 Microsoft Windows','Playstation, Microsoft Windows','KIM-1','Playstation 2','Wiiware','Microsoft Windows, Mac OS X, Linux, iPhone, iPad, Android','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

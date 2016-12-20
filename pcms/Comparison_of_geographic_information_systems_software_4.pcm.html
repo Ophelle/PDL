@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of geographic information systems software - Catalog servers</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of geographic information systems software - Catalog servers</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Name - As a server : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Name - Z39.50 : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Products : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>GeoNetwork - Yes :</label></br>
+								<input type="radio" name="FeatureGeoNetwork - Yes" value="oui">Yes <input type="radio" name="FeatureGeoNetwork - Yes" value = "non">No <input type="radio" name="FeatureGeoNetwork - Yes" value = "non">Partial </br>
+											<input name="FeatureGeoNetwork - Yes" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['P1','P5','P15','P3','P7','P4','P12','P2','P11','P13','P10','P8','P9','P6','P14','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

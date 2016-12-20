@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of IPv6 support in routers - Third-party firmwares with IPv6 support</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of IPv6 support in routers - Third-party firmwares with IPv6 support</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Name : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Pfsense : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>DD-WRT : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Tomato :</label></br>
+											<input type="checkbox" name="Feature" >Some mods support IPv6</br>	
+											<input type="checkbox" name="Feature" >others do not (yet) - see article</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>OpenWrt : </label></br> <input id="3" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Reference links','Notes','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','Version 2.1 or better','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['8.09 supports v6 routing with Quagga. 10.03.1 supports v6 routing with Quagga & BIRD.','Full IPv6 support in Barrier Breaker','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of audio synthesis environments - General</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of audio synthesis environments - General</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Name : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Main user interface type : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Primary Purpose(s) :</label></br>
+											<input type="checkbox" name="Feature" >Realtime synthesis</br>	
+											<input type="checkbox" name="Feature" >live coding</br>	
+											<input type="checkbox" name="Feature" >pedagogy</br>	
+											<input type="checkbox" name="Feature" >acoustic research</br>	
+											<input type="checkbox" name="Feature" >algorithmic composition</br>	
+											<input type="checkbox" name="Feature" >Live coding</br>	
+											<input type="checkbox" name="Feature" >hardware control</br>	
+											<input type="checkbox" name="Feature" >realtime synthesis</br>	
+											<input type="checkbox" name="Feature" >2d</br>	
+											<input type="checkbox" name="Feature" >3d graphics programming</br>	
+											<input type="checkbox" name="Feature" >all-purpose programming language</br>	
+											<input type="checkbox" name="Feature" >GUI design</br>	
+											<input type="checkbox" name="Feature" >Realtime performance</br>	
+											<input type="checkbox" name="Feature" >sound synthesis</br>	
+											<input type="checkbox" name="Feature" >Realtime audio + video synthesis</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>First release date : </label></br> <input style="display:block;" id="id1First release date" type="number" name="Feature">
+												<input style="display:none;" id="id2First release date" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First release date','id2First release date');">Changer type</button></br>								
+								</br>	
+								<label>Most recent version : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Cost : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Development status : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Most recent update : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Creator : </label></br> <input id="7" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Impromptu','Pure Data','Max/MSP','Reaktor','ChucK','Csound','SuperCollider','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Proprietary','BSD-like','GPL','LGPL','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Document','Graphical','Document, graphical','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['v0.46.6','v3.6.6','5.9.2','v1.3.5.0','v6.03','v7.0.1','v2.5','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Non-free','Free','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['Mature','Stable','Immature','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['2014-09','2014-07','2014-12','2015-03','2013-04','2010-10','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['James McCartney','Ge Wang and Perry Cook','Barry Vercoe','Native Instruments','Andrew Sorensen','Miller Puckette','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

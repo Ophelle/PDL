@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of pumps - Direct lift devices</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of pumps - Direct lift devices</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Efficiency : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Difficulty of production : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Difficulty of repair : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Size of device : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Production cost : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Maximum lift height : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Pump type : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Cyclic/continuous ? : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Fabrication requirements : </label></br> <input id="8" type="text" name="Feature"></br>
+								</br>	
+								<label>Suction lift ? :</label></br>
+								<input type="radio" name="FeatureSuction lift ?" value="oui">Yes <input type="radio" name="FeatureSuction lift ?" value = "non">No <input type="radio" name="FeatureSuction lift ?" value = "non">Partial </br>
+											<input name="FeatureSuction lift ?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Durability : </label></br> <input id="9" type="text" name="Feature"></br>
+								</br>	
+								<label>Output : </label></br> <input id="10" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['very low','medium-high','medium','low-medium','low','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['traditional','basic','industrial','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['?','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['?','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['very low','low-medium','medium-high','medium','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['>3m','>1m','100m-500m','3m-8m','1m-1,5m','5m-50m','3m-10m','1m-4m','3m-15m','>2m','>5m','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['Counterpoise lift or Shadoof','Scoops and bailers','Persian wheel "Tablia"','Swing basket','Continuous bucket pump','Reciprocating bucket hoist','Watering car','Scoop wheel "Sakia"','Rope & bucket and windlass','Waterwheel or noria','Mohte','Persian wheel "Zawaffa"','Pivoting gutters and "dhones"','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['cyclic','continuous','']
+								});
+								$("#8").typeahead({
+									name:"list8",
+									local : ['?','']
+								});
+								$("#9").typeahead({
+									name:"list9",
+									local : ['?','']
+								});
+								$("#10").typeahead({
+									name:"list10",
+									local : ['low-medium','medium-high','medium','very low','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

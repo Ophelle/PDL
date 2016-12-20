@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of Office Open XML software - Spreadsheet documents</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of Office Open XML software - Spreadsheet documents</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Operating systems :</label></br>
+											<input type="checkbox" name="Feature" >Palm OS</br>	
+											<input type="checkbox" name="Feature" >Windows Mobile</br>	
+											<input type="checkbox" name="Feature" >Symbian (UIQ</br>	
+											<input type="checkbox" name="Feature" >S80)</br>	
+											<input type="checkbox" name="Feature" >Windows</br>	
+											<input type="checkbox" name="Feature" >OS X</br>	
+											<input type="checkbox" name="Feature" >Linux</br>	
+											<input type="checkbox" name="Feature" >Unix</br>	
+											<input type="checkbox" name="Feature" >Android</br>	
+											<input type="checkbox" name="Feature" >Solaris</br>	
+											<input type="checkbox" name="Feature" >Mac OS X</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Notes : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Office suite : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Version : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Developer : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>ECMA-376 :</label></br>
+								<input type="radio" name="FeatureECMA-376" value="oui">Yes <input type="radio" name="FeatureECMA-376" value = "non">No <input type="radio" name="FeatureECMA-376" value = "non">Partial </br>
+											<input name="FeatureECMA-376" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>ISO/IEC 29500:2008 : </label></br> <input id="5" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Import only','','Notes','Import only beta support','Incomplete support','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['MPL','Proprietary','License','LGPL, CDDL','LGPL','GPL','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Google Docs','NeoOffice','','Microsoft Office Mobile','EIOffice','Microsoft Office','iWork','Thinkfree Office','IBM Lotus Symphony','Kingsoft Office','Office suite','Microsoft Works','Go-oo','Documents To Go','WordPerfect Office','OpenOffice.org','StarOffice','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['1.3','11.000','2009, 5.0.1272.101','(current)','X4 (2008)','6.1','`08','9','2009, 6.3.0.1733','All versions','','2.2.5','3.0','2013, 2011 for Mac','3.0.0','1.8','Version','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Patrick Luby and Edward Peterlin','Free software community','Apple Inc.','Microsoft','The Document Foundation','Google','GNOME','Evermore Software','ThinkFree Corp','Developer','DataViz','Kingsoft','Sun Microsystems','OpenOffice.org','IBM','Corel','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['','ISO/IEC 29500:2008','Yes','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

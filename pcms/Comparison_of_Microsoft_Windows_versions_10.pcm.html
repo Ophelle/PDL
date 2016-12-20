@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of Microsoft Windows versions - {{Anchor|FS-9x}}Windows 9x</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of Microsoft Windows versions - {{Anchor|FS-9x}}Windows 9x</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>UDF : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>NTFS : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>FAT32 :</label></br>
+								<input type="radio" name="FeatureFAT32" value="oui">Yes <input type="radio" name="FeatureFAT32" value = "non">No <input type="radio" name="FeatureFAT32" value = "non">Partial </br>
+								
+								</br>	
+								<label>HPFS : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>FAT16 :</label></br>
+								<input type="radio" name="FeatureFAT16" value="oui">Yes <input type="radio" name="FeatureFAT16" value = "non">No <input type="radio" name="FeatureFAT16" value = "non">Partial </br>
+								
+								</br>	
+								<label>ISO 9660 :</label></br>
+								<input type="radio" name="FeatureISO 9660" value="oui">Yes <input type="radio" name="FeatureISO 9660" value = "non">No <input type="radio" name="FeatureISO 9660" value = "non">Partial </br>
+								
+								</br>	
+								<label>FAT12 :</label></br>
+								<input type="radio" name="FeatureFAT12" value="oui">Yes <input type="radio" name="FeatureFAT12" value = "non">No <input type="radio" name="FeatureFAT12" value = "non">Partial </br>
+								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Yes (1.5, read)','No','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Network Drive','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Network Drive','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

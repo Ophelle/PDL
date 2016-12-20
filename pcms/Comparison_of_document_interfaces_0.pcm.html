@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of document interfaces</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of document interfaces</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>easy to view all document labels of same type document : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>use simultaneously different application :</label></br>
+								<input type="radio" name="Featureuse simultaneously different application" value="oui">Yes <input type="radio" name="Featureuse simultaneously different application" value = "non">No <input type="radio" name="Featureuse simultaneously different application" value = "non">Partial </br>
+											<input name="Featureuse simultaneously different application" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>small-sized content :</label></br>
+								<input type="radio" name="Featuresmall-sized content" value="oui">Yes <input type="radio" name="Featuresmall-sized content" value = "non">No <input type="radio" name="Featuresmall-sized content" value = "non">Partial </br>
+											<input name="Featuresmall-sized content" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>multiple type document :</label></br>
+								<input type="radio" name="Featuremultiple type document" value="oui">Yes <input type="radio" name="Featuremultiple type document" value = "non">No <input type="radio" name="Featuremultiple type document" value = "non">Partial </br>
+											<input name="Featuremultiple type document" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Concept : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>memory efficiency :</label></br>
+								<input type="radio" name="Featurememory efficiency" value="oui">Yes <input type="radio" name="Featurememory efficiency" value = "non">No <input type="radio" name="Featurememory efficiency" value = "non">Partial </br>
+											<input name="Featurememory efficiency" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Applications : </label></br> <input id="2" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['depends on Window System','depends on Application','Yes','No','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['MDI: Window splitting','MDI: Tabbed document interface','Single document interface','MDI: Overlappable windows','MDI: IDE-style interface','Controlled Single Document Interface','Single document window splitting','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['','Opera','Eclipse','Inkscape','GIMP','gedit, Firefox','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

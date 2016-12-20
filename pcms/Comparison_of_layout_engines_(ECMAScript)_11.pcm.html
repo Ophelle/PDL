@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of layout engines (ECMAScript) - Error object</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of layout engines (ECMAScript) - Error object</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Called as function : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Called as constructor : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>name : </label></br> <input style="display:block;" id="id1name" type="number" name="Feature">
+												<input style="display:none;" id="id2name" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1name','id2name');">Changer type</button></br>								
+								</br>	
+								<label>constructor : </label></br> <input style="display:block;" id="id1constructor" type="number" name="Feature">
+												<input style="display:none;" id="id2constructor" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1constructor','id2constructor');">Changer type</button></br>								
+								</br>	
+								<label>Error (message) : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Properties : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>message : </label></br> <input style="display:block;" id="id1message" type="number" name="Feature">
+												<input style="display:none;" id="id2message" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1message','id2message');">Changer type</button></br>								
+								</br>	
+								<label>toString() : </label></br> <input style="display:block;" id="id1toString()" type="number" name="Feature">
+												<input style="display:none;" id="id2toString()" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1toString()','id2toString()');">Changer type</button></br>								
+								</br>	
+								<label>Properties of prototype : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>new Error (message) : </label></br> <input style="display:block;" id="id1new Error (message)" type="number" name="Feature">
+												<input style="display:none;" id="id2new Error (message)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1new Error (message)','id2new Error (message)');">Changer type</button></br>								
+								</br>	
+								<label>prototype : </label></br> <input style="display:block;" id="id1prototype" type="number" name="Feature">
+												<input style="display:none;" id="id2prototype" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1prototype','id2prototype');">Changer type</button></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Called as function','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Called as constructor','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['?','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Properties','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Properties of prototype','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

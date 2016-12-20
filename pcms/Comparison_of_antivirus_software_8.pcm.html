@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of antivirus software - </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of antivirus software - </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Call/SMS Filtering :</label></br>
+								<input type="radio" name="FeatureCall/SMS Filtering" value="oui">Yes <input type="radio" name="FeatureCall/SMS Filtering" value = "non">No <input type="radio" name="FeatureCall/SMS Filtering" value = "non">Partial </br>
+								
+								</br>	
+								<label>Backup :</label></br>
+								<input type="radio" name="FeatureBackup" value="oui">Yes <input type="radio" name="FeatureBackup" value = "non">No <input type="radio" name="FeatureBackup" value = "non">Partial </br>
+								
+								</br>	
+								<label>Software : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Firewall :</label></br>
+								<input type="radio" name="FeatureFirewall" value="oui">Yes <input type="radio" name="FeatureFirewall" value = "non">No <input type="radio" name="FeatureFirewall" value = "non">Partial </br>
+								
+								</br>	
+								<label>AntiSpam :</label></br>
+								<input type="radio" name="FeatureAntiSpam" value="oui">Yes <input type="radio" name="FeatureAntiSpam" value = "non">No <input type="radio" name="FeatureAntiSpam" value = "non">Partial </br>
+								
+								</br>	
+								<label>Parental Control :</label></br>
+								<input type="radio" name="FeatureParental Control" value="oui">Yes <input type="radio" name="FeatureParental Control" value = "non">No <input type="radio" name="FeatureParental Control" value = "non">Partial </br>
+								
+								</br>	
+								<label>First release : </label></br> <input style="display:block;" id="id1First release" type="number" name="Feature">
+								
+								</br>	
+								<label>Country of origin : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Price : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>On-access scan :</label></br>
+								<input type="radio" name="FeatureOn-access scan" value="oui">Yes <input type="radio" name="FeatureOn-access scan" value = "non">No <input type="radio" name="FeatureOn-access scan" value = "non">Partial </br>
+								
+								</br>	
+								<label>On-demand scan :</label></br>
+								<input type="radio" name="FeatureOn-demand scan" value="oui">Yes <input type="radio" name="FeatureOn-demand scan" value = "non">No <input type="radio" name="FeatureOn-demand scan" value = "non">Partial </br>
+								
+								</br>	
+								<label>Web protection :</label></br>
+								<input type="radio" name="FeatureWeb protection" value="oui">Yes <input type="radio" name="FeatureWeb protection" value = "non">No <input type="radio" name="FeatureWeb protection" value = "non">Partial </br>
+								
+								</br>	
+								<label>Support :</label></br>
+								<input type="radio" name="FeatureSupport" value="oui">Yes <input type="radio" name="FeatureSupport" value = "non">No <input type="radio" name="FeatureSupport" value = "non">Partial </br>
+								
+								</br>	
+								<label>Notes : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Company : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>AntiTheft :</label></br>
+								<input type="radio" name="FeatureAntiTheft" value="oui">Yes <input type="radio" name="FeatureAntiTheft" value = "non">No <input type="radio" name="FeatureAntiTheft" value = "non">Partial </br>
+								
+								</br>	
+								<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['BullGuard Mobile Security','Kaspersky Mobile Security','Dr. Web Mobile Security Suite','ESET Mobile Security','Rising Mobile Security','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Russia','Slovakia','United Kingdom','China','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Non-free','Trialware','Free','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Rising','Kaspersky Lab','ESET','BullGuard','Dr. Web','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['Proprietary','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of Tryton and Open ERP - Concepts and approach</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of Tryton and Open ERP - Concepts and approach</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Subject : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>float/integer representation :</label></br>
+											<input type="checkbox" name="Feature" >Limited to float or long because using gtk.Entry without limit</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Code review : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Password Storage :</label></br>
+											<input type="checkbox" name="Feature" >Cleartext by default</br>	
+											<input type="checkbox" name="Feature" >salted HMAC-MD5 hash with base_crypt module</br>	
+											<input type="checkbox" name="Feature" >SHA1-hash (salted since version 1.4) or bcrypt</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Date representation : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Accounting : </label></br> <input id="3" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Odoo','Tryton','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['All commits through Rietveld','Bugfix/Feature branches reviewed by R&D on GitHub','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Uses strings to represent dates','Uses datetime.datetime and datetime.date','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Uses floats','Uses decimal','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

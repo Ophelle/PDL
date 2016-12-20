@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>List of Intel graphics processing units -  Fourth generation </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>List of Intel graphics processing units -  Fourth generation </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Device id. : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Market : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Execution units : </label></br> <input style="display:block;" id="id1Execution units" type="number" name="Feature">
+												<input style="display:none;" id="id2Execution units" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Execution units','id2Execution units');">Changer type</button></br>								
+								</br>	
+								<label>API support - DirectX : </label></br> <input style="display:block;" id="id1API support - DirectX" type="number" name="Feature">
+												<input style="display:none;" id="id2API support - DirectX" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1API support - DirectX','id2API support - DirectX');">Changer type</button></br>								
+								</br>	
+								<label>API support - OpenGL : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>API support - OpenCL : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Launch : </label></br> <input style="display:block;" id="id1Launch" type="number" name="Feature">
+												<input style="display:none;" id="id2Launch" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Launch','id2Launch');">Changer type</button></br>								
+								</br>	
+								<label>Memory bandwidth (GB/s) : </label></br> <input style="display:block;" id="id1Memory bandwidth (GB/s)" type="number" name="Feature">
+												<input style="display:none;" id="id2Memory bandwidth (GB/s)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Memory bandwidth (GB/s)','id2Memory bandwidth (GB/s)');">Changer type</button></br>								
+								</br>	
+								<label>Graphics : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Core renderclock (MHz) : </label></br> <input style="display:block;" id="id1Core renderclock (MHz)" type="number" name="Feature">
+												<input style="display:none;" id="id2Core renderclock (MHz)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Core renderclock (MHz)','id2Core renderclock (MHz)');">Changer type</button></br>								
+								</br>	
+								<label>Hardware acceleration - VC-1 : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Hardware acceleration - MPEG-2 : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Hardware acceleration - AVC : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Code name : </label></br> <input id="8" type="text" name="Feature"></br>
+								</br>	
+								<label>DVMT (MB) : </label></br> <input style="display:block;" id="id1DVMT (MB)" type="number" name="Feature">
+												<input style="display:none;" id="id2DVMT (MB)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1DVMT (MB)','id2DVMT (MB)');">Changer type</button></br>								
+								</br>	
+								<label>Chipset : </label></br> <input id="9" type="text" name="Feature"></br>
+								</br>	
+								<label>Shader model(vertex/pixel) : </label></br> <input style="display:block;" id="id1Shader model(vertex/pixel)" type="number" name="Feature">
+												<input style="display:none;" id="id2Shader model(vertex/pixel)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Shader model(vertex/pixel)','id2Shader model(vertex/pixel)');">Changer type</button></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['2A422A43','2A022A032A122A13','29A229A3','2E222E23','2E322E33','29722973','2E122E13','29922993','2E422E432E922E93','29822983','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Desktop','Mobile','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['GMA X3100','GMA 3000','GMA X4500','GMA X3500','GMA 4500','GMA 4500MHD','GMA X3000','GMA X4500HD','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Cantiga','Eaglelake','Crestline','Broadwater','Bearlake','Lakeport','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['GS45','Q43','G43','GS40','GM45','B43','GL960','GM965','GME965','G41','Q963','G965','946GZ','GL40','G45','G35','Q45','Q965','GLE960','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

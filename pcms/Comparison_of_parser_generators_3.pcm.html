@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of parser generators -  General context-free, conjunctive or boolean languages </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of parser generators -  General context-free, conjunctive or boolean languages </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Lexer : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Website : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Parsing algorithm : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Development platform : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>IDE :</label></br>
+								<input type="radio" name="FeatureIDE" value="oui">Yes <input type="radio" name="FeatureIDE" value = "non">No <input type="radio" name="FeatureIDE" value = "non">Partial </br>
+											<input name="FeatureIDE" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Input grammar notation : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Output languages : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Grammar, code : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Name : </label></br> <input id="8" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['generated','scannerless','external','generated or external','external, or scannerless','none','internal','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Apache License 2.0','BSD','Proprietary','MIT','Artistic','"No licensing or copyright restrictions"','GNU GPL','CeCILL-B','?','GNU LGPL','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['LALR, GLR','LALR(1), GLR','LALR(1), LR(0), SLR(1)','Earley','runtime-extensible GLR','GLR','LALR, LR, GLR','Pruning, LR, GLR, Scannerless GLR','Combinators','General tabular, SLL(k), Linear normal form (Conjunctive grammar), LR, Binary normal form (Boolean grammar)','GLR(1), LALR(1), LR(1)','Scannerless GLR','Earley/combinators, infinitary CFGs','LALR(1), LR(1), IELR(1), GLR','Scannerless, two phase','Earley/combinators','GLR, LALR(1), LL(k)','Scannerless GLR (Boolean grammar)','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['.NET Framework','all','POSIX','Microsoft Windows','Java Virtual Machine','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['BNF-like','?','YACC','C#','Laja','SDF','Annotated class model','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['Parlanse','C, C++, Java','N/A (state machine is runtime generated)','OCaml','C, Java','D','C, Python','C','Haskell, Java','C++, C#, Java, Visual Basic .NET','Python','C, Lex, Haskell, HTML, Java, Object Pascal, Yacc','JavaScript, C#, PHP','Haskell','Java','C++, OCaml','C#','Smalltalk','C++','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['separate','mixed','generated','']
+								});
+								$("#8").typeahead({
+									name:"list8",
+									local : ['Happy','SPARK','IronText Library','E3','GDK','P1','Wormhole','Bison','DMS Software Reengineering Toolkit','Dypgen','APaGeD','Jison','SDF/SGLR','Elkhound','UltraGram','DParser','Whale Calf','Tom','P3','Laja','eu.h8me.Parsing','SmaCC','ACCENT','Scannerless Boolean Parser','ModelCC','P4','Hime Parser Generator','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

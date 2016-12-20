@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>List of Nvidia graphics processing units - Quadro Kxxx Series</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>List of Nvidia graphics processing units - Quadro Kxxx Series</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Processing PowerGFLOPS - Double Precision : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Processing PowerGFLOPS - Single Precision : </label></br> <input style="display:block;" id="id1Processing PowerGFLOPS - Single Precision" type="number" name="Feature">
+								
+								</br>	
+								<label>Core clock (MHz) : </label></br> <input style="display:block;" id="id1Core clock (MHz)" type="number" name="Feature">
+								
+								</br>	
+								<label>Fab (nm) : </label></br> <input style="display:block;" id="id1Fab (nm)" type="number" name="Feature">
+								
+								</br>	
+								<label>API support (version) - OpenGL : </label></br> <input style="display:block;" id="id1API support (version) - OpenGL" type="number" name="Feature">
+								
+								</br>	
+								<label>API support (version) - DirectX : </label></br> <input style="display:block;" id="id1API support (version) - DirectX" type="number" name="Feature">
+								
+								</br>	
+								<label>Fillrate - Texture (GT/s) : </label></br> <input style="display:block;" id="id1Fillrate - Texture (GT/s)" type="number" name="Feature">
+								
+								</br>	
+								<label>Fillrate - Pixel (GP/s) : </label></br> <input style="display:block;" id="id1Fillrate - Pixel (GP/s)" type="number" name="Feature">
+								
+								</br>	
+								<label>Shader clock (MHz) : </label></br> <input style="display:block;" id="id1Shader clock (MHz)" type="number" name="Feature">
+								
+								</br>	
+								<label>TDP (watts) : </label></br> <input style="display:block;" id="id1TDP (watts)" type="number" name="Feature">
+								
+								</br>	
+								<label>Code name : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input style="display:block;" id="id1Memory - Bandwidth (GB/s)" type="number" name="Feature">
+								
+								</br>	
+								<label>Memory - Bus width (bit) : </label></br> <input style="display:block;" id="id1Memory - Bus width (bit)" type="number" name="Feature">
+								
+								</br>	
+								<label>Memory - Bus type : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Notes : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Model : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Core config : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Bus interface : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory (MB) : </label></br> <input style="display:block;" id="id1Memory (MB)" type="number" name="Feature">
+								
+								</br>	
+								<label>Memory clock (MHz) : </label></br> <input id="7" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['GM107','GK104','GK110B','GK107','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['7.97" Card','','9.5" Card','6.3" Card','10.5" Card','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Quadro K620','Quadro K4200','Quadro K420','Quadro K2200','Quadro K5200','Quadro K1200','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['384:24:16(3 SMM)','640:40:16(5 SMM)','192:16:16(1 SMX)','1344:112:32(7 SMX)','2304:192:32(12 SMX)','512:32:16(4 SMM)','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['PCIe 2.0 x16','PCIe 3.0 x16','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['','1250(5000)','1800','900(1800)','1350(5400)','1500(6000)','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

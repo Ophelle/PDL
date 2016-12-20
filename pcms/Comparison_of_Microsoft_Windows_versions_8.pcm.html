@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of Microsoft Windows versions -  {{Anchor|TI-NT}}Windows NT </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of Microsoft Windows versions -  {{Anchor|TI-NT}}Windows NT </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>UDMA support :</label></br>
+								<input type="radio" name="FeatureUDMA support" value="oui">Yes <input type="radio" name="FeatureUDMA support" value = "non">No <input type="radio" name="FeatureUDMA support" value = "non">Partial </br>
+								
+								</br>	
+								<label>USB support : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Name : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Update management :</label></br>
+											<input type="checkbox" name="Feature" >Windows Update</br>	
+											<input type="checkbox" name="Feature" >WSUS</br>	
+											<input type="checkbox" name="Feature" >Windows Store</br>	
+							
+								</br>	
+								<label>Long filename support :</label></br>
+								<input type="radio" name="FeatureLong filename support" value="oui">Yes <input type="radio" name="FeatureLong filename support" value = "non">No <input type="radio" name="FeatureLong filename support" value = "non">Partial </br>
+								
+								</br>	
+								<label>Integrated firewall :</label></br>
+								<input type="radio" name="FeatureIntegrated firewall" value="oui">Yes <input type="radio" name="FeatureIntegrated firewall" value = "non">No <input type="radio" name="FeatureIntegrated firewall" value = "non">Partial </br>
+								
+								</br>	
+								<label>Package management : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Data Execution Prevention :</label></br>
+								<input type="radio" name="FeatureData Execution Prevention" value="oui">Yes <input type="radio" name="FeatureData Execution Prevention" value = "non">No <input type="radio" name="FeatureData Execution Prevention" value = "non">Partial </br>
+								
+								</br>	
+								<label>SMP support :</label></br>
+								<input type="radio" name="FeatureSMP support" value="oui">Yes <input type="radio" name="FeatureSMP support" value = "non">No <input type="radio" name="FeatureSMP support" value = "non">Partial </br>
+								
+								</br>	
+								<label>Architecture :</label></br>
+											<input type="checkbox" name="Feature" >Itanium</br>	
+											<input type="checkbox" name="Feature" >x64</br>	
+											<input type="checkbox" name="Feature" >IA-32</br>	
+											<input type="checkbox" name="Feature" >DEC Alpha</br>	
+											<input type="checkbox" name="Feature" >MIPS</br>	
+											<input type="checkbox" name="Feature" >PowerPC</br>	
+							
+								</br>	
+								<label>APIs :</label></br>
+											<input type="checkbox" name="Feature" >Win32</br>	
+											<input type="checkbox" name="Feature" >OS</br>	
+											<input type="checkbox" name="Feature" >2</br>	
+											<input type="checkbox" name="Feature" >POSIX</br>	
+											<input type="checkbox" name="Feature" >.NET</br>	
+											<input type="checkbox" name="Feature" >WinRT</br>	
+											<input type="checkbox" name="Feature" >POSIX (only Enterprise and Ultimate)</br>	
+							
+								</br>	
+								<label>Safe Mode :</label></br>
+								<input type="radio" name="FeatureSafe Mode" value="oui">Yes <input type="radio" name="FeatureSafe Mode" value = "non">No <input type="radio" name="FeatureSafe Mode" value = "non">Partial </br>
+								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Yes (if the Ion USB update is installed)','Yes (USB 2.0)','No','Yes (USB 3.0)','Yes (USB 2.0 with update or SP4)','Yes','Yes (USB 2.0 with update or SP1+)','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Windows Server 2012','Windows NT 3.1','Windows Home Server 2011','Windows NT 3.51','Windows XP','Windows Fundamentals for Legacy PCs','Windows 7','Windows Vista','Windows 8.1','Windows NT 4.0','Windows 8','Windows Server 2012 R2','Windows Home Server','Windows Server 2008 R2','Windows 10','Windows Server 2008','Windows Server 2003','Windows 2000','Windows NT 3.5','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['N/A','Windows Store, PowerShell','Windows Store','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

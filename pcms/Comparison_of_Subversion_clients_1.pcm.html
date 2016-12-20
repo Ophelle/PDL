@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of Subversion clients -  Standalone Subversion clients comparison table </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of Subversion clients -  Standalone Subversion clients comparison table </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Free :</label></br>
+								<input type="radio" name="FeatureFree" value="oui">Yes <input type="radio" name="FeatureFree" value = "non">No <input type="radio" name="FeatureFree" value = "non">Partial </br>
+								
+								</br>	
+								<label>Network protocols :</label></br>
+											<input type="checkbox" name="Feature" >http</br>	
+											<input type="checkbox" name="Feature" >https</br>	
+											<input type="checkbox" name="Feature" >svn</br>	
+											<input type="checkbox" name="Feature" >svn+ssh</br>	
+											<input type="checkbox" name="Feature" >file</br>	
+											<input type="checkbox" name="Feature" >svn and svn+ssh</br>	
+											<input type="checkbox" name="Feature" >(k)svn</br>	
+											<input type="checkbox" name="Feature" >(k)svn+file</br>	
+											<input type="checkbox" name="Feature" >(k)svn+http</br>	
+											<input type="checkbox" name="Feature" >(k)svn+https</br>	
+											<input type="checkbox" name="Feature" >(k)svn+ssh</br>	
+							
+								</br>	
+								<label>Client name : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Browse remote repository :</label></br>
+								<input type="radio" name="FeatureBrowse remote repository" value="oui">Yes <input type="radio" name="FeatureBrowse remote repository" value = "non">No <input type="radio" name="FeatureBrowse remote repository" value = "non">Partial </br>
+								
+								</br>	
+								<label>Diff :</label></br>
+								<input type="radio" name="FeatureDiff" value="oui">Yes <input type="radio" name="FeatureDiff" value = "non">No <input type="radio" name="FeatureDiff" value = "non">Partial </br>
+								
+								</br>	
+								<label>Merge :</label></br>
+								<input type="radio" name="FeatureMerge" value="oui">Yes <input type="radio" name="FeatureMerge" value = "non">No <input type="radio" name="FeatureMerge" value = "non">Partial </br>
+								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['RapidSVN','QSvn','SVN Repo Browser Pro','iVersion','Syncro SVN','SmartSVN Foundation','SVNBreeze','GTalkabout','Cornerstone','kdesvn','Subcommander','SVN-Monitor','sdSVN','SmartSVN Professional','DiffPlug','SVN Repo Browser','SmartGit','Versions','eSvn','svnup','ZigVersion','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

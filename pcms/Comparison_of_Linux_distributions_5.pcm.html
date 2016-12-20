@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of Linux distributions - Security features</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of Linux distributions - Security features</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Gentoo : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Alpine Linux : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>gNewSense : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>SUSE Linux :</label></br>
+								<input type="radio" name="FeatureSUSE Linux" value="oui">Yes <input type="radio" name="FeatureSUSE Linux" value = "non">No <input type="radio" name="FeatureSUSE Linux" value = "non">Partial </br>
+											<input name="FeatureSUSE Linux" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Fedora :</label></br>
+								<input type="radio" name="FeatureFedora" value="oui">Yes <input type="radio" name="FeatureFedora" value = "non">No <input type="radio" name="FeatureFedora" value = "non">Partial </br>
+											<input name="FeatureFedora" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Parabola GNU/Linux-libre : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Debian/Ubuntu : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Mandriva : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Distribution : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Tor-ramdisk :</label></br>
+								<input type="radio" name="FeatureTor-ramdisk" value="oui">Yes <input type="radio" name="FeatureTor-ramdisk" value = "non">No <input type="radio" name="FeatureTor-ramdisk" value = "non">Partial </br>
+											<input name="FeatureTor-ramdisk" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Ututo : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Trisquel : </label></br> <input id="8" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['PaX optional','Optional','SELinux','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Unknown','PaX','Yes','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Unknown','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Unknown','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Yes','PaX optional','Optional','SELinux, AppArmor','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['AppArmor','Unknown','Yes','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['Software executable space protection','grsecurity','Compile time buffer checks','Mandatory access control','RSBAC','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['Unknown','']
+								});
+								$("#8").typeahead({
+									name:"list8",
+									local : ['Unknown','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

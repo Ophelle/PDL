@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of Portuguese and Spanish - Samples</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of Portuguese and Spanish - Samples</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Spanish : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Origin :</label></br>
+											<input type="checkbox" name="Feature" >Latin oblÄ«tare</br>	
+											<input type="checkbox" name="Feature" > excadescere</br>	
+											<input type="checkbox" name="Feature" >Late Latin tendamÂ (<Â tendere)</br>	
+											<input type="checkbox" name="Feature" > Germanic via Old French loge</br>	
+											<input type="checkbox" name="Feature" >Latin callem</br>	
+											<input type="checkbox" name="Feature" > [viam] rvgam.</br>	
+											<input type="checkbox" name="Feature" >Late Latin bvrra</br>	
+											<input type="checkbox" name="Feature" > Latin adpÄ?cÄ?re</br>	
+											<input type="checkbox" name="Feature" >Latin rotellam</br>	
+											<input type="checkbox" name="Feature" >genvcvlvm</br>	
+											<input type="checkbox" name="Feature" >Latin ventvs</br>	
+											<input type="checkbox" name="Feature" > iÄ?nvellaÂ (iÄ?nva+ella)</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Meaning : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Portuguese : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Notes :</label></br>
+											<input type="checkbox" name="Feature" >Latin ventvs means 'wind'</br>	
+											<input type="checkbox" name="Feature" >ventana is etymologically 'wind opening'. Portuguese janela comes from Latin iÄ?nvella</br>	
+											<input type="checkbox" name="Feature" >diminutive form of iÄ?nva ('door</br>	
+											<input type="checkbox" name="Feature" >opening')</br>	
+											<input type="checkbox" name="Feature" >the same root as English 'January' and 'janitor' (originally from the name ianvs</br>	
+											<input type="checkbox" name="Feature" >the God of gates or doors).</br>	
+											<input type="checkbox" name="Feature" >Olvidar also exists in Portuguese but is far less common</br>	
+											<input type="checkbox" name="Feature" >as well as obliterar and obliviar</br>	
+											<input type="checkbox" name="Feature" >from the same root as English 'oblivion'.</br>	
+											<input type="checkbox" name="Feature" >The same word borrar exists in Portuguese but means 'to smudge' (e.g.</br>	
+											<input type="checkbox" name="Feature" >estÃ¡ borrado 'it's smudged'</br>	
+											<input type="checkbox" name="Feature" >compare Spanish borroso 'blurry'); and Spanish apagar means 'to turn off' (a meaning that also exists in Portuguese</br>	
+											<input type="checkbox" name="Feature" >in expressions such as apagar a luz 'turn the light off').</br>	
+											<input type="checkbox" name="Feature" >RÃ³tula ('kneecap' in both Spanish and Portuguese) is etymologically related to Spanish rodilla ('little wheel').  The Spanish idiom de hinojos 'kneeling' has the same etymology as Portuguese joelho.</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['borrar','rodilla','ventana','olvidar','tienda','calle','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['`knee`','`store, shop`','`window`','`to forget`','`street`','`to erase`','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['rua','loja','joelho','janela','apagar','esquecer','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

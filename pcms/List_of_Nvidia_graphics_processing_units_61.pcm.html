@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>List of Nvidia graphics processing units - Quadro (Kx100M) Series</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>List of Nvidia graphics processing units - Quadro (Kx100M) Series</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Memory (MB) : </label></br> <input style="display:block;" id="id1Memory (MB)" type="number" name="Feature">
+								
+								</br>	
+								<label>Shader clock (MHz) : </label></br> <input style="display:block;" id="id1Shader clock (MHz)" type="number" name="Feature">
+								
+								</br>	
+								<label>Fillrate - Pixel (GP/s) : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Fillrate - Texture (GT/s) : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Fab (nm) : </label></br> <input style="display:block;" id="id1Fab (nm)" type="number" name="Feature">
+								
+								</br>	
+								<label>Code name : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input style="display:block;" id="id1Memory - Bandwidth (GB/s)" type="number" name="Feature">
+								
+								</br>	
+								<label>Memory - Bus type : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bus width (bit) : </label></br> <input style="display:block;" id="id1Memory - Bus width (bit)" type="number" name="Feature">
+								
+								</br>	
+								<label>Nvidia Optimus  Technology :</label></br>
+								<input type="radio" name="FeatureNvidia Optimus  Technology" value="oui">Yes <input type="radio" name="FeatureNvidia Optimus  Technology" value = "non">No <input type="radio" name="FeatureNvidia Optimus  Technology" value = "non">Partial </br>
+								
+								</br>	
+								<label>Core clock (MHz) : </label></br> <input style="display:block;" id="id1Core clock (MHz)" type="number" name="Feature">
+								
+								</br>	
+								<label>API support (version) - DirectX : </label></br> <input style="display:block;" id="id1API support (version) - DirectX" type="number" name="Feature">
+								
+								</br>	
+								<label>API support (version) - OpenGL : </label></br> <input style="display:block;" id="id1API support (version) - OpenGL" type="number" name="Feature">
+								
+								</br>	
+								<label>Notes : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>TDP (watts) : </label></br> <input style="display:block;" id="id1TDP (watts)" type="number" name="Feature">
+								
+								</br>	
+								<label>Core config : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Model : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Processing Power  GFLOPS - Single precision : </label></br> <input style="display:block;" id="id1Processing Power  GFLOPS - Single precision" type="number" name="Feature">
+								
+								</br>	
+								<label>Memory clock (MHz) : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Bus interface : </label></br> <input id="8" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['GK104','GK106','GK208','GK107','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['192:16:8(1 SMX)','384:32:16(2 SMX)','1152:96:32(6 SMX)','768:64:32(4 SMX)','576:48:16(3 SMX)','1536:128:32(8 SMX)','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Quadro K4100M','Quadro K610M','Quadro K1100M','Quadro K2100M','Quadro K3100M','Quadro K5100M','Quadro K510M','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['1500  (3000)','900  (3600)','1400  (2800)','1200  (2400)','800  (3200)','1300  (2600)','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['PCIe 3.0 x16','PCIe 3.0 x8','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

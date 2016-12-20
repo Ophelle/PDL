@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of programming languages (array) - Array system cross-reference list</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of programming languages (array) - Array system cross-reference list</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Vectorized operations :</label></br>
+								<input type="radio" name="FeatureVectorized operations" value="oui">Yes <input type="radio" name="FeatureVectorized operations" value = "non">No <input type="radio" name="FeatureVectorized operations" value = "non">Partial </br>
+											<input name="FeatureVectorized operations" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Bound check : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Multidimensional :</label></br>
+								<input type="radio" name="FeatureMultidimensional" value="oui">Yes <input type="radio" name="FeatureMultidimensional" value = "non">No <input type="radio" name="FeatureMultidimensional" value = "non">Partial </br>
+											<input name="FeatureMultidimensional" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Specifiable base index :</label></br>
+								<input type="radio" name="FeatureSpecifiable base index" value="oui">Yes <input type="radio" name="FeatureSpecifiable base index" value = "non">No <input type="radio" name="FeatureSpecifiable base index" value = "non">Partial </br>
+											<input name="FeatureSpecifiable base index" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Programming language : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Default base index : </label></br> <input style="display:block;" id="id1Default base index" type="number" name="Feature">
+												<input style="display:none;" id="id2Default base index" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Default base index','id2Default base index');">Changer type</button></br>								
+								</br>	
+								<label>Dynamically-sized :</label></br>
+								<input type="radio" name="FeatureDynamically-sized" value="oui">Yes <input type="radio" name="FeatureDynamically-sized" value = "non">No <input type="radio" name="FeatureDynamically-sized" value = "non">Partial </br>
+											<input name="FeatureDynamically-sized" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Specifiable index type :</label></br>
+								<input type="radio" name="FeatureSpecifiable index type" value="oui">Yes <input type="radio" name="FeatureSpecifiable index type" value = "non">No <input type="radio" name="FeatureSpecifiable index type" value = "non">Partial </br>
+											<input name="FeatureSpecifiable index type" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['checked','checked by default','unchecked','varies','?','Bound check','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Scala','PL/I','Smalltalk','Visual Basic .NET','ALGOL 68','FoxPro','Cobra','Oberon-2','Ch','Pascal, Object Pascal','APL','IDL','Programming language','RPG','XPath','C#','Fortran','Java','MATLAB','COBOL','Lua','BASIC','Perl','Common Lisp','C++','Python','Xojo','D','Haskell','FreeBASIC','PHP','Scheme','Visual Basic','CFML','Julia','Oberon','Windows PowerShell','Swift','Ada','C','ISLISP','J','Perl 6','Ruby','S-Lang','JavaScript','Go','Mathematica','OCaml','Objective-C','F#','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

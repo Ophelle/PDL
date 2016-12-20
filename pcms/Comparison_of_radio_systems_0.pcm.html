@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of radio systems - Table</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of radio systems - Table</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Digital subchannel : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Type : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>SFN :</label></br>
+								<input type="radio" name="FeatureSFN" value="oui">Yes <input type="radio" name="FeatureSFN" value = "non">No <input type="radio" name="FeatureSFN" value = "non">Partial </br>
+								
+								</br>	
+								<label>Products : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Data rate :</label></br>
+											<input type="checkbox" name="Feature" >up to 256 kbit</br>	
+											<input type="checkbox" name="Feature" >s</br>	
+											<input type="checkbox" name="Feature" >around 1000 kbit</br>	
+											<input type="checkbox" name="Feature" >s (4 channels up to 256 kbit</br>	
+											<input type="checkbox" name="Feature" >s)</br>	
+											<input type="checkbox" name="Feature" >up to 60 kbit</br>	
+											<input type="checkbox" name="Feature" >s on AM</br>	
+											<input type="checkbox" name="Feature" >up to 300 kbit</br>	
+											<input type="checkbox" name="Feature" >s on FM</br>	
+											<input type="checkbox" name="Feature" >up to 72 kbit</br>	
+							
+								</br>	
+								<label>Modulation : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Ch. Bandwidth (KHz) : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Radio spectrum :</label></br>
+											<input type="checkbox" name="Feature" >530-1610 kHz (Europe)</br>	
+											<input type="checkbox" name="Feature" >530–1710 kHz (USA and Canada)</br>	
+											<input type="checkbox" name="Feature" >SW</br>	
+											<input type="checkbox" name="Feature" >LW</br>	
+											<input type="checkbox" name="Feature" >VHF-High</br>	
+											<input type="checkbox" name="Feature" >174-240 MHz</br>	
+											<input type="checkbox" name="Feature" >L-band</br>	
+											<input type="checkbox" name="Feature" >1452-1492 MHz</br>	
+											<input type="checkbox" name="Feature" >530–1710 kHz</br>	
+											<input type="checkbox" name="Feature" >87.5-108 MHz</br>	
+											<input type="checkbox" name="Feature" >76-90 MHz (Japan)</br>	
+											<input type="checkbox" name="Feature" >65.8-74 MHz (USSR)</br>	
+							
+								</br>	
+								<label>Metadata/RDS/RBDS :</label></br>
+								<input type="radio" name="FeatureMetadata/RDS/RBDS" value="oui">Yes <input type="radio" name="FeatureMetadata/RDS/RBDS" value = "non">No <input type="radio" name="FeatureMetadata/RDS/RBDS" value = "non">Partial </br>
+								
+								</br>	
+								<label>System : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Sidebands? : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Sound Codec : </label></br> <input id="7" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['N/A','Yes, typically 4-6 "stations" per channel','No','up to 7 (3 full-power, 4 low-power) subchannels (FM)','Yes, via IBOC','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Hybrid/Digital radio','Digital radio','Analog radio','Analog radio (AM stereo)','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['P7','P3','P6','P1','P2','P4','P5','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['OFDM (DQPSK)','Amplitude Modulation','QAM','COFDM (QAM)','Frequency Modulation','COFDM-HDC (SBR)','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['20–30 kHz on AM band ±5 kHz (on adjacent channel),up to 400 kHz on FM band (2 full FM channels)','200 kHz','1500 kHz','18–20 kHz','4.5–5 kHz (hybrid mode),9–10 kHz,18-20 kHz','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['DAB','FM radio','Motorola C-QUAM','AM radio','HD Radio','Digital Radio Mondiale','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['?','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['N/A','HDC','HE-AAC','MPEG-Layer 2','MPEG-4 HE-AAC/CELP/HVXC','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

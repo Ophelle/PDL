@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of Solaris distributions -  General </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of Solaris distributions -  General </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Distribution : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Creator : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Latest release date :</label></br>
+											<input type="checkbox" name="Feature" >0.8 </br>	
+											<input type="checkbox" name="Feature" >August 27</br>	
+											<input type="checkbox" name="Feature" >2012</br>	
+											<input type="checkbox" name="Feature" >build 151a7 </br>	
+											<input type="checkbox" name="Feature" >October 6</br>	
+											<input type="checkbox" name="Feature" >0.7.1 </br>	
+											<input type="checkbox" name="Feature" >July 19</br>	
+											<input type="checkbox" name="Feature" >2008</br>	
+											<input type="checkbox" name="Feature" >0.5 </br>	
+											<input type="checkbox" name="Feature" >February 15</br>	
+											<input type="checkbox" name="Feature" >2010</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Purpose : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Producer : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Base distribution : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>First public release : </label></br> <input style="display:block;" id="id1First public release" type="number" name="Feature">
+												<input style="display:none;" id="id2First public release" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First public release','id2First public release');">Changer type</button></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['BeleniX','Nexenta OS','SchilliX','MilaX','OpenIndiana','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['?','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['"to become the defacto OpenSolaris distribution installed on production servers where security and bug fixes are required free of charge"','"to deliver a OpenSolaris based distribution that is compatible with the previous Sun Solaris SXCE versions, that is as POSIX compatible as possible and that tries to stay compatible with SVr4 interfaces."','?','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['?','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['OpenSolaris','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

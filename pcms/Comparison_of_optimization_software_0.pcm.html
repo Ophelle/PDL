@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of optimization software</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of optimization software</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Notes :</label></br>
+											<input type="checkbox" name="Feature" >General purpose library</br>	
+											<input type="checkbox" name="Feature" >includes optimization package.</br>	
+											<input type="checkbox" name="Feature" >Numerical library from Intel. MKL is specialized on linear algebra</br>	
+											<input type="checkbox" name="Feature" >but contains some optimization-related functionality.</br>	
+											<input type="checkbox" name="Feature" >Support for interactive and learning optimization</br>	
+											<input type="checkbox" name="Feature" >according to RSO principles.</br>	
+											<input type="checkbox" name="Feature" >A popular algebraic modeling language for linear</br>	
+											<input type="checkbox" name="Feature" >mixed-integer and nonlinear optimization. Student and AMPL for courses versions are available for free.</br>	
+											<input type="checkbox" name="Feature" >Free library for linear programming (LP) and mixed integer programming (MIP).</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Language : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Can be used inproprietary aps :</label></br>
+								<input type="radio" name="FeatureCan be used inproprietary aps" value="oui">Yes <input type="radio" name="FeatureCan be used inproprietary aps" value = "non">No <input type="radio" name="FeatureCan be used inproprietary aps" value = "non">Partial </br>
+											<input name="FeatureCan be used inproprietary aps" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Latest stable version :</label></br>
+											<input type="checkbox" name="Feature" >2.0.198 </br>	
+											<input type="checkbox" name="Feature" >October 2011</br>	
+											<input type="checkbox" name="Feature" >6.0.1.Final </br>	
+											<input type="checkbox" name="Feature" >Dec 2013</br>	
+											<input type="checkbox" name="Feature" >5.3 </br>	
+											<input type="checkbox" name="Feature" >May 2013</br>	
+											<input type="checkbox" name="Feature" >3.8.0 </br>	
+											<input type="checkbox" name="Feature" >August 2013</br>	
+											<input type="checkbox" name="Feature" >11.1 </br>	
+											<input type="checkbox" name="Feature" >October 2013</br>	
+											<input type="checkbox" name="Feature" >4.52 </br>	
+											<input type="checkbox" name="Feature" >July 2013</br>	
+											<input type="checkbox" name="Feature" >0.13.1 </br>	
+											<input type="checkbox" name="Feature" >November 2013</br>	
+											<input type="checkbox" name="Feature" >1.16 </br>	
+											<input type="checkbox" name="Feature" >Mark 24 </br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Academic/noncommercialuse is free :</label></br>
+								<input type="radio" name="FeatureAcademic/noncommercialuse is free" value="oui">Yes <input type="radio" name="FeatureAcademic/noncommercialuse is free" value = "non">No <input type="radio" name="FeatureAcademic/noncommercialuse is free" value = "non">Partial </br>
+											<input name="FeatureAcademic/noncommercialuse is free" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['C#','Python','C','C++, Java','C, Fortran','C++, Fortran','Java','C++, C#, FreePascal, VBA','C, Java, C#, Fortran, Python','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Proprietary','Dual (Commercial, academic)','GPL','BSD','Dual (Commercial, GPL)','ASL','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

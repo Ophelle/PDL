@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of online music stores</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of online music stores</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>WAV :</label></br>
+								<input type="radio" name="FeatureWAV" value="oui">Yes <input type="radio" name="FeatureWAV" value = "non">No <input type="radio" name="FeatureWAV" value = "non">Partial </br>
+											<input name="FeatureWAV" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>FLAC :</label></br>
+								<input type="radio" name="FeatureFLAC" value="oui">Yes <input type="radio" name="FeatureFLAC" value = "non">No <input type="radio" name="FeatureFLAC" value = "non">Partial </br>
+											<input name="FeatureFLAC" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>AAC :</label></br>
+											<input type="checkbox" name="Feature" >320 kbpsstyle="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes"|320</br>	
+											<input type="checkbox" name="Feature" >Nostyle="background:#F99;vertical-align:middle;text-align:center;" class="table-no"|0</br>	
+											<input type="checkbox" name="Feature" >256 kbpsstyle="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes"|256</br>	
+											<input type="checkbox" name="Feature" >64 kbpsstyle="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes"|64</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Purchase identifier : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>WMA :</label></br>
+											<input type="checkbox" name="Feature" >Nostyle="background:#F99;vertical-align:middle;text-align:center;" class="table-no"|0</br>	
+											<input type="checkbox" name="Feature" >192 kbpsstyle="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes"|192</br>	
+											<input type="checkbox" name="Feature" >128 kbpsstyle="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes"|128</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>PurchasePlatform : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Tracks (M) : </label></br> <input style="display:block;" id="id1Tracks (M)" type="number" name="Feature">
+												<input style="display:none;" id="id2Tracks (M)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Tracks (M)','id2Tracks (M)');">Changer type</button></br>								
+								</br>	
+								<label>Preview (s) : </label></br> <input style="display:block;" id="id1Preview (s)" type="number" name="Feature">
+												<input style="display:none;" id="id2Preview (s)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Preview (s)','id2Preview (s)');">Changer type</button></br>								
+								</br>	
+								<label>Trial :</label></br>
+								<input type="radio" name="FeatureTrial" value="oui">Yes <input type="radio" name="FeatureTrial" value = "non">No <input type="radio" name="FeatureTrial" value = "non">Partial </br>
+											<input name="FeatureTrial" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>ALAC :</label></br>
+								<input type="radio" name="FeatureALAC" value="oui">Yes <input type="radio" name="FeatureALAC" value = "non">No <input type="radio" name="FeatureALAC" value = "non">Partial </br>
+											<input name="FeatureALAC" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>MP3 :</label></br>
+											<input type="checkbox" name="Feature" >320 kbpsstyle="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes"|320</br>	
+											<input type="checkbox" name="Feature" >Nostyle="background:#F99;vertical-align:middle;text-align:center;" class="table-no"|0</br>	
+											<input type="checkbox" name="Feature" >256 kbpsstyle="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes"|256</br>	
+											<input type="checkbox" name="Feature" >128 kbpsstyle="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes"|128</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Geographicrestrictions :</label></br>
+								<input type="radio" name="FeatureGeographicrestrictions" value="oui">Yes <input type="radio" name="FeatureGeographicrestrictions" value = "non">No <input type="radio" name="FeatureGeographicrestrictions" value = "non">Partial </br>
+											<input name="FeatureGeographicrestrictions" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Store : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Vorbis :</label></br>
+								<input type="radio" name="FeatureVorbis" value="oui">Yes <input type="radio" name="FeatureVorbis" value = "non">No <input type="radio" name="FeatureVorbis" value = "non">Partial </br>
+											<input name="FeatureVorbis" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>DRM :</label></br>
+								<input type="radio" name="FeatureDRM" value="oui">Yes <input type="radio" name="FeatureDRM" value = "non">No <input type="radio" name="FeatureDRM" value = "non">Partial </br>
+											<input name="FeatureDRM" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['?','Purchase Identifier','Yes','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Web','Web, Android','Web Android iOS','WindowsOS XiOS','Windows','PurchasePlatform','Web,Android','Adobe AIR','Windows PhoneWindows 8Windows RTiOSAndroid','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['MAQAM','Magnatune','Google Play Music','Audimated','Rhapsody','Jamendo','Discogs','iMesh','Optus Music Store','iTunes Store','HMV','WiMP','HDtracks','Bandcamp','Xbox Music','Store','mora','Amazon Music','CDBaby','Nimbit','Classical Archives','eMusic','Juno / Juno Download','ArkivMusic','Vodafone Music','Bleep.com','7digital','Beatport','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

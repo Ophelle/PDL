@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>List of Nvidia graphics processing units - GeForce4 Series</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>List of Nvidia graphics processing units - GeForce4 Series</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Model : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Features - nFiniteFX II Engine :</label></br>
+								<input type="radio" name="FeatureFeatures - nFiniteFX II Engine" value="oui">Yes <input type="radio" name="FeatureFeatures - nFiniteFX II Engine" value = "non">No <input type="radio" name="FeatureFeatures - nFiniteFX II Engine" value = "non">Partial </br>
+											<input name="FeatureFeatures - nFiniteFX II Engine" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Features - Video Processing Engine (VPE) :</label></br>
+								<input type="radio" name="FeatureFeatures - Video Processing Engine (VPE)" value="oui">Yes <input type="radio" name="FeatureFeatures - Video Processing Engine (VPE)" value = "non">No <input type="radio" name="FeatureFeatures - Video Processing Engine (VPE)" value = "non">Partial </br>
+											<input name="FeatureFeatures - Video Processing Engine (VPE)" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['GeForce4 MX440 8X','GeForce4 Ti4400','GeForce4 MX440','GeForce4 Ti4600','GeForce4 Ti4800','GeForce4 MX4000','GeForce4 PCX4300','GeForce4 Ti4200','GeForce4 MX420','GeForce4 MX440 SE','GeForce4 MX460','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

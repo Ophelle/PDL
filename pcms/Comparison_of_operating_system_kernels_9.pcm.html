@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of operating system kernels -  Supported kernel execution environment </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of operating system kernels -  Supported kernel execution environment </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>OpenBSD kernel :</label></br>
+								<input type="radio" name="FeatureOpenBSD kernel" value="oui">Yes <input type="radio" name="FeatureOpenBSD kernel" value = "non">No <input type="radio" name="FeatureOpenBSD kernel" value = "non">Partial </br>
+								
+								</br>	
+								<label>NetBSD kernel :</label></br>
+								<input type="radio" name="FeatureNetBSD kernel" value="oui">Yes <input type="radio" name="FeatureNetBSD kernel" value = "non">No <input type="radio" name="FeatureNetBSD kernel" value = "non">Partial </br>
+								
+								</br>	
+								<label>XNU :</label></br>
+								<input type="radio" name="FeatureXNU" value="oui">Yes <input type="radio" name="FeatureXNU" value = "non">No <input type="radio" name="FeatureXNU" value = "non">Partial </br>
+								
+								</br>	
+								<label>ReactOS kernel :</label></br>
+								<input type="radio" name="FeatureReactOS kernel" value="oui">Yes <input type="radio" name="FeatureReactOS kernel" value = "non">No <input type="radio" name="FeatureReactOS kernel" value = "non">Partial </br>
+								
+								</br>	
+								<label>Kernel name : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>FreeBSD kernel :</label></br>
+								<input type="radio" name="FeatureFreeBSD kernel" value="oui">Yes <input type="radio" name="FeatureFreeBSD kernel" value = "non">No <input type="radio" name="FeatureFreeBSD kernel" value = "non">Partial </br>
+								
+								</br>	
+								<label>Linux kernel :</label></br>
+								<input type="radio" name="FeatureLinux kernel" value="oui">Yes <input type="radio" name="FeatureLinux kernel" value = "non">No <input type="radio" name="FeatureLinux kernel" value = "non">Partial </br>
+								
+								</br>	
+								<label>Windows NT kernel :</label></br>
+								<input type="radio" name="FeatureWindows NT kernel" value="oui">Yes <input type="radio" name="FeatureWindows NT kernel" value = "non">No <input type="radio" name="FeatureWindows NT kernel" value = "non">Partial </br>
+								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['IBCS2 systems','BSD/OS','NetBSD','SunOS','Windows NT','NDIS','Amiga Unix','Linux','IRIX','Darwin','Solaris','FreeBSD','Ultrix','OSF/1','SVR4','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

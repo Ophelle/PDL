@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of web server software - Features</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of web server software - Features</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>  - virtualhosting :</label></br>
+								<input type="radio" name="Feature  - virtualhosting" value="oui">Yes <input type="radio" name="Feature  - virtualhosting" value = "non">No <input type="radio" name="Feature  - virtualhosting" value = "non">Partial </br>
+								
+								</br>	
+								<label>Dynamic content - SSI :</label></br>
+								<input type="radio" name="FeatureDynamic content - SSI" value="oui">Yes <input type="radio" name="FeatureDynamic content - SSI" value = "non">No <input type="radio" name="FeatureDynamic content - SSI" value = "non">Partial </br>
+								
+								</br>	
+								<label>Dynamic content - CGI :</label></br>
+								<input type="radio" name="FeatureDynamic content - CGI" value="oui">Yes <input type="radio" name="FeatureDynamic content - CGI" value = "non">No <input type="radio" name="FeatureDynamic content - CGI" value = "non">Partial </br>
+								
+								</br>	
+								<label>Dynamic content - SSJS : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Dynamic content - WSGI :</label></br>
+								<input type="radio" name="FeatureDynamic content - WSGI" value="oui">Yes <input type="radio" name="FeatureDynamic content - WSGI" value = "non">No <input type="radio" name="FeatureDynamic content - WSGI" value = "non">Partial </br>
+								
+								</br>	
+								<label>Dynamic content - SCGI : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Dynamic content - JavaServlets :</label></br>
+								<input type="radio" name="FeatureDynamic content - JavaServlets" value="oui">Yes <input type="radio" name="FeatureDynamic content - JavaServlets" value = "non">No <input type="radio" name="FeatureDynamic content - JavaServlets" value = "non">Partial </br>
+								
+								</br>	
+								<label>Dynamic content - ISAPI :</label></br>
+								<input type="radio" name="FeatureDynamic content - ISAPI" value="oui">Yes <input type="radio" name="FeatureDynamic content - ISAPI" value = "non">No <input type="radio" name="FeatureDynamic content - ISAPI" value = "non">Partial </br>
+								
+								</br>	
+								<label>Dynamic content - FCGI :</label></br>
+								<input type="radio" name="FeatureDynamic content - FCGI" value="oui">Yes <input type="radio" name="FeatureDynamic content - FCGI" value = "non">No <input type="radio" name="FeatureDynamic content - FCGI" value = "non">Partial </br>
+								
+								</br>	
+								<label>Security - basicaccessauthentication :</label></br>
+								<input type="radio" name="FeatureSecurity - basicaccessauthentication" value="oui">Yes <input type="radio" name="FeatureSecurity - basicaccessauthentication" value = "non">No <input type="radio" name="FeatureSecurity - basicaccessauthentication" value = "non">Partial </br>
+								
+								</br>	
+								<label>Security - SSL/TLShttps :</label></br>
+								<input type="radio" name="FeatureSecurity - SSL/TLShttps" value="oui">Yes <input type="radio" name="FeatureSecurity - SSL/TLShttps" value = "non">No <input type="radio" name="FeatureSecurity - SSL/TLShttps" value = "non">Partial </br>
+								
+								</br>	
+								<label>Security - digestaccessauthentication :</label></br>
+								<input type="radio" name="FeatureSecurity - digestaccessauthentication" value="oui">Yes <input type="radio" name="FeatureSecurity - digestaccessauthentication" value = "non">No <input type="radio" name="FeatureSecurity - digestaccessauthentication" value = "non">Partial </br>
+								
+								</br>	
+								<label> - Runs in user spaceor kernel space : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label> - HTTP/2YesNoWhen : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label> - Administrationconsole :</label></br>
+								<input type="radio" name="Feature - Administrationconsole" value="oui">Yes <input type="radio" name="Feature - Administrationconsole" value = "non">No <input type="radio" name="Feature - Administrationconsole" value = "non">Partial </br>
+								
+								</br>	
+								<label> - IPv6 :</label></br>
+								<input type="radio" name="Feature - IPv6" value="oui">Yes <input type="radio" name="Feature - IPv6" value = "non">No <input type="radio" name="Feature - IPv6" value = "non">Partial </br>
+								
+								</br>	
+								<label>Server : </label></br> <input id="4" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Boa','Wakanda Server','Caucho Resin Server','NCSA HTTPd','Internet Information Services','IBM HTTP Server','Apache Tomcat','lighttpd','Oracle iPlanet Web Server','Caudium','Oracle HTTP Server','Hiawatha HTTP Server','Jetty','Zeus Web Server','HFS','Cherokee HTTP Server','nginx','Apache HTTP Server','LiteSpeed Web Server','OpenLink Virtuoso','Jexus','NaviServer','Xitami','AOLserver','Monkey HTTP Server','thttpd','Mongoose','Yaws','Saetta Web Server','TUX web server','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

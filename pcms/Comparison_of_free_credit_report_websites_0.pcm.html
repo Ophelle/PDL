@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of free credit report websites</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of free credit report websites</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Cost of credit report : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Cost of credit score :</label></br>
+											<input type="checkbox" name="Feature" >Free; once weekly</br>	
+											<input type="checkbox" name="Feature" >Free; once every 3 months</br>	
+											<input type="checkbox" name="Feature" >Free; once monthly</br>	
+											<input type="checkbox" name="Feature" >Free; once every 6 months</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Credit card required? :</label></br>
+								<input type="radio" name="FeatureCredit card required?" value="oui">Yes <input type="radio" name="FeatureCredit card required?" value = "non">No <input type="radio" name="FeatureCredit card required?" value = "non">Partial </br>
+											<input name="FeatureCredit card required?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Social Security Number required? :</label></br>
+								<input type="radio" name="FeatureSocial Security Number required?" value="oui">Yes <input type="radio" name="FeatureSocial Security Number required?" value = "non">No <input type="radio" name="FeatureSocial Security Number required?" value = "non">Partial </br>
+											<input name="FeatureSocial Security Number required?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Name/Website : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Report type : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Score type : </label></br> <input id="3" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Free proprietary credit report summary','Free; once every 6 months','Free; one from each agency every 12 months','Free TransUnion credit report summary','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Credit Sesame','Mint.com','Credit.com','Quizzle','LendingTree','AnnualCreditReport.com','WisePiggy','Credit Karma','Credit Concierge','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['TransUnion','Experian (bare)','Transunion, Equifax','Transunion','Equifax','Equifax, Experian & Transunion','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['','VantageScore 3.0','Experian`s National Equivalency Score, VantageScore 3.0','VantageScore 3.0,Transunion`s TransRisk New Account score.','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

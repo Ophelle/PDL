@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of command shells - Inter-process communication</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of command shells - Inter-process communication</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Keystroke stacking : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Process substitution :</label></br>
+								<input type="radio" name="FeatureProcess substitution" value="oui">Yes <input type="radio" name="FeatureProcess substitution" value = "non">No <input type="radio" name="FeatureProcess substitution" value = "non">Partial </br>
+								
+								</br>	
+								<label>Subshells :</label></br>
+								<input type="radio" name="FeatureSubshells" value="oui">Yes <input type="radio" name="FeatureSubshells" value = "non">No <input type="radio" name="FeatureSubshells" value = "non">Partial </br>
+								
+								</br>	
+								<label>Command substitution :</label></br>
+								<input type="radio" name="FeatureCommand substitution" value="oui">Yes <input type="radio" name="FeatureCommand substitution" value = "non">No <input type="radio" name="FeatureCommand substitution" value = "non">Partial </br>
+								
+								</br>	
+								<label>Pipes : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>TCP/UDP connections as streams :</label></br>
+								<input type="radio" name="FeatureTCP/UDP connections as streams" value="oui">Yes <input type="radio" name="FeatureTCP/UDP connections as streams" value = "non">No <input type="radio" name="FeatureTCP/UDP connections as streams" value = "non">Partial </br>
+								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['N/A','No','Yes (via )','?','Yes (via  and )','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['bytes concurrent','text sequential temporary files','text (via  command)','text concurrent','not supported','text','No','objects concurrent','bytes (may contain serialized objects if  is used) concurrent','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

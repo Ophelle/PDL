@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of operating systems -  Security </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of operating systems -  Security </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Integratedfirewall : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>SecurityFocus - Total(number / oldest) : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Secunia - Highly critical(number / oldest) : </label></br> <input style="display:block;" id="id1Secunia - Highly critical(number / oldest)" type="number" name="Feature">
+												<input style="display:none;" id="id2Secunia - Highly critical(number / oldest)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Secunia - Highly critical(number / oldest)','id2Secunia - Highly critical(number / oldest)');">Changer type</button></br>								
+								</br>	
+								<label>Secunia - Less critical(number / oldest) : </label></br> <input style="display:block;" id="id1Secunia - Less critical(number / oldest)" type="number" name="Feature">
+												<input style="display:none;" id="id2Secunia - Less critical(number / oldest)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Secunia - Less critical(number / oldest)','id2Secunia - Less critical(number / oldest)');">Changer type</button></br>								
+								</br>	
+								<label>Secunia - Extremely critical(number / oldest) : </label></br> <input style="display:block;" id="id1Secunia - Extremely critical(number / oldest)" type="number" name="Feature">
+												<input style="display:none;" id="id2Secunia - Extremely critical(number / oldest)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Secunia - Extremely critical(number / oldest)','id2Secunia - Extremely critical(number / oldest)');">Changer type</button></br>								
+								</br>	
+								<label>Secunia - Not critical(number / oldest) : </label></br> <input style="display:block;" id="id1Secunia - Not critical(number / oldest)" type="number" name="Feature">
+												<input style="display:none;" id="id2Secunia - Not critical(number / oldest)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Secunia - Not critical(number / oldest)','id2Secunia - Not critical(number / oldest)');">Changer type</button></br>								
+								</br>	
+								<label>Secunia - Moderately critical(number / oldest) : </label></br> <input style="display:block;" id="id1Secunia - Moderately critical(number / oldest)" type="number" name="Feature">
+												<input style="display:none;" id="id2Secunia - Moderately critical(number / oldest)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Secunia - Moderately critical(number / oldest)','id2Secunia - Moderately critical(number / oldest)');">Changer type</button></br>								
+								</br>	
+								<label>Resourceaccesscontrol :</label></br>
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Products : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>No execute (NX)page flag - Emulation :</label></br>
+								<input type="radio" name="FeatureNo execute (NX)page flag - Emulation" value="oui">Yes <input type="radio" name="FeatureNo execute (NX)page flag - Emulation" value = "non">No <input type="radio" name="FeatureNo execute (NX)page flag - Emulation" value = "non">Partial </br>
+											<input name="FeatureNo execute (NX)page flag - Emulation" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>No execute (NX)page flag - Hardware :</label></br>
+								<input type="radio" name="FeatureNo execute (NX)page flag - Hardware" value="oui">Yes <input type="radio" name="FeatureNo execute (NX)page flag - Hardware" value = "non">No <input type="radio" name="FeatureNo execute (NX)page flag - Hardware" value = "non">Partial </br>
+											<input name="FeatureNo execute (NX)page flag - Hardware" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Name : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Subsystemisolationmechanisms :</label></br>
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Encryptedfilesystems :</label></br>
+								<input type="radio" name="FeatureEncryptedfilesystems" value="oui">Yes <input type="radio" name="FeatureEncryptedfilesystems" value = "non">No <input type="radio" name="FeatureEncryptedfilesystems" value = "non">Partial </br>
+											<input name="FeatureEncryptedfilesystems" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['IPFilter','IPFilter, NPF, PF','?','ipmux','IPFW2, IPFilter, PF','Integratedfirewall','Windows Firewall','PF','PF, from NetBSD','No','Netfilter, varied by distribution','z/OS IPSecurity','IPFLT.NLM','IPFilter, IPsec VPNs, basic IDS','ipfw','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['P24','P17','P5','P4','P22','P29','P10','P14','P12','P8','P16','P7','P13','P3','P6','P9','P28','P27','P2','P11','P23','P18','P25','P1','P15','P20','P21','P19','P26','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['OES-Linux','Plan 9','NetWare 6.5 SP8','OS/2, eComStation','Inferno','Solaris 10','QNX 6.5.0','z/OS 1.11','','Name','Mac OS 9.2.2','OS X 10.6.4','AIX 7.1','STOP 6, XTS-400','OpenVMS 8.4','NetBSD 6.1.2','FreeBSD 8.1','PC-BSD 8.1','OpenSolaris 2009.06','Linux 2.6.39','Windows Server 2012','ZETA','OpenBSD 4.8','RISC OS','GhostBSD 3.1','HP-UX 11.31','Windows 8.1','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

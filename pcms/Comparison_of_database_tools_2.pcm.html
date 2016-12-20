@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of database tools - Features (continued)</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of database tools - Features (continued)</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Plugin :</label></br>
+								<input type="radio" name="FeaturePlugin" value="oui">Yes <input type="radio" name="FeaturePlugin" value = "non">No <input type="radio" name="FeaturePlugin" value = "non">Partial </br>
+											<input name="FeaturePlugin" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Import :</label></br>
+								<input type="radio" name="FeatureImport" value="oui">Yes <input type="radio" name="FeatureImport" value = "non">No <input type="radio" name="FeatureImport" value = "non">Partial </br>
+											<input name="FeatureImport" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Export :</label></br>
+											<input type="checkbox" name="Feature" >SQL script</br>	
+											<input type="checkbox" name="Feature" >CSV</br>	
+											<input type="checkbox" name="Feature" >XML</br>	
+											<input type="checkbox" name="Feature" >HTML</br>	
+											<input type="checkbox" name="Feature" >PDF</br>	
+											<input type="checkbox" name="Feature" >Excel</br>	
+											<input type="checkbox" name="Feature" >DBF</br>	
+											<input type="checkbox" name="Feature" >DataText</br>	
+											<input type="checkbox" name="Feature" >MS Excel</br>	
+											<input type="checkbox" name="Feature" >Text</br>	
+											<input type="checkbox" name="Feature" >SQL INSERTS</br>	
+											<input type="checkbox" name="Feature" >Tab-separated</br>	
+											<input type="checkbox" name="Feature" >TSV or the above in zip</br>	
+											<input type="checkbox" name="Feature" >gzip</br>	
+											<input type="checkbox" name="Feature" >bzip2; XML (as a plugin)</br>	
+											<input type="checkbox" name="Feature" >SQL; HTML report; diagram as EMF</br>	
+											<input type="checkbox" name="Feature" >BMP</br>	
+											<input type="checkbox" name="Feature" >SQL; meta data in XML; report in HTML</br>	
+											<input type="checkbox" name="Feature" >RTF</br>	
+											<input type="checkbox" name="Feature" >CSV; diagram as BMP</br>	
+											<input type="checkbox" name="Feature" >JPEG</br>	
+											<input type="checkbox" name="Feature" >PNG</br>	
+											<input type="checkbox" name="Feature" >SQL; XML; DTD; Diagram as BMP</br>	
+											<input type="checkbox" name="Feature" >SQL; diagram as EMF</br>	
+											<input type="checkbox" name="Feature" >GIF</br>	
+											<input type="checkbox" name="Feature" >XML Structure</br>	
+											<input type="checkbox" name="Feature" >text</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Source control : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>user manager :</label></br>
+								<input type="radio" name="Featureuser manager" value="oui">Yes <input type="radio" name="Featureuser manager" value = "non">No <input type="radio" name="Featureuser manager" value = "non">Partial </br>
+											<input name="Featureuser manager" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Compare :</label></br>
+								<input type="radio" name="FeatureCompare" value="oui">Yes <input type="radio" name="FeatureCompare" value = "non">No <input type="radio" name="FeatureCompare" value = "non">Partial </br>
+											<input name="FeatureCompare" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Debugger :</label></br>
+								<input type="radio" name="FeatureDebugger" value="oui">Yes <input type="radio" name="FeatureDebugger" value = "non">No <input type="radio" name="FeatureDebugger" value = "non">Partial </br>
+											<input name="FeatureDebugger" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['No','?','SVN, CVS, TFS, VSS','Git','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

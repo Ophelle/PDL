@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of U.S. state governments - Judicial</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of U.S. state governments - Judicial</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>High court judicial placement method : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Highest court : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>High court term : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>High court seats : </label></br> <input style="display:block;" id="id1High court seats" type="number" name="Feature">
+												<input style="display:none;" id="id2High court seats" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1High court seats','id2High court seats');">Changer type</button></br>								
+								</br>	
+								<label>Mandatory retirement age : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>State : </label></br> <input id="4" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Missouri Plan','Modified Missouri Plan','Appointment by the Governor','Appointment by governor','Non-partisan election','Election by the state legislature','Partisan election','Appointment by Governor','Partisan election/Retention election','Appointed by the Governor','Appointment by the Governor with confirmation by the Senate','Election by State Legislature','Tennessee Plan (Modified Missouri Plan)','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Tennessee Supreme Court','Supreme Court of Georgia','Delaware Supreme Court','Supreme Court of Louisiana','Supreme Court of Pennsylvania','Montana Supreme Court','Utah Supreme Court','Ohio Supreme Court','South Carolina Supreme Court','South Dakota Supreme Court','Idaho Supreme Court','Kansas Supreme Court','Kentucky Supreme Court','Supreme Court of Appeals of West Virginia','New Hampshire Supreme Court','New York Court of Appeals','Colorado Supreme Court','Iowa Supreme Court','Maine Supreme Judicial Court','Supreme Court of Puerto Rico','Wisconsin Supreme Court','Rhode Island Supreme Court','Arizona Supreme Court','Supreme Court of Indiana','New Jersey Supreme Court','North Dakota Supreme Court','Arkansas Supreme Court','Nebraska Supreme Court','Oregon Supreme Court','Supreme Court of Missouri','Supreme Court of Mississippi','Maryland Court of Appeals','Supreme Court of California','North Carolina Supreme Court','Washington Supreme Court','Alaska Supreme Court','Florida Supreme Court','Massachusetts Supreme Judicial Court','Supreme Court of Hawaii','Connecticut Supreme Court','Supreme Court of Illinois','Texas Supreme CourtTexas Court of Criminal Appeals','Supreme Court of Nevada','Oklahoma Supreme CourtOklahoma Court of Criminal Appeals','Supreme Court of Virginia','New Mexico Supreme Court','Wyoming Supreme Court','Vermont Supreme Court','Supreme Court of Alabama','Minnesota Supreme Court','Michigan Supreme Court','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['10 years','Lifetime','6 years','8 years','6 years (both)','12 years','7 years','4 years','14 years','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['','70 (at end of calendar year)','75','70','72','70 (at end of term)','75 (may finish term or 4 years of term, whichever is shorter)','70 (or end of current term)','78','None','Must be under 70 at time of election','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Arkansas','Michigan','Virginia','Idaho','Hawaii','Delaware','Alabama','Arizona','Nebraska','Louisiana','Maine','Texas','New Mexico','Minnesota','Illinois','New York','Florida','North Dakota','Mississippi','Vermont','Utah','California','Oregon','Oklahoma','Colorado','New Jersey','Tennessee','Massachusetts','North Carolina','Ohio','Nevada','Alaska','Rhode Island','Kansas','Iowa','Montana','Maryland','South Carolina','Wyoming','Missouri','Washington','New Hampshire','Pennsylvania','Kentucky','Connecticut','Indiana','Wisconsin','Puerto Rico','South Dakota','West Virginia','Georgia','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

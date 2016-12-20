@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>List of AMD graphics processing units -  Wonder Series </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>List of AMD graphics processing units -  Wonder Series </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Config core : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bus width (bit) : </label></br> <input style="display:block;" id="id1Memory - Bus width (bit)" type="number" name="Feature">
+												<input style="display:none;" id="id2Memory - Bus width (bit)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Memory - Bus width (bit)','id2Memory - Bus width (bit)');">Changer type</button></br>								
+								</br>	
+								<label>Memory - Bus type : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Bus interface :</label></br>
+											<input type="checkbox" name="Feature" >PC</br>	
+											<input type="checkbox" name="Feature" >XT</br>	
+											<input type="checkbox" name="Feature" >ISA</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Launch : </label></br> <input style="display:block;" id="id1Launch" type="number" name="Feature">
+												<input style="display:none;" id="id2Launch" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Launch','id2Launch');">Changer type</button></br>								
+								</br>	
+								<label>Model : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>API compliance : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory (KB) : </label></br> <input style="display:block;" id="id1Memory (KB)" type="number" name="Feature">
+												<input style="display:none;" id="id2Memory (KB)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Memory (KB)','id2Memory (KB)');">Changer type</button></br>								
+								</br>	
+								<label>Fab (µm) : </label></br> <input style="display:block;" id="id1Fab (µm)" type="number" name="Feature">
+												<input style="display:none;" id="id2Fab (µm)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fab (µm)','id2Fab (µm)');">Changer type</button></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['1:1','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Wonder VGA','Wonder MDA/CGA','Wonder EGA','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['2D','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

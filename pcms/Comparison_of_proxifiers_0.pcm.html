@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of proxifiers -  General </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of proxifiers -  General </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Developer : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Based on : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Name : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Source available :</label></br>
+								<input type="radio" name="FeatureSource available" value="oui">Yes <input type="radio" name="FeatureSource available" value = "non">No <input type="radio" name="FeatureSource available" value = "non">Partial </br>
+											<input name="FeatureSource available" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Status : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>First release : </label></br> <input style="display:block;" id="id1First release" type="number" name="Feature">
+												<input style="display:none;" id="id2First release" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First release','id2First release');">Changer type</button></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['GPL','BSD','Proprietary (Shareware)','Proprietary (Freeware)','Proprietary','Apache','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Max Artemev','Inferno Nettverk A/S','','Initex Software','NEC','Ambroz Bizjak','Leonid Evdokimov','Proxy Labs','Robert Hogan','Networktunnel Lab','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['proxychains','tsocks','','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['SocksCap','proxychains-ng','Super Socks5Cap','ProxyCap','Proxifier','tun2socks','Dante client','FreeCap','redsocks','WideCap','torsocks','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Active','N/A','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

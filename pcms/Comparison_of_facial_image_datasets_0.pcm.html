@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of facial image datasets</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of facial image datasets</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Poses :</label></br>
+											<input type="checkbox" name="Feature" >head turning from left to right</br>	
+											<input type="checkbox" name="Feature" >head nodding</br>	
+											<input type="checkbox" name="Feature" >raised</br>	
+											<input type="checkbox" name="Feature" >lowered head turning left to right</br>	
+											<input type="checkbox" name="Feature" >13 pitch</br>	
+											<input type="checkbox" name="Feature" >yaw</br>	
+											<input type="checkbox" name="Feature" >and cross rotations</br>	
+											<input type="checkbox" name="Feature" >Uncontrol led up and down</br>	
+											<input type="checkbox" name="Feature" >Left</br>	
+											<input type="checkbox" name="Feature" >right</br>	
+											<input type="checkbox" name="Feature" >up</br>	
+											<input type="checkbox" name="Feature" >down</br>	
+											<input type="checkbox" name="Feature" >Slight left</br>	
+											<input type="checkbox" name="Feature" >right and up</br>	
+											<input type="checkbox" name="Feature" >down ?</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Subjects : </label></br> <input style="display:block;" id="id1Subjects" type="number" name="Feature">
+												<input style="display:none;" id="id2Subjects" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Subjects','id2Subjects');">Changer type</button></br>								
+								</br>	
+								<label>3D :</label></br>
+								<input type="radio" name="Feature3D" value="oui">Yes <input type="radio" name="Feature3D" value = "non">No <input type="radio" name="Feature3D" value = "non">Partial </br>
+											<input name="Feature3D" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Expressions :</label></br>
+											<input type="checkbox" name="Feature" >neutral face</br>	
+											<input type="checkbox" name="Feature" >and 6 expressions: anger</br>	
+											<input type="checkbox" name="Feature" >happiness</br>	
+											<input type="checkbox" name="Feature" >sadness</br>	
+											<input type="checkbox" name="Feature" >surprise</br>	
+											<input type="checkbox" name="Feature" >disgust</br>	
+											<input type="checkbox" name="Feature" >fear (4 levels)</br>	
+											<input type="checkbox" name="Feature" >5: happiness</br>	
+											<input type="checkbox" name="Feature" >other</br>	
+											<input type="checkbox" name="Feature" >34: action units and 6 expressions</br>	
+											<input type="checkbox" name="Feature" >labeled; 24 facial landmarks labeled</br>	
+											<input type="checkbox" name="Feature" >5: Anger</br>	
+											<input type="checkbox" name="Feature" >smile</br>	
+											<input type="checkbox" name="Feature" >laugh</br>	
+											<input type="checkbox" name="Feature" >closed eyes</br>	
+											<input type="checkbox" name="Feature" >netral face</br>	
+											<input type="checkbox" name="Feature" >smaile and mouth and eyes open</br>	
+											<input type="checkbox" name="Feature" >Mostly neutral</br>	
+											<input type="checkbox" name="Feature" >some unconstrained; neutral are labeled</br>	
+											<input type="checkbox" name="Feature" >unconstrained not further labeled</br>	
+											<input type="checkbox" name="Feature" >6: anger</br>	
+											<input type="checkbox" name="Feature" >puffy</br>	
+											<input type="checkbox" name="Feature" >joy</br>	
+											<input type="checkbox" name="Feature" >anger and surprise</br>	
+											<input type="checkbox" name="Feature" >5 expressions: anger</br>	
+											<input type="checkbox" name="Feature" >eyes closed</br>	
+											<input type="checkbox" name="Feature" >eyebrows raised</br>	
+											<input type="checkbox" name="Feature" >frontal accentuated laugh</br>	
+											<input type="checkbox" name="Feature" >frontal random gesture</br>	
+											<input type="checkbox" name="Feature" >n</br>	
+											<input type="checkbox" name="Feature" >a?</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Samples per subject : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Institution :</label></br>
+											<input type="checkbox" name="Feature" >National Institute Of Standards and Technology</br>	
+											<input type="checkbox" name="Feature" >United States</br>	
+											<input type="checkbox" name="Feature" >Institute of Automation Chinese Academy of Sciences</br>	
+											<input type="checkbox" name="Feature" >China</br>	
+											<input type="checkbox" name="Feature" >Royal Military Academy</br>	
+											<input type="checkbox" name="Feature" >Belgium</br>	
+											<input type="checkbox" name="Feature" >Binghamton University</br>	
+											<input type="checkbox" name="Feature" >University of York</br>	
+											<input type="checkbox" name="Feature" >United Kingdom</br>	
+											<input type="checkbox" name="Feature" >Rey Juan Carlos University</br>	
+											<input type="checkbox" name="Feature" >Spain</br>	
+											<input type="checkbox" name="Feature" >Bogazici University</br>	
+											<input type="checkbox" name="Feature" >Turkey</br>	
+											<input type="checkbox" name="Feature" >Beijing University of Technology</br>	
+											<input type="checkbox" name="Feature" >University of Notre Dame</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Color : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Database : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Total images : </label></br> <input style="display:block;" id="id1Total images" type="number" name="Feature">
+												<input style="display:none;" id="id2Total images" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Total images','id2Total images');">Changer type</button></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['case-by-case, non-commercial, privacy protections','Immediate download possible, citation of paper is desired','case-by-case, non-commercial, publications must reference; available for download after email correspondence','?','publications must reference; available for immediate download','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['20+','25','6','9','1-22','1-63','37-38','4','31-54','16','15','slightly different but unlabeled','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['?','Yes','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['3D_RMA','PUT','MUCT','York-3DFace','BJUT-3D-R1','BU-3DFE','ND2006','FRAV3D','Bosphorus','FRGC v.2','GavabDB','CASIA','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

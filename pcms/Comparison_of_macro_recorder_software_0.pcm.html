@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of macro recorder software</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of macro recorder software</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Records mouse :</label></br>
+								<input type="radio" name="FeatureRecords mouse" value="oui">Yes <input type="radio" name="FeatureRecords mouse" value = "non">No <input type="radio" name="FeatureRecords mouse" value = "non">Partial </br>
+								
+								</br>	
+								<label>Records keyboard :</label></br>
+								<input type="radio" name="FeatureRecords keyboard" value="oui">Yes <input type="radio" name="FeatureRecords keyboard" value = "non">No <input type="radio" name="FeatureRecords keyboard" value = "non">Partial </br>
+								
+								</br>	
+								<label>Allows conditional statements and other control flow ("if", "goto", "repeat X times") :</label></br>
+								<input type="radio" name="FeatureAllows conditional statements and other control flow ("if", "goto", "repeat X times")" value="oui">Yes <input type="radio" name="FeatureAllows conditional statements and other control flow ("if", "goto", "repeat X times")" value = "non">No <input type="radio" name="FeatureAllows conditional statements and other control flow ("if", "goto", "repeat X times")" value = "non">Partial </br>
+								
+								</br>	
+								<label>Freeware :</label></br>
+								<input type="radio" name="FeatureFreeware" value="oui">Yes <input type="radio" name="FeatureFreeware" value = "non">No <input type="radio" name="FeatureFreeware" value = "non">Partial </br>
+								
+								</br>	
+								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Allows custom commands (like "open file", "launch website", "shutdown" etc. :</label></br>
+								<input type="radio" name="FeatureAllows custom commands (like "open file", "launch website", "shutdown" etc." value="oui">Yes <input type="radio" name="FeatureAllows custom commands (like "open file", "launch website", "shutdown" etc." value = "non">No <input type="radio" name="FeatureAllows custom commands (like "open file", "launch website", "shutdown" etc." value = "non">Partial </br>
+								
+								</br>	
+								<label>Built-in macro editor :</label></br>
+								<input type="radio" name="FeatureBuilt-in macro editor" value="oui">Yes <input type="radio" name="FeatureBuilt-in macro editor" value = "non">No <input type="radio" name="FeatureBuilt-in macro editor" value = "non">Partial </br>
+								
+								</br>	
+								<label>Compiles to EXE-files :</label></br>
+								<input type="radio" name="FeatureCompiles to EXE-files" value="oui">Yes <input type="radio" name="FeatureCompiles to EXE-files" value = "non">No <input type="radio" name="FeatureCompiles to EXE-files" value = "non">Partial </br>
+								
+								</br>	
+								<label>Using Speech Recognition :</label></br>
+								<input type="radio" name="FeatureUsing Speech Recognition" value="oui">Yes <input type="radio" name="FeatureUsing Speech Recognition" value = "non">No <input type="radio" name="FeatureUsing Speech Recognition" value = "non">Partial </br>
+								
+								</br>	
+								<label>Triggering macros with system events :</label></br>
+								<input type="radio" name="FeatureTriggering macros with system events" value="oui">Yes <input type="radio" name="FeatureTriggering macros with system events" value = "non">No <input type="radio" name="FeatureTriggering macros with system events" value = "non">Partial </br>
+								
+								</br>	
+								<label>"Smart" mouse recording (not just absolute coordinates) :</label></br>
+								<input type="radio" name="Feature"Smart" mouse recording (not just absolute coordinates)" value="oui">Yes <input type="radio" name="Feature"Smart" mouse recording (not just absolute coordinates)" value = "non">No <input type="radio" name="Feature"Smart" mouse recording (not just absolute coordinates)" value = "non">Partial </br>
+								
+								</br>	
+								<label>OS : </label></br> <input id="1" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Proprietary','Freeware / Proprietary','GPL','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Mac OS X','Windows','OSes with X11, like  Linux, etc.','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

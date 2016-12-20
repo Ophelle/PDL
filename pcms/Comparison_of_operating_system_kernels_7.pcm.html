@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of operating system kernels -  Networked file system support </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of operating system kernels -  Networked file system support </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>CIFS :</label></br>
+								<input type="radio" name="FeatureCIFS" value="oui">Yes <input type="radio" name="FeatureCIFS" value = "non">No <input type="radio" name="FeatureCIFS" value = "non">Partial </br>
+								
+								</br>	
+								<label>AFS :</label></br>
+								<input type="radio" name="FeatureAFS" value="oui">Yes <input type="radio" name="FeatureAFS" value = "non">No <input type="radio" name="FeatureAFS" value = "non">Partial </br>
+								
+								</br>	
+								<label>Coda :</label></br>
+								<input type="radio" name="FeatureCoda" value="oui">Yes <input type="radio" name="FeatureCoda" value = "non">No <input type="radio" name="FeatureCoda" value = "non">Partial </br>
+								
+								</br>	
+								<label>Kernel Name : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>NFS :</label></br>
+								<input type="radio" name="FeatureNFS" value="oui">Yes <input type="radio" name="FeatureNFS" value = "non">No <input type="radio" name="FeatureNFS" value = "non">Partial </br>
+								
+								</br>	
+								<label>9P :</label></br>
+								<input type="radio" name="Feature9P" value="oui">Yes <input type="radio" name="Feature9P" value = "non">No <input type="radio" name="Feature9P" value = "non">Partial </br>
+								
+								</br>	
+								<label>Ceph :</label></br>
+								<input type="radio" name="FeatureCeph" value="oui">Yes <input type="radio" name="FeatureCeph" value = "non">No <input type="radio" name="FeatureCeph" value = "non">Partial </br>
+								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Windows NT kernel','XNU','Solaris kernel','DragonFly BSD kernel','Linux kernel','FreeBSD kernel','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

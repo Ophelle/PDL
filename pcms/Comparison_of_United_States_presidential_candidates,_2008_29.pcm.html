@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of United States presidential candidates, 2008 - Judiciary</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of United States presidential candidates, 2008 - Judiciary</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>John McCain : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>John McCain voted for the appointment of Justice Roberts.  McCain favors a more Constructionist standpoint and says he would work to safeguard against Judicial activism. : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Chuck Baldwin : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>  : </label></br> <input id="3" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['John McCain','Barack Obama','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Barack Obama was 1 of 22 Senators to vote against the appointment of Justice Roberts.','John McCain voted for the appointment of Justice Roberts.  McCain favors a more Constructionist standpoint and says he would work to safeguard against Judicial activism.','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Cynthia McKinney','Bob Barr','Ralph Nader','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

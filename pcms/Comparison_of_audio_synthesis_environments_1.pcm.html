@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of audio synthesis environments - Programming language features</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of audio synthesis environments - Programming language features</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Object-oriented :</label></br>
+								<input type="radio" name="FeatureObject-oriented" value="oui">Yes <input type="radio" name="FeatureObject-oriented" value = "non">No <input type="radio" name="FeatureObject-oriented" value = "non">Partial </br>
+								
+								</br>	
+								<label>Type system : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Name : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Textual/graphical : </label></br> <input id="2" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Dynamic','','In development','Dynamic & static','No','Static','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Csound','Reaktor','Pure Data','Max/MSP','Impromptu','SuperCollider','MPEG-4/SA','ChucK','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Textual/Graphical (FLTK/Qt/HTML5)','Graphical','Textual','Mostly textual','Textual/Graphical (Cocoa/Swing/Qt)','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

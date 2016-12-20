@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>List of AMD graphics processing units -  Radeon R100 (7xxx) Series </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>List of AMD graphics processing units -  Radeon R100 (7xxx) Series </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Fab (nm) : </label></br> <input style="display:block;" id="id1Fab (nm)" type="number" name="Feature">
+								
+								</br>	
+								<label>Memory - Bus type : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input style="display:block;" id="id1Memory - Bandwidth (GB/s)" type="number" name="Feature">
+								
+								</br>	
+								<label>Memory - Bus width (bit) : </label></br> <input style="display:block;" id="id1Memory - Bus width (bit)" type="number" name="Feature">
+								
+								</br>	
+								<label>Core clock (MHz) : </label></br> <input style="display:block;" id="id1Core clock (MHz)" type="number" name="Feature">
+								
+								</br>	
+								<label>Model :</label></br>
+											<input type="checkbox" name="Feature" >Radeon SDR</br>	
+											<input type="checkbox" name="Feature" >7200</br>	
+											<input type="checkbox" name="Feature" >Radeon DDR</br>	
+											<input type="checkbox" name="Feature" >7500 VIVO</br>	
+											<input type="checkbox" name="Feature" >Radeon DDR</br>	
+											<input type="checkbox" name="Feature" >7500 VIVO "SE"</br>	
+											<input type="checkbox" name="Feature" >Radeon VE</br>	
+											<input type="checkbox" name="Feature" >7000</br>	
+											<input type="checkbox" name="Feature" >Radeon LE</br>	
+											<input type="checkbox" name="Feature" >7100 (OEM)</br>	
+							
+								</br>	
+								<label>Fillrate - MPixels/s : </label></br> <input style="display:block;" id="id1Fillrate - MPixels/s" type="number" name="Feature">
+								
+								</br>	
+								<label>Fillrate - MOperations/s : </label></br> <input style="display:block;" id="id1Fillrate - MOperations/s" type="number" name="Feature">
+								
+								</br>	
+								<label>Fillrate - MTexels/s : </label></br> <input style="display:block;" id="id1Fillrate - MTexels/s" type="number" name="Feature">
+								
+								</br>	
+								<label>Fillrate - MVertices/s : </label></br> <input style="display:block;" id="id1Fillrate - MVertices/s" type="number" name="Feature">
+								
+								</br>	
+								<label>Code name :</label></br>
+											<input type="checkbox" name="Feature" >Rage 6 </br>	
+											<input type="checkbox" name="Feature" >R100</br>	
+							
+								</br>	
+								<label>Products : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory (MB) :</label></br>
+											<input type="checkbox" name="Feature" >32</br>	
+											<input type="checkbox" name="Feature" >64</br>	
+							
+								</br>	
+								<label>Config core : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Bus interface : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory clock (MHz) : </label></br> <input style="display:block;" id="id1Memory clock (MHz)" type="number" name="Feature">
+								
+								</br>	
+								<label>Launch : </label></br> <input id="4" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['P8','P1','P6','P2','P4','P5','P9','P3','P7','P10','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['2:0:6:2','Config core','1:0:3:1','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['AGP 4x','AGP 4x, PCI','Bus interface','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['2001','May 1, 2001','June 2000','N/A','Launch','Feb 19, 2001','April 2000','Aug 14, 2001','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

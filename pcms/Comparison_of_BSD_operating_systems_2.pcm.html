@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of BSD operating systems - Security features</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of BSD operating systems - Security features</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Encrypted file systems :</label></br>
+								<input type="radio" name="FeatureEncrypted file systems" value="oui">Yes <input type="radio" name="FeatureEncrypted file systems" value = "non">No <input type="radio" name="FeatureEncrypted file systems" value = "non">Partial </br>
+								
+								</br>	
+								<label>Resource access control :</label></br>
+											<input type="checkbox" name="Feature" >Unix</br>	
+											<input type="checkbox" name="Feature" >ACLs</br>	
+											<input type="checkbox" name="Feature" >MAC</br>	
+											<input type="checkbox" name="Feature" >Veriexec</br>	
+							
+								</br>	
+								<label>Data execution prevention - hardware :</label></br>
+								<input type="radio" name="FeatureData execution prevention - hardware" value="oui">Yes <input type="radio" name="FeatureData execution prevention - hardware" value = "non">No <input type="radio" name="FeatureData execution prevention - hardware" value = "non">Partial </br>
+								
+								</br>	
+								<label>Data execution prevention - emulation :</label></br>
+								<input type="radio" name="FeatureData execution prevention - emulation" value="oui">Yes <input type="radio" name="FeatureData execution prevention - emulation" value = "non">No <input type="radio" name="FeatureData execution prevention - emulation" value = "non">Partial </br>
+								
+								</br>	
+								<label>Subsystem isolation mechanisms :</label></br>
+											<input type="checkbox" name="Feature" >chroot</br>	
+											<input type="checkbox" name="Feature" >privilege separation</br>	
+											<input type="checkbox" name="Feature" >jail</br>	
+											<input type="checkbox" name="Feature" >MAC partitions</br>	
+											<input type="checkbox" name="Feature" >sandbox</br>	
+											<input type="checkbox" name="Feature" >Capsicum</br>	
+											<input type="checkbox" name="Feature" >systrace</br>	
+											<input type="checkbox" name="Feature" >VKernel</br>	
+											<input type="checkbox" name="Feature" >MAC Partitions</br>	
+							
+								</br>	
+								<label>Security logging : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Integrated firewall :</label></br>
+											<input type="checkbox" name="Feature" >IPFW2</br>	
+											<input type="checkbox" name="Feature" >IPFilter</br>	
+											<input type="checkbox" name="Feature" >PF</br>	
+											<input type="checkbox" name="Feature" >IPFW2 (deprecated)</br>	
+											<input type="checkbox" name="Feature" >NPF</br>	
+							
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['syslog, CAPP event auditing, OpenBSM','syslog','?','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

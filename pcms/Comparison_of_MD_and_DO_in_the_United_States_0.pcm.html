@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of MD and DO in the United States - Licensure</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of MD and DO in the United States - Licensure</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Medical School Application service :</label></br>
+											<input type="checkbox" name="Feature" >AMCAS</br>	
+											<input type="checkbox" name="Feature" >TMDSAS</br>	
+											<input type="checkbox" name="Feature" >AACOMAS</br>	
+							
+								</br>	
+								<label>residency : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Years of medical school : </label></br> <input style="display:block;" id="id1Years of medical school" type="number" name="Feature">
+								
+								</br>	
+								<label>Board Certification : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Medical Licensing Exam (MLE)  Step 1 : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>MLE, Step 2 : </label></br> <input id="3" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['','M.D. (ACGME)','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Medical specialty boards','Either M.D. or D.O. medical specialty boards','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['','USMLE required','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['USMLE required','COMLEX required','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

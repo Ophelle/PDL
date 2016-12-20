@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of linear algebra libraries -  General information </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of linear algebra libraries -  General information </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>First public release : </label></br> <input style="display:block;" id="id1First public release" type="number" name="Feature">
+												<input style="display:none;" id="id2First public release" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First public release','id2First public release');">Changer type</button></br>								
+								</br>	
+								<label>Notes : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Latest stable version :</label></br>
+											<input type="checkbox" name="Feature" >2.6.0 </br>	
+											<input type="checkbox" name="Feature" >06.2010</br>	
+											<input type="checkbox" name="Feature" >1.16 </br>	
+											<input type="checkbox" name="Feature" >07.2013</br>	
+											<input type="checkbox" name="Feature" >3.4.0 </br>	
+											<input type="checkbox" name="Feature" >11.2011</br>	
+											<input type="checkbox" name="Feature" >0.8.0 </br>	
+											<input type="checkbox" name="Feature" >2010</br>	
+											<input type="checkbox" name="Feature" >4.0 </br>	
+											<input type="checkbox" name="Feature" >November 2009</br>	
+											<input type="checkbox" name="Feature" >10.3 update 8 </br>	
+											<input type="checkbox" name="Feature" >2011</br>	
+											<input type="checkbox" name="Feature" >3.8.3 </br>	
+											<input type="checkbox" name="Feature" >02.2009</br>	
+											<input type="checkbox" name="Feature" >4.650 </br>	
+											<input type="checkbox" name="Feature" >2015</br>	
+											<input type="checkbox" name="Feature" >3.24 </br>	
+											<input type="checkbox" name="Feature" >1.4.28.00 </br>	
+											<input type="checkbox" name="Feature" >03.2013</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Creator : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Cost (USD) : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Language :</label></br>
+											<input type="checkbox" name="Feature" >C</br>	
+											<input type="checkbox" name="Feature" >Java</br>	
+											<input type="checkbox" name="Feature" >C#</br>	
+											<input type="checkbox" name="Feature" >Fortran</br>	
+											<input type="checkbox" name="Feature" >Python</br>	
+											<input type="checkbox" name="Feature" >C++</br>	
+											<input type="checkbox" name="Feature" >FreePascal</br>	
+											<input type="checkbox" name="Feature" >VBA</br>	
+											<input type="checkbox" name="Feature" >C </br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['General purpose numerical analysis library. Includes some support for linear algebra.','Automatically tuned implementation of BLAS. Also includes LU and Cholesky decompositions.','General purpose numerical library for .NET.','based on Python','Numerical linear algebra library with long history','C++ template library for linear algebra; includes various decompositions and factorisations; syntax (API) is similar to MATLAB.','Math and statistical libraries for the .NET Framework','Numerical analysis library optimized for Intel CPUs','General purpose numerical analysis library. Uses automatic code generation to support several programming languages.','Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms.','General purpose numerical analysis library.','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Proprietary','GPL','BSD','MPL2','3-clause BSD','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['','Rogue Wave Software','Intel','RTMath','The Numerical Algorithms Group','Enthought','GNU Project','R. Clint Whaley et al.','Benoît Jacob','NICTA','CenterSpace Software','Sergey Bochkanov','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Non-free','Free','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>List of Nvidia graphics processing units - GeForce 700M (7xxM) Series</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>List of Nvidia graphics processing units - GeForce 700M (7xxM) Series</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Fillrate - Texture (GT/s) : </label></br> <input style="display:block;" id="id1Fillrate - Texture (GT/s)" type="number" name="Feature">
+								
+								</br>	
+								<label>Fillrate - Pixel (GP/s) : </label></br> <input style="display:block;" id="id1Fillrate - Pixel (GP/s)" type="number" name="Feature">
+								
+								</br>	
+								<label>Code name : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>API support (version) - DirectX : </label></br> <input style="display:block;" id="id1API support (version) - DirectX" type="number" name="Feature">
+								
+								</br>	
+								<label>API support (version) - OpenGL : </label></br> <input style="display:block;" id="id1API support (version) - OpenGL" type="number" name="Feature">
+								
+								</br>	
+								<label>Launch : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bus type : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input style="display:block;" id="id1Memory - Bandwidth (GB/s)" type="number" name="Feature">
+								
+								</br>	
+								<label>Memory - Bus width (bit) : </label></br> <input style="display:block;" id="id1Memory - Bus width (bit)" type="number" name="Feature">
+								
+								</br>	
+								<label>Notes : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Processing Power (GFLOPS) : </label></br> <input style="display:block;" id="id1Processing Power (GFLOPS)" type="number" name="Feature">
+								
+								</br>	
+								<label>Memory (MB) : </label></br> <input style="display:block;" id="id1Memory (MB)" type="number" name="Feature">
+								
+								</br>	
+								<label>TDP (watts) : </label></br> <input style="display:block;" id="id1TDP (watts)" type="number" name="Feature">
+								
+								</br>	
+								<label>Bus interface : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Core config : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Model : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Clock speed - Shader (MHz) : </label></br> <input style="display:block;" id="id1Clock speed - Shader (MHz)" type="number" name="Feature">
+								
+								</br>	
+								<label>Clock speed - Core (MHz) : </label></br> <input style="display:block;" id="id1Clock speed - Core (MHz)" type="number" name="Feature">
+								
+								</br>	
+								<label>Clock speed - Memory (MT/s) : </label></br> <input style="display:block;" id="id1Clock speed - Memory (MT/s)" type="number" name="Feature">
+								
+								</br>	
+								<label>Fab (nm) : </label></br> <input style="display:block;" id="id1Fab (nm)" type="number" name="Feature">
+								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['GK106','GK107','GK104','GK208','GF117','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['?','May 2013','April 1, 2013','Jan 2013','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['OEM. About 130% of Mobile 625/630 & Desktop 620','about 92% of Desktop GTX 650Ti','Kepler, similar to Desktop GT640','about 78% of Desktop GTX770','OEM. About 115% of Mobile 620 & Desktop 530','about 79% of Desktop GTX650','about 71% of Desktop GTX 650Ti','Similar or slightly slower than GK 107.','about 91% of Desktop GTX650','about 76% of Desktop GTX650','about 83% of Desktop GTX660','about 93% of Desktop GTX650','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['PCIe 2.0 x16','PCIe 3.0 x16','PCIe 3.0 x8','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['960:80:24(5 SMX)','384:32:16(2 SMX)','768:64:16(4 SMX)','384:32:8(2 SMX)','96:16:4','1536:128:32(8 SMX)','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['GeForce GT 740M','GeForce GT 750M','GeForce GT 735M','GeForce 710M','GeForce GT 730M','GeForce GTX 765M','GeForce GT 755M','GeForce GTX 780M','GeForce GTX 760M','GeForce GTX 770M','GeForce GT 720M','GeForce GT 745M','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of DNS server software -  Feature matrix </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of DNS server software -  Feature matrix </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Recursion ACL :</label></br>
+								<input type="radio" name="FeatureRecursion ACL" value="oui">Yes <input type="radio" name="FeatureRecursion ACL" value = "non">No <input type="radio" name="FeatureRecursion ACL" value = "non">Partial </br>
+								
+								</br>	
+								<label>DNSSEC :</label></br>
+								<input type="radio" name="FeatureDNSSEC" value="oui">Yes <input type="radio" name="FeatureDNSSEC" value = "non">No <input type="radio" name="FeatureDNSSEC" value = "non">Partial </br>
+								
+								</br>	
+								<label>TSIG :</label></br>
+								<input type="radio" name="FeatureTSIG" value="oui">Yes <input type="radio" name="FeatureTSIG" value = "non">No <input type="radio" name="FeatureTSIG" value = "non">Partial </br>
+								
+								</br>	
+								<label>Recursive :</label></br>
+								<input type="radio" name="FeatureRecursive" value="oui">Yes <input type="radio" name="FeatureRecursive" value = "non">No <input type="radio" name="FeatureRecursive" value = "non">Partial </br>
+								
+								</br>	
+								<label>Wildcard :</label></br>
+								<input type="radio" name="FeatureWildcard" value="oui">Yes <input type="radio" name="FeatureWildcard" value = "non">No <input type="radio" name="FeatureWildcard" value = "non">Partial </br>
+								
+								</br>	
+								<label>Interface :</label></br>
+											<input type="checkbox" name="Feature" >command line</br>	
+											<input type="checkbox" name="Feature" >pdnsd-ctl program</br>	
+											<input type="checkbox" name="Feature" >GUI</br>	
+											<input type="checkbox" name="Feature" >Web</br>	
+											<input type="checkbox" name="Feature" >api</br>	
+											<input type="checkbox" name="Feature" >SOAP Interface</br>	
+											<input type="checkbox" name="Feature" >SNMP</br>	
+											<input type="checkbox" name="Feature" >command line and web</br>	
+											<input type="checkbox" name="Feature" >CLI</br>	
+											<input type="checkbox" name="Feature" >SOAP</br>	
+											<input type="checkbox" name="Feature" >REST</br>	
+											<input type="checkbox" name="Feature" >DNSTAP</br>	
+											<input type="checkbox" name="Feature" >API</br>	
+											<input type="checkbox" name="Feature" >WMI</br>	
+											<input type="checkbox" name="Feature" >RPC</br>	
+							
+								</br>	
+								<label>Server : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>split horizon :</label></br>
+								<input type="radio" name="Featuresplit horizon" value="oui">Yes <input type="radio" name="Featuresplit horizon" value = "non">No <input type="radio" name="Featuresplit horizon" value = "non">Partial </br>
+								
+								</br>	
+								<label>Caching :</label></br>
+								<input type="radio" name="FeatureCaching" value="oui">Yes <input type="radio" name="FeatureCaching" value = "non">No <input type="radio" name="FeatureCaching" value = "non">Partial </br>
+								
+								</br>	
+								<label>Authoritative :</label></br>
+								<input type="radio" name="FeatureAuthoritative" value="oui">Yes <input type="radio" name="FeatureAuthoritative" value = "non">No <input type="radio" name="FeatureAuthoritative" value = "non">Partial </br>
+								
+								</br>	
+								<label>IPv6 :</label></br>
+								<input type="radio" name="FeatureIPv6" value="oui">Yes <input type="radio" name="FeatureIPv6" value = "non">No <input type="radio" name="FeatureIPv6" value = "non">Partial </br>
+								
+								</br>	
+								<label>Free Software :</label></br>
+								<input type="radio" name="FeatureFree Software" value="oui">Yes <input type="radio" name="FeatureFree Software" value = "non">No <input type="radio" name="FeatureFree Software" value = "non">Partial </br>
+								
+								</br>	
+								<label>Slave mode :</label></br>
+								<input type="radio" name="FeatureSlave mode" value="oui">Yes <input type="radio" name="FeatureSlave mode" value = "non">No <input type="radio" name="FeatureSlave mode" value = "non">Partial </br>
+								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Dnsmasq','Unbound','YADIFA','djbdns','Nominum Vantio','yaku-ns','pdnsd','NSD','Nominum ANS','Posadis','gdnsd','dbndns','MaraDNS','PowerDNS','Microsoft DNS','dnrd','Knot DNS','BIND','Simple DNS Plus','DNS Blast','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

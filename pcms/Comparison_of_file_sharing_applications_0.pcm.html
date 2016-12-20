@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of file sharing applications -  Table </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of file sharing applications -  Table </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Latest release version : </label></br> <input style="display:block;" id="id1Latest release version" type="number" name="Feature">
+												<input style="display:none;" id="id2Latest release version" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Latest release version','id2Latest release version');">Changer type</button></br>								
+								</br>	
+								<label>Network : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Platform :</label></br>
+											<input type="checkbox" name="Feature" >BeOS</br>	
+											<input type="checkbox" name="Feature" >Linux</br>	
+											<input type="checkbox" name="Feature" >OS X</br>	
+											<input type="checkbox" name="Feature" >Windows</br>	
+											<input type="checkbox" name="Feature" >Solaris</br>	
+											<input type="checkbox" name="Feature" >Linux with Wine</br>	
+											<input type="checkbox" name="Feature" >Android</br>	
+											<input type="checkbox" name="Feature" >Mac OS</br>	
+											<input type="checkbox" name="Feature" >Mac OS X</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Spyware-adware free :</label></br>
+								<input type="radio" name="FeatureSpyware-adware free" value="oui">Yes <input type="radio" name="FeatureSpyware-adware free" value = "non">No <input type="radio" name="FeatureSpyware-adware free" value = "non">Partial </br>
+											<input name="FeatureSpyware-adware free" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Name : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Price : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Programming language : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Anonymous P2P :</label></br>
+								<input type="radio" name="FeatureAnonymous P2P" value="oui">Yes <input type="radio" name="FeatureAnonymous P2P" value = "non">No <input type="radio" name="FeatureAnonymous P2P" value = "non">Partial </br>
+											<input name="FeatureAnonymous P2P" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Link system compatibility :</label></br>
+								<input type="radio" name="FeatureLink system compatibility" value="oui">Yes <input type="radio" name="FeatureLink system compatibility" value = "non">No <input type="radio" name="FeatureLink system compatibility" value = "non">Partial </br>
+											<input name="FeatureLink system compatibility" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Extra information : </label></br> <input id="5" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['?','GNU LGPL v2.1+','GPL','Proprietary','core proprietary, GUI GPL','MIT','License','LGPL','MIT/X11','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['ANts','RShare','Gnutella, BitTorrent','OpenFT and, with plugins, Ares, Gnutella, FastTrack','Network','Share','Freenet','Infinit','BitTorrent; HTTP/FTP download','BitTorrent','eDonkey, Overnet, Gnutella, Gnutella2, FastTrack, BitTorrent','BitTorrent, eDonkey; HTTP/FTP download','Sharing Max','Direct Connect','eDonkey, Kad','Gnutella','FastTrack','I2P (protocol Kad network)','Perfect Dark','BitTorrent, eDonkey, FastTrack, (Gnutella, Gnutella2), Kad; HTTP/FTP download','BitTorrent, eMule; HTTP/FTP download','MP2P','GNUnet','iP2P DHT','Retroshare','Ares, BitTorrent','P2P Private Networking (chat supported)','Ares, Gnutella, FastTrack, OpenFT','YobiDrive','I2P (protocol Gnutella)','Wuala','Winny','eDonkey, BitTorrent, Gnutella, Gnutella2, Direct Connect; HTTP/FTP download','FastTrack, Gnutella, Gnutella2','Gnutella, Gnutella2','NEOnet, Gnutella, Gnutella2, BitTorrent','BitTorrent, eDonkey, Kad; HTTP/FTP download','Private','I2P (protocol BitTorrent)','Soulseek','WinMX Peer Network (independent, now user-operated), OpenNAP, chatrooms supported','eDonkey, Overnet','MUTE','?','SoMud','Filetopia','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['LimeWire','Winny','Soulseek','Tribler','BitTorrent','Retroshare','Ares Galaxy','Acquisition','Perfect Dark','Kazaa','I2Phex','BitComet','YobiDrive FLOWS','BearShare (pre v6.0)','Opera','KTorrent','Nachtblitz','gtk-gnutella','Manolito','iMesh  (pre v6.0)','Warez P2P','KGet','Infinit','Cabos','eDonkey2000','broolz','MonoTorrent (client library)','ExoSee','I2PSnark','TrustyFiles','MLDonkey','aMule','Sharing Max','Frost','Shareaza','KCeasy','Name','Wuala','StealthNet','MUTE','Kazaa Lite','Gnucleus','Nodezilla','eMule','Morpheus','Thaw','uGet','ANts P2P','Transmission','DC++','Free Download Manager','Freenet`s FProxy','µTorrent','','GetRight','iMule','Piolet','WinMX','SoMud','Net Transport','Deluge','Robert','Share','Vuze  (formerly Azureus)','Flashget','BitTornado','Datawire','SymTorrent','Calypso','Filetopia','FrostWire','GNUnet','RShare','giFT','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Free','Free or US$59.95','Donation','Free or US$19.95','Free or US$19.99','Free, donations for privileges','Free or US$3.29 monthly','?','Free or US$18.88','Free or US$29','Nagware or US$17.99','Price','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['C, GTK+','C++','Java','?','C++, Qt','Programming language','Python','C, Objective-C','C#','C','OCaml','Objective-C, Java','Delphi','C++, Object Pascal (Delphi)','Object Pascal (Delphi)','Java, REALbasic','.NET Framework','Visual Basic','Python, C++','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['','File sharing and HTTP publishing.','Supports protocol obfuscation','Anonymous developer; tries to be Winny successor','Shutdown permanently due to injunction from MGM v. Grokster in which Limewire was ordered to disable all functionality of the software.','Since version 6: clone of the commercial iMesh software; does not connect to Gnutella and restricts downloads to media formats','Has code stolen from Gnucleus, giFT, and avlib; Linux version announced, but never released; takeover similar to the Shareaza.com and Lphant issues is likely to have happened','Most is proprietary, GUI is GPL.','Many modifications exist, for example LinuxDC++','Uses a powerful files library; maintained by volunteer group','eMule-like usability','Part of the KDE desktop, can be installed separately.','needs I2P to run','Alternative to LimeWire for Mac users; uses Cocoa GUI','Integrated into I2P distribution.','Extra information','Unlike most other torrent clients, Tribler is decentralized (as well as anonymous) and does not rely on any trackers or any other indexing service to discover content. Also features a built-in video streamer.','Illegal in Australia.','?','Need I2P to run.','Internal p2p protocols that allow only secondary users authorised by primary user to share.','Uses integrated giFT file sharing daemon as back-end.','Official development has ceased due to RIAA coercion. Versions 3.53, 3.54 beta 4 and older are available from 3rd parties.','Unlimited and encrypted peer to peer file sharing application with pause and resume.','Boards. Auto update.','Prior name: Kommute','Discontinued','Fork of LimeWire, with no copyrighted-material blocker planned.','ExoSee appears to have no business model.','Requires either Mono or .NET Framework to be installed','µTorrent rebrand','uGet 2.0 is currently in Beta Development (as of 9 September 2014) and available for testing via uGetdm.com','Runs on mobile phones with Symbian operating system','Exploits SuperSeeding and thus is often banned by trackers and peers. Compatible with e2DK links through an eMule plugin which gives access to eDonkey and Kad networks and cross-network sharing abilities with BitTorrent network.','P2P application, telnet / web-interface / GUI interface, complete and complex remote usage. Sancho GUI makes automatic SSH tunnels.','Developer claims Warez v3.0 beta is malware-free','Specifically designed to be very small; entire program runs from a 315KB compressed executable which can be either installed or run as a stand-alone.','Lightweight, cross-platform','Adware-disabled version of Kazaa (fake versions in circulation)','Uses PGP for friend authentication. Decentralized F2F network type.','Evolution of the RShare client with many functions.','Search and download P2P and web video networks such as YouTube and Yahoovideo etc.','Folder downloads, browse users with folder trees, no multi-source downloads','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

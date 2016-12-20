@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of S.M.A.R.T. tools</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of S.M.A.R.T. tools</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Fixed drives :</label></br>
+											<input type="checkbox" name="Feature" >IDE(PATA)</br>	
+											<input type="checkbox" name="Feature" >SATA</br>	
+											<input type="checkbox" name="Feature" >All for Linux</br>	
+											<input type="checkbox" name="Feature" >some for other Unix-like</br>	
+											<input type="checkbox" name="Feature" >(S)ATA</br>	
+											<input type="checkbox" name="Feature" >SCSI</br>	
+											<input type="checkbox" name="Feature" >SAT; Areca</br>	
+											<input type="checkbox" name="Feature" >3ware</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>RAID support : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Operating system : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Hard driveself-testing :</label></br>
+								<input type="radio" name="FeatureHard driveself-testing" value="oui">Yes <input type="radio" name="FeatureHard driveself-testing" value = "non">No <input type="radio" name="FeatureHard driveself-testing" value = "non">Partial </br>
+											<input name="FeatureHard driveself-testing" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>License : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Notification :</label></br>
+								<input type="radio" name="FeatureNotification" value="oui">Yes <input type="radio" name="FeatureNotification" value = "non">No <input type="radio" name="FeatureNotification" value = "non">Partial </br>
+											<input name="FeatureNotification" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>User interface : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>USB, eSATA andremovable drives :</label></br>
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Notes :</label></br>
+											<input type="checkbox" name="Feature" >Also shows temperature of CPU</br>	
+											<input type="checkbox" name="Feature" >GPU</br>	
+											<input type="checkbox" name="Feature" >CPU core speed</br>	
+											<input type="checkbox" name="Feature" >Intel Turbo Boost status</br>	
+											<input type="checkbox" name="Feature" >CPU power consumption</br>	
+											<input type="checkbox" name="Feature" >system load and system fan speeds. Can control speed of GPU and system fans.</br>	
+											<input type="checkbox" name="Feature" >LiveCD are available for download</br>	
+											<input type="checkbox" name="Feature" >allowing the user to use smartmontools without any changes to the computer.</br>	
+											<input type="checkbox" name="Feature" >Estimate health and performance by percentage</br>	
+											<input type="checkbox" name="Feature" >and offers online drive analysis (and compares from other users).</br>	
+											<input type="checkbox" name="Feature" >Primarily a defragmenter; support basic S.M.A.R.T. stat display</br>	
+											<input type="checkbox" name="Feature" >includes the one-word summary of drive-health.</br>	
+											<input type="checkbox" name="Feature" >allowing the user to use GNOME Disks without any changes to the computer.</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Shows S.M.A.R.T. attributes :</label></br>
+								<input type="radio" name="FeatureShows S.M.A.R.T. attributes" value="oui">Yes <input type="radio" name="FeatureShows S.M.A.R.T. attributes" value = "non">No <input type="radio" name="FeatureShows S.M.A.R.T. attributes" value = "non">Partial </br>
+											<input name="FeatureShows S.M.A.R.T. attributes" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Name : </label></br> <input id="4" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['?','Several RAID controllers','Some RAID controllers','RAID support','No','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Linux','Windows','Operating system','DOS, FreeDOS','OS X','Windows, Unix-like (Linux, OS X, BSD, etc.)','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Freeware','LGPL v2+','Commercial proprietary','Trialware','GNU GPL v2','License, price','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['GUI','CLI and GUI (via GSmartControl and HDD Guardian)','User interface','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['SpinRite','Name','AIDA64','SpeedFan','Argus Monitor','Disk Utility','Speccy','smartmontools','Defraggler','GNOME Disks','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

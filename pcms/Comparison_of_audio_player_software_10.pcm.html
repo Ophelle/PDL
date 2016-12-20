@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of audio player software - Optical media ability</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of audio player software - Optical media ability</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Audio - CD :</label></br>
+								<input type="radio" name="FeatureAudio - CD" value="oui">Yes <input type="radio" name="FeatureAudio - CD" value = "non">No <input type="radio" name="FeatureAudio - CD" value = "non">Partial </br>
+											<input name="FeatureAudio - CD" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Audio - HDCD :</label></br>
+								<input type="radio" name="FeatureAudio - HDCD" value="oui">Yes <input type="radio" name="FeatureAudio - HDCD" value = "non">No <input type="radio" name="FeatureAudio - HDCD" value = "non">Partial </br>
+											<input name="FeatureAudio - HDCD" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Audio - DVD-Audio :</label></br>
+								<input type="radio" name="FeatureAudio - DVD-Audio" value="oui">Yes <input type="radio" name="FeatureAudio - DVD-Audio" value = "non">No <input type="radio" name="FeatureAudio - DVD-Audio" value = "non">Partial </br>
+											<input name="FeatureAudio - DVD-Audio" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Audio player : </label></br> <input id="0" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['JuK','Sonique','MediaMonkey','AIMP','Audacious','Audion','Rhythmbox','Zinf','foobar2000','Cog','musikCube','Rhapsody','aTunes','Audio player','cmus','XMMS','Amarok','MusicBee','Musicmatch Jukebox','Media Jukebox','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

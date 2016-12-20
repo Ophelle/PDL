@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of C Sharp and Java -  Platform support </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of C Sharp and Java -  Platform support </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Platform support : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Java :</label></br>
+								<input type="radio" name="FeatureJava" value="oui">Yes <input type="radio" name="FeatureJava" value = "non">No <input type="radio" name="FeatureJava" value = "non">Partial </br>
+											<input name="FeatureJava" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>C# : </label></br> <input id="1" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Feature phones','Linux','Windows 8 Modern','Symbian','Windows','Windows Mobile','AIX','FreeBSD','iOS','Windows Phone','Blackberry','Solaris','Android','Mac OS X','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['via Mono','via cross-compiler','Yes','No','Partial?','Deprecated','via Xamarin MonoTouch','via Xamarin MonoDroid','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

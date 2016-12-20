@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of CRT, LCD, Plasma, and OLED</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of CRT, LCD, Plasma, and OLED</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Plasma : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>LCD : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>CRT :</label></br>
+											<input type="checkbox" name="Feature" >60–85 fps typically</br>	
+											<input type="checkbox" name="Feature" >some CRTs can go even higher ("200 fps at reduced resolution");internally</br>	
+											<input type="checkbox" name="Feature" >display refreshed at input frame rate speed</br>	
+											<input type="checkbox" name="Feature" >No native resolution. Currently</br>	
+											<input type="checkbox" name="Feature" >the only display technology capable of multi-syncing (displaying different resolutions and refresh rates without the need for scaling). Display lag is extremely low due to its nature</br>	
+											<input type="checkbox" name="Feature" >which does not have the ability to store image data before output</br>	
+											<input type="checkbox" name="Feature" >unlike LCDs</br>	
+											<input type="checkbox" name="Feature" >plasma displays and OLED displays.</br>	
+											<input type="checkbox" name="Feature" >Over 15</br>	
+											<input type="checkbox" name="Feature" >000:1</br>	
+											<input type="checkbox" name="Feature" >Sensitive to ambient magnetic fields</br>	
+											<input type="checkbox" name="Feature" >which can adversely effect convergence and color purity.</br>	
+											<input type="checkbox" name="Feature" >Hazardous to repair or service due to high-voltage</br>	
+											<input type="checkbox" name="Feature" >requires skilled convergence calibration and adjustments for geographic location changes</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Parameter : </label></br> <input id="2" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['60 fps typically, some can do 120 fps;internally, display refreshed at e.g. 480 or 600 Hz','','Up to 150"(3.8m)','Screen-door effects are more noticeable than LCD when up close, or on larger sizes;','Emits strong radio-frequency electromagnetic radiation','High altitude pressure difference may cause poor function or buzzing noises','Varies with brightness but usually higher than LCD','68 × 10','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['','1–8 ms typical (according to manufacturer data), older units could be as slow as 35 ms','Depends; as of 2013, most LCDs use PWM (strobing) to dim the backlight','Low','The LCD grid can mask effects of spatial and grayscale quantization, creating the illusion of higher image quality.','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Response time','Color depth','Size','Environmental influences','Frame rate','Maintenance','Energy consumption and heat generation','Other','Electro-magnetic radiation emission','Flicker','Contrast','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

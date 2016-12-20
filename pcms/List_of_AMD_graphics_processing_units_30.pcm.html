@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>List of AMD graphics processing units -  Mobility Radeon Series </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>List of AMD graphics processing units -  Mobility Radeon Series </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Model : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Fab (nm) : </label></br> <input style="display:block;" id="id1Fab (nm)" type="number" name="Feature">
+												<input style="display:none;" id="id2Fab (nm)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fab (nm)','id2Fab (nm)');">Changer type</button></br>								
+								</br>	
+								<label>API compliance (version) - DirectX : </label></br> <input style="display:block;" id="id1API compliance (version) - DirectX" type="number" name="Feature">
+												<input style="display:none;" id="id2API compliance (version) - DirectX" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1API compliance (version) - DirectX','id2API compliance (version) - DirectX');">Changer type</button></br>								
+								</br>	
+								<label>API compliance (version) - OpenGL : </label></br> <input style="display:block;" id="id1API compliance (version) - OpenGL" type="number" name="Feature">
+												<input style="display:none;" id="id2API compliance (version) - OpenGL" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1API compliance (version) - OpenGL','id2API compliance (version) - OpenGL');">Changer type</button></br>								
+								</br>	
+								<label>Memory - Bus type : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bus width (bit) : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Fillrate - Pixel (GP/s) : </label></br> <input style="display:block;" id="id1Fillrate - Pixel (GP/s)" type="number" name="Feature">
+												<input style="display:none;" id="id2Fillrate - Pixel (GP/s)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fillrate - Pixel (GP/s)','id2Fillrate - Pixel (GP/s)');">Changer type</button></br>								
+								</br>	
+								<label>Fillrate - Texture (GT/s) : </label></br> <input style="display:block;" id="id1Fillrate - Texture (GT/s)" type="number" name="Feature">
+												<input style="display:none;" id="id2Fillrate - Texture (GT/s)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fillrate - Texture (GT/s)','id2Fillrate - Texture (GT/s)');">Changer type</button></br>								
+								</br>	
+								<label>Notes : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Config core : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Launch : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Model Number : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Core clock (MHz) : </label></br> <input style="display:block;" id="id1Core clock (MHz)" type="number" name="Feature">
+												<input style="display:none;" id="id2Core clock (MHz)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Core clock (MHz)','id2Core clock (MHz)');">Changer type</button></br>								
+								</br>	
+								<label>Bus interface : </label></br> <input id="8" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory clock (MHz) : </label></br> <input style="display:block;" id="id1Memory clock (MHz)" type="number" name="Feature">
+												<input style="display:none;" id="id2Memory clock (MHz)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Memory clock (MHz)','id2Memory clock (MHz)');">Changer type</button></br>								
+								</br>	
+								<label>Memory (MB) : </label></br> <input style="display:block;" id="id1Memory (MB)" type="number" name="Feature">
+												<input style="display:none;" id="id2Memory (MB)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Memory (MB)','id2Memory (MB)');">Changer type</button></br>								
+								</br>	
+								<label>Code name : </label></br> <input id="9" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Mobility Radeon 7000','Mobility Radeon 9000','Mobility Radeon 9200','Mobility Radeon 9500','Mobility Radeon 9600','Mobility Radeon 9600 Pro','Mobility Radeon 7500','Mobility Radeon 9550','Mobility Radeon 9700','Mobility Radeon 9800','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['PowerPlay II, DX7 T&L','','PowerPlay 3.0, Fullstream','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['1:4:4:4','2:4:4:4','0:1:3:1','0:2:6:2','4:8:8:8','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Aug 2002','2004','Feb 2001','2005','Dec 2001','Feb 2004','Sep 2004','2004?','Mar 2003','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['M9+','M12','M7','M9','M6','M18','M11','M10','M10, M11','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['AGP 8x','AGP 4x','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['RV360','RV350','RV200','R420','RV100','RV250','RV280','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

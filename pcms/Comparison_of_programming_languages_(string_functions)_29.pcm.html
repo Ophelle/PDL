@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of programming languages (string functions) - replace</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of programming languages (string functions) - replace</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Format : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Languages : </label></br> <input id="1" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['[string stringByReplacingOccurrencesOfString:find withString:replace]','string.replace(find, replace), orstring -replace find_regex, replace','strings.Replace(string, find, replace, -1)','re:replace(string, find, replace, «{return, list}»)','Replace(string, find, replace)','string.replace(find, replace)','string.replace(find, replace, "g")  or string.replace(/find_regex/g, replace)','str_replace(find, replace, string)','string.gsub(find, replace)','echo "string"  sed `s/find_regex/replace/g`','StringReplace[string, find -> replace]','string.stringByReplacingOccurrencesOfString(find, withString:replace)','string.replaceAll(find_regex, replace)','string map {find replace} string','string =~ s/find_regex/replace/g','INSPECT string REPLACING ALL/LEADING/FIRST find BY replace','changestr(find, string, replace)','std.string.replace(string, find, replace)','Str.global_replace (Str.regexp_string find) replace string','string copyReplaceAll: find with: replace','string.Replace(find, replace)','replace(string, find, replace)','string.gsub(string, find, replace)  (string):gsub(find, replace)','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Unix','PHP','Erlang','Smalltalk (Squeak, Pharo)','Ruby','Mathematica','VB','JavaScript','D','OCaml','Lua','Objective-C (NSString * only)','Windows PowerShell','Java','COBOL','Go','Perl','Seed7','REXX','Cobra, Python, Java (1.5+)','VB .NET, C#, F#','Swift (Foundation)','Tcl','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

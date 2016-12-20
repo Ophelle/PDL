@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of LAN messengers - General information</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of LAN messengers - General information</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Latest stable version : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Author, creator : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>First public release date : </label></br> <input style="display:block;" id="id1First public release date" type="number" name="Feature">
+												<input style="display:none;" id="id2First public release date" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First public release date','id2First public release date');">Changer type</button></br>								
+								</br>	
+								<label>Software license : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Protocol : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Programming language : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Cost (USD) :</label></br>
+											<input type="checkbox" name="Feature" >Non-free</br>	
+											<input type="checkbox" name="Feature" >shareware $9.80</br>	
+											<input type="checkbox" name="Feature" >shareware $14.00</br>	
+											<input type="checkbox" name="Feature" >shareware $12.00</br>	
+											<input type="checkbox" name="Feature" >shareware $12.90 + server (volume licensing available)</br>	
+											<input type="checkbox" name="Feature" >shareware $14.95</br>	
+											<input type="checkbox" name="Feature" >shareware (6 to 20 depending on number of stations)</br>	
+											<input type="checkbox" name="Feature" >shareware $19.00</br>	
+											<input type="checkbox" name="Feature" >shareware $16.95</br>	
+											<input type="checkbox" name="Feature" >shareware $20.00 + server</br>	
+											<input type="checkbox" name="Feature" >shareware $19.90</br>	
+											<input type="checkbox" name="Feature" >bundled with OS</br>	
+											<input type="checkbox" name="Feature" >shareware $12.95</br>	
+											<input type="checkbox" name="Feature" >commercial $1.00 + server</br>	
+											<input type="checkbox" name="Feature" >shareware $14</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['0.9.7 (August 9, 2010; 4 years ago)','4.0 (October 19, 2004; 10 years ago)','3.3, (May 29, 2007; 8 years ago)','4.0','3.3 (March 16, 2013; 2 years ago)','5.3 (June 18, 2008; 6 years ago)','0.9.3','6.20 (June 20, 2010; 4 years ago)','2.10.9 (February 2, 2014; 15 months ago)','3.6 (July 1, 2009; 5 years ago)','2.1.8 (December 11, 2009; 5 years ago)','2.8.04 (March 19, 2010; 5 years ago)','3.4 (May 21, 2011; 4 years ago)','0.4.2 b74 (March 31, 2011; 4 years ago)','5.0.3 (745), (April 26, 2010; 5 years ago)','0.51 (November 20, 2009; 5 years ago)','1.1.5.124 (November 16, 2012; 2 years ago)','1.2.0 (Debian, April 7, 2008; 7 years ago)','2.97 (February 4, 2013; 2 years ago)','1.2.118 (May 22, 2014; 12 months ago)','6.4.1 (March 23, 2015; 2 months ago)','1.0.64 (April 14, 2015; 58 days ago)','1.2.35 (July 25, 2012; 2 years ago)','v1.0.0 b438 (March 31, 2007; 8 years ago)','6.3.2 (October 21, 2013; 19 months ago)','beta 7 (v0.150) (January 24, 2007; 8 years ago)','0.2.0 (May 15, 2010; 5 years ago)','6.0.43 (March 25, 2010; 5 years ago)','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Jally, ManPT, others','Mark Spencer, others','TSR Software','B Labs','Srimax Software System','Roland Rabien','VyPRESS Research, LLC','Michal Hruby','Akeni','KGY Soft','K5HUM','Piratson Technologies','Ken Ballentine (updated by Steven Cole)','BigAnt','MGI Consultants','Marco Mastroddi','DGtalize','Softros Systems, Inc.','Overroot','Fomine Software','Apple Inc.','Ionut Cioflan','Jean-Marc Jacquet','Qualia Technologies','Softomate','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Proprietary','GNU GPL','Freeware','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['?','XMPP','Vypress Chat network protocol','LAN Messenger protocol','BeeBEEP Protocol','Windows Messenger service','Bopup IM protocol','Akeni Network Protocol','Bonjour IM Protocol','Vypress instant messaging protocol','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['C/C++','C','C++','Likely Objective-C','C++ and Qt','?','C#','Java','HotBasic','Visual Basic .NET','Delphi, C# version begun','','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

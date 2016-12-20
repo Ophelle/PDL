@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of layout engines (Document Object Model) - Style (Style Sheets)</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of layout engines (Document Object Model) - Style (Style Sheets)</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Interface StyleSheet - ? : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Interface StyleSheet - Yes : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Interface StyleSheet - 6.0 : </label></br> <input style="display:block;" id="id1Interface StyleSheet - 6.0" type="number" name="Feature">
+												<input style="display:none;" id="id2Interface StyleSheet - 6.0" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Interface StyleSheet - 6.0','id2Interface StyleSheet - 6.0');">Changer type</button></br>								
+								</br>	
+								<label>Interface StyleSheet - 1.0 : </label></br> <input style="display:block;" id="id1Interface StyleSheet - 1.0" type="number" name="Feature">
+												<input style="display:none;" id="id2Interface StyleSheet - 1.0" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Interface StyleSheet - 1.0','id2Interface StyleSheet - 1.0');">Changer type</button></br>								
+								</br>	
+								<label>Interface StyleSheet - 2.0 : </label></br> <input style="display:block;" id="id1Interface StyleSheet - 2.0" type="number" name="Feature">
+												<input style="display:none;" id="id2Interface StyleSheet - 2.0" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Interface StyleSheet - 2.0','id2Interface StyleSheet - 2.0');">Changer type</button></br>								
+								</br>	
+								<label>Interface StyleSheet - DOM2 : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Products : </label></br> <input id="3" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['P11','P3','P7','P19','P20','P2','P21','P1','P12','P14','P17','P16','P10','P13','P8','P4','P9','P18','P6','P15','P5','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

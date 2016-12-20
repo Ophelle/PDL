@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of Solaris distributions - Live media</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of Solaris distributions - Live media</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Installable Over USBs :</label></br>
+								<input type="radio" name="FeatureInstallable Over USBs" value="oui">Yes <input type="radio" name="FeatureInstallable Over USBs" value = "non">No <input type="radio" name="FeatureInstallable Over USBs" value = "non">Partial </br>
+											<input name="FeatureInstallable Over USBs" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Distribution : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Boots from DVD :</label></br>
+								<input type="radio" name="FeatureBoots from DVD" value="oui">Yes <input type="radio" name="FeatureBoots from DVD" value = "non">No <input type="radio" name="FeatureBoots from DVD" value = "non">Partial </br>
+											<input name="FeatureBoots from DVD" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>RAM Use in MB : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Size in MB : </label></br> <input style="display:block;" id="id1Size in MB" type="number" name="Feature">
+												<input style="display:none;" id="id2Size in MB" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Size in MB','id2Size in MB');">Changer type</button></br>								
+								</br>	
+								<label>Installable Live CD :</label></br>
+								<input type="radio" name="FeatureInstallable Live CD" value="oui">Yes <input type="radio" name="FeatureInstallable Live CD" value = "non">No <input type="radio" name="FeatureInstallable Live CD" value = "non">Partial </br>
+											<input name="FeatureInstallable Live CD" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Boots from CD-ROM :</label></br>
+								<input type="radio" name="FeatureBoots from CD-ROM" value="oui">Yes <input type="radio" name="FeatureBoots from CD-ROM" value = "non">No <input type="radio" name="FeatureBoots from CD-ROM" value = "non">Partial </br>
+											<input name="FeatureBoots from CD-ROM" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['SchilliX','MilaX','OpenIndiana','BeleniX','Distribution','Nexenta OS','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['RAM Use','?','128','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

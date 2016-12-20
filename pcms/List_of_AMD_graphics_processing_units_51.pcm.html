@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>List of AMD graphics processing units -  FireMV (Multi-View) Series </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>List of AMD graphics processing units -  FireMV (Multi-View) Series </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Model : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Core clock (MHz) : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory clock (MHz) : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>API compliance (version) - OpenGL : </label></br> <input style="display:block;" id="id1API compliance (version) - OpenGL" type="number" name="Feature">
+												<input style="display:none;" id="id2API compliance (version) - OpenGL" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1API compliance (version) - OpenGL','id2API compliance (version) - OpenGL');">Changer type</button></br>								
+								</br>	
+								<label>API compliance (version) - DirectX : </label></br> <input style="display:block;" id="id1API compliance (version) - DirectX" type="number" name="Feature">
+												<input style="display:none;" id="id2API compliance (version) - DirectX" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1API compliance (version) - DirectX','id2API compliance (version) - DirectX');">Changer type</button></br>								
+								</br>	
+								<label>Fillrate (GT/s) : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>TDP / idle (watts) : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Launch : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bus width (bit) : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bus type : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="8" type="text" name="Feature"></br>
+								</br>	
+								<label>Core : </label></br> <input id="9" type="text" name="Feature"></br>
+								</br>	
+								<label>Config core : </label></br> <input id="10" type="text" name="Feature"></br>
+								</br>	
+								<label>Notes : </label></br> <input id="11" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory (MB) : </label></br> <input style="display:block;" id="id1Memory (MB)" type="number" name="Feature">
+												<input style="display:none;" id="id2Memory (MB)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Memory (MB)','id2Memory (MB)');">Changer type</button></br>								
+								</br>	
+								<label>Bus interface : </label></br> <input id="12" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['FireMV 2260','FireMV 2400 PCIe','FireMV 2400 PCI','FireMV 2200 PCI','FireMV 2200 PCIe','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Unknown','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['RV370','RV280','RV380','RV620','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Unknown','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Unknown','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['Unknown','15/8','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['Unknown','','2008','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['1:4:4:4','2:4:4:4','40(8×5):4:4','']
+								});
+								$("#8").typeahead({
+									name:"list8",
+									local : ['Dual DisplayPort (with adapters: DVI-D)','DMS-59 for dual DVI-D output','2x VHDCI for quad DVI-D output, VGA','']
+								});
+								$("#9").typeahead({
+									name:"list9",
+									local : ['PCI','PCIe x16','PCIe 2.0 x1/x16, PCI','PCIe x1','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

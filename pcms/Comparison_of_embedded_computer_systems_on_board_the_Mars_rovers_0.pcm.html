@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of embedded computer systems on board the Mars rovers - Performance comparisons</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of embedded computer systems on board the Mars rovers - Performance comparisons</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>CPU : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>RAM : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>EEPROM : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Rover (mission, organization, year) : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>CPU time available for the autonomy software : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Flash : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Operating system : </label></br> <input id="6" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['132 MHz BAE RAD750','20 MHz MFC (IBM RAD6000 Precursor)','2 MHz  Intel 80C85','20 MHz BAE RAD6000','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['512 KB','128 MB','256 MB','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['3 MB','6 MB','256 KB','None','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Pathfinder Lander (NASA, 1997)   (Base station for Sojourner rover)','Curiosity (Mars Science Laboratory (MSL), NASA, 2011)','Spirit and Opportunity (Mars Exploration Rover (MER), NASA, 2004)','Sojourner Rover (Pathfinder, NASA, 1997)','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['less than 75%','Not applicable to Cyclic Executives','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['256 MB','2 GB','None','176 KB','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['VxWorks (multitasking)','Custom cyclic executive','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

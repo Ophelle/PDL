@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of portable media players -  Additional features </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of portable media players -  Additional features </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>HDMI out : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Name : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>DVR recording :</label></br>
+								<input type="radio" name="FeatureDVR recording" value="oui">Yes <input type="radio" name="FeatureDVR recording" value = "non">No <input type="radio" name="FeatureDVR recording" value = "non">Partial </br>
+											<input name="FeatureDVR recording" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Line-in recording :</label></br>
+								<input type="radio" name="FeatureLine-in recording" value="oui">Yes <input type="radio" name="FeatureLine-in recording" value = "non">No <input type="radio" name="FeatureLine-in recording" value = "non">Partial </br>
+											<input name="FeatureLine-in recording" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>USB host : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>FM radio :</label></br>
+								<input type="radio" name="FeatureFM radio" value="oui">Yes <input type="radio" name="FeatureFM radio" value = "non">No <input type="radio" name="FeatureFM radio" value = "non">Partial </br>
+											<input name="FeatureFM radio" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Playback while charging :</label></br>
+								<input type="radio" name="FeaturePlayback while charging" value="oui">Yes <input type="radio" name="FeaturePlayback while charging" value = "non">No <input type="radio" name="FeaturePlayback while charging" value = "non">Partial </br>
+											<input name="FeaturePlayback while charging" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Microphone :</label></br>
+								<input type="radio" name="FeatureMicrophone" value="oui">Yes <input type="radio" name="FeatureMicrophone" value = "non">No <input type="radio" name="FeatureMicrophone" value = "non">Partial </br>
+											<input name="FeatureMicrophone" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['','Yes, Zune HD','Korean version only','iPod Touch only','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Archos 105','Sansa Fuze','Samsung P2','PSP 1000 Series','Archos 705 WiFi','Cowon Q5W','GP2X F-200','ZEN Vision W','Walkman NWZ-A810 series','Archos 5','Archos 605 WiFi / GPS','iPod','Sansa View','PSP Slim & Lite 2000 Series','PSP Slim & Lite 3000 Series','ZEN','Zune','Cowon A3','Gigabeat T-Series','iriver clix 2G','Sansa Fuze+','Samsung Galaxy Player','Archos 405','Cowon D2','Zvue 260','Samsung T10','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['','Yes','No','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

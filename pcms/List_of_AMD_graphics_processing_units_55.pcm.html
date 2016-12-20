@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>List of AMD graphics processing units -  Mobility FireGL Series </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>List of AMD graphics processing units -  Mobility FireGL Series </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Memory clock (MHz) : </label></br> <input style="display:block;" id="id1Memory clock (MHz)" type="number" name="Feature">
+								
+								</br>	
+								<label>Fab (nm) : </label></br> <input style="display:block;" id="id1Fab (nm)" type="number" name="Feature">
+								
+								</br>	
+								<label>Based on : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Bus interface : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Launch : </label></br> <input style="display:block;" id="id1Launch" type="number" name="Feature">
+								
+								</br>	
+								<label>Notes : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Fillrate - Pixel (GP/s) : </label></br> <input style="display:block;" id="id1Fillrate - Pixel (GP/s)" type="number" name="Feature">
+								
+								</br>	
+								<label>Fillrate - Texture (GT/s) : </label></br> <input style="display:block;" id="id1Fillrate - Texture (GT/s)" type="number" name="Feature">
+								
+								</br>	
+								<label>Config core : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>API compliance (version) - DirectX : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>API compliance (version) - OpenGL : </label></br> <input style="display:block;" id="id1API compliance (version) - OpenGL" type="number" name="Feature">
+								
+								</br>	
+								<label>Core clock (MHz) : </label></br> <input style="display:block;" id="id1Core clock (MHz)" type="number" name="Feature">
+								
+								</br>	
+								<label>Model : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory (MB) : </label></br> <input style="display:block;" id="id1Memory (MB)" type="number" name="Feature">
+								
+								</br>	
+								<label>Processing PowerGFLOPs - Single precision : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Model Number : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bus width (bit) : </label></br> <input style="display:block;" id="id1Memory - Bus width (bit)" type="number" name="Feature">
+								
+								</br>	
+								<label>Memory - Bus type : </label></br> <input id="8" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input style="display:block;" id="id1Memory - Bandwidth (GB/s)" type="number" name="Feature">
+								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Mobility Radeon 9000','Mobility Radeon X700','Mobility Radeon X1700','Mobility Radeon HD 2600','Mobility Radeon 9700','Mobility Radeon HD 3650','Mobility Radeon 7500','Mobility Radeon X300','Mobility Radeon X1600','Mobility Radeon X600','Mobility Radeon 9600','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['PCIe x16','PCIe 2.0 x16','AGP 4X','AGP','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['','Used in Lenovo ThinkPad W500','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['0:2:2:2','2:4:4:4','120(24×5):8:4','5:12:12:12','1:4:4:4','6:8:8:8','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Mobility FireGL V3100','Mobility FireGL V5700','Mobility FireGL T2','Mobility FireGL 9000','Mobility FireGL 7800','Mobility FireGL T2e','Mobility FireGL V3200','Mobility FireGL V5725','Mobility FireGL V5000','Mobility FireGL V5200','Mobility FireGL V5250','Mobility FireGL V5600','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['M24GL','M86GL','M9','M56GL','M7-GL','M26GL','M66GL','M11GL','M22GL','M76GL','M10','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

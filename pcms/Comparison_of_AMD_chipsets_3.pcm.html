@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of AMD chipsets -  AMD-xxx </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of AMD chipsets -  AMD-xxx </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Codename : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Released : </label></br> <input style="display:block;" id="id1Released" type="number" name="Feature">
+												<input style="display:none;" id="id2Released" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Released','id2Released');">Changer type</button></br>								
+								</br>	
+								<label>Parallel ATA :</label></br>
+											<input type="checkbox" name="Feature" >2 × ATA</br>	
+											<input type="checkbox" name="Feature" >100</br>	
+											<input type="checkbox" name="Feature" >66</br>	
+											<input type="checkbox" name="Feature" >133</br>	
+											<input type="checkbox" name="Feature" >33</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Audio : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Model : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Fab (nm) : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>USB2.0 + 1.1 : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Features / Notes : </label></br> <input id="5" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['AMD-8151','AMD-8132','AMD-768','Geode CS5536','AMD-756','AMD-766','Geode CS5535','AMD-8131','AMD-645','Geode CS5530','Geode CS5530A','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['AC`97','','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['AMD 760 chipset','Geode GX1','AMD-8111nForce ProfessionalULi-1563','AMD-8151','AMD 760MPX chipset','Geode GXmGeode GXLV','Geode GX','AMD 640 chipset','AMD 750 chipset','Geode LX','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['4 + 2','','4 + 0','0 + 4','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['','AGP 8X','PCI-X 2.0','PCI-X','National Semiconductor release','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

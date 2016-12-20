@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of C Sharp and Java -  Types </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of C Sharp and Java -  Types </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>C# :</label></br>
+								<input type="radio" name="FeatureC#" value="oui">Yes <input type="radio" name="FeatureC#" value = "non">No <input type="radio" name="FeatureC#" value = "non">Partial </br>
+											<input name="FeatureC#" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Java :</label></br>
+											<input type="checkbox" name="Feature" >Reference type; no operators</br>	
+											<input type="checkbox" name="Feature" >No; but wrapper types</br>	
+											<input type="checkbox" name="Feature" >No; limited 3rd party available.</br>	
+											<input type="checkbox" name="Feature" >No; but some method support.</br>	
+											<input type="checkbox" name="Feature" >No; but see 'Arbitrary size decimals' below</br>	
+											<input type="checkbox" name="Feature" >No; only method references</br>	
+											<input type="checkbox" name="Feature" >No; only primitive types</br>	
+											<input type="checkbox" name="Feature" >Immutable reference type</br>	
+											<input type="checkbox" name="Feature" >Unicode</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Data types : </label></br> <input id="0" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Pointers','Arrays','Type annotations','Tuples','Boolean type','Value types','IEEE 754 binary64 floating point number','IEEE 754 binary32 floating point number','High precision decimal number','Reference types','Lifted (nullable) types','Date/time','Arbitrary size integers','Strings','Unsigned integers','Single-root (unified) type system','Character','Enumerated types','Arbitrary size decimals','Signed integers','Complex numbers','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

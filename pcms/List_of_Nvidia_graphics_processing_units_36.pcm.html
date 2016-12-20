@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>List of Nvidia graphics processing units - GeForce 600M (6xxM) Series</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>List of Nvidia graphics processing units - GeForce 600M (6xxM) Series</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>API support (version) - DirectX : </label></br> <input style="display:block;" id="id1API support (version) - DirectX" type="number" name="Feature">
+								
+								</br>	
+								<label>API support (version) - OpenGL : </label></br> <input style="display:block;" id="id1API support (version) - OpenGL" type="number" name="Feature">
+								
+								</br>	
+								<label>Memory (MB) : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Core config : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Bus interface : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Processing Power (GFLOPS) : </label></br> <input style="display:block;" id="id1Processing Power (GFLOPS)" type="number" name="Feature">
+								
+								</br>	
+								<label>Fab (nm) : </label></br> <input style="display:block;" id="id1Fab (nm)" type="number" name="Feature">
+								
+								</br>	
+								<label>Launch : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Fillrate - Texture (GT/s) : </label></br> <input style="display:block;" id="id1Fillrate - Texture (GT/s)" type="number" name="Feature">
+								
+								</br>	
+								<label>Fillrate - Pixel (GP/s) : </label></br> <input style="display:block;" id="id1Fillrate - Pixel (GP/s)" type="number" name="Feature">
+								
+								</br>	
+								<label>Code name : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Model : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>TDP (watts) : </label></br> <input style="display:block;" id="id1TDP (watts)" type="number" name="Feature">
+								
+								</br>	
+								<label>Clock speed - Core (MHz) : </label></br> <input style="display:block;" id="id1Clock speed - Core (MHz)" type="number" name="Feature">
+								
+								</br>	
+								<label>Clock speed - Memory (MT/s) : </label></br> <input style="display:block;" id="id1Clock speed - Memory (MT/s)" type="number" name="Feature">
+								
+								</br>	
+								<label>Clock speed - Shader (MHz) : </label></br> <input style="display:block;" id="id1Clock speed - Shader (MHz)" type="number" name="Feature">
+								
+								</br>	
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input style="display:block;" id="id1Memory - Bandwidth (GB/s)" type="number" name="Feature">
+								
+								</br>	
+								<label>Memory - Bus width (bit) : </label></br> <input style="display:block;" id="id1Memory - Bus width (bit)" type="number" name="Feature">
+								
+								</br>	
+								<label>Memory - Bus type : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Notes : </label></br> <input id="7" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['2048','10242048','15363072','20481536','4096','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['1536:128:32(8 SMX)','384:32:16(2 SMX)','96:16:4','1344:112:32(7 SMX)','384:64:32','96:16:4384:32:16(2 SMX)','960:80:24(5 SMX)','48:8:4','144:24:24','336:56:24','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['PCIe 3.0 x16','PCIe 2.0 x16','PCIe 2.0 x16PCIe 3.0 x16','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['October 2012','October 23, 2012','March 22, 2012','April 2012','Apr 2012','Dec 2011','June 4, 2012','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['GK104 (N13E-GR)','GK107 (N13P-GT)','GF106 (N12E-GE2)GF116','GK104','GF114 (N13E-GS1-LP)','GK107 (N13P-GS)','GK107 (N13E-GE)','GF117 (N13M-GS)','GF108GK107 (N13P-LP)','GF108 (N13P-GL)GF117','GK104  (N13E-GSR)','GK104 (N13E-GTX)','GF119 (N13M-GE)','GF114 (N13E-GS1)','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['GeForce GTX 670M','GeForce GTX 680M','GeForce GTX 675MX','GeForce GT 630M','GeForce GT 645M','GeForce GTX 660M','GeForce GT 650M','GeForce GT 625M','GeForce GTX 680MX','GeForce GT 620M','GeForce GTX 670MX','GeForce GTX 675M','GeForce 610M','GeForce GT 640M LE','GeForce GT 640M','GeForce GT 635M','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['GF108: 94% of desktop GT630GK107: 47% of desktop GTX650','OEM. Die-Shrink GF108','OEM. Rebadged GT 520MX','67% of desktop GTX650','79% of desktop GTX650*','75% of desktop GTX 560Ti','72% of desktop GTX 680','73% of desktop GTX 560','79% of desktop GTX650','78% of desktop GTX 670','GF108: OEM. Rebadged GT 540MGF117: OEM Die-Shrink GF108','GF106: OEM. Rebadged GT 555MGF116: 94% of desktop GT640','59% of desktop GTX650','61% of desktop GTX 660','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

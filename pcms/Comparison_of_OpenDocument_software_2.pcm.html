@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of OpenDocument software - Presentation documents</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of OpenDocument software - Presentation documents</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Version : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Developer : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Notes : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Office suite : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Operating systems :</label></br>
+											<input type="checkbox" name="Feature" >Windows</br>	
+											<input type="checkbox" name="Feature" >Linux</br>	
+											<input type="checkbox" name="Feature" >Unix-based systems</br>	
+											<input type="checkbox" name="Feature" >Mac OS X</br>	
+											<input type="checkbox" name="Feature" >Solaris</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>ISO/IEC 26300:2006 :</label></br>
+								<input type="radio" name="FeatureISO/IEC 26300:2006" value="oui">Yes <input type="radio" name="FeatureISO/IEC 26300:2006" value = "non">No <input type="radio" name="FeatureISO/IEC 26300:2006" value = "non">Partial </br>
+											<input name="FeatureISO/IEC 26300:2006" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['1.2','1.0+','2.2.5','3.3.0','1.4+','8','2.4+','2.5+','2006','2.0+','Version','2007 SP2','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Microsoft','KDE Project','Patrick Luby and Edward Peterlin','Sun Microsystems','LibreOffice','AdventNet','IBM','OpenOffice.org','Developer','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['','Notes','no longer being actively marketed','Import only','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Calligra Suite','Office suite','KOffice','IBM Workplace Collaboration Services','NeoOffice','IBM Lotus Symphony','Standalone','Microsoft Office','LibreOffice','StarOffice','OpenOffice.org','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['GPL / LGPL','Proprietary','LGPL','GPL','License','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

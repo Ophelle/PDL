@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of dental practice management software</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of dental practice management software</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Mac OS :</label></br>
+								<input type="radio" name="FeatureMac OS" value="oui">Yes <input type="radio" name="FeatureMac OS" value = "non">No <input type="radio" name="FeatureMac OS" value = "non">Partial </br>
+								
+								</br>	
+								<label>Linux :</label></br>
+								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
+								
+								</br>	
+								<label>Package : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Structure : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Language : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Windows :</label></br>
+								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
+								
+								</br>	
+								<label>Modules : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Database : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>License : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Country :</label></br>
+											<input type="checkbox" name="Feature" >Canada</br>	
+											<input type="checkbox" name="Feature" >USA</br>	
+											<input type="checkbox" name="Feature" >Netherlands</br>	
+											<input type="checkbox" name="Feature" >Australia</br>	
+											<input type="checkbox" name="Feature" >UK</br>	
+							
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Open Dental','Dentrix','SoftDent','Power Practice Px','PracticeWorks','axiUm','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Stand-alone','Stand-Alone','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['English','','English, French','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['','Charting, Scheduling, Billing, Imaging, Insurance Management, Perio Charting, Document Management, Reporting & Additional e-Services Modules Are Available','Calendar / Appointments, Account, Treatment Plan, Patient Chart, Documents, Management, Multiple language packs.','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Oracle','C-tree','MySQL, C# .Net','c-treeACE','','MySQL','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['Proprietary','GPL','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

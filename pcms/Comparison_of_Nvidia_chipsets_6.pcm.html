@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of Nvidia chipsets -  For Intel processors </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of Nvidia chipsets -  For Intel processors </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Model : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>PCI-Express : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Notes : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>PCI : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>SATA :</label></br>
+											<input type="checkbox" name="Feature" >4 Ports 3.0 Gbit</br>	
+											<input type="checkbox" name="Feature" >s</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Fabricationprocess (nm) : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>FSB/HTFrequency (MHz) : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>SLI : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>LAN :</label></br>
+											<input type="checkbox" name="Feature" >1000 Mbit</br>	
+											<input type="checkbox" name="Feature" >s</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Release Date :</label></br>
+											<input type="checkbox" name="Feature" >April 5</br>	
+											<input type="checkbox" name="Feature" >2005</br>	
+											<input type="checkbox" name="Feature" >January 17</br>	
+											<input type="checkbox" name="Feature" >2006</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Processors Supported :</label></br>
+											<input type="checkbox" name="Feature" >Pentium 4</br>	
+											<input type="checkbox" name="Feature" >Pentium EE</br>	
+											<input type="checkbox" name="Feature" >Pentium D</br>	
+											<input type="checkbox" name="Feature" >Celeron DLGA 775</br>	
+											<input type="checkbox" name="Feature" >Celeron DCore2 (unofficial</br>	
+											<input type="checkbox" name="Feature" >some MB)LGA 775</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>USB : </label></br> <input id="8" type="text" name="Feature"></br>
+								</br>	
+								<label>PATA : </label></br> <input id="9" type="text" name="Feature"></br>
+								</br>	
+								<label>Code Name : </label></br> <input id="10" type="text" name="Feature"></br>
+								</br>	
+								<label>Sound : </label></br> <input id="11" type="text" name="Feature"></br>
+								</br>	
+								<label>Features : </label></br> <input id="12" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['nForce4 Ultra','nForce4 SLI','nForce4 SLI X16','nForce4 SLI XE','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['1.0a40 lanes','1.0a20 lanes','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['6 Ports','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['1066 MHz','']
+								});
+								$("#6").typeahead({
+									name:"list6",
+									local : ['x16+x16','×8+×8','No','x8+x8','']
+								});
+								$("#7").typeahead({
+									name:"list7",
+									local : ['DDR2-666dual channel','']
+								});
+								$("#8").typeahead({
+									name:"list8",
+									local : ['8 Ports Rev 2.0','10 Ports Rev 2.0','']
+								});
+								$("#9").typeahead({
+									name:"list9",
+									local : ['2 Ports UDMA 133','']
+								});
+								$("#10").typeahead({
+									name:"list10",
+									local : ['Crush19 + MCP04','Crush19 + MCP51','']
+								});
+								$("#11").typeahead({
+									name:"list11",
+									local : ['HDA','AC`97 2.3','']
+								});
+								$("#12").typeahead({
+									name:"list12",
+									local : ['','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

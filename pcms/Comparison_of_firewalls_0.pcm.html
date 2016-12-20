@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of firewalls - Firewall software</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of firewalls - Firewall software</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Firewall : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Cost / Usage Limits : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>OS :</label></br>
+											<input type="checkbox" name="Feature" >Windows unknown versions x32</br>	
+											<input type="checkbox" name="Feature" >x64 (except XP-64)</br>	
+											<input type="checkbox" name="Feature" >Windows 7 </br>	
+											<input type="checkbox" name="Feature" >Vista </br>	
+											<input type="checkbox" name="Feature" >XP SP2</br>	
+											<input type="checkbox" name="Feature" >Windows 8</br>	
+											<input type="checkbox" name="Feature" >x64</br>	
+											<input type="checkbox" name="Feature" >ALL Windows Versions x32</br>	
+											<input type="checkbox" name="Feature" >Windows 8 </br>	
+											<input type="checkbox" name="Feature" >Windows 10</br>	
+											<input type="checkbox" name="Feature" >Fedora</br>	
+											<input type="checkbox" name="Feature" >Red Hat Enterprise Linux</br>	
+											<input type="checkbox" name="Feature" >CentOS</br>	
+											<input type="checkbox" name="Feature" >Mac OS X 10.5 or later; on an Xserve</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Proprietary','BSD','GPL','GPLv2','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Lavasoft Personal Firewall','IPFilter','Microsoft Forefront Threat Management Gateway','NPF','ipfirewall','PF','ZoneAlarm','Kaspersky Internet Security','Netfilter/iptables','Glasswire','Outpost Firewall Pro','FirewallD','WinGate','PC Tools Firewall Plus','Sygate Personal Firewall','Sunbelt Personal Firewall','Windows Firewall','Online Armor Personal Firewall','Comodo Internet Security','Norton 360','Intego VirusBarrier','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Free','discontinued','$59.99 Year','Paid','?','€39.95 Year','Included with Windows XP SP2 and later','Free / Paid','Freemium','Free ?','€36 Year','$59,95 Year / 30 day trial','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

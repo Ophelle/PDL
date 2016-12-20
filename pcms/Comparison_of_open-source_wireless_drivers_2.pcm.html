@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of open-source wireless drivers - DragonFly BSD</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of open-source wireless drivers - DragonFly BSD</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Chipset :</label></br>
+											<input type="checkbox" name="Feature" >Lucent Hermes (WaveLAN</br>	
+											<input type="checkbox" name="Feature" >ORiNOCO); Intersil PRISM-II</br>	
+											<input type="checkbox" name="Feature" >PRISM-2.5; Symbol Spectrum24 802.11B</br>	
+											<input type="checkbox" name="Feature" >Intel PRO</br>	
+											<input type="checkbox" name="Feature" >Wireless 2100</br>	
+											<input type="checkbox" name="Feature" >Texas Instruments ACX100</br>	
+											<input type="checkbox" name="Feature" >ACX111</br>	
+											<input type="checkbox" name="Feature" >Atheros AR5210</br>	
+											<input type="checkbox" name="Feature" >AR5211</br>	
+											<input type="checkbox" name="Feature" >AR5212</br>	
+											<input type="checkbox" name="Feature" >AR5416</br>	
+											<input type="checkbox" name="Feature" >Intel 4965</br>	
+											<input type="checkbox" name="Feature" >1000</br>	
+											<input type="checkbox" name="Feature" >5000</br>	
+											<input type="checkbox" name="Feature" >5150</br>	
+											<input type="checkbox" name="Feature" >5300</br>	
+											<input type="checkbox" name="Feature" >6000</br>	
+											<input type="checkbox" name="Feature" >6050</br>	
+											<input type="checkbox" name="Feature" >Wireless 2200BG</br>	
+											<input type="checkbox" name="Feature" >2915ABG</br>	
+											<input type="checkbox" name="Feature" >Aironet 4500</br>	
+											<input type="checkbox" name="Feature" >4800</br>	
+											<input type="checkbox" name="Feature" >Ralink RT2500</br>	
+											<input type="checkbox" name="Feature" >RT2501</br>	
+											<input type="checkbox" name="Feature" >RT2600</br>	
+											<input type="checkbox" name="Feature" >Broadcom BCM430x</br>	
+											<input type="checkbox" name="Feature" >4318</br>	
+											<input type="checkbox" name="Feature" >Ralink RT2501USB</br>	
+											<input type="checkbox" name="Feature" >RT2601USB</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Driver : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Development : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Non-free firmware required : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Original/Primary developer : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Integration : </label></br> <input id="5" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['BSD','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['iwl','ral','wpi','an','bwi','iwn','iwi','ath','wi','rum','rtw','acx','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Ported from OpenBSD','Reverse engineering','','Documentation based','Ported from NetBSD','Ported from FreeBSD','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Yes','N/A','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['','Bill Paul (FreeBSD)','Sepherosa Ziehau','Damien Bergamini (OpenBSD)','Damien Bergamini','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['Integrated','Integrated since 1.5','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

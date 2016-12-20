@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of file managers - Browsing features</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of file managers - Browsing features</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Directory Compare :</label></br>
+								<input type="radio" name="FeatureDirectory Compare" value="oui">Yes <input type="radio" name="FeatureDirectory Compare" value = "non">No <input type="radio" name="FeatureDirectory Compare" value = "non">Partial </br>
+								
+								</br>	
+								<label>For Directories, size column shows: : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>File manager : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Symbolic link : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Slideshows :</label></br>
+								<input type="radio" name="FeatureSlideshows" value="oui">Yes <input type="radio" name="FeatureSlideshows" value = "non">No <input type="radio" name="FeatureSlideshows" value = "non">Partial </br>
+								
+								</br>	
+								<label>Browse compressed folders :</label></br>
+								<input type="radio" name="FeatureBrowse compressed folders" value="oui">Yes <input type="radio" name="FeatureBrowse compressed folders" value = "non">No <input type="radio" name="FeatureBrowse compressed folders" value = "non">Partial </br>
+								
+								</br>	
+								<label>Find as you type (Type-ahead find) :</label></br>
+								<input type="radio" name="FeatureFind as you type (Type-ahead find)" value="oui">Yes <input type="radio" name="FeatureFind as you type (Type-ahead find)" value = "non">No <input type="radio" name="FeatureFind as you type (Type-ahead find)" value = "non">Partial </br>
+								
+								</br>	
+								<label>Shows combined Size of Selected Directories :</label></br>
+								<input type="radio" name="FeatureShows combined Size of Selected Directories" value="oui">Yes <input type="radio" name="FeatureShows combined Size of Selected Directories" value = "non">No <input type="radio" name="FeatureShows combined Size of Selected Directories" value = "non">Partial </br>
+								
+								</br>	
+								<label>Branch Sizes : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Synchronizer :</label></br>
+								<input type="radio" name="FeatureSynchronizer" value="oui">Yes <input type="radio" name="FeatureSynchronizer" value = "non">No <input type="radio" name="FeatureSynchronizer" value = "non">Partial </br>
+								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['number of entries','?','Total size including subdirectories','Yes','literal*','Contents including subs','nothing','literal','DIR','--','folder only size (default) selectable to file count/total size','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Altap Salamander','Disk Order','Path Finder','emelFM2','Total Commander','Xandros File Manager','Xfm','PCManFM','Nautilus','FAR Manager','Konqueror','muCommander','Windows Explorer','Double Commander','ROX-Filer','Dolphin','xplorer²','Xfe','XYplorer','ZTreeWin','Finder','Xfile','Midnight Commander','File Commander','DOS Navigator','Krusader','GNOME Commander','Directory Opus','Thunar','Dired','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['?','No','Partial','Yes','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Yes','?','No','Partial','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

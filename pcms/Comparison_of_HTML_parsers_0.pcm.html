@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of HTML parsers</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of HTML parsers</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>HTML Parsing :</label></br>
+								<input type="radio" name="FeatureHTML Parsing" value="oui">Yes <input type="radio" name="FeatureHTML Parsing" value = "non">No <input type="radio" name="FeatureHTML Parsing" value = "non">Partial </br>
+											<input name="FeatureHTML Parsing" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Update HTML*** : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Latest date* : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Implementation language(s) : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Parser : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Clean HTML** :</label></br>
+								<input type="radio" name="FeatureClean HTML**" value="oui">Yes <input type="radio" name="FeatureClean HTML**" value = "non">No <input type="radio" name="FeatureClean HTML**" value = "non">Partial </br>
+											<input name="FeatureClean HTML**" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Yes','?','No','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['2015-01-23','2014-10-04','2015-05-24','2015-04-13','2014-06-02','2014-09-16','2009-03-25','2013-04-19','2012-10-09','2012-10-30','2014-10-31','2014-08-28','2013-10-02','2013-07-21','2012-06-05','2012-09-11','2013-12-23','2015-02-25','2013-08-13','2013-03-28','2011-07-07','2013-08-01','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Java','Perl','C#','C','PHP','JavaScript','Ruby','Python (and PHP, six years ago)','Python','ANSI C','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Jericho HTML Parser','html.parser','PHP Simple HTML DOM Parser','Gumbo','The PHP DOMDocument-class','Validator.nu HTML Parser','jsoup','NekoHTML','Html Agility Pack','HtmlCleaner','libxml2 HTMLparser','HTML Tidy','HTML::Parser','html5lib','Jaunt API','jsdom','htmlPurifier','Hubbub','TagSoup','Nokogiri','Beautiful Soup (base on lxml and html5lib)','JTidy','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Jaunt Beta License','MIT License','BSD License','Eclipse Public License','Python S. F. L.','Perl license','MIT license','GNU Lesser GPL','Microsoft Public License','JTidy License','Apache License 2.0','W3C license','PHP License','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

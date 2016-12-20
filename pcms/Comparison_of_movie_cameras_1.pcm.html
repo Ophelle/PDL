@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of movie cameras - Lens and gate aperture</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of movie cameras - Lens and gate aperture</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Camera model : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Super 35? :</label></br>
+								<input type="radio" name="FeatureSuper 35?" value="oui">Yes <input type="radio" name="FeatureSuper 35?" value = "non">No <input type="radio" name="FeatureSuper 35?" value = "non">Partial </br>
+											<input name="FeatureSuper 35?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Aperture size : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Frameline glow? :</label></br>
+								<input type="radio" name="FeatureFrameline glow?" value="oui">Yes <input type="radio" name="FeatureFrameline glow?" value = "non">No <input type="radio" name="FeatureFrameline glow?" value = "non">Partial </br>
+											<input name="FeatureFrameline glow?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Lens interface :</label></br>
+											<input type="checkbox" name="Feature" >none</br>	
+											<input type="checkbox" name="Feature" >but Lens Data Archive (LDA) can be used</br>	
+											<input type="checkbox" name="Feature" >Lens Data System (LDS) contacts and integrated electronics</br>	
+											<input type="checkbox" name="Feature" >Lens Data System (LDS) contacts; usable with FEM-2 unit</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Ground glass : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Lens mount : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Aperture plate :</label></br>
+											<input type="checkbox" name="Feature" >removable; interchangeable format masks</br>	
+											<input type="checkbox" name="Feature" >removable; interchangeable format masks and filter holders</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Aaton 35-3P','Eyemo 71K','Aaton 35-III','Arriflex 35BL-1','Arricam ST','Moviecam SuperAmerica','Arriflex 235','Arricam LT','Panaflex Gold II','Panaflex Millennium','Panaflex Panastar II','Moviecam SL','Arriflex 35-2C','Arriflex 35BL-3','Arriflex 535','Moviecam Compact','Arriflex 35BL-4','Arriflex 35-3C','Arriflex 35BL-2','Arriflex 435ES','Panaflex Platinum','Arriflex 435 Advanced','Arriflex 35BL-4s','Panaflex Millennium XL','Arriflex 435 Xtreme','Panaflex-X','Arriflex 435','Arriflex 535B','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['full frame','Full frame','full range available','Academy ratio, custom sizes exist','Academy ratio','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['interchangeable','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Arri standard and Arri bayonet','Arri PL, PV mount, or Nikon','Arri PL, PV mount','Arri PL','PV mount','Arri PL and BNCR mount','PV mount;','Arri PL or BNCR mount','Arri bayonet','Eyemo mount, many conversions','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

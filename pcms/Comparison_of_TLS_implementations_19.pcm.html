@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of TLS implementations -  Development environment </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of TLS implementations -  Development environment </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Crypto back-end : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>API manual : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Namespace : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Build tools : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Implementation : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>OpenSSL compatibility Layer :</label></br>
+								<input type="radio" name="FeatureOpenSSL compatibility Layer" value="oui">Yes <input type="radio" name="FeatureOpenSSL compatibility Layer" value = "non">No <input type="radio" name="FeatureOpenSSL compatibility Layer" value = "non">Partial </br>
+											<input name="FeatureOpenSSL compatibility Layer" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Included (pluggable)','Included, PKCS#11 based','Included (monolithic)','Crypto back-end','Java Cryptography Architecture/Java Cryptography Extension','External, libnettle','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['API Reference (HTML) +Java SE 8','Programmers reference manual (PDF), architecture design manual (PDF)','Manual (HTML)','Manual and API reference (HTML, PDF)','API manual','Man pages','API Reference (PDF), Integration Guide','(online) HTML Manual and API Reference','Manual and API Reference (HTML, PDF)','API Reference + High Level and Module Level Documentation (HTML)','Sphinx','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['crypt*','ssl_*sha1_*md5_*x509parse_*...','SharkSsl*','CERT_*SEC_*SECKEY_*NSS_*PK11_*SSL_*...','javax.net.ssl','gnutls_*','CyaSSL_*SSL_*','matrixSsl_*ps*','SSL_*SHA1_*MD5_*EVP_*...','Namespace','Botan::TLS','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Makefile','Makefile, CMake, MSVC project workspaces','Build tools','Makefile, MSVC project workspaces, Xcode projects for Mac OS X and iOS','Autoconf, automake, libtool, MSVC project workspaces, XCode projects, CodeWarrior projects, MPLAB X projects, Keil, IAR, Clang, GCC','Autoconf, automake, libtool','makefile, MSVC project workspaces','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['NSS','Botan','GnuTLS','cryptlib','JSSE','mbed TLS','MatrixSSL','SharkSSL','OpenSSL','wolfSSL','Implementation','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

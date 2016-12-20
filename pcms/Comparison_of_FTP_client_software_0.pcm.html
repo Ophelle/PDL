@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of FTP client software - Free and Open Source</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of FTP client software - Free and Open Source</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Creator : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Latest stable version :</label></br>
+											<input type="checkbox" name="Feature" >0.7.0 July 30</br>	
+											<input type="checkbox" name="Feature" >2012; 2 years ago</br>	
+											<input type="checkbox" name="Feature" >4.6.1 December 18</br>	
+											<input type="checkbox" name="Feature" >2014; 5 months ago</br>	
+											<input type="checkbox" name="Feature" >1.2.0 May 2</br>	
+											<input type="checkbox" name="Feature" >2005; 10 years ago</br>	
+											<input type="checkbox" name="Feature" >2.0.19 November 30</br>	
+											<input type="checkbox" name="Feature" >2008; 6 years ago</br>	
+											<input type="checkbox" name="Feature" >0.98 March 1</br>	
+											<input type="checkbox" name="Feature" >2013; 2 years ago</br>	
+											<input type="checkbox" name="Feature" >3.2.5  January 17</br>	
+											<input type="checkbox" name="Feature" >2011; 4 years ago</br>	
+											<input type="checkbox" name="Feature" >20130505 May 5</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Client : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Software license : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Interface : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>First public release date : </label></br> <input style="display:block;" id="id1First public release date" type="number" name="Feature">
+												<input style="display:none;" id="id2First public release date" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First public release date','id2First public release date');">Changer type</button></br>								
+								</br>	
+								<label>Copy files over 2 GB limit :</label></br>
+								<input type="radio" name="FeatureCopy files over 2 GB limit" value="oui">Yes <input type="radio" name="FeatureCopy files over 2 GB limit" value = "non">No <input type="radio" name="FeatureCopy files over 2 GB limit" value = "non">Partial </br>
+											<input name="FeatureCopy files over 2 GB limit" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Michael Gorbach','Luke Mewburn','Daniel Stenberg','University of Michigan Research Systems Unix Group','NcFTP Software Inc.','Mime Čuvalo','Alexander V. Lukyanov','Sebastian Ramacher','Martin Přikryl','David C. Gartner','Alexander Lamaison','Brian Masney','David V. Kocher','Community','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['NcFTP','FireFTP','Fugu','Yafc','FileZilla','WinSCP','Cyberduck','tnftp','gFTP','Swish','cURL','lftp','Macfusion','net2ftp','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['GPL','BSD','MPL 1.1, Charityware','Clarified Artistic License','MIT','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['GUI and CLI','Windows Explorer shell extension','GUI','CLI','Firefox addon','GTK+','Web application','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of firewalls - Firewall's other features comparison</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of firewalls - Firewall's other features comparison</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Operating Systems on which it runs? : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Features: : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>supports IPv6 ? :</label></br>
+								<input type="radio" name="Featuresupports IPv6 ?" value="oui">Yes <input type="radio" name="Featuresupports IPv6 ?" value = "non">No <input type="radio" name="Featuresupports IPv6 ?" value = "non">Partial </br>
+											<input name="Featuresupports IPv6 ?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Modularity: supports third-party modules to extend functionality? :</label></br>
+								<input type="radio" name="FeatureModularity: supports third-party modules to extend functionality?" value="oui">Yes <input type="radio" name="FeatureModularity: supports third-party modules to extend functionality?" value = "non">No <input type="radio" name="FeatureModularity: supports third-party modules to extend functionality?" value = "non">Partial </br>
+											<input name="FeatureModularity: supports third-party modules to extend functionality?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Class: Home / Professional : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>IPS : Intrusion prevention system : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Open-Source License? :</label></br>
+								<input type="radio" name="FeatureOpen-Source License?" value="oui">Yes <input type="radio" name="FeatureOpen-Source License?" value = "non">No <input type="radio" name="FeatureOpen-Source License?" value = "non">Partial </br>
+											<input name="FeatureOpen-Source License?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['FreeBSD-based appliance','Linux (built on Debian)','Linux-based appliance distribution.','Windows 2000, Windows XP, Windows 2003, Windows Vista, Windows 2008. 32bit and 64bit.','Vyatta OS (built on Debian)','FreeBSD/NanoBSD-based appliance','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['OPNsense','Vyatta','pfSense','IPFire','WinGate','Untangle','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Both','Professional','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Yes, with Snort','Yes','?','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

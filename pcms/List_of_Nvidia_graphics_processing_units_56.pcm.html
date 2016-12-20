@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>List of Nvidia graphics processing units - Quadro FX (x600M) Series</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>List of Nvidia graphics processing units - Quadro FX (x600M) Series</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Fab (nm) : </label></br> <input style="display:block;" id="id1Fab (nm)" type="number" name="Feature">
+								
+								</br>	
+								<label>Memory (MB) : </label></br> <input style="display:block;" id="id1Memory (MB)" type="number" name="Feature">
+								
+								</br>	
+								<label>Notes : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Core config : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>TDP (watts) : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory clock (MHz) : </label></br> <input style="display:block;" id="id1Memory clock (MHz)" type="number" name="Feature">
+								
+								</br>	
+								<label>Memory - Bandwidth (GB/s) : </label></br> <input style="display:block;" id="id1Memory - Bandwidth (GB/s)" type="number" name="Feature">
+								
+								</br>	
+								<label>Memory - Bus type : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Memory - Bus width (bit) : </label></br> <input style="display:block;" id="id1Memory - Bus width (bit)" type="number" name="Feature">
+								
+								</br>	
+								<label>Code name : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Fillrate - Pixel (GP/s) : </label></br> <input id="5" type="text" name="Feature"></br>
+								</br>	
+								<label>Fillrate - Texture (GT/s) : </label></br> <input id="6" type="text" name="Feature"></br>
+								</br>	
+								<label>API support (version) - DirectX : </label></br> <input style="display:block;" id="id1API support (version) - DirectX" type="number" name="Feature">
+								
+								</br>	
+								<label>API support (version) - OpenGL : </label></br> <input style="display:block;" id="id1API support (version) - OpenGL" type="number" name="Feature">
+								
+								</br>	
+								<label>Model : </label></br> <input id="7" type="text" name="Feature"></br>
+								</br>	
+								<label>Shader clock (MHz) : </label></br> <input style="display:block;" id="id1Shader clock (MHz)" type="number" name="Feature">
+								
+								</br>	
+								<label>Processing Power  GFLOPS - Single precision : </label></br> <input style="display:block;" id="id1Processing Power  GFLOPS - Single precision" type="number" name="Feature">
+								
+								</br>	
+								<label>Core clock (MHz) : </label></br> <input style="display:block;" id="id1Core clock (MHz)" type="number" name="Feature">
+								
+								</br>	
+								<label>Bus interface : </label></br> <input id="8" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['','based on 8800M GTS/8800M GTX','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['32:16:8','64:32:1696:48:16','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['50?','70','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['G84M','G92M','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['Quadro FX 3600M','Quadro FX 1600M','']
+								});
+								$("#5").typeahead({
+									name:"list5",
+									local : ['PCIe 1.0 x16','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

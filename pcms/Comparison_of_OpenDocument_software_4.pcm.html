@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of OpenDocument software - OpenDocument Format version in exported files</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of OpenDocument software - OpenDocument Format version in exported files</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Products : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Tested software version : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>ODF version attribute in exported fileoffice:version="1.X" : </label></br> <input style="display:block;" id="id1ODF version attribute in exported fileoffice:version="1.X"" type="number" name="Feature">
+								
+								</br>	
+								<label>File type :</label></br>
+											<input type="checkbox" name="Feature" >ODT</br>	
+											<input type="checkbox" name="Feature" >ODS</br>	
+											<input type="checkbox" name="Feature" >ODP</br>	
+							
+								</br>	
+								<label>Notes : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Validation of simplenew document : </label></br> <input id="3" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['P14','P4','P24','P12','P3','P15','P22','P25','P10','P20','P11','P9','P8','P17','P2','P26','P19','P1','P16','P7','P6','P23','P21','P18','P5','P13','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['11/2008','2.3.1 - 2.4.2','2007 SP2','2.1.2','2.2.5','2008 rev.494','2.0','3.0','4.0','1.5 (244)','6.1 (2009)','3.1','1.1.0','1.2','3.0.0 FP2','2010','beta 3, build 600113','2.6.4','0.4.6','1.6.3','8.0 product update 10','Tested software version','2.0 - 2.3.0','1.9.3','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['','(settings.xml is missing)','(error in styles.xml)','Notes','(settings.xml is missing - ODF 1.0/1.1 validation)','ODT, ODS - validODF 1.0 and 1.1','(errors in styles.xml and content.xml)','adjustable ODF version','ODF 1.1 implemented','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['valid','valid - ODT,different results - ODS','valid - ODT, ODS,not valid - ODP','','valid (tested 2.3.0)','not valid','different results in validators','different results - ODS,valid - ODT, ODP','different results - ODT,valid - ODS,not valid - ODP','Yes','Validation of simplenew document','not valid - ODT','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

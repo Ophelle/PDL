@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of Linux distributions - Live media</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of Linux distributions - Live media</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Distribution : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Boots from CD :</label></br>
+								<input type="radio" name="FeatureBoots from CD" value="oui">Yes <input type="radio" name="FeatureBoots from CD" value = "non">No <input type="radio" name="FeatureBoots from CD" value = "non">Partial </br>
+											<input name="FeatureBoots from CD" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Size of media (MB) : </label></br> <input style="display:block;" id="id1Size of media (MB)" type="number" name="Feature">
+												<input style="display:none;" id="id2Size of media (MB)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Size of media (MB)','id2Size of media (MB)');">Changer type</button></br>								
+								</br>	
+								<label>RAM use (MB) : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Boots from DVD :</label></br>
+								<input type="radio" name="FeatureBoots from DVD" value="oui">Yes <input type="radio" name="FeatureBoots from DVD" value = "non">No <input type="radio" name="FeatureBoots from DVD" value = "non">Partial </br>
+											<input name="FeatureBoots from DVD" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Installable live CD/DVD :</label></br>
+								<input type="radio" name="FeatureInstallable live CD/DVD" value="oui">Yes <input type="radio" name="FeatureInstallable live CD/DVD" value = "non">No <input type="radio" name="FeatureInstallable live CD/DVD" value = "non">Partial </br>
+											<input name="FeatureInstallable live CD/DVD" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Installable from USB :</label></br>
+								<input type="radio" name="FeatureInstallable from USB" value="oui">Yes <input type="radio" name="FeatureInstallable from USB" value = "non">No <input type="radio" name="FeatureInstallable from USB" value = "non">Partial </br>
+											<input name="FeatureInstallable from USB" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Nanolinux','Inquisitor live CD','CrunchBang Linux','Pardus','Tiny SliTaz','gNewSense','Xubuntu','ClearOS','Fedoralive CD','Pentoo','Distribution','Gentoo','dyne:bolic','Musix GNU+Linux','Slax','Sabayon Linux live DVD','Kubuntu','Dragora GNU/Linux-Libre','Linux Mint','Trisquel','nUbuntu','Knoppix DVD"Maxi" edition','Damn Small Linux','SliTaz GNU/Linux','Bodhi Linux','Micro Core Linux','Puredyne','Debian Live','Elive','XBMC Live','Freespire','Scientific Linux','Mandriva Linux One','openGEU','Parabola GNU/Linux-libre','Tor-ramdisk','Trinity Rescue Kit','SystemRescueCD','Sabayon Linux live CD','AUSTRUMI Linux','Ubuntu','OpenWrt','Oralux','Grml','PCLinuxOS','Knoppix CDedition','Tiny Core Linux','Zentyal','Kali Linux','Chakra','OpenELEC','MCNLive','LibreCMC/LibreWRT','openSUSE','Feather Linux','Tails','MEPIS','BLAG','Puppy Linux (standard edition)','Ututo','CentOS','ALT Linux Desktop or Lite','Edubuntu','Arch Linux','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['48 to 96','?','','256','≈48','640','192 to 512','RAM use (MB)','128 to 512','128 to 768','256 to 1024','32 to 128','16 to 24','128 to 320','96 to 512','96 to 320','384','256 to 1,024','256 to 768','≈8','80','≈64','80 to 512','min 16','96','24 to 192','≈1,024','256 or >','up to 128','32 to 192','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

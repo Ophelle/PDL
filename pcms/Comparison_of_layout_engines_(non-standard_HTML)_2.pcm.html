@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of layout engines (non-standard HTML) - Proprietary HTML elements</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of layout engines (non-standard HTML) - Proprietary HTML elements</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Tag : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Presto :</label></br>
+								<input type="radio" name="FeaturePresto" value="oui">Yes <input type="radio" name="FeaturePresto" value = "non">No <input type="radio" name="FeaturePresto" value = "non">Partial </br>
+											<input name="FeaturePresto" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Introduced by : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>KHTML :</label></br>
+								<input type="radio" name="FeatureKHTML" value="oui">Yes <input type="radio" name="FeatureKHTML" value = "non">No <input type="radio" name="FeatureKHTML" value = "non">Partial </br>
+											<input name="FeatureKHTML" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Trident : </label></br> <input style="display:block;" id="id1Trident" type="number" name="Feature">
+												<input style="display:none;" id="id2Trident" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Trident','id2Trident');">Changer type</button></br>								
+								</br>	
+								<label>Alternative solution : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>WebKit :</label></br>
+								<input type="radio" name="FeatureWebKit" value="oui">Yes <input type="radio" name="FeatureWebKit" value = "non">No <input type="radio" name="FeatureWebKit" value = "non">Partial </br>
+											<input name="FeatureWebKit" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Function : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Gecko :</label></br>
+								<input type="radio" name="FeatureGecko" value="oui">Yes <input type="radio" name="FeatureGecko" value = "non">No <input type="radio" name="FeatureGecko" value = "non">Partial </br>
+											<input name="FeatureGecko" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['marquee','noembed','bgsound','bq','wbr','comment','nobr','ilayer','xml','spacer','layer','blink','image','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Internet Explorer, WebTV','Netscape','Internet Explorer','Netscape (4 only)','WebTV, HTML 3.0','?','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Javascript, CSS','Unicode character zero-width space (U+200B)','JavaScript, CSS3','CSS','!-- ... --','?','CSS, AJAX','Child elements of object used as fallback','audio','img','blockquote','iframe','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Placed inside a nobr element to add a line break','Used to create multiple layers of text and images which lay on top of each other in a given order','Adds whitespace in a layout','Used to display a scrolling, marquee-like text.','Inline layers','Prevents any line breaks from occurring within the flow of a text','Used to display a blockquote','Used to allow the addition of comments to HTML documents','Used to add sound to the background of a website','Delimits an XML data island inside an HTML page','Displays an alternative text for browsers which do not recognize the embed tag','Used to display a blinking text','Synonym of img','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

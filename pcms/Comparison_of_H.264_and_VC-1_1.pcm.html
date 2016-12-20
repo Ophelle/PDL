@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of H.264 and VC-1 - Terminology</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of H.264 and VC-1 - Terminology</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Skipped macroblock : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Frame :</label></br>
+											<input type="checkbox" name="Feature" >Used for progressive or interlaced content</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Integer transform :</label></br>
+											<input type="checkbox" name="Feature" >8×8</br>	
+											<input type="checkbox" name="Feature" >4×8</br>	
+											<input type="checkbox" name="Feature" >8×4</br>	
+											<input type="checkbox" name="Feature" >and 4×4</br>	
+											<input type="checkbox" name="Feature" >4×4; 8×8 available in High Profile only</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Motion vector : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Partition sizes :</label></br>
+											<input type="checkbox" name="Feature" >16×16 and 8×8</br>	
+											<input type="checkbox" name="Feature" >16×16</br>	
+											<input type="checkbox" name="Feature" >16×8</br>	
+											<input type="checkbox" name="Feature" >8×16</br>	
+											<input type="checkbox" name="Feature" >8×8</br>	
+											<input type="checkbox" name="Feature" >8×4</br>	
+											<input type="checkbox" name="Feature" >4×8</br>	
+											<input type="checkbox" name="Feature" >and 4×4</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Feature : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Macroblock sizes : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Picture :</label></br>
+											<input type="checkbox" name="Feature" >A field or frame</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['No data is encoded for macroblock','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Two dimensional vector offset from current position to reference frame','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['H.264','VC-1','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['16×16 only','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

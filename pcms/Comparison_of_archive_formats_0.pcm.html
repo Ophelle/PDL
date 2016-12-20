@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of archive formats - Comparison</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of archive formats - Comparison</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Introduced in : </label></br> <input style="display:block;" id="id1Introduced in" type="number" name="Feature">
+												<input style="display:none;" id="id2Introduced in" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Introduced in','id2Introduced in');">Changer type</button></br>								
+								</br>	
+								<label>Recovery record :</label></br>
+								<input type="radio" name="FeatureRecovery record" value="oui">Yes <input type="radio" name="FeatureRecovery record" value = "non">No <input type="radio" name="FeatureRecovery record" value = "non">Partial </br>
+											<input name="FeatureRecovery record" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Filename extension : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Created by : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Encryption supported :</label></br>
+								<input type="radio" name="FeatureEncryption supported" value="oui">Yes <input type="radio" name="FeatureEncryption supported" value = "non">No <input type="radio" name="FeatureEncryption supported" value = "non">Partial </br>
+											<input name="FeatureEncryption supported" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Format : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Based on : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Modification date resolution : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Unicode filenames :</label></br>
+								<input type="radio" name="FeatureUnicode filenames" value="oui">Yes <input type="radio" name="FeatureUnicode filenames" value = "non">No <input type="radio" name="FeatureUnicode filenames" value = "non">Partial </br>
+											<input name="FeatureUnicode filenames" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Integrity check :</label></br>
+								<input type="radio" name="FeatureIntegrity check" value="oui">Yes <input type="radio" name="FeatureIntegrity check" value = "non">No <input type="radio" name="FeatureIntegrity check" value = "non">Partial </br>
+											<input name="FeatureIntegrity check" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Software Packaging and Distribution','.7z','.lzx','.rpm','.rk','.ace','.dar','.pkg, .mpkg (metapackage)','.sit','Archiving only','.mou','.pim','.rar','.zpaq','Archiving and Compression','.crx','.tar','.afa','.arc','.cpio','.arj','.b1','.sitx','.jar','?','.cab','.dmg','.msi','.cpt','.a','.zip','.pea','.uc .uc0 .uc2 .ucn .ur2 .ue2','.deb','.tgz','.shar, .run','.wim','-','.lzh, .lha','.dgc','.cfs','.qda','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Denis Corbin','Patrick Volkerding','OpenGroup','Microsoft','Jonathan Forbes and Tomi Poutanen','Eugene Roshal','Phil Katz','Robert Jung','Archiving only','Archiving and Compression','Software Packaging and Distribution','Sun Microsystems','Matt Mahoney','M Software, Ltd.','Bell Labs','Ilia Muraviev','Igor Pavlov','Debian','Thom Henderson (SEA)','Taku Hayase (aka sandman)','Shin-ichi Tsuruta','Nico de Vries','Aladdin/Allume Systems','?','Bill Goodman','The Library of Congress','Apple Computer','Red Hat','Raymond Lau','Bulat Ziganshin','Google','Catalina Group Ltd','Joe Lowe (Pismo Technic Inc.)','François Dupoux and Franck Ladurelle','David Pilling','Vicente Sánchez-Alarcos','Giorgio Tani','CSRG','Marcel Lemke','NeXT','Haruyasu Yoshizaki','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Tape Archive (tar)','Cabinet','Partition Image (PartImage)','Windows Installer (also MSI)','ARC','RAR','Compact Pro','WinMount format','BagIt','Macintosh Installer','Compact File Set','StuffIt X (also SITx)','AFA','UltraCompressor II','Archiving only','Macintosh Disk Image','7z','Archiving and Compression','LZX','PEA','Windows Image','ARJ','ZIP (also PKZIP)','Software Packaging and Distribution','Extended TAR format (pax)','LHA (also LZH)','RPM Package Manager (RPM)','DGCA','RK','StuffIt (also SIT)','PIM','ACE','FreeArc','Quadruple D','PAQ (Several formats)','ZPAQ','Shell Archive (shar and makeself)','Archive (ar)','Slackware Package','cpio','Disk Archive (DAR)','Sparc','Java Archive (JAR)','Debian package (deb)','Google Chrome extension package','B1','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['Original','?','LZMA','Archiving and Compression','AR001 and AR002','tar and gzip','DEFLATE','file system','Zip','Sun proposal + TAR','LZMA, PPMD, TTA','Frozen','PAQ','OLE Structured Storage, Cabinet and SQL','ZIP/LZMA','Software Packaging and Distribution','LZ77','PKZIP','Original, Deflate based compression','pax and gzip','ar, tar, and gzip','Archiving only','cpio and gzip','GCA','LZ77 and Huffman coding','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['?','Software Packaging and Distribution','1 s','2 s','No','1–2 s','Yes arbitrary','Archiving only','arbitrary (typically 1 s)','2s','Archiving and Compression','arbitrary (typically 1 ns)','1 ms (maybe better?)','2 s, 1 s, 6.5536 ms, 25.6 µs or 100 ns','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of firewalls - Firewall rule-set advanced features comparison</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of firewalls - Firewall rule-set advanced features comparison</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Configuration: GUI, text or both modes? : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Features: : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Remote Access: Web (HTTP), Telnet, SSH, RDP, Serial COM RS232, ... :</label></br>
+											<input type="checkbox" name="Feature" >Web (HTTPS)</br>	
+											<input type="checkbox" name="Feature" >SSH</br>	
+											<input type="checkbox" name="Feature" >RS232</br>	
+											<input type="checkbox" name="Feature" >Web (HTTP</br>	
+											<input type="checkbox" name="Feature" >HTTPS)</br>	
+											<input type="checkbox" name="Feature" >SSH (Not enabeld by default)</br>	
+											<input type="checkbox" name="Feature" >Web GUI</br>	
+											<input type="checkbox" name="Feature" >WebConfig</br>	
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Ability to centrally manage all firewalls together :</label></br>
+								<input type="radio" name="FeatureAbility to centrally manage all firewalls together" value="oui">Yes <input type="radio" name="FeatureAbility to centrally manage all firewalls together" value = "non">No <input type="radio" name="FeatureAbility to centrally manage all firewalls together" value = "non">Partial </br>
+											<input name="FeatureAbility to centrally manage all firewalls together" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Change rules without requiring restart? :</label></br>
+								<input type="radio" name="FeatureChange rules without requiring restart?" value="oui">Yes <input type="radio" name="FeatureChange rules without requiring restart?" value = "non">No <input type="radio" name="FeatureChange rules without requiring restart?" value = "non">Partial </br>
+											<input name="FeatureChange rules without requiring restart?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['GUI','both','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['Untangle','Zeroshell','ClearOS','OPNsense','pfSense','IPFire','WinGate','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

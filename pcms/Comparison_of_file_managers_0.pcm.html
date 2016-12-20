@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of file managers - General information</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of file managers - General information</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Cost : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Latest stable version(date, number) :</label></br>
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+								</br>	
+								<label>Software license : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>File manager : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Creator : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>First public version(date) :</label></br>
+											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Free','A$35.00','CHF40, €32, US$44','Cost','A$85','US$39.95','US$29.95','Part of Windows','US$29.95 (1-4)','US$30','Part of Xandros Desktop','?','shareware / freeware','US$79.00(with 80+ other apps)','US$29.95(lite: free)','Part of OS X','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['GPL','Proprietary','BSD original','BSD revised','Software license','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Total Commander(originally named `Windows Commander`)','Altap Salamander','Dired','Double Commander','Finder','Xfm','Far Manager','Windows Explorer','Thunar','Krusader','Nautilus','Directory Opus','STDU Explorer','Volkov Commander','Konqueror','XYplorer','ZTreeWin','Norton Commander','Xfile','Xandros File Manager','Midnight Commander (mc)','ROX-Filer','PathMinder','DOS Navigator','Gentoo (file manager)','WinSCP','Xfe','File manager','Dolphin','Nomad.NET','Path Finder(originally named SNAX)','File Manager','emelFM2','muCommander','xplorer²','File Commander','PCManFM','Disk Order','Explorer++','GNOME Commander','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['tooar','Donald Lessau','Peter Norton Computing,later Symantec corporation','alexx2000','Ritlabs','David Ercig','Simon Marlow, Albert Gräf, Robert Vogelgesang, Juan D. Martin, Till Straumann','Maxence Bernard','Vsevolod Volkov','KDE','WinSCP','GNOME Commander','Thomas Leonard et al.','Microsoft (Ian Ellison-Taylor)','Eugene Sichkar','Xandros Corporation','Hong Jen Yee','Apple Inc.','Albert Nurick andBrittain Fraley','Christian Ghisler','Rixstep','integral part of Emacs,part of the GNU project','Eugene Roshal (original); Far Group','Cocoatech','Roland Baudin','GNU Midnight Commander','Krusader Krew','Emil Brink','Kim Henkel','Creator','Nikos Bozinis','Eazel','Altap','LikeMac Group','Xfce','Microsoft','Brian Havard','Jonathan Potter,GPSoftware','STDUtility','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

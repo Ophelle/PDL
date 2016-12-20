@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of programming languages (string functions) - substring</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of programming languages (string functions) - substring</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Languages : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Format : </label></br> <input id="1" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['AWK (changes string), Perl, PHP','VB','Java, JavaScript','ALGOL 68 (changes base index)','Ruby','BASIC','Common Lisp','REXX','C','SQL','OCaml','Haskell','Objective-C (NSString * only)','Standard ML','ISLISP','Object Pascal (Delphi)','Ya','Lua','Erlang','Fortran','Mathematica','F#','Smalltalk','Seed7','Ada (changes base index)','Cobra, Python, Go','FreeBASIC','C++ (STL), JavaScript','Scheme','VB .NET, C#, Windows PowerShell, F#','D','JavaScript','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['String.sub string startpos numChars','string[startpos:endpos]','(subseq string startpos endpos)','string (startpos .. endpos)','take numChars $ drop startpos string','string.[startpos..endpos]','string.slice(startpos«, endpos»)','string:sub_string(string, startpos, endpos)string:substr(string, startpos, numChars)','substr(string, startpos, numChars)','string[startpos, numChars]  string[startpos .. endpos-1]  string[startpos ... endpos]','(substring string startpos endpos)','string[startpos .. endpos]','substr(string, startpos «,numChars, padChar»)','copy(string, startpos, numChars)','[string substringWithRange:NSMakeRange(startpos, numChars)]','string.Substring(startpos, numChars)','string.substr(startpos«, numChars»)','Mid(string, startpos, numChars)','string copyFrom: startpos to: endpos','substring (string, startpos, numChars)','string(startpos:endpos)','string[startpos .. endpos]  string[startpos len numChars]','MID$(string, startpos, numChars)','string.sub(string, startpos, endpos)  (string):sub(startpos, endpos)','SUBSTRING(string FROM startpos «FOR numChars»)','string[startpos .. endpos+1]','strncpy(result, string + startpos, numChars);','string.substring(startpos«, endpos»)','mid(string, startpos, numChars)','StringTake[string, {startpos, endpos}]','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

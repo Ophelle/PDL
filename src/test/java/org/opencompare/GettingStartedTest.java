@@ -10,7 +10,6 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.List;
 
 /**
@@ -22,7 +21,7 @@ public class GettingStartedTest {
     public void testGettingStarted() throws IOException {
 
         // Define a file representing a PCM to load
-        File pcmFile = new File("testPrototype/example0.pcm");
+        File pcmFile = new File("pcms/Comparison_(grammar)_0.pcm");
 
         // Create a loader that can handle the file format
         PCMLoader loader = new KMFJSONLoader();
@@ -45,8 +44,8 @@ public class GettingStartedTest {
                     
                     // Get information contained in the cell
                     String content = cell.getContent();
-                    String rawContent = cell.getRawContent();
-                    Value interpretation = cell.getInterpretation();
+                    //String rawContent = cell.getRawContent();
+                    //Value interpretation = cell.getInterpretation();
 
                     // Print the content of the cell
                     System.out.println("(" + product.getKeyContent() + ", " + feature.getName() + ") = " + content);

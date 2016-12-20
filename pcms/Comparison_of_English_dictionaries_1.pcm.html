@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of English dictionaries - Collegiate</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of English dictionaries - Collegiate</h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Pages :</label></br>
+											<input type="checkbox" name="Feature" >1</br>	
+											<input type="checkbox" name="Feature" >664</br>	
+											<input type="checkbox" name="Feature" >736</br>	
+											<input type="checkbox" name="Feature" >728</br>	
+							
+								</br>	
+								<label>Publisher : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Entries (approx.) :</label></br>
+											<input type="checkbox" name="Feature" >165</br>	
+											<input type="checkbox" name="Feature" >000</br>	
+											<input type="checkbox" name="Feature" >163</br>	
+											<input type="checkbox" name="Feature" >320</br>	
+											<input type="checkbox" name="Feature" >000+</br>	
+							
+								</br>	
+								<label>First published : </label></br> <input style="display:block;" id="id1First published" type="number" name="Feature">
+								
+								</br>	
+								<label>Latest edition : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>Title : </label></br> <input id="2" type="text" name="Feature"></br>
+								</br>	
+								<label>Pronunciation guide : </label></br> <input id="3" type="text" name="Feature"></br>
+								</br>	
+								<label>Main accent : </label></br> <input id="4" type="text" name="Feature"></br>
+								</br>	
+								<label>Year : </label></br> <input style="display:block;" id="id1Year" type="number" name="Feature">
+								
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Microsoft','Merriam-Webster','Houghton Mifflin Harcourt','Webster`s New World (John Wiley & Sons)','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['11th (ISBN 0-8777-9809-5)','4th (ISBN 0-7645-7125-7)','1st (ISBN-13: 978-0312280871)','4th (ISBN 0-547-24766-4)','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['Microsoft Encarta College Dictionary','American Heritage College Dictionary','Merriam-Webster`s Collegiate Dictionary','Webster`s New World College Dictionary','']
+								});
+								$("#3").typeahead({
+									name:"list3",
+									local : ['','Diacritical','']
+								});
+								$("#4").typeahead({
+									name:"list4",
+									local : ['American','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>

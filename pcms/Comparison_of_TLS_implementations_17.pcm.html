@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="js/bootstrap.min.css" rel="stylesheet"type="text/css">
+	<link href="css/moncss.css" rel="stylesheet"type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
+	<script type="text/javascript" src="js/typeahead.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/formulaire.js"></script>
+	<title>Comparison of TLS implementations -  Cryptographic module/token support </title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="container">
+  	
+		<div class="row">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">
+				<h1>Comparison of TLS implementations -  Cryptographic module/token support </h1>
+			</div>
+			<div class="col-md-2">&nbsp;</div>
+		</div>
+		
+		<div class="row">
+			<fieldset>
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-8">
+					<form action="" method="post">
+						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
+								</br>	
+								<label>Objects identified via : </label></br> <input id="0" type="text" name="Feature"></br>
+								</br>	
+								<label>Implementation : </label></br> <input id="1" type="text" name="Feature"></br>
+								</br>	
+								<label>TPM support :</label></br>
+								<input type="radio" name="FeatureTPM support" value="oui">Yes <input type="radio" name="FeatureTPM support" value = "non">No <input type="radio" name="FeatureTPM support" value = "non">Partial </br>
+											<input name="FeatureTPM support" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+								</br>	
+								<label>Hardware token support : </label></br> <input id="2" type="text" name="Feature"></br>
+						<script>
+								$("#0").typeahead({
+									name:"list0",
+									local : ['Custom method','Objects identified via','User-defined label','UUID, User-defined label','','RFC7512 PKCS #11 URLs','']
+								});
+								$("#1").typeahead({
+									name:"list1",
+									local : ['mbed TLS','SChannel','SharkSSL','OpenSSL','wolfSSL','cryptlib','Implementation','JSSE','RSA BSAFE MES','Secure Transport','NSS','Botan','RSA BSAFE SSL-J','MatrixSSL','GnuTLS','LibreSSL','']
+								});
+								$("#2").typeahead({
+									name:"list2",
+									local : ['PKCS11 (via 3rd party module)','Hardware token support','','PKCS11','No','PKCS11 (via libpkcs11-helper) or standard hooks','Microsoft CryptoAPI','PKCS11 Java Cryptography Architecture/Java Cryptography Extension','']
+								});
+						</script>
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
+					</form>
+				</div>
+			</fieldset>
+		<div class="col-md-2">&nbsp;</div>
+		</div>
+	</div>
+</body>
+</html>
