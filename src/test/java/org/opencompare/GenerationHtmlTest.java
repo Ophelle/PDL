@@ -6,7 +6,11 @@ import java.io.File;
 import java.io.IOException;
 
 import org.junit.Test;
-
+/**
+ * class GenerationHtmlTest
+ * @author PDL: Mendes Ophélie, Dramé Oumar, Le Quang, Baouz Khaled and Moussa Lydia
+ *
+ */
 public class GenerationHtmlTest{
 	
 	File file;

@@ -41,7 +41,7 @@
 								</br>	
 								<label>Approved Forms :</label></br>
 								<input type="radio" name="FeatureApproved Forms" value="oui">Yes <input type="radio" name="FeatureApproved Forms" value = "non">No <input type="radio" name="FeatureApproved Forms" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureApproved Forms" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>NetFile Certified(tax years) : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
@@ -51,10 +51,11 @@
 								</br>	
 								<label>2D Bar Coded :</label></br>
 								<input type="radio" name="Feature2D Bar Coded" value="oui">Yes <input type="radio" name="Feature2D Bar Coded" value = "non">No <input type="radio" name="Feature2D Bar Coded" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="Feature2D Bar Coded" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
-								<label># of Returns : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label># of Returns : </label></br> <input style="display:block;" id="id1# of Returns" type="number" name="Feature">
+												<input style="display:none;" id="id2# of Returns" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1# of Returns','id2# of Returns');">Changer type</button></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -89,7 +90,7 @@
 									local : ['AdvTax','TurboTax Standard - Online Edition','Futuretax','myTaxExpress','Taxman','GenuTax','eTaxCanada','EachTax','WebTax4U','fastneasytax','MyTAX','Tax Chopper','TaxFreeway','Impôt Professionel','MBOTax','SimpleTax','StudioTax','TaxTron','H&R Block','UFile','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

@@ -29,8 +29,9 @@
 					<form action="" method="post">
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
-								<label>Year : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Year : </label></br> <input style="display:block;" id="id1Year" type="number" name="Feature">
+												<input style="display:none;" id="id2Year" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Year','id2Year');">Changer type</button></br>								
 								</br>	
 								<label>Version : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
@@ -63,7 +64,7 @@
 									local : ['Proprietary','W3C','Software license','GPL','MPL 1.1/GPL 2.0/LGPL 2.1','Apache License 2.0','LGPL','MIT License','BSD or AFL','MPL','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

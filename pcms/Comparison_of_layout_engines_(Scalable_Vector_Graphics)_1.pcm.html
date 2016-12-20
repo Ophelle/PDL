@@ -29,24 +29,27 @@
 					<form action="" method="post">
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
-								<label>Blink : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Blink : </label></br> <input style="display:block;" id="id1Blink" type="number" name="Feature">
+												<input style="display:none;" id="id2Blink" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Blink','id2Blink');">Changer type</button></br>								
 								</br>	
 								<label>KSVG : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>WebKit :</label></br>
 								<input type="radio" name="FeatureWebKit" value="oui">Yes <input type="radio" name="FeatureWebKit" value = "non">No <input type="radio" name="FeatureWebKit" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureWebKit" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Presto : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Gecko : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Gecko : </label></br> <input style="display:block;" id="id1Gecko" type="number" name="Feature">
+												<input style="display:none;" id="id2Gecko" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Gecko','id2Gecko');">Changer type</button></br>								
 								</br>	
 								<label>Amaya : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Trident : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Trident : </label></br> <input style="display:block;" id="id1Trident" type="number" name="Feature">
+												<input style="display:none;" id="id2Trident" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Trident','id2Trident');">Changer type</button></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -61,7 +64,7 @@
 									local : ['5.1','','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

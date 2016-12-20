@@ -7,15 +7,24 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 import java.util.Scanner;
-
+/**
+ * class main
+ * @author PDL: Mendes Ophélie, Dramé Oumar, Le Quang, Baouz Khaled and Moussa Lydia
+ *
+ */
 public class Main {
-
+	
+	/**
+	 * function main for run the project
+	 * @param args
+	 * @throws FileNotFoundException
+	 */
 	public static void main(String[] args) throws FileNotFoundException {
 		String str = "";
 		Scanner sc = new Scanner(System.in);
 		
-		// Repete la demande tant que le scanner ne recoit pas 1/2/q
-		while(!str.equals("1") && !str.equals("2")) {
+		// Repete la demande tant que le scanner ne recoit pas q
+		while(!str.equals("q")) {
 			System.out.println("Voulez-vous générer tous les formulaires ou un formulaire à partir du pcm de votre choix ? \n- Tapez 1 : Pour un formulaire\n- Tapez 2 : Pour tous les formulaires\n- Tapez q : Pour quitter");
 			str = sc.nextLine();
 			if(str.equals("2")) {

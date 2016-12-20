@@ -35,8 +35,9 @@
 								</br>	
 								<label>Status : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>S No. : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>S No. : </label></br> <input style="display:block;" id="id1S No." type="number" name="Feature">
+												<input style="display:none;" id="id2S No." type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1S No.','id2S No.');">Changer type</button></br>								
 								</br>	
 								<label>Warhead/Payload : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
@@ -90,8 +91,9 @@
 								</br>	
 								<label>Accuracy (CEP) : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>First flight : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>First flight : </label></br> <input style="display:block;" id="id1First flight" type="number" name="Feature">
+												<input style="display:none;" id="id2First flight" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First flight','id2First flight');">Changer type</button></br>								
 								</br>	
 								<label>Manufacturer : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
@@ -130,7 +132,7 @@
 								</br>	
 								<label>MIRV :</label></br>
 								<input type="radio" name="FeatureMIRV" value="oui">Yes <input type="radio" name="FeatureMIRV" value = "non">No <input type="radio" name="FeatureMIRV" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureMIRV" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -161,7 +163,7 @@
 									local : ['Defence Research and Development Organization','State Rocket Center Makayev','Glenn L. Martin Company','Israel Aerospace Industries','Zlatoust Machine-Building Plant','Defence Research and Development Organisation','NPO EnergomashKhartron','Votkinsk Plant State Production Association','Krasnoyarsk Machine-Building Plant','Martin Marietta','Soviet Academy of Sciences','Factory 211 (Capital Astronautics Co.)','Yuzhnoye Design Bureau','EADS Astrium Space Transportation','Boeing','EADS SPACE Transportation','Khrunichev Machine-Building Plant','Votkinsk Machine Building Plant','China Academy of Launch Vehicle','Khartron','Yuzhny Machine-Building Plant','China Academy of Launch Technology','Academy of Rocket Motors Technology (ARMT)','','Lockheed Martin Space Systems','Consolidated Vultee Aircraft (Convair)','Factory 307 (Nanjing Dawn Group)','Aérospatiale/EADS SPACE Transportation','Boeing, Martin Marietta, TRW,','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

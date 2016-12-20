@@ -31,29 +31,33 @@
 								</br>	
 								<label>Graphics : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Execution units : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Execution units : </label></br> <input style="display:block;" id="id1Execution units" type="number" name="Feature">
+												<input style="display:none;" id="id2Execution units" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Execution units','id2Execution units');">Changer type</button></br>								
 								</br>	
 								<label>Hardware acceleration - CVT HD :</label></br>
 								<input type="radio" name="FeatureHardware acceleration - CVT HD" value="oui">Yes <input type="radio" name="FeatureHardware acceleration - CVT HD" value = "non">No <input type="radio" name="FeatureHardware acceleration - CVT HD" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureHardware acceleration - CVT HD" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Hardware acceleration - QSV :</label></br>
 								<input type="radio" name="FeatureHardware acceleration - QSV" value="oui">Yes <input type="radio" name="FeatureHardware acceleration - QSV" value = "non">No <input type="radio" name="FeatureHardware acceleration - QSV" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureHardware acceleration - QSV" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
-								<label>DVMT (MB) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>DVMT (MB) : </label></br> <input style="display:block;" id="id1DVMT (MB)" type="number" name="Feature">
+												<input style="display:none;" id="id2DVMT (MB)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1DVMT (MB)','id2DVMT (MB)');">Changer type</button></br>								
 								</br>	
 								<label>Device id. : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Memory bandwidth(GB/s) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Memory bandwidth(GB/s) : </label></br> <input style="display:block;" id="id1Memory bandwidth(GB/s)" type="number" name="Feature">
+												<input style="display:none;" id="id2Memory bandwidth(GB/s)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Memory bandwidth(GB/s)','id2Memory bandwidth(GB/s)');">Changer type</button></br>								
 								</br>	
 								<label>Core clock (MHz) : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Shader model : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Shader model : </label></br> <input style="display:block;" id="id1Shader model" type="number" name="Feature">
+												<input style="display:none;" id="id2Shader model" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Shader model','id2Shader model');">Changer type</button></br>								
 								</br>	
 								<label>Code name : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
@@ -65,13 +69,15 @@
 								</br>	
 								<label>API support - OpenCL :</label></br>
 								<input type="radio" name="FeatureAPI support - OpenCL" value="oui">Yes <input type="radio" name="FeatureAPI support - OpenCL" value = "non">No <input type="radio" name="FeatureAPI support - OpenCL" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureAPI support - OpenCL" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
-								<label>API support - DirectX : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>API support - DirectX : </label></br> <input style="display:block;" id="id1API support - DirectX" type="number" name="Feature">
+												<input style="display:none;" id="id2API support - DirectX" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1API support - DirectX','id2API support - DirectX');">Changer type</button></br>								
 								</br>	
-								<label>Launch : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Launch : </label></br> <input style="display:block;" id="id1Launch" type="number" name="Feature">
+												<input style="display:none;" id="id2Launch" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Launch','id2Launch');">Changer type</button></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -98,7 +104,7 @@
 									local : ['Core i3-23x0ECore i3-23xxMCore i5-251xECore i5-2xxxMCore i7-2xxxQMCore i7-271xQECore i7-29x0XM','Celeron G4x0Celeron G5x0Celeron G530TPentium G6xxPentium G6x0TPentium G8x0','Celeron B7x0Celeron 8x7Celeron B8xxPentium B9x0Pentium 9x7','Xeon E3-12x5','Xeon E3-1260L','Core i3-2102Core i3-21x0Core i3-21x0TCore i5-2xx0Core i5-2x00SCore i5-2xx0TCore i7-2600Core i7-2600S','Core i3-21x5Core i5-2405SCore i5-2500KCore i7-2x00K','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

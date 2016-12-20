@@ -33,8 +33,9 @@
 								</br>	
 								<label>Release : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Depth (mm) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Depth (mm) : </label></br> <input style="display:block;" id="id1Depth (mm)" type="number" name="Feature">
+												<input style="display:none;" id="id2Depth (mm)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Depth (mm)','id2Depth (mm)');">Changer type</button></br>								
 								</br>	
 								<label>Dimensions (mm × mm) : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
@@ -62,8 +63,9 @@
 								</br>	
 								<label>Storage : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
-								<label>Weight (g) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Weight (g) : </label></br> <input style="display:block;" id="id1Weight (g)" type="number" name="Feature">
+												<input style="display:none;" id="id2Weight (g)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Weight (g)','id2Weight (g)');">Changer type</button></br>								
 								</br>	
 								<label>Manufacturer : </label></br> <input id="7" type="text" name="Feature"></br>
 								</br>	
@@ -112,7 +114,7 @@
 									local : ['P4','P26','P34','P2','P11','P10','P21','P36','P33','P23','P8','P13','P20','P30','P31','P35','P22','P25','P7','P14','P12','P15','P5','P27','P29','P17','P6','P24','P28','P3','P32','P16','P9','P18','P19','P1','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

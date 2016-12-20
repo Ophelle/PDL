@@ -81,8 +81,9 @@
 								</br>	
 								<label>Creator : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>First public release : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>First public release : </label></br> <input style="display:block;" id="id1First public release" type="number" name="Feature">
+												<input style="display:none;" id="id2First public release" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First public release','id2First public release');">Changer type</button></br>								
 								</br>	
 								<label>License : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
@@ -101,7 +102,7 @@
 									local : ['Free','Not free','$995','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

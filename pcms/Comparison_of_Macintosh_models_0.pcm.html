@@ -49,8 +49,9 @@
 								</br>	
 								<label>MSRP : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>RPM : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>RPM : </label></br> <input style="display:block;" id="id1RPM" type="number" name="Feature">
+												<input style="display:none;" id="id2RPM" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1RPM','id2RPM');">Changer type</button></br>								
 								</br>	
 								<label>Graphics : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
@@ -89,7 +90,7 @@
 									local : ['2 GB','1 GB','288 MB Shared','512 MB','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

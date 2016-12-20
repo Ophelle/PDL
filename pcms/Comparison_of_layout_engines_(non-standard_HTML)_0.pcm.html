@@ -31,20 +31,23 @@
 								</br>	
 								<label>Element : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Gecko : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Gecko : </label></br> <input style="display:block;" id="id1Gecko" type="number" name="Feature">
+												<input style="display:none;" id="id2Gecko" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Gecko','id2Gecko');">Changer type</button></br>								
 								</br>	
 								<label>KHTML : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Trident : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Trident : </label></br> <input style="display:block;" id="id1Trident" type="number" name="Feature">
+												<input style="display:none;" id="id2Trident" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Trident','id2Trident');">Changer type</button></br>								
 								</br>	
 								<label>Presto : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Supported first by : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Deprecated in HTML version : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Deprecated in HTML version : </label></br> <input style="display:block;" id="id1Deprecated in HTML version" type="number" name="Feature">
+												<input style="display:none;" id="id2Deprecated in HTML version" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Deprecated in HTML version','id2Deprecated in HTML version');">Changer type</button></br>								
 								</br>	
 								<label>Alternative solution :</label></br>
 											<input type="checkbox" name="Feature" >ul</br>	
@@ -60,8 +63,9 @@
 											<input type="checkbox" name="Feature" >plain MIME type</br>	
 											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>WebKit : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>WebKit : </label></br> <input style="display:block;" id="id1WebKit" type="number" name="Feature">
+												<input style="display:none;" id="id2WebKit" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1WebKit','id2WebKit');">Changer type</button></br>								
 								</br>	
 								<label>Function : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
@@ -86,7 +90,7 @@
 									local : ['Sets font styles','Menu list','Strike-through','Displays preformatted text','Applies font styles','Centers contents','Designates that all HTML be ignored, and to display the page as is','Underline','Similar to pre and plaintext, but ignores all HTML within and displays as is','Directory list','Insert an applet','Adds a search field','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

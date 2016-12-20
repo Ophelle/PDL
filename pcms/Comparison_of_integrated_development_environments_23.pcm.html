@@ -47,8 +47,9 @@
 											<input type="checkbox" name="Feature" >Solaris</br>	
 											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Latest stable release : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Latest stable release : </label></br> <input style="display:block;" id="id1Latest stable release" type="number" name="Feature">
+												<input style="display:none;" id="id2Latest stable release" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Latest stable release','id2Latest stable release');">Changer type</button></br>								
 								</br>	
 								<label>IDE : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
@@ -61,7 +62,7 @@
 									local : ['Eclipse DLTK','Komodo IDE / Edit','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

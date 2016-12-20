@@ -39,8 +39,9 @@
 											<input type="checkbox" name="Feature" >Sempron 64Socket AM2</br>	
 											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Release Date : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Release Date : </label></br> <input style="display:block;" id="id1Release Date" type="number" name="Feature">
+												<input style="display:none;" id="id2Release Date" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Release Date','id2Release Date');">Changer type</button></br>								
 								</br>	
 								<label>SATA :</label></br>
 											<input type="checkbox" name="Feature" >6 Ports 3.0 Gbit</br>	
@@ -52,7 +53,7 @@
 								</br>	
 								<label>SLI :</label></br>
 								<input type="radio" name="FeatureSLI" value="oui">Yes <input type="radio" name="FeatureSLI" value = "non">No <input type="radio" name="FeatureSLI" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureSLI" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>USB : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
@@ -124,7 +125,7 @@
 									local : ['Crush51 + MCP55','MCP55','MCP65','CK8-04','MCP51','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

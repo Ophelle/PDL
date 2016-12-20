@@ -33,35 +33,41 @@
 								</br>	
 								<label>Triangle required :</label></br>
 								<input type="radio" name="FeatureTriangle required" value="oui">Yes <input type="radio" name="FeatureTriangle required" value = "non">No <input type="radio" name="FeatureTriangle required" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureTriangle required" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Spare bulb required :</label></br>
 								<input type="radio" name="FeatureSpare bulb required" value="oui">Yes <input type="radio" name="FeatureSpare bulb required" value = "non">No <input type="radio" name="FeatureSpare bulb required" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureSpare bulb required" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Tow rope required :</label></br>
 								<input type="radio" name="FeatureTow rope required" value="oui">Yes <input type="radio" name="FeatureTow rope required" value = "non">No <input type="radio" name="FeatureTow rope required" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureTow rope required" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
-								<label>Speed limit on single carriageway (km/h) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Speed limit on single carriageway (km/h) : </label></br> <input style="display:block;" id="id1Speed limit on single carriageway (km/h)" type="number" name="Feature">
+												<input style="display:none;" id="id2Speed limit on single carriageway (km/h)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Speed limit on single carriageway (km/h)','id2Speed limit on single carriageway (km/h)');">Changer type</button></br>								
 								</br>	
-								<label>Speed limit in urban area : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Speed limit in urban area : </label></br> <input style="display:block;" id="id1Speed limit in urban area" type="number" name="Feature">
+												<input style="display:none;" id="id2Speed limit in urban area" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Speed limit in urban area','id2Speed limit in urban area');">Changer type</button></br>								
 								</br>	
 								<label>Toll roads : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Minimum driver's age : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Minimum driver's age : </label></br> <input style="display:block;" id="id1Minimum driver's age" type="number" name="Feature">
+												<input style="display:none;" id="id2Minimum driver's age" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Minimum driver's age','id2Minimum driver's age');">Changer type</button></br>								
 								</br>	
-								<label>Speed limit on motorway (km/h) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Speed limit on motorway (km/h) : </label></br> <input style="display:block;" id="id1Speed limit on motorway (km/h)" type="number" name="Feature">
+												<input style="display:none;" id="id2Speed limit on motorway (km/h)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Speed limit on motorway (km/h)','id2Speed limit on motorway (km/h)');">Changer type</button></br>								
 								</br>	
-								<label>Permitted alcohol level (%) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Permitted alcohol level (%) : </label></br> <input style="display:block;" id="id1Permitted alcohol level (%)" type="number" name="Feature">
+												<input style="display:none;" id="id2Permitted alcohol level (%)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Permitted alcohol level (%)','id2Permitted alcohol level (%)');">Changer type</button></br>								
 								</br>	
-								<label>Minimum child age (front seat) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Minimum child age (front seat) : </label></br> <input style="display:block;" id="id1Minimum child age (front seat)" type="number" name="Feature">
+												<input style="display:none;" id="id2Minimum child age (front seat)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Minimum child age (front seat)','id2Minimum child age (front seat)');">Changer type</button></br>								
 								</br>	
 								<label>Country code : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
@@ -102,7 +108,7 @@
 									local : ['110','N/A','120','100','130','100 (120 on expressways)','110 (rain/wet 100)','112','130 (urban 80)','Speed limit on dual carriageway (km/h)','no (130 recommended)','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

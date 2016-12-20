@@ -100,8 +100,9 @@
 											<input type="checkbox" name="Feature" >521</br>	
 											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Specific impulse, vac. (s) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Specific impulse, vac. (s) : </label></br> <input style="display:block;" id="id1Specific impulse, vac. (s)" type="number" name="Feature">
+												<input style="display:none;" id="id2Specific impulse, vac. (s)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Specific impulse, vac. (s)','id2Specific impulse, vac. (s)');">Changer type</button></br>								
 								</br>	
 								<label>Thrust-to-weight ratio : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
@@ -111,8 +112,9 @@
 								</br>	
 								<label>Origin : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Combustion chamber pressure (bar) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Combustion chamber pressure (bar) : </label></br> <input style="display:block;" id="id1Combustion chamber pressure (bar)" type="number" name="Feature">
+												<input style="display:none;" id="id2Combustion chamber pressure (bar)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Combustion chamber pressure (bar)','id2Combustion chamber pressure (bar)');">Changer type</button></br>								
 								</br>	
 								<label>Engine : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
@@ -198,7 +200,7 @@
 									local : ['','Falcon 9Falcon Heavy','Atlas V','Ariane 5','Soyuz-U','AntaresSoyuz-2.1v','Black Arrow','Zenit-3SL (Sea Launch)Zenit-3SLB (Land Launch)','Ariane 5 ES','Energia','New Shepard','Deep Space 1Dawn','H-II','Saturn V','Ariane 6','Space Shuttle','Soyuz-2.1vAntares','Boeing 601HP satellites','Proton-M','Jupiter Icy Moons Orbiter','Dnepr-1','H-IIAH-IIB','Saturn VSaturn IB','Space Launch System','Falcon 9Falcon 1','LS-1300 satellites','Soyuz-FGSoyuz-2','Boeing 702 satellites','Angara','GSLV Mk I','SMART-1','GSLV Mk II','H-I','Delta IVDelta IV Heavy','Soyuz-2.1bSoyuz-2-1vAngara','PSLV','Ariane 5 ECA','Space ShuttleAres I','Atlas VVulcan','Delta IIIDelta IV','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

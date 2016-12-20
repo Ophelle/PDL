@@ -54,8 +54,9 @@
 								</br>	
 								<label>Antenna : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Released : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Released : </label></br> <input style="display:block;" id="id1Released" type="number" name="Feature">
+												<input style="display:none;" id="id2Released" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Released','id2Released');">Changer type</button></br>								
 								</br>	
 								<label>Manufacturer : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
@@ -136,7 +137,7 @@
 									local : ['256 kB','192 kB','128 kB','60 kB','32 kB','128 kB / 96 kB / 64 kB','64 kB','512 kB','192 kB on-chip, 512 kB on-board','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

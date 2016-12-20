@@ -27,7 +27,11 @@ import org.opencompare.api.java.value.RealValue;
 import org.opencompare.api.java.value.StringValue;
 import org.opencompare.api.java.value.Unit;
 import org.opencompare.api.java.value.Version;
-
+/**
+ * class TraitementPCM
+ * @author PDL: Mendes Ophélie, Dramé Oumar, Le Quang, Baouz Khaled and Moussa Lydia
+ *
+ */
 public class TraitementPcm {
 
 	private PCM pcm;
@@ -39,10 +43,18 @@ public class TraitementPcm {
 	private Map<String, List<String>> contentsTypeMultiple;
 	private Map<String, String> bestTypeForEachFeature;
 
+	/**
+	 * contructor for TraitementPCM
+	 * @param file
+	 */
 	public TraitementPcm(File file) {
 		this.loadPcm(file);
 	}
 	
+	/**
+	 * function for lunch the analyze of the PCM
+	 * @param file
+	 */
 	public void loadPcm(File file) {
 		if(file.exists()) {
 			try {
@@ -62,67 +74,132 @@ public class TraitementPcm {
 			System.out.println("Le fichier n'existe pas ou le chemin est mal défini");
 		}
 	}
-
+	
+	/**
+	 * getter for the PCM
+	 * @return PCM
+	 */
 	public PCM getPcm() {
 		return this.pcm;
 	}
 
+	/**
+	 * setter for the PCM
+	 * @param pcm
+	 */
 	public void setPcm(PCM pcm) {
 		this.pcm = pcm;
 	}
 
+	/**
+	 * getter for file
+	 * @return File
+	 */
 	public File getFile() {
 		return file;
 	}
 
+	/**
+	 * setter for file
+	 * @param file
+	 */
 	public void setFile(File file) {
 		this.file = file;
 	}
 
+	/**
+	 * getter for the name of PCM
+	 * @return String
+	 */
 	public String getNamePcm() {
 		return this.namePcm;
 	}
 
+	/**
+	 * setter for the name of PCM
+	 * @param name
+	 */
 	public void setNamePcm(String name) {
 		this.namePcm = name;
 	}
 
+	/**
+	 * getter for the list of features
+	 * @return List<Feature>
+	 */
 	public List<Feature> getFeatures() {
 		return this.listFeatures;
 	}
 
+	/**
+	 * getter for the list of types for all features
+	 * @return Map<String, List<String>>
+	 */
 	public Map<String, List<String>> getAllTypesOfFeature() {
 		return this.allTypesOfFeature;
 	}
 
+	/**
+	 * setter for the list of types for all features
+	 * @param allTypesValue
+	 */
 	public void setAllTypesOfFeature(Map<String, List<String>> allTypesValue) {
 		this.allTypesOfFeature = allTypesValue;
 	}
 
+	/**
+	 * getter for the list of the contents of each cell
+	 * @return Map<String, List<String>>
+	 */
 	public Map<String, List<String>> getAllContentsOfEachCell() {
 		return this.allContentsOfEachCell;
 	}
 
+	/**
+	 * setter for list of the contents of each cell
+	 * @param allContentsCell
+	 */
 	public void setAllContentsOfEachCell(Map<String, List<String>> allContentsCell) {
 		this.allContentsOfEachCell = allContentsCell;
 	}
 
+	/**
+	 * getter for the list of the contents for the type multiple 
+	 * @return Map<String, List<String>>
+	 */
 	public Map<String, List<String>> getContentsTypeMultiple() {
 		return this.contentsTypeMultiple;
 	}
 
+	/**
+	 * setter for the list of the contents for the type multiple
+	 * @param contentsTypeMultiple
+	 */
 	public void setContentsTypeMultiple(Map<String, List<String>> contentsTypeMultiple) {
 		this.contentsTypeMultiple = contentsTypeMultiple;
 	}
 
+	/**
+	 * getter for the list of the best type for each feature
+	 * @return Map<String, String>
+	 */
 	public Map<String, String> getBestTypeForEachFeature() {
 		return this.bestTypeForEachFeature;
 	}
 
+	/**
+	 * setter for the list of the best type for each feature
+	 * @param bestTypes
+	 */
 	public void setBestTypeForEachFeature(Map<String, String> bestTypes) {
 		this.bestTypeForEachFeature = bestTypes;
 	}
 
+	/**
+	 * function for translate the value in string type 
+	 * @param kValue
+	 * @returns String
+	 */
 	public String valueToString(Value kValue) {
 		if (kValue == null) {
 			return "";
@@ -157,6 +234,11 @@ public class TraitementPcm {
 		}
 	}
 
+	/**
+	 * function for find all type for each feature
+	 * @param listFeatures
+	 * @return Map<String, List<String>>
+	 */
 	private Map<String, List<String>> getAllTypesOfFeature(List<Feature> listFeatures) {
 
 		String currentType = "";
@@ -187,6 +269,11 @@ public class TraitementPcm {
 		return feat_type;
 	}
 
+	/**
+	 * function for find the content for the feature of type multiple
+	 * @param listFeatures
+	 * @return Map<String, List<String>>
+	 */
 	public Map<String, List<String>> contentsTypeMultiple(List<Feature> listFeatures) {
 		String currentType = "";
 		// Traite le cas du type multiple avec pas de doublon de content pour chaque feature
@@ -240,6 +327,11 @@ public class TraitementPcm {
 		return feat_contentMultiple;
 	}
 
+	/**
+	 * function for find all content in cell for each feature
+	 * @param listFeatures
+	 * @return Map<String, List<String>>
+	 */
 	private Map<String, List<String>> getAllContentsOfEachCell(List<Feature> listFeatures) {
 		// Cette méthode servira pour l'auto-completion en javascript
 		String currentContent = "";
@@ -279,6 +371,11 @@ public class TraitementPcm {
 		return feat_content;
 	}
 	
+	/**
+	 * fucntion for translate the type PCM in type for HTML
+	 * @param str
+	 * @return String
+	 */
 	public String setTypeForHtml(String str) {
 		switch (str) {
 		case "conditional":
@@ -326,6 +423,11 @@ public class TraitementPcm {
 		return str;
 	}
 
+	/**
+	 * function for find the best type for each feature
+	 * @param allTypes
+	 * @return Map<String, String>
+	 */
 	public Map<String, String> getBestTypeForEachFeature(Map<String, List<String>> allTypes) {
 
 		Map<String, Integer> nbOccurrence = new LinkedHashMap<String, Integer>();

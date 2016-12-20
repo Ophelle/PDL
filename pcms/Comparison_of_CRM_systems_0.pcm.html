@@ -29,8 +29,9 @@
 					<form action="" method="post">
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
-								<label>Release Date : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Release Date : </label></br> <input style="display:block;" id="id1Release Date" type="number" name="Feature">
+												<input style="display:none;" id="id2Release Date" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Release Date','id2Release Date');">Changer type</button></br>								
 								</br>	
 								<label>Implementation language(s) : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
@@ -46,8 +47,9 @@
 								</br>	
 								<label>Server Operating System : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
-								<label>First Release Date : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>First Release Date : </label></br> <input style="display:block;" id="id1First Release Date" type="number" name="Feature">
+												<input style="display:none;" id="id2First Release Date" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First Release Date','id2First Release Date');">Changer type</button></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -78,7 +80,7 @@
 									local : ['Cross-platform','Windows, Linux, Unix, Mac','Windows','Windows, Linux, Unix, Mac OS','Cloud Computing','Cloud Computing, iOS, Android, Windows Phone','Linux, Unix, Mac OS X, Windows','Web, iOS, Android','Windows, Linux','Windows, Mac','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

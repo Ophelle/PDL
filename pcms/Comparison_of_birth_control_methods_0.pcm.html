@@ -41,8 +41,9 @@
 								</br>	
 								<label>Implementation : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>Perfect-use failure rate (%) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Perfect-use failure rate (%) : </label></br> <input style="display:block;" id="id1Perfect-use failure rate (%)" type="number" name="Feature">
+												<input style="display:none;" id="id2Perfect-use failure rate (%)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Perfect-use failure rate (%)','id2Perfect-use failure rate (%)');">Changer type</button></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -69,7 +70,7 @@
 									local : ['Withdrawal','Vaginal insertion','n/a','Injection','Calendar-based','Surgical procedure','Intrauterine','Transdermal patch','Subdermal implant','Oral medication','Delivery','Observation and charting','Placed on erect penis','Intramuscular Injection','mouth','Breastfeeding','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

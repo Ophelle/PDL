@@ -41,8 +41,9 @@
 											<input type="checkbox" name="Feature" >400single channel</br>	
 											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Release Date : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Release Date : </label></br> <input style="display:block;" id="id1Release Date" type="number" name="Feature">
+												<input style="display:none;" id="id2Release Date" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Release Date','id2Release Date');">Changer type</button></br>								
 								</br>	
 								<label>Notes : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
@@ -93,7 +94,7 @@
 									local : ['','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

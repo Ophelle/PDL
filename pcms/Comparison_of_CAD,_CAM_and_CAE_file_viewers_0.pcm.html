@@ -67,11 +67,11 @@
 								</br>	
 								<label>Runs on POSIX style systems? :</label></br>
 								<input type="radio" name="FeatureRuns on POSIX style systems?" value="oui">Yes <input type="radio" name="FeatureRuns on POSIX style systems?" value = "non">No <input type="radio" name="FeatureRuns on POSIX style systems?" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureRuns on POSIX style systems?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Other platforms? :</label></br>
 								<input type="radio" name="FeatureOther platforms?" value="oui">Yes <input type="radio" name="FeatureOther platforms?" value = "non">No <input type="radio" name="FeatureOther platforms?" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureOther platforms?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Developer : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
@@ -79,16 +79,17 @@
 								</br>	
 								<label>3D support? :</label></br>
 								<input type="radio" name="Feature3D support?" value="oui">Yes <input type="radio" name="Feature3D support?" value = "non">No <input type="radio" name="Feature3D support?" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="Feature3D support?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Open source? : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Latest stable release : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Latest stable release : </label></br> <input style="display:block;" id="id1Latest stable release" type="number" name="Feature">
+												<input style="display:none;" id="id2Latest stable release" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Latest stable release','id2Latest stable release');">Changer type</button></br>								
 								</br>	
 								<label>Runs on Windows? :</label></br>
 								<input type="radio" name="FeatureRuns on Windows?" value="oui">Yes <input type="radio" name="FeatureRuns on Windows?" value = "non">No <input type="radio" name="FeatureRuns on Windows?" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureRuns on Windows?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -103,7 +104,7 @@
 									local : ['Yes (GPLv2)','No(Free download)','No','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

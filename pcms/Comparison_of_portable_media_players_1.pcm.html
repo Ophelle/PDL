@@ -35,13 +35,15 @@
 								</br>	
 								<label>Resolution (px) : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Video battery life (hr) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Video battery life (hr) : </label></br> <input style="display:block;" id="id1Video battery life (hr)" type="number" name="Feature">
+												<input style="display:none;" id="id2Video battery life (hr)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Video battery life (hr)','id2Video battery life (hr)');">Changer type</button></br>								
 								</br>	
 								<label>Name : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Audio battery life (hr) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Audio battery life (hr) : </label></br> <input style="display:block;" id="id1Audio battery life (hr)" type="number" name="Feature">
+												<input style="display:none;" id="id2Audio battery life (hr)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Audio battery life (hr)','id2Audio battery life (hr)');">Changer type</button></br>								
 								</br>	
 								<label>Video out :</label></br>
 											<input type="checkbox" name="Feature" >Component</br>	
@@ -56,7 +58,7 @@
 								</br>	
 								<label>Speaker :</label></br>
 								<input type="radio" name="FeatureSpeaker" value="oui">Yes <input type="radio" name="FeatureSpeaker" value = "non">No <input type="radio" name="FeatureSpeaker" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureSpeaker" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Navigation :</label></br>
 											<input type="checkbox" name="Feature" >Multi-touch screen</br>	
@@ -85,14 +87,17 @@
 											<input type="checkbox" name="Feature" >6 buttons</br>	
 											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Color depth (bpp) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Color depth (bpp) : </label></br> <input style="display:block;" id="id1Color depth (bpp)" type="number" name="Feature">
+												<input style="display:none;" id="id2Color depth (bpp)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Color depth (bpp)','id2Color depth (bpp)');">Changer type</button></br>								
 								</br>	
-								<label>Screen size (in) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Screen size (in) : </label></br> <input style="display:block;" id="id1Screen size (in)" type="number" name="Feature">
+												<input style="display:none;" id="id2Screen size (in)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Screen size (in)','id2Screen size (in)');">Changer type</button></br>								
 								</br>	
-								<label>Frame rate (Hz) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Frame rate (Hz) : </label></br> <input style="display:block;" id="id1Frame rate (Hz)" type="number" name="Feature">
+												<input style="display:none;" id="id2Frame rate (Hz)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Frame rate (Hz)','id2Frame rate (Hz)');">Changer type</button></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -111,7 +116,7 @@
 									local : ['iPod classic','ZEN','Samsung Galaxy Player 4.0 & 5.0','Archos 105','Archos 705 WiFi','GP2X F-200','iPod nano 5G','Cowon D2','iriver clix 2G','ZEN Vision W','Zune HD','ZVUE 260','Archos 5','PSP Slim/Lite','Sansa Fuze+','Sansa View','Archos 605 WiFi/GPS','Zune 80/120','Archos 405','iPod touch','Samsung T10','Samsung P2','Zune 4/8/16','iPod nano 6G','Cowon Q5W','Cowon A3','Sansa Fuze','Walkman NWZ-A810 series','Gigabeat T-Series','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

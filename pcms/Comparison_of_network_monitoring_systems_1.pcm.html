@@ -91,8 +91,9 @@
 								</br>	
 								<label>NetXMS : </label></br> <input id="19" type="text" name="Feature"></br>
 								</br>	
-								<label>Icinga : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Icinga : </label></br> <input style="display:block;" id="id1Icinga" type="number" name="Feature">
+												<input style="display:none;" id="id2Icinga" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Icinga','id2Icinga');">Changer type</button></br>								
 								</br>	
 								<label>NetCrunch : </label></br> <input id="20" type="text" name="Feature"></br>
 								</br>	
@@ -125,8 +126,9 @@
 											<input type="checkbox" name="Feature" >1994</br>	
 											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Centina Systems NetOmnia : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Centina Systems NetOmnia : </label></br> <input style="display:block;" id="id1Centina Systems NetOmnia" type="number" name="Feature">
+												<input style="display:none;" id="id2Centina Systems NetOmnia" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Centina Systems NetOmnia','id2Centina Systems NetOmnia');">Changer type</button></br>								
 								</br>	
 								<label>NetQoS Performance Center : </label></br> <input id="31" type="text" name="Feature"></br>
 								</br>	
@@ -155,8 +157,9 @@
 											<input type="checkbox" name="Feature" >26-Sept-2014</br>	
 											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>IPHost Network Monitor : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>IPHost Network Monitor : </label></br> <input style="display:block;" id="id1IPHost Network Monitor" type="number" name="Feature">
+												<input style="display:none;" id="id2IPHost Network Monitor" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1IPHost Network Monitor','id2IPHost Network Monitor');">Changer type</button></br>								
 								</br>	
 								<label>collectd : </label></br> <input id="41" type="text" name="Feature"></br>
 								</br>	
@@ -371,7 +374,7 @@
 									local : ['?','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

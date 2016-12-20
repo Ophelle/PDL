@@ -37,7 +37,7 @@
 								<#list getAllTypesValue as keys, valueAll>
 									<#list valueAll as valueAll>
 										<#if valueAll=="string" >
-											<input type="text"/></br><#break>
+											<input name="Feature${key}" type="${value}" value="autre"/>Autre : <input type="text"/></br><#break>
 										</#if>		
 									</#list>
 									<#break>
@@ -72,12 +72,13 @@
 								<#assign i++>				
 							<#else>
 								</br>	
-								<label>${key} : </label></br> <input type="${value}" name="Feature"></br>
+								<label>${key} : </label></br> <input style="display:block;" id="id1${key}" type="${value}" name="Feature">
 								<#list getAllTypesValue as keys, valueAll>
 									<#list valueAll as valueAll>
 										<#if value != "text">
 											<#if valueAll=="string">
-												<input type="text"/></br><#break>
+												<input style="display:none;" id="id2${key}" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1${key}','id2${key}');">Changer type</button></br><#break>
 											</#if>		
 										</#if>		
 									</#list>
@@ -96,7 +97,7 @@
 								<#assign j++>
 							</#list>
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

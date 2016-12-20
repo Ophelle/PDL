@@ -35,11 +35,13 @@
 								</br>	
 								<label>Memory clock (MHz) : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>API compliance (version) - OpenGL : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>API compliance (version) - OpenGL : </label></br> <input style="display:block;" id="id1API compliance (version) - OpenGL" type="number" name="Feature">
+												<input style="display:none;" id="id2API compliance (version) - OpenGL" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1API compliance (version) - OpenGL','id2API compliance (version) - OpenGL');">Changer type</button></br>								
 								</br>	
-								<label>API compliance (version) - DirectX : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>API compliance (version) - DirectX : </label></br> <input style="display:block;" id="id1API compliance (version) - DirectX" type="number" name="Feature">
+												<input style="display:none;" id="id2API compliance (version) - DirectX" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1API compliance (version) - DirectX','id2API compliance (version) - DirectX');">Changer type</button></br>								
 								</br>	
 								<label>Fillrate (GT/s) : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
@@ -59,8 +61,9 @@
 								</br>	
 								<label>Notes : </label></br> <input id="11" type="text" name="Feature"></br>
 								</br>	
-								<label>Memory (MB) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Memory (MB) : </label></br> <input style="display:block;" id="id1Memory (MB)" type="number" name="Feature">
+												<input style="display:none;" id="id2Memory (MB)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Memory (MB)','id2Memory (MB)');">Changer type</button></br>								
 								</br>	
 								<label>Bus interface : </label></br> <input id="12" type="text" name="Feature"></br>
 						<script>
@@ -105,7 +108,7 @@
 									local : ['PCI','PCIe x16','PCIe 2.0 x1/x16, PCI','PCIe x1','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

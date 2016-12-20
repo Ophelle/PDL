@@ -41,8 +41,9 @@
 								</br>	
 								<label>Ground clearance : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>Entered service : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Entered service : </label></br> <input style="display:block;" id="id1Entered service" type="number" name="Feature">
+												<input style="display:none;" id="id2Entered service" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Entered service','id2Entered service');">Changer type</button></br>								
 								</br>	
 								<label>Range (road) (terrain) : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
@@ -113,8 +114,9 @@
 								</br>	
 								<label>Related model : </label></br> <input id="18" type="text" name="Feature"></br>
 								</br>	
-								<label>Crew : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Crew : </label></br> <input style="display:block;" id="id1Crew" type="number" name="Feature">
+												<input style="display:none;" id="id2Crew" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Crew','id2Crew');">Changer type</button></br>								
 								</br>	
 								<label>Weight : </label></br> <input id="19" type="text" name="Feature"></br>
 								</br>	
@@ -226,7 +228,7 @@
 									local : ['96.5 kPa','?','59 kPa','62.76 kPa','60 kPa','76.5 kPa','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

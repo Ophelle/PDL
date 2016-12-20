@@ -31,8 +31,9 @@
 								</br>	
 								<label>Status : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Last flight : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Last flight : </label></br> <input style="display:block;" id="id1Last flight" type="number" name="Feature">
+												<input style="display:none;" id="id2Last flight" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Last flight','id2Last flight');">Changer type</button></br>								
 								</br>	
 								<label>Manufacturer : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
@@ -40,8 +41,9 @@
 								</br>	
 								<label>Origin : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>First flight : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>First flight : </label></br> <input style="display:block;" id="id1First flight" type="number" name="Feature">
+												<input style="display:none;" id="id2First flight" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First flight','id2First flight');">Changer type</button></br>								
 								</br>	
 								<label>Vehicle : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
@@ -50,8 +52,9 @@
 								<label>Mass toLEO(kg) :</label></br>
 											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Launches : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Launches : </label></br> <input style="display:block;" id="id1Launches" type="number" name="Feature">
+												<input style="display:none;" id="id2Launches" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Launches','id2Launches');">Changer type</button></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -78,7 +81,7 @@
 									local : ['2,740 to SSO1,900 to GTO','','1,700 to GTO','700 to GTO','7,820 to SSO5,370 to GTO1,750 to GEO','1,830 to GTO','25,000 to TLI','2,650 to GTO','2,020 to GTO','5,945 to SSO3,970 to GTO1,500 to GEO','4,440 to GTO','1,100 to GTO','3,250 to GTO with Fregat-MT','2,340','5,000 to GTO','2,270 to GTO','4,200','1,819 to GTO1,177 to TLI1,265 to HCO','6,150 to GTO','8,000 to GTO','1,312 to GTO','4,944 to GTO with IUS4,540 to GSO with Centaur14,090 to SSO3,550 to escape with IUS','7,100 to GTO','14,000 to GTO','954 to GTO','52,000 to TLI','3,800 to GTO','1,430 to polar1,330 to SSO','20,000 to GEO32,000 to TLI','2,930 to GTO','1,651 to SSO','11,500 to GTO','2,740 to GTO','1,154 to GTO with PAM-D','7,500 to GTO with KVTK5,400 to GTO with Briz-M','14,220 to GTO','3,123 to SSO','2,810 to GTO2,000 to HCO','1,284 to GTO with PAM-D','1,966 to SSO','9,585 to SSO6,485 to GTO2,760 to GEO','11,000 to GTO','4,193 to GTO','4,500 to SSO3,200 to GTO','4,720 to GTO','1,058 to GTO734 to TLI711 to HCO','12,435 to SSO8,700 to GTO3,960 to GEO','2,171 to GTO1,508 to HCO','5,490 to GTO','3,465 to GTO','9,050 to SSO7,000 to GTO','3,750 to GTO','4,460 to GTO','6,900','6,000 to GTO','3,350 to GTO','2,400 to GTO from Baikonour','2,500 to GTO','4,030 to GTO','2,105 to GTO','21,200 to GTO13,200 to TLI','818 to SSO','40,600 to TLI','5,761 to GTO (9,000 with upper stage)','1,104 to GTO','4,944 to GTO with IUS3,550 to escape with IUS1,200 to GTO with PAM-D','3,480 to GTO','5,000 to SSO3,700 to GTO','4,930 to GTO','9,050 to SSO7,800 to GTO','7,300 to GTO','5,800 to GTO','3,833 to GTO2,680 to HCO','1,100 to SSO','8,000','47,000 to TLI','4,100 to SSO3,000 to GTO','4,609 to GTO','4,000 to GTO','1,800 to GTO','1,447 to GTO','1,440 to GTO1,900 to SSO','1,100 to GTO804 to HCO','11,160 to SSO7,425 to GTO3,250 to GEO','3,600 to SSO','10,050 to GTO','6,000 to SSO4,200 to GTO','370 to SSO','724 to GTO','934 to GTO636 to TLI629 to HCO','50,000 to TLI','5,500 to GTO','3,180 to GTO2,160 to HCO','4,850 to GTO','1,050 to GTO1,600 to SSO','3,400 to SSO2,600 to GTO','6,670 to SSO4,950 to GTO','640 to GTO447 to TLI','4,060 to GTO2,970 to HCO','2,810 to GTO with Fregat','3,833 to GTO','1,200 to SSO','12,435 to SSO8,240 to GTO3,730 to GEO','6,390 to GTO','1,300 to GTO1,750 to SSO','8,495 to SSO6,075 to GTO','6,600 to GTO','1,050 to SSO','4,220 to GTO','3,810 to GTO','1,500 to SSO','167 to SSO','2,222 to GTO1,179 to HCO','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

@@ -37,11 +37,11 @@
 								</br>	
 								<label>Linux :</label></br>
 								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureLinux" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Windows :</label></br>
 								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureWindows" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>FOSS :</label></br>
 											<input type="checkbox" name="Feature" >No; Proprietary</br>	
@@ -55,16 +55,17 @@
 								</br>	
 								<label>Name : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>First public release date : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>First public release date : </label></br> <input style="display:block;" id="id1First public release date" type="number" name="Feature">
+												<input style="display:none;" id="id2First public release date" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First public release date','id2First public release date');">Changer type</button></br>								
 								</br>	
 								<label>Free :</label></br>
 								<input type="radio" name="FeatureFree" value="oui">Yes <input type="radio" name="FeatureFree" value = "non">No <input type="radio" name="FeatureFree" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureFree" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Macintosh :</label></br>
 								<input type="radio" name="FeatureMacintosh" value="oui">Yes <input type="radio" name="FeatureMacintosh" value = "non">No <input type="radio" name="FeatureMacintosh" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureMacintosh" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -87,7 +88,7 @@
 									local : ['diff, diff3','UCC','UltraCompare','SG DiffMerge','Guiffy SureMerge','Lazarus Diff','Eclipse (compare)','Notepad++ (compare)','vimdiff','FileMerge','Tkdiff','Total Commander (compare)','Meld','Araxis Merge','fc','WinDiff','DiffTool','Far Manager (compare)','Kompare','twdiff (TextWrangler Diff Helper)','WinMerge','KDiff3','Diffuse','Beyond Compare','IntelliJ IDEA (compare)','Pretty Diff','Ediff','jEdit JDiff plugin','Perforce P4Merge','Compare++','ExamDiff Pro','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

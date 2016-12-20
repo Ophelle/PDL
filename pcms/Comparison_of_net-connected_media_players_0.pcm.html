@@ -45,25 +45,25 @@
 								</br>	
 								<label>Video conferencing :</label></br>
 								<input type="radio" name="FeatureVideo conferencing" value="oui">Yes <input type="radio" name="FeatureVideo conferencing" value = "non">No <input type="radio" name="FeatureVideo conferencing" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureVideo conferencing" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Samba :</label></br>
 								<input type="radio" name="FeatureSamba" value="oui">Yes <input type="radio" name="FeatureSamba" value = "non">No <input type="radio" name="FeatureSamba" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureSamba" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Application store :</label></br>
 								<input type="radio" name="FeatureApplication store" value="oui">Yes <input type="radio" name="FeatureApplication store" value = "non">No <input type="radio" name="FeatureApplication store" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureApplication store" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>YouTube HD :</label></br>
 								<input type="radio" name="FeatureYouTube HD" value="oui">Yes <input type="radio" name="FeatureYouTube HD" value = "non">No <input type="radio" name="FeatureYouTube HD" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureYouTube HD" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Gaming : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Torrent :</label></br>
 								<input type="radio" name="FeatureTorrent" value="oui">Yes <input type="radio" name="FeatureTorrent" value = "non">No <input type="radio" name="FeatureTorrent" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureTorrent" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Storage : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
@@ -80,7 +80,7 @@
 								</br>	
 								<label>Online S/W Upgrade :</label></br>
 								<input type="radio" name="FeatureOnline S/W Upgrade" value="oui">Yes <input type="radio" name="FeatureOnline S/W Upgrade" value = "non">No <input type="radio" name="FeatureOnline S/W Upgrade" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureOnline S/W Upgrade" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Audio formats : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
@@ -91,14 +91,15 @@
 								</br>	
 								<label>DLNA :</label></br>
 								<input type="radio" name="FeatureDLNA" value="oui">Yes <input type="radio" name="FeatureDLNA" value = "non">No <input type="radio" name="FeatureDLNA" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureDLNA" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Graphics processing unit (GPU) : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
 								<label>Image formats : </label></br> <input id="7" type="text" name="Feature"></br>
 								</br>	
-								<label>Audio output : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Audio output : </label></br> <input style="display:block;" id="id1Audio output" type="number" name="Feature">
+												<input style="display:none;" id="id2Audio output" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Audio output','id2Audio output');">Changer type</button></br>								
 								</br>	
 								<label>Network :</label></br>
 											<input type="checkbox" name="Feature" >Wireless</br>	
@@ -107,17 +108,17 @@
 								</br>	
 								<label>DTS :</label></br>
 								<input type="radio" name="FeatureDTS" value="oui">Yes <input type="radio" name="FeatureDTS" value = "non">No <input type="radio" name="FeatureDTS" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureDTS" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>User-Interface : </label></br> <input id="8" type="text" name="Feature"></br>
 								</br>	
 								<label>3G dongle :</label></br>
 								<input type="radio" name="Feature3G dongle" value="oui">Yes <input type="radio" name="Feature3G dongle" value = "non">No <input type="radio" name="Feature3G dongle" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="Feature3G dongle" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Keyboard/mouse support :</label></br>
 								<input type="radio" name="FeatureKeyboard/mouse support" value="oui">Yes <input type="radio" name="FeatureKeyboard/mouse support" value = "non">No <input type="radio" name="FeatureKeyboard/mouse support" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureKeyboard/mouse support" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Categories : </label></br> <input id="9" type="text" name="Feature"></br>
 								</br>	
@@ -180,7 +181,7 @@
 									local : ['Apple single-core A5 chip','Marvell 1500','?','Sigma SMP8655 Secure Media Processor','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

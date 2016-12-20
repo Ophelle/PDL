@@ -35,8 +35,9 @@
 								</br>	
 								<label>Developer : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Released : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Released : </label></br> <input style="display:block;" id="id1Released" type="number" name="Feature">
+												<input style="display:none;" id="id2Released" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Released','id2Released');">Changer type</button></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -51,7 +52,7 @@
 									local : ['DMA Design?','DMA Design','Ocean Software','Sunsoft','Krisalis Software','Data East USA','Chris White','Take-Two Interactive','E & E Software','Kuusoukagaku Corp.','Team17','Brutal Deluxe Software','?','Distinctive Developments','Probe Software Limited','Visual Sciences','Dominic Morris','BANDIT Inc.','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

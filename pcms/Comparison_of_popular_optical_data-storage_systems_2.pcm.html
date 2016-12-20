@@ -33,8 +33,9 @@
 								</br>	
 								<label>Speed : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>MB/s : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>MB/s : </label></br> <input style="display:block;" id="id1MB/s" type="number" name="Feature">
+												<input style="display:none;" id="id2MB/s" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1MB/s','id2MB/s');">Changer type</button></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -45,7 +46,7 @@
 									local : ['2x','4x','1x','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

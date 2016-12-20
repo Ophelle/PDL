@@ -170,8 +170,9 @@
 											<input type="checkbox" name="Feature" >832</br>	
 											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Total Lifts : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Total Lifts : </label></br> <input style="display:block;" id="id1Total Lifts" type="number" name="Feature">
+												<input style="display:none;" id="id2Total Lifts" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Total Lifts','id2Total Lifts');">Changer type</button></br>								
 								</br>	
 								<label>Base Elevation (ft) :</label></br>
 											<input type="checkbox" name="Feature" >7</br>	
@@ -248,8 +249,9 @@
 								</br>	
 								<label>Avg Annual Snowfall : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Total Trails : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Total Trails : </label></br> <input style="display:block;" id="id1Total Trails" type="number" name="Feature">
+												<input style="display:none;" id="id2Total Trails" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Total Trails','id2Total Trails');">Changer type</button></br>								
 								</br>	
 								<label>Peak Elevation (ft) :</label></br>
 											<input type="checkbox" name="Feature" >9</br>	
@@ -362,7 +364,7 @@
 									local : ['Three Points, CA','Soda Springs, CA','Boyne City','Farmington','North Vancouver','South Lake Tahoe','Keystone, CO','Lake Louise','Big Bear Lake, CA','Carrabassett Valley','Angels Camp, CA','Sonora, CA','Frisco','Bozeman, MT','Beaupré','Salt Lake City','Vernon','Portland','Whistler','Truckee, CA','Park City','Kirkwood, CA','Steamboat Springs','Taos, NM','Running Springs, CA','Yosemite National Park','Pagosa Springs, CO','Norden, CA','Stevens Pass','Lakeshore, CA','June Lake, CA','Kamloops','Collingwood','Wrightwood, CA','Bend','Ludlow','Flagstaff, AZ','Mount Baldy, CA','Stowe','Mount Shasta, CA','Winter Park','Killington','West Vancouver','Teton Village, WY','Jeffersonville','Los Alamos, NM','Rossland','Petite-Rivière-Saint-François','Avon','Enumclaw','Hunter','Marlinton','Vail','Georgetown, CO','Twin Bridges, CA','Windham','Mammoth Lakes','Jasper','Mont Tremblant','Kalispell, MT','Nederland','Homewood, CA','Revelstoke, BC','Telluride, CO','Golden','Breckenridge, CO','Girdwood','Banff','Wofford Heights, CA','Warren','Santa Fe, NM','Vernon Township','Kelowna','Ashland, OR','Invermere, British Columbia','Brian Head','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

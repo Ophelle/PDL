@@ -29,8 +29,9 @@
 					<form action="" method="post">
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
-								<label>Max # operand : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Max # operand : </label></br> <input style="display:block;" id="id1Max # operand" type="number" name="Feature">
+												<input style="display:none;" id="id2Max # operand" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Max # operand','id2Max # operand');">Changer type</button></br>								
 								</br>	
 								<label>Open : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
@@ -40,8 +41,9 @@
 								</br>	
 								<label>Extensions : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Bits : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Bits : </label></br> <input style="display:block;" id="id1Bits" type="number" name="Feature">
+												<input style="display:none;" id="id2Bits" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Bits','id2Bits');">Changer type</button></br>								
 								</br>	
 								<label>Endianness : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
@@ -55,11 +57,13 @@
 								</br>	
 								<label>Type : </label></br> <input id="9" type="text" name="Feature"></br>
 								</br>	
-								<label>Registers (excluding FP/vector) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Registers (excluding FP/vector) : </label></br> <input style="display:block;" id="id1Registers (excluding FP/vector)" type="number" name="Feature">
+												<input style="display:none;" id="id2Registers (excluding FP/vector)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Registers (excluding FP/vector)','id2Registers (excluding FP/vector)');">Changer type</button></br>								
 								</br>	
-								<label>Introduced : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Introduced : </label></br> <input style="display:block;" id="id1Introduced" type="number" name="Feature">
+												<input style="display:none;" id="id2Introduced" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Introduced','id2Introduced');">Changer type</button></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -102,7 +106,7 @@
 									local : ['Register Memory / Memory Memory','','Register Memory','Memory Memory','Stack machine','Register Register','Type','Register Register / Register Memory','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

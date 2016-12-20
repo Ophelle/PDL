@@ -31,8 +31,9 @@
 								</br>	
 								<label>Common peak of players : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>No. of servers / shards / worlds : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>No. of servers / shards / worlds : </label></br> <input style="display:block;" id="id1No. of servers / shards / worlds" type="number" name="Feature">
+												<input style="display:none;" id="id2No. of servers / shards / worlds" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1No. of servers / shards / worlds','id2No. of servers / shards / worlds');">Changer type</button></br>								
 								</br>	
 								<label>No. of players :</label></br>
 											<input type="checkbox" name="Feature" >400</br>	
@@ -59,7 +60,7 @@
 								</br>	
 								<label>Contains Instances :</label></br>
 								<input type="radio" name="FeatureContains Instances" value="oui">Yes <input type="radio" name="FeatureContains Instances" value = "non">No <input type="radio" name="FeatureContains Instances" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureContains Instances" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>No. of players per server / shards / worlds : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
@@ -78,7 +79,7 @@
 									local : ['Final Fantasy XIV','DarkSpace','Dark Age of Camelot','EVE Online','Vendetta Online','Warhammer Online: Age of Reckoning','Guild Wars','Rift (video game)','Rise: The Vieneo Province','Anarchy Online','Star Wars Galaxies','Ryzom','Tibia','Star Trek Online','Star Wars: The Old Republic','EverQuest','RuneScape','Ultima Online','Lineage II','Final Fantasy XI','MapleStory','Guild Wars 2','Pirates of the Burning Sea','City of Heroes','Dofus','EverQuest II','','Asheron`s Call','Dungeons and Dragons Online: Stormreach','Perfect World','The Lord of the Rings Online: Shadows of Angmar','Knight Online','Ragnarok Online','World of Warcraft','WonderKing Online','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

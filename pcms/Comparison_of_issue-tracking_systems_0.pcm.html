@@ -64,8 +64,9 @@
 											<input type="checkbox" name="Feature" >search engine</br>	
 											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Launch date : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Launch date : </label></br> <input style="display:block;" id="id1Launch date" type="number" name="Feature">
+												<input style="display:none;" id="id2Launch date" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Launch date','id2Launch date');">Changer type</button></br>								
 								</br>	
 								<label>System : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
@@ -92,7 +93,7 @@
 									local : ['BMC Software','Canonical Ltd.','Ivaldi','Axosoft LLC','Turbine interactive','Jean-Philippe Lang','SysAid Technologies','Rational Software','Ka-Ping Yee, Richard Jones','Open Lab','Free Software Foundation','Microsoft','Various (open source contributors)','originally Starbase Corporation, currently Borland','Apache Software Foundation','otrs.org','Artenum','Doug Luxem','Usersnap GmbH','Seapine Software','Best Practical Solutions, LLC','INDEPNET','TechExcel','Zoho Corp.','Debian','Atlassian','Wrike, Inc.','Hornbill Systems','Google Code','Mozilla Foundation','Edgewall Software','Fog Creek Software','Assembla','Pivotal Labs','Kayako','MacsDesign Studio, LLC','Carsten Dominik','Planbox','JetBrains s.r.o.','D. Richard Hipp','Bontq LLC','Hewlett-Packard, formerly Mercury Interactive','Automation Centre','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

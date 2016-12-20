@@ -67,8 +67,9 @@
 											<input type="checkbox" name="Feature" >10</br>	
 											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Max column name size : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Max column name size : </label></br> <input style="display:block;" id="id1Max column name size" type="number" name="Feature">
+												<input style="display:none;" id="id2Max column name size" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Max column name size','id2Max column name size');">Changer type</button></br>								
 								</br>	
 								<label>Max NUMBER size : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
@@ -113,7 +114,7 @@
 									local : ['Unlimited','524,272 TB (32 767 files * 16 TB max file size)','2 GB','4 GB','4 billion objects','~128 PB','Limited','Unlimited (4 GB * block size per tablespace)','32 TB per instance (Unlimited via elastic cluster)','64 TB','2 EB','128 TB (2 pages * 64 KB max page size)','8 TB','Max DB size','Limited by available RAM, address space','104 TB (13 files, each file up to 8 TB (32 KB pages))','256 TB','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

@@ -45,7 +45,7 @@
 								</br>	
 								<label>Requires premium fuel (91 octane (R+M)/2 ) :</label></br>
 								<input type="radio" name="FeatureRequires premium fuel (91 octane (R+M)/2 )" value="oui">Yes <input type="radio" name="FeatureRequires premium fuel (91 octane (R+M)/2 )" value = "non">No <input type="radio" name="FeatureRequires premium fuel (91 octane (R+M)/2 )" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureRequires premium fuel (91 octane (R+M)/2 )" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Base price :</label></br>
 											<input type="checkbox" name="Feature" >US$22</br>	
@@ -59,8 +59,9 @@
 											<input type="checkbox" name="Feature" >700</br>	
 											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Maximum seating : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Maximum seating : </label></br> <input style="display:block;" id="id1Maximum seating" type="number" name="Feature">
+												<input style="display:none;" id="id2Maximum seating" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Maximum seating','id2Maximum seating');">Changer type</button></br>								
 								</br>	
 								<label>Engine output : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
@@ -133,7 +134,7 @@
 									local : ['47.5 mpg (4.95 L/100 km; 57.0 mpg)','45 mpg (5.2 L/100 km; 54 mpg)','36.6 mpg (6.43 L/100 km; 44.0 mpg)','48.7 mpg (4.83 L/100 km; 58.5 mpg)','24.5 mpg (9.6 L/100 km; 29.4 mpg)','','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

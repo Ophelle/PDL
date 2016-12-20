@@ -55,8 +55,9 @@
 								</br>	
 								<label>TM1 : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>SAS OLAP Server : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>SAS OLAP Server : </label></br> <input style="display:block;" id="id1SAS OLAP Server" type="number" name="Feature">
+												<input style="display:none;" id="id2SAS OLAP Server" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1SAS OLAP Server','id2SAS OLAP Server');">Changer type</button></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -83,7 +84,7 @@
 									local : ['Unrestricted','?','256','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

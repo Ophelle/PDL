@@ -39,19 +39,23 @@
 								</br>	
 								<label>Storage size[GB] : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>RAM[MB] : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>RAM[MB] : </label></br> <input style="display:block;" id="id1RAM[MB]" type="number" name="Feature">
+												<input style="display:none;" id="id2RAM[MB]" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1RAM[MB]','id2RAM[MB]');">Changer type</button></br>								
 								</br>	
-								<label>Weight [kg] : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Weight [kg] : </label></br> <input style="display:block;" id="id1Weight [kg]" type="number" name="Feature">
+												<input style="display:none;" id="id2Weight [kg]" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Weight [kg]','id2Weight [kg]');">Changer type</button></br>								
 								</br>	
-								<label>Windows OS choice(s) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Windows OS choice(s) : </label></br> <input style="display:block;" id="id1Windows OS choice(s)" type="number" name="Feature">
+												<input style="display:none;" id="id2Windows OS choice(s)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Windows OS choice(s)','id2Windows OS choice(s)');">Changer type</button></br>								
 								</br>	
 								<label>Storage type : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>Speed [GHz] : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Speed [GHz] : </label></br> <input style="display:block;" id="id1Speed [GHz]" type="number" name="Feature">
+												<input style="display:none;" id="id2Speed [GHz]" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Speed [GHz]','id2Speed [GHz]');">Changer type</button></br>								
 								</br>	
 								<label>Expected release date :</label></br>
 											<input type="checkbox" name="Feature" >June</br>	
@@ -60,8 +64,9 @@
 								</br>	
 								<label>Manufacturer : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
-								<label>Display size : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Display size : </label></br> <input style="display:block;" id="id1Display size" type="number" name="Feature">
+												<input style="display:none;" id="id2Display size" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Display size','id2Display size');">Changer type</button></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -92,7 +97,7 @@
 									local : ['Nokia','GNB','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

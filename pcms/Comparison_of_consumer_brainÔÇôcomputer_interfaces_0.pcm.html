@@ -51,8 +51,9 @@
 								</br>	
 								<label>Notes : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Electrodes : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Electrodes : </label></br> <input style="display:block;" id="id1Electrodes" type="number" name="Feature">
+												<input style="display:none;" id="id2Electrodes" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Electrodes','id2Electrodes');">Changer type</button></br>								
 								</br>	
 								<label>Price : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
@@ -72,11 +73,11 @@
 								</br>	
 								<label>Peripheral :</label></br>
 								<input type="radio" name="FeaturePeripheral" value="oui">Yes <input type="radio" name="FeaturePeripheral" value = "non">No <input type="radio" name="FeaturePeripheral" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeaturePeripheral" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>SDK :</label></br>
 								<input type="radio" name="FeatureSDK" value="oui">Yes <input type="radio" name="FeatureSDK" value = "non">No <input type="radio" name="FeatureSDK" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureSDK" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Interface : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
@@ -101,7 +102,7 @@
 									local : ['','Bluetooth Low Energy','Bluetooth','Bluetooth Low Energy / USB / SD Card','Bluetooth or RF','Bluetooth 4.0','Bluetooth 4.0 LE.','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

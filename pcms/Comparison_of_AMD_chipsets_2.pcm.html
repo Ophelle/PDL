@@ -41,7 +41,7 @@
 								</br>	
 								<label>SLI :</label></br>
 								<input type="radio" name="FeatureSLI" value="oui">Yes <input type="radio" name="FeatureSLI" value = "non">No <input type="radio" name="FeatureSLI" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureSLI" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>IGP : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
@@ -107,8 +107,9 @@
 											<input type="checkbox" name="Feature" >SB950</br>	
 											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Fab (nm) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Fab (nm) : </label></br> <input style="display:block;" id="id1Fab (nm)" type="number" name="Feature">
+												<input style="display:none;" id="id2Fab (nm)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fab (nm)','id2Fab (nm)');">Changer type</button></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -139,7 +140,7 @@
 									local : ['13.6W','','22 W','Two PCIe 2.0 x16, IOMMUAM3+ socket support','TDP (W)','18 W','Four PCIe 2.0 x16, IOMMUAM3+ socket support','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

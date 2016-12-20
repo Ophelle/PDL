@@ -43,16 +43,17 @@
 								</br>	
 								<label>KHTML :</label></br>
 								<input type="radio" name="FeatureKHTML" value="oui">Yes <input type="radio" name="FeatureKHTML" value = "non">No <input type="radio" name="FeatureKHTML" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureKHTML" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
-								<label>Trident : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Trident : </label></br> <input style="display:block;" id="id1Trident" type="number" name="Feature">
+												<input style="display:none;" id="id2Trident" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Trident','id2Trident');">Changer type</button></br>								
 								</br>	
 								<label>Supported first by : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Presto :</label></br>
 								<input type="radio" name="FeaturePresto" value="oui">Yes <input type="radio" name="FeaturePresto" value = "non">No <input type="radio" name="FeaturePresto" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeaturePresto" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>WebKit : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
@@ -60,7 +61,7 @@
 								</br>	
 								<label>Gecko :</label></br>
 								<input type="radio" name="FeatureGecko" value="oui">Yes <input type="radio" name="FeatureGecko" value = "non">No <input type="radio" name="FeatureGecko" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureGecko" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -79,7 +80,7 @@
 									local : ['img','body','table','caption','frameset','form','script','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

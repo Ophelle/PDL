@@ -29,8 +29,9 @@
 					<form action="" method="post">
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
-								<label>Released : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Released : </label></br> <input style="display:block;" id="id1Released" type="number" name="Feature">
+												<input style="display:none;" id="id2Released" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Released','id2Released');">Changer type</button></br>								
 								</br>	
 								<label>Features / Notes :</label></br>
 											<input type="checkbox" name="Feature" >DirectX 10</br>	
@@ -64,8 +65,9 @@
 								</br>	
 								<label>Codename : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Fab (nm) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Fab (nm) : </label></br> <input style="display:block;" id="id1Fab (nm)" type="number" name="Feature">
+												<input style="display:none;" id="id2Fab (nm)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fab (nm)','id2Fab (nm)');">Changer type</button></br>								
 								</br>	
 								<label>Southbridge :</label></br>
 											<input type="checkbox" name="Feature" >SB810</br>	
@@ -130,7 +132,7 @@
 									local : ['No','Radeon 3100','Radeon X1270(400Mhz)','Radeon 3000','Radeon HD 3200','Radeon HD 4200','Radeon X1200(350MHz)','Radeon 2100','Radeon HD 3300','Radeon X1250(350Mhz)','Radeon X1250(400MHz)','Radeon X1200(350 MHz)','x16 + x16','Radeon X1250(350 MHz)','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

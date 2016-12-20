@@ -31,13 +31,13 @@
 								</br>	
 								<label>Authentication :</label></br>
 								<input type="radio" name="FeatureAuthentication" value="oui">Yes <input type="radio" name="FeatureAuthentication" value = "non">No <input type="radio" name="FeatureAuthentication" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureAuthentication" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Relay : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Server :</label></br>
 								<input type="radio" name="FeatureServer" value="oui">Yes <input type="radio" name="FeatureServer" value = "non">No <input type="radio" name="FeatureServer" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureServer" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>File Transfer : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
@@ -45,18 +45,19 @@
 								</br>	
 								<label>Image Quality :</label></br>
 								<input type="radio" name="FeatureImage Quality" value="oui">Yes <input type="radio" name="FeatureImage Quality" value = "non">No <input type="radio" name="FeatureImage Quality" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureImage Quality" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Proxy : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Encryption : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Version : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Version : </label></br> <input style="display:block;" id="id1Version" type="number" name="Feature">
+												<input style="display:none;" id="id2Version" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Version','id2Version');">Changer type</button></br>								
 								</br>	
 								<label>Web Client :</label></br>
 								<input type="radio" name="FeatureWeb Client" value="oui">Yes <input type="radio" name="FeatureWeb Client" value = "non">No <input type="radio" name="FeatureWeb Client" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureWeb Client" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Project : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
@@ -83,7 +84,7 @@
 								</br>	
 								<label>Client :</label></br>
 								<input type="radio" name="FeatureClient" value="oui">Yes <input type="radio" name="FeatureClient" value = "non">No <input type="radio" name="FeatureClient" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureClient" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Clipboard Transfer : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
@@ -95,13 +96,13 @@
 								</br>	
 								<label>Color Quality :</label></br>
 								<input type="radio" name="FeatureColor Quality" value="oui">Yes <input type="radio" name="FeatureColor Quality" value = "non">No <input type="radio" name="FeatureColor Quality" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureColor Quality" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Technology : </label></br> <input id="10" type="text" name="Feature"></br>
 								</br>	
 								<label>Multiple Sessions :</label></br>
 								<input type="radio" name="FeatureMultiple Sessions" value="oui">Yes <input type="radio" name="FeatureMultiple Sessions" value = "non">No <input type="radio" name="FeatureMultiple Sessions" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureMultiple Sessions" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>HTTP Tunnel : </label></br> <input id="11" type="text" name="Feature"></br>
 						<script>
@@ -154,7 +155,7 @@
 									local : ['X','✓','HTTP Tunnel','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

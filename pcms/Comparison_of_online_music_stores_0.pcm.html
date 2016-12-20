@@ -31,11 +31,11 @@
 								</br>	
 								<label>WAV :</label></br>
 								<input type="radio" name="FeatureWAV" value="oui">Yes <input type="radio" name="FeatureWAV" value = "non">No <input type="radio" name="FeatureWAV" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureWAV" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>FLAC :</label></br>
 								<input type="radio" name="FeatureFLAC" value="oui">Yes <input type="radio" name="FeatureFLAC" value = "non">No <input type="radio" name="FeatureFLAC" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureFLAC" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>AAC :</label></br>
 											<input type="checkbox" name="Feature" >320 kbpsstyle="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes"|320</br>	
@@ -54,19 +54,21 @@
 								</br>	
 								<label>PurchasePlatform : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Tracks (M) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Tracks (M) : </label></br> <input style="display:block;" id="id1Tracks (M)" type="number" name="Feature">
+												<input style="display:none;" id="id2Tracks (M)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Tracks (M)','id2Tracks (M)');">Changer type</button></br>								
 								</br>	
-								<label>Preview (s) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Preview (s) : </label></br> <input style="display:block;" id="id1Preview (s)" type="number" name="Feature">
+												<input style="display:none;" id="id2Preview (s)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Preview (s)','id2Preview (s)');">Changer type</button></br>								
 								</br>	
 								<label>Trial :</label></br>
 								<input type="radio" name="FeatureTrial" value="oui">Yes <input type="radio" name="FeatureTrial" value = "non">No <input type="radio" name="FeatureTrial" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureTrial" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>ALAC :</label></br>
 								<input type="radio" name="FeatureALAC" value="oui">Yes <input type="radio" name="FeatureALAC" value = "non">No <input type="radio" name="FeatureALAC" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureALAC" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>MP3 :</label></br>
 											<input type="checkbox" name="Feature" >320 kbpsstyle="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes"|320</br>	
@@ -77,17 +79,17 @@
 								</br>	
 								<label>Geographicrestrictions :</label></br>
 								<input type="radio" name="FeatureGeographicrestrictions" value="oui">Yes <input type="radio" name="FeatureGeographicrestrictions" value = "non">No <input type="radio" name="FeatureGeographicrestrictions" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureGeographicrestrictions" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Store : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Vorbis :</label></br>
 								<input type="radio" name="FeatureVorbis" value="oui">Yes <input type="radio" name="FeatureVorbis" value = "non">No <input type="radio" name="FeatureVorbis" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureVorbis" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>DRM :</label></br>
 								<input type="radio" name="FeatureDRM" value="oui">Yes <input type="radio" name="FeatureDRM" value = "non">No <input type="radio" name="FeatureDRM" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureDRM" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -102,7 +104,7 @@
 									local : ['MAQAM','Magnatune','Google Play Music','Audimated','Rhapsody','Jamendo','Discogs','iMesh','Optus Music Store','iTunes Store','HMV','WiMP','HDtracks','Bandcamp','Xbox Music','Store','mora','Amazon Music','CDBaby','Nimbit','Classical Archives','eMusic','Juno / Juno Download','ArkivMusic','Vodafone Music','Bleep.com','7digital','Beatport','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

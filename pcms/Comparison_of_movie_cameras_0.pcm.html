@@ -35,8 +35,9 @@
 								</br>	
 								<label>Camera model : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Introduced : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Introduced : </label></br> <input style="display:block;" id="id1Introduced" type="number" name="Feature">
+												<input style="display:none;" id="id2Introduced" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Introduced','id2Introduced');">Changer type</button></br>								
 								</br>	
 								<label>Manufacturer : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
@@ -92,7 +93,7 @@
 									local : ['Sync','MOS','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

@@ -31,8 +31,9 @@
 								</br>	
 								<label>Memory clock (MHz) : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Core clock (MHz) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Core clock (MHz) : </label></br> <input style="display:block;" id="id1Core clock (MHz)" type="number" name="Feature">
+												<input style="display:none;" id="id2Core clock (MHz)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Core clock (MHz)','id2Core clock (MHz)');">Changer type</button></br>								
 								</br>	
 								<label>Launch :</label></br>
 											<input type="checkbox" name="Feature" >Aug. 29</br>	
@@ -43,24 +44,29 @@
 											<input type="checkbox" name="Feature" >2008</br>	
 											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Fillrate - MTexels/s : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Fillrate - MTexels/s : </label></br> <input style="display:block;" id="id1Fillrate - MTexels/s" type="number" name="Feature">
+												<input style="display:none;" id="id2Fillrate - MTexels/s" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fillrate - MTexels/s','id2Fillrate - MTexels/s');">Changer type</button></br>								
 								</br>	
-								<label>Fillrate - MPixels/s : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Fillrate - MPixels/s : </label></br> <input style="display:block;" id="id1Fillrate - MPixels/s" type="number" name="Feature">
+												<input style="display:none;" id="id2Fillrate - MPixels/s" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fillrate - MPixels/s','id2Fillrate - MPixels/s');">Changer type</button></br>								
 								</br>	
-								<label>Fillrate - MOperations/s : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Fillrate - MOperations/s : </label></br> <input style="display:block;" id="id1Fillrate - MOperations/s" type="number" name="Feature">
+												<input style="display:none;" id="id2Fillrate - MOperations/s" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fillrate - MOperations/s','id2Fillrate - MOperations/s');">Changer type</button></br>								
 								</br>	
-								<label>Fillrate - MVertices/s : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Fillrate - MVertices/s : </label></br> <input style="display:block;" id="id1Fillrate - MVertices/s" type="number" name="Feature">
+												<input style="display:none;" id="id2Fillrate - MVertices/s" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fillrate - MVertices/s','id2Fillrate - MVertices/s');">Changer type</button></br>								
 								</br>	
 								<label>Config core : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Bus interface : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Fab (nm) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Fab (nm) : </label></br> <input style="display:block;" id="id1Fab (nm)" type="number" name="Feature">
+												<input style="display:none;" id="id2Fab (nm)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fab (nm)','id2Fab (nm)');">Changer type</button></br>								
 								</br>	
 								<label>Memory (MB) : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
@@ -70,8 +76,9 @@
 								</br>	
 								<label>Memory - Bandwidth (GB/s) : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
-								<label>Memory - Bus width (bit) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Memory - Bus width (bit) : </label></br> <input style="display:block;" id="id1Memory - Bus width (bit)" type="number" name="Feature">
+												<input style="display:none;" id="id2Memory - Bus width (bit)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Memory - Bus width (bit)','id2Memory - Bus width (bit)');">Changer type</button></br>								
 								</br>	
 								<label>Memory - Bus type : </label></br> <input id="7" type="text" name="Feature"></br>
 						<script>
@@ -100,7 +107,7 @@
 									local : ['RS740 (titan)','RS600, RS690 (zeus)','RS690C (zeus)','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

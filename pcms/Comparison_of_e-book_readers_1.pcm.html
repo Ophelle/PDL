@@ -29,28 +29,31 @@
 					<form action="" method="post">
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
-								<label>End year : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>End year : </label></br> <input style="display:block;" id="id1End year" type="number" name="Feature">
+												<input style="display:none;" id="id2End year" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1End year','id2End year');">Changer type</button></br>								
 								</br>	
-								<label>Intro year : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Intro year : </label></br> <input style="display:block;" id="id1Intro year" type="number" name="Feature">
+												<input style="display:none;" id="id2Intro year" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Intro year','id2Intro year');">Changer type</button></br>								
 								</br>	
 								<label>Touch screen :</label></br>
 								<input type="radio" name="FeatureTouch screen" value="oui">Yes <input type="radio" name="FeatureTouch screen" value = "non">No <input type="radio" name="FeatureTouch screen" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureTouch screen" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
-								<label>Screen size (inch) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Screen size (inch) : </label></br> <input style="display:block;" id="id1Screen size (inch)" type="number" name="Feature">
+												<input style="display:none;" id="id2Screen size (inch)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Screen size (inch)','id2Screen size (inch)');">Changer type</button></br>								
 								</br>	
 								<label>Self-lit :</label></br>
 								<input type="radio" name="FeatureSelf-lit" value="oui">Yes <input type="radio" name="FeatureSelf-lit" value = "non">No <input type="radio" name="FeatureSelf-lit" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureSelf-lit" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Screen pixels : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Text-to-speech :</label></br>
 								<input type="radio" name="FeatureText-to-speech" value="oui">Yes <input type="radio" name="FeatureText-to-speech" value = "non">No <input type="radio" name="FeatureText-to-speech" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureText-to-speech" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Screen type : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
@@ -60,21 +63,21 @@
 								</br>	
 								<label>Web browser :</label></br>
 								<input type="radio" name="FeatureWeb browser" value="oui">Yes <input type="radio" name="FeatureWeb browser" value = "non">No <input type="radio" name="FeatureWeb browser" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureWeb browser" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Wireless network :</label></br>
 								<input type="radio" name="FeatureWireless network" value="oui">Yes <input type="radio" name="FeatureWireless network" value = "non">No <input type="radio" name="FeatureWireless network" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureWireless network" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Library DRM compatible :</label></br>
 								<input type="radio" name="FeatureLibrary DRM compatible" value="oui">Yes <input type="radio" name="FeatureLibrary DRM compatible" value = "non">No <input type="radio" name="FeatureLibrary DRM compatible" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureLibrary DRM compatible" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>USB peripherals : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Folders :</label></br>
 								<input type="radio" name="FeatureFolders" value="oui">Yes <input type="radio" name="FeatureFolders" value = "non">No <input type="radio" name="FeatureFolders" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureFolders" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>MicroSDHC : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
@@ -115,7 +118,7 @@
 									local : ['2 GB','512 MB (380 MB)','3 GB','512M','No','2 GB(1.3 GB)','4 GB(3 GB)','90 MB','256 MB,(192 MB)','4 GB','1 GB','512 MB(480 MB)','512MB','512 MB','2 GB(1.4 GB)','Unknown GB','4 GB(3.3 GB)','collections','microSDHC','256 MB(180 MB)','128 MB','92 MB','3 GB(10% for apps)','512 MB(350 MB)','64 MB','Yes','16 MB, 512MB, 1 GB','Unknown','384 MB','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

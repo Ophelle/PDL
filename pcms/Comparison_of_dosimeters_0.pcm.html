@@ -31,7 +31,7 @@
 								</br>	
 								<label>PC link :</label></br>
 								<input type="radio" name="FeaturePC link" value="oui">Yes <input type="radio" name="FeaturePC link" value = "non">No <input type="radio" name="FeaturePC link" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeaturePC link" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Range, μSv/h :</label></br>
 											<input type="checkbox" name="Feature" >0</br>	
@@ -51,8 +51,9 @@
 								</br>	
 								<label>Device : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Weight, g : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Weight, g : </label></br> <input style="display:block;" id="id1Weight, g" type="number" name="Feature">
+												<input style="display:none;" id="id2Weight, g" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Weight, g','id2Weight, g');">Changer type</button></br>								
 								</br>	
 								<label>Measuring of beta radiation and range of energy :</label></br>
 											<input type="checkbox" name="Feature" >Combined</br>	
@@ -71,7 +72,7 @@
 								</br>	
 								<label>Vibration :</label></br>
 								<input type="radio" name="FeatureVibration" value="oui">Yes <input type="radio" name="FeatureVibration" value = "non">No <input type="radio" name="FeatureVibration" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureVibration" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Power supply : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
@@ -96,7 +97,7 @@
 								</br>	
 								<label>Sound :</label></br>
 								<input type="radio" name="FeatureSound" value="oui">Yes <input type="radio" name="FeatureSound" value = "non">No <input type="radio" name="FeatureSound" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureSound" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Size, mm : </label></br> <input id="8" type="text" name="Feature"></br>
 						<script>
@@ -137,7 +138,7 @@
 									local : ['58х58х18','','74х48х16','140х64х26','105х60х26','119x65x26.5','120×52×26','154х77х39','133x82x45','97x68x24','125x42x24','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

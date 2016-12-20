@@ -29,8 +29,9 @@
 					<form action="" method="post">
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
-								<label>Speeds(external) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Speeds(external) : </label></br> <input style="display:block;" id="id1Speeds(external)" type="number" name="Feature">
+												<input style="display:none;" id="id2Speeds(external)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Speeds(external)','id2Speeds(external)');">Changer type</button></br>								
 								</br>	
 								<label>Intendedpurpose : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
@@ -78,8 +79,9 @@
 								</br>	
 								<label>Brand : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Introduced : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Introduced : </label></br> <input style="display:block;" id="id1Introduced" type="number" name="Feature">
+												<input style="display:none;" id="id2Introduced" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Introduced','id2Introduced');">Changer type</button></br>								
 								</br>	
 								<label>Gear width(with external) : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
@@ -106,7 +108,7 @@
 									local : ['','2010?','2010','1999','2000','1970','2012','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

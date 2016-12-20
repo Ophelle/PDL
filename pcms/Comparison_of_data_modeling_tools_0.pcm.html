@@ -69,8 +69,9 @@
 											<input type="checkbox" name="Feature" >Cloudscape</br>	
 											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Launch Date : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Launch Date : </label></br> <input style="display:block;" id="id1Launch Date" type="number" name="Feature">
+												<input style="display:none;" id="id2Launch Date" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Launch Date','id2Launch Date');">Changer type</button></br>								
 								</br>	
 								<label>Supported OSs : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
@@ -102,7 +103,7 @@
 									local : ['Cross-platform','Windows','Windows, Mac OS, Linux','Windows, Linux, Mac','Windows, Linux and FreeBSB (both through Wine)','Linux, Windows, Mac OS','Windows, Linux','Windows and Linux (using Wine)','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

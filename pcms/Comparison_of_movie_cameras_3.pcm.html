@@ -69,7 +69,7 @@
 								</br>	
 								<label>Pitch control? :</label></br>
 								<input type="radio" name="FeaturePitch control?" value="oui">Yes <input type="radio" name="FeaturePitch control?" value = "non">No <input type="radio" name="FeaturePitch control?" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeaturePitch control?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Frame rate (reverse) :</label></br>
 											<input type="checkbox" name="Feature" >12-32 frame</br>	
@@ -138,11 +138,13 @@
 											<input type="checkbox" name="Feature" >2-40 frame</br>	
 											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Pulldown claws : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Pulldown claws : </label></br> <input style="display:block;" id="id1Pulldown claws" type="number" name="Feature">
+												<input style="display:none;" id="id2Pulldown claws" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Pulldown claws','id2Pulldown claws');">Changer type</button></br>								
 								</br>	
-								<label>Registration pins : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Registration pins : </label></br> <input style="display:block;" id="id1Registration pins" type="number" name="Feature">
+												<input style="display:none;" id="id2Registration pins" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Registration pins','id2Registration pins');">Changer type</button></br>								
 								</br>	
 								<label>Movement type : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
@@ -157,7 +159,7 @@
 									local : ['Arriflex 35BL-2','Arriflex 435 Xtreme','Arriflex 535','Panaflex Millennium XL','Panaflex Gold II','Arriflex 235','Moviecam Compact','Arriflex 35-2C','Moviecam SuperAmerica','Arricam ST','Arriflex 35BL-1','Arriflex 35BL-3','Arricam LT','Arriflex 435ES','Aaton 35-III','Panaflex Panastar II','Panaflex-X','Panaflex Millennium','Aaton 35-3P','Arriflex 435','Arriflex 35BL-4','Arriflex 35BL-4s','Arriflex 35-3C','Panaflex Platinum','Arriflex 535B','Eyemo 71K','Arriflex 435 Advanced','Moviecam SL','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

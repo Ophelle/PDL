@@ -33,18 +33,21 @@
 								</br>	
 								<label>Battery life [h] high end)high end : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Weight [kg] : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Weight [kg] : </label></br> <input style="display:block;" id="id1Weight [kg]" type="number" name="Feature">
+												<input style="display:none;" id="id2Weight [kg]" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Weight [kg]','id2Weight [kg]');">Changer type</button></br>								
 								</br>	
 								<label>Manufacturer : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Storage [GB] : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Storage [GB] : </label></br> <input style="display:block;" id="id1Storage [GB]" type="number" name="Feature">
+												<input style="display:none;" id="id2Storage [GB]" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Storage [GB]','id2Storage [GB]');">Changer type</button></br>								
 								</br>	
 								<label>Display resolution : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Weight [lb] : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Weight [lb] : </label></br> <input style="display:block;" id="id1Weight [lb]" type="number" name="Feature">
+												<input style="display:none;" id="id2Weight [lb]" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Weight [lb]','id2Weight [lb]');">Changer type</button></br>								
 								</br>	
 								<label>HSDPA : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
@@ -52,11 +55,13 @@
 								</br>	
 								<label>CPU : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
-								<label>RAM [GB] : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>RAM [GB] : </label></br> <input style="display:block;" id="id1RAM [GB]" type="number" name="Feature">
+												<input style="display:none;" id="id2RAM [GB]" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1RAM [GB]','id2RAM [GB]');">Changer type</button></br>								
 								</br>	
-								<label>Display size " : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Display size " : </label></br> <input style="display:block;" id="id1Display size "" type="number" name="Feature">
+												<input style="display:none;" id="id2Display size "" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Display size "','id2Display size "');">Changer type</button></br>								
 								</br>	
 								<label>Battery life [h] low end)low end : </label></br> <input id="7" type="text" name="Feature"></br>
 								</br>	
@@ -64,8 +69,9 @@
 								</br>	
 								<label>Mouse layout : </label></br> <input id="9" type="text" name="Feature"></br>
 								</br>	
-								<label>Speed [GHz] : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Speed [GHz] : </label></br> <input style="display:block;" id="id1Speed [GHz]" type="number" name="Feature">
+												<input style="display:none;" id="id2Speed [GHz]" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Speed [GHz]','id2Speed [GHz]');">Changer type</button></br>								
 								</br>	
 								<label>Model : </label></br> <input id="10" type="text" name="Feature"></br>
 								</br>	
@@ -77,8 +83,9 @@
 								</br>	
 								<label>Windows OS choice(s)OS choice(s) : </label></br> <input id="14" type="text" name="Feature"></br>
 								</br>	
-								<label>Display DPI : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Display DPI : </label></br> <input style="display:block;" id="id1Display DPI" type="number" name="Feature">
+												<input style="display:none;" id="id2Display DPI" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Display DPI','id2Display DPI');">Changer type</button></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -141,7 +148,7 @@
 									local : ['XP','XP Home','CE/not x86 based','XP, Vista','XP or 7 Starter','none (non-x86)','None (not x86 based)','Windows XP Home','','7 Starter Edition','?','None (non-x86 based)','7 S/HB/HP','XP optional','Windows XP','XP Home or 7 Starter','Vista','Vista Home Basic','7 Starter','Vista, XP','Windows OS choice(s)OS choice(s)','Vista Ultimate','None (not x86 based) Windows CE only','7 Home','XP, 7','None','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

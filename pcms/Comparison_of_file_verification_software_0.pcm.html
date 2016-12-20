@@ -37,7 +37,7 @@
 								</br>	
 								<label>Windows :</label></br>
 								<input type="radio" name="FeatureWindows" value="oui">Yes <input type="radio" name="FeatureWindows" value = "non">No <input type="radio" name="FeatureWindows" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureWindows" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Latest stable date (version) : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
@@ -47,18 +47,19 @@
 								</br>	
 								<label>Open source :</label></br>
 								<input type="radio" name="FeatureOpen source" value="oui">Yes <input type="radio" name="FeatureOpen source" value = "non">No <input type="radio" name="FeatureOpen source" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureOpen source" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Mac OS X :</label></br>
 								<input type="radio" name="FeatureMac OS X" value="oui">Yes <input type="radio" name="FeatureMac OS X" value = "non">No <input type="radio" name="FeatureMac OS X" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureMac OS X" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Linux :</label></br>
 								<input type="radio" name="FeatureLinux" value="oui">Yes <input type="radio" name="FeatureLinux" value = "non">No <input type="radio" name="FeatureLinux" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureLinux" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
-								<label>First public release : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>First public release : </label></br> <input style="display:block;" id="id1First public release" type="number" name="Feature">
+												<input style="display:none;" id="id2First public release" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First public release','id2First public release');">Changer type</button></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -85,7 +86,7 @@
 									local : ['?','.NET','.NET 3.5','Framework','C','Java','GTK','Qt','.NET 2.0','Python','VCL','(Delphi 7)','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

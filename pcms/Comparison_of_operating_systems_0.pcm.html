@@ -29,8 +29,9 @@
 					<form action="" method="post">
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
-								<label>Initial public release : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Initial public release : </label></br> <input style="display:block;" id="id1Initial public release" type="number" name="Feature">
+												<input style="display:none;" id="id2Initial public release" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Initial public release','id2Initial public release');">Changer type</button></br>								
 								</br>	
 								<label>Products : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
@@ -73,8 +74,9 @@
 								</br>	
 								<label>Preferred license : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Current stable version : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Current stable version : </label></br> <input style="display:block;" id="id1Current stable version" type="number" name="Feature">
+												<input style="display:none;" id="id2Current stable version" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Current stable version','id2Current stable version');">Changer type</button></br>								
 								</br>	
 								<label>Cost, availability : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
@@ -136,7 +138,7 @@
 									local : ['EPOC32','RISC OS','HP NonStop','HP-UX','Symbian platform','Haiku','DragonFly BSD','Windows Server (NT family)','z/VM','Linux','MINIX 3','ZETA','Inferno','eComStation','NeXTSTEP','ReactOS','FreeBSD','GhostBSD','QNX','Symbian','PC-BSD','z/VSE','Plan 9','VxWorks','IRIX','OS/2','AIX','NetWare','OpenIndiana','Name','OS 2200','Solaris','AmigaOS 4','NetBSD','iOS','Windows (classic 9x family)','OpenBSD','OpenVMS','Mac OS','Android','MPE/XL','STOP 6, XTS-400','AmigaOS classic','RISC iX','IBM i','Windows (NT family)','(Mac) OS X Server','z/OS','(Mac) OS X','MPE','MCP','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

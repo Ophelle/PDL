@@ -31,15 +31,17 @@
 								</br>	
 								<label>Screen shape : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Largest known diagonal - (in) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Largest known diagonal - (in) : </label></br> <input style="display:block;" id="id1Largest known diagonal - (in)" type="number" name="Feature">
+												<input style="display:none;" id="id2Largest known diagonal - (in)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Largest known diagonal - (in)','id2Largest known diagonal - (in)');">Changer type</button></br>								
 								</br>	
-								<label>Largest known diagonal - (cm) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Largest known diagonal - (cm) : </label></br> <input style="display:block;" id="id1Largest known diagonal - (cm)" type="number" name="Feature">
+												<input style="display:none;" id="id2Largest known diagonal - (cm)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Largest known diagonal - (cm)','id2Largest known diagonal - (cm)');">Changer type</button></br>								
 								</br>	
 								<label>Usable in bright room :</label></br>
 								<input type="radio" name="FeatureUsable in bright room" value="oui">Yes <input type="radio" name="FeatureUsable in bright room" value = "non">No <input type="radio" name="FeatureUsable in bright room" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureUsable in bright room" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Typical use :</label></br>
 											<input type="checkbox" name="Feature" >Computer monitor</br>	
@@ -64,7 +66,7 @@
 									local : ['Laser Phosphor Display (LPD)','LCoS self-contained rear-projection','EPD (e-paper)','CRT self-contained rear-projection','LCD front-projection','FED','OLED','Virtual retinal display','LCD self-contained rear-projection','LCoS front-projection','Plasma display panel (PDP)','Direct view LCD','QDLED','Direct view Charactron CRT','DLP front-projection','Laser self-contained rear projection','LED','SED','Monochrome CRT','DLP self-contained rear-projection','IMOD','Shadow mask CRT','CRT front projection','Aperture grille CRT','Eidophor front projection','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

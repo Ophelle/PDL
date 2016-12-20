@@ -31,8 +31,9 @@
 								</br>	
 								<label>Format : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Base index : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Base index : </label></br> <input style="display:block;" id="id1Base index" type="number" name="Feature">
+												<input style="display:none;" id="id2Base index" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Base index','id2Base index');">Changer type</button></br>								
 								</br>	
 								<label>Languages : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
@@ -45,7 +46,7 @@
 									local : ['VB.NET','VB','Perl','PHP (deprecated in 5.3)','Mathematica','COBOL','Tcl','Erlang','OCaml, F#','PL/I','Standard ML','Ada','C++ (STL) (w/ bounds checking)','C, C++, C#, Cobra, D, FreeBASIC, Go, Python, PHP, Ruby, Windows PowerShell, JavaScript, Ya','Lua','BASIC','Smalltalk (w/ bounds checking)','Scheme','Eiffel','Fortran','Common Lisp','Objective-C (NSString * only)','ALGOL 68, Pascal, Object Pascal (Delphi), Seed7','ISLISP','Java, JavaScript','Haskell','Clojure','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

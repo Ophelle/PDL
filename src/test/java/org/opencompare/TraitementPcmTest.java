@@ -21,6 +21,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * class TraitementPcmTest
+ * @author PDL: Mendes Ophélie, Dramé Oumar, Le Quang, Baouz Khaled and Moussa Lydia
+ *
+ */
 public class TraitementPcmTest {
 	private TraitementPcm traitementpcm;
 	private File file;

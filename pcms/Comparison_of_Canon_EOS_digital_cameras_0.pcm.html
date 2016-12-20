@@ -107,8 +107,9 @@
 								</br>	
 								<label>Model : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>Autofocus points : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Autofocus points : </label></br> <input style="display:block;" id="id1Autofocus points" type="number" name="Feature">
+												<input style="display:none;" id="id2Autofocus points" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Autofocus points','id2Autofocus points');">Changer type</button></br>								
 								</br>	
 								<label>Viewfinder magnification, coverage :</label></br>
 											<input type="checkbox" name="Feature" >0.85×</br>	
@@ -131,16 +132,19 @@
 											<input type="checkbox" name="Feature" >1.0×</br>	
 											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Weight (kg) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Weight (kg) : </label></br> <input style="display:block;" id="id1Weight (kg)" type="number" name="Feature">
+												<input style="display:none;" id="id2Weight (kg)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Weight (kg)','id2Weight (kg)');">Changer type</button></br>								
 								</br>	
 								<label>Main Battery : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Megapixels : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Megapixels : </label></br> <input style="display:block;" id="id1Megapixels" type="number" name="Feature">
+												<input style="display:none;" id="id2Megapixels" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Megapixels','id2Megapixels');">Changer type</button></br>								
 								</br>	
-								<label>Min ISO : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Min ISO : </label></br> <input style="display:block;" id="id1Min ISO" type="number" name="Feature">
+												<input style="display:none;" id="id2Min ISO" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Min ISO','id2Min ISO');">Changer type</button></br>								
 								</br>	
 								<label>Video :</label></br>
 											<input type="checkbox" name="Feature" >1080p30</br>	
@@ -158,14 +162,15 @@
 								</br>	
 								<label>Live view :</label></br>
 								<input type="radio" name="FeatureLive view" value="oui">Yes <input type="radio" name="FeatureLive view" value = "non">No <input type="radio" name="FeatureLive view" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureLive view" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Storage : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Sensor format : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
-								<label>Max FPS : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Max FPS : </label></br> <input style="display:block;" id="id1Max FPS" type="number" name="Feature">
+												<input style="display:none;" id="id2Max FPS" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Max FPS','id2Max FPS');">Changer type</button></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -192,7 +197,7 @@
 									local : ['APS-C CMOS','Full-frame CMOS','APS-H CMOS','APS-H CCD','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

@@ -37,8 +37,9 @@
 								</br>	
 								<label>Name : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Current version : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Current version : </label></br> <input style="display:block;" id="id1Current version" type="number" name="Feature">
+												<input style="display:none;" id="id2Current version" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Current version','id2Current version');">Changer type</button></br>								
 								</br>	
 								<label>Status : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
@@ -46,7 +47,7 @@
 								</br>	
 								<label>Source available :</label></br>
 								<input type="radio" name="FeatureSource available" value="oui">Yes <input type="radio" name="FeatureSource available" value = "non">No <input type="radio" name="FeatureSource available" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureSource available" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Latest release : </label></br> <input id="6" type="text" name="Feature"></br>
 						<script>
@@ -79,7 +80,7 @@
 									local : ['2010-10-08','','2013-08-06','2015-03-18','2015-04-15','2014-02-25','2014-01-16','2011-07-24','2015-02-28','2013-06-26','2014-01-31','2015-01-14','2013-02-28','2015-05-01','2012-11-12','2015-05-02','2014-08-29','2015-01-28','2014-03-06','2013-07-29','2015-02-15','2013-07-16','2015-02-20','2013-06-22','2013-07','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

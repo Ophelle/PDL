@@ -81,42 +81,43 @@
 								</br>	
 								<label>Platform-independent :</label></br>
 								<input type="radio" name="FeaturePlatform-independent" value="oui">Yes <input type="radio" name="FeaturePlatform-independent" value = "non">No <input type="radio" name="FeaturePlatform-independent" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeaturePlatform-independent" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Native CIM/WBEM support :</label></br>
 								<input type="radio" name="FeatureNative CIM/WBEM support" value="oui">Yes <input type="radio" name="FeatureNative CIM/WBEM support" value = "non">No <input type="radio" name="FeatureNative CIM/WBEM support" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureNative CIM/WBEM support" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Console redirection :</label></br>
 								<input type="radio" name="FeatureConsole redirection" value="oui">Yes <input type="radio" name="FeatureConsole redirection" value = "non">No <input type="radio" name="FeatureConsole redirection" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureConsole redirection" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Mouse support :</label></br>
 								<input type="radio" name="FeatureMouse support" value="oui">Yes <input type="radio" name="FeatureMouse support" value = "non">No <input type="radio" name="FeatureMouse support" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureMouse support" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Usually invoked : </label></br> <input id="8" type="text" name="Feature"></br>
 								</br>	
 								<label>Unicode support :</label></br>
 								<input type="radio" name="FeatureUnicode support" value="oui">Yes <input type="radio" name="FeatureUnicode support" value = "non">No <input type="radio" name="FeatureUnicode support" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureUnicode support" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
-								<label>Introduced : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Introduced : </label></br> <input style="display:block;" id="id1Introduced" type="number" name="Feature">
+												<input style="display:none;" id="id2Introduced" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Introduced','id2Introduced');">Changer type</button></br>								
 								</br>	
 								<label>available as statically linked, independent single file executable :</label></br>
 								<input type="radio" name="Featureavailable as statically linked, independent single file executable" value="oui">Yes <input type="radio" name="Featureavailable as statically linked, independent single file executable" value = "non">No <input type="radio" name="Featureavailable as statically linked, independent single file executable" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="Featureavailable as statically linked, independent single file executable" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Default script shell in : </label></br> <input id="9" type="text" name="Feature"></br>
 								</br>	
 								<label>Source code availability :</label></br>
 								<input type="radio" name="FeatureSource code availability" value="oui">Yes <input type="radio" name="FeatureSource code availability" value = "non">No <input type="radio" name="FeatureSource code availability" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureSource code availability" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Logging :</label></br>
 								<input type="radio" name="FeatureLogging" value="oui">Yes <input type="radio" name="FeatureLogging" value = "non">No <input type="radio" name="FeatureLogging" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureLogging" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -159,7 +160,7 @@
 									local : ['OS/2','SunOS-5.x','7th Ed. UNIX,','Windows NT, 2000, XP, Server 2003, Vista','?','VMS','Optional','OpenBSD','GNU, Linux, Haiku, Mac OS X','OpenSolaris','Windows Server 2008, 7','DOS, Windows 95, 98, SE, ME','Plan 9, Version 10 Unix','Grml','POSIX','NetBSD, Minix, BusyBox based systems','optional','CP/M, MP/M','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

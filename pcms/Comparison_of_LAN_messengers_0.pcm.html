@@ -33,8 +33,9 @@
 								</br>	
 								<label>Author, creator : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>First public release date : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>First public release date : </label></br> <input style="display:block;" id="id1First public release date" type="number" name="Feature">
+												<input style="display:none;" id="id2First public release date" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First public release date','id2First public release date');">Changer type</button></br>								
 								</br>	
 								<label>Software license : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
@@ -81,7 +82,7 @@
 									local : ['C/C++','C','C++','Likely Objective-C','C++ and Qt','?','C#','Java','HotBasic','Visual Basic .NET','Delphi, C# version begun','','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

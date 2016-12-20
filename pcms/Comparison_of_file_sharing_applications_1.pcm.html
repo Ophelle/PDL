@@ -37,8 +37,9 @@
 								</br>	
 								<label>Programming language : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Latest release version : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Latest release version : </label></br> <input style="display:block;" id="id1Latest release version" type="number" name="Feature">
+												<input style="display:none;" id="id2Latest release version" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Latest release version','id2Latest release version');">Changer type</button></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -57,7 +58,7 @@
 									local : ['PHP','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

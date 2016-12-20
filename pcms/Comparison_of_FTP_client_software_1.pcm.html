@@ -33,14 +33,15 @@
 								</br>	
 								<label>Interface : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>First public release date : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>First public release date : </label></br> <input style="display:block;" id="id1First public release date" type="number" name="Feature">
+												<input style="display:none;" id="id2First public release date" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First public release date','id2First public release date');">Changer type</button></br>								
 								</br>	
 								<label>Creator : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Copy files over 2 GB :</label></br>
 								<input type="radio" name="FeatureCopy files over 2 GB" value="oui">Yes <input type="radio" name="FeatureCopy files over 2 GB" value = "non">No <input type="radio" name="FeatureCopy files over 2 GB" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureCopy files over 2 GB" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Software license : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
@@ -67,7 +68,7 @@
 									local : ['pbFtpClient','Ali`s FTP Interface','Admin Hands','FTP Rush','Fling FTP (free version contains adware)','AnyClient','Mosaic','FTP Voyager','Classic FTP','BitKinex','FTP!','LeechFTP','UploadFTP Free','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

@@ -10,23 +10,42 @@ import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 
+/**
+ * class GenerationHTML
+ * @author PDL: Mendes Ophélie, Dramé Oumar, Le Quang, Baouz Khaled and Moussa Lydia
+ *
+ */
 public class GenerationHtml {
 	
 	private TraitementPcm traitPcm;
 	private String input;
 	private String output;
 	
+	/**
+	 * construct of GenerationHtml
+	 * @param traitPcm
+	 * @param input
+	 * @param output
+	 */
 	public GenerationHtml(TraitementPcm traitPcm, String input, String output) {
 		this.traitPcm = traitPcm;
 		this.input = input;
 		this.output = output;
 	}
 	
+	/**
+	 * construct of GenerationHtml
+	 * @param traitPcm
+	 * @param input
+	 */
 	public GenerationHtml(TraitementPcm traitPcm, String input) {
 		this.traitPcm = traitPcm;
 		this.input = input;
 	}
 
+	/**
+	 * function for lunch the generation of one form html
+	 */
 	public void generateHtml() {
 		// Configuration du template
 		Configuration config = new Configuration(Configuration.VERSION_2_3_20);
@@ -67,6 +86,9 @@ public class GenerationHtml {
 		}
 	}
 	
+	/**
+	 * function for lunch the generation of all form html
+	 */
 	public void generatAllHtml() {
 		// Configuration du template
 		Configuration config = new Configuration(Configuration.VERSION_2_3_20);
@@ -120,26 +142,50 @@ public class GenerationHtml {
 		System.out.println("------Fin de la génération de tous les fichiers html-------");
 	}
 
+	/**
+	 * getter for the TraitementPcm
+	 * @return TraitementPcm
+	 */
 	public TraitementPcm getTraitPcm() {
 		return this.traitPcm;
 	}
 
+	/**
+	 * setter for the TraitementPcm
+	 * @param traitPcm
+	 */
 	public void setTraitPcm(TraitementPcm traitPcm) {
 		this.traitPcm = traitPcm;
 	}
 
+	/**
+	 * getter for the file FTL 
+	 * @return String
+	 */
 	public String getInput() {
 		return this.input;
 	}
 
+	/**
+	 * setter for the file FTL
+	 * @param input
+	 */
 	public void setInput(String input) {
 		this.input = input;
 	}
 
+	/**
+	 * getter for the file HTML
+	 * @return String
+	 */
 	public String getOutput() {
 		return this.output;
 	}
 
+	/**
+	 * setter for the file HTML
+	 * @param output
+	 */
 	public void setOutput(String output) {
 		this.output = output;
 	}

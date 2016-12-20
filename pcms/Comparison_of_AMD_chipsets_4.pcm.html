@@ -33,8 +33,9 @@
 								</br>	
 								<label>Released : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>Fab (nm) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Fab (nm) : </label></br> <input style="display:block;" id="id1Fab (nm)" type="number" name="Feature">
+												<input style="display:none;" id="id2Fab (nm)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fab (nm)','id2Fab (nm)');">Changer type</button></br>								
 								</br>	
 								<label>NIC :</label></br>
 											<input type="checkbox" name="Feature" >10</br>	
@@ -42,8 +43,9 @@
 											<input type="checkbox" name="Feature" >1000</br>	
 											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Package : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Package : </label></br> <input style="display:block;" id="id1Package" type="number" name="Feature">
+												<input style="display:none;" id="id2Package" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Package','id2Package');">Changer type</button></br>								
 								</br>	
 								<label>Model : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
@@ -109,7 +111,7 @@
 									local : ['14 + 2','10 + 0','12 + 2','USB2.0 + 1.1','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

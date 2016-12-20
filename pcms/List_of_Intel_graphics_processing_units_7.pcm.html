@@ -47,8 +47,9 @@
 								</br>	
 								<label>CPU : </label></br> <input id="8" type="text" name="Feature"></br>
 								</br>	
-								<label>Launch : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Launch : </label></br> <input style="display:block;" id="id1Launch" type="number" name="Feature">
+												<input style="display:none;" id="id2Launch" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Launch','id2Launch');">Changer type</button></br>								
 								</br>	
 								<label>Hardware acceleration - CVT HD : </label></br> <input id="9" type="text" name="Feature"></br>
 								</br>	
@@ -56,13 +57,15 @@
 								</br>	
 								<label>Execution units : </label></br> <input id="11" type="text" name="Feature"></br>
 								</br>	
-								<label>API support - OpenCL : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>API support - OpenCL : </label></br> <input style="display:block;" id="id1API support - OpenCL" type="number" name="Feature">
+												<input style="display:none;" id="id2API support - OpenCL" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1API support - OpenCL','id2API support - OpenCL');">Changer type</button></br>								
 								</br>	
 								<label>API support - OpenGL : </label></br> <input id="12" type="text" name="Feature"></br>
 								</br>	
-								<label>API support - DirectX : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>API support - DirectX : </label></br> <input style="display:block;" id="id1API support - DirectX" type="number" name="Feature">
+												<input style="display:none;" id="id2API support - DirectX" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1API support - DirectX','id2API support - DirectX');">Changer type</button></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -105,7 +108,7 @@
 									local : ['12','24 (GT2)','48+eDRAM (GT3e)','48 (GT3)','16','23 (GT2)','12 (GT1)','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

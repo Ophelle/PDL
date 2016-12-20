@@ -50,13 +50,15 @@
 								</br>	
 								<label>GB 18030 base64 : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
-								<label>UTF-16 q.-p. : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>UTF-16 q.-p. : </label></br> <input style="display:block;" id="id1UTF-16 q.-p." type="number" name="Feature">
+												<input style="display:none;" id="id2UTF-16 q.-p." type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1UTF-16 q.-p.','id2UTF-16 q.-p.');">Changer type</button></br>								
 								</br>	
 								<label>Code range (hexadecimal) : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
-								<label>UTF-8 quoted-printable : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>UTF-8 quoted-printable : </label></br> <input style="display:block;" id="id1UTF-8 quoted-printable" type="number" name="Feature">
+												<input style="display:none;" id="id2UTF-8 quoted-printable" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1UTF-8 quoted-printable','id2UTF-8 quoted-printable');">Changer type</button></br>								
 								</br>	
 								<label>UTF-16 base64 : </label></br> <input id="3" type="text" name="Feature"></br>
 						<script>
@@ -77,7 +79,7 @@
 									local : ['5 ','2 ','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

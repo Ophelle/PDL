@@ -31,8 +31,9 @@
 								</br>	
 								<label>Model : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Fabrication process (nm) : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Fabrication process (nm) : </label></br> <input style="display:block;" id="id1Fabrication process (nm)" type="number" name="Feature">
+												<input style="display:none;" id="id2Fabrication process (nm)" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fabrication process (nm)','id2Fabrication process (nm)');">Changer type</button></br>								
 								</br>	
 								<label>Processors Supported :</label></br>
 											<input type="checkbox" name="Feature" >Athlon 64</br>	
@@ -54,7 +55,7 @@
 								</br>	
 								<label>Crossfire Enabled :</label></br>
 								<input type="radio" name="FeatureCrossfire Enabled" value="oui">Yes <input type="radio" name="FeatureCrossfire Enabled" value = "non">No <input type="radio" name="FeatureCrossfire Enabled" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureCrossfire Enabled" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Features :</label></br>
 											<input type="checkbox" name="Feature" >Radeon 9000 IGP</br>	
@@ -118,7 +119,7 @@
 									local : ['A-Link Express II','','A-Link/PCI','A-Link Express','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

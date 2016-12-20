@@ -29,12 +29,13 @@
 					<form action="" method="post">
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
-								<label>Introduced in : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Introduced in : </label></br> <input style="display:block;" id="id1Introduced in" type="number" name="Feature">
+												<input style="display:none;" id="id2Introduced in" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Introduced in','id2Introduced in');">Changer type</button></br>								
 								</br>	
 								<label>Recovery record :</label></br>
 								<input type="radio" name="FeatureRecovery record" value="oui">Yes <input type="radio" name="FeatureRecovery record" value = "non">No <input type="radio" name="FeatureRecovery record" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureRecovery record" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Filename extension : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
@@ -42,7 +43,7 @@
 								</br>	
 								<label>Encryption supported :</label></br>
 								<input type="radio" name="FeatureEncryption supported" value="oui">Yes <input type="radio" name="FeatureEncryption supported" value = "non">No <input type="radio" name="FeatureEncryption supported" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureEncryption supported" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Format : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
@@ -52,11 +53,11 @@
 								</br>	
 								<label>Unicode filenames :</label></br>
 								<input type="radio" name="FeatureUnicode filenames" value="oui">Yes <input type="radio" name="FeatureUnicode filenames" value = "non">No <input type="radio" name="FeatureUnicode filenames" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureUnicode filenames" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Integrity check :</label></br>
 								<input type="radio" name="FeatureIntegrity check" value="oui">Yes <input type="radio" name="FeatureIntegrity check" value = "non">No <input type="radio" name="FeatureIntegrity check" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureIntegrity check" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -79,7 +80,7 @@
 									local : ['?','Software Packaging and Distribution','1 s','2 s','No','1–2 s','Yes arbitrary','Archiving only','arbitrary (typically 1 s)','2s','Archiving and Compression','arbitrary (typically 1 ns)','1 ms (maybe better?)','2 s, 1 s, 6.5536 ms, 25.6 µs or 100 ns','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

@@ -49,12 +49,13 @@
 								</br>	
 								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
-								<label>Subjects : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Subjects : </label></br> <input style="display:block;" id="id1Subjects" type="number" name="Feature">
+												<input style="display:none;" id="id2Subjects" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Subjects','id2Subjects');">Changer type</button></br>								
 								</br>	
 								<label>3D :</label></br>
 								<input type="radio" name="Feature3D" value="oui">Yes <input type="radio" name="Feature3D" value = "non">No <input type="radio" name="Feature3D" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="Feature3D" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Expressions :</label></br>
 											<input type="checkbox" name="Feature" >neutral face</br>	
@@ -114,8 +115,9 @@
 								</br>	
 								<label>Database : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>Total images : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Total images : </label></br> <input style="display:block;" id="id1Total images" type="number" name="Feature">
+												<input style="display:none;" id="id2Total images" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Total images','id2Total images');">Changer type</button></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -134,7 +136,7 @@
 									local : ['3D_RMA','PUT','MUCT','York-3DFace','BJUT-3D-R1','BU-3DFE','ND2006','FRAV3D','Bosphorus','FRGC v.2','GavabDB','CASIA','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

@@ -33,10 +33,11 @@
 								</br>	
 								<label>Maintained? :</label></br>
 								<input type="radio" name="FeatureMaintained?" value="oui">Yes <input type="radio" name="FeatureMaintained?" value = "non">No <input type="radio" name="FeatureMaintained?" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureMaintained?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
-								<label>First released : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>First released : </label></br> <input style="display:block;" id="id1First released" type="number" name="Feature">
+												<input style="display:none;" id="id2First released" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First released','id2First released');">Changer type</button></br>								
 								</br>	
 								<label>Encryption : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
@@ -55,7 +56,7 @@
 									local : ['GPL','Proprietary','TrueCrypt License Version 3.0','LGPLv3','BSD','Open source','Microsoft Public License (Ms-PL)','TrueCrypt License 3.1','Licensing','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

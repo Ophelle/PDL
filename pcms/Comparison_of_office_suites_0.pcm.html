@@ -31,11 +31,11 @@
 								</br>	
 								<label>OpenDocument support :</label></br>
 								<input type="radio" name="FeatureOpenDocument support" value="oui">Yes <input type="radio" name="FeatureOpenDocument support" value = "non">No <input type="radio" name="FeatureOpenDocument support" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureOpenDocument support" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Microsoft Office (.doc, .xls) support :</label></br>
 								<input type="radio" name="FeatureMicrosoft Office (.doc, .xls) support" value="oui">Yes <input type="radio" name="FeatureMicrosoft Office (.doc, .xls) support" value = "non">No <input type="radio" name="FeatureMicrosoft Office (.doc, .xls) support" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureMicrosoft Office (.doc, .xls) support" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Price in USD : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
@@ -43,14 +43,15 @@
 								</br>	
 								<label>Microsoft Office Open XML support :</label></br>
 								<input type="radio" name="FeatureMicrosoft Office Open XML support" value="oui">Yes <input type="radio" name="FeatureMicrosoft Office Open XML support" value = "non">No <input type="radio" name="FeatureMicrosoft Office Open XML support" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeatureMicrosoft Office Open XML support" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>Latest Stable version : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Developer : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
-								<label>First public release : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>First public release : </label></br> <input style="display:block;" id="id1First public release" type="number" name="Feature">
+												<input style="display:none;" id="id2First public release" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1First public release','id2First public release');">Changer type</button></br>								
 								</br>	
 								<label>Operating system :</label></br>
 											<input type="checkbox" name="Feature" >Mac OS</br>	
@@ -78,7 +79,7 @@
 								</br>	
 								<label>Portable Document Format support :</label></br>
 								<input type="radio" name="FeaturePortable Document Format support" value="oui">Yes <input type="radio" name="FeaturePortable Document Format support" value = "non">No <input type="radio" name="FeaturePortable Document Format support" value = "non">Partial </br>
-											<input type="text"/></br>								
+											<input name="FeaturePortable Document Format support" type="radio" value="autre"/>Autre : <input type="text"/></br>								
 								</br>	
 								<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
 						<script>
@@ -103,7 +104,7 @@
 									local : ['Proprietary','GNU LGPL and GNU GPL','GNU GPL','Non-free','License','GNU LGPL','Apache License 2.0','GNU AGPL','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>

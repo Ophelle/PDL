@@ -47,8 +47,9 @@
 								</br>	
 								<label>Maximum host memory : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
-								<label>Maximum number of guest VM running : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Maximum number of guest VM running : </label></br> <input style="display:block;" id="id1Maximum number of guest VM running" type="number" name="Feature">
+												<input style="display:none;" id="id2Maximum number of guest VM running" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Maximum number of guest VM running','id2Maximum number of guest VM running');">Changer type</button></br>								
 								</br>	
 								<label>Maximum host cores / CPUs :</label></br>
 											<input type="checkbox" name="Feature" >144 cores </br>	
@@ -61,8 +62,9 @@
 											<input type="checkbox" name="Feature" >8 CPUs</br>	
 											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
 								</br>	
-								<label>Maximum number of logical CPU per VM guest : </label></br> <input type="number" name="Feature"></br>
-												<input type="text"/></br>								
+								<label>Maximum number of logical CPU per VM guest : </label></br> <input style="display:block;" id="id1Maximum number of logical CPU per VM guest" type="number" name="Feature">
+												<input style="display:none;" id="id2Maximum number of logical CPU per VM guest" type="text"/>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Maximum number of logical CPU per VM guest','id2Maximum number of logical CPU per VM guest');">Changer type</button></br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",
@@ -85,7 +87,7 @@
 									local : ['4 TB','No limit','1 TB','2 TB','']
 								});
 						</script>
-						<input type="submit" class="btn btn-info" value="Ajouter un produit" />
+						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>
 				</div>
 			</fieldset>
