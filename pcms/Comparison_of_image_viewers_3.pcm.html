@@ -36,8 +36,9 @@
 								<label>cache decoded images : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Fullscreen :</label></br>
-								<input type="radio" name="FeatureFullscreen" value="oui">Yes <input type="radio" name="FeatureFullscreen" value = "non">No <input type="radio" name="FeatureFullscreen" value = "non">Partial </br>
-											<input name="FeatureFullscreen" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Fullscreen"> <input type="radio" name="FeatureFullscreen" value="oui">Yes <input type="radio" name="FeatureFullscreen" value = "non">No <input type="radio" name="FeatureFullscreen" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Fullscreen"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fullscreen','id2Fullscreen');">Changer type</button> </br>								
 								</br>	
 								<label>thumbnails (sizes) : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
@@ -63,19 +64,21 @@
 											<input type="checkbox" name="Feature" >CD compilations</br>	
 											<input type="checkbox" name="Feature" >media archive</br>	
 											<input type="checkbox" name="Feature" >web albums</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>sort(schemes) : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>print :</label></br>
-								<input type="radio" name="Featureprint" value="oui">Yes <input type="radio" name="Featureprint" value = "non">No <input type="radio" name="Featureprint" value = "non">Partial </br>
-											<input name="Featureprint" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1print"> <input type="radio" name="Featureprint" value="oui">Yes <input type="radio" name="Featureprint" value = "non">No <input type="radio" name="Featureprint" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2print"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1print','id2print');">Changer type</button> </br>								
 								</br>	
 								<label>zoom(styles) : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>slideshow :</label></br>
-								<input type="radio" name="Featureslideshow" value="oui">Yes <input type="radio" name="Featureslideshow" value = "non">No <input type="radio" name="Featureslideshow" value = "non">Partial </br>
-											<input name="Featureslideshow" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1slideshow"> <input type="radio" name="Featureslideshow" value="oui">Yes <input type="radio" name="Featureslideshow" value = "non">No <input type="radio" name="Featureslideshow" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2slideshow"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1slideshow','id2slideshow');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

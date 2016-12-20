@@ -30,12 +30,14 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Printing :</label></br>
-								<input type="radio" name="FeaturePrinting" value="oui">Yes <input type="radio" name="FeaturePrinting" value = "non">No <input type="radio" name="FeaturePrinting" value = "non">Partial </br>
-											<input name="FeaturePrinting" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Printing"> <input type="radio" name="FeaturePrinting" value="oui">Yes <input type="radio" name="FeaturePrinting" value = "non">No <input type="radio" name="FeaturePrinting" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Printing"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Printing','id2Printing');">Changer type</button> </br>								
 								</br>	
 								<label>Sync :</label></br>
-								<input type="radio" name="FeatureSync" value="oui">Yes <input type="radio" name="FeatureSync" value = "non">No <input type="radio" name="FeatureSync" value = "non">Partial </br>
-											<input name="FeatureSync" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Sync"> <input type="radio" name="FeatureSync" value="oui">Yes <input type="radio" name="FeatureSync" value = "non">No <input type="radio" name="FeatureSync" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Sync"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Sync','id2Sync');">Changer type</button> </br>								
 								</br>	
 								<label>File save/export/import formats :</label></br>
 											<input type="checkbox" name="Feature" >Proprietary</br>	
@@ -114,43 +116,51 @@
 											<input type="checkbox" name="Feature" >XML and HTML</br>	
 											<input type="checkbox" name="Feature" >wiki-formats</br>	
 											<input type="checkbox" name="Feature" >Export to RTF</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Name : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Search :</label></br>
-								<input type="radio" name="FeatureSearch" value="oui">Yes <input type="radio" name="FeatureSearch" value = "non">No <input type="radio" name="FeatureSearch" value = "non">Partial </br>
-											<input name="FeatureSearch" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Search"> <input type="radio" name="FeatureSearch" value="oui">Yes <input type="radio" name="FeatureSearch" value = "non">No <input type="radio" name="FeatureSearch" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Search"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Search','id2Search');">Changer type</button> </br>								
 								</br>	
 								<label>Organizing principle(s) : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Whiteboard :</label></br>
-								<input type="radio" name="FeatureWhiteboard" value="oui">Yes <input type="radio" name="FeatureWhiteboard" value = "non">No <input type="radio" name="FeatureWhiteboard" value = "non">Partial </br>
-											<input name="FeatureWhiteboard" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Whiteboard"> <input type="radio" name="FeatureWhiteboard" value="oui">Yes <input type="radio" name="FeatureWhiteboard" value = "non">No <input type="radio" name="FeatureWhiteboard" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Whiteboard"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Whiteboard','id2Whiteboard');">Changer type</button> </br>								
 								</br>	
 								<label>PDF annotate and save :</label></br>
-								<input type="radio" name="FeaturePDF annotate and save" value="oui">Yes <input type="radio" name="FeaturePDF annotate and save" value = "non">No <input type="radio" name="FeaturePDF annotate and save" value = "non">Partial </br>
-											<input name="FeaturePDF annotate and save" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1PDF annotate and save"> <input type="radio" name="FeaturePDF annotate and save" value="oui">Yes <input type="radio" name="FeaturePDF annotate and save" value = "non">No <input type="radio" name="FeaturePDF annotate and save" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2PDF annotate and save"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1PDF annotate and save','id2PDF annotate and save');">Changer type</button> </br>								
 								</br>	
 								<label>Tabbed sections :</label></br>
-								<input type="radio" name="FeatureTabbed sections" value="oui">Yes <input type="radio" name="FeatureTabbed sections" value = "non">No <input type="radio" name="FeatureTabbed sections" value = "non">Partial </br>
-											<input name="FeatureTabbed sections" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Tabbed sections"> <input type="radio" name="FeatureTabbed sections" value="oui">Yes <input type="radio" name="FeatureTabbed sections" value = "non">No <input type="radio" name="FeatureTabbed sections" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Tabbed sections"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Tabbed sections','id2Tabbed sections');">Changer type</button> </br>								
 								</br>	
 								<label>Outline bulleting with indent :</label></br>
-								<input type="radio" name="FeatureOutline bulleting with indent" value="oui">Yes <input type="radio" name="FeatureOutline bulleting with indent" value = "non">No <input type="radio" name="FeatureOutline bulleting with indent" value = "non">Partial </br>
-											<input name="FeatureOutline bulleting with indent" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Outline bulleting with indent"> <input type="radio" name="FeatureOutline bulleting with indent" value="oui">Yes <input type="radio" name="FeatureOutline bulleting with indent" value = "non">No <input type="radio" name="FeatureOutline bulleting with indent" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Outline bulleting with indent"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Outline bulleting with indent','id2Outline bulleting with indent');">Changer type</button> </br>								
 								</br>	
 								<label>Handwriting recognition :</label></br>
-								<input type="radio" name="FeatureHandwriting recognition" value="oui">Yes <input type="radio" name="FeatureHandwriting recognition" value = "non">No <input type="radio" name="FeatureHandwriting recognition" value = "non">Partial </br>
-											<input name="FeatureHandwriting recognition" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Handwriting recognition"> <input type="radio" name="FeatureHandwriting recognition" value="oui">Yes <input type="radio" name="FeatureHandwriting recognition" value = "non">No <input type="radio" name="FeatureHandwriting recognition" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Handwriting recognition"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Handwriting recognition','id2Handwriting recognition');">Changer type</button> </br>								
 								</br>	
 								<label>Spell check :</label></br>
-								<input type="radio" name="FeatureSpell check" value="oui">Yes <input type="radio" name="FeatureSpell check" value = "non">No <input type="radio" name="FeatureSpell check" value = "non">Partial </br>
-											<input name="FeatureSpell check" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Spell check"> <input type="radio" name="FeatureSpell check" value="oui">Yes <input type="radio" name="FeatureSpell check" value = "non">No <input type="radio" name="FeatureSpell check" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Spell check"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Spell check','id2Spell check');">Changer type</button> </br>								
 								</br>	
 								<label>Ink-pen input :</label></br>
-								<input type="radio" name="FeatureInk-pen input" value="oui">Yes <input type="radio" name="FeatureInk-pen input" value = "non">No <input type="radio" name="FeatureInk-pen input" value = "non">Partial </br>
-											<input name="FeatureInk-pen input" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Ink-pen input"> <input type="radio" name="FeatureInk-pen input" value="oui">Yes <input type="radio" name="FeatureInk-pen input" value = "non">No <input type="radio" name="FeatureInk-pen input" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Ink-pen input"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Ink-pen input','id2Ink-pen input');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

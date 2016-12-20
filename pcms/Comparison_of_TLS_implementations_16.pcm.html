@@ -30,22 +30,26 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>OpenSSL engine :</label></br>
-								<input type="radio" name="FeatureOpenSSL engine" value="oui">Yes <input type="radio" name="FeatureOpenSSL engine" value = "non">No <input type="radio" name="FeatureOpenSSL engine" value = "non">Partial </br>
-											<input name="FeatureOpenSSL engine" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1OpenSSL engine"> <input type="radio" name="FeatureOpenSSL engine" value="oui">Yes <input type="radio" name="FeatureOpenSSL engine" value = "non">No <input type="radio" name="FeatureOpenSSL engine" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2OpenSSL engine"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1OpenSSL engine','id2OpenSSL engine');">Changer type</button> </br>								
 								</br>	
 								<label>Implementation : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>CommonCrypto :</label></br>
-								<input type="radio" name="FeatureCommonCrypto" value="oui">Yes <input type="radio" name="FeatureCommonCrypto" value = "non">No <input type="radio" name="FeatureCommonCrypto" value = "non">Partial </br>
-											<input name="FeatureCommonCrypto" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1CommonCrypto"> <input type="radio" name="FeatureCommonCrypto" value="oui">Yes <input type="radio" name="FeatureCommonCrypto" value = "non">No <input type="radio" name="FeatureCommonCrypto" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2CommonCrypto"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1CommonCrypto','id2CommonCrypto');">Changer type</button> </br>								
 								</br>	
 								<label>Windows CSP :</label></br>
-								<input type="radio" name="FeatureWindows CSP" value="oui">Yes <input type="radio" name="FeatureWindows CSP" value = "non">No <input type="radio" name="FeatureWindows CSP" value = "non">Partial </br>
-											<input name="FeatureWindows CSP" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Windows CSP"> <input type="radio" name="FeatureWindows CSP" value="oui">Yes <input type="radio" name="FeatureWindows CSP" value = "non">No <input type="radio" name="FeatureWindows CSP" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Windows CSP"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Windows CSP','id2Windows CSP');">Changer type</button> </br>								
 								</br>	
 								<label>/dev/crypto :</label></br>
-								<input type="radio" name="Feature/dev/crypto" value="oui">Yes <input type="radio" name="Feature/dev/crypto" value = "non">No <input type="radio" name="Feature/dev/crypto" value = "non">Partial </br>
-											<input name="Feature/dev/crypto" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1/dev/crypto"> <input type="radio" name="Feature/dev/crypto" value="oui">Yes <input type="radio" name="Feature/dev/crypto" value = "non">No <input type="radio" name="Feature/dev/crypto" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2/dev/crypto"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1/dev/crypto','id2/dev/crypto');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

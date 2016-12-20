@@ -32,8 +32,9 @@
 								<label>Genre : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Monthly fee required :</label></br>
-								<input type="radio" name="FeatureMonthly fee required" value="oui">Yes <input type="radio" name="FeatureMonthly fee required" value = "non">No <input type="radio" name="FeatureMonthly fee required" value = "non">Partial </br>
-											<input name="FeatureMonthly fee required" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Monthly fee required"> <input type="radio" name="FeatureMonthly fee required" value="oui">Yes <input type="radio" name="FeatureMonthly fee required" value = "non">No <input type="radio" name="FeatureMonthly fee required" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Monthly fee required"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Monthly fee required','id2Monthly fee required');">Changer type</button> </br>								
 								</br>	
 								<label>Release date(s) :</label></br>
 											<input type="checkbox" name="Feature" >June 7</br>	
@@ -107,15 +108,16 @@
 											<input type="checkbox" name="Feature" >February 13</br>	
 											<input type="checkbox" name="Feature" >February 10</br>	
 											<input type="checkbox" name="Feature" >September 18</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Client sale method : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Name : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Monthly subscription available :</label></br>
-								<input type="radio" name="FeatureMonthly subscription available" value="oui">Yes <input type="radio" name="FeatureMonthly subscription available" value = "non">No <input type="radio" name="FeatureMonthly subscription available" value = "non">Partial </br>
-											<input name="FeatureMonthly subscription available" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Monthly subscription available"> <input type="radio" name="FeatureMonthly subscription available" value="oui">Yes <input type="radio" name="FeatureMonthly subscription available" value = "non">No <input type="radio" name="FeatureMonthly subscription available" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Monthly subscription available"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Monthly subscription available','id2Monthly subscription available');">Changer type</button> </br>								
 								</br>	
 								<label>Creator : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
@@ -198,7 +200,7 @@
 											<input type="checkbox" name="Feature" >2014 (Update 24)</br>	
 											<input type="checkbox" name="Feature" >June 23</br>	
 											<input type="checkbox" name="Feature" >V. 1.15.52</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

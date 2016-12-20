@@ -32,28 +32,34 @@
 								<label>Implementation : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>PKIX path validation :</label></br>
-								<input type="radio" name="FeaturePKIX path validation" value="oui">Yes <input type="radio" name="FeaturePKIX path validation" value = "non">No <input type="radio" name="FeaturePKIX path validation" value = "non">Partial </br>
-											<input name="FeaturePKIX path validation" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1PKIX path validation"> <input type="radio" name="FeaturePKIX path validation" value="oui">Yes <input type="radio" name="FeaturePKIX path validation" value = "non">No <input type="radio" name="FeaturePKIX path validation" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2PKIX path validation"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1PKIX path validation','id2PKIX path validation');">Changer type</button> </br>								
 								</br>	
 								<label>CRL :</label></br>
-								<input type="radio" name="FeatureCRL" value="oui">Yes <input type="radio" name="FeatureCRL" value = "non">No <input type="radio" name="FeatureCRL" value = "non">Partial </br>
-											<input name="FeatureCRL" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1CRL"> <input type="radio" name="FeatureCRL" value="oui">Yes <input type="radio" name="FeatureCRL" value = "non">No <input type="radio" name="FeatureCRL" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2CRL"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1CRL','id2CRL');">Changer type</button> </br>								
 								</br>	
 								<label>Application-defined :</label></br>
-								<input type="radio" name="FeatureApplication-defined" value="oui">Yes <input type="radio" name="FeatureApplication-defined" value = "non">No <input type="radio" name="FeatureApplication-defined" value = "non">Partial </br>
-											<input name="FeatureApplication-defined" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Application-defined"> <input type="radio" name="FeatureApplication-defined" value="oui">Yes <input type="radio" name="FeatureApplication-defined" value = "non">No <input type="radio" name="FeatureApplication-defined" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Application-defined"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Application-defined','id2Application-defined');">Changer type</button> </br>								
 								</br>	
 								<label>DANE (DNSSEC) :</label></br>
-								<input type="radio" name="FeatureDANE (DNSSEC)" value="oui">Yes <input type="radio" name="FeatureDANE (DNSSEC)" value = "non">No <input type="radio" name="FeatureDANE (DNSSEC)" value = "non">Partial </br>
-											<input name="FeatureDANE (DNSSEC)" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1DANE (DNSSEC)"> <input type="radio" name="FeatureDANE (DNSSEC)" value="oui">Yes <input type="radio" name="FeatureDANE (DNSSEC)" value = "non">No <input type="radio" name="FeatureDANE (DNSSEC)" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2DANE (DNSSEC)"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1DANE (DNSSEC)','id2DANE (DNSSEC)');">Changer type</button> </br>								
 								</br>	
 								<label>Trust on First Use (TOFU) :</label></br>
-								<input type="radio" name="FeatureTrust on First Use (TOFU)" value="oui">Yes <input type="radio" name="FeatureTrust on First Use (TOFU)" value = "non">No <input type="radio" name="FeatureTrust on First Use (TOFU)" value = "non">Partial </br>
-											<input name="FeatureTrust on First Use (TOFU)" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Trust on First Use (TOFU)"> <input type="radio" name="FeatureTrust on First Use (TOFU)" value="oui">Yes <input type="radio" name="FeatureTrust on First Use (TOFU)" value = "non">No <input type="radio" name="FeatureTrust on First Use (TOFU)" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Trust on First Use (TOFU)"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Trust on First Use (TOFU)','id2Trust on First Use (TOFU)');">Changer type</button> </br>								
 								</br>	
 								<label>OCSP :</label></br>
-								<input type="radio" name="FeatureOCSP" value="oui">Yes <input type="radio" name="FeatureOCSP" value = "non">No <input type="radio" name="FeatureOCSP" value = "non">Partial </br>
-											<input name="FeatureOCSP" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1OCSP"> <input type="radio" name="FeatureOCSP" value="oui">Yes <input type="radio" name="FeatureOCSP" value = "non">No <input type="radio" name="FeatureOCSP" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2OCSP"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1OCSP','id2OCSP');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

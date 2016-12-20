@@ -34,12 +34,14 @@
 								<label>Software license : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>FOSS :</label></br>
-								<input type="radio" name="FeatureFOSS" value="oui">Yes <input type="radio" name="FeatureFOSS" value = "non">No <input type="radio" name="FeatureFOSS" value = "non">Partial </br>
-											<input name="FeatureFOSS" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1FOSS"> <input type="radio" name="FeatureFOSS" value="oui">Yes <input type="radio" name="FeatureFOSS" value = "non">No <input type="radio" name="FeatureFOSS" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2FOSS"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1FOSS','id2FOSS');">Changer type</button> </br>								
 								</br>	
 								<label>Active :</label></br>
-								<input type="radio" name="FeatureActive" value="oui">Yes <input type="radio" name="FeatureActive" value = "non">No <input type="radio" name="FeatureActive" value = "non">Partial </br>
-											<input name="FeatureActive" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Active"> <input type="radio" name="FeatureActive" value="oui">Yes <input type="radio" name="FeatureActive" value = "non">No <input type="radio" name="FeatureActive" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Active"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Active','id2Active');">Changer type</button> </br>								
 								</br>	
 								<label>Other software : </label></br> <input id="2" type="text" name="Feature"></br>
 						<script>

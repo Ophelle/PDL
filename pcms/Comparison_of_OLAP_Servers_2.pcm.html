@@ -32,12 +32,14 @@
 								<label>OLAP Server : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Stored procedures :</label></br>
-								<input type="radio" name="FeatureStored procedures" value="oui">Yes <input type="radio" name="FeatureStored procedures" value = "non">No <input type="radio" name="FeatureStored procedures" value = "non">Partial </br>
-											<input name="FeatureStored procedures" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Stored procedures"> <input type="radio" name="FeatureStored procedures" value="oui">Yes <input type="radio" name="FeatureStored procedures" value = "non">No <input type="radio" name="FeatureStored procedures" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Stored procedures"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Stored procedures','id2Stored procedures');">Changer type</button> </br>								
 								</br>	
 								<label>LINQ :</label></br>
-								<input type="radio" name="FeatureLINQ" value="oui">Yes <input type="radio" name="FeatureLINQ" value = "non">No <input type="radio" name="FeatureLINQ" value = "non">Partial </br>
-											<input name="FeatureLINQ" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1LINQ"> <input type="radio" name="FeatureLINQ" value="oui">Yes <input type="radio" name="FeatureLINQ" value = "non">No <input type="radio" name="FeatureLINQ" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2LINQ"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1LINQ','id2LINQ');">Changer type</button> </br>								
 								</br>	
 								<label>Visualization :</label></br>
 											<input type="checkbox" name="Feature" >TM1 Web</br>	
@@ -51,29 +53,34 @@
 											<input type="checkbox" name="Feature" >Javascript</br>	
 											<input type="checkbox" name="Feature" >Microsoft Excel</br>	
 											<input type="checkbox" name="Feature" >Microsoft Power BI</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>SQL :</label></br>
-								<input type="radio" name="FeatureSQL" value="oui">Yes <input type="radio" name="FeatureSQL" value = "non">No <input type="radio" name="FeatureSQL" value = "non">Partial </br>
-											<input name="FeatureSQL" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1SQL"> <input type="radio" name="FeatureSQL" value="oui">Yes <input type="radio" name="FeatureSQL" value = "non">No <input type="radio" name="FeatureSQL" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2SQL"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1SQL','id2SQL');">Changer type</button> </br>								
 								</br>	
 								<label>Custom functions :</label></br>
-								<input type="radio" name="FeatureCustom functions" value="oui">Yes <input type="radio" name="FeatureCustom functions" value = "non">No <input type="radio" name="FeatureCustom functions" value = "non">Partial </br>
-											<input name="FeatureCustom functions" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Custom functions"> <input type="radio" name="FeatureCustom functions" value="oui">Yes <input type="radio" name="FeatureCustom functions" value = "non">No <input type="radio" name="FeatureCustom functions" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Custom functions"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Custom functions','id2Custom functions');">Changer type</button> </br>								
 								</br>	
 								<label>MDX :</label></br>
-								<input type="radio" name="FeatureMDX" value="oui">Yes <input type="radio" name="FeatureMDX" value = "non">No <input type="radio" name="FeatureMDX" value = "non">Partial </br>
-											<input name="FeatureMDX" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1MDX"> <input type="radio" name="FeatureMDX" value="oui">Yes <input type="radio" name="FeatureMDX" value = "non">No <input type="radio" name="FeatureMDX" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2MDX"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1MDX','id2MDX');">Changer type</button> </br>								
 								</br>	
 								<label>JSON : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>XML for Analysis :</label></br>
-								<input type="radio" name="FeatureXML for Analysis" value="oui">Yes <input type="radio" name="FeatureXML for Analysis" value = "non">No <input type="radio" name="FeatureXML for Analysis" value = "non">Partial </br>
-											<input name="FeatureXML for Analysis" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1XML for Analysis"> <input type="radio" name="FeatureXML for Analysis" value="oui">Yes <input type="radio" name="FeatureXML for Analysis" value = "non">No <input type="radio" name="FeatureXML for Analysis" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2XML for Analysis"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1XML for Analysis','id2XML for Analysis');">Changer type</button> </br>								
 								</br>	
 								<label>OLE DB for OLAP :</label></br>
-								<input type="radio" name="FeatureOLE DB for OLAP" value="oui">Yes <input type="radio" name="FeatureOLE DB for OLAP" value = "non">No <input type="radio" name="FeatureOLE DB for OLAP" value = "non">Partial </br>
-											<input name="FeatureOLE DB for OLAP" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1OLE DB for OLAP"> <input type="radio" name="FeatureOLE DB for OLAP" value="oui">Yes <input type="radio" name="FeatureOLE DB for OLAP" value = "non">No <input type="radio" name="FeatureOLE DB for OLAP" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2OLE DB for OLAP"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1OLE DB for OLAP','id2OLE DB for OLAP');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

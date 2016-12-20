@@ -32,16 +32,19 @@
 								<label>Calculator : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Lua :</label></br>
-								<input type="radio" name="FeatureLua" value="oui">Yes <input type="radio" name="FeatureLua" value = "non">No <input type="radio" name="FeatureLua" value = "non">Partial </br>
-											<input name="FeatureLua" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Lua"> <input type="radio" name="FeatureLua" value="oui">Yes <input type="radio" name="FeatureLua" value = "non">No <input type="radio" name="FeatureLua" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Lua"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Lua','id2Lua');">Changer type</button> </br>								
 								</br>	
 								<label>TI-BASIC :</label></br>
-								<input type="radio" name="FeatureTI-BASIC" value="oui">Yes <input type="radio" name="FeatureTI-BASIC" value = "non">No <input type="radio" name="FeatureTI-BASIC" value = "non">Partial </br>
-											<input name="FeatureTI-BASIC" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1TI-BASIC"> <input type="radio" name="FeatureTI-BASIC" value="oui">Yes <input type="radio" name="FeatureTI-BASIC" value = "non">No <input type="radio" name="FeatureTI-BASIC" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2TI-BASIC"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1TI-BASIC','id2TI-BASIC');">Changer type</button> </br>								
 								</br>	
 								<label>Native code :</label></br>
-								<input type="radio" name="FeatureNative code" value="oui">Yes <input type="radio" name="FeatureNative code" value = "non">No <input type="radio" name="FeatureNative code" value = "non">Partial </br>
-											<input name="FeatureNative code" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Native code"> <input type="radio" name="FeatureNative code" value="oui">Yes <input type="radio" name="FeatureNative code" value = "non">No <input type="radio" name="FeatureNative code" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Native code"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Native code','id2Native code');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

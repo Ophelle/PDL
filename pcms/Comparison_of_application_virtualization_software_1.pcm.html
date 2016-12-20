@@ -32,8 +32,9 @@
 								<label>Comments : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>JIT :</label></br>
-								<input type="radio" name="FeatureJIT" value="oui">Yes <input type="radio" name="FeatureJIT" value = "non">No <input type="radio" name="FeatureJIT" value = "non">Partial </br>
-											<input name="FeatureJIT" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1JIT"> <input type="radio" name="FeatureJIT" value="oui">Yes <input type="radio" name="FeatureJIT" value = "non">No <input type="radio" name="FeatureJIT" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2JIT"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1JIT','id2JIT');">Changer type</button> </br>								
 								</br>	
 								<label>Implementation Language : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
@@ -44,8 +45,9 @@
 								<label>SLoC : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Interpreter :</label></br>
-								<input type="radio" name="FeatureInterpreter" value="oui">Yes <input type="radio" name="FeatureInterpreter" value = "non">No <input type="radio" name="FeatureInterpreter" value = "non">Partial </br>
-											<input name="FeatureInterpreter" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Interpreter"> <input type="radio" name="FeatureInterpreter" value="oui">Yes <input type="radio" name="FeatureInterpreter" value = "non">No <input type="radio" name="FeatureInterpreter" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Interpreter"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Interpreter','id2Interpreter');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

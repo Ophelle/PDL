@@ -34,8 +34,9 @@
 								<label>Package format : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Graphical installation process :</label></br>
-								<input type="radio" name="FeatureGraphical installation process" value="oui">Yes <input type="radio" name="FeatureGraphical installation process" value = "non">No <input type="radio" name="FeatureGraphical installation process" value = "non">Partial </br>
-											<input name="FeatureGraphical installation process" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Graphical installation process"> <input type="radio" name="FeatureGraphical installation process" value="oui">Yes <input type="radio" name="FeatureGraphical installation process" value = "non">No <input type="radio" name="FeatureGraphical installation process" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Graphical installation process"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Graphical installation process','id2Graphical installation process');">Changer type</button> </br>								
 								</br>	
 								<label>Distribution : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
@@ -92,7 +93,7 @@
 											<input type="checkbox" name="Feature" >50</br>	
 											<input type="checkbox" name="Feature" >781</br>	
 											<input type="checkbox" name="Feature" >10</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Netboot : </label></br> <input id="6" type="text" name="Feature"></br>
 						<script>

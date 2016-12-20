@@ -30,18 +30,20 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Custom SMS/MMS tones :</label></br>
-								<input type="radio" name="FeatureCustom SMS/MMS tones" value="oui">Yes <input type="radio" name="FeatureCustom SMS/MMS tones" value = "non">No <input type="radio" name="FeatureCustom SMS/MMS tones" value = "non">Partial </br>
-											<input name="FeatureCustom SMS/MMS tones" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Custom SMS/MMS tones"> <input type="radio" name="FeatureCustom SMS/MMS tones" value="oui">Yes <input type="radio" name="FeatureCustom SMS/MMS tones" value = "non">No <input type="radio" name="FeatureCustom SMS/MMS tones" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Custom SMS/MMS tones"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Custom SMS/MMS tones','id2Custom SMS/MMS tones');">Changer type</button> </br>								
 								</br>	
 								<label>Custom vibrate alert patterns : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Custom ringtones :</label></br>
-								<input type="radio" name="FeatureCustom ringtones" value="oui">Yes <input type="radio" name="FeatureCustom ringtones" value = "non">No <input type="radio" name="FeatureCustom ringtones" value = "non">Partial </br>
-											<input name="FeatureCustom ringtones" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Custom ringtones"> <input type="radio" name="FeatureCustom ringtones" value="oui">Yes <input type="radio" name="FeatureCustom ringtones" value = "non">No <input type="radio" name="FeatureCustom ringtones" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Custom ringtones"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Custom ringtones','id2Custom ringtones');">Changer type</button> </br>								
 								</br>	
 								<label>Ringtones and Alerts :</label></br>
 											<input type="checkbox" name="Feature" >Ringtones and Alerts</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Feature : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>

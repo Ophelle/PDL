@@ -40,8 +40,9 @@
 								<label>Implementation : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>OpenSSL compatibility Layer :</label></br>
-								<input type="radio" name="FeatureOpenSSL compatibility Layer" value="oui">Yes <input type="radio" name="FeatureOpenSSL compatibility Layer" value = "non">No <input type="radio" name="FeatureOpenSSL compatibility Layer" value = "non">Partial </br>
-											<input name="FeatureOpenSSL compatibility Layer" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1OpenSSL compatibility Layer"> <input type="radio" name="FeatureOpenSSL compatibility Layer" value="oui">Yes <input type="radio" name="FeatureOpenSSL compatibility Layer" value = "non">No <input type="radio" name="FeatureOpenSSL compatibility Layer" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2OpenSSL compatibility Layer"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1OpenSSL compatibility Layer','id2OpenSSL compatibility Layer');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

@@ -51,27 +51,31 @@
 											<input type="checkbox" name="Feature" >Infor Federation Services</br>	
 											<input type="checkbox" name="Feature" >Builtin</br>	
 											<input type="checkbox" name="Feature" >IBM Cognos BI authentication</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>On-the-Fly :</label></br>
-								<input type="radio" name="FeatureOn-the-Fly" value="oui">Yes <input type="radio" name="FeatureOn-the-Fly" value = "non">No <input type="radio" name="FeatureOn-the-Fly" value = "non">Partial </br>
-											<input name="FeatureOn-the-Fly" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1On-the-Fly"> <input type="radio" name="FeatureOn-the-Fly" value="oui">Yes <input type="radio" name="FeatureOn-the-Fly" value = "non">No <input type="radio" name="FeatureOn-the-Fly" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2On-the-Fly"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1On-the-Fly','id2On-the-Fly');">Changer type</button> </br>								
 								</br>	
 								<label>Network encryption : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>OLAP Server : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Data access - Visual totals :</label></br>
-								<input type="radio" name="FeatureData access - Visual totals" value="oui">Yes <input type="radio" name="FeatureData access - Visual totals" value = "non">No <input type="radio" name="FeatureData access - Visual totals" value = "non">Partial </br>
-											<input name="FeatureData access - Visual totals" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Data access - Visual totals"> <input type="radio" name="FeatureData access - Visual totals" value="oui">Yes <input type="radio" name="FeatureData access - Visual totals" value = "non">No <input type="radio" name="FeatureData access - Visual totals" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Data access - Visual totals"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Data access - Visual totals','id2Data access - Visual totals');">Changer type</button> </br>								
 								</br>	
 								<label>Data access - Dimension security :</label></br>
-								<input type="radio" name="FeatureData access - Dimension security" value="oui">Yes <input type="radio" name="FeatureData access - Dimension security" value = "non">No <input type="radio" name="FeatureData access - Dimension security" value = "non">Partial </br>
-											<input name="FeatureData access - Dimension security" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Data access - Dimension security"> <input type="radio" name="FeatureData access - Dimension security" value="oui">Yes <input type="radio" name="FeatureData access - Dimension security" value = "non">No <input type="radio" name="FeatureData access - Dimension security" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Data access - Dimension security"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Data access - Dimension security','id2Data access - Dimension security');">Changer type</button> </br>								
 								</br>	
 								<label>Data access - Cell security :</label></br>
-								<input type="radio" name="FeatureData access - Cell security" value="oui">Yes <input type="radio" name="FeatureData access - Cell security" value = "non">No <input type="radio" name="FeatureData access - Cell security" value = "non">Partial </br>
-											<input name="FeatureData access - Cell security" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Data access - Cell security"> <input type="radio" name="FeatureData access - Cell security" value="oui">Yes <input type="radio" name="FeatureData access - Cell security" value = "non">No <input type="radio" name="FeatureData access - Cell security" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Data access - Cell security"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Data access - Cell security','id2Data access - Cell security');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

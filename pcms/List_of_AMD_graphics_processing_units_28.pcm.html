@@ -32,24 +32,24 @@
 								<label>Release Price (USD) : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>TrueAudio :</label></br>
-								<input type="radio" name="FeatureTrueAudio" value="oui">Yes <input type="radio" name="FeatureTrueAudio" value = "non">No <input type="radio" name="FeatureTrueAudio" value = "non">Partial </br>
-											<input name="FeatureTrueAudio" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1TrueAudio"> <input type="radio" name="FeatureTrueAudio" value="oui">Yes <input type="radio" name="FeatureTrueAudio" value = "non">No <input type="radio" name="FeatureTrueAudio" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2TrueAudio"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1TrueAudio','id2TrueAudio');">Changer type</button> </br>								
 								</br>	
 								<label>Model : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>API support (version) - OpenCL : </label></br> <input style="display:block;" id="id1API support (version) - OpenCL" type="number" name="Feature">
 												<input style="display:none;" id="id2API support (version) - OpenCL" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1API support (version) - OpenCL','id2API support (version) - OpenCL');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1API support (version) - OpenCL','id2API support (version) - OpenCL');">Changer type</button></br>								</br>	
 								<label>API support (version) - DirectX : </label></br> <input style="display:block;" id="id1API support (version) - DirectX" type="number" name="Feature">
 												<input style="display:none;" id="id2API support (version) - DirectX" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1API support (version) - DirectX','id2API support (version) - DirectX');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1API support (version) - DirectX','id2API support (version) - DirectX');">Changer type</button></br>								</br>	
 								<label>API support (version) - OpenGL : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>API support (version) - Mantle :</label></br>
-								<input type="radio" name="FeatureAPI support (version) - Mantle" value="oui">Yes <input type="radio" name="FeatureAPI support (version) - Mantle" value = "non">No <input type="radio" name="FeatureAPI support (version) - Mantle" value = "non">Partial </br>
-											<input name="FeatureAPI support (version) - Mantle" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1API support (version) - Mantle"> <input type="radio" name="FeatureAPI support (version) - Mantle" value="oui">Yes <input type="radio" name="FeatureAPI support (version) - Mantle" value = "non">No <input type="radio" name="FeatureAPI support (version) - Mantle" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2API support (version) - Mantle"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1API support (version) - Mantle','id2API support (version) - Mantle');">Changer type</button> </br>								
 								</br>	
 								<label>GFLOPS/W Single Precision : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
@@ -63,8 +63,7 @@
 								</br>	
 								<label>Fab (nm) : </label></br> <input style="display:block;" id="id1Fab (nm)" type="number" name="Feature">
 												<input style="display:none;" id="id2Fab (nm)" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fab (nm)','id2Fab (nm)');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Fab (nm)','id2Fab (nm)');">Changer type</button></br>								</br>	
 								<label>TDP (W) - Idle : </label></br> <input id="8" type="text" name="Feature"></br>
 								</br>	
 								<label>TDP (W) - Max. : </label></br> <input id="9" type="text" name="Feature"></br>
@@ -77,16 +76,14 @@
 								</br>	
 								<label>Memory (MB) : </label></br> <input style="display:block;" id="id1Memory (MB)" type="number" name="Feature">
 												<input style="display:none;" id="id2Memory (MB)" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Memory (MB)','id2Memory (MB)');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Memory (MB)','id2Memory (MB)');">Changer type</button></br>								</br>	
 								<label>Clock rate - Boost (MHz) : </label></br> <input id="13" type="text" name="Feature"></br>
 								</br>	
 								<label>Clock rate - Core (MHz) : </label></br> <input id="14" type="text" name="Feature"></br>
 								</br>	
 								<label>Clock rate - Memory (MT/s) : </label></br> <input style="display:block;" id="id1Clock rate - Memory (MT/s)" type="number" name="Feature">
 												<input style="display:none;" id="id2Clock rate - Memory (MT/s)" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Clock rate - Memory (MT/s)','id2Clock rate - Memory (MT/s)');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Clock rate - Memory (MT/s)','id2Clock rate - Memory (MT/s)');">Changer type</button></br>								</br>	
 								<label>Fillrate - Pixel (GP/s) : </label></br> <input id="15" type="text" name="Feature"></br>
 								</br>	
 								<label>Fillrate - Texture (GT/s) : </label></br> <input id="16" type="text" name="Feature"></br>
@@ -101,8 +98,7 @@
 								</br>	
 								<label>Memory - Bus width (bit) : </label></br> <input style="display:block;" id="id1Memory - Bus width (bit)" type="number" name="Feature">
 												<input style="display:none;" id="id2Memory - Bus width (bit)" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Memory - Bus width (bit)','id2Memory - Bus width (bit)');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Memory - Bus width (bit)','id2Memory - Bus width (bit)');">Changer type</button></br>								</br>	
 								<label>Architecture : </label></br> <input id="21" type="text" name="Feature"></br>
 						<script>
 								$("#0").typeahead({

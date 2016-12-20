@@ -52,7 +52,7 @@
 											<input type="checkbox" name="Feature" >CAD</br>	
 											<input type="checkbox" name="Feature" >PDF</br>	
 											<input type="checkbox" name="Feature" >MS Project</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Platforms : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
@@ -96,15 +96,17 @@
 											<input type="checkbox" name="Feature" >features</br>	
 											<input type="checkbox" name="Feature" >Time and Resource Constraints</br>	
 											<input type="checkbox" name="Feature" >Prioritities</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Cost estimate :</label></br>
-								<input type="radio" name="FeatureCost estimate" value="oui">Yes <input type="radio" name="FeatureCost estimate" value = "non">No <input type="radio" name="FeatureCost estimate" value = "non">Partial </br>
-											<input name="FeatureCost estimate" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Cost estimate"> <input type="radio" name="FeatureCost estimate" value="oui">Yes <input type="radio" name="FeatureCost estimate" value = "non">No <input type="radio" name="FeatureCost estimate" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Cost estimate"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Cost estimate','id2Cost estimate');">Changer type</button> </br>								
 								</br>	
 								<label>Schedule estimate :</label></br>
-								<input type="radio" name="FeatureSchedule estimate" value="oui">Yes <input type="radio" name="FeatureSchedule estimate" value = "non">No <input type="radio" name="FeatureSchedule estimate" value = "non">Partial </br>
-											<input name="FeatureSchedule estimate" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Schedule estimate"> <input type="radio" name="FeatureSchedule estimate" value="oui">Yes <input type="radio" name="FeatureSchedule estimate" value = "non">No <input type="radio" name="FeatureSchedule estimate" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Schedule estimate"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Schedule estimate','id2Schedule estimate');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

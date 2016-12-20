@@ -30,60 +30,73 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Case-sensitive :</label></br>
-								<input type="radio" name="FeatureCase-sensitive" value="oui">Yes <input type="radio" name="FeatureCase-sensitive" value = "non">No <input type="radio" name="FeatureCase-sensitive" value = "non">Partial </br>
-											<input name="FeatureCase-sensitive" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Case-sensitive"> <input type="radio" name="FeatureCase-sensitive" value="oui">Yes <input type="radio" name="FeatureCase-sensitive" value = "non">No <input type="radio" name="FeatureCase-sensitive" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Case-sensitive"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Case-sensitive','id2Case-sensitive');">Changer type</button> </br>								
 								</br>	
 								<label>Block journaling :</label></br>
-								<input type="radio" name="FeatureBlock journaling" value="oui">Yes <input type="radio" name="FeatureBlock journaling" value = "non">No <input type="radio" name="FeatureBlock journaling" value = "non">Partial </br>
-											<input name="FeatureBlock journaling" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Block journaling"> <input type="radio" name="FeatureBlock journaling" value="oui">Yes <input type="radio" name="FeatureBlock journaling" value = "non">No <input type="radio" name="FeatureBlock journaling" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Block journaling"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Block journaling','id2Block journaling');">Changer type</button> </br>								
 								</br>	
 								<label>Hard link :</label></br>
-								<input type="radio" name="FeatureHard link" value="oui">Yes <input type="radio" name="FeatureHard link" value = "non">No <input type="radio" name="FeatureHard link" value = "non">Partial </br>
-											<input name="FeatureHard link" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Hard link"> <input type="radio" name="FeatureHard link" value="oui">Yes <input type="radio" name="FeatureHard link" value = "non">No <input type="radio" name="FeatureHard link" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Hard link"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Hard link','id2Hard link');">Changer type</button> </br>								
 								</br>	
 								<label>Integrated LVM :</label></br>
-								<input type="radio" name="FeatureIntegrated LVM" value="oui">Yes <input type="radio" name="FeatureIntegrated LVM" value = "non">No <input type="radio" name="FeatureIntegrated LVM" value = "non">Partial </br>
-											<input name="FeatureIntegrated LVM" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Integrated LVM"> <input type="radio" name="FeatureIntegrated LVM" value="oui">Yes <input type="radio" name="FeatureIntegrated LVM" value = "non">No <input type="radio" name="FeatureIntegrated LVM" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Integrated LVM"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Integrated LVM','id2Integrated LVM');">Changer type</button> </br>								
 								</br>	
 								<label>Data deduplication :</label></br>
-								<input type="radio" name="FeatureData deduplication" value="oui">Yes <input type="radio" name="FeatureData deduplication" value = "non">No <input type="radio" name="FeatureData deduplication" value = "non">Partial </br>
-											<input name="FeatureData deduplication" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Data deduplication"> <input type="radio" name="FeatureData deduplication" value="oui">Yes <input type="radio" name="FeatureData deduplication" value = "non">No <input type="radio" name="FeatureData deduplication" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Data deduplication"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Data deduplication','id2Data deduplication');">Changer type</button> </br>								
 								</br>	
 								<label>Case-preserving :</label></br>
-								<input type="radio" name="FeatureCase-preserving" value="oui">Yes <input type="radio" name="FeatureCase-preserving" value = "non">No <input type="radio" name="FeatureCase-preserving" value = "non">Partial </br>
-											<input name="FeatureCase-preserving" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Case-preserving"> <input type="radio" name="FeatureCase-preserving" value="oui">Yes <input type="radio" name="FeatureCase-preserving" value = "non">No <input type="radio" name="FeatureCase-preserving" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Case-preserving"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Case-preserving','id2Case-preserving');">Changer type</button> </br>								
 								</br>	
 								<label>Volumes are resizeable : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Metadata-only journaling :</label></br>
-								<input type="radio" name="FeatureMetadata-only journaling" value="oui">Yes <input type="radio" name="FeatureMetadata-only journaling" value = "non">No <input type="radio" name="FeatureMetadata-only journaling" value = "non">Partial </br>
-											<input name="FeatureMetadata-only journaling" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Metadata-only journaling"> <input type="radio" name="FeatureMetadata-only journaling" value="oui">Yes <input type="radio" name="FeatureMetadata-only journaling" value = "non">No <input type="radio" name="FeatureMetadata-only journaling" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Metadata-only journaling"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Metadata-only journaling','id2Metadata-only journaling');">Changer type</button> </br>								
 								</br>	
 								<label>Symbolic link :</label></br>
-								<input type="radio" name="FeatureSymbolic link" value="oui">Yes <input type="radio" name="FeatureSymbolic link" value = "non">No <input type="radio" name="FeatureSymbolic link" value = "non">Partial </br>
-											<input name="FeatureSymbolic link" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Symbolic link"> <input type="radio" name="FeatureSymbolic link" value="oui">Yes <input type="radio" name="FeatureSymbolic link" value = "non">No <input type="radio" name="FeatureSymbolic link" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Symbolic link"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Symbolic link','id2Symbolic link');">Changer type</button> </br>								
 								</br>	
 								<label>Encryption :</label></br>
-								<input type="radio" name="FeatureEncryption" value="oui">Yes <input type="radio" name="FeatureEncryption" value = "non">No <input type="radio" name="FeatureEncryption" value = "non">Partial </br>
-											<input name="FeatureEncryption" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Encryption"> <input type="radio" name="FeatureEncryption" value="oui">Yes <input type="radio" name="FeatureEncryption" value = "non">No <input type="radio" name="FeatureEncryption" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Encryption"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Encryption','id2Encryption');">Changer type</button> </br>								
 								</br>	
 								<label>Snapshot :</label></br>
-								<input type="radio" name="FeatureSnapshot" value="oui">Yes <input type="radio" name="FeatureSnapshot" value = "non">No <input type="radio" name="FeatureSnapshot" value = "non">Partial </br>
-											<input name="FeatureSnapshot" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Snapshot"> <input type="radio" name="FeatureSnapshot" value="oui">Yes <input type="radio" name="FeatureSnapshot" value = "non">No <input type="radio" name="FeatureSnapshot" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Snapshot"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Snapshot','id2Snapshot');">Changer type</button> </br>								
 								</br>	
 								<label>COW :</label></br>
-								<input type="radio" name="FeatureCOW" value="oui">Yes <input type="radio" name="FeatureCOW" value = "non">No <input type="radio" name="FeatureCOW" value = "non">Partial </br>
-											<input name="FeatureCOW" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1COW"> <input type="radio" name="FeatureCOW" value="oui">Yes <input type="radio" name="FeatureCOW" value = "non">No <input type="radio" name="FeatureCOW" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2COW"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1COW','id2COW');">Changer type</button> </br>								
 								</br>	
 								<label>File system : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>File Change Log :</label></br>
-								<input type="radio" name="FeatureFile Change Log" value="oui">Yes <input type="radio" name="FeatureFile Change Log" value = "non">No <input type="radio" name="FeatureFile Change Log" value = "non">Partial </br>
-											<input name="FeatureFile Change Log" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1File Change Log"> <input type="radio" name="FeatureFile Change Log" value="oui">Yes <input type="radio" name="FeatureFile Change Log" value = "non">No <input type="radio" name="FeatureFile Change Log" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2File Change Log"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1File Change Log','id2File Change Log');">Changer type</button> </br>								
 								</br>	
 								<label>XIP :</label></br>
-								<input type="radio" name="FeatureXIP" value="oui">Yes <input type="radio" name="FeatureXIP" value = "non">No <input type="radio" name="FeatureXIP" value = "non">Partial </br>
-											<input name="FeatureXIP" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1XIP"> <input type="radio" name="FeatureXIP" value="oui">Yes <input type="radio" name="FeatureXIP" value = "non">No <input type="radio" name="FeatureXIP" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2XIP"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1XIP','id2XIP');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

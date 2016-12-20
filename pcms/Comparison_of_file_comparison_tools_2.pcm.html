@@ -32,8 +32,9 @@
 								<label>Scripting : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>GUI :</label></br>
-								<input type="radio" name="FeatureGUI" value="oui">Yes <input type="radio" name="FeatureGUI" value = "non">No <input type="radio" name="FeatureGUI" value = "non">Partial </br>
-											<input name="FeatureGUI" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1GUI"> <input type="radio" name="FeatureGUI" value="oui">Yes <input type="radio" name="FeatureGUI" value = "non">No <input type="radio" name="FeatureGUI" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2GUI"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1GUI','id2GUI');">Changer type</button> </br>								
 								</br>	
 								<label>Reports : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
@@ -42,12 +43,14 @@
 								<label>Horizontal / Vertical : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>CLI :</label></br>
-								<input type="radio" name="FeatureCLI" value="oui">Yes <input type="radio" name="FeatureCLI" value = "non">No <input type="radio" name="FeatureCLI" value = "non">Partial </br>
-											<input name="FeatureCLI" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1CLI"> <input type="radio" name="FeatureCLI" value="oui">Yes <input type="radio" name="FeatureCLI" value = "non">No <input type="radio" name="FeatureCLI" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2CLI"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1CLI','id2CLI');">Changer type</button> </br>								
 								</br>	
 								<label>Syntax Highlighting :</label></br>
-								<input type="radio" name="FeatureSyntax Highlighting" value="oui">Yes <input type="radio" name="FeatureSyntax Highlighting" value = "non">No <input type="radio" name="FeatureSyntax Highlighting" value = "non">Partial </br>
-											<input name="FeatureSyntax Highlighting" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Syntax Highlighting"> <input type="radio" name="FeatureSyntax Highlighting" value="oui">Yes <input type="radio" name="FeatureSyntax Highlighting" value = "non">No <input type="radio" name="FeatureSyntax Highlighting" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Syntax Highlighting"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Syntax Highlighting','id2Syntax Highlighting');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

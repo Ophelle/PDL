@@ -45,17 +45,17 @@
 											<input type="checkbox" name="Feature" >Slight left</br>	
 											<input type="checkbox" name="Feature" >right and up</br>	
 											<input type="checkbox" name="Feature" >down ?</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>License : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Subjects : </label></br> <input style="display:block;" id="id1Subjects" type="number" name="Feature">
 												<input style="display:none;" id="id2Subjects" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Subjects','id2Subjects');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Subjects','id2Subjects');">Changer type</button></br>								</br>	
 								<label>3D :</label></br>
-								<input type="radio" name="Feature3D" value="oui">Yes <input type="radio" name="Feature3D" value = "non">No <input type="radio" name="Feature3D" value = "non">Partial </br>
-											<input name="Feature3D" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id13D"> <input type="radio" name="Feature3D" value="oui">Yes <input type="radio" name="Feature3D" value = "non">No <input type="radio" name="Feature3D" value = "non">Partial </p>
+											<input  style="display:none;" id ="id23D"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id13D','id23D');">Changer type</button> </br>								
 								</br>	
 								<label>Expressions :</label></br>
 											<input type="checkbox" name="Feature" >neutral face</br>	
@@ -89,7 +89,7 @@
 											<input type="checkbox" name="Feature" >frontal random gesture</br>	
 											<input type="checkbox" name="Feature" >n</br>	
 											<input type="checkbox" name="Feature" >a?</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Samples per subject : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
@@ -109,7 +109,7 @@
 											<input type="checkbox" name="Feature" >Turkey</br>	
 											<input type="checkbox" name="Feature" >Beijing University of Technology</br>	
 											<input type="checkbox" name="Feature" >University of Notre Dame</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Color : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
@@ -117,8 +117,7 @@
 								</br>	
 								<label>Total images : </label></br> <input style="display:block;" id="id1Total images" type="number" name="Feature">
 												<input style="display:none;" id="id2Total images" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Total images','id2Total images');">Changer type</button></br>								
-						<script>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Total images','id2Total images');">Changer type</button></br>						<script>
 								$("#0").typeahead({
 									name:"list0",
 									local : ['case-by-case, non-commercial, privacy protections','Immediate download possible, citation of paper is desired','case-by-case, non-commercial, publications must reference; available for download after email correspondence','?','publications must reference; available for immediate download','']

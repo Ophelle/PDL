@@ -52,21 +52,24 @@
 											<input type="checkbox" name="Feature" >draggable icons and content</br>	
 											<input type="checkbox" name="Feature" >geospatial queries (intersection</br>	
 											<input type="checkbox" name="Feature" >overlapping)</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Language : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>WMS :</label></br>
-								<input type="radio" name="FeatureWMS" value="oui">Yes <input type="radio" name="FeatureWMS" value = "non">No <input type="radio" name="FeatureWMS" value = "non">Partial </br>
-											<input name="FeatureWMS" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1WMS"> <input type="radio" name="FeatureWMS" value="oui">Yes <input type="radio" name="FeatureWMS" value = "non">No <input type="radio" name="FeatureWMS" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2WMS"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1WMS','id2WMS');">Changer type</button> </br>								
 								</br>	
 								<label>GeoRSS :</label></br>
-								<input type="radio" name="FeatureGeoRSS" value="oui">Yes <input type="radio" name="FeatureGeoRSS" value = "non">No <input type="radio" name="FeatureGeoRSS" value = "non">Partial </br>
-											<input name="FeatureGeoRSS" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1GeoRSS"> <input type="radio" name="FeatureGeoRSS" value="oui">Yes <input type="radio" name="FeatureGeoRSS" value = "non">No <input type="radio" name="FeatureGeoRSS" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2GeoRSS"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1GeoRSS','id2GeoRSS');">Changer type</button> </br>								
 								</br>	
 								<label>WFS :</label></br>
-								<input type="radio" name="FeatureWFS" value="oui">Yes <input type="radio" name="FeatureWFS" value = "non">No <input type="radio" name="FeatureWFS" value = "non">Partial </br>
-											<input name="FeatureWFS" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1WFS"> <input type="radio" name="FeatureWFS" value="oui">Yes <input type="radio" name="FeatureWFS" value = "non">No <input type="radio" name="FeatureWFS" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2WFS"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1WFS','id2WFS');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

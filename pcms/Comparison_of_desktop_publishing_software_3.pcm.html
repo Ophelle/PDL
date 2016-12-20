@@ -44,27 +44,32 @@
 											<input type="checkbox" name="Feature" >DOC</br>	
 											<input type="checkbox" name="Feature" >PS</br>	
 											<input type="checkbox" name="Feature" >ODF</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>TeX/LaTeX :</label></br>
-								<input type="radio" name="FeatureTeX/LaTeX" value="oui">Yes <input type="radio" name="FeatureTeX/LaTeX" value = "non">No <input type="radio" name="FeatureTeX/LaTeX" value = "non">Partial </br>
-											<input name="FeatureTeX/LaTeX" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1TeX/LaTeX"> <input type="radio" name="FeatureTeX/LaTeX" value="oui">Yes <input type="radio" name="FeatureTeX/LaTeX" value = "non">No <input type="radio" name="FeatureTeX/LaTeX" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2TeX/LaTeX"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1TeX/LaTeX','id2TeX/LaTeX');">Changer type</button> </br>								
 								</br>	
 								<label>SVG :</label></br>
-								<input type="radio" name="FeatureSVG" value="oui">Yes <input type="radio" name="FeatureSVG" value = "non">No <input type="radio" name="FeatureSVG" value = "non">Partial </br>
-											<input name="FeatureSVG" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1SVG"> <input type="radio" name="FeatureSVG" value="oui">Yes <input type="radio" name="FeatureSVG" value = "non">No <input type="radio" name="FeatureSVG" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2SVG"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1SVG','id2SVG');">Changer type</button> </br>								
 								</br>	
 								<label>HTML :</label></br>
-								<input type="radio" name="FeatureHTML" value="oui">Yes <input type="radio" name="FeatureHTML" value = "non">No <input type="radio" name="FeatureHTML" value = "non">Partial </br>
-											<input name="FeatureHTML" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1HTML"> <input type="radio" name="FeatureHTML" value="oui">Yes <input type="radio" name="FeatureHTML" value = "non">No <input type="radio" name="FeatureHTML" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2HTML"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1HTML','id2HTML');">Changer type</button> </br>								
 								</br>	
 								<label>EPS :</label></br>
-								<input type="radio" name="FeatureEPS" value="oui">Yes <input type="radio" name="FeatureEPS" value = "non">No <input type="radio" name="FeatureEPS" value = "non">Partial </br>
-											<input name="FeatureEPS" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1EPS"> <input type="radio" name="FeatureEPS" value="oui">Yes <input type="radio" name="FeatureEPS" value = "non">No <input type="radio" name="FeatureEPS" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2EPS"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1EPS','id2EPS');">Changer type</button> </br>								
 								</br>	
 								<label>PDF :</label></br>
-								<input type="radio" name="FeaturePDF" value="oui">Yes <input type="radio" name="FeaturePDF" value = "non">No <input type="radio" name="FeaturePDF" value = "non">Partial </br>
-											<input name="FeaturePDF" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1PDF"> <input type="radio" name="FeaturePDF" value="oui">Yes <input type="radio" name="FeaturePDF" value = "non">No <input type="radio" name="FeaturePDF" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2PDF"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1PDF','id2PDF');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

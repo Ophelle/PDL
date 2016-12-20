@@ -78,13 +78,14 @@
 											<input type="checkbox" name="Feature" >NFS</br>	
 											<input type="checkbox" name="Feature" >EFI</br>	
 											<input type="checkbox" name="Feature" >efivarfs</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Supported protocol : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Scriptable :</label></br>
-								<input type="radio" name="FeatureScriptable" value="oui">Yes <input type="radio" name="FeatureScriptable" value = "non">No <input type="radio" name="FeatureScriptable" value = "non">Partial </br>
-											<input name="FeatureScriptable" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Scriptable"> <input type="radio" name="FeatureScriptable" value="oui">Yes <input type="radio" name="FeatureScriptable" value = "non">No <input type="radio" name="FeatureScriptable" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Scriptable"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Scriptable','id2Scriptable');">Changer type</button> </br>								
 								</br>	
 								<label>Supported executable : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
@@ -141,11 +142,12 @@
 											<input type="checkbox" name="Feature" >Windows 2003</br>	
 											<input type="checkbox" name="Feature" >eCos</br>	
 											<input type="checkbox" name="Feature" >WinCE</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Advanced command :</label></br>
-								<input type="radio" name="FeatureAdvanced command" value="oui">Yes <input type="radio" name="FeatureAdvanced command" value = "non">No <input type="radio" name="FeatureAdvanced command" value = "non">Partial </br>
-											<input name="FeatureAdvanced command" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Advanced command"> <input type="radio" name="FeatureAdvanced command" value="oui">Yes <input type="radio" name="FeatureAdvanced command" value = "non">No <input type="radio" name="FeatureAdvanced command" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Advanced command"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Advanced command','id2Advanced command');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

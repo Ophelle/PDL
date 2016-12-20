@@ -88,13 +88,14 @@
 											<input type="checkbox" name="Feature" >mobile App</br>	
 											<input type="checkbox" name="Feature" >text processing</br>	
 											<input type="checkbox" name="Feature" >game</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Procedural : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Object-oriented :</label></br>
-								<input type="radio" name="FeatureObject-oriented" value="oui">Yes <input type="radio" name="FeatureObject-oriented" value = "non">No <input type="radio" name="FeatureObject-oriented" value = "non">Partial </br>
-											<input name="FeatureObject-oriented" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Object-oriented"> <input type="radio" name="FeatureObject-oriented" value="oui">Yes <input type="radio" name="FeatureObject-oriented" value = "non">No <input type="radio" name="FeatureObject-oriented" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Object-oriented"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Object-oriented','id2Object-oriented');">Changer type</button> </br>								
 								</br>	
 								<label>Other paradigm(s) : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
@@ -105,14 +106,16 @@
 								<label>Event-driven : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>Standardized? :</label></br>
-								<input type="radio" name="FeatureStandardized?" value="oui">Yes <input type="radio" name="FeatureStandardized?" value = "non">No <input type="radio" name="FeatureStandardized?" value = "non">Partial </br>
-											<input name="FeatureStandardized?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Standardized?"> <input type="radio" name="FeatureStandardized?" value="oui">Yes <input type="radio" name="FeatureStandardized?" value = "non">No <input type="radio" name="FeatureStandardized?" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Standardized?"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Standardized?','id2Standardized?');">Changer type</button> </br>								
 								</br>	
 								<label>Generic : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	
 								<label>Imperative :</label></br>
-								<input type="radio" name="FeatureImperative" value="oui">Yes <input type="radio" name="FeatureImperative" value = "non">No <input type="radio" name="FeatureImperative" value = "non">Partial </br>
-											<input name="FeatureImperative" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Imperative"> <input type="radio" name="FeatureImperative" value="oui">Yes <input type="radio" name="FeatureImperative" value = "non">No <input type="radio" name="FeatureImperative" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Imperative"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Imperative','id2Imperative');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

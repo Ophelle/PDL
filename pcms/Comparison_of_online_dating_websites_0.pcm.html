@@ -30,8 +30,9 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Supports same-sex connections :</label></br>
-								<input type="radio" name="FeatureSupports same-sex connections" value="oui">Yes <input type="radio" name="FeatureSupports same-sex connections" value = "non">No <input type="radio" name="FeatureSupports same-sex connections" value = "non">Partial </br>
-											<input name="FeatureSupports same-sex connections" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Supports same-sex connections"> <input type="radio" name="FeatureSupports same-sex connections" value="oui">Yes <input type="radio" name="FeatureSupports same-sex connections" value = "non">No <input type="radio" name="FeatureSupports same-sex connections" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Supports same-sex connections"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Supports same-sex connections','id2Supports same-sex connections');">Changer type</button> </br>								
 								</br>	
 								<label>Registered user :</label></br>
 											<input type="checkbox" name="Feature" >42</br>	
@@ -79,7 +80,7 @@
 											<input type="checkbox" name="Feature" >4</br>	
 											<input type="checkbox" name="Feature" >000as of 2010</br>	
 											<input type="checkbox" name="Feature" >300</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Web address : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
@@ -134,7 +135,7 @@
 											<input type="checkbox" name="Feature" >7</br>	
 											<input type="checkbox" name="Feature" >355</br>	
 											<input type="checkbox" name="Feature" >379</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Name : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
@@ -195,7 +196,7 @@
 											<input type="checkbox" name="Feature" >and couples.</br>	
 											<input type="checkbox" name="Feature" >A free personalized dating and social networking website</br>	
 											<input type="checkbox" name="Feature" >consisting of over 200 niche sites.</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

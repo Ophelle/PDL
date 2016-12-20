@@ -32,25 +32,28 @@
 								<label>OS : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Installed by Default :</label></br>
-								<input type="radio" name="FeatureInstalled by Default" value="oui">Yes <input type="radio" name="FeatureInstalled by Default" value = "non">No <input type="radio" name="FeatureInstalled by Default" value = "non">Partial </br>
-											<input name="FeatureInstalled by Default" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Installed by Default"> <input type="radio" name="FeatureInstalled by Default" value="oui">Yes <input type="radio" name="FeatureInstalled by Default" value = "non">No <input type="radio" name="FeatureInstalled by Default" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Installed by Default"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Installed by Default','id2Installed by Default');">Changer type</button> </br>								
 								</br>	
 								<label>DHCPv6 :</label></br>
-								<input type="radio" name="FeatureDHCPv6" value="oui">Yes <input type="radio" name="FeatureDHCPv6" value = "non">No <input type="radio" name="FeatureDHCPv6" value = "non">Partial </br>
-											<input name="FeatureDHCPv6" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1DHCPv6"> <input type="radio" name="FeatureDHCPv6" value="oui">Yes <input type="radio" name="FeatureDHCPv6" value = "non">No <input type="radio" name="FeatureDHCPv6" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2DHCPv6"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1DHCPv6','id2DHCPv6');">Changer type</button> </br>								
 								</br>	
 								<label>ND RDNSS :</label></br>
-								<input type="radio" name="FeatureND RDNSS" value="oui">Yes <input type="radio" name="FeatureND RDNSS" value = "non">No <input type="radio" name="FeatureND RDNSS" value = "non">Partial </br>
-											<input name="FeatureND RDNSS" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1ND RDNSS"> <input type="radio" name="FeatureND RDNSS" value="oui">Yes <input type="radio" name="FeatureND RDNSS" value = "non">No <input type="radio" name="FeatureND RDNSS" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2ND RDNSS"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1ND RDNSS','id2ND RDNSS');">Changer type</button> </br>								
 								</br>	
 								<label>Claimed IPv6-ready :</label></br>
-								<input type="radio" name="FeatureClaimed IPv6-ready" value="oui">Yes <input type="radio" name="FeatureClaimed IPv6-ready" value = "non">No <input type="radio" name="FeatureClaimed IPv6-ready" value = "non">Partial </br>
-											<input name="FeatureClaimed IPv6-ready" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Claimed IPv6-ready"> <input type="radio" name="FeatureClaimed IPv6-ready" value="oui">Yes <input type="radio" name="FeatureClaimed IPv6-ready" value = "non">No <input type="radio" name="FeatureClaimed IPv6-ready" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Claimed IPv6-ready"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Claimed IPv6-ready','id2Claimed IPv6-ready');">Changer type</button> </br>								
 								</br>	
 								<label>Version : </label></br> <input style="display:block;" id="id1Version" type="number" name="Feature">
 												<input style="display:none;" id="id2Version" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Version','id2Version');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Version','id2Version');">Changer type</button></br>								</br>	
 								<label>Notes : </label></br> <input id="1" type="text" name="Feature"></br>
 						<script>
 								$("#0").typeahead({

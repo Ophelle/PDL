@@ -30,18 +30,21 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Kaspersky Lab :</label></br>
-								<input type="radio" name="FeatureKaspersky Lab" value="oui">Yes <input type="radio" name="FeatureKaspersky Lab" value = "non">No <input type="radio" name="FeatureKaspersky Lab" value = "non">Partial </br>
-											<input name="FeatureKaspersky Lab" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Kaspersky Lab"> <input type="radio" name="FeatureKaspersky Lab" value="oui">Yes <input type="radio" name="FeatureKaspersky Lab" value = "non">No <input type="radio" name="FeatureKaspersky Lab" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Kaspersky Lab"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Kaspersky Lab','id2Kaspersky Lab');">Changer type</button> </br>								
 								</br>	
 								<label>McAfee :</label></br>
-								<input type="radio" name="FeatureMcAfee" value="oui">Yes <input type="radio" name="FeatureMcAfee" value = "non">No <input type="radio" name="FeatureMcAfee" value = "non">Partial </br>
-											<input name="FeatureMcAfee" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1McAfee"> <input type="radio" name="FeatureMcAfee" value="oui">Yes <input type="radio" name="FeatureMcAfee" value = "non">No <input type="radio" name="FeatureMcAfee" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2McAfee"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1McAfee','id2McAfee');">Changer type</button> </br>								
 								</br>	
 								<label>Company : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>BullGuard :</label></br>
-								<input type="radio" name="FeatureBullGuard" value="oui">Yes <input type="radio" name="FeatureBullGuard" value = "non">No <input type="radio" name="FeatureBullGuard" value = "non">Partial </br>
-											<input name="FeatureBullGuard" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1BullGuard"> <input type="radio" name="FeatureBullGuard" value="oui">Yes <input type="radio" name="FeatureBullGuard" value = "non">No <input type="radio" name="FeatureBullGuard" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2BullGuard"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1BullGuard','id2BullGuard');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

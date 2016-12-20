@@ -32,8 +32,9 @@
 								<label>Protocols : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Open Source :</label></br>
-								<input type="radio" name="FeatureOpen Source" value="oui">Yes <input type="radio" name="FeatureOpen Source" value = "non">No <input type="radio" name="FeatureOpen Source" value = "non">Partial </br>
-											<input name="FeatureOpen Source" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Open Source"> <input type="radio" name="FeatureOpen Source" value="oui">Yes <input type="radio" name="FeatureOpen Source" value = "non">No <input type="radio" name="FeatureOpen Source" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Open Source"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Open Source','id2Open Source');">Changer type</button> </br>								
 								</br>	
 								<label>Codecs : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
@@ -58,7 +59,7 @@
 											<input type="checkbox" name="Feature" >Nokia-Symbian</br>	
 											<input type="checkbox" name="Feature" >BlackBerry</br>	
 											<input type="checkbox" name="Feature" >BlackBerry OS</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Program : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
@@ -79,7 +80,7 @@
 											<input type="checkbox" name="Feature" >JusTex (iOS) 3.0.1 updated on 13 July. 2014; JusTex (Android) 3.0 updated on 9 July 2014</br>	
 											<input type="checkbox" name="Feature" >Acrobits Softphone (iOS) 5.2</br>	
 											<input type="checkbox" name="Feature" >Acrobits Softphone (Android) 3.20</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Other capabilities :</label></br>
 											<input type="checkbox" name="Feature" >Wi-Fi VoIP out & in</br>	
@@ -142,7 +143,7 @@
 											<input type="checkbox" name="Feature" >conference calls*</br>	
 											<input type="checkbox" name="Feature" >HD Voice</br>	
 											<input type="checkbox" name="Feature" >Bluetooth* (* Additional fees)</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

@@ -30,8 +30,9 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Open source :</label></br>
-								<input type="radio" name="FeatureOpen source" value="oui">Yes <input type="radio" name="FeatureOpen source" value = "non">No <input type="radio" name="FeatureOpen source" value = "non">Partial </br>
-											<input name="FeatureOpen source" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Open source"> <input type="radio" name="FeatureOpen source" value="oui">Yes <input type="radio" name="FeatureOpen source" value = "non">No <input type="radio" name="FeatureOpen source" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Open source"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Open source','id2Open source');">Changer type</button> </br>								
 								</br>	
 								<label>Software license : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
@@ -67,11 +68,12 @@
 											<input type="checkbox" name="Feature" >IE 6 & 7</br>	
 											<input type="checkbox" name="Feature" >Firefox 2 & 3</br>	
 											<input type="checkbox" name="Feature" >Safari 3.1</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Activity :</label></br>
-								<input type="radio" name="FeatureActivity" value="oui">Yes <input type="radio" name="FeatureActivity" value = "non">No <input type="radio" name="FeatureActivity" value = "non">Partial </br>
-											<input name="FeatureActivity" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Activity"> <input type="radio" name="FeatureActivity" value="oui">Yes <input type="radio" name="FeatureActivity" value = "non">No <input type="radio" name="FeatureActivity" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Activity"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Activity','id2Activity');">Changer type</button> </br>								
 								</br>	
 								<label>Cost (US$) : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
@@ -102,7 +104,7 @@
 											<input type="checkbox" name="Feature" >2008</br>	
 											<input type="checkbox" name="Feature" >0.8.2</br>	
 											<input type="checkbox" name="Feature" >2010-01-14</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

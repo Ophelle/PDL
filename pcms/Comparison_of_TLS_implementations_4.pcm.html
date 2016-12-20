@@ -30,42 +30,51 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>RSA :</label></br>
-								<input type="radio" name="FeatureRSA" value="oui">Yes <input type="radio" name="FeatureRSA" value = "non">No <input type="radio" name="FeatureRSA" value = "non">Partial </br>
-											<input name="FeatureRSA" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1RSA"> <input type="radio" name="FeatureRSA" value="oui">Yes <input type="radio" name="FeatureRSA" value = "non">No <input type="radio" name="FeatureRSA" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2RSA"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1RSA','id2RSA');">Changer type</button> </br>								
 								</br>	
 								<label>ECDH-RSA :</label></br>
-								<input type="radio" name="FeatureECDH-RSA" value="oui">Yes <input type="radio" name="FeatureECDH-RSA" value = "non">No <input type="radio" name="FeatureECDH-RSA" value = "non">Partial </br>
-											<input name="FeatureECDH-RSA" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1ECDH-RSA"> <input type="radio" name="FeatureECDH-RSA" value="oui">Yes <input type="radio" name="FeatureECDH-RSA" value = "non">No <input type="radio" name="FeatureECDH-RSA" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2ECDH-RSA"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1ECDH-RSA','id2ECDH-RSA');">Changer type</button> </br>								
 								</br>	
 								<label>Implementation : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>DHE-RSA (forward secrecy) :</label></br>
-								<input type="radio" name="FeatureDHE-RSA (forward secrecy)" value="oui">Yes <input type="radio" name="FeatureDHE-RSA (forward secrecy)" value = "non">No <input type="radio" name="FeatureDHE-RSA (forward secrecy)" value = "non">Partial </br>
-											<input name="FeatureDHE-RSA (forward secrecy)" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1DHE-RSA (forward secrecy)"> <input type="radio" name="FeatureDHE-RSA (forward secrecy)" value="oui">Yes <input type="radio" name="FeatureDHE-RSA (forward secrecy)" value = "non">No <input type="radio" name="FeatureDHE-RSA (forward secrecy)" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2DHE-RSA (forward secrecy)"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1DHE-RSA (forward secrecy)','id2DHE-RSA (forward secrecy)');">Changer type</button> </br>								
 								</br>	
 								<label>ECDH-ECDSA :</label></br>
-								<input type="radio" name="FeatureECDH-ECDSA" value="oui">Yes <input type="radio" name="FeatureECDH-ECDSA" value = "non">No <input type="radio" name="FeatureECDH-ECDSA" value = "non">Partial </br>
-											<input name="FeatureECDH-ECDSA" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1ECDH-ECDSA"> <input type="radio" name="FeatureECDH-ECDSA" value="oui">Yes <input type="radio" name="FeatureECDH-ECDSA" value = "non">No <input type="radio" name="FeatureECDH-ECDSA" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2ECDH-ECDSA"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1ECDH-ECDSA','id2ECDH-ECDSA');">Changer type</button> </br>								
 								</br>	
 								<label>RSA-EXPORT (insecure) :</label></br>
-								<input type="radio" name="FeatureRSA-EXPORT (insecure)" value="oui">Yes <input type="radio" name="FeatureRSA-EXPORT (insecure)" value = "non">No <input type="radio" name="FeatureRSA-EXPORT (insecure)" value = "non">Partial </br>
-											<input name="FeatureRSA-EXPORT (insecure)" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1RSA-EXPORT (insecure)"> <input type="radio" name="FeatureRSA-EXPORT (insecure)" value="oui">Yes <input type="radio" name="FeatureRSA-EXPORT (insecure)" value = "non">No <input type="radio" name="FeatureRSA-EXPORT (insecure)" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2RSA-EXPORT (insecure)"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1RSA-EXPORT (insecure)','id2RSA-EXPORT (insecure)');">Changer type</button> </br>								
 								</br>	
 								<label>ECDHE-ECDSA (forward secrecy) :</label></br>
-								<input type="radio" name="FeatureECDHE-ECDSA (forward secrecy)" value="oui">Yes <input type="radio" name="FeatureECDHE-ECDSA (forward secrecy)" value = "non">No <input type="radio" name="FeatureECDHE-ECDSA (forward secrecy)" value = "non">Partial </br>
-											<input name="FeatureECDHE-ECDSA (forward secrecy)" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1ECDHE-ECDSA (forward secrecy)"> <input type="radio" name="FeatureECDHE-ECDSA (forward secrecy)" value="oui">Yes <input type="radio" name="FeatureECDHE-ECDSA (forward secrecy)" value = "non">No <input type="radio" name="FeatureECDHE-ECDSA (forward secrecy)" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2ECDHE-ECDSA (forward secrecy)"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1ECDHE-ECDSA (forward secrecy)','id2ECDHE-ECDSA (forward secrecy)');">Changer type</button> </br>								
 								</br>	
 								<label>ECDHE-RSA (forward secrecy) :</label></br>
-								<input type="radio" name="FeatureECDHE-RSA (forward secrecy)" value="oui">Yes <input type="radio" name="FeatureECDHE-RSA (forward secrecy)" value = "non">No <input type="radio" name="FeatureECDHE-RSA (forward secrecy)" value = "non">Partial </br>
-											<input name="FeatureECDHE-RSA (forward secrecy)" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1ECDHE-RSA (forward secrecy)"> <input type="radio" name="FeatureECDHE-RSA (forward secrecy)" value="oui">Yes <input type="radio" name="FeatureECDHE-RSA (forward secrecy)" value = "non">No <input type="radio" name="FeatureECDHE-RSA (forward secrecy)" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2ECDHE-RSA (forward secrecy)"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1ECDHE-RSA (forward secrecy)','id2ECDHE-RSA (forward secrecy)');">Changer type</button> </br>								
 								</br>	
 								<label>GOST R 34.10-94 / 34.10-2001 :</label></br>
-								<input type="radio" name="FeatureGOST R 34.10-94 / 34.10-2001" value="oui">Yes <input type="radio" name="FeatureGOST R 34.10-94 / 34.10-2001" value = "non">No <input type="radio" name="FeatureGOST R 34.10-94 / 34.10-2001" value = "non">Partial </br>
-											<input name="FeatureGOST R 34.10-94 / 34.10-2001" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1GOST R 34.10-94 / 34.10-2001"> <input type="radio" name="FeatureGOST R 34.10-94 / 34.10-2001" value="oui">Yes <input type="radio" name="FeatureGOST R 34.10-94 / 34.10-2001" value = "non">No <input type="radio" name="FeatureGOST R 34.10-94 / 34.10-2001" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2GOST R 34.10-94 / 34.10-2001"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1GOST R 34.10-94 / 34.10-2001','id2GOST R 34.10-94 / 34.10-2001');">Changer type</button> </br>								
 								</br>	
 								<label>DHE-DSS (forward secrecy) :</label></br>
-								<input type="radio" name="FeatureDHE-DSS (forward secrecy)" value="oui">Yes <input type="radio" name="FeatureDHE-DSS (forward secrecy)" value = "non">No <input type="radio" name="FeatureDHE-DSS (forward secrecy)" value = "non">Partial </br>
-											<input name="FeatureDHE-DSS (forward secrecy)" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1DHE-DSS (forward secrecy)"> <input type="radio" name="FeatureDHE-DSS (forward secrecy)" value="oui">Yes <input type="radio" name="FeatureDHE-DSS (forward secrecy)" value = "non">No <input type="radio" name="FeatureDHE-DSS (forward secrecy)" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2DHE-DSS (forward secrecy)"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1DHE-DSS (forward secrecy)','id2DHE-DSS (forward secrecy)');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

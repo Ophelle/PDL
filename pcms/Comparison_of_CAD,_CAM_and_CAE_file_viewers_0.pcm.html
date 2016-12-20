@@ -41,7 +41,7 @@
 											<input type="checkbox" name="Feature" >RU</br>	
 											<input type="checkbox" name="Feature" >other</br>	
 											<input type="checkbox" name="Feature" >PT</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Supported format(s) :</label></br>
 											<input type="checkbox" name="Feature" >DWG</br>	
@@ -63,33 +63,36 @@
 											<input type="checkbox" name="Feature" >CADDS</br>	
 											<input type="checkbox" name="Feature" >Solid Edge</br>	
 											<input type="checkbox" name="Feature" >DRW</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Runs on POSIX style systems? :</label></br>
-								<input type="radio" name="FeatureRuns on POSIX style systems?" value="oui">Yes <input type="radio" name="FeatureRuns on POSIX style systems?" value = "non">No <input type="radio" name="FeatureRuns on POSIX style systems?" value = "non">Partial </br>
-											<input name="FeatureRuns on POSIX style systems?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Runs on POSIX style systems?"> <input type="radio" name="FeatureRuns on POSIX style systems?" value="oui">Yes <input type="radio" name="FeatureRuns on POSIX style systems?" value = "non">No <input type="radio" name="FeatureRuns on POSIX style systems?" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Runs on POSIX style systems?"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Runs on POSIX style systems?','id2Runs on POSIX style systems?');">Changer type</button> </br>								
 								</br>	
 								<label>Other platforms? :</label></br>
-								<input type="radio" name="FeatureOther platforms?" value="oui">Yes <input type="radio" name="FeatureOther platforms?" value = "non">No <input type="radio" name="FeatureOther platforms?" value = "non">Partial </br>
-											<input name="FeatureOther platforms?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Other platforms?"> <input type="radio" name="FeatureOther platforms?" value="oui">Yes <input type="radio" name="FeatureOther platforms?" value = "non">No <input type="radio" name="FeatureOther platforms?" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Other platforms?"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Other platforms?','id2Other platforms?');">Changer type</button> </br>								
 								</br>	
 								<label>Developer : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Application : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>3D support? :</label></br>
-								<input type="radio" name="Feature3D support?" value="oui">Yes <input type="radio" name="Feature3D support?" value = "non">No <input type="radio" name="Feature3D support?" value = "non">Partial </br>
-											<input name="Feature3D support?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id13D support?"> <input type="radio" name="Feature3D support?" value="oui">Yes <input type="radio" name="Feature3D support?" value = "non">No <input type="radio" name="Feature3D support?" value = "non">Partial </p>
+											<input  style="display:none;" id ="id23D support?"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id13D support?','id23D support?');">Changer type</button> </br>								
 								</br>	
 								<label>Open source? : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Latest stable release : </label></br> <input style="display:block;" id="id1Latest stable release" type="number" name="Feature">
 												<input style="display:none;" id="id2Latest stable release" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Latest stable release','id2Latest stable release');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Latest stable release','id2Latest stable release');">Changer type</button></br>								</br>	
 								<label>Runs on Windows? :</label></br>
-								<input type="radio" name="FeatureRuns on Windows?" value="oui">Yes <input type="radio" name="FeatureRuns on Windows?" value = "non">No <input type="radio" name="FeatureRuns on Windows?" value = "non">Partial </br>
-											<input name="FeatureRuns on Windows?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Runs on Windows?"> <input type="radio" name="FeatureRuns on Windows?" value="oui">Yes <input type="radio" name="FeatureRuns on Windows?" value = "non">No <input type="radio" name="FeatureRuns on Windows?" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Runs on Windows?"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Runs on Windows?','id2Runs on Windows?');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

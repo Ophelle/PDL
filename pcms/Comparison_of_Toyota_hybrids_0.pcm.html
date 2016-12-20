@@ -37,15 +37,16 @@
 											<input type="checkbox" name="Feature" >Tier II Bin 3</br>	
 											<input type="checkbox" name="Feature" >AT-PZEV</br>	
 											<input type="checkbox" name="Feature" >SULEV</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>EPA-estimated highway fuel economy : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Net power : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Requires premium fuel (91 octane (R+M)/2 ) :</label></br>
-								<input type="radio" name="FeatureRequires premium fuel (91 octane (R+M)/2 )" value="oui">Yes <input type="radio" name="FeatureRequires premium fuel (91 octane (R+M)/2 )" value = "non">No <input type="radio" name="FeatureRequires premium fuel (91 octane (R+M)/2 )" value = "non">Partial </br>
-											<input name="FeatureRequires premium fuel (91 octane (R+M)/2 )" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Requires premium fuel (91 octane (R+M)/2 )"> <input type="radio" name="FeatureRequires premium fuel (91 octane (R+M)/2 )" value="oui">Yes <input type="radio" name="FeatureRequires premium fuel (91 octane (R+M)/2 )" value = "non">No <input type="radio" name="FeatureRequires premium fuel (91 octane (R+M)/2 )" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Requires premium fuel (91 octane (R+M)/2 )"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Requires premium fuel (91 octane (R+M)/2 )','id2Requires premium fuel (91 octane (R+M)/2 )');">Changer type</button> </br>								
 								</br>	
 								<label>Base price :</label></br>
 											<input type="checkbox" name="Feature" >US$22</br>	
@@ -57,12 +58,11 @@
 											<input type="checkbox" name="Feature" >480</br>	
 											<input type="checkbox" name="Feature" >US$34</br>	
 											<input type="checkbox" name="Feature" >700</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Maximum seating : </label></br> <input style="display:block;" id="id1Maximum seating" type="number" name="Feature">
 												<input style="display:none;" id="id2Maximum seating" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Maximum seating','id2Maximum seating');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Maximum seating','id2Maximum seating');">Changer type</button></br>								</br>	
 								<label>Engine output : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>EPA-estimated city fuel economy : </label></br> <input id="5" type="text" name="Feature"></br>

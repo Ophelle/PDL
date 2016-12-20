@@ -30,14 +30,16 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Odoo :</label></br>
-								<input type="radio" name="FeatureOdoo" value="oui">Yes <input type="radio" name="FeatureOdoo" value = "non">No <input type="radio" name="FeatureOdoo" value = "non">Partial </br>
-											<input name="FeatureOdoo" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Odoo"> <input type="radio" name="FeatureOdoo" value="oui">Yes <input type="radio" name="FeatureOdoo" value = "non">No <input type="radio" name="FeatureOdoo" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Odoo"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Odoo','id2Odoo');">Changer type</button> </br>								
 								</br>	
 								<label>Subject : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Tryton :</label></br>
-								<input type="radio" name="FeatureTryton" value="oui">Yes <input type="radio" name="FeatureTryton" value = "non">No <input type="radio" name="FeatureTryton" value = "non">Partial </br>
-											<input name="FeatureTryton" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Tryton"> <input type="radio" name="FeatureTryton" value="oui">Yes <input type="radio" name="FeatureTryton" value = "non">No <input type="radio" name="FeatureTryton" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Tryton"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Tryton','id2Tryton');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

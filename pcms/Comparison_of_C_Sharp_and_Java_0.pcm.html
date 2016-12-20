@@ -30,8 +30,9 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>C# :</label></br>
-								<input type="radio" name="FeatureC#" value="oui">Yes <input type="radio" name="FeatureC#" value = "non">No <input type="radio" name="FeatureC#" value = "non">Partial </br>
-											<input name="FeatureC#" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1C#"> <input type="radio" name="FeatureC#" value="oui">Yes <input type="radio" name="FeatureC#" value = "non">No <input type="radio" name="FeatureC#" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2C#"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1C#','id2C#');">Changer type</button> </br>								
 								</br>	
 								<label>Java :</label></br>
 											<input type="checkbox" name="Feature" >Reference type; no operators</br>	
@@ -43,7 +44,7 @@
 											<input type="checkbox" name="Feature" >No; only primitive types</br>	
 											<input type="checkbox" name="Feature" >Immutable reference type</br>	
 											<input type="checkbox" name="Feature" >Unicode</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Data types : </label></br> <input id="0" type="text" name="Feature"></br>
 						<script>

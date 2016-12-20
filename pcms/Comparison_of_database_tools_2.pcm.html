@@ -30,12 +30,14 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Plugin :</label></br>
-								<input type="radio" name="FeaturePlugin" value="oui">Yes <input type="radio" name="FeaturePlugin" value = "non">No <input type="radio" name="FeaturePlugin" value = "non">Partial </br>
-											<input name="FeaturePlugin" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Plugin"> <input type="radio" name="FeaturePlugin" value="oui">Yes <input type="radio" name="FeaturePlugin" value = "non">No <input type="radio" name="FeaturePlugin" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Plugin"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Plugin','id2Plugin');">Changer type</button> </br>								
 								</br>	
 								<label>Import :</label></br>
-								<input type="radio" name="FeatureImport" value="oui">Yes <input type="radio" name="FeatureImport" value = "non">No <input type="radio" name="FeatureImport" value = "non">Partial </br>
-											<input name="FeatureImport" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Import"> <input type="radio" name="FeatureImport" value="oui">Yes <input type="radio" name="FeatureImport" value = "non">No <input type="radio" name="FeatureImport" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Import"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Import','id2Import');">Changer type</button> </br>								
 								</br>	
 								<label>Export :</label></br>
 											<input type="checkbox" name="Feature" >SQL script</br>	
@@ -65,21 +67,24 @@
 											<input type="checkbox" name="Feature" >GIF</br>	
 											<input type="checkbox" name="Feature" >XML Structure</br>	
 											<input type="checkbox" name="Feature" >text</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Source control : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>user manager :</label></br>
-								<input type="radio" name="Featureuser manager" value="oui">Yes <input type="radio" name="Featureuser manager" value = "non">No <input type="radio" name="Featureuser manager" value = "non">Partial </br>
-											<input name="Featureuser manager" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1user manager"> <input type="radio" name="Featureuser manager" value="oui">Yes <input type="radio" name="Featureuser manager" value = "non">No <input type="radio" name="Featureuser manager" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2user manager"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1user manager','id2user manager');">Changer type</button> </br>								
 								</br>	
 								<label>Compare :</label></br>
-								<input type="radio" name="FeatureCompare" value="oui">Yes <input type="radio" name="FeatureCompare" value = "non">No <input type="radio" name="FeatureCompare" value = "non">Partial </br>
-											<input name="FeatureCompare" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Compare"> <input type="radio" name="FeatureCompare" value="oui">Yes <input type="radio" name="FeatureCompare" value = "non">No <input type="radio" name="FeatureCompare" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Compare"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Compare','id2Compare');">Changer type</button> </br>								
 								</br>	
 								<label>Debugger :</label></br>
-								<input type="radio" name="FeatureDebugger" value="oui">Yes <input type="radio" name="FeatureDebugger" value = "non">No <input type="radio" name="FeatureDebugger" value = "non">Partial </br>
-											<input name="FeatureDebugger" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Debugger"> <input type="radio" name="FeatureDebugger" value="oui">Yes <input type="radio" name="FeatureDebugger" value = "non">No <input type="radio" name="FeatureDebugger" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Debugger"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Debugger','id2Debugger');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

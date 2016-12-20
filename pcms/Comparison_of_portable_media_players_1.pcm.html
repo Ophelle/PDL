@@ -37,14 +37,12 @@
 								</br>	
 								<label>Video battery life (hr) : </label></br> <input style="display:block;" id="id1Video battery life (hr)" type="number" name="Feature">
 												<input style="display:none;" id="id2Video battery life (hr)" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Video battery life (hr)','id2Video battery life (hr)');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Video battery life (hr)','id2Video battery life (hr)');">Changer type</button></br>								</br>	
 								<label>Name : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Audio battery life (hr) : </label></br> <input style="display:block;" id="id1Audio battery life (hr)" type="number" name="Feature">
 												<input style="display:none;" id="id2Audio battery life (hr)" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Audio battery life (hr)','id2Audio battery life (hr)');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Audio battery life (hr)','id2Audio battery life (hr)');">Changer type</button></br>								</br>	
 								<label>Video out :</label></br>
 											<input type="checkbox" name="Feature" >Component</br>	
 											<input type="checkbox" name="Feature" >composite</br>	
@@ -54,11 +52,12 @@
 											<input type="checkbox" name="Feature" >S-Video</br>	
 											<input type="checkbox" name="Feature" >composite via docking</br>	
 											<input type="checkbox" name="Feature" >HDMI</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Speaker :</label></br>
-								<input type="radio" name="FeatureSpeaker" value="oui">Yes <input type="radio" name="FeatureSpeaker" value = "non">No <input type="radio" name="FeatureSpeaker" value = "non">Partial </br>
-											<input name="FeatureSpeaker" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Speaker"> <input type="radio" name="FeatureSpeaker" value="oui">Yes <input type="radio" name="FeatureSpeaker" value = "non">No <input type="radio" name="FeatureSpeaker" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Speaker"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Speaker','id2Speaker');">Changer type</button> </br>								
 								</br>	
 								<label>Navigation :</label></br>
 											<input type="checkbox" name="Feature" >Multi-touch screen</br>	
@@ -85,20 +84,17 @@
 											<input type="checkbox" name="Feature" >8-way d-pad</br>	
 											<input type="checkbox" name="Feature" >Scroll ring</br>	
 											<input type="checkbox" name="Feature" >6 buttons</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Color depth (bpp) : </label></br> <input style="display:block;" id="id1Color depth (bpp)" type="number" name="Feature">
 												<input style="display:none;" id="id2Color depth (bpp)" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Color depth (bpp)','id2Color depth (bpp)');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Color depth (bpp)','id2Color depth (bpp)');">Changer type</button></br>								</br>	
 								<label>Screen size (in) : </label></br> <input style="display:block;" id="id1Screen size (in)" type="number" name="Feature">
 												<input style="display:none;" id="id2Screen size (in)" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Screen size (in)','id2Screen size (in)');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Screen size (in)','id2Screen size (in)');">Changer type</button></br>								</br>	
 								<label>Frame rate (Hz) : </label></br> <input style="display:block;" id="id1Frame rate (Hz)" type="number" name="Feature">
 												<input style="display:none;" id="id2Frame rate (Hz)" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Frame rate (Hz)','id2Frame rate (Hz)');">Changer type</button></br>								
-						<script>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Frame rate (Hz)','id2Frame rate (Hz)');">Changer type</button></br>						<script>
 								$("#0").typeahead({
 									name:"list0",
 									local : ['Headphone jack','Headphone jack, dock connector','']

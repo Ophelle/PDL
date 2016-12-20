@@ -34,8 +34,9 @@
 								<label>Network Behavior Analysis : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Kernel ASLR :</label></br>
-								<input type="radio" name="FeatureKernel ASLR" value="oui">Yes <input type="radio" name="FeatureKernel ASLR" value = "non">No <input type="radio" name="FeatureKernel ASLR" value = "non">Partial </br>
-											<input name="FeatureKernel ASLR" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Kernel ASLR"> <input type="radio" name="FeatureKernel ASLR" value="oui">Yes <input type="radio" name="FeatureKernel ASLR" value = "non">No <input type="radio" name="FeatureKernel ASLR" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Kernel ASLR"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Kernel ASLR','id2Kernel ASLR');">Changer type</button> </br>								
 								</br>	
 								<label>Ping flood protection : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
@@ -57,13 +58,14 @@
 											<input type="checkbox" name="Feature" >POSIX and NFSv4 ACL</br>	
 											<input type="checkbox" name="Feature" >access control list</br>	
 											<input type="checkbox" name="Feature" >NFSv4 ACL</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Capability-based security : </label></br> <input id="9" type="text" name="Feature"></br>
 								</br>	
 								<label>Disable memory execution support :</label></br>
-								<input type="radio" name="FeatureDisable memory execution support" value="oui">Yes <input type="radio" name="FeatureDisable memory execution support" value = "non">No <input type="radio" name="FeatureDisable memory execution support" value = "non">Partial </br>
-											<input name="FeatureDisable memory execution support" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Disable memory execution support"> <input type="radio" name="FeatureDisable memory execution support" value="oui">Yes <input type="radio" name="FeatureDisable memory execution support" value = "non">No <input type="radio" name="FeatureDisable memory execution support" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Disable memory execution support"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Disable memory execution support','id2Disable memory execution support');">Changer type</button> </br>								
 								</br>	
 								<label>Audit API : </label></br> <input id="10" type="text" name="Feature"></br>
 						<script>

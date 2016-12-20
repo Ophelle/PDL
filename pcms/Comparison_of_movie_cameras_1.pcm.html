@@ -32,21 +32,23 @@
 								<label>Camera model : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Super 35? :</label></br>
-								<input type="radio" name="FeatureSuper 35?" value="oui">Yes <input type="radio" name="FeatureSuper 35?" value = "non">No <input type="radio" name="FeatureSuper 35?" value = "non">Partial </br>
-											<input name="FeatureSuper 35?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Super 35?"> <input type="radio" name="FeatureSuper 35?" value="oui">Yes <input type="radio" name="FeatureSuper 35?" value = "non">No <input type="radio" name="FeatureSuper 35?" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Super 35?"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Super 35?','id2Super 35?');">Changer type</button> </br>								
 								</br>	
 								<label>Aperture size : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Frameline glow? :</label></br>
-								<input type="radio" name="FeatureFrameline glow?" value="oui">Yes <input type="radio" name="FeatureFrameline glow?" value = "non">No <input type="radio" name="FeatureFrameline glow?" value = "non">Partial </br>
-											<input name="FeatureFrameline glow?" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Frameline glow?"> <input type="radio" name="FeatureFrameline glow?" value="oui">Yes <input type="radio" name="FeatureFrameline glow?" value = "non">No <input type="radio" name="FeatureFrameline glow?" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Frameline glow?"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Frameline glow?','id2Frameline glow?');">Changer type</button> </br>								
 								</br>	
 								<label>Lens interface :</label></br>
 											<input type="checkbox" name="Feature" >none</br>	
 											<input type="checkbox" name="Feature" >but Lens Data Archive (LDA) can be used</br>	
 											<input type="checkbox" name="Feature" >Lens Data System (LDS) contacts and integrated electronics</br>	
 											<input type="checkbox" name="Feature" >Lens Data System (LDS) contacts; usable with FEM-2 unit</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Ground glass : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
@@ -55,7 +57,7 @@
 								<label>Aperture plate :</label></br>
 											<input type="checkbox" name="Feature" >removable; interchangeable format masks</br>	
 											<input type="checkbox" name="Feature" >removable; interchangeable format masks and filter holders</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 						<script>
 								$("#0").typeahead({
 									name:"list0",

@@ -30,21 +30,21 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Gecko :</label></br>
-								<input type="radio" name="FeatureGecko" value="oui">Yes <input type="radio" name="FeatureGecko" value = "non">No <input type="radio" name="FeatureGecko" value = "non">Partial </br>
-											<input name="FeatureGecko" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Gecko"> <input type="radio" name="FeatureGecko" value="oui">Yes <input type="radio" name="FeatureGecko" value = "non">No <input type="radio" name="FeatureGecko" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Gecko"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Gecko','id2Gecko');">Changer type</button> </br>								
 								</br>	
 								<label>WebKit :</label></br>
-								<input type="radio" name="FeatureWebKit" value="oui">Yes <input type="radio" name="FeatureWebKit" value = "non">No <input type="radio" name="FeatureWebKit" value = "non">Partial </br>
-											<input name="FeatureWebKit" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1WebKit"> <input type="radio" name="FeatureWebKit" value="oui">Yes <input type="radio" name="FeatureWebKit" value = "non">No <input type="radio" name="FeatureWebKit" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2WebKit"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1WebKit','id2WebKit');">Changer type</button> </br>								
 								</br>	
 								<label>Trident : </label></br> <input style="display:block;" id="id1Trident" type="number" name="Feature">
 												<input style="display:none;" id="id2Trident" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Trident','id2Trident');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Trident','id2Trident');">Changer type</button></br>								</br>	
 								<label>Presto : </label></br> <input style="display:block;" id="id1Presto" type="number" name="Feature">
 												<input style="display:none;" id="id2Presto" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Presto','id2Presto');">Changer type</button></br>								
-						<script>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Presto','id2Presto');">Changer type</button></br>						<script>
 						</script>
 						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />
 					</form>

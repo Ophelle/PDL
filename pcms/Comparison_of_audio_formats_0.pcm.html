@@ -30,8 +30,9 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>DRM :</label></br>
-								<input type="radio" name="FeatureDRM" value="oui">Yes <input type="radio" name="FeatureDRM" value = "non">No <input type="radio" name="FeatureDRM" value = "non">Partial </br>
-											<input name="FeatureDRM" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1DRM"> <input type="radio" name="FeatureDRM" value="oui">Yes <input type="radio" name="FeatureDRM" value = "non">No <input type="radio" name="FeatureDRM" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2DRM"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1DRM','id2DRM');">Changer type</button> </br>								
 								</br>	
 								<label>Audio compression format : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
@@ -40,12 +41,14 @@
 								<label>Application (besides consumer audio) : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Music reproduction (consumer audio) :</label></br>
-								<input type="radio" name="FeatureMusic reproduction (consumer audio)" value="oui">Yes <input type="radio" name="FeatureMusic reproduction (consumer audio)" value = "non">No <input type="radio" name="FeatureMusic reproduction (consumer audio)" value = "non">Partial </br>
-											<input name="FeatureMusic reproduction (consumer audio)" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Music reproduction (consumer audio)"> <input type="radio" name="FeatureMusic reproduction (consumer audio)" value="oui">Yes <input type="radio" name="FeatureMusic reproduction (consumer audio)" value = "non">No <input type="radio" name="FeatureMusic reproduction (consumer audio)" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Music reproduction (consumer audio)"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Music reproduction (consumer audio)','id2Music reproduction (consumer audio)');">Changer type</button> </br>								
 								</br>	
 								<label>Telephony app :</label></br>
-								<input type="radio" name="FeatureTelephony app" value="oui">Yes <input type="radio" name="FeatureTelephony app" value = "non">No <input type="radio" name="FeatureTelephony app" value = "non">Partial </br>
-											<input name="FeatureTelephony app" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Telephony app"> <input type="radio" name="FeatureTelephony app" value="oui">Yes <input type="radio" name="FeatureTelephony app" value = "non">No <input type="radio" name="FeatureTelephony app" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Telephony app"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Telephony app','id2Telephony app');">Changer type</button> </br>								
 								</br>	
 								<label>Patented : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
@@ -90,7 +93,7 @@
 											<input type="checkbox" name="Feature" >WavPack</br>	
 											<input type="checkbox" name="Feature" >libvorbis</br>	
 											<input type="checkbox" name="Feature" >aoTuV</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Proprietary implementations (codecs) : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
@@ -103,8 +106,9 @@
 								<label>Encoder cost : </label></br> <input id="8" type="text" name="Feature"></br>
 								</br>	
 								<label>Lossless audio compression :</label></br>
-								<input type="radio" name="FeatureLossless audio compression" value="oui">Yes <input type="radio" name="FeatureLossless audio compression" value = "non">No <input type="radio" name="FeatureLossless audio compression" value = "non">Partial </br>
-											<input name="FeatureLossless audio compression" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Lossless audio compression"> <input type="radio" name="FeatureLossless audio compression" value="oui">Yes <input type="radio" name="FeatureLossless audio compression" value = "non">No <input type="radio" name="FeatureLossless audio compression" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Lossless audio compression"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Lossless audio compression','id2Lossless audio compression');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

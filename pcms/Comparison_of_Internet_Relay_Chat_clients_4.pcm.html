@@ -34,16 +34,19 @@
 								<label>TLS : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>SSL :</label></br>
-								<input type="radio" name="FeatureSSL" value="oui">Yes <input type="radio" name="FeatureSSL" value = "non">No <input type="radio" name="FeatureSSL" value = "non">Partial </br>
-											<input name="FeatureSSL" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1SSL"> <input type="radio" name="FeatureSSL" value="oui">Yes <input type="radio" name="FeatureSSL" value = "non">No <input type="radio" name="FeatureSSL" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2SSL"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1SSL','id2SSL');">Changer type</button> </br>								
 								</br>	
 								<label>IPv6 :</label></br>
-								<input type="radio" name="FeatureIPv6" value="oui">Yes <input type="radio" name="FeatureIPv6" value = "non">No <input type="radio" name="FeatureIPv6" value = "non">Partial </br>
-											<input name="FeatureIPv6" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1IPv6"> <input type="radio" name="FeatureIPv6" value="oui">Yes <input type="radio" name="FeatureIPv6" value = "non">No <input type="radio" name="FeatureIPv6" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2IPv6"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1IPv6','id2IPv6');">Changer type</button> </br>								
 								</br>	
 								<label>CTCP :</label></br>
-								<input type="radio" name="FeatureCTCP" value="oui">Yes <input type="radio" name="FeatureCTCP" value = "non">No <input type="radio" name="FeatureCTCP" value = "non">Partial </br>
-											<input name="FeatureCTCP" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1CTCP"> <input type="radio" name="FeatureCTCP" value="oui">Yes <input type="radio" name="FeatureCTCP" value = "non">No <input type="radio" name="FeatureCTCP" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2CTCP"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1CTCP','id2CTCP');">Changer type</button> </br>								
 								</br>	
 								<label>CRL : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
@@ -52,14 +55,16 @@
 								<label>SASL : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>OTR :</label></br>
-								<input type="radio" name="FeatureOTR" value="oui">Yes <input type="radio" name="FeatureOTR" value = "non">No <input type="radio" name="FeatureOTR" value = "non">Partial </br>
-											<input name="FeatureOTR" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1OTR"> <input type="radio" name="FeatureOTR" value="oui">Yes <input type="radio" name="FeatureOTR" value = "non">No <input type="radio" name="FeatureOTR" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2OTR"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1OTR','id2OTR');">Changer type</button> </br>								
 								</br>	
 								<label>DANE : </label></br> <input id="5" type="text" name="Feature"></br>
 								</br>	
 								<label>DCC :</label></br>
-								<input type="radio" name="FeatureDCC" value="oui">Yes <input type="radio" name="FeatureDCC" value = "non">No <input type="radio" name="FeatureDCC" value = "non">Partial </br>
-											<input name="FeatureDCC" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1DCC"> <input type="radio" name="FeatureDCC" value="oui">Yes <input type="radio" name="FeatureDCC" value = "non">No <input type="radio" name="FeatureDCC" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2DCC"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1DCC','id2DCC');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

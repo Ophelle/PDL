@@ -33,11 +33,12 @@
 							<#if value == "radio">
 								</br>	
 								<label>${key} :</label></br>
-								<input type="${value}" name="Feature${key}" value="oui">Yes <input type="${value}" name="Feature${key}" value = "non">No <input type="${value}" name="Feature${key}" value = "non">Partial </br>
+							    <p id="id1${key}"> <input type="${value}" name="Feature${key}" value="oui">Yes <input type="${value}" name="Feature${key}" value = "non">No <input type="${value}" name="Feature${key}" value = "non">Partial </p>
 								<#list getAllTypesValue as keys, valueAll>
 									<#list valueAll as valueAll>
 										<#if valueAll=="string" >
-											<input name="Feature${key}" type="${value}" value="autre"/>Autre : <input type="text"/></br><#break>
+											<input  style="display:none;" id ="id2${key}"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1${key}','id2${key}');">Changer type</button> </br><#break>
 										</#if>		
 									</#list>
 									<#break>
@@ -56,11 +57,11 @@
 											<input type="${value}" name="Feature" >${valuemiltipe}</br>	
 										</#list>
 									</#if>
-								</#list>
+								 </#list>
 								<#list getAllTypesValue as keys, valueAll>
 									<#list valueAll as valueAll>
 										<#if valueAll=="string" >
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> <#break>
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br><#break>
 										</#if>		
 									</#list>
 									<#break>
@@ -84,7 +85,6 @@
 									</#list>
 									<#break>
 								</#list>
-								
 							</#if>
 						</#list>
 						<script>

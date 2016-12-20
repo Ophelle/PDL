@@ -30,8 +30,9 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Notifies upon listing :</label></br>
-								<input type="radio" name="FeatureNotifies upon listing" value="oui">Yes <input type="radio" name="FeatureNotifies upon listing" value = "non">No <input type="radio" name="FeatureNotifies upon listing" value = "non">Partial </br>
-											<input name="FeatureNotifies upon listing" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Notifies upon listing"> <input type="radio" name="FeatureNotifies upon listing" value="oui">Yes <input type="radio" name="FeatureNotifies upon listing" value = "non">No <input type="radio" name="FeatureNotifies upon listing" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Notifies upon listing"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Notifies upon listing','id2Notifies upon listing');">Changer type</button> </br>								
 								</br>	
 								<label>DNS blacklist : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
@@ -42,8 +43,9 @@
 								<label>Notes : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Collateral Listings :</label></br>
-								<input type="radio" name="FeatureCollateral Listings" value="oui">Yes <input type="radio" name="FeatureCollateral Listings" value = "non">No <input type="radio" name="FeatureCollateral Listings" value = "non">Partial </br>
-											<input name="FeatureCollateral Listings" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Collateral Listings"> <input type="radio" name="FeatureCollateral Listings" value="oui">Yes <input type="radio" name="FeatureCollateral Listings" value = "non">No <input type="radio" name="FeatureCollateral Listings" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Collateral Listings"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Collateral Listings','id2Collateral Listings');">Changer type</button> </br>								
 								</br>	
 								<label>Products : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
@@ -88,7 +90,7 @@
 											<input type="checkbox" name="Feature" >Automatic: Continuous while reputation statistics remain bad. Warning: Produces false positives</br>	
 											<input type="checkbox" name="Feature" >and has no remedy</br>	
 											<input type="checkbox" name="Feature" >removal process. IPs are dropped quickly if the statistics improve (within an hour). IPs are dropped within 36 hours (typ) if no more messages are seen (dead zombie).</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Blacklist operator : </label></br> <input id="6" type="text" name="Feature"></br>
 								</br>	

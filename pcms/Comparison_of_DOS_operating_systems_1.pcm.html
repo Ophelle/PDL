@@ -34,23 +34,25 @@
 								<label>Hard drive: partition size max : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Integrated disk compression utility :</label></br>
-								<input type="radio" name="FeatureIntegrated disk compression utility" value="oui">Yes <input type="radio" name="FeatureIntegrated disk compression utility" value = "non">No <input type="radio" name="FeatureIntegrated disk compression utility" value = "non">Partial </br>
-											<input name="FeatureIntegrated disk compression utility" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Integrated disk compression utility"> <input type="radio" name="FeatureIntegrated disk compression utility" value="oui">Yes <input type="radio" name="FeatureIntegrated disk compression utility" value = "non">No <input type="radio" name="FeatureIntegrated disk compression utility" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Integrated disk compression utility"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Integrated disk compression utility','id2Integrated disk compression utility');">Changer type</button> </br>								
 								</br>	
 								<label>Native support:floppy capacities 8.0" : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Native support:File system :</label></br>
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Native support:floppy capacities 3.5" :</label></br>
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Native support:floppy capacities 5.25" :</label></br>
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Native support:long file names :</label></br>
-								<input type="radio" name="FeatureNative support:long file names" value="oui">Yes <input type="radio" name="FeatureNative support:long file names" value = "non">No <input type="radio" name="FeatureNative support:long file names" value = "non">Partial </br>
-											<input name="FeatureNative support:long file names" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Native support:long file names"> <input type="radio" name="FeatureNative support:long file names" value="oui">Yes <input type="radio" name="FeatureNative support:long file names" value = "non">No <input type="radio" name="FeatureNative support:long file names" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Native support:long file names"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Native support:long file names','id2Native support:long file names');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

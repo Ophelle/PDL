@@ -36,8 +36,9 @@
 								<label>Audio compression format : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Multichannel :</label></br>
-								<input type="radio" name="FeatureMultichannel" value="oui">Yes <input type="radio" name="FeatureMultichannel" value = "non">No <input type="radio" name="FeatureMultichannel" value = "non">Partial </br>
-											<input name="FeatureMultichannel" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Multichannel"> <input type="radio" name="FeatureMultichannel" value="oui">Yes <input type="radio" name="FeatureMultichannel" value = "non">No <input type="radio" name="FeatureMultichannel" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Multichannel"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Multichannel','id2Multichannel');">Changer type</button> </br>								
 								</br>	
 								<label>Bit rate :</label></br>
 											<input type="checkbox" name="Feature" >292 kbit</br>	
@@ -131,21 +132,24 @@
 											<input type="checkbox" name="Feature" >1.0 kbit</br>	
 											<input type="checkbox" name="Feature" >196 kbit</br>	
 											<input type="checkbox" name="Feature" >s and up in lossy mode (for CD audio)</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>VBR :</label></br>
-								<input type="radio" name="FeatureVBR" value="oui">Yes <input type="radio" name="FeatureVBR" value = "non">No <input type="radio" name="FeatureVBR" value = "non">Partial </br>
-											<input name="FeatureVBR" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1VBR"> <input type="radio" name="FeatureVBR" value="oui">Yes <input type="radio" name="FeatureVBR" value = "non">No <input type="radio" name="FeatureVBR" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2VBR"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1VBR','id2VBR');">Changer type</button> </br>								
 								</br>	
 								<label>CBR :</label></br>
-								<input type="radio" name="FeatureCBR" value="oui">Yes <input type="radio" name="FeatureCBR" value = "non">No <input type="radio" name="FeatureCBR" value = "non">Partial </br>
-											<input name="FeatureCBR" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1CBR"> <input type="radio" name="FeatureCBR" value="oui">Yes <input type="radio" name="FeatureCBR" value = "non">No <input type="radio" name="FeatureCBR" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2CBR"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1CBR','id2CBR');">Changer type</button> </br>								
 								</br>	
 								<label>Latency : </label></br> <input id="3" type="text" name="Feature"></br>
 								</br>	
 								<label>Stereo :</label></br>
-								<input type="radio" name="FeatureStereo" value="oui">Yes <input type="radio" name="FeatureStereo" value = "non">No <input type="radio" name="FeatureStereo" value = "non">Partial </br>
-											<input name="FeatureStereo" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Stereo"> <input type="radio" name="FeatureStereo" value="oui">Yes <input type="radio" name="FeatureStereo" value = "non">No <input type="radio" name="FeatureStereo" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Stereo"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Stereo','id2Stereo');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

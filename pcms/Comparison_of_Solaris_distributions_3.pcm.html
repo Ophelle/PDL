@@ -30,28 +30,31 @@
 						<legend style="color:red;font-weight: bold;font-style:italic;text-align: center;" >Formulaire</legend>
 								</br>	
 								<label>Installable Over USBs :</label></br>
-								<input type="radio" name="FeatureInstallable Over USBs" value="oui">Yes <input type="radio" name="FeatureInstallable Over USBs" value = "non">No <input type="radio" name="FeatureInstallable Over USBs" value = "non">Partial </br>
-											<input name="FeatureInstallable Over USBs" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Installable Over USBs"> <input type="radio" name="FeatureInstallable Over USBs" value="oui">Yes <input type="radio" name="FeatureInstallable Over USBs" value = "non">No <input type="radio" name="FeatureInstallable Over USBs" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Installable Over USBs"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Installable Over USBs','id2Installable Over USBs');">Changer type</button> </br>								
 								</br>	
 								<label>Distribution : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Boots from DVD :</label></br>
-								<input type="radio" name="FeatureBoots from DVD" value="oui">Yes <input type="radio" name="FeatureBoots from DVD" value = "non">No <input type="radio" name="FeatureBoots from DVD" value = "non">Partial </br>
-											<input name="FeatureBoots from DVD" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Boots from DVD"> <input type="radio" name="FeatureBoots from DVD" value="oui">Yes <input type="radio" name="FeatureBoots from DVD" value = "non">No <input type="radio" name="FeatureBoots from DVD" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Boots from DVD"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Boots from DVD','id2Boots from DVD');">Changer type</button> </br>								
 								</br>	
 								<label>RAM Use in MB : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Size in MB : </label></br> <input style="display:block;" id="id1Size in MB" type="number" name="Feature">
 												<input style="display:none;" id="id2Size in MB" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Size in MB','id2Size in MB');">Changer type</button></br>								
-								</br>	
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Size in MB','id2Size in MB');">Changer type</button></br>								</br>	
 								<label>Installable Live CD :</label></br>
-								<input type="radio" name="FeatureInstallable Live CD" value="oui">Yes <input type="radio" name="FeatureInstallable Live CD" value = "non">No <input type="radio" name="FeatureInstallable Live CD" value = "non">Partial </br>
-											<input name="FeatureInstallable Live CD" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Installable Live CD"> <input type="radio" name="FeatureInstallable Live CD" value="oui">Yes <input type="radio" name="FeatureInstallable Live CD" value = "non">No <input type="radio" name="FeatureInstallable Live CD" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Installable Live CD"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Installable Live CD','id2Installable Live CD');">Changer type</button> </br>								
 								</br>	
 								<label>Boots from CD-ROM :</label></br>
-								<input type="radio" name="FeatureBoots from CD-ROM" value="oui">Yes <input type="radio" name="FeatureBoots from CD-ROM" value = "non">No <input type="radio" name="FeatureBoots from CD-ROM" value = "non">Partial </br>
-											<input name="FeatureBoots from CD-ROM" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Boots from CD-ROM"> <input type="radio" name="FeatureBoots from CD-ROM" value="oui">Yes <input type="radio" name="FeatureBoots from CD-ROM" value = "non">No <input type="radio" name="FeatureBoots from CD-ROM" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Boots from CD-ROM"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Boots from CD-ROM','id2Boots from CD-ROM');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

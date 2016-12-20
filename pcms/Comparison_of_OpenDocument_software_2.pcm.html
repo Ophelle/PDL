@@ -43,13 +43,14 @@
 											<input type="checkbox" name="Feature" >Unix-based systems</br>	
 											<input type="checkbox" name="Feature" >Mac OS X</br>	
 											<input type="checkbox" name="Feature" >Solaris</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>License : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>ISO/IEC 26300:2006 :</label></br>
-								<input type="radio" name="FeatureISO/IEC 26300:2006" value="oui">Yes <input type="radio" name="FeatureISO/IEC 26300:2006" value = "non">No <input type="radio" name="FeatureISO/IEC 26300:2006" value = "non">Partial </br>
-											<input name="FeatureISO/IEC 26300:2006" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1ISO/IEC 26300:2006"> <input type="radio" name="FeatureISO/IEC 26300:2006" value="oui">Yes <input type="radio" name="FeatureISO/IEC 26300:2006" value = "non">No <input type="radio" name="FeatureISO/IEC 26300:2006" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2ISO/IEC 26300:2006"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1ISO/IEC 26300:2006','id2ISO/IEC 26300:2006');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

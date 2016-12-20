@@ -38,7 +38,7 @@
 											<input type="checkbox" name="Feature" >20</br>	
 											<input type="checkbox" name="Feature" >32</br>	
 											<input type="checkbox" name="Feature" >Varies in lossless mode; supports 32-bit float input; 2.2 minimum in lossy mode</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Sample Rate : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
@@ -49,8 +49,9 @@
 								<label>Algorithm : </label></br> <input id="4" type="text" name="Feature"></br>
 								</br>	
 								<label>Stereo :</label></br>
-								<input type="radio" name="FeatureStereo" value="oui">Yes <input type="radio" name="FeatureStereo" value = "non">No <input type="radio" name="FeatureStereo" value = "non">Partial </br>
-											<input name="FeatureStereo" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Stereo"> <input type="radio" name="FeatureStereo" value="oui">Yes <input type="radio" name="FeatureStereo" value = "non">No <input type="radio" name="FeatureStereo" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Stereo"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Stereo','id2Stereo');">Changer type</button> </br>								
 						<script>
 								$("#0").typeahead({
 									name:"list0",

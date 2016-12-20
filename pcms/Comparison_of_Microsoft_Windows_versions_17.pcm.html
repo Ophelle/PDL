@@ -34,13 +34,13 @@
 											<input type="checkbox" name="Feature" >Privilege</br>	
 											<input type="checkbox" name="Feature" >RBAC</br>	
 											<input type="checkbox" name="Feature" >Privileges</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Subsystem isolation mechanisms :</label></br>
 											<input type="checkbox" name="Feature" >Win32 WindowStation</br>	
 											<input type="checkbox" name="Feature" >Desktop</br>	
 											<input type="checkbox" name="Feature" >Job objects</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Integrated firewall :</label></br>
 											<input type="checkbox" name="Feature" >Windows Firewall</br>	
@@ -48,11 +48,12 @@
 											<input type="checkbox" name="Feature" >IP Filtering</br>	
 											<input type="checkbox" name="Feature" >IPSec</br>	
 											<input type="checkbox" name="Feature" >Windows Firewall (from SP2)</br>	
-											<input type="checkbox" name="Feature" ><label> Autre : </label></br><input type="text"/></br> 							
+										<input type='checkbox'><label>autre:</label></br><input type="text"/> </br>							
 								</br>	
 								<label>Encrypted file systems :</label></br>
-								<input type="radio" name="FeatureEncrypted file systems" value="oui">Yes <input type="radio" name="FeatureEncrypted file systems" value = "non">No <input type="radio" name="FeatureEncrypted file systems" value = "non">Partial </br>
-											<input name="FeatureEncrypted file systems" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Encrypted file systems"> <input type="radio" name="FeatureEncrypted file systems" value="oui">Yes <input type="radio" name="FeatureEncrypted file systems" value = "non">No <input type="radio" name="FeatureEncrypted file systems" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Encrypted file systems"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Encrypted file systems','id2Encrypted file systems');">Changer type</button> </br>								
 						<script>
 						</script>
 						</br><input type="submit" class="btn btn-info" value="Ajouter un produit" />

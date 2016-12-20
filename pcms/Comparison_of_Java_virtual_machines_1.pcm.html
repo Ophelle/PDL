@@ -32,33 +32,37 @@
 								<label>Status : </label></br> <input id="0" type="text" name="Feature"></br>
 								</br>	
 								<label>Performance - Interpretation :</label></br>
-								<input type="radio" name="FeaturePerformance - Interpretation" value="oui">Yes <input type="radio" name="FeaturePerformance - Interpretation" value = "non">No <input type="radio" name="FeaturePerformance - Interpretation" value = "non">Partial </br>
-											<input name="FeaturePerformance - Interpretation" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Performance - Interpretation"> <input type="radio" name="FeaturePerformance - Interpretation" value="oui">Yes <input type="radio" name="FeaturePerformance - Interpretation" value = "non">No <input type="radio" name="FeaturePerformance - Interpretation" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Performance - Interpretation"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Performance - Interpretation','id2Performance - Interpretation');">Changer type</button> </br>								
 								</br>	
 								<label>Performance - AOT :</label></br>
-								<input type="radio" name="FeaturePerformance - AOT" value="oui">Yes <input type="radio" name="FeaturePerformance - AOT" value = "non">No <input type="radio" name="FeaturePerformance - AOT" value = "non">Partial </br>
-											<input name="FeaturePerformance - AOT" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Performance - AOT"> <input type="radio" name="FeaturePerformance - AOT" value="oui">Yes <input type="radio" name="FeaturePerformance - AOT" value = "non">No <input type="radio" name="FeaturePerformance - AOT" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Performance - AOT"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Performance - AOT','id2Performance - AOT');">Changer type</button> </br>								
 								</br>	
 								<label>Performance - JIT :</label></br>
-								<input type="radio" name="FeaturePerformance - JIT" value="oui">Yes <input type="radio" name="FeaturePerformance - JIT" value = "non">No <input type="radio" name="FeaturePerformance - JIT" value = "non">Partial </br>
-											<input name="FeaturePerformance - JIT" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Performance - JIT"> <input type="radio" name="FeaturePerformance - JIT" value="oui">Yes <input type="radio" name="FeaturePerformance - JIT" value = "non">No <input type="radio" name="FeaturePerformance - JIT" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Performance - JIT"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Performance - JIT','id2Performance - JIT');">Changer type</button> </br>								
 								</br>	
 								<label>JVM : </label></br> <input id="1" type="text" name="Feature"></br>
 								</br>	
 								<label>Supported class libraries - OpenJDK :</label></br>
-								<input type="radio" name="FeatureSupported class libraries - OpenJDK" value="oui">Yes <input type="radio" name="FeatureSupported class libraries - OpenJDK" value = "non">No <input type="radio" name="FeatureSupported class libraries - OpenJDK" value = "non">Partial </br>
-											<input name="FeatureSupported class libraries - OpenJDK" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Supported class libraries - OpenJDK"> <input type="radio" name="FeatureSupported class libraries - OpenJDK" value="oui">Yes <input type="radio" name="FeatureSupported class libraries - OpenJDK" value = "non">No <input type="radio" name="FeatureSupported class libraries - OpenJDK" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Supported class libraries - OpenJDK"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Supported class libraries - OpenJDK','id2Supported class libraries - OpenJDK');">Changer type</button> </br>								
 								</br>	
 								<label>Supported class libraries - GNU Classpath :</label></br>
-								<input type="radio" name="FeatureSupported class libraries - GNU Classpath" value="oui">Yes <input type="radio" name="FeatureSupported class libraries - GNU Classpath" value = "non">No <input type="radio" name="FeatureSupported class libraries - GNU Classpath" value = "non">Partial </br>
-											<input name="FeatureSupported class libraries - GNU Classpath" type="radio" value="autre"/>Autre : <input type="text"/></br>								
+							    <p id="id1Supported class libraries - GNU Classpath"> <input type="radio" name="FeatureSupported class libraries - GNU Classpath" value="oui">Yes <input type="radio" name="FeatureSupported class libraries - GNU Classpath" value = "non">No <input type="radio" name="FeatureSupported class libraries - GNU Classpath" value = "non">Partial </p>
+											<input  style="display:none;" id ="id2Supported class libraries - GNU Classpath"type="text"/> 
+										    <button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Supported class libraries - GNU Classpath','id2Supported class libraries - GNU Classpath');">Changer type</button> </br>								
 								</br>	
 								<label>Supported class libraries - Other : </label></br> <input id="2" type="text" name="Feature"></br>
 								</br>	
 								<label>Latest supported Java version : </label></br> <input style="display:block;" id="id1Latest supported Java version" type="number" name="Feature">
 												<input style="display:none;" id="id2Latest supported Java version" type="text"/>
-												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Latest supported Java version','id2Latest supported Java version');">Changer type</button></br>								
-						<script>
+												<button class="btn btn-primary btn-xs" type="button" onClick="switchFunction('id1Latest supported Java version','id2Latest supported Java version');">Changer type</button></br>						<script>
 								$("#0").typeahead({
 									name:"list0",
 									local : ['Commercially available','','Interpreter-only port of OpenJDK using almost no assembly language and designed to be very portable.','Available free, commercial support optional','Unmaintained','Reference implementation.','Translates Java to C and compiles it with a C compiler.','']
